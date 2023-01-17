@@ -1,15 +1,35 @@
 // Namespace: 
-private class ProfileCardStampMenu.DialogMenuItem : BasicDialogItem // TypeDefIndex: 11637
+private enum ProfileCardStampMenu.EditMode // TypeDefIndex: 11632
 {
 	// Fields
-	private ProfileCardStampMenu.ConfirmToCloseDialog.DecideEventHandler m_DecideEventHandler; // 0x70
+	public int value__; // 0x0
+	public const ProfileCardStampMenu.EditMode Stamp = 0;
+	public const ProfileCardStampMenu.EditMode HoldHand = 1;
+	public const ProfileCardStampMenu.EditMode FreeHand = 2;
+	public const ProfileCardStampMenu.EditMode Eraser = 3;
+}
 
+// Namespace: 
+private class ProfileCardStampMenu.ConfirmToCloseDialog // TypeDefIndex: 11634
+{
 	// Methods
 
-	// RVA: 0x1F27BA0 Offset: 0x1F27CA1 VA: 0x1F27BA0
-	public void .ctor(string message, ProfileCardStampMenu.ConfirmToCloseDialog.DecideEventHandler decideEventHandler) { }
+	// RVA: 0x1F27BF0 Offset: 0x1F27CF1 VA: 0x1F27BF0
+	public static BasicDialog CreateBind(ProcInst super, ProfileCardStampMenu.ConfirmToCloseDialog.DecideEventHandler saveAndCloseEventHandler, ProfileCardStampMenu.ConfirmToCloseDialog.DecideEventHandler noSaveAndCloseEventHandler) { }
 
-	// RVA: 0x1F27ED0 Offset: 0x1F27FD1 VA: 0x1F27ED0 Slot: 18
-	public override BasicMenu.Result ACall() { }
+	// RVA: 0x1F27EC0 Offset: 0x1F27FC1 VA: 0x1F27EC0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class ProfileCardStampMenu.ConfirmToClearDialog // TypeDefIndex: 11636
+{
+	// Methods
+
+	// RVA: 0x1F27950 Offset: 0x1F27A51 VA: 0x1F27950
+	public static BasicDialog CreateBind(ProcInst super, ProfileCardStampMenu.ConfirmToCloseDialog.DecideEventHandler yesEventHandler) { }
+
+	// RVA: 0x1F27BE0 Offset: 0x1F27CE1 VA: 0x1F27BE0
+	public void .ctor() { }
 }
 

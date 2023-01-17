@@ -1,27 +1,12 @@
 // Namespace: 
-[Serializable]
-public class CameraPositionData.CameraShakeSettings // TypeDefIndex: 8557
+public enum CameraPositionData.TargetJoint // TypeDefIndex: 8556
 {
 	// Fields
-	[HeaderAttribute] // RVA: 0x281C20 Offset: 0x281D21 VA: 0x281C20
-	[RangeAttribute] // RVA: 0x281C20 Offset: 0x281D21 VA: 0x281C20
-	public int ShakeDuration; // 0x10
-	[RangeAttribute] // RVA: 0x281C80 Offset: 0x281D81 VA: 0x281C80
-	[HeaderAttribute] // RVA: 0x281C80 Offset: 0x281D81 VA: 0x281C80
-	public float ShakeRadius; // 0x14
-	[RangeAttribute] // RVA: 0x281CE0 Offset: 0x281DE1 VA: 0x281CE0
-	[HeaderAttribute] // RVA: 0x281CE0 Offset: 0x281DE1 VA: 0x281CE0
-	public int ArmorStepDuraton; // 0x18
-	[RangeAttribute] // RVA: 0x281D40 Offset: 0x281E41 VA: 0x281D40
-	[HeaderAttribute] // RVA: 0x281D40 Offset: 0x281E41 VA: 0x281D40
-	public float ArmorStepMagnitude; // 0x1C
-	[TooltipAttribute] // RVA: 0x281DA0 Offset: 0x281EA1 VA: 0x281DA0
-	[HeaderAttribute] // RVA: 0x281DA0 Offset: 0x281EA1 VA: 0x281DA0
-	public AnimationCurve ScaleCurveDistance; // 0x20
-
-	// Methods
-
-	// RVA: 0x1DFC860 Offset: 0x1DFC961 VA: 0x1DFC860
-	public void .ctor() { }
+	public int value__; // 0x0
+	public const CameraPositionData.TargetJoint Center = 0;
+	public const CameraPositionData.TargetJoint LookAtLoc = 1;
+	public const CameraPositionData.TargetJoint NeckJnt = 2;
+	public const CameraPositionData.TargetJoint HeadLoc = 3;
+	public const CameraPositionData.TargetJoint LookAtLocHuman = 4;
 }
 

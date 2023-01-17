@@ -1,36 +1,42 @@
 // Namespace: 
-private class TimerThread.TimerNode : TimerThread.Timer // TypeDefIndex: 2503
+internal abstract class TimerThread.Timer : IDisposable // TypeDefIndex: 2498
 {
 	// Fields
-	private TimerThread.TimerNode.TimerState m_TimerState; // 0x18
-	private TimerThread.Callback m_Callback; // 0x20
-	private object m_Context; // 0x28
-	private object m_QueueLock; // 0x30
-	private TimerThread.TimerNode next; // 0x38
-	private TimerThread.TimerNode prev; // 0x40
-
-	// Properties
-	internal TimerThread.TimerNode Next { get; set; }
-	internal TimerThread.TimerNode Prev { get; set; }
+	private readonly int m_StartTimeMilliseconds; // 0x10
+	private readonly int m_DurationMilliseconds; // 0x14
 
 	// Methods
 
-	// RVA: 0x1923320 Offset: 0x1923421 VA: 0x1923320
-	internal void .ctor() { }
+	// RVA: 0x19232D0 Offset: 0x19233D1 VA: 0x19232D0
+	internal void .ctor(int durationMilliseconds) { }
 
-	// RVA: 0x1923360 Offset: 0x1923461 VA: 0x1923360
-	internal TimerThread.TimerNode get_Next() { }
+	// RVA: -1 Offset: -1 Slot: 5
+	internal abstract bool Cancel();
 
-	// RVA: 0x1923370 Offset: 0x1923471 VA: 0x1923370
-	internal void set_Next(TimerThread.TimerNode value) { }
+	// RVA: 0x1923310 Offset: 0x1923411 VA: 0x1923310 Slot: 4
+	public void Dispose() { }
+}
 
-	// RVA: 0x1923380 Offset: 0x1923481 VA: 0x1923380
-	internal TimerThread.TimerNode get_Prev() { }
+// Namespace: 
+private class TimerThread.TimerQueue : TimerThread.Queue // TypeDefIndex: 2500
+{
+	// Fields
+	private readonly TimerThread.TimerNode m_Timers; // 0x18
 
-	// RVA: 0x1923390 Offset: 0x1923491 VA: 0x1923390
-	internal void set_Prev(TimerThread.TimerNode value) { }
+	// Methods
 
-	// RVA: 0x19233A0 Offset: 0x19234A1 VA: 0x19233A0 Slot: 5
-	internal override bool Cancel() { }
+	// RVA: 0x1923540 Offset: 0x1923641 VA: 0x1923540
+	internal void .ctor(int durationMilliseconds) { }
+}
+
+// Namespace: 
+private enum TimerThread.TimerNode.TimerState // TypeDefIndex: 2502
+{
+	// Fields
+	public int value__; // 0x0
+	public const TimerThread.TimerNode.TimerState Ready = 0;
+	public const TimerThread.TimerNode.TimerState Fired = 1;
+	public const TimerThread.TimerNode.TimerState Cancelled = 2;
+	public const TimerThread.TimerNode.TimerState Sentinel = 3;
 }
 

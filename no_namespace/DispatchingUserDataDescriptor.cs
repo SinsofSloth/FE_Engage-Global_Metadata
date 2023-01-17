@@ -1,6 +1,6 @@
 // Namespace: 
-[CompilerGeneratedAttribute] // RVA: 0xD970 Offset: 0xDA71 VA: 0xD970
-private sealed class DispatchingUserDataDescriptor.<>c__DisplayClass53_0 // TypeDefIndex: 6161
+[CompilerGeneratedAttribute] // RVA: 0xD960 Offset: 0xDA61 VA: 0xD960
+private sealed class DispatchingUserDataDescriptor.<>c__DisplayClass51_0 // TypeDefIndex: 6160
 {
 	// Fields
 	public DispatchingUserDataDescriptor <>4__this; // 0x10
@@ -8,10 +8,10 @@ private sealed class DispatchingUserDataDescriptor.<>c__DisplayClass53_0 // Type
 
 	// Methods
 
-	// RVA: 0x3357000 Offset: 0x3357101 VA: 0x3357000
+	// RVA: 0x3356F20 Offset: 0x3357021 VA: 0x3356F20
 	public void .ctor() { }
 
-	// RVA: 0x3357010 Offset: 0x3357111 VA: 0x3357010
-	internal DynValue <MultiDispatchEqual>b__0(ScriptExecutionContext context, CallbackArguments args) { }
+	// RVA: 0x3356F30 Offset: 0x3357031 VA: 0x3356F30
+	internal DynValue <MultiDispatchLessThan>b__0(ScriptExecutionContext context, CallbackArguments args) { }
 }
 

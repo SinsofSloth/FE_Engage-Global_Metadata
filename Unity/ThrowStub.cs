@@ -1,9 +1,9 @@
 // Namespace: Unity
-internal sealed class ThrowStub : ObjectDisposedException // TypeDefIndex: 1523
+internal sealed class ThrowStub : ObjectDisposedException // TypeDefIndex: 2700
 {
 	// Methods
 
-	// RVA: 0x1C6D8F0 Offset: 0x1C6D9F1 VA: 0x1C6D8F0
+	// RVA: 0x2D13EE0 Offset: 0x2D13FE1 VA: 0x2D13EE0
 	public static void ThrowNotSupportedException() { }
 }
 

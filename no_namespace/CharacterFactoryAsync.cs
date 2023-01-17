@@ -1,18 +1,16 @@
 // Namespace: 
-[CompilerGeneratedAttribute] // RVA: 0x279770 Offset: 0x279871 VA: 0x279770
-private sealed class CharacterFactoryAsync.<>c__DisplayClass11_0 // TypeDefIndex: 14117
+private struct CharacterFactoryAsync.UnitStatusScope : IDisposable // TypeDefIndex: 14116
 {
 	// Fields
-	public GameObject locator; // 0x10
-	public bool isEngage; // 0x18
-	public Character chara; // 0x20
+	private Unit m_Unit; // 0x0
+	private long m_Value; // 0x8
 
 	// Methods
 
-	// RVA: 0x1E00870 Offset: 0x1E00971 VA: 0x1E00870
-	public void .ctor() { }
+	// RVA: 0x1E009D0 Offset: 0x1E00AD1 VA: 0x1E009D0
+	public void .ctor(Unit unit) { }
 
-	// RVA: 0x1E00880 Offset: 0x1E00981 VA: 0x1E00880
-	internal void <CreateCommon>b__0() { }
+	// RVA: 0x1E00A10 Offset: 0x1E00B11 VA: 0x1E00A10 Slot: 4
+	public void Dispose() { }
 }
 

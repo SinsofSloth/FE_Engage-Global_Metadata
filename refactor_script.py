@@ -11,6 +11,7 @@ if __name__ == "__main__":
         # Lines starting with the namespace identifier
         start_indices = [index for index in range(len(lines)) if lines[index].startswith(NAMESPACE_IDENTIFIER)]
 
+        # Need to account for odd num later
         for i in range(0, len(start_indices), 2):
             line: str = lines[start_indices[i]]
             
@@ -43,8 +44,13 @@ if __name__ == "__main__":
                 else:
                     break
 
-            body = lines[start_indices[i]:start_indices[i+1]]
+            body = lines[start_indices[i]:] if i+1 >= len(start_indices) else lines[start_indices[i]:start_indices[i+1]]
 
             file_path = f"{namespace}/{name}.cs"
-            with open(file_path, "wt", encoding="utf8") as fs:
-                fs.writelines(body)
+
+            if os.path.exists(namespace):
+                with open(file_path, "a", encoding="utf8") as fs:
+                    fs.writelines(body)
+            else:
+                with open(file_path, "wt", encoding="utf8") as fs:
+                    fs.writelines(body)

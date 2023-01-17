@@ -1,18 +1,51 @@
 // Namespace: 
-public sealed class Camera.CameraCallback : MulticastDelegate // TypeDefIndex: 3413
+public enum Camera.GateFitMode // TypeDefIndex: 3406
 {
-	// Methods
+	// Fields
+	public int value__; // 0x0
+	public const Camera.GateFitMode Vertical = 1;
+	public const Camera.GateFitMode Horizontal = 2;
+	public const Camera.GateFitMode Fill = 3;
+	public const Camera.GateFitMode Overscan = 4;
+	public const Camera.GateFitMode None = 0;
+}
 
-	// RVA: 0x3852FD0 Offset: 0x38530D1 VA: 0x3852FD0
-	public void .ctor(object object, IntPtr method) { }
+// Namespace: 
+public enum Camera.StereoscopicEye // TypeDefIndex: 3408
+{
+	// Fields
+	public int value__; // 0x0
+	public const Camera.StereoscopicEye Left = 0;
+	public const Camera.StereoscopicEye Right = 1;
+}
 
-	// RVA: 0x3852FF0 Offset: 0x38530F1 VA: 0x3852FF0 Slot: 13
-	public virtual void Invoke(Camera cam) { }
+// Namespace: 
+public enum Camera.RenderRequestMode // TypeDefIndex: 3410
+{
+	// Fields
+	public int value__; // 0x0
+	public const Camera.RenderRequestMode None = 0;
+	public const Camera.RenderRequestMode ObjectId = 1;
+	public const Camera.RenderRequestMode Depth = 2;
+	public const Camera.RenderRequestMode VertexNormal = 3;
+	public const Camera.RenderRequestMode WorldPosition = 4;
+	public const Camera.RenderRequestMode EntityId = 5;
+	public const Camera.RenderRequestMode BaseColor = 6;
+	public const Camera.RenderRequestMode SpecularColor = 7;
+	public const Camera.RenderRequestMode Metallic = 8;
+	public const Camera.RenderRequestMode Emission = 9;
+	public const Camera.RenderRequestMode Normal = 10;
+	public const Camera.RenderRequestMode Smoothness = 11;
+	public const Camera.RenderRequestMode Occlusion = 12;
+	public const Camera.RenderRequestMode DiffuseColor = 13;
+}
 
-	// RVA: 0x3853350 Offset: 0x3853451 VA: 0x3853350 Slot: 14
-	public virtual IAsyncResult BeginInvoke(Camera cam, AsyncCallback callback, object object) { }
-
-	// RVA: 0x3853380 Offset: 0x3853481 VA: 0x3853380 Slot: 15
-	public virtual void EndInvoke(IAsyncResult result) { }
+// Namespace: 
+public struct Camera.RenderRequest // TypeDefIndex: 3412
+{
+	// Fields
+	private readonly Camera.RenderRequestMode m_CameraRenderMode; // 0x0
+	private readonly RenderTexture m_ResultRT; // 0x8
+	private readonly Camera.RenderRequestOutputSpace m_OutputSpace; // 0x10
 }
 

@@ -1,0 +1,75 @@
+// Namespace: 
+public enum AKRESULT // TypeDefIndex: 7820
+{
+	// Fields
+	public int value__; // 0x0
+	public const AKRESULT AK_NotImplemented = 0;
+	public const AKRESULT AK_Success = 1;
+	public const AKRESULT AK_Fail = 2;
+	public const AKRESULT AK_PartialSuccess = 3;
+	public const AKRESULT AK_NotCompatible = 4;
+	public const AKRESULT AK_AlreadyConnected = 5;
+	public const AKRESULT AK_InvalidFile = 7;
+	public const AKRESULT AK_AudioFileHeaderTooLarge = 8;
+	public const AKRESULT AK_MaxReached = 9;
+	public const AKRESULT AK_InvalidID = 14;
+	public const AKRESULT AK_IDNotFound = 15;
+	public const AKRESULT AK_InvalidInstanceID = 16;
+	public const AKRESULT AK_NoMoreData = 17;
+	public const AKRESULT AK_InvalidStateGroup = 20;
+	public const AKRESULT AK_ChildAlreadyHasAParent = 21;
+	public const AKRESULT AK_InvalidLanguage = 22;
+	public const AKRESULT AK_CannotAddItseflAsAChild = 23;
+	public const AKRESULT AK_InvalidParameter = 31;
+	public const AKRESULT AK_ElementAlreadyInList = 35;
+	public const AKRESULT AK_PathNotFound = 36;
+	public const AKRESULT AK_PathNoVertices = 37;
+	public const AKRESULT AK_PathNotRunning = 38;
+	public const AKRESULT AK_PathNotPaused = 39;
+	public const AKRESULT AK_PathNodeAlreadyInList = 40;
+	public const AKRESULT AK_PathNodeNotInList = 41;
+	public const AKRESULT AK_DataNeeded = 43;
+	public const AKRESULT AK_NoDataNeeded = 44;
+	public const AKRESULT AK_DataReady = 45;
+	public const AKRESULT AK_NoDataReady = 46;
+	public const AKRESULT AK_InsufficientMemory = 52;
+	public const AKRESULT AK_Cancelled = 53;
+	public const AKRESULT AK_UnknownBankID = 54;
+	public const AKRESULT AK_BankReadError = 56;
+	public const AKRESULT AK_InvalidSwitchType = 57;
+	public const AKRESULT AK_FormatNotReady = 63;
+	public const AKRESULT AK_WrongBankVersion = 64;
+	public const AKRESULT AK_FileNotFound = 66;
+	public const AKRESULT AK_DeviceNotReady = 67;
+	public const AKRESULT AK_BankAlreadyLoaded = 69;
+	public const AKRESULT AK_RenderedFX = 71;
+	public const AKRESULT AK_ProcessNeeded = 72;
+	public const AKRESULT AK_ProcessDone = 73;
+	public const AKRESULT AK_MemManagerNotInitialized = 74;
+	public const AKRESULT AK_StreamMgrNotInitialized = 75;
+	public const AKRESULT AK_SSEInstructionsNotSupported = 76;
+	public const AKRESULT AK_Busy = 77;
+	public const AKRESULT AK_UnsupportedChannelConfig = 78;
+	public const AKRESULT AK_PluginMediaNotAvailable = 79;
+	public const AKRESULT AK_MustBeVirtualized = 80;
+	public const AKRESULT AK_CommandTooLarge = 81;
+	public const AKRESULT AK_RejectedByFilter = 82;
+	public const AKRESULT AK_InvalidCustomPlatformName = 83;
+	public const AKRESULT AK_DLLCannotLoad = 84;
+	public const AKRESULT AK_DLLPathNotFound = 85;
+	public const AKRESULT AK_NoJavaVM = 86;
+	public const AKRESULT AK_OpenSLError = 87;
+	public const AKRESULT AK_PluginNotRegistered = 88;
+	public const AKRESULT AK_DataAlignmentError = 89;
+	public const AKRESULT AK_DeviceNotCompatible = 90;
+	public const AKRESULT AK_DuplicateUniqueID = 91;
+	public const AKRESULT AK_InitBankNotLoaded = 92;
+	public const AKRESULT AK_DeviceNotFound = 93;
+	public const AKRESULT AK_PlayingIDNotFound = 94;
+	public const AKRESULT AK_InvalidFloatValue = 95;
+	public const AKRESULT AK_FileFormatMismatch = 96;
+	public const AKRESULT AK_NoDistinctListener = 97;
+	public const AKRESULT AK_ACP_Error = 98;
+	public const AKRESULT AK_ResourceInUse = 99;
+}
+

@@ -1,5 +1,5 @@
 // Namespace: Mono.Math.Prime
-public enum ConfidenceFactor // TypeDefIndex: 1583
+internal enum ConfidenceFactor // TypeDefIndex: 80
 {
 	// Fields
 	public int value__; // 0x0

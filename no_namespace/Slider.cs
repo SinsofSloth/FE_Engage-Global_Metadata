@@ -1,9 +1,10 @@
 // Namespace: 
-private enum Slider.Axis // TypeDefIndex: 4347
+[Serializable]
+public class Slider.SliderEvent : UnityEvent<float> // TypeDefIndex: 4346
 {
-	// Fields
-	public int value__; // 0x0
-	public const Slider.Axis Horizontal = 0;
-	public const Slider.Axis Vertical = 1;
+	// Methods
+
+	// RVA: 0x1C00BC0 Offset: 0x1C00CC1 VA: 0x1C00BC0
+	public void .ctor() { }
 }
 

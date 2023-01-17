@@ -1,39 +1,38 @@
 // Namespace: 
-[CompilerGeneratedAttribute] // RVA: 0x277B00 Offset: 0x277C01 VA: 0x277B00
-private sealed class RingSynthesisSequence.<WaitTick>d__34 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 11783
+private enum RingSynthesisSequence.Label // TypeDefIndex: 11780
 {
 	// Fields
-	private int <>1__state; // 0x10
-	private object <>2__current; // 0x18
-	private float <time>5__2; // 0x20
+	public int value__; // 0x0
+	public const RingSynthesisSequence.Label Skip = 0;
+}
+
+// Namespace: 
+private class RingSynthesisSequence.SkipListenerProc : ProcInst // TypeDefIndex: 11782
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x299260 Offset: 0x299361 VA: 0x299260
+	private bool <m_Pause>k__BackingField; // 0x70
 
 	// Properties
-	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
-	private object System.Collections.IEnumerator.Current { get; }
+	public bool m_Pause { get; set; }
 
 	// Methods
 
-	[DebuggerHiddenAttribute] // RVA: 0x2C69E0 Offset: 0x2C6AE1 VA: 0x2C69E0
-	// RVA: 0x1F57FD0 Offset: 0x1F580D1 VA: 0x1F57FD0
-	public void .ctor(int <>1__state) { }
+	[CompilerGeneratedAttribute] // RVA: 0x2C69C0 Offset: 0x2C6AC1 VA: 0x2C69C0
+	// RVA: 0x1F58990 Offset: 0x1F58A91 VA: 0x1F58990
+	public bool get_m_Pause() { }
 
-	[DebuggerHiddenAttribute] // RVA: 0x2C69F0 Offset: 0x2C6AF1 VA: 0x2C69F0
-	// RVA: 0x1F58000 Offset: 0x1F58101 VA: 0x1F58000 Slot: 5
-	private void System.IDisposable.Dispose() { }
+	[CompilerGeneratedAttribute] // RVA: 0x2C69D0 Offset: 0x2C6AD1 VA: 0x2C69D0
+	// RVA: 0x1F589A0 Offset: 0x1F58AA1 VA: 0x1F589A0
+	public void set_m_Pause(bool value) { }
 
-	// RVA: 0x1F58010 Offset: 0x1F58111 VA: 0x1F58010 Slot: 6
-	private bool MoveNext() { }
+	// RVA: 0x1F589B0 Offset: 0x1F58AB1 VA: 0x1F589B0
+	public static RingSynthesisSequence.SkipListenerProc Create(RingSynthesisSequence super) { }
 
-	[DebuggerHiddenAttribute] // RVA: 0x2C6A00 Offset: 0x2C6B01 VA: 0x2C6A00
-	// RVA: 0x1F580B0 Offset: 0x1F581B1 VA: 0x1F580B0 Slot: 4
-	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+	// RVA: 0x1F58A40 Offset: 0x1F58B41 VA: 0x1F58A40 Slot: 6
+	protected override void OnTick() { }
 
-	[DebuggerHiddenAttribute] // RVA: 0x2C6A10 Offset: 0x2C6B11 VA: 0x2C6A10
-	// RVA: 0x1F580C0 Offset: 0x1F581C1 VA: 0x1F580C0 Slot: 8
-	private void System.Collections.IEnumerator.Reset() { }
-
-	[DebuggerHiddenAttribute] // RVA: 0x2C6A20 Offset: 0x2C6B21 VA: 0x2C6A20
-	// RVA: 0x1F58100 Offset: 0x1F58201 VA: 0x1F58100 Slot: 7
-	private object System.Collections.IEnumerator.get_Current() { }
+	// RVA: 0x1F58A30 Offset: 0x1F58B31 VA: 0x1F58A30
+	public void .ctor() { }
 }
 

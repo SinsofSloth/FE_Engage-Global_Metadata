@@ -1,9 +1,9 @@
 // Namespace: 
-private class UriParser.BuiltInUriParser : UriParser // TypeDefIndex: 2231
+private enum UriParser.UriQuirksVersion // TypeDefIndex: 2230
 {
-	// Methods
-
-	// RVA: 0x19258C0 Offset: 0x19259C1 VA: 0x19258C0
-	internal void .ctor(string lwrCaseScheme, int defaultPort, UriSyntaxFlags syntaxFlags) { }
+	// Fields
+	public int value__; // 0x0
+	public const UriParser.UriQuirksVersion V2 = 2;
+	public const UriParser.UriQuirksVersion V3 = 3;
 }
 

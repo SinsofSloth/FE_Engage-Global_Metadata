@@ -1,0 +1,69 @@
+// Namespace: MoonSharp.Interpreter.Tree
+internal enum TokenType // TypeDefIndex: 5994
+{
+	// Fields
+	public int value__; // 0x0
+	public const TokenType Eof = 0;
+	public const TokenType HashBang = 1;
+	public const TokenType Name = 2;
+	public const TokenType And = 3;
+	public const TokenType Break = 4;
+	public const TokenType Do = 5;
+	public const TokenType Else = 6;
+	public const TokenType ElseIf = 7;
+	public const TokenType End = 8;
+	public const TokenType False = 9;
+	public const TokenType For = 10;
+	public const TokenType Function = 11;
+	public const TokenType Lambda = 12;
+	public const TokenType Goto = 13;
+	public const TokenType If = 14;
+	public const TokenType In = 15;
+	public const TokenType Local = 16;
+	public const TokenType Nil = 17;
+	public const TokenType Not = 18;
+	public const TokenType Or = 19;
+	public const TokenType Repeat = 20;
+	public const TokenType Return = 21;
+	public const TokenType Then = 22;
+	public const TokenType True = 23;
+	public const TokenType Until = 24;
+	public const TokenType While = 25;
+	public const TokenType Op_Equal = 26;
+	public const TokenType Op_Assignment = 27;
+	public const TokenType Op_LessThan = 28;
+	public const TokenType Op_LessThanEqual = 29;
+	public const TokenType Op_GreaterThanEqual = 30;
+	public const TokenType Op_GreaterThan = 31;
+	public const TokenType Op_NotEqual = 32;
+	public const TokenType Op_Concat = 33;
+	public const TokenType VarArgs = 34;
+	public const TokenType Dot = 35;
+	public const TokenType Colon = 36;
+	public const TokenType DoubleColon = 37;
+	public const TokenType Comma = 38;
+	public const TokenType Brk_Close_Curly = 39;
+	public const TokenType Brk_Open_Curly = 40;
+	public const TokenType Brk_Close_Round = 41;
+	public const TokenType Brk_Open_Round = 42;
+	public const TokenType Brk_Close_Square = 43;
+	public const TokenType Brk_Open_Square = 44;
+	public const TokenType Op_Len = 45;
+	public const TokenType Op_Pwr = 46;
+	public const TokenType Op_Mod = 47;
+	public const TokenType Op_Div = 48;
+	public const TokenType Op_Mul = 49;
+	public const TokenType Op_MinusOrSub = 50;
+	public const TokenType Op_Add = 51;
+	public const TokenType Comment = 52;
+	public const TokenType String = 53;
+	public const TokenType String_Long = 54;
+	public const TokenType Number = 55;
+	public const TokenType Number_HexFloat = 56;
+	public const TokenType Number_Hex = 57;
+	public const TokenType SemiColon = 58;
+	public const TokenType Invalid = 59;
+	public const TokenType Brk_Open_Curly_Shared = 60;
+	public const TokenType Op_Dollar = 61;
+}
+

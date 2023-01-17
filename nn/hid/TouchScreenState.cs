@@ -1,16 +1,128 @@
 // Namespace: nn.hid
-public struct TouchScreenState16 // TypeDefIndex: 14717
+public struct TouchScreenState1 // TypeDefIndex: 14672
 {
 	// Fields
-	public const int TouchCount = 16;
+	public const int TouchCount = 1;
 	public long samplingNumber; // 0x0
 	public int count; // 0x8
 	private int _reserved; // 0xC
-	public TouchScreenState16.TouchStateArray16 touches; // 0x10
+	public TouchScreenState1.TouchStateArray1 touches; // 0x10
 
 	// Methods
 
-	// RVA: 0x25E85E0 Offset: 0x25E86E1 VA: 0x25E85E0
+	// RVA: 0x25E8570 Offset: 0x25E8671 VA: 0x25E8570
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState3 // TypeDefIndex: 14678
+{
+	// Fields
+	public const int TouchCount = 3;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState3.TouchStateArray3 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E8610 Offset: 0x25E8711 VA: 0x25E8610
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState5 // TypeDefIndex: 14684
+{
+	// Fields
+	public const int TouchCount = 5;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState5.TouchStateArray5 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E8670 Offset: 0x25E8771 VA: 0x25E8670
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState7 // TypeDefIndex: 14690
+{
+	// Fields
+	public const int TouchCount = 7;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState7.TouchStateArray7 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E86F0 Offset: 0x25E87F1 VA: 0x25E86F0
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState9 // TypeDefIndex: 14696
+{
+	// Fields
+	public const int TouchCount = 9;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState9.TouchStateArray9 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E8710 Offset: 0x25E8811 VA: 0x25E8710
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState11 // TypeDefIndex: 14702
+{
+	// Fields
+	public const int TouchCount = 11;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState11.TouchStateArray11 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E8590 Offset: 0x25E8691 VA: 0x25E8590
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState13 // TypeDefIndex: 14708
+{
+	// Fields
+	public const int TouchCount = 13;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState13.TouchStateArray13 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E85B0 Offset: 0x25E86B1 VA: 0x25E85B0
+	public void SetDefault() { }
+}
+
+// Namespace: nn.hid
+public struct TouchScreenState15 // TypeDefIndex: 14714
+{
+	// Fields
+	public const int TouchCount = 15;
+	public long samplingNumber; // 0x0
+	public int count; // 0x8
+	private int _reserved; // 0xC
+	public TouchScreenState15.TouchStateArray15 touches; // 0x10
+
+	// Methods
+
+	// RVA: 0x25E85D0 Offset: 0x25E86D1 VA: 0x25E85D0
 	public void SetDefault() { }
 }
 

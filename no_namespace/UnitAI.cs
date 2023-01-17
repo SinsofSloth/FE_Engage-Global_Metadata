@@ -1,63 +1,69 @@
 // Namespace: 
-public class UnitAI.MoveLimitRange // TypeDefIndex: 13503
+public class UnitAI.FlagField : BitField32 // TypeDefIndex: 13498
 {
-	// Fields
-	private const int Version = 0;
-	private byte m_Type; // 0x10
-	private sbyte m_X; // 0x11
-	private sbyte m_Z; // 0x12
-	private sbyte m_W; // 0x13
-	private sbyte m_H; // 0x14
-
-	// Properties
-	public UnitAI.MoveLimitRange.LimitType Type { get; set; }
-	public int X { get; set; }
-	public int Z { get; set; }
-	public int W { get; set; }
-	public int H { get; set; }
-
 	// Methods
 
-	// RVA: 0x23ABAB0 Offset: 0x23ABBB1 VA: 0x23ABAB0
-	public UnitAI.MoveLimitRange.LimitType get_Type() { }
+	// RVA: 0x23ABA50 Offset: 0x23ABB51 VA: 0x23ABA50
+	public void Set(UnitAI.Flag f) { }
 
-	// RVA: 0x23ABAC0 Offset: 0x23ABBC1 VA: 0x23ABAC0
-	public void set_Type(UnitAI.MoveLimitRange.LimitType value) { }
+	// RVA: 0x23ABA60 Offset: 0x23ABB61 VA: 0x23ABA60
+	public bool Test(UnitAI.Flag f) { }
 
-	// RVA: 0x23ABAD0 Offset: 0x23ABBD1 VA: 0x23ABAD0
-	public int get_X() { }
+	// RVA: 0x23ABA70 Offset: 0x23ABB71 VA: 0x23ABA70
+	public bool Not(UnitAI.Flag f) { }
 
-	// RVA: 0x23ABAE0 Offset: 0x23ABBE1 VA: 0x23ABAE0
-	public void set_X(int value) { }
+	// RVA: 0x23ABA80 Offset: 0x23ABB81 VA: 0x23ABA80
+	public void Clear(UnitAI.Flag f) { }
 
-	// RVA: 0x23ABAF0 Offset: 0x23ABBF1 VA: 0x23ABAF0
-	public int get_Z() { }
+	// RVA: 0x23ABA90 Offset: 0x23ABB91 VA: 0x23ABA90
+	public int Mask(UnitAI.Flag f) { }
 
-	// RVA: 0x23ABB00 Offset: 0x23ABC01 VA: 0x23ABB00
-	public void set_Z(int value) { }
-
-	// RVA: 0x23ABB10 Offset: 0x23ABC11 VA: 0x23ABB10
-	public int get_W() { }
-
-	// RVA: 0x23ABB20 Offset: 0x23ABC21 VA: 0x23ABB20
-	public void set_W(int value) { }
-
-	// RVA: 0x23ABB30 Offset: 0x23ABC31 VA: 0x23ABB30
-	public int get_H() { }
-
-	// RVA: 0x23ABB40 Offset: 0x23ABC41 VA: 0x23ABB40
-	public void set_H(int value) { }
-
-	// RVA: 0x23ABB50 Offset: 0x23ABC51 VA: 0x23ABB50
-	public void Clear() { }
-
-	// RVA: 0x23ABB60 Offset: 0x23ABC61 VA: 0x23ABB60
-	public void Serialize(Stream stream) { }
-
-	// RVA: 0x23ABBE0 Offset: 0x23ABCE1 VA: 0x23ABBE0
-	public void Deserialize(Stream stream) { }
-
-	// RVA: 0x23ABDC0 Offset: 0x23ABEC1 VA: 0x23ABDC0
+	// RVA: 0x23ABAA0 Offset: 0x23ABBA1 VA: 0x23ABAA0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class UnitAI.RandomFlagField : BitField32 // TypeDefIndex: 13500
+{
+	// Methods
+
+	// RVA: 0x23ABDD0 Offset: 0x23ABED1 VA: 0x23ABDD0
+	public void Set(UnitAI.RandomFlag f) { }
+
+	// RVA: 0x23ABDE0 Offset: 0x23ABEE1 VA: 0x23ABDE0
+	public bool Test(UnitAI.RandomFlag f) { }
+
+	// RVA: 0x23ABDF0 Offset: 0x23ABEF1 VA: 0x23ABDF0
+	public bool Not(UnitAI.RandomFlag f) { }
+
+	// RVA: 0x23ABE00 Offset: 0x23ABF01 VA: 0x23ABE00
+	public void .ctor() { }
+}
+
+// Namespace: 
+public enum UnitAI.MoveLimitRange.LimitType // TypeDefIndex: 13502
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnitAI.MoveLimitRange.LimitType None = 0;
+	public const UnitAI.MoveLimitRange.LimitType Move = 1;
+	public const UnitAI.MoveLimitRange.LimitType Distance = 2;
+	public const UnitAI.MoveLimitRange.LimitType Rect = 3;
+	public const UnitAI.MoveLimitRange.LimitType InterferenceRodRect = 4;
+	public const UnitAI.MoveLimitRange.LimitType Num = 5;
+}
+
+// Namespace: 
+public enum UnitAI.VersusTypes // TypeDefIndex: 13504
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnitAI.VersusTypes NotMove = 0;
+	public const UnitAI.VersusTypes Defense = 1;
+	public const UnitAI.VersusTypes Rush = 2;
+	public const UnitAI.VersusTypes ResponseA = 3;
+	public const UnitAI.VersusTypes ResponseB = 4;
+	public const UnitAI.VersusTypes ResponseC = 5;
+	public const UnitAI.VersusTypes Num = 6;
 }
 

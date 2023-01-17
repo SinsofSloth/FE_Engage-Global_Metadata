@@ -1,9 +1,12 @@
 // Namespace: 
-public enum TimelineClip.BlendCurveMode // TypeDefIndex: 5641
+public enum TimelineClip.ClipExtrapolation // TypeDefIndex: 5640
 {
 	// Fields
 	public int value__; // 0x0
-	public const TimelineClip.BlendCurveMode Auto = 0;
-	public const TimelineClip.BlendCurveMode Manual = 1;
+	public const TimelineClip.ClipExtrapolation None = 0;
+	public const TimelineClip.ClipExtrapolation Hold = 1;
+	public const TimelineClip.ClipExtrapolation Loop = 2;
+	public const TimelineClip.ClipExtrapolation PingPong = 3;
+	public const TimelineClip.ClipExtrapolation Continue = 4;
 }
 

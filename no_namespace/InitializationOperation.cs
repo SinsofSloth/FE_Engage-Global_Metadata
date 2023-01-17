@@ -1,20 +1,18 @@
 // Namespace: 
-[CompilerGeneratedAttribute] // RVA: 0x65580 Offset: 0x65681 VA: 0x65580
-private sealed class InitializationOperation.<>c__DisplayClass18_0 // TypeDefIndex: 7323
+[CompilerGeneratedAttribute] // RVA: 0x65570 Offset: 0x65671 VA: 0x65570
+private sealed class InitializationOperation.<>c__DisplayClass16_0 // TypeDefIndex: 7322
 {
 	// Fields
-	public InitializationOperation <>4__this; // 0x10
-	public IList<IResourceLocation> catalogs; // 0x18
-	public ResourceLocationMap locMap; // 0x20
-	public int index; // 0x28
-	public IResourceLocation remoteHashLocation; // 0x30
+	public AddressablesImpl addressables; // 0x10
+	public string providerSuffix; // 0x18
+	public IResourceLocation remoteHashLocation; // 0x20
 
 	// Methods
 
-	// RVA: 0x309D700 Offset: 0x309D801 VA: 0x309D700
+	// RVA: 0x309D6B0 Offset: 0x309D7B1 VA: 0x309D6B0
 	public void .ctor() { }
 
-	// RVA: 0x30A32E0 Offset: 0x30A33E1 VA: 0x30A32E0
-	internal void <LoadContentCatalogInternal>b__0(AsyncOperationHandle<IResourceLocator> op) { }
+	// RVA: 0x30A3280 Offset: 0x30A3381 VA: 0x30A3280
+	internal AsyncOperationHandle<IResourceLocator> <LoadContentCatalog>b__0(AsyncOperationHandle<ContentCatalogData> res) { }
 }
 
