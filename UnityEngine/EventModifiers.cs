@@ -1,0 +1,16 @@
+// Namespace: UnityEngine
+[FlagsAttribute] // RVA: 0x52900 Offset: 0x52A01 VA: 0x52900
+public enum EventModifiers // TypeDefIndex: 4143
+{
+	// Fields
+	public int value__; // 0x0
+	public const EventModifiers None = 0;
+	public const EventModifiers Shift = 1;
+	public const EventModifiers Control = 2;
+	public const EventModifiers Alt = 4;
+	public const EventModifiers Command = 8;
+	public const EventModifiers Numeric = 16;
+	public const EventModifiers CapsLock = 32;
+	public const EventModifiers FunctionKey = 64;
+}
+
