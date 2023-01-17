@@ -31,6 +31,15 @@ public enum MapKeyHelp.Types // TypeDefIndex: 12168
 }
 
 // Namespace: 
+private enum MapKeyHelp.Label // TypeDefIndex: 12169
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapKeyHelp.Label Stay = 0;
+	public const MapKeyHelp.Label Measure = 1;
+}
+
+// Namespace: 
 private enum MapKeyHelp.Mode // TypeDefIndex: 12170
 {
 	// Fields

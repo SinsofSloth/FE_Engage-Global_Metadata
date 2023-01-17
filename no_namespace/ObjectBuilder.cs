@@ -1,4 +1,21 @@
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B470 Offset: 0x5B571 VA: 0x5B470
+private sealed class ObjectBuilder.<>c__DisplayClass3_0 // TypeDefIndex: 6427
+{
+	// Fields
+	public string parentName; // 0x10
+	public Transform[] children; // 0x18
+
+	// Methods
+
+	// RVA: 0x3A7A6B0 Offset: 0x3A7A7B1 VA: 0x3A7A6B0
+	public void .ctor() { }
+
+	// RVA: 0x3A7A6C0 Offset: 0x3A7A7C1 VA: 0x3A7A6C0
+	internal bool <DequeueTransform>b__0(Transform item) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x5B480 Offset: 0x5B581 VA: 0x5B480
 [Serializable]
 private sealed class ObjectBuilder.<>c // TypeDefIndex: 6428
@@ -25,6 +42,22 @@ private sealed class ObjectBuilder.<>c // TypeDefIndex: 6428
 
 	// RVA: 0x3A7A570 Offset: 0x3A7A671 VA: 0x3A7A570
 	internal bool <FindComponent>b__16_1(Component item) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B490 Offset: 0x5B591 VA: 0x5B490
+private sealed class ObjectBuilder.<>c__DisplayClass14_0 // TypeDefIndex: 6429
+{
+	// Fields
+	public Type type; // 0x10
+
+	// Methods
+
+	// RVA: 0x3A7A5E0 Offset: 0x3A7A6E1 VA: 0x3A7A5E0
+	public void .ctor() { }
+
+	// RVA: 0x3A7A5F0 Offset: 0x3A7A6F1 VA: 0x3A7A5F0
+	internal bool <GetValueByType>b__0(TypedStringToValueMap map) { }
 }
 
 // Namespace: 

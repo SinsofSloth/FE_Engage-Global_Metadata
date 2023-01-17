@@ -17,6 +17,24 @@ public sealed class SendItemMenu.DecideCallback : MulticastDelegate // TypeDefIn
 }
 
 // Namespace: 
+public sealed class SendItemMenu.CancelCallback : MulticastDelegate // TypeDefIndex: 12663
+{
+	// Methods
+
+	// RVA: 0x2036930 Offset: 0x2036A31 VA: 0x2036930
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2036950 Offset: 0x2036A51 VA: 0x2036950 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x2036B60 Offset: 0x2036C61 VA: 0x2036B60 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2036B90 Offset: 0x2036C91 VA: 0x2036B90 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class SendItemMenu.SendItemMenuItem : BasicItemMenuItem // TypeDefIndex: 12664
 {
 	// Methods
@@ -53,6 +71,24 @@ private class SendItemMenu.SendItemMenuItem : BasicItemMenuItem // TypeDefIndex:
 
 	// RVA: 0x2037DA0 Offset: 0x2037EA1 VA: 0x2037DA0
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class SendItemMenu.ConfirmDialog.ConfirmYesDialogItem : BasicDialogItemYes // TypeDefIndex: 12665
+{
+	// Fields
+	private Unit m_Unit; // 0x70
+	private int m_UnitItemIndex; // 0x78
+	private UnitItem m_GainUnitItem; // 0x80
+	private SendItemMenu.DecideCallback m_DecideCallback; // 0x88
+
+	// Methods
+
+	// RVA: 0x21F8EA0 Offset: 0x21F8FA1 VA: 0x21F8EA0
+	public void .ctor(Unit unit, int unitItemIndex, UnitItem gainUnitItem, SendItemMenu.DecideCallback decideCallback) { }
+
+	// RVA: 0x21F8F90 Offset: 0x21F9091 VA: 0x21F8F90 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 

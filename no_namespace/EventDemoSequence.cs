@@ -1,4 +1,22 @@
 // Namespace: 
+private sealed class EventDemoSequence.CmdFunc : MulticastDelegate // TypeDefIndex: 10199
+{
+	// Methods
+
+	// RVA: 0x1F062E0 Offset: 0x1F063E1 VA: 0x1F062E0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F06300 Offset: 0x1F06401 VA: 0x1F06300 Slot: 13
+	public virtual EventDemoSequence.EventCmdResult Invoke(EventDemoSequence.CmdInfo cmdFuncInfo) { }
+
+	// RVA: 0x1F06660 Offset: 0x1F06761 VA: 0x1F06660 Slot: 14
+	public virtual IAsyncResult BeginInvoke(EventDemoSequence.CmdInfo cmdFuncInfo, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F06690 Offset: 0x1F06791 VA: 0x1F06690 Slot: 15
+	public virtual EventDemoSequence.EventCmdResult EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class EventDemoSequence.CmdInfo // TypeDefIndex: 10200
 {
 	// Fields
@@ -59,6 +77,34 @@ private class EventDemoSequence.CmdInfo // TypeDefIndex: 10200
 }
 
 // Namespace: 
+public class EventDemoSequence.WeightFader // TypeDefIndex: 10201
+{
+	// Fields
+	private float m_wgt; // 0x10
+	private float m_wgtFrom; // 0x14
+	private float m_wgtTo; // 0x18
+	private float m_time; // 0x1C
+	private float m_duration; // 0x20
+
+	// Methods
+
+	// RVA: 0x1F07CB0 Offset: 0x1F07DB1 VA: 0x1F07CB0
+	public void .ctor() { }
+
+	// RVA: 0x1F07CF0 Offset: 0x1F07DF1 VA: 0x1F07CF0
+	public void Reset() { }
+
+	// RVA: 0x1F07D10 Offset: 0x1F07E11 VA: 0x1F07D10
+	public float Get() { }
+
+	// RVA: 0x1F07D20 Offset: 0x1F07E21 VA: 0x1F07D20
+	public void Set(float wgt, float msec) { }
+
+	// RVA: 0x1F07D60 Offset: 0x1F07E61 VA: 0x1F07D60
+	public float Tick() { }
+}
+
+// Namespace: 
 private class EventDemoSequence.LightSetupInfo // TypeDefIndex: 10202
 {
 	// Fields
@@ -105,6 +151,34 @@ private class EventDemoSequence.LightSetupInfo // TypeDefIndex: 10202
 }
 
 // Namespace: 
+private class EventDemoSequence.ColorFader // TypeDefIndex: 10203
+{
+	// Fields
+	private Color m_color; // 0x10
+	private Color m_colorFrom; // 0x20
+	private Color m_colorTo; // 0x30
+	private float m_time; // 0x40
+	private float m_duration; // 0x44
+
+	// Methods
+
+	// RVA: 0x1F067C0 Offset: 0x1F068C1 VA: 0x1F067C0
+	public void .ctor() { }
+
+	// RVA: 0x1F06830 Offset: 0x1F06931 VA: 0x1F06830
+	public void Reset() { }
+
+	// RVA: 0x1F068A0 Offset: 0x1F069A1 VA: 0x1F068A0
+	public Color Get() { }
+
+	// RVA: 0x1F068B0 Offset: 0x1F069B1 VA: 0x1F068B0
+	public void Set(Color color, float msec) { }
+
+	// RVA: 0x1F06910 Offset: 0x1F06A11 VA: 0x1F06910
+	public Color Tick() { }
+}
+
+// Namespace: 
 private class EventDemoSequence.RotateFader // TypeDefIndex: 10204
 {
 	// Fields
@@ -130,6 +204,187 @@ private class EventDemoSequence.RotateFader // TypeDefIndex: 10204
 
 	// RVA: 0x1F06210 Offset: 0x1F06311 VA: 0x1F06210
 	public float Tick() { }
+}
+
+// Namespace: 
+private class EventDemoSequence.CharacterWork // TypeDefIndex: 10205
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x28DAF0 Offset: 0x28DBF1 VA: 0x28DAF0
+	private string <Pid>k__BackingField; // 0x10
+	[CompilerGeneratedAttribute] // RVA: 0x28DB00 Offset: 0x28DC01 VA: 0x28DB00
+	private string <PidForCreate>k__BackingField; // 0x18
+	[CompilerGeneratedAttribute] // RVA: 0x28DB10 Offset: 0x28DC11 VA: 0x28DB10
+	private Character <Character>k__BackingField; // 0x20
+	[CompilerGeneratedAttribute] // RVA: 0x28DB20 Offset: 0x28DC21 VA: 0x28DB20
+	private CharacterAppearance <Appearance>k__BackingField; // 0x28
+	[CompilerGeneratedAttribute] // RVA: 0x28DB30 Offset: 0x28DC31 VA: 0x28DB30
+	private GameObject <PositionLocater>k__BackingField; // 0x30
+	[CompilerGeneratedAttribute] // RVA: 0x28DB40 Offset: 0x28DC41 VA: 0x28DB40
+	private EventDemoSequence.RotateFader <RotateFader>k__BackingField; // 0x38
+	[CompilerGeneratedAttribute] // RVA: 0x28DB50 Offset: 0x28DC51 VA: 0x28DB50
+	private float <RotateYTo>k__BackingField; // 0x40
+	[CompilerGeneratedAttribute] // RVA: 0x28DB60 Offset: 0x28DC61 VA: 0x28DB60
+	private int <AnimStatehash>k__BackingField; // 0x44
+	[CompilerGeneratedAttribute] // RVA: 0x28DB70 Offset: 0x28DC71 VA: 0x28DB70
+	private CharacterAsset <EquipWeaponAsset>k__BackingField; // 0x48
+	[CompilerGeneratedAttribute] // RVA: 0x28DB80 Offset: 0x28DC81 VA: 0x28DB80
+	private IDisposable <DoLaterPlayMotion>k__BackingField; // 0x50
+	[CompilerGeneratedAttribute] // RVA: 0x28DB90 Offset: 0x28DC91 VA: 0x28DB90
+	private IDisposable <DoLaterSetAngle>k__BackingField; // 0x58
+	[CompilerGeneratedAttribute] // RVA: 0x28DBA0 Offset: 0x28DCA1 VA: 0x28DBA0
+	private IDisposable <DoLaterSetRotate>k__BackingField; // 0x60
+	[CompilerGeneratedAttribute] // RVA: 0x28DBB0 Offset: 0x28DCB1 VA: 0x28DBB0
+	private ResourceHandle <AnimatorResourceHandle>k__BackingField; // 0x68
+	[CompilerGeneratedAttribute] // RVA: 0x28DBC0 Offset: 0x28DCC1 VA: 0x28DBC0
+	private ResourceHandle <FishingRodResourceHandle>k__BackingField; // 0x70
+	[CompilerGeneratedAttribute] // RVA: 0x28DBD0 Offset: 0x28DCD1 VA: 0x28DBD0
+	private GameObject <FishingRodObject>k__BackingField; // 0x78
+
+	// Properties
+	public string Pid { get; set; }
+	public string PidForCreate { get; set; }
+	public Character Character { get; set; }
+	public CharacterAppearance Appearance { get; set; }
+	public GameObject PositionLocater { get; set; }
+	public EventDemoSequence.RotateFader RotateFader { get; set; }
+	public float RotateYTo { get; set; }
+	public int AnimStatehash { get; set; }
+	public CharacterAsset EquipWeaponAsset { get; set; }
+	public IDisposable DoLaterPlayMotion { get; set; }
+	public IDisposable DoLaterSetAngle { get; set; }
+	public IDisposable DoLaterSetRotate { get; set; }
+	public ResourceHandle AnimatorResourceHandle { get; set; }
+	public ResourceHandle FishingRodResourceHandle { get; set; }
+	public GameObject FishingRodObject { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD510 Offset: 0x2BD611 VA: 0x2BD510
+	// RVA: 0x1F05EE0 Offset: 0x1F05FE1 VA: 0x1F05EE0
+	public string get_Pid() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD520 Offset: 0x2BD621 VA: 0x2BD520
+	// RVA: 0x1F05EF0 Offset: 0x1F05FF1 VA: 0x1F05EF0
+	private void set_Pid(string value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD530 Offset: 0x2BD631 VA: 0x2BD530
+	// RVA: 0x1F05F00 Offset: 0x1F06001 VA: 0x1F05F00
+	public string get_PidForCreate() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD540 Offset: 0x2BD641 VA: 0x2BD540
+	// RVA: 0x1F05F10 Offset: 0x1F06011 VA: 0x1F05F10
+	private void set_PidForCreate(string value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD550 Offset: 0x2BD651 VA: 0x2BD550
+	// RVA: 0x1F05F20 Offset: 0x1F06021 VA: 0x1F05F20
+	public Character get_Character() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD560 Offset: 0x2BD661 VA: 0x2BD560
+	// RVA: 0x1F05F30 Offset: 0x1F06031 VA: 0x1F05F30
+	public void set_Character(Character value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD570 Offset: 0x2BD671 VA: 0x2BD570
+	// RVA: 0x1F05F40 Offset: 0x1F06041 VA: 0x1F05F40
+	public CharacterAppearance get_Appearance() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD580 Offset: 0x2BD681 VA: 0x2BD580
+	// RVA: 0x1F05F50 Offset: 0x1F06051 VA: 0x1F05F50
+	private void set_Appearance(CharacterAppearance value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD590 Offset: 0x2BD691 VA: 0x2BD590
+	// RVA: 0x1F05F60 Offset: 0x1F06061 VA: 0x1F05F60
+	public GameObject get_PositionLocater() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD5A0 Offset: 0x2BD6A1 VA: 0x2BD5A0
+	// RVA: 0x1F05F70 Offset: 0x1F06071 VA: 0x1F05F70
+	public void set_PositionLocater(GameObject value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD5B0 Offset: 0x2BD6B1 VA: 0x2BD5B0
+	// RVA: 0x1F05F80 Offset: 0x1F06081 VA: 0x1F05F80
+	public EventDemoSequence.RotateFader get_RotateFader() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD5C0 Offset: 0x2BD6C1 VA: 0x2BD5C0
+	// RVA: 0x1F05F90 Offset: 0x1F06091 VA: 0x1F05F90
+	public void set_RotateFader(EventDemoSequence.RotateFader value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD5D0 Offset: 0x2BD6D1 VA: 0x2BD5D0
+	// RVA: 0x1F05FA0 Offset: 0x1F060A1 VA: 0x1F05FA0
+	public float get_RotateYTo() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD5E0 Offset: 0x2BD6E1 VA: 0x2BD5E0
+	// RVA: 0x1F05FB0 Offset: 0x1F060B1 VA: 0x1F05FB0
+	public void set_RotateYTo(float value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD5F0 Offset: 0x2BD6F1 VA: 0x2BD5F0
+	// RVA: 0x1F05FC0 Offset: 0x1F060C1 VA: 0x1F05FC0
+	public int get_AnimStatehash() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD600 Offset: 0x2BD701 VA: 0x2BD600
+	// RVA: 0x1F05FD0 Offset: 0x1F060D1 VA: 0x1F05FD0
+	public void set_AnimStatehash(int value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD610 Offset: 0x2BD711 VA: 0x2BD610
+	// RVA: 0x1F05FE0 Offset: 0x1F060E1 VA: 0x1F05FE0
+	public CharacterAsset get_EquipWeaponAsset() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD620 Offset: 0x2BD721 VA: 0x2BD620
+	// RVA: 0x1F05FF0 Offset: 0x1F060F1 VA: 0x1F05FF0
+	public void set_EquipWeaponAsset(CharacterAsset value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD630 Offset: 0x2BD731 VA: 0x2BD630
+	// RVA: 0x1F06000 Offset: 0x1F06101 VA: 0x1F06000
+	public IDisposable get_DoLaterPlayMotion() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD640 Offset: 0x2BD741 VA: 0x2BD640
+	// RVA: 0x1F06010 Offset: 0x1F06111 VA: 0x1F06010
+	public void set_DoLaterPlayMotion(IDisposable value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD650 Offset: 0x2BD751 VA: 0x2BD650
+	// RVA: 0x1F06020 Offset: 0x1F06121 VA: 0x1F06020
+	public IDisposable get_DoLaterSetAngle() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD660 Offset: 0x2BD761 VA: 0x2BD660
+	// RVA: 0x1F06030 Offset: 0x1F06131 VA: 0x1F06030
+	public void set_DoLaterSetAngle(IDisposable value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD670 Offset: 0x2BD771 VA: 0x2BD670
+	// RVA: 0x1F06040 Offset: 0x1F06141 VA: 0x1F06040
+	public IDisposable get_DoLaterSetRotate() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD680 Offset: 0x2BD781 VA: 0x2BD680
+	// RVA: 0x1F06050 Offset: 0x1F06151 VA: 0x1F06050
+	public void set_DoLaterSetRotate(IDisposable value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD690 Offset: 0x2BD791 VA: 0x2BD690
+	// RVA: 0x1F06060 Offset: 0x1F06161 VA: 0x1F06060
+	public ResourceHandle get_AnimatorResourceHandle() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD6A0 Offset: 0x2BD7A1 VA: 0x2BD6A0
+	// RVA: 0x1F06070 Offset: 0x1F06171 VA: 0x1F06070
+	public void set_AnimatorResourceHandle(ResourceHandle value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD6B0 Offset: 0x2BD7B1 VA: 0x2BD6B0
+	// RVA: 0x1F06080 Offset: 0x1F06181 VA: 0x1F06080
+	public ResourceHandle get_FishingRodResourceHandle() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD6C0 Offset: 0x2BD7C1 VA: 0x2BD6C0
+	// RVA: 0x1F06090 Offset: 0x1F06191 VA: 0x1F06090
+	public void set_FishingRodResourceHandle(ResourceHandle value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD6D0 Offset: 0x2BD7D1 VA: 0x2BD6D0
+	// RVA: 0x1F060A0 Offset: 0x1F061A1 VA: 0x1F060A0
+	public GameObject get_FishingRodObject() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD6E0 Offset: 0x2BD7E1 VA: 0x2BD6E0
+	// RVA: 0x1F060B0 Offset: 0x1F061B1 VA: 0x1F060B0
+	public void set_FishingRodObject(GameObject value) { }
+
+	// RVA: 0x1F060C0 Offset: 0x1F061C1 VA: 0x1F060C0
+	public void .ctor(string pid, string pidForCreate, CharacterAppearance appearance) { }
+
+	// RVA: 0x1F06130 Offset: 0x1F06231 VA: 0x1F06130
+	public void Tick() { }
 }
 
 // Namespace: 
@@ -263,6 +518,27 @@ private class EventDemoSequence.SplitViewWork // TypeDefIndex: 10206
 }
 
 // Namespace: 
+private class EventDemoSequence.EffectWork // TypeDefIndex: 10207
+{
+	// Fields
+	private ResourceObject m_effectResourceObject; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F06A50 Offset: 0x1F06B51 VA: 0x1F06A50
+	public void .ctor(string effectPath, Transform parentTrans) { }
+
+	// RVA: 0x1F06A90 Offset: 0x1F06B91 VA: 0x1F06A90
+	private void LoadEffect(string effectPath, Transform parentTrans) { }
+
+	// RVA: 0x1F06B90 Offset: 0x1F06C91 VA: 0x1F06B90
+	private static void SetupAfterLoad(GameObject effectPrefabObject) { }
+
+	// RVA: 0x1F06C20 Offset: 0x1F06D21 VA: 0x1F06C20
+	public void DeleteEffect() { }
+}
+
+// Namespace: 
 private enum EventDemoSequence.EventCmdSeq // TypeDefIndex: 10208
 {
 	// Fields
@@ -273,6 +549,18 @@ private enum EventDemoSequence.EventCmdSeq // TypeDefIndex: 10208
 }
 
 // Namespace: 
+private enum EventDemoSequence.EventCmdResult // TypeDefIndex: 10209
+{
+	// Fields
+	public int value__; // 0x0
+	public const EventDemoSequence.EventCmdResult Continue = 0;
+	public const EventDemoSequence.EventCmdResult ContinueNextFrame = 1;
+	public const EventDemoSequence.EventCmdResult Retry = 2;
+	public const EventDemoSequence.EventCmdResult RetryNextFrame = 3;
+	public const EventDemoSequence.EventCmdResult CmdNotFound = 4;
+}
+
+// Namespace: 
 private enum EventDemoSequence.ClothType // TypeDefIndex: 10210
 {
 	// Fields
@@ -280,6 +568,20 @@ private enum EventDemoSequence.ClothType // TypeDefIndex: 10210
 	public const EventDemoSequence.ClothType Normal = 0;
 	public const EventDemoSequence.ClothType DefaultJob = 1;
 	public const EventDemoSequence.ClothType Plain = 2;
+}
+
+// Namespace: 
+[Serializable]
+private class EventDemoSequence.SoundEnv.EventNameData // TypeDefIndex: 10211
+{
+	// Fields
+	public string m_MaterialName; // 0x10
+	public string m_EventName; // 0x18
+
+	// Methods
+
+	// RVA: 0x1DC8E50 Offset: 0x1DC8F51 VA: 0x1DC8E50
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -313,6 +615,22 @@ public class EventDemoSequence.SoundEnv : MonoBehaviour // TypeDefIndex: 10212
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276760 Offset: 0x276861 VA: 0x276760
+private sealed class EventDemoSequence.<>c__DisplayClass11_0 // TypeDefIndex: 10213
+{
+	// Fields
+	public string skyBoxMaterialName; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F053D0 Offset: 0x1F054D1 VA: 0x1F053D0
+	public void .ctor() { }
+
+	// RVA: 0x1F053E0 Offset: 0x1F054E1 VA: 0x1F053E0
+	internal void <SetBackGround>b__0(Material material) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x276770 Offset: 0x276871 VA: 0x276770
 [Serializable]
 private sealed class EventDemoSequence.<>c // TypeDefIndex: 10214
@@ -338,6 +656,23 @@ private sealed class EventDemoSequence.<>c // TypeDefIndex: 10214
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276780 Offset: 0x276881 VA: 0x276780
+private sealed class EventDemoSequence.<>c__DisplayClass20_0 // TypeDefIndex: 10215
+{
+	// Fields
+	public string srcCameraName; // 0x10
+	public Camera srcCamera; // 0x18
+
+	// Methods
+
+	// RVA: 0x1F05720 Offset: 0x1F05821 VA: 0x1F05720
+	public void .ctor() { }
+
+	// RVA: 0x1F05730 Offset: 0x1F05831 VA: 0x1F05730
+	internal void <GetSrcCamera>b__0(Camera camera) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x276790 Offset: 0x276891 VA: 0x276790
 private sealed class EventDemoSequence.<>c__DisplayClass26_0 // TypeDefIndex: 10216
 {
@@ -352,6 +687,23 @@ private sealed class EventDemoSequence.<>c__DisplayClass26_0 // TypeDefIndex: 10
 
 	// RVA: 0x1F057A0 Offset: 0x1F058A1 VA: 0x1F057A0
 	internal void <FuncCameraSetCharaCamera>b__0() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2767A0 Offset: 0x2768A1 VA: 0x2767A0
+private sealed class EventDemoSequence.<>c__DisplayClass28_0 // TypeDefIndex: 10217
+{
+	// Fields
+	public EventDemoSequence <>4__this; // 0x10
+	public EventDemoSequence.CmdInfo cmdInfo; // 0x18
+
+	// Methods
+
+	// RVA: 0x1F057B0 Offset: 0x1F058B1 VA: 0x1F057B0
+	public void .ctor() { }
+
+	// RVA: 0x1F057C0 Offset: 0x1F058C1 VA: 0x1F057C0
+	internal void <FuncCameraSetSceneCamera>b__0() { }
 }
 
 // Namespace: 
@@ -372,6 +724,28 @@ private sealed class EventDemoSequence.<>c__DisplayClass46_0 // TypeDefIndex: 10
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2767C0 Offset: 0x2768C1 VA: 0x2767C0
+private sealed class EventDemoSequence.<>c__DisplayClass62_0 // TypeDefIndex: 10219
+{
+	// Fields
+	public EventDemoSequence <>4__this; // 0x10
+	public string pid; // 0x18
+	public string pidForCreate; // 0x20
+	public string facialAnimName; // 0x28
+	public string bodyAnimName; // 0x30
+	public int rotateY; // 0x38
+	public Character character; // 0x40
+
+	// Methods
+
+	// RVA: 0x1F05840 Offset: 0x1F05941 VA: 0x1F05840
+	public void .ctor() { }
+
+	// RVA: 0x1F05850 Offset: 0x1F05951 VA: 0x1F05850
+	internal void <FuncCharacterCreate>b__0() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2767D0 Offset: 0x2768D1 VA: 0x2767D0
 private sealed class EventDemoSequence.<>c__DisplayClass66_0 // TypeDefIndex: 10220
 {
@@ -385,6 +759,26 @@ private sealed class EventDemoSequence.<>c__DisplayClass66_0 // TypeDefIndex: 10
 
 	// RVA: 0x1F05B10 Offset: 0x1F05C11 VA: 0x1F05B10
 	internal void <FuncCharacterSetAnimator>b__0(RuntimeAnimatorController animatorController) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2767E0 Offset: 0x2768E1 VA: 0x2767E0
+private sealed class EventDemoSequence.<>c__DisplayClass67_0 // TypeDefIndex: 10221
+{
+	// Fields
+	public EventDemoSequence <>4__this; // 0x10
+	public Character character; // 0x18
+	public string facialAnimName; // 0x20
+	public string bodyAnimName; // 0x28
+	public float duration; // 0x30
+
+	// Methods
+
+	// RVA: 0x1F05BB0 Offset: 0x1F05CB1 VA: 0x1F05BB0
+	public void .ctor() { }
+
+	// RVA: 0x1F05BC0 Offset: 0x1F05CC1 VA: 0x1F05BC0
+	internal void <FuncCharacterPlayMotion>b__0() { }
 }
 
 // Namespace: 
@@ -407,6 +801,25 @@ private sealed class EventDemoSequence.<>c__DisplayClass70_0 // TypeDefIndex: 10
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276800 Offset: 0x276901 VA: 0x276800
+private sealed class EventDemoSequence.<>c__DisplayClass73_0 // TypeDefIndex: 10223
+{
+	// Fields
+	public EventDemoSequence <>4__this; // 0x10
+	public Character character; // 0x18
+	public EventDemoSequence.CharacterWork characterWork; // 0x20
+	public float sec; // 0x28
+
+	// Methods
+
+	// RVA: 0x1F05C10 Offset: 0x1F05D11 VA: 0x1F05C10
+	public void .ctor() { }
+
+	// RVA: 0x1F05C20 Offset: 0x1F05D21 VA: 0x1F05C20
+	internal void <FuncCharacterSetRotate>b__0() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x276810 Offset: 0x276911 VA: 0x276810
 private sealed class EventDemoSequence.<>c__DisplayClass75_0 // TypeDefIndex: 10224
 {
@@ -422,5 +835,22 @@ private sealed class EventDemoSequence.<>c__DisplayClass75_0 // TypeDefIndex: 10
 
 	// RVA: 0x1F05C50 Offset: 0x1F05D51 VA: 0x1F05C50
 	internal void <FuncCharacterEquipWeapon>b__0() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276820 Offset: 0x276921 VA: 0x276820
+private sealed class EventDemoSequence.<>c__DisplayClass77_0 // TypeDefIndex: 10225
+{
+	// Fields
+	public EventDemoSequence.CharacterWork characterWork; // 0x10
+	public Character character; // 0x18
+
+	// Methods
+
+	// RVA: 0x1F05D70 Offset: 0x1F05E71 VA: 0x1F05D70
+	public void .ctor() { }
+
+	// RVA: 0x1F05D80 Offset: 0x1F05E81 VA: 0x1F05D80
+	internal void <FuncCharacterEquipFishingRod>b__0(GameObject gameObject) { }
 }
 

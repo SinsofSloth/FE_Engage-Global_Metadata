@@ -9,6 +9,24 @@ public enum ShopSellMenu.KindIndicator // TypeDefIndex: 11186
 }
 
 // Namespace: 
+public sealed class ShopSellMenu.SelectEventHandler : MulticastDelegate // TypeDefIndex: 11187
+{
+	// Methods
+
+	// RVA: 0x2039000 Offset: 0x2039101 VA: 0x2039000
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2039020 Offset: 0x2039121 VA: 0x2039020 Slot: 13
+	public virtual void Invoke(UnitItem unitItem) { }
+
+	// RVA: 0x2039380 Offset: 0x2039481 VA: 0x2039380 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnitItem unitItem, AsyncCallback callback, object object) { }
+
+	// RVA: 0x20393B0 Offset: 0x20394B1 VA: 0x20393B0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ShopSellMenu.DecideItemEventHandler : MulticastDelegate // TypeDefIndex: 11188
 {
 	// Methods
@@ -23,6 +41,24 @@ public sealed class ShopSellMenu.DecideItemEventHandler : MulticastDelegate // T
 	public virtual IAsyncResult BeginInvoke(int itemCount, int totalValue, AsyncCallback callback, object object) { }
 
 	// RVA: 0x2038D80 Offset: 0x2038E81 VA: 0x2038D80 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class ShopSellMenu.CancelItemEventHandler : MulticastDelegate // TypeDefIndex: 11189
+{
+	// Methods
+
+	// RVA: 0x2038020 Offset: 0x2038121 VA: 0x2038020
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2038040 Offset: 0x2038141 VA: 0x2038040 Slot: 13
+	public virtual void Invoke(int itemCount, int totalValue) { }
+
+	// RVA: 0x2038280 Offset: 0x2038381 VA: 0x2038280 Slot: 14
+	public virtual IAsyncResult BeginInvoke(int itemCount, int totalValue, AsyncCallback callback, object object) { }
+
+	// RVA: 0x2038320 Offset: 0x2038421 VA: 0x2038320 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -45,6 +81,24 @@ public sealed class ShopSellMenu.DecideEventHandler : MulticastDelegate // TypeD
 }
 
 // Namespace: 
+public sealed class ShopSellMenu.RequestCloseEventHandler : MulticastDelegate // TypeDefIndex: 11191
+{
+	// Methods
+
+	// RVA: 0x2038D90 Offset: 0x2038E91 VA: 0x2038D90
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2038DB0 Offset: 0x2038EB1 VA: 0x2038DB0 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x2038FC0 Offset: 0x20390C1 VA: 0x2038FC0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2038FF0 Offset: 0x20390F1 VA: 0x2038FF0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ShopSellMenu.ChangeUnitToPrevEventHandler : MulticastDelegate // TypeDefIndex: 11192
 {
 	// Methods
@@ -59,6 +113,24 @@ public sealed class ShopSellMenu.ChangeUnitToPrevEventHandler : MulticastDelegat
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x2038800 Offset: 0x2038901 VA: 0x2038800 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class ShopSellMenu.ChangeUnitToNextEventHandler : MulticastDelegate // TypeDefIndex: 11193
+{
+	// Methods
+
+	// RVA: 0x2038330 Offset: 0x2038431 VA: 0x2038330
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2038350 Offset: 0x2038451 VA: 0x2038350 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x2038560 Offset: 0x2038661 VA: 0x2038560 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2038590 Offset: 0x2038691 VA: 0x2038590 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 

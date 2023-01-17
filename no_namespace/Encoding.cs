@@ -1,5 +1,41 @@
 // Namespace: 
 [Serializable]
+internal class Encoding.DefaultEncoder : Encoder, ISerializable, IObjectReference // TypeDefIndex: 457
+{
+	// Fields
+	private Encoding m_encoding; // 0x20
+	private bool m_hasInitializedEncoding; // 0x28
+	internal char charLeftOver; // 0x2A
+
+	// Methods
+
+	// RVA: 0x35E9870 Offset: 0x35E9971 VA: 0x35E9870
+	public void .ctor(Encoding encoding) { }
+
+	// RVA: 0x35E98B0 Offset: 0x35E99B1 VA: 0x35E98B0
+	internal void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x35E9C00 Offset: 0x35E9D01 VA: 0x35E9C00 Slot: 10
+	public object GetRealObject(StreamingContext context) { }
+
+	// RVA: 0x35E9CD0 Offset: 0x35E9DD1 VA: 0x35E9CD0 Slot: 9
+	private void System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x35E9D80 Offset: 0x35E9E81 VA: 0x35E9D80 Slot: 5
+	public override int GetByteCount(char[] chars, int index, int count, bool flush) { }
+
+	// RVA: 0x35E9D90 Offset: 0x35E9E91 VA: 0x35E9D90 Slot: 6
+	public override int GetByteCount(char* chars, int count, bool flush) { }
+
+	// RVA: 0x35E9DB0 Offset: 0x35E9EB1 VA: 0x35E9DB0 Slot: 7
+	public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, bool flush) { }
+
+	// RVA: 0x35E9DD0 Offset: 0x35E9ED1 VA: 0x35E9DD0 Slot: 8
+	public override int GetBytes(char* chars, int charCount, byte* bytes, int byteCount, bool flush) { }
+}
+
+// Namespace: 
+[Serializable]
 internal class Encoding.DefaultDecoder : Decoder, ISerializable, IObjectReference // TypeDefIndex: 458
 {
 	// Fields
@@ -37,6 +73,59 @@ internal class Encoding.DefaultDecoder : Decoder, ISerializable, IObjectReferenc
 
 	// RVA: 0x35E9850 Offset: 0x35E9951 VA: 0x35E9850 Slot: 10
 	public override int GetChars(byte* bytes, int byteCount, char* chars, int charCount, bool flush) { }
+}
+
+// Namespace: 
+internal class Encoding.EncodingCharBuffer // TypeDefIndex: 459
+{
+	// Fields
+	private char* chars; // 0x10
+	private char* charStart; // 0x18
+	private char* charEnd; // 0x20
+	private int charCountResult; // 0x28
+	private Encoding enc; // 0x30
+	private DecoderNLS decoder; // 0x38
+	private byte* byteStart; // 0x40
+	private byte* byteEnd; // 0x48
+	private byte* bytes; // 0x50
+	private DecoderFallbackBuffer fallbackBuffer; // 0x58
+
+	// Properties
+	internal bool MoreData { get; }
+	internal int BytesUsed { get; }
+	internal int Count { get; }
+
+	// Methods
+
+	// RVA: 0x35EA3C0 Offset: 0x35EA4C1 VA: 0x35EA3C0
+	internal void .ctor(Encoding enc, DecoderNLS decoder, char* charStart, int charCount, byte* byteStart, int byteCount) { }
+
+	// RVA: 0x35EA490 Offset: 0x35EA591 VA: 0x35EA490
+	internal bool AddChar(char ch, int numBytes) { }
+
+	// RVA: 0x35EA510 Offset: 0x35EA611 VA: 0x35EA510
+	internal bool AddChar(char ch) { }
+
+	// RVA: 0x35EA590 Offset: 0x35EA691 VA: 0x35EA590
+	internal void AdjustBytes(int count) { }
+
+	// RVA: 0x35EA5A0 Offset: 0x35EA6A1 VA: 0x35EA5A0
+	internal bool get_MoreData() { }
+
+	// RVA: 0x35EA5B0 Offset: 0x35EA6B1 VA: 0x35EA5B0
+	internal byte GetNextByte() { }
+
+	// RVA: 0x35EA5E0 Offset: 0x35EA6E1 VA: 0x35EA5E0
+	internal int get_BytesUsed() { }
+
+	// RVA: 0x35EA5F0 Offset: 0x35EA6F1 VA: 0x35EA5F0
+	internal bool Fallback(byte fallbackByte) { }
+
+	// RVA: 0x35EA670 Offset: 0x35EA771 VA: 0x35EA670
+	internal bool Fallback(byte[] byteBuffer) { }
+
+	// RVA: 0x35EA750 Offset: 0x35EA851 VA: 0x35EA750
+	internal int get_Count() { }
 }
 
 // Namespace: 

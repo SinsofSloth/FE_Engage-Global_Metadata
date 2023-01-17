@@ -1,4 +1,28 @@
 // Namespace: 
+private class UnitCalculator.PosXCommand : GameCalculatorCommand // TypeDefIndex: 9619
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECBBF0 Offset: 0x1ECBCF1 VA: 0x1ECBBF0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECBC40 Offset: 0x1ECBD41 VA: 0x1ECBC40 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECBC50 Offset: 0x1ECBD51 VA: 0x1ECBC50 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECBC60 Offset: 0x1ECBD61 VA: 0x1ECBC60 Slot: 42
+	protected override float GetInvalid() { }
+
+	// RVA: 0x1ECBB70 Offset: 0x1ECBC71 VA: 0x1ECBB70
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.PosZCommand : GameCalculatorCommand // TypeDefIndex: 9620
 {
 	// Properties
@@ -23,6 +47,21 @@ private class UnitCalculator.PosZCommand : GameCalculatorCommand // TypeDefIndex
 }
 
 // Namespace: 
+private class UnitCalculator.PosLowXCommand : UnitCalculator.PosXCommand // TypeDefIndex: 9621
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECBB10 Offset: 0x1ECBC11 VA: 0x1ECBB10 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECBB60 Offset: 0x1ECBC61 VA: 0x1ECBB60
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.PosLowZCommand : UnitCalculator.PosZCommand // TypeDefIndex: 9622
 {
 	// Properties
@@ -34,6 +73,27 @@ private class UnitCalculator.PosLowZCommand : UnitCalculator.PosZCommand // Type
 	public override string get_Name() { }
 
 	// RVA: 0x1ECBBD0 Offset: 0x1ECBCD1 VA: 0x1ECBBD0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.ForceCommand : GameCalculatorCommand // TypeDefIndex: 9623
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AE300 Offset: 0x23AE401 VA: 0x23AE300 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AE350 Offset: 0x23AE451 VA: 0x23AE350 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AE370 Offset: 0x23AE471 VA: 0x23AE370 Slot: 42
+	protected override float GetInvalid() { }
+
+	// RVA: 0x23AE380 Offset: 0x23AE481 VA: 0x23AE380
 	public void .ctor() { }
 }
 
@@ -56,6 +116,27 @@ private class UnitCalculator.GenderCommand : GameCalculatorCommand // TypeDefInd
 }
 
 // Namespace: 
+private class UnitCalculator.MapPhaseCommand : GameCalculatorCommand // TypeDefIndex: 9625
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1EC9710 Offset: 0x1EC9811 VA: 0x1EC9710 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC9760 Offset: 0x1EC9861 VA: 0x1EC9760 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1EC9870 Offset: 0x1EC9971 VA: 0x1EC9870 Slot: 42
+	protected override float GetInvalid() { }
+
+	// RVA: 0x1EC9880 Offset: 0x1EC9981 VA: 0x1EC9880
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.UnitIdentCommand : GameCalculatorCommand // TypeDefIndex: 9626
 {
 	// Properties
@@ -70,6 +151,27 @@ private class UnitCalculator.UnitIdentCommand : GameCalculatorCommand // TypeDef
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECE620 Offset: 0x1ECE721 VA: 0x1ECE620
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.LevelCommand : GameCalculatorCommand // TypeDefIndex: 9627
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1EC8AD0 Offset: 0x1EC8BD1 VA: 0x1EC8AD0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC8B20 Offset: 0x1EC8C21 VA: 0x1EC8B20 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1EC8B30 Offset: 0x1EC8C31 VA: 0x1EC8B30 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1EC8B40 Offset: 0x1EC8C41 VA: 0x1EC8B40
 	public void .ctor() { }
 }
 
@@ -92,6 +194,24 @@ private class UnitCalculator.InternalLevelCommand : GameCalculatorCommand // Typ
 }
 
 // Namespace: 
+private class UnitCalculator.JobInternalLevelCommand : GameCalculatorCommand // TypeDefIndex: 9629
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1EC89E0 Offset: 0x1EC8AE1 VA: 0x1EC89E0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC8A30 Offset: 0x1EC8B31 VA: 0x1EC8A30 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1EC8A40 Offset: 0x1EC8B41 VA: 0x1EC8A40
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.TotalLevelCommand : GameCalculatorCommand // TypeDefIndex: 9630
 {
 	// Properties
@@ -106,6 +226,24 @@ private class UnitCalculator.TotalLevelCommand : GameCalculatorCommand // TypeDe
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECDD00 Offset: 0x1ECDE01 VA: 0x1ECDD00
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.GodLevelCommand : GameCalculatorCommand // TypeDefIndex: 9631
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AEAC0 Offset: 0x23AEBC1 VA: 0x23AEAC0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AEB10 Offset: 0x23AEC11 VA: 0x23AEB10 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AEB50 Offset: 0x23AEC51 VA: 0x23AEB50
 	public void .ctor() { }
 }
 
@@ -134,6 +272,30 @@ private class UnitCalculator.GodGoodWeaponCommand : GameCalculatorCommand // Typ
 }
 
 // Namespace: 
+private class UnitCalculator.GodEngagingCommand : GameCalculatorCommand // TypeDefIndex: 9633
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AE680 Offset: 0x23AE781 VA: 0x23AE680 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AE6D0 Offset: 0x23AE7D1 VA: 0x23AE6D0
+	private int GetValue(Unit unit) { }
+
+	// RVA: 0x23AE750 Offset: 0x23AE851 VA: 0x23AE750 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AE7D0 Offset: 0x23AE8D1 VA: 0x23AE7D0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AE850 Offset: 0x23AE951 VA: 0x23AE850
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.ExpCommand : GameCalculatorCommand // TypeDefIndex: 9634
 {
 	// Properties
@@ -152,6 +314,36 @@ private class UnitCalculator.ExpCommand : GameCalculatorCommand // TypeDefIndex:
 }
 
 // Namespace: 
+private class UnitCalculator.HPCommand : GameCalculatorCommand // TypeDefIndex: 9635
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AEC10 Offset: 0x23AED11 VA: 0x23AEC10 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AEC60 Offset: 0x23AED61 VA: 0x23AEC60 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AEC70 Offset: 0x23AED71 VA: 0x23AEC70 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AEC80 Offset: 0x23AED81 VA: 0x23AEC80 Slot: 32
+	protected override void SetImpl(Unit unit, float value) { }
+
+	// RVA: 0x23AEE50 Offset: 0x23AEF51 VA: 0x23AEE50 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23AEEC0 Offset: 0x23AEFC1 VA: 0x23AEEC0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x23AEED0 Offset: 0x23AEFD1 VA: 0x23AEED0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.MaxHPCommand : GameCalculatorCommand // TypeDefIndex: 9636
 {
 	// Properties
@@ -166,6 +358,30 @@ private class UnitCalculator.MaxHPCommand : GameCalculatorCommand // TypeDefInde
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECB2E0 Offset: 0x1ECB3E1 VA: 0x1ECB2E0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.StrCommand : GameCalculatorCommand // TypeDefIndex: 9637
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECCF70 Offset: 0x1ECD071 VA: 0x1ECCF70 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECCFC0 Offset: 0x1ECD0C1 VA: 0x1ECCFC0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECD140 Offset: 0x1ECD241 VA: 0x1ECD140 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECD1B0 Offset: 0x1ECD2B1 VA: 0x1ECD1B0 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECD230 Offset: 0x1ECD331 VA: 0x1ECD230
 	public void .ctor() { }
 }
 
@@ -194,6 +410,30 @@ private class UnitCalculator.TechCommand : GameCalculatorCommand // TypeDefIndex
 }
 
 // Namespace: 
+private class UnitCalculator.QuickCommand : GameCalculatorCommand // TypeDefIndex: 9639
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECC120 Offset: 0x1ECC221 VA: 0x1ECC120 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECC170 Offset: 0x1ECC271 VA: 0x1ECC170 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECC2F0 Offset: 0x1ECC3F1 VA: 0x1ECC2F0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECC360 Offset: 0x1ECC461 VA: 0x1ECC360 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECC3E0 Offset: 0x1ECC4E1 VA: 0x1ECC3E0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.LuukCommand : GameCalculatorCommand // TypeDefIndex: 9640
 {
 	// Properties
@@ -214,6 +454,30 @@ private class UnitCalculator.LuukCommand : GameCalculatorCommand // TypeDefIndex
 	protected override void SetImpl(BattleInfoSide side, float value) { }
 
 	// RVA: 0x1EC9420 Offset: 0x1EC9521 VA: 0x1EC9420
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.DefCommand : GameCalculatorCommand // TypeDefIndex: 9641
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AD8C0 Offset: 0x23AD9C1 VA: 0x23AD8C0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AD910 Offset: 0x23ADA11 VA: 0x23AD910 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23ADA90 Offset: 0x23ADB91 VA: 0x23ADA90 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23ADB00 Offset: 0x23ADC01 VA: 0x23ADB00 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23ADB80 Offset: 0x23ADC81 VA: 0x23ADB80
 	public void .ctor() { }
 }
 
@@ -242,6 +506,30 @@ private class UnitCalculator.MagicCommand : GameCalculatorCommand // TypeDefInde
 }
 
 // Namespace: 
+private class UnitCalculator.MdefCommand : GameCalculatorCommand // TypeDefIndex: 9643
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECB2F0 Offset: 0x1ECB3F1 VA: 0x1ECB2F0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECB340 Offset: 0x1ECB441 VA: 0x1ECB340 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECB4D0 Offset: 0x1ECB5D1 VA: 0x1ECB4D0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECB540 Offset: 0x1ECB641 VA: 0x1ECB540 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECB5C0 Offset: 0x1ECB6C1 VA: 0x1ECB5C0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.PhysCommand : GameCalculatorCommand // TypeDefIndex: 9644
 {
 	// Properties
@@ -266,6 +554,33 @@ private class UnitCalculator.PhysCommand : GameCalculatorCommand // TypeDefIndex
 }
 
 // Namespace: 
+private abstract class UnitCalculator.LinkGodCommand : GameCalculatorCommand // TypeDefIndex: 9645
+{
+	// Properties
+	protected abstract CapabilityDefinition.Type CapabilityType { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 44
+	protected abstract CapabilityDefinition.Type get_CapabilityType();
+
+	// RVA: 0x1EC8BD0 Offset: 0x1EC8CD1 VA: 0x1EC8BD0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1EC8BE0 Offset: 0x1EC8CE1 VA: 0x1EC8BE0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1EC8D50 Offset: 0x1EC8E51 VA: 0x1EC8D50 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1EC8CD0 Offset: 0x1EC8DD1 VA: 0x1EC8CD0
+	private CapabilityInt GetCapability(BattleInfoSide side) { }
+
+	// RVA: 0x1EC8BC0 Offset: 0x1EC8CC1 VA: 0x1EC8BC0
+	protected void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.LinkStrCommand : UnitCalculator.LinkGodCommand // TypeDefIndex: 9646
 {
 	// Properties
@@ -281,6 +596,25 @@ private class UnitCalculator.LinkStrCommand : UnitCalculator.LinkGodCommand // T
 	protected override CapabilityDefinition.Type get_CapabilityType() { }
 
 	// RVA: 0x1EC90E0 Offset: 0x1EC91E1 VA: 0x1EC90E0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.LinkTechCommand : UnitCalculator.LinkGodCommand // TypeDefIndex: 9647
+{
+	// Properties
+	public override string Name { get; }
+	protected override CapabilityDefinition.Type CapabilityType { get; }
+
+	// Methods
+
+	// RVA: 0x1EC90F0 Offset: 0x1EC91F1 VA: 0x1EC90F0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC9140 Offset: 0x1EC9241 VA: 0x1EC9140 Slot: 44
+	protected override CapabilityDefinition.Type get_CapabilityType() { }
+
+	// RVA: 0x1EC9150 Offset: 0x1EC9251 VA: 0x1EC9150
 	public void .ctor() { }
 }
 
@@ -304,6 +638,25 @@ private class UnitCalculator.LinkQuickCommand : UnitCalculator.LinkGodCommand //
 }
 
 // Namespace: 
+private class UnitCalculator.LinkLuukCommand : UnitCalculator.LinkGodCommand // TypeDefIndex: 9649
+{
+	// Properties
+	public override string Name { get; }
+	protected override CapabilityDefinition.Type CapabilityType { get; }
+
+	// Methods
+
+	// RVA: 0x1EC8E50 Offset: 0x1EC8F51 VA: 0x1EC8E50 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC8EA0 Offset: 0x1EC8FA1 VA: 0x1EC8EA0 Slot: 44
+	protected override CapabilityDefinition.Type get_CapabilityType() { }
+
+	// RVA: 0x1EC8EB0 Offset: 0x1EC8FB1 VA: 0x1EC8EB0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.LinkDefCommand : UnitCalculator.LinkGodCommand // TypeDefIndex: 9650
 {
 	// Properties
@@ -319,6 +672,25 @@ private class UnitCalculator.LinkDefCommand : UnitCalculator.LinkGodCommand // T
 	protected override CapabilityDefinition.Type get_CapabilityType() { }
 
 	// RVA: 0x1EC8BB0 Offset: 0x1EC8CB1 VA: 0x1EC8BB0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.LinkMagicCommand : UnitCalculator.LinkGodCommand // TypeDefIndex: 9651
+{
+	// Properties
+	public override string Name { get; }
+	protected override CapabilityDefinition.Type CapabilityType { get; }
+
+	// Methods
+
+	// RVA: 0x1EC8EC0 Offset: 0x1EC8FC1 VA: 0x1EC8EC0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC8F10 Offset: 0x1EC9011 VA: 0x1EC8F10 Slot: 44
+	protected override CapabilityDefinition.Type get_CapabilityType() { }
+
+	// RVA: 0x1EC8F20 Offset: 0x1EC9021 VA: 0x1EC8F20
 	public void .ctor() { }
 }
 
@@ -342,6 +714,25 @@ private class UnitCalculator.LinkMdefCommand : UnitCalculator.LinkGodCommand // 
 }
 
 // Namespace: 
+private class UnitCalculator.LinkPhysCommand : UnitCalculator.LinkGodCommand // TypeDefIndex: 9653
+{
+	// Properties
+	public override string Name { get; }
+	protected override CapabilityDefinition.Type CapabilityType { get; }
+
+	// Methods
+
+	// RVA: 0x1EC8FA0 Offset: 0x1EC90A1 VA: 0x1EC8FA0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC8FF0 Offset: 0x1EC90F1 VA: 0x1EC8FF0 Slot: 44
+	protected override CapabilityDefinition.Type get_CapabilityType() { }
+
+	// RVA: 0x1EC9000 Offset: 0x1EC9101 VA: 0x1EC9000
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.JobRankCommand : GameCalculatorCommand // TypeDefIndex: 9654
 {
 	// Properties
@@ -359,6 +750,24 @@ private class UnitCalculator.JobRankCommand : GameCalculatorCommand // TypeDefIn
 	protected override float GetInvalid() { }
 
 	// RVA: 0x1EC8AC0 Offset: 0x1EC8BC1 VA: 0x1EC8AC0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleStyleCommand : GameCalculatorCommand // TypeDefIndex: 9655
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AD4B0 Offset: 0x23AD5B1 VA: 0x23AD4B0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AD500 Offset: 0x23AD601 VA: 0x23AD500 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AD510 Offset: 0x23AD611 VA: 0x23AD510
 	public void .ctor() { }
 }
 
@@ -393,6 +802,30 @@ private class UnitCalculator.WeaponWeightCommand : GameCalculatorCommand // Type
 }
 
 // Namespace: 
+private class UnitCalculator.WeaponKindCommand : GameCalculatorCommand // TypeDefIndex: 9657
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECF540 Offset: 0x1ECF641 VA: 0x1ECF540 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECF590 Offset: 0x1ECF691 VA: 0x1ECF590
+	private int GetKind(ItemData item) { }
+
+	// RVA: 0x1ECF5B0 Offset: 0x1ECF6B1 VA: 0x1ECF5B0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECF6E0 Offset: 0x1ECF7E1 VA: 0x1ECF6E0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECF790 Offset: 0x1ECF891 VA: 0x1ECF790
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.WeaponExpendCommand : GameCalculatorCommand // TypeDefIndex: 9658
 {
 	// Properties
@@ -410,6 +843,30 @@ private class UnitCalculator.WeaponExpendCommand : GameCalculatorCommand // Type
 	protected override void SetImpl(BattleInfoSide side, float value) { }
 
 	// RVA: 0x1ECF1D0 Offset: 0x1ECF2D1 VA: 0x1ECF1D0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.WeaponEnduranceCommand : GameCalculatorCommand // TypeDefIndex: 9659
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECEEA0 Offset: 0x1ECEFA1 VA: 0x1ECEEA0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECEEF0 Offset: 0x1ECEFF1 VA: 0x1ECEEF0
+	private static int GetEndurance(UnitItem unitItem) { }
+
+	// RVA: 0x1ECEF80 Offset: 0x1ECF081 VA: 0x1ECEF80 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECF020 Offset: 0x1ECF121 VA: 0x1ECF020 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECF130 Offset: 0x1ECF231 VA: 0x1ECF130
 	public void .ctor() { }
 }
 
@@ -441,6 +898,30 @@ private class UnitCalculator.WeaponAttackCommand : GameCalculatorCommand // Type
 }
 
 // Namespace: 
+private class UnitCalculator.WeaponEfficacyCommand : GameCalculatorCommand // TypeDefIndex: 9661
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECEDE0 Offset: 0x1ECEEE1 VA: 0x1ECEDE0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECEE30 Offset: 0x1ECEF31 VA: 0x1ECEE30 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECEE50 Offset: 0x1ECEF51 VA: 0x1ECEE50 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECEE80 Offset: 0x1ECEF81 VA: 0x1ECEE80 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECEE90 Offset: 0x1ECEF91 VA: 0x1ECEE90
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.RodTypeCommand : GameCalculatorCommand // TypeDefIndex: 9662
 {
 	// Properties
@@ -461,6 +942,24 @@ private class UnitCalculator.RodTypeCommand : GameCalculatorCommand // TypeDefIn
 	protected override float GetImpl(BattleInfoSide side) { }
 
 	// RVA: 0x1ECCCB0 Offset: 0x1ECCDB1 VA: 0x1ECCCB0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.RodExpCommand : GameCalculatorCommand // TypeDefIndex: 9663
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECC9D0 Offset: 0x1ECCAD1 VA: 0x1ECC9D0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECCA20 Offset: 0x1ECCB21 VA: 0x1ECCA20 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECCA50 Offset: 0x1ECCB51 VA: 0x1ECCA50
 	public void .ctor() { }
 }
 
@@ -489,6 +988,30 @@ private class UnitCalculator.TerrainDefenseCommand : GameCalculatorCommand // Ty
 }
 
 // Namespace: 
+private class UnitCalculator.WeaponHitCommand : GameCalculatorCommand // TypeDefIndex: 9665
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECF1E0 Offset: 0x1ECF2E1 VA: 0x1ECF1E0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECF230 Offset: 0x1ECF331 VA: 0x1ECF230 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECF250 Offset: 0x1ECF351 VA: 0x1ECF250 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECF280 Offset: 0x1ECF381 VA: 0x1ECF280 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECF290 Offset: 0x1ECF391 VA: 0x1ECF290
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.WeaponAvoidCommand : GameCalculatorCommand // TypeDefIndex: 9666
 {
 	// Properties
@@ -509,6 +1032,27 @@ private class UnitCalculator.WeaponAvoidCommand : GameCalculatorCommand // TypeD
 	public override bool IsVisible() { }
 
 	// RVA: 0x1ECED10 Offset: 0x1ECEE11 VA: 0x1ECED10
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.WeaponInteractCommand : GameCalculatorCommand // TypeDefIndex: 9667
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECF2A0 Offset: 0x1ECF3A1 VA: 0x1ECF2A0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECF2F0 Offset: 0x1ECF3F1 VA: 0x1ECF2F0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECF520 Offset: 0x1ECF621 VA: 0x1ECF520 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECF530 Offset: 0x1ECF631 VA: 0x1ECF530
 	public void .ctor() { }
 }
 
@@ -534,6 +1078,33 @@ private abstract class UnitCalculator.WeaponLevelBaseCommand : GameCalculatorCom
 }
 
 // Namespace: 
+private class UnitCalculator.WeaponLevelCommand : GameCalculatorCommand // TypeDefIndex: 9669
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECFA60 Offset: 0x1ECFB61 VA: 0x1ECFA60 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECFAB0 Offset: 0x1ECFBB1 VA: 0x1ECFAB0
+	private WeaponLevel.Kind GetWeaponLevel(ItemData item) { }
+
+	// RVA: 0x1ECFAD0 Offset: 0x1ECFBD1 VA: 0x1ECFAD0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECFB80 Offset: 0x1ECFC81 VA: 0x1ECFB80 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECFCB0 Offset: 0x1ECFDB1 VA: 0x1ECFCB0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECFCC0 Offset: 0x1ECFDC1 VA: 0x1ECFCC0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.AttackAttributeCommand : GameCalculatorCommand // TypeDefIndex: 9670
 {
 	// Properties
@@ -555,6 +1126,24 @@ private class UnitCalculator.AttackAttributeCommand : GameCalculatorCommand // T
 }
 
 // Namespace: 
+private class UnitCalculator.WeaponAttributeCommand : GameCalculatorCommand // TypeDefIndex: 9671
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECEBD0 Offset: 0x1ECECD1 VA: 0x1ECEBD0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECEC20 Offset: 0x1ECED21 VA: 0x1ECEC20 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECEC50 Offset: 0x1ECED51 VA: 0x1ECEC50
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.UnitAttributeCommand : GameCalculatorCommand // TypeDefIndex: 9672
 {
 	// Properties
@@ -572,6 +1161,30 @@ private class UnitCalculator.UnitAttributeCommand : GameCalculatorCommand // Typ
 	protected override float FuncImpl(Unit unit, List<float> args) { }
 
 	// RVA: 0x1ECE420 Offset: 0x1ECE521 VA: 0x1ECE420
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.SupportHitCommand : GameCalculatorCommand // TypeDefIndex: 9673
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECD3C0 Offset: 0x1ECD4C1 VA: 0x1ECD3C0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECD410 Offset: 0x1ECD511 VA: 0x1ECD410 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECD430 Offset: 0x1ECD531 VA: 0x1ECD430 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECD460 Offset: 0x1ECD561 VA: 0x1ECD460 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECD470 Offset: 0x1ECD571 VA: 0x1ECD470
 	public void .ctor() { }
 }
 
@@ -600,6 +1213,30 @@ private class UnitCalculator.SupportAvoidCommand : GameCalculatorCommand // Type
 }
 
 // Namespace: 
+private class UnitCalculator.TerrainAvoidCommand : GameCalculatorCommand // TypeDefIndex: 9675
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECD9A0 Offset: 0x1ECDAA1 VA: 0x1ECD9A0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECD9F0 Offset: 0x1ECDAF1 VA: 0x1ECD9F0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECDA10 Offset: 0x1ECDB11 VA: 0x1ECDA10 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECDA40 Offset: 0x1ECDB41 VA: 0x1ECDA40 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECDA50 Offset: 0x1ECDB51 VA: 0x1ECDA50
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.WeaponCriticalCommand : GameCalculatorCommand // TypeDefIndex: 9676
 {
 	// Properties
@@ -620,6 +1257,30 @@ private class UnitCalculator.WeaponCriticalCommand : GameCalculatorCommand // Ty
 	public override bool IsVisible() { }
 
 	// RVA: 0x1ECEDD0 Offset: 0x1ECEED1 VA: 0x1ECEDD0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.WeaponSecureCommand : GameCalculatorCommand // TypeDefIndex: 9677
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECFCD0 Offset: 0x1ECFDD1 VA: 0x1ECFCD0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECFD20 Offset: 0x1ECFE21 VA: 0x1ECFD20 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECFD40 Offset: 0x1ECFE41 VA: 0x1ECFD40 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECFD70 Offset: 0x1ECFE71 VA: 0x1ECFD70 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECFD80 Offset: 0x1ECFE81 VA: 0x1ECFD80
 	public void .ctor() { }
 }
 
@@ -648,6 +1309,30 @@ private class UnitCalculator.SupportCriticalCommand : GameCalculatorCommand // T
 }
 
 // Namespace: 
+private class UnitCalculator.SupportSecureCommand : GameCalculatorCommand // TypeDefIndex: 9679
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECD530 Offset: 0x1ECD631 VA: 0x1ECD530 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECD580 Offset: 0x1ECD681 VA: 0x1ECD580 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECD5A0 Offset: 0x1ECD6A1 VA: 0x1ECD5A0 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1ECD5D0 Offset: 0x1ECD6D1 VA: 0x1ECD5D0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECD5E0 Offset: 0x1ECD6E1 VA: 0x1ECD5E0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.SupportLevelCommand : GameCalculatorCommand // TypeDefIndex: 9680
 {
 	// Properties
@@ -662,6 +1347,27 @@ private class UnitCalculator.SupportLevelCommand : GameCalculatorCommand // Type
 	protected override float GetImpl(BattleInfoSide side) { }
 
 	// RVA: 0x1ECD520 Offset: 0x1ECD621 VA: 0x1ECD520
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.MoveDistanceCommand : GameCalculatorCommand // TypeDefIndex: 9681
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECB5D0 Offset: 0x1ECB6D1 VA: 0x1ECB5D0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECB620 Offset: 0x1ECB721 VA: 0x1ECB620 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECB630 Offset: 0x1ECB731 VA: 0x1ECB630 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECB640 Offset: 0x1ECB741 VA: 0x1ECB640
 	public void .ctor() { }
 }
 
@@ -687,6 +1393,16 @@ private class UnitCalculator.MoveTypeCommand : GameCalculatorCommand // TypeDefI
 }
 
 // Namespace: 
+protected enum UnitCalculator.MapUnitCountCommand.Candidates // TypeDefIndex: 9683
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnitCalculator.MapUnitCountCommand.Candidates Friend = 0;
+	public const UnitCalculator.MapUnitCountCommand.Candidates Enemy = 1;
+	public const UnitCalculator.MapUnitCountCommand.Candidates Whole = 2;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x275E20 Offset: 0x275F21 VA: 0x275E20
 private sealed class UnitCalculator.MapUnitCountCommand.<>c__DisplayClass2_0 // TypeDefIndex: 9684
 {
@@ -702,6 +1418,28 @@ private sealed class UnitCalculator.MapUnitCountCommand.<>c__DisplayClass2_0 // 
 
 	// RVA: 0x2D69010 Offset: 0x2D69111 VA: 0x2D69010
 	internal void <GetRangeCount>b__0(Unit target) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x275E30 Offset: 0x275F31 VA: 0x275E30
+private sealed class UnitCalculator.MapUnitCountCommand.<>c__DisplayClass6_0 // TypeDefIndex: 9685
+{
+	// Fields
+	public Unit unit; // 0x10
+	public Gender gender2; // 0x18
+	public int x; // 0x1C
+	public int z; // 0x20
+	public int range; // 0x24
+	public int count; // 0x28
+	public MapFor.UnitFunction <>9__0; // 0x30
+
+	// Methods
+
+	// RVA: 0x2D690E0 Offset: 0x2D691E1 VA: 0x2D690E0
+	public void .ctor() { }
+
+	// RVA: 0x2D690F0 Offset: 0x2D691F1 VA: 0x2D690F0
+	internal void <GetGenderCount>b__0(Unit _target) { }
 }
 
 // Namespace: 
@@ -732,6 +1470,27 @@ private class UnitCalculator.MapUnitCountCommand : GameCalculatorCommand // Type
 }
 
 // Namespace: 
+private class UnitCalculator.RangeUnitCountCommand : UnitCalculator.MapUnitCountCommand // TypeDefIndex: 9687
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECC6D0 Offset: 0x1ECC7D1 VA: 0x1ECC6D0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECC720 Offset: 0x1ECC821 VA: 0x1ECC720 Slot: 34
+	protected override float FuncImpl(Unit unit, List<float> args) { }
+
+	// RVA: 0x1ECC740 Offset: 0x1ECC841 VA: 0x1ECC740 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECC7A0 Offset: 0x1ECC8A1 VA: 0x1ECC7A0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.RangeFriendCountCommand : UnitCalculator.MapUnitCountCommand // TypeDefIndex: 9688
 {
 	// Properties
@@ -749,6 +1508,27 @@ private class UnitCalculator.RangeFriendCountCommand : UnitCalculator.MapUnitCou
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECC5A0 Offset: 0x1ECC6A1 VA: 0x1ECC5A0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.RangeEnemyCountCommand : UnitCalculator.MapUnitCountCommand // TypeDefIndex: 9689
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECC3F0 Offset: 0x1ECC4F1 VA: 0x1ECC3F0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECC440 Offset: 0x1ECC541 VA: 0x1ECC440 Slot: 34
+	protected override float FuncImpl(Unit unit, List<float> args) { }
+
+	// RVA: 0x1ECC460 Offset: 0x1ECC561 VA: 0x1ECC460 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECC4C0 Offset: 0x1ECC5C1 VA: 0x1ECC4C0
 	public void .ctor() { }
 }
 
@@ -771,6 +1551,24 @@ private class UnitCalculator.FixedFriendCountCommand : UnitCalculator.MapUnitCou
 }
 
 // Namespace: 
+private class UnitCalculator.FixedEnemyCountCommand : UnitCalculator.MapUnitCountCommand // TypeDefIndex: 9691
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AE1E0 Offset: 0x23AE2E1 VA: 0x23AE1E0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AE230 Offset: 0x23AE331 VA: 0x23AE230 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AE260 Offset: 0x23AE361 VA: 0x23AE260
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.RangeGenderCountCommand : UnitCalculator.MapUnitCountCommand // TypeDefIndex: 9692
 {
 	// Properties
@@ -789,6 +1587,24 @@ private class UnitCalculator.RangeGenderCountCommand : UnitCalculator.MapUnitCou
 }
 
 // Namespace: 
+private class UnitCalculator.AroundGenderCountCommand : UnitCalculator.MapUnitCountCommand // TypeDefIndex: 9693
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC080 Offset: 0x23AC181 VA: 0x23AC080 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC0D0 Offset: 0x23AC1D1 VA: 0x23AC0D0 Slot: 34
+	protected override float FuncImpl(Unit unit, List<float> args) { }
+
+	// RVA: 0x23AC1B0 Offset: 0x23AC2B1 VA: 0x23AC1B0
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x275E40 Offset: 0x275F41 VA: 0x275E40
 private sealed class UnitCalculator.UnitAroundCountdCommand.<>c__DisplayClass2_0 // TypeDefIndex: 9694
 {
@@ -801,6 +1617,23 @@ private sealed class UnitCalculator.UnitAroundCountdCommand.<>c__DisplayClass2_0
 	public void .ctor() { }
 
 	// RVA: 0x2D69550 Offset: 0x2D69651 VA: 0x2D69550
+	internal void <GetImpl>b__0(Unit target) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x275E50 Offset: 0x275F51 VA: 0x275E50
+private sealed class UnitCalculator.UnitAroundCountdCommand.<>c__DisplayClass3_0 // TypeDefIndex: 9695
+{
+	// Fields
+	public BattleInfoSide side; // 0x10
+	public int count; // 0x18
+
+	// Methods
+
+	// RVA: 0x2D69560 Offset: 0x2D69661 VA: 0x2D69560
+	public void .ctor() { }
+
+	// RVA: 0x2D69570 Offset: 0x2D69671 VA: 0x2D69570
 	internal void <GetImpl>b__0(Unit target) { }
 }
 
@@ -826,6 +1659,23 @@ private class UnitCalculator.UnitAroundCountdCommand : UnitCalculator.MapUnitCou
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x275E60 Offset: 0x275F61 VA: 0x275E60
+private sealed class UnitCalculator.RelianceAroundTotalCommand.<>c__DisplayClass2_0 // TypeDefIndex: 9697
+{
+	// Fields
+	public Unit unit; // 0x10
+	public int count; // 0x18
+
+	// Methods
+
+	// RVA: 0x2D694D0 Offset: 0x2D695D1 VA: 0x2D694D0
+	public void .ctor() { }
+
+	// RVA: 0x2D694E0 Offset: 0x2D695E1 VA: 0x2D694E0
+	internal void <GetImpl>b__0(Unit target) { }
+}
+
+// Namespace: 
 private class UnitCalculator.RelianceAroundTotalCommand : GameCalculatorCommand // TypeDefIndex: 9698
 {
 	// Properties
@@ -840,6 +1690,27 @@ private class UnitCalculator.RelianceAroundTotalCommand : GameCalculatorCommand 
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECC9C0 Offset: 0x1ECCAC1 VA: 0x1ECC9C0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleSideCommand : GameCalculatorCommand // TypeDefIndex: 9699
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AD200 Offset: 0x23AD301 VA: 0x23AD200 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AD250 Offset: 0x23AD351 VA: 0x23AD250 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AD3A0 Offset: 0x23AD4A1 VA: 0x23AD3A0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AD4A0 Offset: 0x23AD5A1 VA: 0x23AD4A0
 	public void .ctor() { }
 }
 
@@ -862,6 +1733,24 @@ private class UnitCalculator.BattleCountCommand : GameCalculatorCommand // TypeD
 }
 
 // Namespace: 
+private class UnitCalculator.BattleDistanceCommand : GameCalculatorCommand // TypeDefIndex: 9701
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC860 Offset: 0x23AC961 VA: 0x23AC860 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC8B0 Offset: 0x23AC9B1 VA: 0x23AC8B0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AC8C0 Offset: 0x23AC9C1 VA: 0x23AC8C0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.BattlePinchingCommand : GameCalculatorCommand // TypeDefIndex: 9702
 {
 	// Properties
@@ -876,6 +1765,24 @@ private class UnitCalculator.BattlePinchingCommand : GameCalculatorCommand // Ty
 	protected override float GetImpl(BattleInfoSide side) { }
 
 	// RVA: 0x23ACD70 Offset: 0x23ACE71 VA: 0x23ACD70
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleEscortCommand : GameCalculatorCommand // TypeDefIndex: 9703
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC8D0 Offset: 0x23AC9D1 VA: 0x23AC8D0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC920 Offset: 0x23ACA21 VA: 0x23AC920 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AC9D0 Offset: 0x23ACAD1 VA: 0x23AC9D0
 	public void .ctor() { }
 }
 
@@ -898,6 +1805,24 @@ private class UnitCalculator.BattleArenaCommand : GameCalculatorCommand // TypeD
 }
 
 // Namespace: 
+private class UnitCalculator.OverlapCanRemoveCommand : GameCalculatorCommand // TypeDefIndex: 9705
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECB6F0 Offset: 0x1ECB7F1 VA: 0x1ECB6F0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECB740 Offset: 0x1ECB841 VA: 0x1ECB740 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECB780 Offset: 0x1ECB881 VA: 0x1ECB780
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.BattleSceneResultMissCommand : GameCalculatorCommand // TypeDefIndex: 9706
 {
 	// Properties
@@ -912,6 +1837,24 @@ private class UnitCalculator.BattleSceneResultMissCommand : GameCalculatorComman
 	public override float Get() { }
 
 	// RVA: 0x23AD1F0 Offset: 0x23AD2F1 VA: 0x23AD1F0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleSceneResultHitCommand : GameCalculatorCommand // TypeDefIndex: 9707
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AD120 Offset: 0x23AD221 VA: 0x23AD120 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AD170 Offset: 0x23AD271 VA: 0x23AD170 Slot: 9
+	public override float Get() { }
+
+	// RVA: 0x23AD180 Offset: 0x23AD281 VA: 0x23AD180
 	public void .ctor() { }
 }
 
@@ -934,6 +1877,24 @@ private class UnitCalculator.BattleSceneResultCriticalCommand : GameCalculatorCo
 }
 
 // Namespace: 
+private class UnitCalculator.BattleSceneResultBreakCommand : GameCalculatorCommand // TypeDefIndex: 9709
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23ACE30 Offset: 0x23ACF31 VA: 0x23ACE30 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23ACE80 Offset: 0x23ACF81 VA: 0x23ACE80 Slot: 9
+	public override float Get() { }
+
+	// RVA: 0x23ACE90 Offset: 0x23ACF91 VA: 0x23ACE90
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.BattleSceneResultEfficacyCommand : GameCalculatorCommand // TypeDefIndex: 9710
 {
 	// Properties
@@ -949,6 +1910,24 @@ private class UnitCalculator.BattleSceneResultEfficacyCommand : GameCalculatorCo
 
 	// RVA: 0x23AD110 Offset: 0x23AD211 VA: 0x23AD110
 	public void .ctor() { }
+}
+
+// Namespace: 
+private abstract class UnitCalculator.IBattleSceneResultCommand : GameCalculatorCommand // TypeDefIndex: 9711
+{
+	// Methods
+
+	// RVA: 0x1EC8900 Offset: 0x1EC8A01 VA: 0x1EC8900
+	protected BattleScene.Result GetImpl(BattleScene.Result result) { }
+
+	// RVA: 0x1EC8910 Offset: 0x1EC8A11 VA: 0x1EC8910
+	protected BattleScene.Result SetImpl(BattleScene.Result result, BattleScene.Result value) { }
+
+	// RVA: 0x1EC8930 Offset: 0x1EC8A31 VA: 0x1EC8930
+	protected float FuncImpl(BattleScene.Result result, BattleScene.Result value) { }
+
+	// RVA: 0x1EC8960 Offset: 0x1EC8A61 VA: 0x1EC8960
+	protected void .ctor() { }
 }
 
 // Namespace: 
@@ -976,6 +1955,24 @@ private class UnitCalculator.BattleSceneResultCommand : UnitCalculator.IBattleSc
 }
 
 // Namespace: 
+private class UnitCalculator.BattleChainAttackCountCommand : GameCalculatorCommand // TypeDefIndex: 9713
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC5D0 Offset: 0x23AC6D1 VA: 0x23AC5D0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC620 Offset: 0x23AC721 VA: 0x23AC620 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AC630 Offset: 0x23AC731 VA: 0x23AC630
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.BattleChainGuardCountCommand : GameCalculatorCommand // TypeDefIndex: 9714
 {
 	// Properties
@@ -990,6 +1987,24 @@ private class UnitCalculator.BattleChainGuardCountCommand : GameCalculatorComman
 	protected override float GetImpl(BattleInfoSide side) { }
 
 	// RVA: 0x23AC710 Offset: 0x23AC811 VA: 0x23AC710
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleChainAttackDefeatCommand : GameCalculatorCommand // TypeDefIndex: 9715
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC640 Offset: 0x23AC741 VA: 0x23AC640 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC690 Offset: 0x23AC791 VA: 0x23AC690 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AC6A0 Offset: 0x23AC7A1 VA: 0x23AC6A0
 	public void .ctor() { }
 }
 
@@ -1018,6 +2033,24 @@ public class UnitCalculator.BattleParamCommand : GameCalculatorCommand // TypeDe
 }
 
 // Namespace: 
+private class UnitCalculator.UnitAttackCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9717
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECE240 Offset: 0x1ECE341 VA: 0x1ECE240 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECE290 Offset: 0x1ECE391 VA: 0x1ECE290 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x1ECE2A0 Offset: 0x1ECE3A1 VA: 0x1ECE2A0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.UnitDefenseCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9718
 {
 	// Properties
@@ -1032,6 +2065,27 @@ private class UnitCalculator.UnitDefenseCommand : UnitCalculator.BattleParamComm
 	public override BattleParam GetParam(BattleInfoSide side) { }
 
 	// RVA: 0x1ECE490 Offset: 0x1ECE591 VA: 0x1ECE490
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.AttackCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9719
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC260 Offset: 0x23AC361 VA: 0x23AC260 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC2B0 Offset: 0x23AC3B1 VA: 0x23AC2B0 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x23AC2C0 Offset: 0x23AC3C1 VA: 0x23AC2C0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x23AC2D0 Offset: 0x23AC3D1 VA: 0x23AC2D0
 	public void .ctor() { }
 }
 
@@ -1057,6 +2111,27 @@ private class UnitCalculator.DefenseCommand : UnitCalculator.BattleParamCommand 
 }
 
 // Namespace: 
+private class UnitCalculator.HitCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9721
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1EC8880 Offset: 0x1EC8981 VA: 0x1EC8880 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC88D0 Offset: 0x1EC89D1 VA: 0x1EC88D0 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x1EC88E0 Offset: 0x1EC89E1 VA: 0x1EC88E0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1EC88F0 Offset: 0x1EC89F1 VA: 0x1EC88F0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.CriticalCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9722
 {
 	// Properties
@@ -1074,6 +2149,27 @@ private class UnitCalculator.CriticalCommand : UnitCalculator.BattleParamCommand
 	public override bool IsVisible() { }
 
 	// RVA: 0x23AD810 Offset: 0x23AD911 VA: 0x23AD810
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.AvoidCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9723
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC3B0 Offset: 0x23AC4B1 VA: 0x23AC3B0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC400 Offset: 0x23AC501 VA: 0x23AC400 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x23AC410 Offset: 0x23AC511 VA: 0x23AC410 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x23AC420 Offset: 0x23AC521 VA: 0x23AC420
 	public void .ctor() { }
 }
 
@@ -1099,6 +2195,27 @@ private class UnitCalculator.SecureCommand : UnitCalculator.BattleParamCommand /
 }
 
 // Namespace: 
+private class UnitCalculator.ContinuousCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9725
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AD720 Offset: 0x23AD821 VA: 0x23AD720 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AD770 Offset: 0x23AD871 VA: 0x23AD770 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x23AD780 Offset: 0x23AD881 VA: 0x23AD780 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x23AD790 Offset: 0x23AD891 VA: 0x23AD790
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.SkillCorrectCommand : GameCalculatorCommand // TypeDefIndex: 9726
 {
 	// Properties
@@ -1116,6 +2233,27 @@ private class UnitCalculator.SkillCorrectCommand : GameCalculatorCommand // Type
 	protected override void SetImpl(BattleInfoSide side, float value) { }
 
 	// RVA: 0x1ECCF60 Offset: 0x1ECD061 VA: 0x1ECCF60
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.GodSkillCorrectCommand : GameCalculatorCommand // TypeDefIndex: 9727
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AEB60 Offset: 0x23AEC61 VA: 0x23AEB60 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AEBB0 Offset: 0x23AECB1 VA: 0x23AEBB0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AEBD0 Offset: 0x23AECD1 VA: 0x23AEBD0 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23AEC00 Offset: 0x23AED01 VA: 0x23AEC00
 	public void .ctor() { }
 }
 
@@ -1144,6 +2282,27 @@ private abstract class UnitCalculator.ProbabilityCommand : GameCalculatorCommand
 }
 
 // Namespace: 
+private class UnitCalculator.ProbabilitySkillCommand : UnitCalculator.ProbabilityCommand // TypeDefIndex: 9729
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECC090 Offset: 0x1ECC191 VA: 0x1ECC090 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECC0E0 Offset: 0x1ECC1E1 VA: 0x1ECC0E0 Slot: 44
+	protected override float GetCorrect(Unit unit) { }
+
+	// RVA: 0x1ECC0F0 Offset: 0x1ECC1F1 VA: 0x1ECC0F0 Slot: 45
+	protected override float GetCorrect(BattleInfoSide side) { }
+
+	// RVA: 0x1ECC110 Offset: 0x1ECC211 VA: 0x1ECC110
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.ProbabilityGodSkillCommand : UnitCalculator.ProbabilityCommand // TypeDefIndex: 9730
 {
 	// Properties
@@ -1161,6 +2320,27 @@ private class UnitCalculator.ProbabilityGodSkillCommand : UnitCalculator.Probabi
 	protected override float GetCorrect(BattleInfoSide side) { }
 
 	// RVA: 0x1ECC080 Offset: 0x1ECC181 VA: 0x1ECC080
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.SimplePowerCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9731
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECCE40 Offset: 0x1ECCF41 VA: 0x1ECCE40 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECCE90 Offset: 0x1ECCF91 VA: 0x1ECCE90 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x1ECCEA0 Offset: 0x1ECCFA1 VA: 0x1ECCEA0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECCEB0 Offset: 0x1ECCFB1 VA: 0x1ECCEB0
 	public void .ctor() { }
 }
 
@@ -1186,6 +2366,27 @@ private class UnitCalculator.SimpleHitCommand : UnitCalculator.BattleParamComman
 }
 
 // Namespace: 
+private class UnitCalculator.SimpleCriticalCommand : UnitCalculator.BattleParamCommand // TypeDefIndex: 9733
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECCD40 Offset: 0x1ECCE41 VA: 0x1ECCD40 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECCD90 Offset: 0x1ECCE91 VA: 0x1ECCD90 Slot: 44
+	public override BattleParam GetParam(BattleInfoSide side) { }
+
+	// RVA: 0x1ECCDA0 Offset: 0x1ECCEA1 VA: 0x1ECCDA0 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x1ECCDB0 Offset: 0x1ECCEB1 VA: 0x1ECCDB0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.DamageCommand : GameCalculatorCommand // TypeDefIndex: 9734
 {
 	// Properties
@@ -1203,6 +2404,27 @@ private class UnitCalculator.DamageCommand : GameCalculatorCommand // TypeDefInd
 	protected override void SetImpl(BattleInfoSide side, float value) { }
 
 	// RVA: 0x23AD8B0 Offset: 0x23AD9B1 VA: 0x23AD8B0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.HealCommand : GameCalculatorCommand // TypeDefIndex: 9735
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1EC87E0 Offset: 0x1EC88E1 VA: 0x1EC87E0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1EC8830 Offset: 0x1EC8931 VA: 0x1EC8830 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1EC8840 Offset: 0x1EC8941 VA: 0x1EC8840 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x1EC8870 Offset: 0x1EC8971 VA: 0x1EC8870
 	public void .ctor() { }
 }
 
@@ -1228,6 +2450,27 @@ private class UnitCalculator.BattleTimesCommand : GameCalculatorCommand // TypeD
 }
 
 // Namespace: 
+private class UnitCalculator.TotalOrderCommand : GameCalculatorCommand // TypeDefIndex: 9737
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECDD10 Offset: 0x1ECDE11 VA: 0x1ECDD10 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECDD60 Offset: 0x1ECDE61 VA: 0x1ECDD60 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECDD70 Offset: 0x1ECDE71 VA: 0x1ECDD70 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECDD80 Offset: 0x1ECDE81 VA: 0x1ECDD80
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.TotalActionCommand : GameCalculatorCommand // TypeDefIndex: 9738
 {
 	// Properties
@@ -1249,6 +2492,27 @@ private class UnitCalculator.TotalActionCommand : GameCalculatorCommand // TypeD
 }
 
 // Namespace: 
+private class UnitCalculator.TotalAttackCommand : GameCalculatorCommand // TypeDefIndex: 9739
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECDBA0 Offset: 0x1ECDCA1 VA: 0x1ECDBA0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECDBF0 Offset: 0x1ECDCF1 VA: 0x1ECDBF0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECDC00 Offset: 0x1ECDD01 VA: 0x1ECDC00 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECDC10 Offset: 0x1ECDD11 VA: 0x1ECDC10
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.TotalDamageCommand : GameCalculatorCommand // TypeDefIndex: 9740
 {
 	// Properties
@@ -1266,6 +2530,33 @@ private class UnitCalculator.TotalDamageCommand : GameCalculatorCommand // TypeD
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECDC90 Offset: 0x1ECDD91 VA: 0x1ECDC90
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.TotalResultCommand : UnitCalculator.IBattleSceneResultCommand // TypeDefIndex: 9741
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECDD90 Offset: 0x1ECDE91 VA: 0x1ECDD90 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECDDE0 Offset: 0x1ECDEE1 VA: 0x1ECDDE0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x1ECDDF0 Offset: 0x1ECDEF1 VA: 0x1ECDDF0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x1ECDE00 Offset: 0x1ECDF01 VA: 0x1ECDE00 Slot: 34
+	protected override float FuncImpl(Unit unit, List<float> args) { }
+
+	// RVA: 0x1ECDEE0 Offset: 0x1ECDFE1 VA: 0x1ECDEE0 Slot: 35
+	protected override float FuncImpl(BattleInfoSide side, List<float> args) { }
+
+	// RVA: 0x1ECDFC0 Offset: 0x1ECE0C1 VA: 0x1ECDFC0
 	public void .ctor() { }
 }
 
@@ -1297,6 +2588,27 @@ private class UnitCalculator.TemporaryCommand : GameCalculatorCommand // TypeDef
 }
 
 // Namespace: 
+private class UnitCalculator.GainExpCommand : GameCalculatorCommand // TypeDefIndex: 9743
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AE390 Offset: 0x23AE491 VA: 0x23AE390 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AE3E0 Offset: 0x23AE4E1 VA: 0x23AE3E0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AE3F0 Offset: 0x23AE4F1 VA: 0x23AE3F0 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23AE420 Offset: 0x23AE521 VA: 0x23AE420
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.GainGoldCommand : GameCalculatorCommand // TypeDefIndex: 9744
 {
 	// Properties
@@ -1318,6 +2630,27 @@ private class UnitCalculator.GainGoldCommand : GameCalculatorCommand // TypeDefI
 }
 
 // Namespace: 
+private class UnitCalculator.DropItemRatioCommand : GameCalculatorCommand // TypeDefIndex: 9745
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23ADC10 Offset: 0x23ADD11 VA: 0x23ADC10 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23ADC60 Offset: 0x23ADD61 VA: 0x23ADC60 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23ADC70 Offset: 0x23ADD71 VA: 0x23ADC70 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23ADC80 Offset: 0x23ADD81 VA: 0x23ADC80
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.PickupItemCommand : GameCalculatorCommand // TypeDefIndex: 9746
 {
 	// Properties
@@ -1335,6 +2668,30 @@ private class UnitCalculator.PickupItemCommand : GameCalculatorCommand // TypeDe
 	protected override void SetImpl(BattleInfoSide side, float value) { }
 
 	// RVA: 0x1ECBB00 Offset: 0x1ECBC01 VA: 0x1ECBB00
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.ActionCountCommand : GameCalculatorCommand // TypeDefIndex: 9747
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23ABFC0 Offset: 0x23AC0C1 VA: 0x23ABFC0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC010 Offset: 0x23AC111 VA: 0x23AC010 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AC030 Offset: 0x23AC131 VA: 0x23AC030 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23AC060 Offset: 0x23AC161 VA: 0x23AC060 Slot: 43
+	public override bool IsVisible() { }
+
+	// RVA: 0x23AC070 Offset: 0x23AC171 VA: 0x23AC070
 	public void .ctor() { }
 }
 
@@ -1363,6 +2720,27 @@ private class UnitCalculator.AttackCountCommand : GameCalculatorCommand // TypeD
 }
 
 // Namespace: 
+private class UnitCalculator.BlowRatioCommand : GameCalculatorCommand // TypeDefIndex: 9749
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AD670 Offset: 0x23AD771 VA: 0x23AD670 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AD6C0 Offset: 0x23AD7C1 VA: 0x23AD6C0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AD6E0 Offset: 0x23AD7E1 VA: 0x23AD6E0 Slot: 33
+	protected override void SetImpl(BattleInfoSide side, float value) { }
+
+	// RVA: 0x23AD710 Offset: 0x23AD811 VA: 0x23AD710
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.BlowDistanceCommand : GameCalculatorCommand // TypeDefIndex: 9750
 {
 	// Properties
@@ -1384,6 +2762,24 @@ private class UnitCalculator.BlowDistanceCommand : GameCalculatorCommand // Type
 }
 
 // Namespace: 
+private class UnitCalculator.UnitPersonCommand : GameCalculatorCommand // TypeDefIndex: 9751
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECE750 Offset: 0x1ECE851 VA: 0x1ECE750 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECE7A0 Offset: 0x1ECE8A1 VA: 0x1ECE7A0 Slot: 36
+	protected override float FuncImpl(Unit unit, string arg) { }
+
+	// RVA: 0x1ECE7F0 Offset: 0x1ECE8F1 VA: 0x1ECE7F0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.UnitJobCommand : GameCalculatorCommand // TypeDefIndex: 9752
 {
 	// Properties
@@ -1398,6 +2794,24 @@ private class UnitCalculator.UnitJobCommand : GameCalculatorCommand // TypeDefIn
 	protected override float FuncImpl(Unit unit, string arg) { }
 
 	// RVA: 0x1ECE740 Offset: 0x1ECE841 VA: 0x1ECE740
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.UnitGodCommand : GameCalculatorCommand // TypeDefIndex: 9753
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x1ECE4A0 Offset: 0x1ECE5A1 VA: 0x1ECE4A0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x1ECE4F0 Offset: 0x1ECE5F1 VA: 0x1ECE4F0 Slot: 36
+	protected override float FuncImpl(Unit unit, string arg) { }
+
+	// RVA: 0x1ECE5B0 Offset: 0x1ECE6B1 VA: 0x1ECE5B0
 	public void .ctor() { }
 }
 
@@ -1423,6 +2837,24 @@ private class UnitCalculator.UnitSkillCommand : GameCalculatorCommand // TypeDef
 }
 
 // Namespace: 
+private class UnitCalculator.ExpBattleGiveCountCommand : GameCalculatorCommand // TypeDefIndex: 9755
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23ADEA0 Offset: 0x23ADFA1 VA: 0x23ADEA0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23ADEF0 Offset: 0x23ADFF1 VA: 0x23ADEF0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23ADF20 Offset: 0x23AE021 VA: 0x23ADF20
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.ExpDestroyCountCommand : GameCalculatorCommand // TypeDefIndex: 9756
 {
 	// Properties
@@ -1437,6 +2869,24 @@ private class UnitCalculator.ExpDestroyCountCommand : GameCalculatorCommand // T
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x23AE0B0 Offset: 0x23AE1B1 VA: 0x23AE0B0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.ExpRodCountCommand : GameCalculatorCommand // TypeDefIndex: 9757
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AE150 Offset: 0x23AE251 VA: 0x23AE150 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AE1A0 Offset: 0x23AE2A1 VA: 0x23AE1A0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AE1D0 Offset: 0x23AE2D1 VA: 0x23AE1D0
 	public void .ctor() { }
 }
 
@@ -1459,6 +2909,24 @@ private class UnitCalculator.ExpInterferenceCountCommand : GameCalculatorCommand
 }
 
 // Namespace: 
+private class UnitCalculator.ExpDanceCountCommand : GameCalculatorCommand // TypeDefIndex: 9759
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23ADFA0 Offset: 0x23AE0A1 VA: 0x23ADFA0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23ADFF0 Offset: 0x23AE0F1 VA: 0x23ADFF0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AE020 Offset: 0x23AE121 VA: 0x23AE020
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.ReciveAttackCountCommand : GameCalculatorCommand // TypeDefIndex: 9760
 {
 	// Properties
@@ -1473,6 +2941,24 @@ private class UnitCalculator.ReciveAttackCountCommand : GameCalculatorCommand //
 	protected override float GetImpl(Unit unit) { }
 
 	// RVA: 0x1ECC830 Offset: 0x1ECC931 VA: 0x1ECC830
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleLastTargetCommand : GameCalculatorCommand // TypeDefIndex: 9761
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC9E0 Offset: 0x23ACAE1 VA: 0x23AC9E0 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23ACA30 Offset: 0x23ACB31 VA: 0x23ACA30 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23ACA60 Offset: 0x23ACB61 VA: 0x23ACA60
 	public void .ctor() { }
 }
 
@@ -1504,6 +2990,27 @@ private class UnitCalculator.EngageCountCommand : GameCalculatorCommand // TypeD
 }
 
 // Namespace: 
+private class UnitCalculator.EngageCountLimitCommand : GameCalculatorCommand // TypeDefIndex: 9763
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23ADD70 Offset: 0x23ADE71 VA: 0x23ADD70 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23ADDC0 Offset: 0x23ADEC1 VA: 0x23ADDC0 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23ADE70 Offset: 0x23ADF71 VA: 0x23ADE70 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23ADE90 Offset: 0x23ADF91 VA: 0x23ADE90
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class UnitCalculator.BattleDeadCommand : GameCalculatorCommand // TypeDefIndex: 9764
 {
 	// Properties
@@ -1521,6 +3028,27 @@ private class UnitCalculator.BattleDeadCommand : GameCalculatorCommand // TypeDe
 	protected override float GetImpl(BattleInfoSide side) { }
 
 	// RVA: 0x23AC850 Offset: 0x23AC951 VA: 0x23AC850
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class UnitCalculator.BattleAliveCommand : GameCalculatorCommand // TypeDefIndex: 9765
+{
+	// Properties
+	public override string Name { get; }
+
+	// Methods
+
+	// RVA: 0x23AC430 Offset: 0x23AC531 VA: 0x23AC430 Slot: 4
+	public override string get_Name() { }
+
+	// RVA: 0x23AC480 Offset: 0x23AC581 VA: 0x23AC480 Slot: 30
+	protected override float GetImpl(Unit unit) { }
+
+	// RVA: 0x23AC4B0 Offset: 0x23AC5B1 VA: 0x23AC4B0 Slot: 31
+	protected override float GetImpl(BattleInfoSide side) { }
+
+	// RVA: 0x23AC4F0 Offset: 0x23AC5F1 VA: 0x23AC4F0
 	public void .ctor() { }
 }
 

@@ -1,4 +1,57 @@
 // Namespace: 
+private class CombineLatestObservable.CombineLatest.LeftObserver<TLeft, TRight, TResult> : IObserver<TLeft> // TypeDefIndex: 6893
+{
+	// Fields
+	private readonly CombineLatestObservable.CombineLatest<TLeft, TRight, TResult> parent; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(CombineLatestObservable.CombineLatest<TLeft, TRight, TResult> parent) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD43B0 Offset: 0x2AD44B1 VA: 0x2AD43B0
+	|-CombineLatestObservable.CombineLatest.LeftObserver<bool, bool, bool>..ctor
+	|
+	|-RVA: 0x2AD46E0 Offset: 0x2AD47E1 VA: 0x2AD46E0
+	|-CombineLatestObservable.CombineLatest.LeftObserver<object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void OnNext(TLeft value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD43F0 Offset: 0x2AD44F1 VA: 0x2AD43F0
+	|-CombineLatestObservable.CombineLatest.LeftObserver<bool, bool, bool>.OnNext
+	|
+	|-RVA: 0x2AD4720 Offset: 0x2AD4821 VA: 0x2AD4720
+	|-CombineLatestObservable.CombineLatest.LeftObserver<object, object, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD4500 Offset: 0x2AD4601 VA: 0x2AD4500
+	|-CombineLatestObservable.CombineLatest.LeftObserver<bool, bool, bool>.OnError
+	|
+	|-RVA: 0x2AD4830 Offset: 0x2AD4931 VA: 0x2AD4830
+	|-CombineLatestObservable.CombineLatest.LeftObserver<object, object, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD45F0 Offset: 0x2AD46F1 VA: 0x2AD45F0
+	|-CombineLatestObservable.CombineLatest.LeftObserver<bool, bool, bool>.OnCompleted
+	|
+	|-RVA: 0x2AD4920 Offset: 0x2AD4A21 VA: 0x2AD4920
+	|-CombineLatestObservable.CombineLatest.LeftObserver<object, object, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
 private class CombineLatestObservable.CombineLatest.RightObserver<TLeft, TRight, TResult> : IObserver<TRight> // TypeDefIndex: 6894
 {
 	// Fields
@@ -48,6 +101,142 @@ private class CombineLatestObservable.CombineLatest.RightObserver<TLeft, TRight,
 	|
 	|-RVA: 0x2FFBE00 Offset: 0x2FFBF01 VA: 0x2FFBE00
 	|-CombineLatestObservable.CombineLatest.RightObserver<object, object, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class CombineLatestObservable.CombineLatest<TLeft, TRight, TResult> : OperatorObserverBase<TResult, TResult> // TypeDefIndex: 6895
+{
+	// Fields
+	private readonly CombineLatestObservable<TLeft, TRight, TResult> parent; // 0x0
+	private readonly object gate; // 0x0
+	private TLeft leftValue; // 0x0
+	private bool leftStarted; // 0x0
+	private bool leftCompleted; // 0x0
+	private TRight rightValue; // 0x0
+	private bool rightStarted; // 0x0
+	private bool rightCompleted; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(CombineLatestObservable<TLeft, TRight, TResult> parent, IObserver<TResult> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30DD400 Offset: 0x30DD501 VA: 0x30DD400
+	|-CombineLatestObservable.CombineLatest<bool, bool, bool>..ctor
+	|
+	|-RVA: 0x30DDCB0 Offset: 0x30DDDB1 VA: 0x30DDCB0
+	|-CombineLatestObservable.CombineLatest<object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30DD4C0 Offset: 0x30DD5C1 VA: 0x30DD4C0
+	|-CombineLatestObservable.CombineLatest<bool, bool, bool>.Run
+	|
+	|-RVA: 0x30DDD70 Offset: 0x30DDE71 VA: 0x30DDD70
+	|-CombineLatestObservable.CombineLatest<object, object, object>.Run
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Publish() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30DD680 Offset: 0x30DD781 VA: 0x30DD680
+	|-CombineLatestObservable.CombineLatest<bool, bool, bool>.Publish
+	|
+	|-RVA: 0x30DDF30 Offset: 0x30DE031 VA: 0x30DDF30
+	|-CombineLatestObservable.CombineLatest<object, object, object>.Publish
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TResult value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30DD990 Offset: 0x30DDA91 VA: 0x30DD990
+	|-CombineLatestObservable.CombineLatest<bool, bool, bool>.OnNext
+	|
+	|-RVA: 0x30DE240 Offset: 0x30DE341 VA: 0x30DE240
+	|-CombineLatestObservable.CombineLatest<object, object, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30DDA40 Offset: 0x30DDB41 VA: 0x30DDA40
+	|-CombineLatestObservable.CombineLatest<bool, bool, bool>.OnError
+	|
+	|-RVA: 0x30DE2F0 Offset: 0x30DE3F1 VA: 0x30DE2F0
+	|-CombineLatestObservable.CombineLatest<object, object, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30DDB80 Offset: 0x30DDC81 VA: 0x30DDB80
+	|-CombineLatestObservable.CombineLatest<bool, bool, bool>.OnCompleted
+	|
+	|-RVA: 0x30DE430 Offset: 0x30DE531 VA: 0x30DE430
+	|-CombineLatestObservable.CombineLatest<object, object, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class CombineLatestObservable.CombineLatest.CombineLatestObserver<T> : IObserver<T> // TypeDefIndex: 6897
+{
+	// Fields
+	private readonly CombineLatestObservable.CombineLatest<T> parent; // 0x0
+	private readonly int index; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(CombineLatestObservable.CombineLatest<T> parent, int index) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30E3E60 Offset: 0x30E3F61 VA: 0x30E3E60
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<bool>..ctor
+	|
+	|-RVA: 0x30E4230 Offset: 0x30E4331 VA: 0x30E4230
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void OnNext(T value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30E3EB0 Offset: 0x30E3FB1 VA: 0x30E3EB0
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<bool>.OnNext
+	|
+	|-RVA: 0x30E4280 Offset: 0x30E4381 VA: 0x30E4280
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void OnError(Exception ex) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30E3FE0 Offset: 0x30E40E1 VA: 0x30E3FE0
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<bool>.OnError
+	|
+	|-RVA: 0x30E43B0 Offset: 0x30E44B1 VA: 0x30E43B0
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30E40D0 Offset: 0x30E41D1 VA: 0x30E40D0
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<bool>.OnCompleted
+	|
+	|-RVA: 0x30E44A0 Offset: 0x30E45A1 VA: 0x30E44A0
+	|-CombineLatestObservable.CombineLatest.CombineLatestObserver<object>.OnCompleted
 	*/
 }
 

@@ -8,6 +8,34 @@ private struct Stream.ReadWriteParameters // TypeDefIndex: 636
 }
 
 // Namespace: 
+private sealed class Stream.ReadWriteTask : Task<int>, ITaskCompletionAction // TypeDefIndex: 637
+{
+	// Fields
+	internal readonly bool _isRead; // 0x54
+	internal Stream _stream; // 0x58
+	internal byte[] _buffer; // 0x60
+	internal int _offset; // 0x68
+	internal int _count; // 0x6C
+	private AsyncCallback _callback; // 0x70
+	private ExecutionContext _context; // 0x78
+	private static ContextCallback s_invokeAsyncCallback; // 0x0
+
+	// Methods
+
+	// RVA: 0x1C04E30 Offset: 0x1C04F31 VA: 0x1C04E30
+	internal void ClearBeginState() { }
+
+	// RVA: 0x1C05640 Offset: 0x1C05741 VA: 0x1C05640
+	public void .ctor(bool isRead, Func<object, int> function, object state, Stream stream, byte[] buffer, int offset, int count, AsyncCallback callback) { }
+
+	// RVA: 0x1C05800 Offset: 0x1C05901 VA: 0x1C05800
+	private static void InvokeAsyncCallback(object completedTask) { }
+
+	// RVA: 0x1C05880 Offset: 0x1C05981 VA: 0x1C05880 Slot: 20
+	private void System.Threading.Tasks.ITaskCompletionAction.Invoke(Task completingTask) { }
+}
+
+// Namespace: 
 [Serializable]
 private sealed class Stream.NullStream : Stream // TypeDefIndex: 638
 {
@@ -90,6 +118,27 @@ private sealed class Stream.NullStream : Stream // TypeDefIndex: 638
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x472B40 Offset: 0x472C41 VA: 0x472B40
+[Serializable]
+private sealed class Stream.SynchronousAsyncResult.<>c // TypeDefIndex: 639
+{
+	// Fields
+	public static readonly Stream.SynchronousAsyncResult.<>c <>9; // 0x0
+	public static Func<ManualResetEvent> <>9__12_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x1C0F7D0 Offset: 0x1C0F8D1 VA: 0x1C0F7D0
+	private static void .cctor() { }
+
+	// RVA: 0x1C0F840 Offset: 0x1C0F941 VA: 0x1C0F840
+	public void .ctor() { }
+
+	// RVA: 0x1C0F850 Offset: 0x1C0F951 VA: 0x1C0F850
+	internal ManualResetEvent <get_AsyncWaitHandle>b__12_0() { }
+}
+
+// Namespace: 
 internal sealed class Stream.SynchronousAsyncResult : IAsyncResult // TypeDefIndex: 640
 {
 	// Fields
@@ -140,6 +189,64 @@ internal sealed class Stream.SynchronousAsyncResult : IAsyncResult // TypeDefInd
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x472B50 Offset: 0x472C51 VA: 0x472B50
+[Serializable]
+private sealed class Stream.<>c // TypeDefIndex: 641
+{
+	// Fields
+	public static readonly Stream.<>c <>9; // 0x0
+	public static Func<SemaphoreSlim> <>9__4_0; // 0x8
+	public static Func<object, int> <>9__39_0; // 0x10
+	public static Func<Stream, Stream.ReadWriteParameters, AsyncCallback, object, IAsyncResult> <>9__43_0; // 0x18
+	public static Func<Stream, IAsyncResult, int> <>9__43_1; // 0x20
+	public static Func<object, int> <>9__46_0; // 0x28
+	public static Action<Task, object> <>9__47_0; // 0x30
+	public static Func<Stream, Stream.ReadWriteParameters, AsyncCallback, object, IAsyncResult> <>9__53_0; // 0x38
+	public static Func<Stream, IAsyncResult, VoidTaskResult> <>9__53_1; // 0x40
+
+	// Methods
+
+	// RVA: 0x1C04C20 Offset: 0x1C04D21 VA: 0x1C04C20
+	private static void .cctor() { }
+
+	// RVA: 0x1C04C90 Offset: 0x1C04D91 VA: 0x1C04C90
+	public void .ctor() { }
+
+	// RVA: 0x1C04CA0 Offset: 0x1C04DA1 VA: 0x1C04CA0
+	internal SemaphoreSlim <EnsureAsyncActiveSemaphoreInitialized>b__4_0() { }
+
+	// RVA: 0x1C04D00 Offset: 0x1C04E01 VA: 0x1C04D00
+	internal int <BeginReadInternal>b__39_0(object <p0>) { }
+
+	// RVA: 0x1C04E70 Offset: 0x1C04F71 VA: 0x1C04E70
+	internal IAsyncResult <BeginEndReadAsync>b__43_0(Stream stream, Stream.ReadWriteParameters args, AsyncCallback callback, object state) { }
+
+	// RVA: 0x1C04EA0 Offset: 0x1C04FA1 VA: 0x1C04EA0
+	internal int <BeginEndReadAsync>b__43_1(Stream stream, IAsyncResult asyncResult) { }
+
+	// RVA: 0x1C04EC0 Offset: 0x1C04FC1 VA: 0x1C04EC0
+	internal int <BeginWriteInternal>b__46_0(object <p0>) { }
+
+	// RVA: 0x1C04FE0 Offset: 0x1C050E1 VA: 0x1C04FE0
+	internal void <RunReadWriteTaskWhenReady>b__47_0(Task t, object state) { }
+
+	// RVA: 0x1C05080 Offset: 0x1C05181 VA: 0x1C05080
+	internal IAsyncResult <BeginEndWriteAsync>b__53_0(Stream stream, Stream.ReadWriteParameters args, AsyncCallback callback, object state) { }
+
+	// RVA: 0x1C050B0 Offset: 0x1C051B1 VA: 0x1C050B0
+	internal VoidTaskResult <BeginEndWriteAsync>b__53_1(Stream stream, IAsyncResult asyncResult) { }
+}
+
+// Namespace: 
+private struct Stream.Info // TypeDefIndex: 13927
+{
+	// Fields
+	public int Position; // 0x0
+	public int Version; // 0x4
+	public int Size; // 0x8
+}
+
+// Namespace: 
 public struct Stream.WriteScope : IDisposable // TypeDefIndex: 13928
 {
 	// Fields
@@ -152,6 +259,35 @@ public struct Stream.WriteScope : IDisposable // TypeDefIndex: 13928
 
 	// RVA: 0x2051CB0 Offset: 0x2051DB1 VA: 0x2051CB0 Slot: 4
 	public void Dispose() { }
+}
+
+// Namespace: 
+public struct Stream.ReadScope : IDisposable // TypeDefIndex: 13929
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x29CC40 Offset: 0x29CD41 VA: 0x29CC40
+	private int <Version>k__BackingField; // 0x0
+	private Stream m_Stream; // 0x8
+
+	// Properties
+	public int Version { get; set; }
+
+	// Methods
+
+	// RVA: 0x2051B90 Offset: 0x2051C91 VA: 0x2051B90
+	public void .ctor(Stream stream) { }
+
+	// RVA: 0x2051BF0 Offset: 0x2051CF1 VA: 0x2051BF0 Slot: 4
+	public void Dispose() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CD9F0 Offset: 0x2CDAF1 VA: 0x2CD9F0
+	[IsReadOnlyAttribute] // RVA: 0x2CD9F0 Offset: 0x2CDAF1 VA: 0x2CD9F0
+	// RVA: 0x2051C40 Offset: 0x2051D41 VA: 0x2051C40
+	public int get_Version() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CDA30 Offset: 0x2CDB31 VA: 0x2CDA30
+	// RVA: 0x2051C50 Offset: 0x2051D51 VA: 0x2051C50
+	private void set_Version(int value) { }
 }
 
 // Namespace: 

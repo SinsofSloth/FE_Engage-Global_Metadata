@@ -1,4 +1,20 @@
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2730F0 Offset: 0x2731F1 VA: 0x2730F0
+private sealed class Nex.SystemImpl.<>c__DisplayClass2_0 // TypeDefIndex: 8289
+{
+	// Fields
+	public AsyncResultCB callback; // 0x10
+
+	// Methods
+
+	// RVA: 0x21F1770 Offset: 0x21F1871 VA: 0x21F1770
+	public void .ctor() { }
+
+	// RVA: 0x21F1780 Offset: 0x21F1881 VA: 0x21F1780
+	internal void <InitializeNexAsync>b__0(AsyncResult asyncResult) { }
+}
+
+// Namespace: 
 private class Nex.SystemImpl : SingletonClass<Nex.SystemImpl> // TypeDefIndex: 8290
 {
 	// Methods
@@ -26,6 +42,14 @@ private class Nex.SystemImpl : SingletonClass<Nex.SystemImpl> // TypeDefIndex: 8
 
 	// RVA: 0x26EC150 Offset: 0x26EC251 VA: 0x26EC150
 	public void .ctor() { }
+}
+
+// Namespace: 
+public struct Nex.ApiCallChecker.Guideline // TypeDefIndex: 8291
+{
+	// Fields
+	public int limitCount; // 0x0
+	public int seconds; // 0x4
 }
 
 // Namespace: 
@@ -67,6 +91,19 @@ private abstract class Nex.ApiCallChecker // TypeDefIndex: 8292
 	[ConditionalAttribute] // RVA: 0x2A7640 Offset: 0x2A7741 VA: 0x2A7640
 	// RVA: 0x26E8680 Offset: 0x26E8781 VA: 0x26E8680 Slot: 6
 	protected virtual void DbgOnFullCalledTimes(int api) { }
+}
+
+// Namespace: 
+private enum Nex.AutoLogoutFinalize.Label // TypeDefIndex: 8293
+{
+	// Fields
+	public int value__; // 0x0
+	public const Nex.AutoLogoutFinalize.Label WaitInitializeNex = 0;
+	public const Nex.AutoLogoutFinalize.Label WaitLogin = 1;
+	public const Nex.AutoLogoutFinalize.Label WaitDisconnect = 2;
+	public const Nex.AutoLogoutFinalize.Label Logout = 3;
+	public const Nex.AutoLogoutFinalize.Label FinalizeNex = 4;
+	public const Nex.AutoLogoutFinalize.Label End = 5;
 }
 
 // Namespace: 
@@ -120,6 +157,16 @@ private class Nex.AutoLogoutFinalize : SingletonProcInst<Nex.AutoLogoutFinalize>
 }
 
 // Namespace: 
+public enum Nex.Result // TypeDefIndex: 8295
+{
+	// Fields
+	public int value__; // 0x0
+	public const Nex.Result Success = 0;
+	public const Nex.Result Failure = 1;
+	public const Nex.Result TooMuchCall = 2;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x273100 Offset: 0x273201 VA: 0x273100
 private sealed class Nex.DataStore.Impl.<>c__DisplayClass17_0 // TypeDefIndex: 8296
 {
@@ -133,6 +180,24 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass17_0 // TypeDefIndex: 8
 
 	// RVA: 0x2D7D330 Offset: 0x2D7D431 VA: 0x2D7D330
 	internal void <SearchAsyncCommon>b__0(AsyncResult asyncResult, DataStoreSearchResult searchResult) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273110 Offset: 0x273211 VA: 0x273110
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass20_0 // TypeDefIndex: 8297
+{
+	// Fields
+	public Nex.DataStore.Impl <>4__this; // 0x10
+	public DataStorePrepareGetParam param; // 0x18
+	public DataStore.GetObjectCB callback; // 0x20
+
+	// Methods
+
+	// RVA: 0x2D7D350 Offset: 0x2D7D451 VA: 0x2D7D350
+	public void .ctor() { }
+
+	// RVA: 0x2D7D360 Offset: 0x2D7D461 VA: 0x2D7D360
+	internal void <GetAsyncImpl>b__0(AsyncResult asyncResult, byte[] data) { }
 }
 
 // Namespace: 
@@ -154,6 +219,24 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass27_0 // TypeDefIndex: 8
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273130 Offset: 0x273231 VA: 0x273130
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass28_0 // TypeDefIndex: 8299
+{
+	// Fields
+	public Nex.DataStore.Impl <>4__this; // 0x10
+	public DataStoreGetMetaParam param; // 0x18
+	public DataStore.GetMetaListCB callback; // 0x20
+
+	// Methods
+
+	// RVA: 0x2D7D430 Offset: 0x2D7D531 VA: 0x2D7D430
+	public void .ctor() { }
+
+	// RVA: 0x2D7D440 Offset: 0x2D7D541 VA: 0x2D7D440
+	internal void <GetMetaAsyncImpl>b__0(AsyncResult asyncResult, List<DataStoreMetaInfo> infos, List<DataStoreResult> results) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x273140 Offset: 0x273241 VA: 0x273140
 private sealed class Nex.DataStore.Impl.<>c__DisplayClass29_0 // TypeDefIndex: 8300
 {
@@ -169,6 +252,22 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass29_0 // TypeDefIndex: 8
 
 	// RVA: 0x2D7D4C0 Offset: 0x2D7D5C1 VA: 0x2D7D4C0
 	internal void <GetMetaAsyncImpl>b__0(AsyncResult asyncResult, List<DataStoreMetaInfo> infos, List<DataStoreResult> results) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273150 Offset: 0x273251 VA: 0x273150
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass32_0 // TypeDefIndex: 8301
+{
+	// Fields
+	public DataStore.GetPersistenceInfoCB callback; // 0x10
+
+	// Methods
+
+	// RVA: 0x2D7D530 Offset: 0x2D7D631 VA: 0x2D7D530
+	public void .ctor() { }
+
+	// RVA: 0x2D7D540 Offset: 0x2D7D641 VA: 0x2D7D540
+	internal void <GetPersistenceInfoAsync>b__0(AsyncResult asyncResult, DataStorePersistenceInfo info) { }
 }
 
 // Namespace: 
@@ -190,6 +289,24 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass35_0 // TypeDefIndex: 8
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273170 Offset: 0x273271 VA: 0x273170
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass38_0 // TypeDefIndex: 8303
+{
+	// Fields
+	public Nex.DataStore.Impl <>4__this; // 0x10
+	public DataStorePreparePostParam param; // 0x18
+	public DataStore.PostCB callback; // 0x20
+
+	// Methods
+
+	// RVA: 0x2D7D5D0 Offset: 0x2D7D6D1 VA: 0x2D7D5D0
+	public void .ctor() { }
+
+	// RVA: 0x2D7D5E0 Offset: 0x2D7D6E1 VA: 0x2D7D5E0
+	internal void <PostMetaAsyncImpl>b__0(AsyncResult asyncResult, ulong dataId) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x273180 Offset: 0x273281 VA: 0x273180
 private sealed class Nex.DataStore.Impl.<>c__DisplayClass39_0 // TypeDefIndex: 8304
 {
@@ -203,6 +320,24 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass39_0 // TypeDefIndex: 8
 
 	// RVA: 0x2D7D650 Offset: 0x2D7D751 VA: 0x2D7D650
 	internal void <CompleteSuspendedPostAsync>b__0(AsyncResult asyncResult) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273190 Offset: 0x273291 VA: 0x273190
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass42_0 // TypeDefIndex: 8305
+{
+	// Fields
+	public Nex.DataStore.Impl <>4__this; // 0x10
+	public DataStorePrepareUpdateParam param; // 0x18
+	public AsyncResultCB callback; // 0x20
+
+	// Methods
+
+	// RVA: 0x2D7D670 Offset: 0x2D7D771 VA: 0x2D7D670
+	public void .ctor() { }
+
+	// RVA: 0x2D7D680 Offset: 0x2D7D781 VA: 0x2D7D680
+	internal void <UpdateAsyncImpl>b__0(AsyncResult asyncResult) { }
 }
 
 // Namespace: 
@@ -221,6 +356,25 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass46_0 // TypeDefIndex: 8
 
 	// RVA: 0x2D7D6E0 Offset: 0x2D7D7E1 VA: 0x2D7D6E0
 	internal void <ChangeMetaAsyncImpl>b__0(AsyncResult asyncResult) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2731B0 Offset: 0x2732B1 VA: 0x2731B0
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass53_0 // TypeDefIndex: 8307
+{
+	// Fields
+	public Nex.DataStore.Impl <>4__this; // 0x10
+	public DataStoreRatingTarget target; // 0x18
+	public DataStoreRateObjectParam rateParam; // 0x20
+	public DataStore.RatingInfoCB callback; // 0x28
+
+	// Methods
+
+	// RVA: 0x2D7D730 Offset: 0x2D7D831 VA: 0x2D7D730
+	public void .ctor() { }
+
+	// RVA: 0x2D7D740 Offset: 0x2D7D841 VA: 0x2D7D740
+	internal void <RateAsyncImpl>b__0(AsyncResult asyncResult, DataStoreRatingInfo info) { }
 }
 
 // Namespace: 
@@ -244,6 +398,27 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass55_0 // TypeDefIndex: 8
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2731D0 Offset: 0x2732D1 VA: 0x2731D0
+[Serializable]
+private sealed class Nex.DataStore.Impl.<>c // TypeDefIndex: 8309
+{
+	// Fields
+	public static readonly Nex.DataStore.Impl.<>c <>9; // 0x0
+	public static Comparison<DataStoreRatingTarget> <>9__55_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x2D7D260 Offset: 0x2D7D361 VA: 0x2D7D260
+	private static void .cctor() { }
+
+	// RVA: 0x2D7D2D0 Offset: 0x2D7D3D1 VA: 0x2D7D2D0
+	public void .ctor() { }
+
+	// RVA: 0x2D7D2E0 Offset: 0x2D7D3E1 VA: 0x2D7D2E0
+	internal int <RateWithPostingAsyncImpl>b__55_0(DataStoreRatingTarget x, DataStoreRatingTarget y) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2731E0 Offset: 0x2732E1 VA: 0x2731E0
 private sealed class Nex.DataStore.Impl.<>c__DisplayClass61_0 // TypeDefIndex: 8310
 {
@@ -259,6 +434,22 @@ private sealed class Nex.DataStore.Impl.<>c__DisplayClass61_0 // TypeDefIndex: 8
 
 	// RVA: 0x2D7D840 Offset: 0x2D7D941 VA: 0x2D7D840
 	internal void <DeleteAsyncImpl>b__0(AsyncResult asyncResult, List<DataStoreResult> deleteResults) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2731F0 Offset: 0x2732F1 VA: 0x2731F0
+private sealed class Nex.DataStore.Impl.<>c__DisplayClass63_0 // TypeDefIndex: 8311
+{
+	// Fields
+	public AsyncResultCB callback; // 0x10
+
+	// Methods
+
+	// RVA: 0x2D7D8A0 Offset: 0x2D7D9A1 VA: 0x2D7D8A0
+	public void .ctor() { }
+
+	// RVA: 0x2D7D8B0 Offset: 0x2D7D9B1 VA: 0x2D7D8B0
+	internal void <UnperpetuateAsync>b__0(AsyncResult asyncResult) { }
 }
 
 // Namespace: 
@@ -436,6 +627,14 @@ private class Nex.DataStore.Impl : SingletonClass<Nex.DataStore.Impl> // TypeDef
 }
 
 // Namespace: 
+private struct Nex.DataStore.ParamPool.Data<T> // TypeDefIndex: 8313
+{
+	// Fields
+	public T param; // 0x0
+	public bool isUsed; // 0x0
+}
+
+// Namespace: 
 private abstract class Nex.DataStore.ParamPool<T> // TypeDefIndex: 8314
 {
 	// Fields
@@ -539,6 +738,18 @@ private abstract class Nex.DataStore.ParamPool<T> // TypeDefIndex: 8314
 }
 
 // Namespace: 
+private class Nex.DataStore.PostParamPool : Nex.DataStore.ParamPool<DataStorePreparePostParam> // TypeDefIndex: 8315
+{
+	// Methods
+
+	// RVA: 0x21EE330 Offset: 0x21EE431 VA: 0x21EE330
+	public void .ctor() { }
+
+	// RVA: 0x21F0CD0 Offset: 0x21F0DD1 VA: 0x21F0CD0 Slot: 4
+	protected override void ResetParam(DataStorePreparePostParam param) { }
+}
+
+// Namespace: 
 private class Nex.DataStore.GetParamPool : Nex.DataStore.ParamPool<DataStorePrepareGetParam> // TypeDefIndex: 8316
 {
 	// Methods
@@ -548,6 +759,18 @@ private class Nex.DataStore.GetParamPool : Nex.DataStore.ParamPool<DataStorePrep
 
 	// RVA: 0x21EDD30 Offset: 0x21EDE31 VA: 0x21EDD30 Slot: 4
 	protected override void ResetParam(DataStorePrepareGetParam param) { }
+}
+
+// Namespace: 
+private class Nex.DataStore.GetMetaParamListPool : Nex.DataStore.ParamPool<List<DataStoreGetMetaParam>> // TypeDefIndex: 8317
+{
+	// Methods
+
+	// RVA: 0x21EDBA0 Offset: 0x21EDCA1 VA: 0x21EDBA0
+	public void .ctor() { }
+
+	// RVA: 0x21EDC00 Offset: 0x21EDD01 VA: 0x21EDC00 Slot: 4
+	protected override void ResetParam(List<DataStoreGetMetaParam> param) { }
 }
 
 // Namespace: 
@@ -563,6 +786,18 @@ private class Nex.DataStore.GetMetaParamPool : Nex.DataStore.ParamPool<DataStore
 }
 
 // Namespace: 
+private class Nex.DataStore.UpdateParamPool : Nex.DataStore.ParamPool<DataStorePrepareUpdateParam> // TypeDefIndex: 8319
+{
+	// Methods
+
+	// RVA: 0x21EE390 Offset: 0x21EE491 VA: 0x21EE390
+	public void .ctor() { }
+
+	// RVA: 0x21F0D70 Offset: 0x21F0E71 VA: 0x21F0D70 Slot: 4
+	protected override void ResetParam(DataStorePrepareUpdateParam param) { }
+}
+
+// Namespace: 
 private class Nex.DataStore.ChangeMetaParamPool : Nex.DataStore.ParamPool<DataStoreChangeMetaParam> // TypeDefIndex: 8320
 {
 	// Methods
@@ -572,6 +807,21 @@ private class Nex.DataStore.ChangeMetaParamPool : Nex.DataStore.ParamPool<DataSt
 
 	// RVA: 0x21ED780 Offset: 0x21ED881 VA: 0x21ED780 Slot: 4
 	protected override void ResetParam(DataStoreChangeMetaParam param) { }
+}
+
+// Namespace: 
+private class Nex.DataStore.RatingInitParamPool : Nex.DataStore.ParamPool<DataStoreRatingInitParam> // TypeDefIndex: 8321
+{
+	// Methods
+
+	// RVA: 0x21EE3F0 Offset: 0x21EE4F1 VA: 0x21EE3F0
+	public void .ctor() { }
+
+	// RVA: 0x21F0CF0 Offset: 0x21F0DF1 VA: 0x21F0CF0 Slot: 4
+	protected override void ResetParam(DataStoreRatingInitParam param) { }
+
+	// RVA: 0x21EF4E0 Offset: 0x21EF5E1 VA: 0x21EF4E0
+	public void Unmark(DataStorePreparePostParam postParam) { }
 }
 
 // Namespace: 
@@ -587,6 +837,18 @@ private class Nex.DataStore.RatingTargetListPool : Nex.DataStore.ParamPool<List<
 }
 
 // Namespace: 
+private class Nex.DataStore.RatingTargetPool : Nex.DataStore.ParamPool<DataStoreRatingTarget> // TypeDefIndex: 8323
+{
+	// Methods
+
+	// RVA: 0x21EE4B0 Offset: 0x21EE5B1 VA: 0x21EE4B0
+	public void .ctor() { }
+
+	// RVA: 0x21F0D60 Offset: 0x21F0E61 VA: 0x21F0D60 Slot: 4
+	protected override void ResetParam(DataStoreRatingTarget param) { }
+}
+
+// Namespace: 
 private class Nex.DataStore.RateObjectParamPool : Nex.DataStore.ParamPool<DataStoreRateObjectParam> // TypeDefIndex: 8324
 {
 	// Methods
@@ -599,6 +861,18 @@ private class Nex.DataStore.RateObjectParamPool : Nex.DataStore.ParamPool<DataSt
 }
 
 // Namespace: 
+private class Nex.DataStore.DeleteParamListPool : Nex.DataStore.ParamPool<List<DataStoreDeleteParam>> // TypeDefIndex: 8325
+{
+	// Methods
+
+	// RVA: 0x21EDA70 Offset: 0x21EDB71 VA: 0x21EDA70
+	public void .ctor() { }
+
+	// RVA: 0x21EDAD0 Offset: 0x21EDBD1 VA: 0x21EDAD0 Slot: 4
+	protected override void ResetParam(List<DataStoreDeleteParam> param) { }
+}
+
+// Namespace: 
 private class Nex.DataStore.DeleteParamPool : Nex.DataStore.ParamPool<DataStoreDeleteParam> // TypeDefIndex: 8326
 {
 	// Methods
@@ -608,6 +882,32 @@ private class Nex.DataStore.DeleteParamPool : Nex.DataStore.ParamPool<DataStoreD
 
 	// RVA: 0x21EDB90 Offset: 0x21EDC91 VA: 0x21EDB90 Slot: 4
 	protected override void ResetParam(DataStoreDeleteParam param) { }
+}
+
+// Namespace: 
+private enum Nex.DataStore.Api // TypeDefIndex: 8327
+{
+	// Fields
+	public int value__; // 0x0
+	public const Nex.DataStore.Api GetRating = 0;
+	public const Nex.DataStore.Api ResetRating = 1;
+	public const Nex.DataStore.Api DeleteObject = 2;
+	public const Nex.DataStore.Api GetMeta = 3;
+	public const Nex.DataStore.Api ChangeMeta = 4;
+	public const Nex.DataStore.Api GetObject = 5;
+	public const Nex.DataStore.Api PostObject = 6;
+	public const Nex.DataStore.Api UpdateObject = 7;
+	public const Nex.DataStore.Api RateObject = 8;
+	public const Nex.DataStore.Api RateObjects = 9;
+	public const Nex.DataStore.Api RateObjectWithPosting = 10;
+	public const Nex.DataStore.Api RateObjectsWithPosting = 11;
+	public const Nex.DataStore.Api TouchObject = 12;
+	public const Nex.DataStore.Api PerpetuateObject = 13;
+	public const Nex.DataStore.Api UnperpetuateObject = 14;
+	public const Nex.DataStore.Api GetPersistenceInfo = 15;
+	public const Nex.DataStore.Api SearchObjectLight = 16;
+	public const Nex.DataStore.Api SearchObject = 17;
+	public const Nex.DataStore.Api Max = 18;
 }
 
 // Namespace: 
@@ -638,6 +938,105 @@ private class Nex.DataStore.DataStoreApiCallChecker : Nex.ApiCallChecker // Type
 }
 
 // Namespace: 
+public static class Nex.DataStore // TypeDefIndex: 8329
+{
+	// Methods
+
+	// RVA: 0x26E95D0 Offset: 0x26E96D1 VA: 0x26E95D0
+	public static void TryInitialize() { }
+
+	// RVA: 0x26E9660 Offset: 0x26E9761 VA: 0x26E9660
+	public static void TryCleanup() { }
+
+	// RVA: 0x26E96E0 Offset: 0x26E97E1 VA: 0x26E96E0
+	public static DataStoreSearchParam GetSearchParam() { }
+
+	// RVA: 0x26E9780 Offset: 0x26E9881 VA: 0x26E9780
+	public static Nex.Result SearchAsync(DataStoreSearchParam param, DataStore.SearchObjectCB callback) { }
+
+	// RVA: 0x26E9840 Offset: 0x26E9941 VA: 0x26E9840
+	public static Nex.Result SearchLightAsync(DataStoreSearchParam param, DataStore.SearchObjectCB callback) { }
+
+	// RVA: 0x26E9900 Offset: 0x26E9A01 VA: 0x26E9900
+	public static DataStorePrepareGetParam GetGetParam() { }
+
+	// RVA: 0x26E99A0 Offset: 0x26E9AA1 VA: 0x26E99A0
+	public static Nex.Result GetAsync(DataStorePrepareGetParam param, ulong bufferSize, DataStore.GetObjectCB callback) { }
+
+	// RVA: 0x26E9A70 Offset: 0x26E9B71 VA: 0x26E9A70
+	public static List<DataStoreGetMetaParam> GetGetMetaParamList() { }
+
+	// RVA: 0x26E9B10 Offset: 0x26E9C11 VA: 0x26E9B10
+	public static DataStoreGetMetaParam GetGetMetaParam() { }
+
+	// RVA: 0x26E9BB0 Offset: 0x26E9CB1 VA: 0x26E9BB0
+	public static Nex.Result GetMetaAsync(DataStoreGetMetaParam param, DataStore.GetMetaCB callback) { }
+
+	// RVA: 0x26E9C70 Offset: 0x26E9D71 VA: 0x26E9C70
+	public static Nex.Result GetMetaAsync(List<ulong> dataIds, DataStoreGetMetaParam param, DataStore.GetMetaListCB callback) { }
+
+	// RVA: 0x26E9D40 Offset: 0x26E9E41 VA: 0x26E9D40
+	public static Nex.Result GetMetaAsync(List<DataStoreGetMetaParam> param, DataStore.GetMetaListCB callback) { }
+
+	// RVA: 0x26E9E00 Offset: 0x26E9F01 VA: 0x26E9E00
+	public static Nex.Result GetPersistenceInfoAsync(ulong principalId, ushort slot, DataStore.GetPersistenceInfoCB callback) { }
+
+	// RVA: 0x26E9ED0 Offset: 0x26E9FD1 VA: 0x26E9ED0
+	public static DataStorePreparePostParam GetPostParam() { }
+
+	// RVA: 0x26E9F70 Offset: 0x26EA071 VA: 0x26E9F70
+	public static Nex.Result PostAsync(DataStorePreparePostParam param, byte[] buffer, DataStore.PostCB callback) { }
+
+	// RVA: 0x26EA040 Offset: 0x26EA141 VA: 0x26EA040
+	public static Nex.Result PostMetaAsync(DataStorePreparePostParam param, DataStore.PostCB callback) { }
+
+	// RVA: 0x26EA100 Offset: 0x26EA201 VA: 0x26EA100
+	public static Nex.Result CompleteSuspendedPostAsync(List<ulong> dataIds, AsyncResultCB callback) { }
+
+	// RVA: 0x26EA1C0 Offset: 0x26EA2C1 VA: 0x26EA1C0
+	public static DataStorePrepareUpdateParam GetUpdateParam() { }
+
+	// RVA: 0x26EA260 Offset: 0x26EA361 VA: 0x26EA260
+	public static Nex.Result UpdateAsync(DataStorePrepareUpdateParam param, byte[] buffer, AsyncResultCB callback) { }
+
+	// RVA: 0x26EA330 Offset: 0x26EA431 VA: 0x26EA330
+	public static DataStoreChangeMetaParam GetChangeMetaParam() { }
+
+	// RVA: 0x26EA3D0 Offset: 0x26EA4D1 VA: 0x26EA3D0
+	public static Nex.Result ChangeMetaAsync(DataStoreChangeMetaParam param, AsyncResultCB callback) { }
+
+	// RVA: 0x26EA490 Offset: 0x26EA591 VA: 0x26EA490
+	public static DataStoreRatingInitParam GetRatingInitParam() { }
+
+	// RVA: 0x26EA530 Offset: 0x26EA631 VA: 0x26EA530
+	public static List<DataStoreRatingTarget> GetRatingTargetList() { }
+
+	// RVA: 0x26EA5D0 Offset: 0x26EA6D1 VA: 0x26EA5D0
+	public static DataStoreRatingTarget GetRatingTarget() { }
+
+	// RVA: 0x26EA670 Offset: 0x26EA771 VA: 0x26EA670
+	public static DataStoreRateObjectParam GetRateObjectParam() { }
+
+	// RVA: 0x26EA710 Offset: 0x26EA811 VA: 0x26EA710
+	public static Nex.Result RateAsync(DataStoreRatingTarget target, DataStoreRateObjectParam rateParam, DataStore.RatingInfoCB callback) { }
+
+	// RVA: 0x26EA7E0 Offset: 0x26EA8E1 VA: 0x26EA7E0
+	public static Nex.Result RateWithPostingAsync(List<DataStoreRatingTarget> targets, DataStoreRateObjectParam rateParam, DataStorePreparePostParam postParam, DataStore.RatingInfoListCB callback) { }
+
+	// RVA: 0x26EA8B0 Offset: 0x26EA9B1 VA: 0x26EA8B0
+	public static List<DataStoreDeleteParam> GetDeleteParamList() { }
+
+	// RVA: 0x26EA950 Offset: 0x26EAA51 VA: 0x26EA950
+	public static DataStoreDeleteParam GetDeleteParam() { }
+
+	// RVA: 0x26EA9F0 Offset: 0x26EAAF1 VA: 0x26EA9F0
+	public static Nex.Result DeleteAsync(List<DataStoreDeleteParam> param, DataStore.ResultListCB callback) { }
+
+	// RVA: 0x26EAAB0 Offset: 0x26EABB1 VA: 0x26EAAB0
+	public static Nex.Result UnperpetuateAsync(ushort persistenceSlotId, bool deleteLastObject, AsyncResultCB callback) { }
+}
+
+// Namespace: 
 public static class Nex.DataStoreDataCode // TypeDefIndex: 8330
 {
 	// Methods
@@ -647,6 +1046,36 @@ public static class Nex.DataStoreDataCode // TypeDefIndex: 8330
 
 	// RVA: 0x26EABF0 Offset: 0x26EACF1 VA: 0x26EABF0
 	public static ulong DataCode2DataId(string dataCode) { }
+}
+
+// Namespace: 
+private abstract class Nex.DispatchBase<T> : SingletonProcInst<T> // TypeDefIndex: 8331
+{
+	// Fields
+	private const uint TimeoutMsec = 3;
+	private bool m_IsNeedToUpdateAsyncResult; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	protected void .ctor(bool isNeedToUpdateAsyncResult) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x262E460 Offset: 0x262E561 VA: 0x262E460
+	|-Nex.DispatchBase<object>..ctor
+	|-Nex.DispatchBase<Nex.DispatchHigh>..ctor
+	|-Nex.DispatchBase<Nex.DispatchLow>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	protected override void OnPersistent() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x262E520 Offset: 0x262E621 VA: 0x262E520
+	|-Nex.DispatchBase<object>.OnPersistent
+	|-Nex.DispatchBase<Nex.DispatchHigh>.OnPersistent
+	|-Nex.DispatchBase<Nex.DispatchLow>.OnPersistent
+	*/
 }
 
 // Namespace: 
@@ -662,6 +1091,18 @@ private class Nex.DispatchHigh : Nex.DispatchBase<Nex.DispatchHigh> // TypeDefIn
 }
 
 // Namespace: 
+private class Nex.DispatchLow : Nex.DispatchBase<Nex.DispatchLow> // TypeDefIndex: 8333
+{
+	// Methods
+
+	// RVA: 0x26EB640 Offset: 0x26EB741 VA: 0x26EB640
+	protected void .ctor() { }
+
+	// RVA: 0x26EB6A0 Offset: 0x26EB7A1 VA: 0x26EB6A0
+	public static void Create() { }
+}
+
+// Namespace: 
 private enum Nex.DispatchKeepAlive.Status // TypeDefIndex: 8334
 {
 	// Fields
@@ -669,6 +1110,43 @@ private enum Nex.DispatchKeepAlive.Status // TypeDefIndex: 8334
 	public const Nex.DispatchKeepAlive.Status Wait = 0;
 	public const Nex.DispatchKeepAlive.Status Run = 1;
 	public const Nex.DispatchKeepAlive.Status End = 2;
+}
+
+// Namespace: 
+private class Nex.DispatchKeepAlive : SingletonClass<Nex.DispatchKeepAlive> // TypeDefIndex: 8335
+{
+	// Fields
+	private const int SleepMsec = 4;
+	private Thread m_Thread; // 0x20
+	private object m_Lock; // 0x28
+	private AutoResetEvent m_Event; // 0x30
+	private Nex.DispatchKeepAlive.Status m_Status; // 0x38
+
+	// Methods
+
+	// RVA: 0x26EADB0 Offset: 0x26EAEB1 VA: 0x26EADB0
+	public void .ctor() { }
+
+	// RVA: 0x26EAF60 Offset: 0x26EB061 VA: 0x26EAF60 Slot: 6
+	protected override void OnDispose() { }
+
+	// RVA: 0x26EB0A0 Offset: 0x26EB1A1 VA: 0x26EB0A0
+	private static void ThreadFunc(object obj) { }
+
+	// RVA: 0x26EB120 Offset: 0x26EB221 VA: 0x26EB120
+	private void ThreadFuncImpl() { }
+
+	// RVA: 0x26EB440 Offset: 0x26EB541 VA: 0x26EB440
+	public void Run() { }
+
+	// RVA: 0x26EB470 Offset: 0x26EB571 VA: 0x26EB470
+	public void Stop() { }
+
+	// RVA: 0x26EAF70 Offset: 0x26EB071 VA: 0x26EAF70
+	public void End() { }
+
+	// RVA: 0x26EB560 Offset: 0x26EB661 VA: 0x26EB560
+	public bool IsRunning() { }
 }
 
 // Namespace: 
@@ -686,6 +1164,23 @@ private sealed class Nex.GameServer.Impl.<>c__DisplayClass2_0 // TypeDefIndex: 8
 
 	// RVA: 0x2D7D8E0 Offset: 0x2D7D9E1 VA: 0x2D7D8E0
 	internal void <LoginAsync>b__0(AsyncResult asyncResult, ulong principalId, IntPtr ngsFacadePtr) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273210 Offset: 0x273311 VA: 0x273210
+private sealed class Nex.GameServer.Impl.<>c__DisplayClass3_0 // TypeDefIndex: 8337
+{
+	// Fields
+	public Nex.GameServer.Impl <>4__this; // 0x10
+	public AsyncResultCB callback; // 0x18
+
+	// Methods
+
+	// RVA: 0x2D7D950 Offset: 0x2D7DA51 VA: 0x2D7D950
+	public void .ctor() { }
+
+	// RVA: 0x2D7D960 Offset: 0x2D7DA61 VA: 0x2D7D960
+	internal void <LogoutAsync>b__0(AsyncResult asyncResult) { }
 }
 
 // Namespace: 
@@ -721,6 +1216,37 @@ private class Nex.GameServer.Impl : SingletonClass<Nex.GameServer.Impl> // TypeD
 }
 
 // Namespace: 
+public static class Nex.GameServer // TypeDefIndex: 8339
+{
+	// Properties
+	public static ulong PrincipalId { get; }
+	public static IntPtr NgsFacadePtr { get; }
+
+	// Methods
+
+	// RVA: 0x26EB790 Offset: 0x26EB891 VA: 0x26EB790
+	public static void TryInitialize() { }
+
+	// RVA: 0x26EB820 Offset: 0x26EB921 VA: 0x26EB820
+	public static void TryCleanup() { }
+
+	// RVA: 0x26EB8A0 Offset: 0x26EB9A1 VA: 0x26EB8A0
+	public static Nex.Result LoginAsync(AsyncResultCB callback) { }
+
+	// RVA: 0x26E89F0 Offset: 0x26E8AF1 VA: 0x26E89F0
+	public static Nex.Result LogoutAsync(AsyncResultCB callback) { }
+
+	// RVA: 0x26E87B0 Offset: 0x26E88B1 VA: 0x26E87B0
+	public static Result IsConnected() { }
+
+	// RVA: 0x26EB950 Offset: 0x26EBA51 VA: 0x26EB950
+	public static ulong get_PrincipalId() { }
+
+	// RVA: 0x26EB9E0 Offset: 0x26EBAE1 VA: 0x26EB9E0
+	public static IntPtr get_NgsFacadePtr() { }
+}
+
+// Namespace: 
 public static class Nex.Log // TypeDefIndex: 8340
 {
 	// Fields
@@ -749,10 +1275,49 @@ public static class Nex.Log // TypeDefIndex: 8340
 }
 
 // Namespace: 
+public static class Nex.QError.DataStore // TypeDefIndex: 8341
+{
+	// Fields
+	public const int Facility = 105;
+	public const int Unknown = -2140602367;
+	public const int InvalidArgument = -2140602366;
+	public const int PermissionDenied = -2140602365;
+	public const int NotFound = -2140602364;
+	public const int AlreadyLocked = -2140602363;
+	public const int UnderReviewing = -2140602362;
+	public const int Expired = -2140602361;
+	public const int InvalidCheckToken = -2140602360;
+	public const int SystemFileError = -2140602359;
+	public const int OverCapacity = -2140602358;
+	public const int OperationNotAllowed = -2140602357;
+	public const int InvalidPassword = -2140602356;
+	public const int ValueNotEqual = -2140602355;
+}
+
+// Namespace: 
 public static class Nex.QError // TypeDefIndex: 8342
 {
 	// Fields
 	public const int ErrorBit = -2147483648;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273220 Offset: 0x273321 VA: 0x273220
+private sealed class Nex.Screening.Impl.<>c__DisplayClass6_0 // TypeDefIndex: 8343
+{
+	// Fields
+	public Nex.Screening.Impl <>4__this; // 0x10
+	public ScreeningDataStoreContentParam contentParam; // 0x18
+	public ScreeningUgcViolationParam violationParam; // 0x20
+	public AsyncResultCB callback; // 0x28
+
+	// Methods
+
+	// RVA: 0x2D7D9E0 Offset: 0x2D7DAE1 VA: 0x2D7D9E0
+	public void .ctor() { }
+
+	// RVA: 0x2D7D9F0 Offset: 0x2D7DAF1 VA: 0x2D7D9F0
+	internal void <ReportDataStoreContentAsyncImpl>b__0(AsyncResult asyncResult) { }
 }
 
 // Namespace: 
@@ -781,6 +1346,14 @@ private class Nex.Screening.Impl : SingletonClass<Nex.Screening.Impl> // TypeDef
 
 	// RVA: 0x21F16D0 Offset: 0x21F17D1 VA: 0x21F16D0
 	private void UnmarkParamsForReportDataStoreContent(ScreeningDataStoreContentParam contentParam, ScreeningUgcViolationParam violationParam) { }
+}
+
+// Namespace: 
+private struct Nex.Screening.ParamPool.Data<T> // TypeDefIndex: 8345
+{
+	// Fields
+	public T param; // 0x0
+	public bool isUsed; // 0x0
 }
 
 // Namespace: 
@@ -855,6 +1428,18 @@ private abstract class Nex.Screening.ParamPool<T> // TypeDefIndex: 8346
 }
 
 // Namespace: 
+private class Nex.Screening.DataStoreContentParamPool : Nex.Screening.ParamPool<ScreeningDataStoreContentParam> // TypeDefIndex: 8347
+{
+	// Methods
+
+	// RVA: 0x21F11E0 Offset: 0x21F12E1 VA: 0x21F11E0
+	public void .ctor() { }
+
+	// RVA: 0x21F1240 Offset: 0x21F1341 VA: 0x21F1240 Slot: 4
+	protected override void ResetParam(ScreeningDataStoreContentParam param) { }
+}
+
+// Namespace: 
 private class Nex.Screening.UgcViolationParamPool : Nex.Screening.ParamPool<ScreeningUgcViolationParam> // TypeDefIndex: 8348
 {
 	// Methods
@@ -864,6 +1449,27 @@ private class Nex.Screening.UgcViolationParamPool : Nex.Screening.ParamPool<Scre
 
 	// RVA: 0x21F1760 Offset: 0x21F1861 VA: 0x21F1760 Slot: 4
 	protected override void ResetParam(ScreeningUgcViolationParam param) { }
+}
+
+// Namespace: 
+public static class Nex.Screening // TypeDefIndex: 8349
+{
+	// Methods
+
+	// RVA: 0x26EBAF0 Offset: 0x26EBBF1 VA: 0x26EBAF0
+	public static void TryInitialize() { }
+
+	// RVA: 0x26EBB80 Offset: 0x26EBC81 VA: 0x26EBB80
+	public static void TryCleanup() { }
+
+	// RVA: 0x26EBC00 Offset: 0x26EBD01 VA: 0x26EBC00
+	public static ScreeningDataStoreContentParam GetDataStoreContentParam() { }
+
+	// RVA: 0x26EBCA0 Offset: 0x26EBDA1 VA: 0x26EBCA0
+	public static ScreeningUgcViolationParam GetUgcViolationParam() { }
+
+	// RVA: 0x26EBD40 Offset: 0x26EBE41 VA: 0x26EBD40
+	public static Nex.Result ReportDataStoreContentAsync(ScreeningDataStoreContentParam contentParam, ScreeningUgcViolationParam violationParam, AsyncResultCB callback) { }
 }
 
 // Namespace: 
@@ -883,6 +1489,21 @@ private sealed class Nex.Utility.Impl.<>c__DisplayClass2_0 // TypeDefIndex: 8350
 }
 
 // Namespace: 
+private class Nex.Utility.Impl : SingletonClass<Nex.Utility.Impl> // TypeDefIndex: 8351
+{
+	// Fields
+	private Nex.Utility.UtilityApiCallChecker m_ApiCallChecker; // 0x20
+
+	// Methods
+
+	// RVA: 0x21F17A0 Offset: 0x21F18A1 VA: 0x21F17A0
+	public void .ctor() { }
+
+	// RVA: 0x21F1930 Offset: 0x21F1A31 VA: 0x21F1930
+	public Nex.Result GetIntegerSettingsAsync(uint integerSettingIndex, Utility.GetIntegerSettingsCB callback) { }
+}
+
+// Namespace: 
 private enum Nex.Utility.Api // TypeDefIndex: 8352
 {
 	// Fields
@@ -893,6 +1514,33 @@ private enum Nex.Utility.Api // TypeDefIndex: 8352
 	public const Nex.Utility.Api GetAssociatedNexUniqueIdWithMyPrincipalId = 3;
 	public const Nex.Utility.Api GetIntegerSettings = 4;
 	public const Nex.Utility.Api Max = 5;
+}
+
+// Namespace: 
+private class Nex.Utility.UtilityApiCallChecker : Nex.ApiCallChecker // TypeDefIndex: 8353
+{
+	// Fields
+	private static readonly Nex.ApiCallChecker.Guideline[] Guidelines; // 0x0
+
+	// Methods
+
+	// RVA: 0x21F18B0 Offset: 0x21F19B1 VA: 0x21F18B0
+	public void .ctor() { }
+
+	// RVA: 0x21F1A50 Offset: 0x21F1B51 VA: 0x21F1A50
+	public bool Run(Nex.Utility.Api api) { }
+
+	// RVA: 0x21F1A60 Offset: 0x21F1B61 VA: 0x21F1A60 Slot: 4
+	protected override void DbgOnInvalidApi(int api) { }
+
+	// RVA: 0x21F1A70 Offset: 0x21F1B71 VA: 0x21F1A70 Slot: 5
+	protected override void DbgOnTooMuchCall(int api) { }
+
+	// RVA: 0x21F1B40 Offset: 0x21F1C41 VA: 0x21F1B40 Slot: 6
+	protected override void DbgOnFullCalledTimes(int api) { }
+
+	// RVA: 0x21F1B50 Offset: 0x21F1C51 VA: 0x21F1B50
+	private static void .cctor() { }
 }
 
 // Namespace: 

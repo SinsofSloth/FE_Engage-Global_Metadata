@@ -9,6 +9,16 @@ public enum Common.ThreadMode // TypeDefIndex: 14864
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x27AC90 Offset: 0x27AD91 VA: 0x27AC90
+public enum Common.DispachFlag // TypeDefIndex: 14865
+{
+	// Fields
+	public int value__; // 0x0
+	public const Common.DispachFlag ContinueWhenEmpty = 1;
+	public const Common.DispachFlag DispatchKeepAliveOnly = 2;
+}
+
+// Namespace: 
 public enum Common.NotificationEvents // TypeDefIndex: 14866
 {
 	// Fields
@@ -29,5 +39,15 @@ public enum Common.NotificationEvents // TypeDefIndex: 14866
 	public const Common.NotificationEvents MatchmakeSessionSystemPasswordClear = 121;
 	public const Common.NotificationEvents AddedToGathering = 122;
 	public const Common.NotificationEvents UserStatusUpdatedEvent = 128;
+}
+
+// Namespace: 
+public enum Common.ParticipationEvents // TypeDefIndex: 14867
+{
+	// Fields
+	public int value__; // 0x0
+	public const Common.ParticipationEvents Participate = 1;
+	public const Common.ParticipationEvents Disconnect = 7;
+	public const Common.ParticipationEvents EndParticipation = 8;
 }
 

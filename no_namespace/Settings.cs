@@ -16,11 +16,31 @@ public enum Settings.ShadowPreset // TypeDefIndex: 8894
 }
 
 // Namespace: 
+public enum Settings.LutMode // TypeDefIndex: 8895
+{
+	// Fields
+	public int value__; // 0x0
+	public const Settings.LutMode Morning = 0;
+	public const Settings.LutMode Day = 1;
+	public const Settings.LutMode Evening = 2;
+	public const Settings.LutMode Night = 3;
+	public const Settings.LutMode _Count = 4;
+}
+
+// Namespace: 
 public enum Settings.CustomAlphaType // TypeDefIndex: 8896
 {
 	// Fields
 	public int value__; // 0x0
 	public const Settings.CustomAlphaType MapUI = 0;
+}
+
+// Namespace: 
+public enum Settings.CustomEVType // TypeDefIndex: 8897
+{
+	// Fields
+	public int value__; // 0x0
+	public const Settings.CustomEVType Map = 0;
 }
 
 // Namespace: 

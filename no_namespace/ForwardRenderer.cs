@@ -12,6 +12,16 @@ private static class ForwardRenderer.Profiling // TypeDefIndex: 5278
 }
 
 // Namespace: 
+private struct ForwardRenderer.RenderPassInputSummary // TypeDefIndex: 5279
+{
+	// Fields
+	internal bool requiresDepthTexture; // 0x0
+	internal bool requiresDepthPrepass; // 0x1
+	internal bool requiresNormalsTexture; // 0x2
+	internal bool requiresColorTexture; // 0x3
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x47F3D0 Offset: 0x47F4D1 VA: 0x47F3D0
 [Serializable]
 private sealed class ForwardRenderer.<>c // TypeDefIndex: 5280

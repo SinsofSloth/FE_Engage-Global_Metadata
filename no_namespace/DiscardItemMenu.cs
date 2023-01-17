@@ -1,4 +1,22 @@
 // Namespace: 
+public sealed class DiscardItemMenu.DecideCallback : MulticastDelegate // TypeDefIndex: 12535
+{
+	// Methods
+
+	// RVA: 0x1EFB9E0 Offset: 0x1EFBAE1 VA: 0x1EFB9E0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1EFBA00 Offset: 0x1EFBB01 VA: 0x1EFBA00 Slot: 13
+	public virtual void Invoke(bool transporterIsSelected, int transporterItemIndex) { }
+
+	// RVA: 0x1EFBC40 Offset: 0x1EFBD41 VA: 0x1EFBC40 Slot: 14
+	public virtual IAsyncResult BeginInvoke(bool transporterIsSelected, int transporterItemIndex, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1EFBD00 Offset: 0x1EFBE01 VA: 0x1EFBD00 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class DiscardItemMenu.CancelCallback : MulticastDelegate // TypeDefIndex: 12536
 {
 	// Methods
@@ -14,6 +32,23 @@ public sealed class DiscardItemMenu.CancelCallback : MulticastDelegate // TypeDe
 
 	// RVA: 0x1EFB3A0 Offset: 0x1EFB4A1 VA: 0x1EFB3A0 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278710 Offset: 0x278811 VA: 0x278710
+private sealed class DiscardItemMenu.DiscardItemMenuItem.<>c__DisplayClass12_0 // TypeDefIndex: 12537
+{
+	// Fields
+	public DiscardItemMenu menu; // 0x10
+	public DiscardItemMenu.DiscardItemMenuItem <>4__this; // 0x18
+
+	// Methods
+
+	// RVA: 0x1DC8E20 Offset: 0x1DC8F21 VA: 0x1DC8E20
+	public void .ctor() { }
+
+	// RVA: 0x1DC8E30 Offset: 0x1DC8F31 VA: 0x1DC8E30
+	internal void <ACall>b__0() { }
 }
 
 // Namespace: 
@@ -76,6 +111,36 @@ private class DiscardItemMenu.DiscardItemMenuItem : BasicItemMenuItem // TypeDef
 }
 
 // Namespace: 
+private class DiscardItemMenu.DiscardItemEmptyMenuItem : BasicItemMenuItem // TypeDefIndex: 12539
+{
+	// Methods
+
+	// RVA: 0x1EFBD10 Offset: 0x1EFBE11 VA: 0x1EFBD10 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1EFBD20 Offset: 0x1EFBE21 VA: 0x1EFBD20 Slot: 27
+	public override UnitItem GetUnitItem() { }
+
+	// RVA: 0x1EFBD30 Offset: 0x1EFBE31 VA: 0x1EFBD30 Slot: 30
+	public override string GetBlankText() { }
+
+	// RVA: 0x1EFBDB0 Offset: 0x1EFBEB1 VA: 0x1EFBDB0 Slot: 31
+	public override bool IsVisibleItemIconOnBlank() { }
+
+	// RVA: 0x1EFBDC0 Offset: 0x1EFBEC1 VA: 0x1EFBDC0 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x1EFBEB0 Offset: 0x1EFBFB1 VA: 0x1EFBEB0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1EFBEC0 Offset: 0x1EFBFC1 VA: 0x1EFBEC0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1EFBF70 Offset: 0x1EFC071 VA: 0x1EFBF70
+	public void .ctor() { }
+}
+
+// Namespace: 
 public sealed class DiscardItemMenu.ConfirmDialog.YesEventHandler : MulticastDelegate // TypeDefIndex: 12540
 {
 	// Methods
@@ -91,6 +156,21 @@ public sealed class DiscardItemMenu.ConfirmDialog.YesEventHandler : MulticastDel
 
 	// RVA: 0x1DC8E10 Offset: 0x1DC8F11 VA: 0x1DC8E10 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+private class DiscardItemMenu.ConfirmDialog.YesDialogItem : BasicDialogItemYes // TypeDefIndex: 12541
+{
+	// Fields
+	private DiscardItemMenu.ConfirmDialog.YesEventHandler m_YesEventHandler; // 0x70
+
+	// Methods
+
+	// RVA: 0x1DC8AE0 Offset: 0x1DC8BE1 VA: 0x1DC8AE0
+	public void .ctor(DiscardItemMenu.ConfirmDialog.YesEventHandler yesEventHandler) { }
+
+	// RVA: 0x1DC8B90 Offset: 0x1DC8C91 VA: 0x1DC8B90 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 

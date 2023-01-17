@@ -15,6 +15,17 @@ public enum GmapSpot.State // TypeDefIndex: 10338
 }
 
 // Namespace: 
+public enum GmapSpot.Direction // TypeDefIndex: 10339
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSpot.Direction Up = 0;
+	public const GmapSpot.Direction Down = 1;
+	public const GmapSpot.Direction Left = 2;
+	public const GmapSpot.Direction Right = 3;
+}
+
+// Namespace: 
 public enum GmapSpot.EncountType // TypeDefIndex: 10340
 {
 	// Fields
@@ -25,5 +36,19 @@ public enum GmapSpot.EncountType // TypeDefIndex: 10340
 	public const GmapSpot.EncountType TrainingBrodia = 3;
 	public const GmapSpot.EncountType TrainingSolum = 4;
 	public const GmapSpot.EncountType TrainingIrcion = 5;
+}
+
+// Namespace: 
+public enum GmapSpot.EncountPersonType // TypeDefIndex: 10341
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSpot.EncountPersonType None = 0;
+	public const GmapSpot.EncountPersonType Morph = 1;
+	public const GmapSpot.EncountPersonType Filene = 2;
+	public const GmapSpot.EncountPersonType Brodia = 3;
+	public const GmapSpot.EncountPersonType Solum = 4;
+	public const GmapSpot.EncountPersonType Ircion = 5;
+	public const GmapSpot.EncountPersonType Troublemaker = 6;
 }
 

@@ -1,4 +1,58 @@
 // Namespace: 
+private class SelectManyObservable.SelectManyOuterObserver.SelectMany<TSource, TResult> : OperatorObserverBase<TResult, TResult> // TypeDefIndex: 7043
+{
+	// Fields
+	private readonly SelectManyObservable.SelectManyOuterObserver<TSource, TResult> parent; // 0x0
+	private readonly IDisposable cancel; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SelectManyObservable.SelectManyOuterObserver<TSource, TResult> parent, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003A70 Offset: 0x3003B71 VA: 0x3003A70
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, object>..ctor
+	|
+	|-RVA: 0x30045F0 Offset: 0x30046F1 VA: 0x30045F0
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, Unit>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TResult value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003AF0 Offset: 0x3003BF1 VA: 0x3003AF0
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, object>.OnNext
+	|
+	|-RVA: 0x3004670 Offset: 0x3004771 VA: 0x3004670
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, Unit>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003C50 Offset: 0x3003D51 VA: 0x3003C50
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, object>.OnError
+	|
+	|-RVA: 0x30047D0 Offset: 0x30048D1 VA: 0x30047D0
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, Unit>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003E30 Offset: 0x3003F31 VA: 0x3003E30
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, object>.OnCompleted
+	|
+	|-RVA: 0x30049B0 Offset: 0x3004AB1 VA: 0x30049B0
+	|-SelectManyObservable.SelectManyOuterObserver.SelectMany<object, Unit>.OnCompleted
+	*/
+}
+
+// Namespace: 
 private class SelectManyObservable.SelectManyOuterObserver<TSource, TResult> : OperatorObserverBase<TSource, TResult> // TypeDefIndex: 7044
 {
 	// Fields
@@ -63,6 +117,60 @@ private class SelectManyObservable.SelectManyOuterObserver<TSource, TResult> : O
 	|
 	|-RVA: 0x342CB70 Offset: 0x342CC71 VA: 0x342CB70
 	|-SelectManyObservable.SelectManyOuterObserver<object, Unit>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class SelectManyObservable.SelectManyObserverWithIndex.SelectMany<TSource, TResult> : OperatorObserverBase<TResult, TResult> // TypeDefIndex: 7045
+{
+	// Fields
+	private readonly SelectManyObservable.SelectManyObserverWithIndex<TSource, TResult> parent; // 0x0
+	private readonly IDisposable cancel; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SelectManyObservable.SelectManyObserverWithIndex<TSource, TResult> parent, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30034B0 Offset: 0x30035B1 VA: 0x30034B0
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, object>..ctor
+	|
+	|-RVA: 0x3004030 Offset: 0x3004131 VA: 0x3004030
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, Unit>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TResult value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003530 Offset: 0x3003631 VA: 0x3003530
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, object>.OnNext
+	|
+	|-RVA: 0x30040B0 Offset: 0x30041B1 VA: 0x30040B0
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, Unit>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003690 Offset: 0x3003791 VA: 0x3003690
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, object>.OnError
+	|
+	|-RVA: 0x3004210 Offset: 0x3004311 VA: 0x3004210
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, Unit>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3003870 Offset: 0x3003971 VA: 0x3003870
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, object>.OnCompleted
+	|
+	|-RVA: 0x30043F0 Offset: 0x30044F1 VA: 0x30043F0
+	|-SelectManyObservable.SelectManyObserverWithIndex.SelectMany<object, Unit>.OnCompleted
 	*/
 }
 
@@ -132,6 +240,70 @@ private class SelectManyObservable.SelectManyObserverWithIndex<TSource, TResult>
 	|
 	|-RVA: 0x342A090 Offset: 0x342A191 VA: 0x342A090
 	|-SelectManyObservable.SelectManyObserverWithIndex<object, Unit>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class SelectManyObservable.SelectManyEnumerableObserver<TSource, TResult> : OperatorObserverBase<TSource, TResult> // TypeDefIndex: 7047
+{
+	// Fields
+	private readonly SelectManyObservable<TSource, TResult> parent; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SelectManyObservable<TSource, TResult> parent, IObserver<TResult> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3005F30 Offset: 0x3006031 VA: 0x3005F30
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, object>..ctor
+	|
+	|-RVA: 0x3006920 Offset: 0x3006A21 VA: 0x3006920
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, Unit>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3005F80 Offset: 0x3006081 VA: 0x3005F80
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, object>.Run
+	|
+	|-RVA: 0x3006970 Offset: 0x3006A71 VA: 0x3006970
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, Unit>.Run
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TSource value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3006020 Offset: 0x3006121 VA: 0x3006020
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, object>.OnNext
+	|
+	|-RVA: 0x3006A10 Offset: 0x3006B11 VA: 0x3006A10
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, Unit>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30066B0 Offset: 0x30067B1 VA: 0x30066B0
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, object>.OnError
+	|
+	|-RVA: 0x30070A0 Offset: 0x30071A1 VA: 0x30070A0
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, Unit>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30067F0 Offset: 0x30068F1 VA: 0x30067F0
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, object>.OnCompleted
+	|
+	|-RVA: 0x30071E0 Offset: 0x30072E1 VA: 0x30071E0
+	|-SelectManyObservable.SelectManyEnumerableObserver<object, Unit>.OnCompleted
 	*/
 }
 
@@ -268,6 +440,89 @@ private class SelectManyObservable.SelectManyOuterObserver.SelectMany<TSource, T
 }
 
 // Namespace: 
+private class SelectManyObservable.SelectManyOuterObserver<TSource, TCollection, TResult> : OperatorObserverBase<TSource, TResult> // TypeDefIndex: 7051
+{
+	// Fields
+	private readonly SelectManyObservable<TSource, TCollection, TResult> parent; // 0x0
+	private CompositeDisposable collectionDisposable; // 0x0
+	private object gate; // 0x0
+	private bool isStopped; // 0x0
+	private SingleAssignmentDisposable sourceDisposable; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SelectManyObservable<TSource, TCollection, TResult> parent, IObserver<TResult> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342CD70 Offset: 0x342CE71 VA: 0x342CD70
+	|-SelectManyObservable.SelectManyOuterObserver<object, long, object>..ctor
+	|
+	|-RVA: 0x342D590 Offset: 0x342D691 VA: 0x342D590
+	|-SelectManyObservable.SelectManyOuterObserver<object, object, object>..ctor
+	|
+	|-RVA: 0x342DDB0 Offset: 0x342DEB1 VA: 0x342DDB0
+	|-SelectManyObservable.SelectManyOuterObserver<object, Unit, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342CE30 Offset: 0x342CF31 VA: 0x342CE30
+	|-SelectManyObservable.SelectManyOuterObserver<object, long, object>.Run
+	|
+	|-RVA: 0x342D650 Offset: 0x342D751 VA: 0x342D650
+	|-SelectManyObservable.SelectManyOuterObserver<object, object, object>.Run
+	|
+	|-RVA: 0x342DE70 Offset: 0x342DF71 VA: 0x342DE70
+	|-SelectManyObservable.SelectManyOuterObserver<object, Unit, object>.Run
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TSource value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342CFA0 Offset: 0x342D0A1 VA: 0x342CFA0
+	|-SelectManyObservable.SelectManyOuterObserver<object, long, object>.OnNext
+	|
+	|-RVA: 0x342D7C0 Offset: 0x342D8C1 VA: 0x342D7C0
+	|-SelectManyObservable.SelectManyOuterObserver<object, object, object>.OnNext
+	|
+	|-RVA: 0x342DFE0 Offset: 0x342E0E1 VA: 0x342DFE0
+	|-SelectManyObservable.SelectManyOuterObserver<object, Unit, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342D1B0 Offset: 0x342D2B1 VA: 0x342D1B0
+	|-SelectManyObservable.SelectManyOuterObserver<object, long, object>.OnError
+	|
+	|-RVA: 0x342D9D0 Offset: 0x342DAD1 VA: 0x342D9D0
+	|-SelectManyObservable.SelectManyOuterObserver<object, object, object>.OnError
+	|
+	|-RVA: 0x342E1F0 Offset: 0x342E2F1 VA: 0x342E1F0
+	|-SelectManyObservable.SelectManyOuterObserver<object, Unit, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342D390 Offset: 0x342D491 VA: 0x342D390
+	|-SelectManyObservable.SelectManyOuterObserver<object, long, object>.OnCompleted
+	|
+	|-RVA: 0x342DBB0 Offset: 0x342DCB1 VA: 0x342DBB0
+	|-SelectManyObservable.SelectManyOuterObserver<object, object, object>.OnCompleted
+	|
+	|-RVA: 0x342E3D0 Offset: 0x342E4D1 VA: 0x342E3D0
+	|-SelectManyObservable.SelectManyOuterObserver<object, Unit, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
 private class SelectManyObservable.SelectManyObserverWithIndex.SelectManyObserver<TSource, TCollection, TResult> : OperatorObserverBase<TCollection, TResult> // TypeDefIndex: 7052
 {
 	// Fields
@@ -333,6 +588,90 @@ private class SelectManyObservable.SelectManyObserverWithIndex.SelectManyObserve
 	|
 	|-RVA: 0x3428E50 Offset: 0x3428F51 VA: 0x3428E50
 	|-SelectManyObservable.SelectManyObserverWithIndex.SelectManyObserver<object, Unit, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class SelectManyObservable.SelectManyObserverWithIndex<TSource, TCollection, TResult> : OperatorObserverBase<TSource, TResult> // TypeDefIndex: 7053
+{
+	// Fields
+	private readonly SelectManyObservable<TSource, TCollection, TResult> parent; // 0x0
+	private CompositeDisposable collectionDisposable; // 0x0
+	private object gate; // 0x0
+	private bool isStopped; // 0x0
+	private SingleAssignmentDisposable sourceDisposable; // 0x0
+	private int index; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SelectManyObservable<TSource, TCollection, TResult> parent, IObserver<TResult> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342A290 Offset: 0x342A391 VA: 0x342A290
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, long, object>..ctor
+	|
+	|-RVA: 0x342AAD0 Offset: 0x342ABD1 VA: 0x342AAD0
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, object, object>..ctor
+	|
+	|-RVA: 0x342B310 Offset: 0x342B411 VA: 0x342B310
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, Unit, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342A350 Offset: 0x342A451 VA: 0x342A350
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, long, object>.Run
+	|
+	|-RVA: 0x342AB90 Offset: 0x342AC91 VA: 0x342AB90
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, object, object>.Run
+	|
+	|-RVA: 0x342B3D0 Offset: 0x342B4D1 VA: 0x342B3D0
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, Unit, object>.Run
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TSource value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342A4C0 Offset: 0x342A5C1 VA: 0x342A4C0
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, long, object>.OnNext
+	|
+	|-RVA: 0x342AD00 Offset: 0x342AE01 VA: 0x342AD00
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, object, object>.OnNext
+	|
+	|-RVA: 0x342B540 Offset: 0x342B641 VA: 0x342B540
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, Unit, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342A6F0 Offset: 0x342A7F1 VA: 0x342A6F0
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, long, object>.OnError
+	|
+	|-RVA: 0x342AF30 Offset: 0x342B031 VA: 0x342AF30
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, object, object>.OnError
+	|
+	|-RVA: 0x342B770 Offset: 0x342B871 VA: 0x342B770
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, Unit, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x342A8D0 Offset: 0x342A9D1 VA: 0x342A8D0
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, long, object>.OnCompleted
+	|
+	|-RVA: 0x342B110 Offset: 0x342B211 VA: 0x342B110
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, object, object>.OnCompleted
+	|
+	|-RVA: 0x342B950 Offset: 0x342BA51 VA: 0x342B950
+	|-SelectManyObservable.SelectManyObserverWithIndex<object, Unit, object>.OnCompleted
 	*/
 }
 
@@ -412,6 +751,86 @@ private class SelectManyObservable.SelectManyEnumerableObserver<TSource, TCollec
 	|
 	|-RVA: 0x3009070 Offset: 0x3009171 VA: 0x3009070
 	|-SelectManyObservable.SelectManyEnumerableObserver<object, Unit, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class SelectManyObservable.SelectManyEnumerableObserverWithIndex<TSource, TCollection, TResult> : OperatorObserverBase<TSource, TResult> // TypeDefIndex: 7055
+{
+	// Fields
+	private readonly SelectManyObservable<TSource, TCollection, TResult> parent; // 0x0
+	private int index; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SelectManyObservable<TSource, TCollection, TResult> parent, IObserver<TResult> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x300A3C0 Offset: 0x300A4C1 VA: 0x300A3C0
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, long, object>..ctor
+	|
+	|-RVA: 0x300AE20 Offset: 0x300AF21 VA: 0x300AE20
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, object, object>..ctor
+	|
+	|-RVA: 0x300B880 Offset: 0x300B981 VA: 0x300B880
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, Unit, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x300A410 Offset: 0x300A511 VA: 0x300A410
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, long, object>.Run
+	|
+	|-RVA: 0x300AE70 Offset: 0x300AF71 VA: 0x300AE70
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, object, object>.Run
+	|
+	|-RVA: 0x300B8D0 Offset: 0x300B9D1 VA: 0x300B8D0
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, Unit, object>.Run
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TSource value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x300A4B0 Offset: 0x300A5B1 VA: 0x300A4B0
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, long, object>.OnNext
+	|
+	|-RVA: 0x300AF10 Offset: 0x300B011 VA: 0x300AF10
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, object, object>.OnNext
+	|
+	|-RVA: 0x300B970 Offset: 0x300BA71 VA: 0x300B970
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, Unit, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x300ABB0 Offset: 0x300ACB1 VA: 0x300ABB0
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, long, object>.OnError
+	|
+	|-RVA: 0x300B610 Offset: 0x300B711 VA: 0x300B610
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, object, object>.OnError
+	|
+	|-RVA: 0x300C070 Offset: 0x300C171 VA: 0x300C070
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, Unit, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x300ACF0 Offset: 0x300ADF1 VA: 0x300ACF0
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, long, object>.OnCompleted
+	|
+	|-RVA: 0x300B750 Offset: 0x300B851 VA: 0x300B750
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, object, object>.OnCompleted
+	|
+	|-RVA: 0x300C1B0 Offset: 0x300C2B1 VA: 0x300C1B0
+	|-SelectManyObservable.SelectManyEnumerableObserverWithIndex<object, Unit, object>.OnCompleted
 	*/
 }
 

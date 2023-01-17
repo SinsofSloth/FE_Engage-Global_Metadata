@@ -7,7 +7,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3 // Typ
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=6 // TypeDefIndex: 1459
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=9 // TypeDefIndex: 1460
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=10 // TypeDefIndex: 1461
 {}
 
 // Namespace: 
@@ -15,7 +23,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=14 // TypeDefIndex: 1463
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=16 // TypeDefIndex: 1464
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=20 // TypeDefIndex: 1465
 {}
 
 // Namespace: 
@@ -23,7 +39,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=24 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 // TypeDefIndex: 1467
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=36 // TypeDefIndex: 1468
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=38 // TypeDefIndex: 1469
 {}
 
 // Namespace: 
@@ -31,7 +55,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=40 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=42 // TypeDefIndex: 1471
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=44 // TypeDefIndex: 1472
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=48 // TypeDefIndex: 1473
 {}
 
 // Namespace: 
@@ -39,7 +71,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=52 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=56 // TypeDefIndex: 1475
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=64 // TypeDefIndex: 1476
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=72 // TypeDefIndex: 1477
 {}
 
 // Namespace: 
@@ -47,7 +87,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=76 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=84 // TypeDefIndex: 1479
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=94 // TypeDefIndex: 1480
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=120 // TypeDefIndex: 1481
 {}
 
 // Namespace: 
@@ -55,7 +103,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 // T
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=130 // TypeDefIndex: 1483
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=162 // TypeDefIndex: 1484
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=174 // TypeDefIndex: 1485
 {}
 
 // Namespace: 
@@ -63,7 +119,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=212 // T
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=240 // TypeDefIndex: 1487
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 // TypeDefIndex: 1488
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=262 // TypeDefIndex: 1489
 {}
 
 // Namespace: 
@@ -71,7 +135,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=288 // T
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=320 // TypeDefIndex: 1491
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=360 // TypeDefIndex: 1492
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=640 // TypeDefIndex: 1493
 {}
 
 // Namespace: 
@@ -79,7 +151,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=998 // T
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1018 // TypeDefIndex: 1495
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1080 // TypeDefIndex: 1496
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1208 // TypeDefIndex: 1497
 {}
 
 // Namespace: 
@@ -87,7 +167,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1450 // 
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1665 // TypeDefIndex: 1499
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=2048 // TypeDefIndex: 1500
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=2100 // TypeDefIndex: 1501
 {}
 
 // Namespace: 
@@ -95,11 +183,23 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=2350 // 
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=2382 // TypeDefIndex: 1503
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3132 // TypeDefIndex: 1504
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=4096 // TypeDefIndex: 1505
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=11614 // TypeDefIndex: 1506
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=21252 // TypeDefIndex: 1507
 {}
 
 // Namespace: 
@@ -269,7 +369,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3 // Typ
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=9 // TypeDefIndex: 1589
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=10 // TypeDefIndex: 1590
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=14 // TypeDefIndex: 1591
 {}
 
 // Namespace: 
@@ -277,11 +385,23 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=20 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 // TypeDefIndex: 1593
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=48 // TypeDefIndex: 1594
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=64 // TypeDefIndex: 1595
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 // TypeDefIndex: 1596
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3132 // TypeDefIndex: 1597
 {}
 
 // Namespace: 
@@ -325,7 +445,19 @@ internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 1598
 }
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 1599
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=6 // TypeDefIndex: 2083
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // TypeDefIndex: 2084
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=16 // TypeDefIndex: 2085
 {}
 
 // Namespace: 
@@ -333,7 +465,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=20 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=24 // TypeDefIndex: 2087
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=28 // TypeDefIndex: 2088
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 // TypeDefIndex: 2089
 {}
 
 // Namespace: 
@@ -341,7 +481,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=36 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=40 // TypeDefIndex: 2091
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=44 // TypeDefIndex: 2092
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=56 // TypeDefIndex: 2093
 {}
 
 // Namespace: 
@@ -349,7 +497,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=64 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=68 // TypeDefIndex: 2095
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=112 // TypeDefIndex: 2096
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=144 // TypeDefIndex: 2097
 {}
 
 // Namespace: 
@@ -387,7 +543,19 @@ internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 2098
 }
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 2099
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3 // TypeDefIndex: 2669
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=6 // TypeDefIndex: 2670
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=9 // TypeDefIndex: 2671
 {}
 
 // Namespace: 
@@ -395,7 +563,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=10 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // TypeDefIndex: 2673
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=14 // TypeDefIndex: 2674
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 // TypeDefIndex: 2675
 {}
 
 // Namespace: 
@@ -403,7 +579,44 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=44 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 // TypeDefIndex: 2677
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 // TypeDefIndex: 2678
+{}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x31280 Offset: 0x31381 VA: 0x31280
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 2679
+{
+	// Fields
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=14 0283A6AF88802AB45989B29549915BEA0F6CD515 /*Metadata offset 0x626C5F*/; // 0x0
+	internal static readonly long 03F4297FCC30D0FD5E420E5D26E7FA711167C7EF = 2533317740920864; // 0x10
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=9 1A39764B112685485A5BA7B2880D878B858C1A7A /*Metadata offset 0x626C75*/; // 0x18
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3 1A84029C80CB5518379F199F53FF08A7B764F8FD /*Metadata offset 0x626C7E*/; // 0x21
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 3BE77BF818331C2D8400FFFFF9FADD3F16AD89AC /*Metadata offset 0x626C81*/; // 0x24
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=10 53437C3B2572EDB9B8640C3195DF3BC2729C5EA1 /*Metadata offset 0x626C8D*/; // 0x30
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 59F5BD34B6C013DEACC784F69C67E95150033A84 /*Metadata offset 0x626C97*/; // 0x3A
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=6 5BC3486B05BA8CF4689C7BDB198B3F477BB4E20C /*Metadata offset 0x626CB7*/; // 0x5A
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=9 6D49C9D487D7AD3491ECE08732D68A593CC2038D /*Metadata offset 0x626CBD*/; // 0x60
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 6F3AD3DC3AF8047587C4C9D696EB68A01FEF796E /*Metadata offset 0x626CC6*/; // 0x69
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=44 8E0EF3D67A3EB1863224EE3CACB424BC2F8CFBA3 /*Metadata offset 0x626D46*/; // 0xE9
+	internal static readonly long 98A44A6F8606AE6F23FE230286C1D6FBCC407226 = 11540663026319392; // 0x118
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 C02C28AFEBE998F767E4AF43E3BE8F5E9FA11536 /*Metadata offset 0x626D7A*/; // 0x120
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 CCEEADA43268372341F81AE0C9208C6856441C04 /*Metadata offset 0x626D9A*/; // 0x140
+	internal static readonly long E5BC1BAFADE1862DD6E0B9FB632BFAA6C3873A78 = 2533330625626144; // 0x1C0
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 EC5842B3154E1AF94500B57220EB9F684BCCC42A /*Metadata offset 0x626E22*/; // 0x1C8
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 EEAFE8C6E1AB017237567305EE925C976CDB6458 /*Metadata offset 0x626E42*/; // 0x1E8
+
+	// Methods
+
+	// RVA: 0x1B3CA80 Offset: 0x1B3CB81 VA: 0x1B3CA80
+	internal static uint ComputeStringHash(string s) { }
+}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 2701
 {}
 
 // Namespace: 
@@ -411,11 +624,37 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=120 // T
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 // TypeDefIndex: 3291
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 // TypeDefIndex: 3292
 {}
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x407B0 Offset: 0x408B1 VA: 0x407B0
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 3293
+{
+	// Fields
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=120 0AA802CD6847EB893FE786B5EA5168B2FDCD7B93 /*Metadata offset 0x62712B*/; // 0x0
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 0C4110BC17D746F018F47B49E0EB0D6590F69939 /*Metadata offset 0x6271A3*/; // 0x78
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 20733E1283D873EBE47133A95C233E11B76F5F11 /*Metadata offset 0x6272A3*/; // 0x178
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 21F4CBF8283FF1CAEB4A39316A97FC1D6DF1D35E /*Metadata offset 0x6276A3*/; // 0x578
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 23DFDCA6F045D4257BF5AC8CB1CF2EFADAFE9B94 /*Metadata offset 0x627AA3*/; // 0x978
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 30A0358B25B1372DD598BB4B1AC56AD6B8F08A47 /*Metadata offset 0x627EA3*/; // 0xD78
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 5B5DF5A459E902D96F7DB0FB235A25346CA85C5D /*Metadata offset 0x6282A3*/; // 0x1178
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 5BE411F1438EAEF33726D855E99011D5FECDDD4E /*Metadata offset 0x6286A3*/; // 0x1578
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=256 8F22C9ECE1331718CBD268A9BBFD2F5E451441E3 /*Metadata offset 0x628AA3*/; // 0x1978
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 A02DD1D8604EA8EC2D2BDA717A93A4EE85F13E53 /*Metadata offset 0x628BA3*/; // 0x1A78
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=1024 AE2F76ECEF8B08F0BC7EA95DCFE945E1727927C9 /*Metadata offset 0x628FA3*/; // 0x1E78
+}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 3294
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 3323
 {}
 
 // Namespace: 
@@ -427,11 +666,23 @@ internal class <Module> // TypeDefIndex: 4036
 {}
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 4045
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 4057
+{}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 4072
 {}
 
 // Namespace: 
 internal class <Module> // TypeDefIndex: 4140
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 4181
 {}
 
 // Namespace: 
@@ -447,12 +698,24 @@ internal class <Module> // TypeDefIndex: 4224
 {}
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 4235
+{}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 4240
 {}
 
 // Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // TypeDefIndex: 4434
 {}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x43AB0 Offset: 0x43BB1 VA: 0x43AB0
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 4435
+{
+	// Fields
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB /*Metadata offset 0x62B4CD*/; // 0x0
+}
 
 // Namespace: 
 internal class <Module> // TypeDefIndex: 4436
@@ -471,11 +734,31 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=144 // T
 {}
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x3C5F0 Offset: 0x3C6F1 VA: 0x3C5F0
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 4731
+{
+	// Fields
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=144 BDFF4BF48DBC7214A392CF884F7F2A6073CCDB77CA3EB11BEBB93DA8ED8B2158 /*Metadata offset 0x62BB7A*/; // 0x0
+}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 4732
 {}
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 4745
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 4747
+{}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 4762
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 4765
 {}
 
 // Namespace: 
@@ -495,7 +778,27 @@ internal class <Module> // TypeDefIndex: 4792
 {}
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 4853
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 4855
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 4887
+{}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 4890
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 5231
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 5235
 {}
 
 // Namespace: 
@@ -503,15 +806,50 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=24 // TypeDefIndex: 5531
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=960 // TypeDefIndex: 5532
 {}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x4805B0 Offset: 0x4806B1 VA: 0x4805B0
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 5533
+{
+	// Fields
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=24 18689A54C1FF754BE58500B2ED77A6C75B025BE96F6D01FEF89C42DA1C953F34 /*Metadata offset 0x62C954*/; // 0x0
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=960 6322123493378558D4F9DD025993C168685B194246485704DD5B391FDCD77A64 /*Metadata offset 0x62C96C*/; // 0x18
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 8E2129A5F232A49B45FCB149981C3507166B7EE6265A5B90A1C9B0B87B2C0A80 /*Metadata offset 0x62CD2C*/; // 0x3D8
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=960 E2EF5640DF412939A64301FFA3F66A62A34FA6E45A26E62F6994E5390B380D01 /*Metadata offset 0x62CD38*/; // 0x3E4
+}
 
 // Namespace: 
 internal class <Module> // TypeDefIndex: 5534
 {}
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x72510 Offset: 0x72611 VA: 0x72510
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 5623
+{
+	// Fields
+	internal static readonly long 2D2025322643CE1497D8FB03FA789F27E833CF43545CA1003AFEFEA250D39313 = 3172232900852580628; // 0x0
+}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 5624
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 5705
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 5721
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // TypeDefIndex: 5911
 {}
 
 // Namespace: 
@@ -521,6 +859,10 @@ internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 5912
 	// Fields
 	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 AA5072B96927F710758B3E5237A84AC68E397BC4E1BF7E864A950696D743CC32 /*Metadata offset 0x62D61B*/; // 0x0
 }
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 5913
+{}
 
 // Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0xD260 Offset: 0xD361 VA: 0xD260
@@ -625,6 +967,79 @@ internal sealed class <>f__AnonymousType0<<threadId>j__TPar, <reason>j__TPar, <t
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0xD270 Offset: 0xD371 VA: 0xD270
+internal sealed class <>f__AnonymousType1<<exitCode>j__TPar> // TypeDefIndex: 5915
+{
+	// Fields
+	[DebuggerBrowsableAttribute] // RVA: 0xE010 Offset: 0xE111 VA: 0xE010
+	private readonly <exitCode>j__TPar <exitCode>i__Field; // 0x0
+
+	// Properties
+	public <exitCode>j__TPar exitCode { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public <exitCode>j__TPar get_exitCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B434A0 Offset: 0x2B435A1 VA: 0x2B434A0
+	|-<>f__AnonymousType1<int>.get_exitCode
+	|
+	|-RVA: 0x2B436B0 Offset: 0x2B437B1 VA: 0x2B436B0
+	|-<>f__AnonymousType1<object>.get_exitCode
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF170 Offset: 0xF271 VA: 0xF170
+	// RVA: -1 Offset: -1
+	public void .ctor(<exitCode>j__TPar exitCode) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B434B0 Offset: 0x2B435B1 VA: 0x2B434B0
+	|-<>f__AnonymousType1<int>..ctor
+	|
+	|-RVA: 0x2B436C0 Offset: 0x2B437C1 VA: 0x2B436C0
+	|-<>f__AnonymousType1<object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF180 Offset: 0xF281 VA: 0xF180
+	// RVA: -1 Offset: -1 Slot: 0
+	public override bool Equals(object value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B434E0 Offset: 0x2B435E1 VA: 0x2B434E0
+	|-<>f__AnonymousType1<int>.Equals
+	|
+	|-RVA: 0x2B43700 Offset: 0x2B43801 VA: 0x2B43700
+	|-<>f__AnonymousType1<object>.Equals
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF190 Offset: 0xF291 VA: 0xF190
+	// RVA: -1 Offset: -1 Slot: 2
+	public override int GetHashCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B43570 Offset: 0x2B43671 VA: 0x2B43570
+	|-<>f__AnonymousType1<int>.GetHashCode
+	|
+	|-RVA: 0x2B43790 Offset: 0x2B43891 VA: 0x2B43790
+	|-<>f__AnonymousType1<object>.GetHashCode
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF1A0 Offset: 0xF2A1 VA: 0xF1A0
+	// RVA: -1 Offset: -1 Slot: 3
+	public override string ToString() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B435C0 Offset: 0x2B436C1 VA: 0x2B435C0
+	|-<>f__AnonymousType1<int>.ToString
+	|
+	|-RVA: 0x2B437E0 Offset: 0x2B438E1 VA: 0x2B437E0
+	|-<>f__AnonymousType1<object>.ToString
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0xD280 Offset: 0xD381 VA: 0xD280
 internal sealed class <>f__AnonymousType2<<reason>j__TPar, <threadId>j__TPar> // TypeDefIndex: 5916
 {
@@ -713,6 +1128,76 @@ internal sealed class <>f__AnonymousType2<<reason>j__TPar, <threadId>j__TPar> //
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0xD290 Offset: 0xD391 VA: 0xD290
+internal sealed class <>f__AnonymousType3<<category>j__TPar, <output>j__TPar> // TypeDefIndex: 5917
+{
+	// Fields
+	[DebuggerBrowsableAttribute] // RVA: 0xE070 Offset: 0xE171 VA: 0xE070
+	private readonly <category>j__TPar <category>i__Field; // 0x0
+	[DebuggerBrowsableAttribute] // RVA: 0xE090 Offset: 0xE191 VA: 0xE090
+	private readonly <output>j__TPar <output>i__Field; // 0x0
+
+	// Properties
+	public <category>j__TPar category { get; }
+	public <output>j__TPar output { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public <category>j__TPar get_category() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B43EE0 Offset: 0x2B43FE1 VA: 0x2B43EE0
+	|-<>f__AnonymousType3<object, object>.get_category
+	*/
+
+	// RVA: -1 Offset: -1
+	public <output>j__TPar get_output() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B43EF0 Offset: 0x2B43FF1 VA: 0x2B43EF0
+	|-<>f__AnonymousType3<object, object>.get_output
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF1F0 Offset: 0xF2F1 VA: 0xF1F0
+	// RVA: -1 Offset: -1
+	public void .ctor(<category>j__TPar category, <output>j__TPar output) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B43F00 Offset: 0x2B44001 VA: 0x2B43F00
+	|-<>f__AnonymousType3<object, object>..ctor
+	|-<>f__AnonymousType3<string, string>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF200 Offset: 0xF301 VA: 0xF200
+	// RVA: -1 Offset: -1 Slot: 0
+	public override bool Equals(object value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B43F50 Offset: 0x2B44051 VA: 0x2B43F50
+	|-<>f__AnonymousType3<object, object>.Equals
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF210 Offset: 0xF311 VA: 0xF210
+	// RVA: -1 Offset: -1 Slot: 2
+	public override int GetHashCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44010 Offset: 0x2B44111 VA: 0x2B44010
+	|-<>f__AnonymousType3<object, object>.GetHashCode
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF220 Offset: 0xF321 VA: 0xF220
+	// RVA: -1 Offset: -1 Slot: 3
+	public override string ToString() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B440A0 Offset: 0x2B441A1 VA: 0x2B440A0
+	|-<>f__AnonymousType3<object, object>.ToString
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0xD2A0 Offset: 0xD3A1 VA: 0xD2A0
 internal sealed class <>f__AnonymousType4<<_format>j__TPar> // TypeDefIndex: 5918
 {
@@ -768,6 +1253,65 @@ internal sealed class <>f__AnonymousType4<<_format>j__TPar> // TypeDefIndex: 591
 	|
 	|-RVA: 0x2B44310 Offset: 0x2B44411 VA: 0x2B44310
 	|-<>f__AnonymousType4<object>.ToString
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0xD2B0 Offset: 0xD3B1 VA: 0xD2B0
+internal sealed class <>f__AnonymousType5<<_request>j__TPar> // TypeDefIndex: 5919
+{
+	// Fields
+	[DebuggerBrowsableAttribute] // RVA: 0xE0D0 Offset: 0xE1D1 VA: 0xE0D0
+	private readonly <_request>j__TPar <_request>i__Field; // 0x0
+
+	// Properties
+	public <_request>j__TPar _request { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public <_request>j__TPar get__request() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44400 Offset: 0x2B44501 VA: 0x2B44400
+	|-<>f__AnonymousType5<object>.get__request
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF270 Offset: 0xF371 VA: 0xF270
+	// RVA: -1 Offset: -1
+	public void .ctor(<_request>j__TPar _request) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44410 Offset: 0x2B44511 VA: 0x2B44410
+	|-<>f__AnonymousType5<object>..ctor
+	|-<>f__AnonymousType5<string>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF280 Offset: 0xF381 VA: 0xF280
+	// RVA: -1 Offset: -1 Slot: 0
+	public override bool Equals(object value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44450 Offset: 0x2B44551 VA: 0x2B44450
+	|-<>f__AnonymousType5<object>.Equals
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF290 Offset: 0xF391 VA: 0xF290
+	// RVA: -1 Offset: -1 Slot: 2
+	public override int GetHashCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B444E0 Offset: 0x2B445E1 VA: 0x2B444E0
+	|-<>f__AnonymousType5<object>.GetHashCode
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF2A0 Offset: 0xF3A1 VA: 0xF2A0
+	// RVA: -1 Offset: -1 Slot: 3
+	public override string ToString() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44530 Offset: 0x2B44631 VA: 0x2B44530
+	|-<>f__AnonymousType5<object>.ToString
 	*/
 }
 
@@ -839,6 +1383,29 @@ internal sealed class <>f__AnonymousType6<<_request>j__TPar, <_exception>j__TPar
 	|-RVA: 0x2B447E0 Offset: 0x2B448E1 VA: 0x2B447E0
 	|-<>f__AnonymousType6<object, object>.ToString
 	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0xD2D0 Offset: 0xD3D1 VA: 0xD2D0
+internal sealed class <>f__AnonymousType7 // TypeDefIndex: 5921
+{
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0xF2F0 Offset: 0xF3F1 VA: 0xF2F0
+	// RVA: 0x30E5C10 Offset: 0x30E5D11 VA: 0x30E5C10
+	public void .ctor() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0xF300 Offset: 0xF401 VA: 0xF300
+	// RVA: 0x30E5C20 Offset: 0x30E5D21 VA: 0x30E5C20 Slot: 0
+	public override bool Equals(object value) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0xF310 Offset: 0xF411 VA: 0xF310
+	// RVA: 0x30E5C90 Offset: 0x30E5D91 VA: 0x30E5C90 Slot: 2
+	public override int GetHashCode() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0xF320 Offset: 0xF421 VA: 0xF320
+	// RVA: 0x30E5CA0 Offset: 0x30E5DA1 VA: 0x30E5CA0 Slot: 3
+	public override string ToString() { }
 }
 
 // Namespace: 
@@ -914,8 +1481,93 @@ internal sealed class <>f__AnonymousType8<<t>j__TPar, <attributes>j__TPar> // Ty
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0xD2F0 Offset: 0xD3F1 VA: 0xD2F0
+internal sealed class <>f__AnonymousType9<<Attributes>j__TPar, <DataType>j__TPar> // TypeDefIndex: 5923
+{
+	// Fields
+	[DebuggerBrowsableAttribute] // RVA: 0xE170 Offset: 0xE271 VA: 0xE170
+	private readonly <Attributes>j__TPar <Attributes>i__Field; // 0x0
+	[DebuggerBrowsableAttribute] // RVA: 0xE190 Offset: 0xE291 VA: 0xE190
+	private readonly <DataType>j__TPar <DataType>i__Field; // 0x0
+
+	// Properties
+	public <Attributes>j__TPar Attributes { get; }
+	public <DataType>j__TPar DataType { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public <Attributes>j__TPar get_Attributes() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44C20 Offset: 0x2B44D21 VA: 0x2B44C20
+	|-<>f__AnonymousType9<Attribute[], Type>.get_Attributes
+	|-<>f__AnonymousType9<object, object>.get_Attributes
+	*/
+
+	// RVA: -1 Offset: -1
+	public <DataType>j__TPar get_DataType() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44C30 Offset: 0x2B44D31 VA: 0x2B44C30
+	|-<>f__AnonymousType9<Attribute[], Type>.get_DataType
+	|-<>f__AnonymousType9<object, object>.get_DataType
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF370 Offset: 0xF471 VA: 0xF370
+	// RVA: -1 Offset: -1
+	public void .ctor(<Attributes>j__TPar Attributes, <DataType>j__TPar DataType) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44C40 Offset: 0x2B44D41 VA: 0x2B44C40
+	|-<>f__AnonymousType9<Attribute[], Type>..ctor
+	|-<>f__AnonymousType9<object, object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF380 Offset: 0xF481 VA: 0xF380
+	// RVA: -1 Offset: -1 Slot: 0
+	public override bool Equals(object value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44C90 Offset: 0x2B44D91 VA: 0x2B44C90
+	|-<>f__AnonymousType9<object, object>.Equals
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF390 Offset: 0xF491 VA: 0xF390
+	// RVA: -1 Offset: -1 Slot: 2
+	public override int GetHashCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44D50 Offset: 0x2B44E51 VA: 0x2B44D50
+	|-<>f__AnonymousType9<object, object>.GetHashCode
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0xF3A0 Offset: 0xF4A1 VA: 0xF3A0
+	// RVA: -1 Offset: -1 Slot: 3
+	public override string ToString() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B44DE0 Offset: 0x2B44EE1 VA: 0x2B44DE0
+	|-<>f__AnonymousType9<object, object>.ToString
+	*/
+}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 // TypeDefIndex: 6312
 {}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0xDFA0 Offset: 0xE0A1 VA: 0xDFA0
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 6313
+{
+	// Fields
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 9C6D3221B6A2F3573A0F50BB8934E208DD38404B04EE793DD29202D37AD041A9 /*Metadata offset 0x62DE5B*/; // 0x0
+
+	// Methods
+
+	// RVA: 0x30E5CF0 Offset: 0x30E5DF1 VA: 0x30E5CF0
+	internal static uint ComputeStringHash(string s) { }
+}
 
 // Namespace: 
 internal class <Module> // TypeDefIndex: 6314
@@ -926,11 +1578,114 @@ internal class <Module> // TypeDefIndex: 6332
 {}
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5AFC0 Offset: 0x5B0C1 VA: 0x5AFC0
+internal sealed class <>f__AnonymousType0<<bone>j__TPar, <depth>j__TPar> // TypeDefIndex: 6333
+{
+	// Fields
+	[DebuggerBrowsableAttribute] // RVA: 0x5B5A0 Offset: 0x5B6A1 VA: 0x5B5A0
+	private readonly <bone>j__TPar <bone>i__Field; // 0x0
+	[DebuggerBrowsableAttribute] // RVA: 0x5B5C0 Offset: 0x5B6C1 VA: 0x5B5C0
+	private readonly <depth>j__TPar <depth>i__Field; // 0x0
+
+	// Properties
+	public <bone>j__TPar bone { get; }
+	public <depth>j__TPar depth { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public <bone>j__TPar get_bone() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B426D0 Offset: 0x2B427D1 VA: 0x2B426D0
+	|-<>f__AnonymousType0<object, int>.get_bone
+	|-<>f__AnonymousType0<SpringBone, int>.get_bone
+	|
+	|-RVA: 0x2B429E0 Offset: 0x2B42AE1 VA: 0x2B429E0
+	|-<>f__AnonymousType0<object, object>.get_bone
+	*/
+
+	// RVA: -1 Offset: -1
+	public <depth>j__TPar get_depth() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B426E0 Offset: 0x2B427E1 VA: 0x2B426E0
+	|-<>f__AnonymousType0<object, int>.get_depth
+	|-<>f__AnonymousType0<SpringBone, int>.get_depth
+	|
+	|-RVA: 0x2B429F0 Offset: 0x2B42AF1 VA: 0x2B429F0
+	|-<>f__AnonymousType0<object, object>.get_depth
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x5C010 Offset: 0x5C111 VA: 0x5C010
+	// RVA: -1 Offset: -1
+	public void .ctor(<bone>j__TPar bone, <depth>j__TPar depth) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B426F0 Offset: 0x2B427F1 VA: 0x2B426F0
+	|-<>f__AnonymousType0<object, int>..ctor
+	|-<>f__AnonymousType0<SpringBone, int>..ctor
+	|
+	|-RVA: 0x2B42A00 Offset: 0x2B42B01 VA: 0x2B42A00
+	|-<>f__AnonymousType0<object, object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x5C020 Offset: 0x5C121 VA: 0x5C020
+	// RVA: -1 Offset: -1 Slot: 0
+	public override bool Equals(object value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B42740 Offset: 0x2B42841 VA: 0x2B42740
+	|-<>f__AnonymousType0<object, int>.Equals
+	|
+	|-RVA: 0x2B42A50 Offset: 0x2B42B51 VA: 0x2B42A50
+	|-<>f__AnonymousType0<object, object>.Equals
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x5C030 Offset: 0x5C131 VA: 0x5C030
+	// RVA: -1 Offset: -1 Slot: 2
+	public override int GetHashCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B42800 Offset: 0x2B42901 VA: 0x2B42800
+	|-<>f__AnonymousType0<object, int>.GetHashCode
+	|
+	|-RVA: 0x2B42B10 Offset: 0x2B42C11 VA: 0x2B42B10
+	|-<>f__AnonymousType0<object, object>.GetHashCode
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x5C040 Offset: 0x5C141 VA: 0x5C040
+	// RVA: -1 Offset: -1 Slot: 3
+	public override string ToString() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B42890 Offset: 0x2B42991 VA: 0x2B42890
+	|-<>f__AnonymousType0<object, int>.ToString
+	|
+	|-RVA: 0x2B42BA0 Offset: 0x2B42CA1 VA: 0x2B42BA0
+	|-<>f__AnonymousType0<object, object>.ToString
+	*/
+}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3 // TypeDefIndex: 6462
 {}
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B590 Offset: 0x5B691 VA: 0x5B590
+internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 6463
+{
+	// Fields
+	internal static readonly int 8DC02A10E42570FC4A88354BE0E72D4683A79B00D2B4347FF76F801A451A3464 = 1836597052; // 0x0
+	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=3 F1945CD6C19E56B3C1C78943EF5EC18116907A4CA1EFC40A57D48AB1DB7ADFC5 /*Metadata offset 0x62DFFE*/; // 0x4
+}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 6464
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 6467
 {}
 
 // Namespace: 
@@ -942,12 +1697,28 @@ internal class <Module> // TypeDefIndex: 7326
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // TypeDefIndex: 7497
+{}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x4D340 Offset: 0x4D441 VA: 0x4D340
 internal sealed class <PrivateImplementationDetails> // TypeDefIndex: 7498
 {
 	// Fields
 	internal static readonly <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB /*Metadata offset 0x62EA0D*/; // 0x0
 }
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 7499
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 7507
+{}
+
+// Namespace: 
+internal class <Module> // TypeDefIndex: 7521
+{}
 
 // Namespace: 
 internal class <Module> // TypeDefIndex: 7526
@@ -970,7 +1741,15 @@ internal class <Module> // TypeDefIndex: 7582
 {}
 
 // Namespace: 
+internal class <Module> // TypeDefIndex: 7597
+{}
+
+// Namespace: 
 internal class <Module> // TypeDefIndex: 7600
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=6 // TypeDefIndex: 15067
 {}
 
 // Namespace: 
@@ -978,7 +1757,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=12 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=16 // TypeDefIndex: 15069
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=20 // TypeDefIndex: 15070
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=24 // TypeDefIndex: 15071
 {}
 
 // Namespace: 
@@ -986,7 +1773,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=28 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=32 // TypeDefIndex: 15073
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=36 // TypeDefIndex: 15074
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=40 // TypeDefIndex: 15075
 {}
 
 // Namespace: 
@@ -994,7 +1789,15 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=44 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=48 // TypeDefIndex: 15077
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=52 // TypeDefIndex: 15078
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=56 // TypeDefIndex: 15079
 {}
 
 // Namespace: 
@@ -1002,11 +1805,23 @@ private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=64 // Ty
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=124 // TypeDefIndex: 15081
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=128 // TypeDefIndex: 15082
 {}
 
 // Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=140 // TypeDefIndex: 15083
+{}
+
+// Namespace: 
 private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=156 // TypeDefIndex: 15084
+{}
+
+// Namespace: 
+private struct <PrivateImplementationDetails>.__StaticArrayInitTypeSize=264 // TypeDefIndex: 15085
 {}
 
 // Namespace: 

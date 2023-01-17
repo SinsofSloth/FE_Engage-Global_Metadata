@@ -15,6 +15,17 @@ private enum MusclePushupSequence.Label // TypeDefIndex: 14196
 }
 
 // Namespace: 
+private enum MusclePushupSequence.judgeRank // TypeDefIndex: 14197
+{
+	// Fields
+	public int value__; // 0x0
+	public const MusclePushupSequence.judgeRank Perfect = 0;
+	public const MusclePushupSequence.judgeRank Good = 1;
+	public const MusclePushupSequence.judgeRank Bad = 2;
+	public const MusclePushupSequence.judgeRank Assist = 3;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279800 Offset: 0x279901 VA: 0x279800
 private sealed class MusclePushupSequence.<>c__DisplayClass143_0 // TypeDefIndex: 14198
 {

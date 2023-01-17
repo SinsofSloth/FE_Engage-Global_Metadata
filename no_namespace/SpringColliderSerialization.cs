@@ -1,4 +1,33 @@
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B300 Offset: 0x5B401 VA: 0x5B300
+[Serializable]
+private sealed class SpringColliderSerialization.ParsedColliderSetup.<>c // TypeDefIndex: 6383
+{
+	// Fields
+	public static readonly SpringColliderSerialization.ParsedColliderSetup.<>c <>9; // 0x0
+	public static Func<Transform, string> <>9__4_0; // 0x8
+	public static Func<SpringColliderSerialization.TransformSerializer, string> <>9__4_1; // 0x10
+	public static Func<SpringColliderSerialization.IColliderSerializer, string> <>9__6_0; // 0x18
+
+	// Methods
+
+	// RVA: 0x3A7FA90 Offset: 0x3A7FB91 VA: 0x3A7FA90
+	private static void .cctor() { }
+
+	// RVA: 0x3A7FB00 Offset: 0x3A7FC01 VA: 0x3A7FB00
+	public void .ctor() { }
+
+	// RVA: 0x3A7FB10 Offset: 0x3A7FC11 VA: 0x3A7FB10
+	internal string <ReadColliderSetupFromText>b__4_0(Transform item) { }
+
+	// RVA: 0x3A7FB20 Offset: 0x3A7FC21 VA: 0x3A7FB20
+	internal string <ReadColliderSetupFromText>b__4_1(SpringColliderSerialization.TransformSerializer item) { }
+
+	// RVA: 0x3A7FB30 Offset: 0x3A7FC31 VA: 0x3A7FB30
+	internal string <GetColliderNames>b__6_0(SpringColliderSerialization.IColliderSerializer item) { }
+}
+
+// Namespace: 
 public class SpringColliderSerialization.ParsedColliderSetup // TypeDefIndex: 6384
 {
 	// Fields
@@ -35,6 +64,22 @@ public class SpringColliderSerialization.ParsedColliderSetup // TypeDefIndex: 63
 }
 
 // Namespace: 
+private class SpringColliderSerialization.TransformSerializer // TypeDefIndex: 6385
+{
+	// Fields
+	public string name; // 0x10
+	public string parentName; // 0x18
+	public Vector3 position; // 0x20
+	public Vector3 eulerAngles; // 0x2C
+	public Vector3 scale; // 0x38
+
+	// Methods
+
+	// RVA: 0x3A7E2B0 Offset: 0x3A7E3B1 VA: 0x3A7E2B0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class SpringColliderSerialization.ColliderSerializerBaseInfo // TypeDefIndex: 6386
 {
 	// Fields
@@ -45,6 +90,21 @@ private class SpringColliderSerialization.ColliderSerializerBaseInfo // TypeDefI
 
 	// RVA: 0x3A7D5E0 Offset: 0x3A7D6E1 VA: 0x3A7D5E0
 	public void .ctor() { }
+}
+
+// Namespace: 
+private interface SpringColliderSerialization.IColliderSerializer // TypeDefIndex: 6387
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract SpringColliderSerialization.ColliderSerializerBaseInfo GetBaseInfo();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract Component BuildColliderComponent(GameObject gameObject);
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract string GetLinkedRendererName();
 }
 
 // Namespace: 
@@ -67,6 +127,30 @@ private class SpringColliderSerialization.SphereColliderSerializer : SpringColli
 	public string GetLinkedRendererName() { }
 
 	// RVA: 0x3A7E2A0 Offset: 0x3A7E3A1 VA: 0x3A7E2A0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class SpringColliderSerialization.CapsuleColliderSerializer : SpringColliderSerialization.IColliderSerializer // TypeDefIndex: 6389
+{
+	// Fields
+	public SpringColliderSerialization.ColliderSerializerBaseInfo baseInfo; // 0x10
+	public float radius; // 0x18
+	public float height; // 0x1C
+	public string linkedRenderer; // 0x20
+
+	// Methods
+
+	// RVA: 0x3A7D4F0 Offset: 0x3A7D5F1 VA: 0x3A7D4F0 Slot: 4
+	public SpringColliderSerialization.ColliderSerializerBaseInfo GetBaseInfo() { }
+
+	// RVA: 0x3A7D500 Offset: 0x3A7D601 VA: 0x3A7D500 Slot: 5
+	public Component BuildColliderComponent(GameObject gameObject) { }
+
+	// RVA: 0x3A7D5C0 Offset: 0x3A7D6C1 VA: 0x3A7D5C0 Slot: 6
+	public string GetLinkedRendererName() { }
+
+	// RVA: 0x3A7D5D0 Offset: 0x3A7D6D1 VA: 0x3A7D5D0
 	public void .ctor() { }
 }
 
@@ -95,6 +179,39 @@ private class SpringColliderSerialization.PanelColliderSerializer : SpringCollid
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B310 Offset: 0x5B411 VA: 0x5B310
+[Serializable]
+private sealed class SpringColliderSerialization.<>c // TypeDefIndex: 6391
+{
+	// Fields
+	public static readonly SpringColliderSerialization.<>c <>9; // 0x0
+	public static Func<SpringSphereCollider, SpringColliderSerialization.SphereColliderSerializer> <>9__1_0; // 0x8
+	public static Func<SpringCapsuleCollider, SpringColliderSerialization.CapsuleColliderSerializer> <>9__1_1; // 0x10
+	public static Func<SpringPanelCollider, SpringColliderSerialization.PanelColliderSerializer> <>9__1_2; // 0x18
+	public static Func<DynamicsNull, SpringColliderSerialization.TransformSerializer> <>9__8_0; // 0x20
+
+	// Methods
+
+	// RVA: 0x3A7D2D0 Offset: 0x3A7D3D1 VA: 0x3A7D2D0
+	private static void .cctor() { }
+
+	// RVA: 0x3A7D340 Offset: 0x3A7D441 VA: 0x3A7D340
+	public void .ctor() { }
+
+	// RVA: 0x3A7D350 Offset: 0x3A7D451 VA: 0x3A7D350
+	internal SpringColliderSerialization.SphereColliderSerializer <AppendColliders>b__1_0(SpringSphereCollider item) { }
+
+	// RVA: 0x3A7D360 Offset: 0x3A7D461 VA: 0x3A7D360
+	internal SpringColliderSerialization.CapsuleColliderSerializer <AppendColliders>b__1_1(SpringCapsuleCollider item) { }
+
+	// RVA: 0x3A7D370 Offset: 0x3A7D471 VA: 0x3A7D370
+	internal SpringColliderSerialization.PanelColliderSerializer <AppendColliders>b__1_2(SpringPanelCollider item) { }
+
+	// RVA: 0x3A7D380 Offset: 0x3A7D481 VA: 0x3A7D380
+	internal SpringColliderSerialization.TransformSerializer <AppendDynamicsNulls>b__8_0(DynamicsNull item) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x5B320 Offset: 0x5B421 VA: 0x5B320
 private sealed class SpringColliderSerialization.<>c__DisplayClass16_0 // TypeDefIndex: 6392
 {
@@ -112,6 +229,22 @@ private sealed class SpringColliderSerialization.<>c__DisplayClass16_0 // TypeDe
 
 	// RVA: 0x3A7D3C0 Offset: 0x3A7D4C1 VA: 0x3A7D3C0
 	internal bool <GetChildByName>b__1(Transform child) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B330 Offset: 0x5B431 VA: 0x5B330
+private sealed class SpringColliderSerialization.<>c__DisplayClass27_0 // TypeDefIndex: 6393
+{
+	// Fields
+	public SpringColliderSerialization.TransformSerializer sourceRecord; // 0x10
+
+	// Methods
+
+	// RVA: 0x3A7D3F0 Offset: 0x3A7D4F1 VA: 0x3A7D3F0
+	public void .ctor() { }
+
+	// RVA: 0x3A7D400 Offset: 0x3A7D501 VA: 0x3A7D400
+	internal bool <VerifyTransformRecords>b__0(SpringColliderSerialization.TransformSerializer item) { }
 }
 
 // Namespace: 

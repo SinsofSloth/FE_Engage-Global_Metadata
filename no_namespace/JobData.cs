@@ -1,4 +1,16 @@
 // Namespace: 
+[FlagsAttribute] // RVA: 0x2762D0 Offset: 0x2763D1 VA: 0x2762D0
+public enum JobData.Flags // TypeDefIndex: 9963
+{
+	// Fields
+	public int value__; // 0x0
+	public const JobData.Flags CanCC = 1;
+	public const JobData.Flags AnyoneCC = 2;
+	public const JobData.Flags FemaleOnly = 4;
+	public const JobData.Flags EncountMap = 8;
+}
+
+// Namespace: 
 public sealed class JobData.FlagField : BitFieldTemplate32<JobData.Flags> // TypeDefIndex: 9964
 {
 	// Methods
@@ -14,6 +26,15 @@ public sealed class JobData.FlagField : BitFieldTemplate32<JobData.Flags> // Typ
 }
 
 // Namespace: 
+public enum JobData.Ranks // TypeDefIndex: 9965
+{
+	// Fields
+	public int value__; // 0x0
+	public const JobData.Ranks Low = 0;
+	public const JobData.Ranks High = 1;
+}
+
+// Namespace: 
 public enum JobData.MoveTypes // TypeDefIndex: 9966
 {
 	// Fields
@@ -25,6 +46,17 @@ public enum JobData.MoveTypes // TypeDefIndex: 9966
 	public const JobData.MoveTypes Dragon = 4;
 	public const JobData.MoveTypes Pad = 5;
 	public const JobData.MoveTypes Num = 6;
+}
+
+// Namespace: 
+public enum JobData.WeaponValues // TypeDefIndex: 9967
+{
+	// Fields
+	public int value__; // 0x0
+	public const JobData.WeaponValues None = 0;
+	public const JobData.WeaponValues Equippable = 1;
+	public const JobData.WeaponValues Selectable1 = 2;
+	public const JobData.WeaponValues Selectable2 = 3;
 }
 
 // Namespace: 

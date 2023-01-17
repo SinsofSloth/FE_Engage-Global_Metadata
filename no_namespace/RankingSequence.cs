@@ -1,4 +1,20 @@
 // Namespace: 
+private enum RankingSequence.Label // TypeDefIndex: 12839
+{
+	// Fields
+	public int value__; // 0x0
+	public const RankingSequence.Label Menu = 0;
+	public const RankingSequence.Label Ranking = 1;
+	public const RankingSequence.Label UploadMenu = 2;
+	public const RankingSequence.Label UploadData = 3;
+	public const RankingSequence.Label UploadPairsList = 4;
+	public const RankingSequence.Label AddUploadPairs = 5;
+	public const RankingSequence.Label RandomAddUploadPairs = 6;
+	public const RankingSequence.Label ClearUploadPairs = 7;
+	public const RankingSequence.Label End = 8;
+}
+
+// Namespace: 
 protected class RankingSequence.TopMenu.BaseMenuItem : MenuItem // TypeDefIndex: 12840
 {
 	// Properties
@@ -16,6 +32,24 @@ protected class RankingSequence.TopMenu.BaseMenuItem : MenuItem // TypeDefIndex:
 	public override MenuItem.Result ACall() { }
 
 	// RVA: 0x21F2B00 Offset: 0x21F2C01 VA: 0x21F2B00
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class RankingSequence.TopMenu.ChapterSelect : MenuItem // TypeDefIndex: 12841
+{
+	// Methods
+
+	// RVA: 0x21F2B10 Offset: 0x21F2C11 VA: 0x21F2B10 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x21F2B90 Offset: 0x21F2C91 VA: 0x21F2B90 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x21F2D50 Offset: 0x21F2E51 VA: 0x21F2D50 Slot: 70
+	public override void OnLeftRight(int step, bool isTrigger) { }
+
+	// RVA: 0x21F2ED0 Offset: 0x21F2FD1 VA: 0x21F2ED0
 	public void .ctor() { }
 }
 
@@ -38,6 +72,24 @@ private class RankingSequence.TopMenu.RankingMenuItem : RankingSequence.TopMenu.
 }
 
 // Namespace: 
+private class RankingSequence.TopMenu.UploadMenuItem : RankingSequence.TopMenu.BaseMenuItem // TypeDefIndex: 12843
+{
+	// Properties
+	protected override RankingSequence.Label Label { get; }
+
+	// Methods
+
+	// RVA: 0x21F2F80 Offset: 0x21F3081 VA: 0x21F2F80 Slot: 72
+	protected override RankingSequence.Label get_Label() { }
+
+	// RVA: 0x21F2F90 Offset: 0x21F3091 VA: 0x21F2F90 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x21F3010 Offset: 0x21F3111 VA: 0x21F3010
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class RankingSequence.TopMenu // TypeDefIndex: 12844
 {
 	// Methods
@@ -46,6 +98,27 @@ private class RankingSequence.TopMenu // TypeDefIndex: 12844
 	public static void CreateBind(ProcInst super) { }
 
 	// RVA: 0x1F2EBE0 Offset: 0x1F2ECE1 VA: 0x1F2EBE0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class RankingSequence.UploadPairsMenu.UploadPairMenuItem : RankingSequence.TopMenu.BaseMenuItem // TypeDefIndex: 12845
+{
+	// Properties
+	protected override RankingSequence.Label Label { get; }
+
+	// Methods
+
+	// RVA: 0x21F39F0 Offset: 0x21F3AF1 VA: 0x21F39F0 Slot: 72
+	protected override RankingSequence.Label get_Label() { }
+
+	// RVA: 0x21F3A00 Offset: 0x21F3B01 VA: 0x21F3A00 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x21F3B40 Offset: 0x21F3C41 VA: 0x21F3B40 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x21F3B50 Offset: 0x21F3C51 VA: 0x21F3B50
 	public void .ctor() { }
 }
 
@@ -74,6 +147,30 @@ private class RankingSequence.UploadPairsMenu.UploadPersonMenuItem : MenuItem //
 }
 
 // Namespace: 
+private class RankingSequence.UploadPairsMenu.UploadGodMenuItem : MenuItem // TypeDefIndex: 12847
+{
+	// Fields
+	private string m_Name; // 0x20
+
+	// Methods
+
+	// RVA: 0x21F3520 Offset: 0x21F3621 VA: 0x21F3520
+	public void .ctor() { }
+
+	// RVA: 0x21F35F0 Offset: 0x21F36F1 VA: 0x21F35F0 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x21F3650 Offset: 0x21F3751 VA: 0x21F3650 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x21F37C0 Offset: 0x21F38C1 VA: 0x21F37C0 Slot: 70
+	public override void OnLeftRight(int step, bool isTrigger) { }
+
+	// RVA: 0x21F38C0 Offset: 0x21F39C1 VA: 0x21F38C0 Slot: 7
+	public override string GetHelp() { }
+}
+
+// Namespace: 
 private class RankingSequence.UploadPairsMenu.AddUploadPairsMenuItem : RankingSequence.TopMenu.BaseMenuItem // TypeDefIndex: 12848
 {
 	// Fields
@@ -96,6 +193,30 @@ private class RankingSequence.UploadPairsMenu.AddUploadPairsMenuItem : RankingSe
 }
 
 // Namespace: 
+private class RankingSequence.UploadPairsMenu.RandomAddUploadPairsMenuItem : RankingSequence.TopMenu.BaseMenuItem // TypeDefIndex: 12849
+{
+	// Properties
+	protected override RankingSequence.Label Label { get; }
+
+	// Methods
+
+	// RVA: 0x21F3110 Offset: 0x21F3211 VA: 0x21F3110 Slot: 72
+	protected override RankingSequence.Label get_Label() { }
+
+	// RVA: 0x21F3120 Offset: 0x21F3221 VA: 0x21F3120 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x21F3320 Offset: 0x21F3421 VA: 0x21F3320 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x21F3330 Offset: 0x21F3431 VA: 0x21F3330 Slot: 70
+	public override void OnLeftRight(int step, bool isTrigger) { }
+
+	// RVA: 0x21F3410 Offset: 0x21F3511 VA: 0x21F3410
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class RankingSequence.UploadPairsMenu.ClearUploadPairsMenuItem : RankingSequence.TopMenu.BaseMenuItem // TypeDefIndex: 12850
 {
 	// Properties
@@ -114,6 +235,27 @@ private class RankingSequence.UploadPairsMenu.ClearUploadPairsMenuItem : Ranking
 }
 
 // Namespace: 
+private class RankingSequence.UploadPairsMenu.UploadDataMenuItem : RankingSequence.TopMenu.BaseMenuItem // TypeDefIndex: 12851
+{
+	// Properties
+	protected override RankingSequence.Label Label { get; }
+
+	// Methods
+
+	// RVA: 0x21F3420 Offset: 0x21F3521 VA: 0x21F3420 Slot: 72
+	protected override RankingSequence.Label get_Label() { }
+
+	// RVA: 0x21F3430 Offset: 0x21F3531 VA: 0x21F3430 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x21F3480 Offset: 0x21F3581 VA: 0x21F3480 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x21F3510 Offset: 0x21F3611 VA: 0x21F3510
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class RankingSequence.UploadPairsMenu : RankingSequence.TopMenu // TypeDefIndex: 12852
 {
 	// Methods
@@ -123,6 +265,25 @@ private class RankingSequence.UploadPairsMenu : RankingSequence.TopMenu // TypeD
 
 	// RVA: 0x1F2EE60 Offset: 0x1F2EF61 VA: 0x1F2EE60
 	public void .ctor() { }
+}
+
+// Namespace: 
+protected class RankingSequence.PairMenuItem : MenuItem // TypeDefIndex: 12853
+{
+	// Fields
+	private NexRanking.Data m_Data; // 0x20
+	private const uint MaxRatingSlot = 16;
+
+	// Methods
+
+	// RVA: 0x1F2E7C0 Offset: 0x1F2E8C1 VA: 0x1F2E7C0
+	public void .ctor(NexRanking.Data data) { }
+
+	// RVA: 0x1F2E7F0 Offset: 0x1F2E8F1 VA: 0x1F2E7F0 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x1F2E8C0 Offset: 0x1F2E9C1 VA: 0x1F2E8C0 Slot: 7
+	public override string GetHelp() { }
 }
 
 // Namespace: 

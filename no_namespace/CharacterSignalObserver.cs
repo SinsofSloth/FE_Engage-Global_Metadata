@@ -52,6 +52,22 @@ private sealed class CharacterSignalObserver.<>c__DisplayClass9_0 // TypeDefInde
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x274010 Offset: 0x274111 VA: 0x274010
+private sealed class CharacterSignalObserver.<>c__DisplayClass9_1 // TypeDefIndex: 8641
+{
+	// Fields
+	public Character chr; // 0x10
+
+	// Methods
+
+	// RVA: 0x1E02EE0 Offset: 0x1E02FE1 VA: 0x1E02EE0
+	public void .ctor() { }
+
+	// RVA: 0x1E032F0 Offset: 0x1E033F1 VA: 0x1E032F0
+	internal void <MyStart>b__21(Unit _) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x274020 Offset: 0x274121 VA: 0x274020
 private sealed class CharacterSignalObserver.<>c__DisplayClass9_2 // TypeDefIndex: 8642
 {
@@ -65,6 +81,24 @@ private sealed class CharacterSignalObserver.<>c__DisplayClass9_2 // TypeDefInde
 
 	// RVA: 0x1E03320 Offset: 0x1E03421 VA: 0x1E03320
 	internal bool <MyStart>b__22(float t) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x274030 Offset: 0x274131 VA: 0x274030
+private sealed class CharacterSignalObserver.<>c__DisplayClass9_3 // TypeDefIndex: 8643
+{
+	// Fields
+	public float start; // 0x10
+	public float end; // 0x14
+	public CustomRadialBlur rb; // 0x18
+
+	// Methods
+
+	// RVA: 0x1E030B0 Offset: 0x1E031B1 VA: 0x1E030B0
+	public void .ctor() { }
+
+	// RVA: 0x1E033F0 Offset: 0x1E034F1 VA: 0x1E033F0
+	internal bool <MyStart>b__23(float progress) { }
 }
 
 // Namespace: 
@@ -82,5 +116,54 @@ private sealed class CharacterSignalObserver.<>c__DisplayClass9_4 // TypeDefInde
 
 	// RVA: 0x1E03440 Offset: 0x1E03541 VA: 0x1E03440
 	internal bool <MyStart>b__24(float progress) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x274050 Offset: 0x274151 VA: 0x274050
+[Serializable]
+private sealed class CharacterSignalObserver.<>c // TypeDefIndex: 8645
+{
+	// Fields
+	public static readonly CharacterSignalObserver.<>c <>9; // 0x0
+	public static Action<Character> <>9__9_0; // 0x8
+	public static Action<Character> <>9__9_3; // 0x10
+	public static Action<Character> <>9__9_4; // 0x18
+	public static Action<Character> <>9__9_5; // 0x20
+	public static Action<Character> <>9__9_6; // 0x28
+	public static Action<Character> <>9__9_7; // 0x30
+	public static Action<Character> <>9__9_8; // 0x38
+	public static Action<Character> <>9__9_11; // 0x40
+
+	// Methods
+
+	// RVA: 0x1E01E20 Offset: 0x1E01F21 VA: 0x1E01E20
+	private static void .cctor() { }
+
+	// RVA: 0x1E01E90 Offset: 0x1E01F91 VA: 0x1E01E90
+	public void .ctor() { }
+
+	// RVA: 0x1E01EA0 Offset: 0x1E01FA1 VA: 0x1E01EA0
+	internal void <MyStart>b__9_0(Character chr) { }
+
+	// RVA: 0x1E02050 Offset: 0x1E02151 VA: 0x1E02050
+	internal void <MyStart>b__9_3(Character chr) { }
+
+	// RVA: 0x1E02070 Offset: 0x1E02171 VA: 0x1E02070
+	internal void <MyStart>b__9_4(Character chr) { }
+
+	// RVA: 0x1E02090 Offset: 0x1E02191 VA: 0x1E02090
+	internal void <MyStart>b__9_5(Character chr) { }
+
+	// RVA: 0x1E021E0 Offset: 0x1E022E1 VA: 0x1E021E0
+	internal void <MyStart>b__9_6(Character chr) { }
+
+	// RVA: 0x1E022B0 Offset: 0x1E023B1 VA: 0x1E022B0
+	internal void <MyStart>b__9_7(Character chr) { }
+
+	// RVA: 0x1E02370 Offset: 0x1E02471 VA: 0x1E02370
+	internal void <MyStart>b__9_8(Character chr) { }
+
+	// RVA: 0x1E02430 Offset: 0x1E02531 VA: 0x1E02430
+	internal void <MyStart>b__9_11(Character chr) { }
 }
 

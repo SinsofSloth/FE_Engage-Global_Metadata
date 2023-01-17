@@ -10,6 +10,24 @@ public enum AmiiboTopMenu.MenuResult // TypeDefIndex: 10418
 }
 
 // Namespace: 
+public sealed class AmiiboTopMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 10419
+{
+	// Methods
+
+	// RVA: 0x1F5D6B0 Offset: 0x1F5D7B1 VA: 0x1F5D6B0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F5CCF0 Offset: 0x1F5CDF1 VA: 0x1F5CCF0 Slot: 13
+	public virtual void Invoke(AmiiboTopMenu.MenuResult result) { }
+
+	// RVA: 0x1F5D6D0 Offset: 0x1F5D7D1 VA: 0x1F5D6D0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AmiiboTopMenu.MenuResult result, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F5D760 Offset: 0x1F5D861 VA: 0x1F5D760 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class AmiiboTopMenu.AmiiboMenuItem : BasicMenuItem // TypeDefIndex: 10420
 {
 	// Fields
@@ -38,6 +56,30 @@ private class AmiiboTopMenu.AmiiboMenuItem : BasicMenuItem // TypeDefIndex: 1042
 
 	// RVA: 0x1F5D630 Offset: 0x1F5D731 VA: 0x1F5D630 Slot: 15
 	public override void OnClose() { }
+}
+
+// Namespace: 
+private class AmiiboTopMenu.AccessoryMenuItem : BasicMenuItem // TypeDefIndex: 10421
+{
+	// Fields
+	private AmiiboTopMenu.DecideEventHandler m_DecideEventHandler; // 0x68
+
+	// Methods
+
+	// RVA: 0x1F5CBF0 Offset: 0x1F5CCF1 VA: 0x1F5CBF0
+	public void .ctor(AmiiboTopMenu.DecideEventHandler eventHandler) { }
+
+	// RVA: 0x1F5CC30 Offset: 0x1F5CD31 VA: 0x1F5CC30 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1F5CCB0 Offset: 0x1F5CDB1 VA: 0x1F5CCB0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1F5CCC0 Offset: 0x1F5CDC1 VA: 0x1F5CCC0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1F5CF50 Offset: 0x1F5D051 VA: 0x1F5CF50 Slot: 19
+	public override BasicMenu.Result BCall() { }
 }
 
 // Namespace: 

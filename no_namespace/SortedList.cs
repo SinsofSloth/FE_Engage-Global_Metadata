@@ -92,6 +92,54 @@ private class SortedList.SyncSortedList : SortedList // TypeDefIndex: 1376
 }
 
 // Namespace: 
+[Serializable]
+private class SortedList.SortedListEnumerator : IDictionaryEnumerator, IEnumerator, ICloneable // TypeDefIndex: 1377
+{
+	// Fields
+	private SortedList sortedList; // 0x10
+	private object key; // 0x18
+	private object value; // 0x20
+	private int index; // 0x28
+	private int startIndex; // 0x2C
+	private int endIndex; // 0x30
+	private int version; // 0x34
+	private bool current; // 0x38
+	private int getObjectRetType; // 0x3C
+
+	// Properties
+	public virtual object Key { get; }
+	public virtual DictionaryEntry Entry { get; }
+	public virtual object Current { get; }
+	public virtual object Value { get; }
+
+	// Methods
+
+	// RVA: 0x1C02A20 Offset: 0x1C02B21 VA: 0x1C02A20
+	internal void .ctor(SortedList sortedList, int index, int count, int getObjRetType) { }
+
+	// RVA: 0x1C02C20 Offset: 0x1C02D21 VA: 0x1C02C20 Slot: 10
+	public object Clone() { }
+
+	// RVA: 0x1C02C30 Offset: 0x1C02D31 VA: 0x1C02C30 Slot: 11
+	public virtual object get_Key() { }
+
+	// RVA: 0x1C02CD0 Offset: 0x1C02DD1 VA: 0x1C02CD0 Slot: 12
+	public virtual bool MoveNext() { }
+
+	// RVA: 0x1C02E10 Offset: 0x1C02F11 VA: 0x1C02E10 Slot: 13
+	public virtual DictionaryEntry get_Entry() { }
+
+	// RVA: 0x1C02EC0 Offset: 0x1C02FC1 VA: 0x1C02EC0 Slot: 14
+	public virtual object get_Current() { }
+
+	// RVA: 0x1C02FD0 Offset: 0x1C030D1 VA: 0x1C02FD0 Slot: 15
+	public virtual object get_Value() { }
+
+	// RVA: 0x1C03070 Offset: 0x1C03171 VA: 0x1C03070 Slot: 16
+	public virtual void Reset() { }
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x477130 Offset: 0x477231 VA: 0x477130
 [Serializable]
 private class SortedList.KeyList : IList, ICollection, IEnumerable // TypeDefIndex: 1378
@@ -154,6 +202,72 @@ private class SortedList.KeyList : IList, ICollection, IEnumerable // TypeDefInd
 	public virtual void Remove(object key) { }
 
 	// RVA: 0x1C02BC0 Offset: 0x1C02CC1 VA: 0x1C02BC0 Slot: 33
+	public virtual void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[DefaultMemberAttribute] // RVA: 0x477170 Offset: 0x477271 VA: 0x477170
+[Serializable]
+private class SortedList.ValueList : IList, ICollection, IEnumerable // TypeDefIndex: 1379
+{
+	// Fields
+	private SortedList sortedList; // 0x10
+
+	// Properties
+	public virtual int Count { get; }
+	public virtual bool IsReadOnly { get; }
+	public virtual bool IsSynchronized { get; }
+	public virtual object SyncRoot { get; }
+	public virtual object Item { get; set; }
+
+	// Methods
+
+	// RVA: 0x1C04470 Offset: 0x1C04571 VA: 0x1C04470
+	internal void .ctor(SortedList sortedList) { }
+
+	// RVA: 0x1C044B0 Offset: 0x1C045B1 VA: 0x1C044B0 Slot: 19
+	public virtual int get_Count() { }
+
+	// RVA: 0x1C044C0 Offset: 0x1C045C1 VA: 0x1C044C0 Slot: 20
+	public virtual bool get_IsReadOnly() { }
+
+	// RVA: 0x1C044D0 Offset: 0x1C045D1 VA: 0x1C044D0 Slot: 21
+	public virtual bool get_IsSynchronized() { }
+
+	// RVA: 0x1C044F0 Offset: 0x1C045F1 VA: 0x1C044F0 Slot: 22
+	public virtual object get_SyncRoot() { }
+
+	// RVA: 0x1C04510 Offset: 0x1C04611 VA: 0x1C04510 Slot: 23
+	public virtual int Add(object key) { }
+
+	// RVA: 0x1C04570 Offset: 0x1C04671 VA: 0x1C04570 Slot: 24
+	public virtual void Clear() { }
+
+	// RVA: 0x1C045D0 Offset: 0x1C046D1 VA: 0x1C045D0 Slot: 25
+	public virtual bool Contains(object value) { }
+
+	// RVA: 0x1C045F0 Offset: 0x1C046F1 VA: 0x1C045F0 Slot: 26
+	public virtual void CopyTo(Array array, int arrayIndex) { }
+
+	// RVA: 0x1C046C0 Offset: 0x1C047C1 VA: 0x1C046C0 Slot: 27
+	public virtual void Insert(int index, object value) { }
+
+	// RVA: 0x1C04720 Offset: 0x1C04821 VA: 0x1C04720 Slot: 28
+	public virtual object get_Item(int index) { }
+
+	// RVA: 0x1C04740 Offset: 0x1C04841 VA: 0x1C04740 Slot: 29
+	public virtual void set_Item(int index, object value) { }
+
+	// RVA: 0x1C047A0 Offset: 0x1C048A1 VA: 0x1C047A0 Slot: 30
+	public virtual IEnumerator GetEnumerator() { }
+
+	// RVA: 0x1C04850 Offset: 0x1C04951 VA: 0x1C04850 Slot: 31
+	public virtual int IndexOf(object value) { }
+
+	// RVA: 0x1C048D0 Offset: 0x1C049D1 VA: 0x1C048D0 Slot: 32
+	public virtual void Remove(object value) { }
+
+	// RVA: 0x1C04930 Offset: 0x1C04A31 VA: 0x1C04930 Slot: 33
 	public virtual void RemoveAt(int index) { }
 }
 

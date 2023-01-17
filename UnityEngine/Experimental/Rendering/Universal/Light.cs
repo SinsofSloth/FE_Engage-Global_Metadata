@@ -259,6 +259,88 @@ public sealed class Light2D : MonoBehaviour // TypeDefIndex: 5466
 }
 
 // Namespace: UnityEngine.Experimental.Rendering.Universal
+[MovedFromAttribute] // RVA: 0x4801F0 Offset: 0x4802F1 VA: 0x4801F0
+[Serializable]
+public struct Light2DBlendStyle // TypeDefIndex: 5471
+{
+	// Fields
+	public string name; // 0x0
+	[SerializeField] // RVA: 0x483E70 Offset: 0x483F71 VA: 0x483E70
+	internal Light2DBlendStyle.TextureChannel maskTextureChannel; // 0x8
+	[RangeAttribute] // RVA: 0x483E80 Offset: 0x483F81 VA: 0x483E80
+	[SerializeField] // RVA: 0x483E80 Offset: 0x483F81 VA: 0x483E80
+	internal float renderTextureScale; // 0xC
+	[SerializeField] // RVA: 0x483ED0 Offset: 0x483FD1 VA: 0x483ED0
+	internal Light2DBlendStyle.BlendMode blendMode; // 0x10
+	[SerializeField] // RVA: 0x483EE0 Offset: 0x483FE1 VA: 0x483EE0
+	internal Light2DBlendStyle.BlendFactors customBlendFactors; // 0x14
+	[CompilerGeneratedAttribute] // RVA: 0x483EF0 Offset: 0x483FF1 VA: 0x483EF0
+	private bool <isDirty>k__BackingField; // 0x1C
+	[CompilerGeneratedAttribute] // RVA: 0x483F00 Offset: 0x484001 VA: 0x483F00
+	private bool <hasRenderTarget>k__BackingField; // 0x1D
+	internal RenderTargetHandle renderTargetHandle; // 0x20
+
+	// Properties
+	internal Vector2 blendFactors { get; }
+	internal Light2DBlendStyle.MaskChannelFilter maskTextureChannelFilter { get; }
+	internal bool isDirty { get; set; }
+	internal bool hasRenderTarget { get; set; }
+
+	// Methods
+
+	// RVA: 0x314C2A0 Offset: 0x314C3A1 VA: 0x314C2A0
+	internal Vector2 get_blendFactors() { }
+
+	// RVA: 0x314C320 Offset: 0x314C421 VA: 0x314C320
+	internal Light2DBlendStyle.MaskChannelFilter get_maskTextureChannelFilter() { }
+
+	[IsReadOnlyAttribute] // RVA: 0x485110 Offset: 0x485211 VA: 0x485110
+	[CompilerGeneratedAttribute] // RVA: 0x485110 Offset: 0x485211 VA: 0x485110
+	// RVA: 0x314C5A0 Offset: 0x314C6A1 VA: 0x314C5A0
+	internal bool get_isDirty() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x485150 Offset: 0x485251 VA: 0x485150
+	// RVA: 0x314C5B0 Offset: 0x314C6B1 VA: 0x314C5B0
+	internal void set_isDirty(bool value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x485160 Offset: 0x485261 VA: 0x485160
+	[IsReadOnlyAttribute] // RVA: 0x485160 Offset: 0x485261 VA: 0x485160
+	// RVA: 0x314C5C0 Offset: 0x314C6C1 VA: 0x314C5C0
+	internal bool get_hasRenderTarget() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x4851A0 Offset: 0x4852A1 VA: 0x4851A0
+	// RVA: 0x314C5D0 Offset: 0x314C6D1 VA: 0x314C5D0
+	internal void set_hasRenderTarget(bool value) { }
+}
+
+// Namespace: UnityEngine.Experimental.Rendering.Universal
+internal class Light2DCullResult : ILight2DCullResult // TypeDefIndex: 5475
+{
+	// Fields
+	private List<Light2D> m_VisibleLights; // 0x10
+
+	// Properties
+	public List<Light2D> visibleLights { get; }
+
+	// Methods
+
+	// RVA: 0x314C5E0 Offset: 0x314C6E1 VA: 0x314C5E0 Slot: 4
+	public List<Light2D> get_visibleLights() { }
+
+	// RVA: 0x314C5F0 Offset: 0x314C6F1 VA: 0x314C5F0 Slot: 6
+	public bool IsSceneLit() { }
+
+	// RVA: 0x314C800 Offset: 0x314C901 VA: 0x314C800 Slot: 5
+	public LightStats GetLightStatsByLayer(int layer) { }
+
+	// RVA: 0x314C9B0 Offset: 0x314CAB1 VA: 0x314C9B0
+	public void SetupCulling(ref ScriptableCullingParameters cullingParameters, Camera camera) { }
+
+	// RVA: 0x314CE00 Offset: 0x314CF01 VA: 0x314CE00
+	public void .ctor() { }
+}
+
+// Namespace: UnityEngine.Experimental.Rendering.Universal
 internal static class Light2DManager // TypeDefIndex: 5476
 {
 	// Fields
@@ -295,5 +377,27 @@ internal static class Light2DManager // TypeDefIndex: 5476
 
 	// RVA: 0x314DAE0 Offset: 0x314DBE1 VA: 0x314DAE0
 	private static void .cctor() { }
+}
+
+// Namespace: UnityEngine.Experimental.Rendering.Universal
+internal static class Light2DLookupTexture // TypeDefIndex: 5483
+{
+	// Fields
+	private static Texture2D s_PointLightLookupTexture; // 0x0
+	private static Texture2D s_FalloffLookupTexture; // 0x8
+
+	// Methods
+
+	// RVA: 0x314CE90 Offset: 0x314CF91 VA: 0x314CE90
+	public static Texture GetLightLookupTexture() { }
+
+	// RVA: 0x314D2D0 Offset: 0x314D3D1 VA: 0x314D2D0
+	public static Texture GetFalloffLookupTexture() { }
+
+	// RVA: 0x314CF50 Offset: 0x314D051 VA: 0x314CF50
+	private static Texture2D CreatePointLightLookupTexture() { }
+
+	// RVA: 0x314D390 Offset: 0x314D491 VA: 0x314D390
+	private static Texture2D CreateFalloffLookupTexture() { }
 }
 

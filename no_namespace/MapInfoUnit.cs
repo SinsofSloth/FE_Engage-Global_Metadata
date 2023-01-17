@@ -9,6 +9,15 @@ public enum MapInfoUnit.InputState // TypeDefIndex: 9022
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x275000 Offset: 0x275101 VA: 0x275000
+public enum MapInfoUnit.SuppressScene // TypeDefIndex: 9023
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapInfoUnit.SuppressScene Combat = 1;
+}
+
+// Namespace: 
 public enum MapInfoUnit.SpriteKind // TypeDefIndex: 9024
 {
 	// Fields

@@ -28,6 +28,16 @@ public enum MapInfoGaugeSubLocatorRoot.Parts // TypeDefIndex: 7626
 }
 
 // Namespace: 
+private enum MapInfoGaugeSubLocatorRoot.BreakEffectKind // TypeDefIndex: 7627
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapInfoGaugeSubLocatorRoot.BreakEffectKind None = 0;
+	public const MapInfoGaugeSubLocatorRoot.BreakEffectKind Flash = 1;
+	public const MapInfoGaugeSubLocatorRoot.BreakEffectKind Solid = 2;
+}
+
+// Namespace: 
 public class MapInfoGaugeSubLocatorRoot : MonoBehaviour // TypeDefIndex: 7628
 {
 	// Fields

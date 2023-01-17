@@ -10,6 +10,16 @@ public enum TransformAnimation.Kinds // TypeDefIndex: 14060
 }
 
 // Namespace: 
+public enum TransformAnimation.Actions // TypeDefIndex: 14061
+{
+	// Fields
+	public int value__; // 0x0
+	public const TransformAnimation.Actions None = 0;
+	public const TransformAnimation.Actions Loop = 1;
+	public const TransformAnimation.Actions Repeat = 2;
+}
+
+// Namespace: 
 [Serializable]
 public class TransformAnimation.Animation // TypeDefIndex: 14062
 {
@@ -32,6 +42,26 @@ public class TransformAnimation.Animation // TypeDefIndex: 14062
 
 	// RVA: 0x23A6850 Offset: 0x23A6951 VA: 0x23A6850
 	public float CalcInverse() { }
+}
+
+// Namespace: 
+private class TransformAnimation.Animator.Node // TypeDefIndex: 14063
+{
+	// Fields
+	private Transform m_Target; // 0x10
+	private Vector3 m_Start; // 0x18
+	private Vector3 m_End; // 0x24
+
+	// Methods
+
+	// RVA: 0x2D68BE0 Offset: 0x2D68CE1 VA: 0x2D68BE0
+	public void .ctor(GameObject go) { }
+
+	// RVA: 0x2D68C20 Offset: 0x2D68D21 VA: 0x2D68C20
+	public void Commit(TransformAnimation.Animation animation) { }
+
+	// RVA: 0x2D68DC0 Offset: 0x2D68EC1 VA: 0x2D68DC0
+	public void Update(TransformAnimation.Animation animation, float t) { }
 }
 
 // Namespace: 

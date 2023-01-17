@@ -20,6 +20,21 @@ public enum DisposData.Flags // TypeDefIndex: 9866
 }
 
 // Namespace: 
+public sealed class DisposData.FlagField : BitFieldTemplate32<DisposData.Flags> // TypeDefIndex: 9867
+{
+	// Methods
+
+	// RVA: 0x1EFFE70 Offset: 0x1EFFF71 VA: 0x1EFFE70
+	public void .ctor(int f) { }
+
+	// RVA: 0x1EFFED0 Offset: 0x1EFFFD1 VA: 0x1EFFED0
+	public void .ctor(DisposData.Flags f) { }
+
+	// RVA: 0x1EFFF30 Offset: 0x1F00031 VA: 0x1EFFF30 Slot: 5
+	protected override int ToInt(DisposData.Flags value) { }
+}
+
+// Namespace: 
 [FlagsAttribute] // RVA: 0x2760B0 Offset: 0x2761B1 VA: 0x2760B0
 public enum DisposData.AIFlags // TypeDefIndex: 9868
 {
@@ -37,6 +52,22 @@ public enum DisposData.AIFlags // TypeDefIndex: 9868
 }
 
 // Namespace: 
+public enum DisposData.Directions // TypeDefIndex: 9869
+{
+	// Fields
+	public int value__; // 0x0
+	public const DisposData.Directions None = 0;
+	public const DisposData.Directions Up = 1;
+	public const DisposData.Directions UpperRight = 2;
+	public const DisposData.Directions Right = 3;
+	public const DisposData.Directions LowerRight = 4;
+	public const DisposData.Directions Down = 5;
+	public const DisposData.Directions LowerLeft = 6;
+	public const DisposData.Directions Left = 7;
+	public const DisposData.Directions UpperLeft = 8;
+}
+
+// Namespace: 
 public enum DisposData.State // TypeDefIndex: 9870
 {
 	// Fields
@@ -44,6 +75,21 @@ public enum DisposData.State // TypeDefIndex: 9870
 	public const DisposData.State Normal = 0;
 	public const DisposData.State Rampage = 1;
 	public const DisposData.State Keep = -1;
+}
+
+// Namespace: 
+public sealed class DisposData.AIFlagField : BitFieldTemplate32<DisposData.AIFlags> // TypeDefIndex: 9871
+{
+	// Methods
+
+	// RVA: 0x1EFFDA0 Offset: 0x1EFFEA1 VA: 0x1EFFDA0
+	public void .ctor(int f) { }
+
+	// RVA: 0x1EFFE00 Offset: 0x1EFFF01 VA: 0x1EFFE00
+	public void .ctor(DisposData.AIFlags f) { }
+
+	// RVA: 0x1EFFE60 Offset: 0x1EFFF61 VA: 0x1EFFE60 Slot: 5
+	protected override int ToInt(DisposData.AIFlags value) { }
 }
 
 // Namespace: 

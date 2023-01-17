@@ -1,4 +1,22 @@
 // Namespace: 
+public sealed class ProfileCardAlbumListMenuOverLimit.CancelEventHandler : MulticastDelegate // TypeDefIndex: 11551
+{
+	// Methods
+
+	// RVA: 0x1F21D30 Offset: 0x1F21E31 VA: 0x1F21D30
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F21D50 Offset: 0x1F21E51 VA: 0x1F21D50 Slot: 13
+	public virtual BasicMenu.Result Invoke(ProcInst super) { }
+
+	// RVA: 0x1F220B0 Offset: 0x1F221B1 VA: 0x1F220B0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProcInst super, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F220E0 Offset: 0x1F221E1 VA: 0x1F220E0 Slot: 15
+	public virtual BasicMenu.Result EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class ProfileCardAlbumListMenuOverLimit.ProfileCardAlbumListMenuOverLimitItem : BasicMenuItem // TypeDefIndex: 11552
 {
 	// Fields
@@ -27,6 +45,16 @@ private class ProfileCardAlbumListMenuOverLimit.ProfileCardAlbumListMenuOverLimi
 
 	// RVA: 0x1F222E0 Offset: 0x1F223E1 VA: 0x1F222E0
 	public ProfileCard get_Profile() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277950 Offset: 0x277A51 VA: 0x277950
+private struct ProfileCardAlbumListMenuOverLimit.<>c__DisplayClass6_0 // TypeDefIndex: 11553
+{
+	// Fields
+	public ProfileList profileList; // 0x0
+	public List<BasicMenuItem> menuItemList; // 0x8
+	public ProfileCardAlbumListMenuOverLimit.CancelEventHandler cancelEventHandler; // 0x10
 }
 
 // Namespace: 

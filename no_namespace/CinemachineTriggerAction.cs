@@ -1,4 +1,19 @@
 // Namespace: 
+public enum CinemachineTriggerAction.ActionSettings.Mode // TypeDefIndex: 5871
+{
+	// Fields
+	public int value__; // 0x0
+	public const CinemachineTriggerAction.ActionSettings.Mode Custom = 0;
+	public const CinemachineTriggerAction.ActionSettings.Mode PriorityBoost = 1;
+	public const CinemachineTriggerAction.ActionSettings.Mode Activate = 2;
+	public const CinemachineTriggerAction.ActionSettings.Mode Deactivate = 3;
+	public const CinemachineTriggerAction.ActionSettings.Mode Enable = 4;
+	public const CinemachineTriggerAction.ActionSettings.Mode Disable = 5;
+	public const CinemachineTriggerAction.ActionSettings.Mode Play = 6;
+	public const CinemachineTriggerAction.ActionSettings.Mode Stop = 7;
+}
+
+// Namespace: 
 [Serializable]
 public class CinemachineTriggerAction.ActionSettings.TriggerEvent : UnityEvent // TypeDefIndex: 5872
 {
@@ -6,6 +21,17 @@ public class CinemachineTriggerAction.ActionSettings.TriggerEvent : UnityEvent /
 
 	// RVA: 0x1C6C6E0 Offset: 0x1C6C7E1 VA: 0x1C6C6E0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public enum CinemachineTriggerAction.ActionSettings.TimeMode // TypeDefIndex: 5873
+{
+	// Fields
+	public int value__; // 0x0
+	public const CinemachineTriggerAction.ActionSettings.TimeMode FromStart = 0;
+	public const CinemachineTriggerAction.ActionSettings.TimeMode FromEnd = 1;
+	public const CinemachineTriggerAction.ActionSettings.TimeMode BeforeNow = 2;
+	public const CinemachineTriggerAction.ActionSettings.TimeMode AfterNow = 3;
 }
 
 // Namespace: 

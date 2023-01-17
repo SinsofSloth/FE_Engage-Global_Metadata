@@ -1,4 +1,14 @@
 // Namespace: 
+private enum MapInfoEvent.MeshIndex // TypeDefIndex: 7623
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapInfoEvent.MeshIndex Debug = 0;
+	public const MapInfoEvent.MeshIndex Event = 1;
+	public const MapInfoEvent.MeshIndex Num = 2;
+}
+
+// Namespace: 
 [RequireComponent] // RVA: 0x2714B0 Offset: 0x2715B1 VA: 0x2714B0
 [RequireComponent] // RVA: 0x2714B0 Offset: 0x2715B1 VA: 0x2714B0
 public class MapInfoEvent : MonoBehaviour // TypeDefIndex: 7624

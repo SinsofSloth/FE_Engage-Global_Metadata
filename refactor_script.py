@@ -12,7 +12,7 @@ if __name__ == "__main__":
         start_indices = [index for index in range(len(lines)) if lines[index].startswith(NAMESPACE_IDENTIFIER)]
 
         # Need to account for odd num later
-        for i in range(0, len(start_indices), 2):
+        for i in range(len(start_indices)):
             line: str = lines[start_indices[i]]
             
             namespace = line[len(NAMESPACE_IDENTIFIER):].replace(".", "/").strip()

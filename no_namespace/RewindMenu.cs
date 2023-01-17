@@ -1,10 +1,37 @@
 // Namespace: 
+public class RewindMenu.ExecuteConfirmDialog.ItemYes : BasicDialogItemYes // TypeDefIndex: 12601
+{
+	// Fields
+	private bool m_IsToPhaseBegin; // 0x70
+
+	// Methods
+
+	// RVA: 0x21F5410 Offset: 0x21F5511 VA: 0x21F5410
+	public void .ctor(bool isToPhaseBegin) { }
+
+	// RVA: 0x21F54B0 Offset: 0x21F55B1 VA: 0x21F54B0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 public class RewindMenu.ExecuteConfirmDialog.ItemNo : BasicDialogItemNo // TypeDefIndex: 12602
 {
 	// Methods
 
 	// RVA: 0x21F5380 Offset: 0x21F5481 VA: 0x21F5380
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class RewindMenu.ExecuteConfirmDialog : YesNoDialog // TypeDefIndex: 12603
+{
+	// Methods
+
+	// RVA: 0x1F47C50 Offset: 0x1F47D51 VA: 0x1F47C50
+	public void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent menuContent) { }
+
+	// RVA: 0x1F47C60 Offset: 0x1F47D61 VA: 0x1F47C60
+	public static void CreateDialog(ProcInst super, bool isToPhaseBegin) { }
 }
 
 // Namespace: 
@@ -20,12 +47,33 @@ public class RewindMenu.CancelConfirmDialog.ItemYes : BasicDialogItemYes // Type
 }
 
 // Namespace: 
+public class RewindMenu.CancelConfirmDialog.ItemYesForChallengeMap : RewindMenu.CancelConfirmDialog.ItemYes // TypeDefIndex: 12605
+{
+	// Methods
+
+	// RVA: 0x21F5280 Offset: 0x21F5381 VA: 0x21F5280
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class RewindMenu.CancelConfirmDialog.ItemNo : BasicDialogItemNo // TypeDefIndex: 12606
 {
 	// Methods
 
 	// RVA: 0x21F50E0 Offset: 0x21F51E1 VA: 0x21F50E0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class RewindMenu.CancelConfirmDialog : YesNoDialog // TypeDefIndex: 12607
+{
+	// Methods
+
+	// RVA: 0x1F47A70 Offset: 0x1F47B71 VA: 0x1F47A70
+	public void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent menuContent) { }
+
+	// RVA: 0x1F47A80 Offset: 0x1F47B81 VA: 0x1F47A80
+	public static void CreateDialog(ProcInst super) { }
 }
 
 // Namespace: 
@@ -105,6 +153,22 @@ public class RewindMenu.MenuItem.UnitIconInfo // TypeDefIndex: 12608
 
 	// RVA: 0x21F56B0 Offset: 0x21F57B1 VA: 0x21F56B0
 	public void .ctor(MapHistory.RewindLog.UnitIcon rewindLogUnitIcon) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278730 Offset: 0x278831 VA: 0x278730
+private sealed class RewindMenu.MenuItem.<>c__DisplayClass24_0 // TypeDefIndex: 12609
+{
+	// Fields
+	public int restUnitNum; // 0x10
+
+	// Methods
+
+	// RVA: 0x21F5550 Offset: 0x21F5651 VA: 0x21F5550
+	public void .ctor() { }
+
+	// RVA: 0x21F5560 Offset: 0x21F5661 VA: 0x21F5560
+	internal void <OnSelect>b__0(Unit unit) { }
 }
 
 // Namespace: 

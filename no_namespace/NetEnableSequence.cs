@@ -17,6 +17,15 @@ public sealed class NetEnableSequence.ResultFunction : MulticastDelegate // Type
 }
 
 // Namespace: 
+private enum NetEnableSequence.Label // TypeDefIndex: 12711
+{
+	// Fields
+	public int value__; // 0x0
+	public const NetEnableSequence.Label Login = 0;
+	public const NetEnableSequence.Label Result = 1;
+}
+
+// Namespace: 
 private struct NetEnableSequence.Arg // TypeDefIndex: 12712
 {
 	// Fields
@@ -28,6 +37,21 @@ private struct NetEnableSequence.Arg // TypeDefIndex: 12712
 }
 
 // Namespace: 
+private class NetEnableSequence.ConfirmDialog.YesMenuItem : BasicDialogItemYes // TypeDefIndex: 12713
+{
+	// Methods
+
+	// RVA: 0x21ED610 Offset: 0x21ED711 VA: 0x21ED610 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x21ED690 Offset: 0x21ED791 VA: 0x21ED690 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x21ED710 Offset: 0x21ED811 VA: 0x21ED710
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class NetEnableSequence.ConfirmDialog.NoMenuItem : BasicDialogItemNo // TypeDefIndex: 12714
 {
 	// Methods
@@ -36,6 +60,18 @@ private class NetEnableSequence.ConfirmDialog.NoMenuItem : BasicDialogItemNo // 
 	public override string GetName() { }
 
 	// RVA: 0x21ED600 Offset: 0x21ED701 VA: 0x21ED600
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class NetEnableSequence.ConfirmDialog // TypeDefIndex: 12715
+{
+	// Methods
+
+	// RVA: 0x26E78B0 Offset: 0x26E79B1 VA: 0x26E78B0
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x26E79B0 Offset: 0x26E7AB1 VA: 0x26E79B0
 	public void .ctor() { }
 }
 

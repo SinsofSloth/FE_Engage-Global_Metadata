@@ -1,4 +1,17 @@
 // Namespace: 
+[Serializable]
+public class MapEditor.EditObject // TypeDefIndex: 14025
+{
+	// Fields
+	public GameObject gameObject; // 0x10
+
+	// Methods
+
+	// RVA: 0x1D3E680 Offset: 0x1D3E781 VA: 0x1D3E680
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279440 Offset: 0x279541 VA: 0x279440
 private sealed class MapEditor.<>c__DisplayClass20_0 // TypeDefIndex: 14026
 {

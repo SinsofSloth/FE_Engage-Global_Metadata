@@ -12,6 +12,17 @@ public struct NexRanking.Data // TypeDefIndex: 12742
 }
 
 // Namespace: 
+private enum NexRanking.DownloadSequence.Label // TypeDefIndex: 12743
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexRanking.DownloadSequence.Label Get = 0;
+	public const NexRanking.DownloadSequence.Label Succeeded = 1;
+	public const NexRanking.DownloadSequence.Label Error = 2;
+	public const NexRanking.DownloadSequence.Label End = 3;
+}
+
+// Namespace: 
 private class NexRanking.DownloadSequence : ProcInst // TypeDefIndex: 12744
 {
 	// Fields
@@ -51,6 +62,17 @@ private class NexRanking.DownloadSequence : ProcInst // TypeDefIndex: 12744
 
 	// RVA: 0x26F1F10 Offset: 0x26F2011 VA: 0x26F1F10
 	public static void CreateBind(ProcInst super, string cid, NexRanking.Data[] data) { }
+}
+
+// Namespace: 
+private enum NexRanking.UploadSequence.Label // TypeDefIndex: 12745
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexRanking.UploadSequence.Label Upload = 0;
+	public const NexRanking.UploadSequence.Label Succeeded = 1;
+	public const NexRanking.UploadSequence.Label Error = 2;
+	public const NexRanking.UploadSequence.Label End = 3;
 }
 
 // Namespace: 

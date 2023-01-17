@@ -10,6 +10,139 @@ public enum IKSolverVR.Arm.ShoulderRotationMode // TypeDefIndex: 14392
 
 // Namespace: 
 [Serializable]
+public class IKSolverVR.Arm : IKSolverVR.BodyPart // TypeDefIndex: 14393
+{
+	// Fields
+	[TooltipAttribute] // RVA: 0x2A0FE0 Offset: 0x2A10E1 VA: 0x2A0FE0
+	public Transform target; // 0x48
+	[TooltipAttribute] // RVA: 0x2A1020 Offset: 0x2A1121 VA: 0x2A1020
+	public Transform bendGoal; // 0x50
+	[TooltipAttribute] // RVA: 0x2A1060 Offset: 0x2A1161 VA: 0x2A1060
+	[RangeAttribute] // RVA: 0x2A1060 Offset: 0x2A1161 VA: 0x2A1060
+	public float positionWeight; // 0x58
+	[TooltipAttribute] // RVA: 0x2A10C0 Offset: 0x2A11C1 VA: 0x2A10C0
+	[RangeAttribute] // RVA: 0x2A10C0 Offset: 0x2A11C1 VA: 0x2A10C0
+	public float rotationWeight; // 0x5C
+	[TooltipAttribute] // RVA: 0x2A1120 Offset: 0x2A1221 VA: 0x2A1120
+	public IKSolverVR.Arm.ShoulderRotationMode shoulderRotationMode; // 0x60
+	[TooltipAttribute] // RVA: 0x2A1160 Offset: 0x2A1261 VA: 0x2A1160
+	[RangeAttribute] // RVA: 0x2A1160 Offset: 0x2A1261 VA: 0x2A1160
+	public float shoulderRotationWeight; // 0x64
+	[RangeAttribute] // RVA: 0x2A11C0 Offset: 0x2A12C1 VA: 0x2A11C0
+	[TooltipAttribute] // RVA: 0x2A11C0 Offset: 0x2A12C1 VA: 0x2A11C0
+	public float shoulderTwistWeight; // 0x68
+	[RangeAttribute] // RVA: 0x2A1220 Offset: 0x2A1321 VA: 0x2A1220
+	[TooltipAttribute] // RVA: 0x2A1220 Offset: 0x2A1321 VA: 0x2A1220
+	public float bendGoalWeight; // 0x6C
+	[RangeAttribute] // RVA: 0x2A1280 Offset: 0x2A1381 VA: 0x2A1280
+	[TooltipAttribute] // RVA: 0x2A1280 Offset: 0x2A1381 VA: 0x2A1280
+	public float swivelOffset; // 0x70
+	[TooltipAttribute] // RVA: 0x2A12E0 Offset: 0x2A13E1 VA: 0x2A12E0
+	public Vector3 wristToPalmAxis; // 0x74
+	[TooltipAttribute] // RVA: 0x2A1320 Offset: 0x2A1421 VA: 0x2A1320
+	public Vector3 palmToThumbAxis; // 0x80
+	[RangeAttribute] // RVA: 0x2A1360 Offset: 0x2A1461 VA: 0x2A1360
+	[TooltipAttribute] // RVA: 0x2A1360 Offset: 0x2A1461 VA: 0x2A1360
+	public float armLengthMlp; // 0x8C
+	[TooltipAttribute] // RVA: 0x2A13C0 Offset: 0x2A14C1 VA: 0x2A13C0
+	public AnimationCurve stretchCurve; // 0x90
+	[HideInInspector] // RVA: 0x2A1400 Offset: 0x2A1501 VA: 0x2A1400
+	public Vector3 IKPosition; // 0x98
+	[HideInInspector] // RVA: 0x2A1410 Offset: 0x2A1511 VA: 0x2A1410
+	public Quaternion IKRotation; // 0xA4
+	[HideInInspector] // RVA: 0x2A1420 Offset: 0x2A1521 VA: 0x2A1420
+	public Vector3 bendDirection; // 0xB4
+	[HideInInspector] // RVA: 0x2A1430 Offset: 0x2A1531 VA: 0x2A1430
+	public Vector3 handPositionOffset; // 0xC0
+	[CompilerGeneratedAttribute] // RVA: 0x2A1440 Offset: 0x2A1541 VA: 0x2A1440
+	private Vector3 <position>k__BackingField; // 0xCC
+	[CompilerGeneratedAttribute] // RVA: 0x2A1450 Offset: 0x2A1551 VA: 0x2A1450
+	private Quaternion <rotation>k__BackingField; // 0xD8
+	private bool hasShoulder; // 0xE8
+	private Vector3 chestForwardAxis; // 0xEC
+	private Vector3 chestUpAxis; // 0xF8
+	private Quaternion chestRotation; // 0x104
+	private Vector3 chestForward; // 0x114
+	private Vector3 chestUp; // 0x120
+	private Quaternion forearmRelToUpperArm; // 0x12C
+	private Vector3 upperArmBendAxis; // 0x13C
+	private const float yawOffsetAngle = 45;
+	private const float pitchOffsetAngle = -30;
+
+	// Properties
+	public Vector3 position { get; set; }
+	public Quaternion rotation { get; set; }
+	private IKSolverVR.VirtualBone shoulder { get; }
+	private IKSolverVR.VirtualBone upperArm { get; }
+	private IKSolverVR.VirtualBone forearm { get; }
+	private IKSolverVR.VirtualBone hand { get; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFA20 Offset: 0x2CFB21 VA: 0x2CFA20
+	// RVA: 0x35FD280 Offset: 0x35FD381 VA: 0x35FD280
+	public Vector3 get_position() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFA30 Offset: 0x2CFB31 VA: 0x2CFA30
+	// RVA: 0x35FD290 Offset: 0x35FD391 VA: 0x35FD290
+	private void set_position(Vector3 value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFA40 Offset: 0x2CFB41 VA: 0x2CFA40
+	// RVA: 0x35FD2A0 Offset: 0x35FD3A1 VA: 0x35FD2A0
+	public Quaternion get_rotation() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFA50 Offset: 0x2CFB51 VA: 0x2CFA50
+	// RVA: 0x35FD2B0 Offset: 0x35FD3B1 VA: 0x35FD2B0
+	private void set_rotation(Quaternion value) { }
+
+	// RVA: 0x35FD2D0 Offset: 0x35FD3D1 VA: 0x35FD2D0
+	private IKSolverVR.VirtualBone get_shoulder() { }
+
+	// RVA: 0x35FD300 Offset: 0x35FD401 VA: 0x35FD300
+	private IKSolverVR.VirtualBone get_upperArm() { }
+
+	// RVA: 0x35FD340 Offset: 0x35FD441 VA: 0x35FD340
+	private IKSolverVR.VirtualBone get_forearm() { }
+
+	// RVA: 0x35FD390 Offset: 0x35FD491 VA: 0x35FD390
+	private IKSolverVR.VirtualBone get_hand() { }
+
+	// RVA: 0x35FD3E0 Offset: 0x35FD4E1 VA: 0x35FD3E0 Slot: 4
+	protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index) { }
+
+	// RVA: 0x35FDC20 Offset: 0x35FDD21 VA: 0x35FDC20 Slot: 5
+	public override void PreSolve() { }
+
+	// RVA: 0x35FDE10 Offset: 0x35FDF11 VA: 0x35FDE10 Slot: 7
+	public override void ApplyOffsets(float scale) { }
+
+	// RVA: 0x35FDE40 Offset: 0x35FDF41 VA: 0x35FDE40
+	private void Stretching() { }
+
+	// RVA: 0x35FE130 Offset: 0x35FE231 VA: 0x35FE130
+	public void Solve(bool isLeft) { }
+
+	// RVA: 0x35FF7D0 Offset: 0x35FF8D1 VA: 0x35FF7D0 Slot: 8
+	public override void ResetOffsets() { }
+
+	// RVA: 0x35FF800 Offset: 0x35FF901 VA: 0x35FF800 Slot: 6
+	public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations) { }
+
+	// RVA: 0x35FF230 Offset: 0x35FF331 VA: 0x35FF230
+	private float DamperValue(float value, float min, float max, float weight = 1) { }
+
+	// RVA: 0x35FF2B0 Offset: 0x35FF3B1 VA: 0x35FF2B0
+	private Vector3 GetBendNormal(Vector3 dir) { }
+
+	// RVA: 0x35FFAA0 Offset: 0x35FFBA1 VA: 0x35FFAA0
+	private void Visualize(IKSolverVR.VirtualBone bone1, IKSolverVR.VirtualBone bone2, IKSolverVR.VirtualBone bone3, Color color) { }
+
+	// RVA: 0x35FFAB0 Offset: 0x35FFBB1 VA: 0x35FFAB0
+	public void .ctor() { }
+}
+
+// Namespace: 
+[Serializable]
 public abstract class IKSolverVR.BodyPart // TypeDefIndex: 14394
 {
 	// Fields
@@ -91,6 +224,64 @@ public abstract class IKSolverVR.BodyPart // TypeDefIndex: 14394
 
 	// RVA: 0x35FFC30 Offset: 0x35FFD31 VA: 0x35FFC30
 	protected void .ctor() { }
+}
+
+// Namespace: 
+[Serializable]
+public class IKSolverVR.Footstep // TypeDefIndex: 14395
+{
+	// Fields
+	public float stepSpeed; // 0x10
+	public Vector3 characterSpaceOffset; // 0x14
+	public Vector3 position; // 0x20
+	public Quaternion rotation; // 0x2C
+	public Quaternion stepToRootRot; // 0x3C
+	public bool isSupportLeg; // 0x4C
+	public bool relaxFlag; // 0x4D
+	[CompilerGeneratedAttribute] // RVA: 0x2A1490 Offset: 0x2A1591 VA: 0x2A1490
+	private float <stepProgress>k__BackingField; // 0x50
+	public Vector3 stepFrom; // 0x54
+	public Vector3 stepTo; // 0x60
+	public Quaternion stepFromRot; // 0x6C
+	public Quaternion stepToRot; // 0x7C
+	private Quaternion footRelativeToRoot; // 0x8C
+	private float supportLegW; // 0x9C
+	private float supportLegWV; // 0xA0
+
+	// Properties
+	public bool isStepping { get; }
+	public float stepProgress { get; set; }
+
+	// Methods
+
+	// RVA: 0x36000D0 Offset: 0x36001D1 VA: 0x36000D0
+	public bool get_isStepping() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFAA0 Offset: 0x2CFBA1 VA: 0x2CFAA0
+	// RVA: 0x36000F0 Offset: 0x36001F1 VA: 0x36000F0
+	public float get_stepProgress() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFAB0 Offset: 0x2CFBB1 VA: 0x2CFAB0
+	// RVA: 0x3600100 Offset: 0x3600201 VA: 0x3600100
+	private void set_stepProgress(float value) { }
+
+	// RVA: 0x3600110 Offset: 0x3600211 VA: 0x3600110
+	public void .ctor(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation, Vector3 characterSpaceOffset) { }
+
+	// RVA: 0x36002C0 Offset: 0x36003C1 VA: 0x36002C0
+	public void Reset(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation) { }
+
+	// RVA: 0x3600340 Offset: 0x3600441 VA: 0x3600340
+	public void StepTo(Vector3 p, Quaternion rootRotation, float stepThreshold) { }
+
+	// RVA: 0x3600520 Offset: 0x3600621 VA: 0x3600520
+	public void UpdateStepping(Vector3 p, Quaternion rootRotation, float speed) { }
+
+	// RVA: 0x3600690 Offset: 0x3600791 VA: 0x3600690
+	public void UpdateStanding(Quaternion rootRotation, float minAngle, float speed) { }
+
+	// RVA: 0x3600800 Offset: 0x3600901 VA: 0x3600800
+	public void Update(InterpolationMode interpolation, UnityEvent onStep) { }
 }
 
 // Namespace: 
@@ -243,6 +434,128 @@ public class IKSolverVR.Leg : IKSolverVR.BodyPart // TypeDefIndex: 14396
 	public override void ResetOffsets() { }
 
 	// RVA: 0x3602390 Offset: 0x3602491 VA: 0x3602390
+	public void .ctor() { }
+}
+
+// Namespace: 
+[Serializable]
+public class IKSolverVR.Locomotion // TypeDefIndex: 14397
+{
+	// Fields
+	[RangeAttribute] // RVA: 0x2A1850 Offset: 0x2A1951 VA: 0x2A1850
+	[TooltipAttribute] // RVA: 0x2A1850 Offset: 0x2A1951 VA: 0x2A1850
+	public float weight; // 0x10
+	[TooltipAttribute] // RVA: 0x2A18B0 Offset: 0x2A19B1 VA: 0x2A18B0
+	public float footDistance; // 0x14
+	[TooltipAttribute] // RVA: 0x2A18F0 Offset: 0x2A19F1 VA: 0x2A18F0
+	public float stepThreshold; // 0x18
+	[TooltipAttribute] // RVA: 0x2A1930 Offset: 0x2A1A31 VA: 0x2A1930
+	public float angleThreshold; // 0x1C
+	[TooltipAttribute] // RVA: 0x2A1970 Offset: 0x2A1A71 VA: 0x2A1970
+	public float comAngleMlp; // 0x20
+	[TooltipAttribute] // RVA: 0x2A19B0 Offset: 0x2A1AB1 VA: 0x2A19B0
+	public float maxVelocity; // 0x24
+	[TooltipAttribute] // RVA: 0x2A19F0 Offset: 0x2A1AF1 VA: 0x2A19F0
+	public float velocityFactor; // 0x28
+	[TooltipAttribute] // RVA: 0x2A1A30 Offset: 0x2A1B31 VA: 0x2A1A30
+	[RangeAttribute] // RVA: 0x2A1A30 Offset: 0x2A1B31 VA: 0x2A1A30
+	public float maxLegStretch; // 0x2C
+	[TooltipAttribute] // RVA: 0x2A1A90 Offset: 0x2A1B91 VA: 0x2A1A90
+	public float rootSpeed; // 0x30
+	[TooltipAttribute] // RVA: 0x2A1AD0 Offset: 0x2A1BD1 VA: 0x2A1AD0
+	public float stepSpeed; // 0x34
+	[TooltipAttribute] // RVA: 0x2A1B10 Offset: 0x2A1C11 VA: 0x2A1B10
+	public AnimationCurve stepHeight; // 0x38
+	[TooltipAttribute] // RVA: 0x2A1B50 Offset: 0x2A1C51 VA: 0x2A1B50
+	public float maxBodyYOffset; // 0x40
+	[TooltipAttribute] // RVA: 0x2A1B90 Offset: 0x2A1C91 VA: 0x2A1B90
+	public AnimationCurve heelHeight; // 0x48
+	[RangeAttribute] // RVA: 0x2A1BD0 Offset: 0x2A1CD1 VA: 0x2A1BD0
+	[TooltipAttribute] // RVA: 0x2A1BD0 Offset: 0x2A1CD1 VA: 0x2A1BD0
+	public float relaxLegTwistMinAngle; // 0x50
+	[TooltipAttribute] // RVA: 0x2A1C30 Offset: 0x2A1D31 VA: 0x2A1C30
+	public float relaxLegTwistSpeed; // 0x54
+	[TooltipAttribute] // RVA: 0x2A1C70 Offset: 0x2A1D71 VA: 0x2A1C70
+	public InterpolationMode stepInterpolation; // 0x58
+	[TooltipAttribute] // RVA: 0x2A1CB0 Offset: 0x2A1DB1 VA: 0x2A1CB0
+	public Vector3 offset; // 0x5C
+	[HideInInspector] // RVA: 0x2A1CF0 Offset: 0x2A1DF1 VA: 0x2A1CF0
+	public bool blockingEnabled; // 0x68
+	[HideInInspector] // RVA: 0x2A1D00 Offset: 0x2A1E01 VA: 0x2A1D00
+	public LayerMask blockingLayers; // 0x6C
+	[HideInInspector] // RVA: 0x2A1D10 Offset: 0x2A1E11 VA: 0x2A1D10
+	public float raycastRadius; // 0x70
+	[HideInInspector] // RVA: 0x2A1D20 Offset: 0x2A1E21 VA: 0x2A1D20
+	public float raycastHeight; // 0x74
+	[TooltipAttribute] // RVA: 0x2A1D30 Offset: 0x2A1E31 VA: 0x2A1D30
+	public UnityEvent onLeftFootstep; // 0x78
+	[TooltipAttribute] // RVA: 0x2A1D70 Offset: 0x2A1E71 VA: 0x2A1D70
+	public UnityEvent onRightFootstep; // 0x80
+	[CompilerGeneratedAttribute] // RVA: 0x2A1DB0 Offset: 0x2A1EB1 VA: 0x2A1DB0
+	private Vector3 <centerOfMass>k__BackingField; // 0x88
+	private IKSolverVR.Footstep[] footsteps; // 0x98
+	private Vector3 lastComPosition; // 0xA0
+	private Vector3 comVelocity; // 0xAC
+	private int leftFootIndex; // 0xB8
+	private int rightFootIndex; // 0xBC
+
+	// Properties
+	public Vector3 centerOfMass { get; set; }
+	public Vector3 leftFootstepPosition { get; }
+	public Vector3 rightFootstepPosition { get; }
+	public Quaternion leftFootstepRotation { get; }
+	public Quaternion rightFootstepRotation { get; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFB40 Offset: 0x2CFC41 VA: 0x2CFB40
+	// RVA: 0x3602500 Offset: 0x3602601 VA: 0x3602500
+	public Vector3 get_centerOfMass() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CFB50 Offset: 0x2CFC51 VA: 0x2CFB50
+	// RVA: 0x3602510 Offset: 0x3602611 VA: 0x3602510
+	private void set_centerOfMass(Vector3 value) { }
+
+	// RVA: 0x3602520 Offset: 0x3602621 VA: 0x3602520
+	public void Initiate(Vector3[] positions, Quaternion[] rotations, bool hasToes, float scale) { }
+
+	// RVA: 0x36027F0 Offset: 0x36028F1 VA: 0x36027F0
+	public void Reset(Vector3[] positions, Quaternion[] rotations) { }
+
+	// RVA: 0x3602A00 Offset: 0x3602B01 VA: 0x3602A00
+	public void Relax() { }
+
+	// RVA: 0x3602A50 Offset: 0x3602B51 VA: 0x3602A50
+	public void AddDeltaRotation(Quaternion delta, Vector3 pivot) { }
+
+	// RVA: 0x3602C90 Offset: 0x3602D91 VA: 0x3602C90
+	public void AddDeltaPosition(Vector3 delta) { }
+
+	// RVA: 0x3602D60 Offset: 0x3602E61 VA: 0x3602D60
+	public void Solve(IKSolverVR.VirtualBone rootBone, IKSolverVR.Spine spine, IKSolverVR.Leg leftLeg, IKSolverVR.Leg rightLeg, IKSolverVR.Arm leftArm, IKSolverVR.Arm rightArm, int supportLegIndex, out Vector3 leftFootPosition, out Vector3 rightFootPosition, out Quaternion leftFootRotation, out Quaternion rightFootRotation, out float leftFootOffset, out float rightFootOffset, out float leftHeelOffset, out float rightHeelOffset, float scale) { }
+
+	// RVA: 0x36040E0 Offset: 0x36041E1 VA: 0x36040E0
+	public Vector3 get_leftFootstepPosition() { }
+
+	// RVA: 0x3604120 Offset: 0x3604221 VA: 0x3604120
+	public Vector3 get_rightFootstepPosition() { }
+
+	// RVA: 0x3604160 Offset: 0x3604261 VA: 0x3604160
+	public Quaternion get_leftFootstepRotation() { }
+
+	// RVA: 0x36041A0 Offset: 0x36042A1 VA: 0x36041A0
+	public Quaternion get_rightFootstepRotation() { }
+
+	// RVA: 0x3603E40 Offset: 0x3603F41 VA: 0x3603E40
+	private bool StepBlocked(Vector3 fromPosition, Vector3 toPosition, Vector3 rootPosition) { }
+
+	// RVA: 0x3603F70 Offset: 0x3604071 VA: 0x3603F70
+	private bool CanStep() { }
+
+	// RVA: 0x3604000 Offset: 0x3604101 VA: 0x3604000
+	private static bool GetLineSphereCollision(Vector3 lineStart, Vector3 lineEnd, Vector3 sphereCenter, float sphereRadius) { }
+
+	// RVA: 0x36041E0 Offset: 0x36042E1 VA: 0x36041E0
 	public void .ctor() { }
 }
 
@@ -450,6 +763,23 @@ public class IKSolverVR.Spine : IKSolverVR.BodyPart // TypeDefIndex: 14398
 
 // Namespace: 
 [Serializable]
+public enum IKSolverVR.PositionOffset // TypeDefIndex: 14399
+{
+	// Fields
+	public int value__; // 0x0
+	public const IKSolverVR.PositionOffset Pelvis = 0;
+	public const IKSolverVR.PositionOffset Chest = 1;
+	public const IKSolverVR.PositionOffset Head = 2;
+	public const IKSolverVR.PositionOffset LeftHand = 3;
+	public const IKSolverVR.PositionOffset RightHand = 4;
+	public const IKSolverVR.PositionOffset LeftFoot = 5;
+	public const IKSolverVR.PositionOffset RightFoot = 6;
+	public const IKSolverVR.PositionOffset LeftHeel = 7;
+	public const IKSolverVR.PositionOffset RightHeel = 8;
+}
+
+// Namespace: 
+[Serializable]
 public enum IKSolverVR.RotationOffset // TypeDefIndex: 14400
 {
 	// Fields
@@ -457,5 +787,60 @@ public enum IKSolverVR.RotationOffset // TypeDefIndex: 14400
 	public const IKSolverVR.RotationOffset Pelvis = 0;
 	public const IKSolverVR.RotationOffset Chest = 1;
 	public const IKSolverVR.RotationOffset Head = 2;
+}
+
+// Namespace: 
+[Serializable]
+public class IKSolverVR.VirtualBone // TypeDefIndex: 14401
+{
+	// Fields
+	public Vector3 readPosition; // 0x10
+	public Quaternion readRotation; // 0x1C
+	public Vector3 solverPosition; // 0x2C
+	public Quaternion solverRotation; // 0x38
+	public float length; // 0x48
+	public float sqrMag; // 0x4C
+	public Vector3 axis; // 0x50
+
+	// Methods
+
+	// RVA: 0x221F240 Offset: 0x221F341 VA: 0x221F240
+	public void .ctor(Vector3 position, Quaternion rotation) { }
+
+	// RVA: 0x221F2E0 Offset: 0x221F3E1 VA: 0x221F2E0
+	public void Read(Vector3 position, Quaternion rotation) { }
+
+	// RVA: 0x221F320 Offset: 0x221F421 VA: 0x221F320
+	public static void SwingRotation(IKSolverVR.VirtualBone[] bones, int index, Vector3 swingTarget, float weight = 1) { }
+
+	// RVA: 0x221F490 Offset: 0x221F591 VA: 0x221F490
+	public static float PreSolve(ref IKSolverVR.VirtualBone[] bones) { }
+
+	// RVA: 0x221F670 Offset: 0x221F771 VA: 0x221F670
+	public static void RotateAroundPoint(IKSolverVR.VirtualBone[] bones, int index, Vector3 point, Quaternion rotation) { }
+
+	// RVA: 0x221F790 Offset: 0x221F891 VA: 0x221F790
+	public static void RotateBy(IKSolverVR.VirtualBone[] bones, int index, Quaternion rotation) { }
+
+	// RVA: 0x221F8E0 Offset: 0x221F9E1 VA: 0x221F8E0
+	public static void RotateBy(IKSolverVR.VirtualBone[] bones, Quaternion rotation) { }
+
+	// RVA: 0x221FA10 Offset: 0x221FB11 VA: 0x221FA10
+	public static void RotateTo(IKSolverVR.VirtualBone[] bones, int index, Quaternion rotation) { }
+
+	// RVA: 0x221FAC0 Offset: 0x221FBC1 VA: 0x221FAC0
+	public static void SolveTrigonometric(IKSolverVR.VirtualBone[] bones, int first, int second, int third, Vector3 targetPosition, Vector3 bendNormal, float weight) { }
+
+	// RVA: 0x221FEA0 Offset: 0x221FFA1 VA: 0x221FEA0
+	private static Vector3 GetDirectionToBendPoint(Vector3 direction, float directionMag, Vector3 bendDirection, float sqrMag1, float sqrMag2) { }
+
+	// RVA: 0x2220020 Offset: 0x2220121 VA: 0x2220020
+	public static void SolveFABRIK(IKSolverVR.VirtualBone[] bones, Vector3 startPosition, Vector3 targetPosition, float weight, float minNormalizedTargetDistance, int iterations, float length, Vector3 startOffset) { }
+
+	// RVA: 0x2220410 Offset: 0x2220511 VA: 0x2220410
+	private static Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length) { }
+
+	// RVA: 0x2220480 Offset: 0x2220581 VA: 0x2220480
+	public static void SolveCCD(IKSolverVR.VirtualBone[] bones, Vector3 targetPosition, float weight, int iterations) { }
 }
 

@@ -11,6 +11,31 @@ public enum Light2D.LightType // TypeDefIndex: 5464
 }
 
 // Namespace: 
+public enum Light2D.PointLightQuality // TypeDefIndex: 5465
+{
+	// Fields
+	public int value__; // 0x0
+	public const Light2D.PointLightQuality Fast = 0;
+	public const Light2D.PointLightQuality Accurate = 1;
+}
+
+// Namespace: 
+internal enum Light2DBlendStyle.TextureChannel // TypeDefIndex: 5467
+{
+	// Fields
+	public int value__; // 0x0
+	public const Light2DBlendStyle.TextureChannel None = 0;
+	public const Light2DBlendStyle.TextureChannel R = 1;
+	public const Light2DBlendStyle.TextureChannel G = 2;
+	public const Light2DBlendStyle.TextureChannel B = 3;
+	public const Light2DBlendStyle.TextureChannel A = 4;
+	public const Light2DBlendStyle.TextureChannel OneMinusR = 5;
+	public const Light2DBlendStyle.TextureChannel OneMinusG = 6;
+	public const Light2DBlendStyle.TextureChannel OneMinusB = 7;
+	public const Light2DBlendStyle.TextureChannel OneMinusA = 8;
+}
+
+// Namespace: 
 internal struct Light2DBlendStyle.MaskChannelFilter // TypeDefIndex: 5468
 {
 	// Fields
@@ -45,6 +70,17 @@ internal struct Light2DBlendStyle.MaskChannelFilter // TypeDefIndex: 5468
 
 	// RVA: 0x2FA3490 Offset: 0x2FA3591 VA: 0x2FA3490
 	public void .ctor(Vector4 m, Vector4 i) { }
+}
+
+// Namespace: 
+internal enum Light2DBlendStyle.BlendMode // TypeDefIndex: 5469
+{
+	// Fields
+	public int value__; // 0x0
+	public const Light2DBlendStyle.BlendMode Additive = 0;
+	public const Light2DBlendStyle.BlendMode Multiply = 1;
+	public const Light2DBlendStyle.BlendMode Subtractive = 2;
+	public const Light2DBlendStyle.BlendMode Custom = 99;
 }
 
 // Namespace: 

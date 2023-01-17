@@ -1,4 +1,25 @@
 // Namespace: 
+public abstract class MapSystemMenu.MapSystemMenuItem : MapBasicMenuItem // TypeDefIndex: 12275
+{
+	// Methods
+
+	// RVA: 0x213D530 Offset: 0x213D631 VA: 0x213D530 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x213D540 Offset: 0x213D641 VA: 0x213D540 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x213D660 Offset: 0x213D761 VA: 0x213D660 Slot: 13
+	public override void OnDeselect() { }
+
+	// RVA: 0x213D570 Offset: 0x213D671 VA: 0x213D570
+	public void HelpOn() { }
+
+	// RVA: 0x213D520 Offset: 0x213D621 VA: 0x213D520
+	protected void .ctor() { }
+}
+
+// Namespace: 
 private class MapSystemMenu.UnitListItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12276
 {
 	// Properties
@@ -23,6 +44,33 @@ private class MapSystemMenu.UnitListItem : MapSystemMenu.MapSystemMenuItem // Ty
 
 	// RVA: 0x213F330 Offset: 0x213F431 VA: 0x213F330
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class MapSystemMenu.RewindMenuItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12277
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x213DB20 Offset: 0x213DC21 VA: 0x213DB20 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x213DB70 Offset: 0x213DC71 VA: 0x213DB70
+	public void .ctor() { }
+
+	// RVA: 0x213DB80 Offset: 0x213DC81 VA: 0x213DB80 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x213DC00 Offset: 0x213DD01 VA: 0x213DC00 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x213DC80 Offset: 0x213DD81 VA: 0x213DC80 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x213DCF0 Offset: 0x213DDF1 VA: 0x213DCF0 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 
@@ -56,6 +104,33 @@ private class MapSystemMenu.OrderItem : MapSystemMenu.MapSystemMenuItem // TypeD
 }
 
 // Namespace: 
+private class MapSystemMenu.TemporarySaveItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12279
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x213E660 Offset: 0x213E761 VA: 0x213E660 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x213E6B0 Offset: 0x213E7B1 VA: 0x213E6B0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x213E840 Offset: 0x213E941 VA: 0x213E840 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x213E9D0 Offset: 0x213EAD1 VA: 0x213E9D0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x213EC20 Offset: 0x213ED21 VA: 0x213EC20 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x213ECD0 Offset: 0x213EDD1 VA: 0x213ECD0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class MapSystemMenu.FriendMenuItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12280
 {
 	// Properties
@@ -79,6 +154,39 @@ private class MapSystemMenu.FriendMenuItem : MapSystemMenu.MapSystemMenuItem // 
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x213D510 Offset: 0x213D611 VA: 0x213D510
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class MapSystemMenu.SubFriendMenu.RelianceItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12281
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x21EB140 Offset: 0x21EB241 VA: 0x21EB140 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x21EB190 Offset: 0x21EB291 VA: 0x21EB190 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x21EB210 Offset: 0x21EB311 VA: 0x21EB210 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x21EB290 Offset: 0x21EB391 VA: 0x21EB290 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x21EB2A0 Offset: 0x21EB3A1 VA: 0x21EB2A0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x21EB460 Offset: 0x21EB561 VA: 0x21EB460 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x21EB5E0 Offset: 0x21EB6E1 VA: 0x21EB5E0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x21EB5F0 Offset: 0x21EB6F1 VA: 0x21EB5F0
 	public void .ctor() { }
 }
 
@@ -116,6 +224,39 @@ private class MapSystemMenu.SubFriendMenu.KizunaItem : MapSystemMenu.MapSystemMe
 }
 
 // Namespace: 
+private class MapSystemMenu.SubFriendMenu.NotebookItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12283
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x21EADA0 Offset: 0x21EAEA1 VA: 0x21EADA0 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x21EADF0 Offset: 0x21EAEF1 VA: 0x21EADF0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x21EAE70 Offset: 0x21EAF71 VA: 0x21EAE70 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x21EAEF0 Offset: 0x21EAFF1 VA: 0x21EAEF0 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x21EAF00 Offset: 0x21EB001 VA: 0x21EAF00 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x21EB0C0 Offset: 0x21EB1C1 VA: 0x21EB0C0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x21EB120 Offset: 0x21EB221 VA: 0x21EB120 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x21EB130 Offset: 0x21EB231 VA: 0x21EB130
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class MapSystemMenu.SubFriendMenu.RingListItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12284
 {
 	// Properties
@@ -149,6 +290,27 @@ private class MapSystemMenu.SubFriendMenu.RingListItem : MapSystemMenu.MapSystem
 }
 
 // Namespace: 
+public class MapSystemMenu.SubFriendMenu : BasicMenu // TypeDefIndex: 12285
+{
+	// Fields
+	public static MapSystemMenu m_parentMenu; // 0x0
+
+	// Methods
+
+	// RVA: 0x213DDD0 Offset: 0x213DED1 VA: 0x213DDD0
+	protected void .ctor(List<BasicMenuItem> menuItemList, SortieSubMenuContent menuContent) { }
+
+	// RVA: 0x213DDE0 Offset: 0x213DEE1 VA: 0x213DDE0 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x213D250 Offset: 0x213D351 VA: 0x213D250
+	public static void CreateBind(BasicMenu super, BasicMenuItem parentMenuItem) { }
+
+	// RVA: 0x213DE30 Offset: 0x213DF31 VA: 0x213DE30 Slot: 51
+	protected override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
 private class MapSystemMenu.SystemMenuItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12286
 {
 	// Properties
@@ -172,6 +334,39 @@ private class MapSystemMenu.SystemMenuItem : MapSystemMenu.MapSystemMenuItem // 
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x213E650 Offset: 0x213E751 VA: 0x213E650
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class MapSystemMenu.SubSystemMenu.TutorialItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12287
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x21EC590 Offset: 0x21EC691 VA: 0x21EC590 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x21EC5E0 Offset: 0x21EC6E1 VA: 0x21EC5E0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x21EC660 Offset: 0x21EC761 VA: 0x21EC660 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x21EC6E0 Offset: 0x21EC7E1 VA: 0x21EC6E0 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x21EC6F0 Offset: 0x21EC7F1 VA: 0x21EC6F0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x21EC700 Offset: 0x21EC801 VA: 0x21EC700 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x21EC760 Offset: 0x21EC861 VA: 0x21EC760 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x21EC770 Offset: 0x21EC871 VA: 0x21EC770
 	public void .ctor() { }
 }
 
@@ -206,6 +401,21 @@ private class MapSystemMenu.SubSystemMenu.ConfigItem : MapSystemMenu.MapSystemMe
 
 	// RVA: 0x21EB9F0 Offset: 0x21EBAF1 VA: 0x21EB9F0
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class MapSystemMenu.SubSystemMenu.RestartItem.ConfirmDialogItemYes : BasicDialogItemYes // TypeDefIndex: 12289
+{
+	// Fields
+	private GameUserRestartData.Targtes m_Target; // 0x70
+
+	// Methods
+
+	// RVA: 0x2D7CCE0 Offset: 0x2D7CDE1 VA: 0x2D7CCE0
+	public void .ctor(GameUserRestartData.Targtes target) { }
+
+	// RVA: 0x2D7CD80 Offset: 0x2D7CE81 VA: 0x2D7CD80 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 
@@ -245,6 +455,18 @@ private class MapSystemMenu.SubSystemMenu.RestartItem : MapSystemMenu.MapSystemM
 }
 
 // Namespace: 
+private class MapSystemMenu.SubSystemMenu.SurrenderItem.ConfirmDialogItemYes : BasicDialogItemYes // TypeDefIndex: 12291
+{
+	// Methods
+
+	// RVA: 0x2D7CE10 Offset: 0x2D7CF11 VA: 0x2D7CE10
+	public void .ctor(string text) { }
+
+	// RVA: 0x2D7CE20 Offset: 0x2D7CF21 VA: 0x2D7CE20 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class MapSystemMenu.SubSystemMenu.SurrenderItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12292
 {
 	// Properties
@@ -278,6 +500,39 @@ private class MapSystemMenu.SubSystemMenu.SurrenderItem : MapSystemMenu.MapSyste
 }
 
 // Namespace: 
+private class MapSystemMenu.SubSystemMenu.ResetItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12293
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x21EBA00 Offset: 0x21EBB01 VA: 0x21EBA00 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x21EBA50 Offset: 0x21EBB51 VA: 0x21EBA50 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x21EBAD0 Offset: 0x21EBBD1 VA: 0x21EBAD0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x21EBB50 Offset: 0x21EBC51 VA: 0x21EBB50 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x21EBB60 Offset: 0x21EBC61 VA: 0x21EBB60 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x21EBC40 Offset: 0x21EBD41 VA: 0x21EBC40 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x21EBC90 Offset: 0x21EBD91 VA: 0x21EBC90 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x21EBCA0 Offset: 0x21EBDA1 VA: 0x21EBCA0
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class MapSystemMenu.SubSystemMenu : BasicMenu // TypeDefIndex: 12294
 {
 	// Fields
@@ -296,5 +551,32 @@ public class MapSystemMenu.SubSystemMenu : BasicMenu // TypeDefIndex: 12294
 
 	// RVA: 0x213E330 Offset: 0x213E431 VA: 0x213E330 Slot: 51
 	protected override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
+private class MapSystemMenu.TurnItem : MapSystemMenu.MapSystemMenuItem // TypeDefIndex: 12295
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x213ECE0 Offset: 0x213EDE1 VA: 0x213ECE0 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x213ED30 Offset: 0x213EE31 VA: 0x213ED30 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x213EDB0 Offset: 0x213EEB1 VA: 0x213EDB0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x213EE30 Offset: 0x213EF31 VA: 0x213EE30 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x213EE40 Offset: 0x213EF41 VA: 0x213EE40 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x213EF30 Offset: 0x213F031 VA: 0x213EF30
+	public void .ctor() { }
 }
 

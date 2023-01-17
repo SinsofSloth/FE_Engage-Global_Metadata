@@ -71,6 +71,18 @@ public enum Unit.Status // TypeDefIndex: 13484
 }
 
 // Namespace: 
+public sealed class Unit.StatusField : BitFieldTemplate64<Unit.Status> // TypeDefIndex: 13485
+{
+	// Methods
+
+	// RVA: 0x23AB9E0 Offset: 0x23ABAE1 VA: 0x23AB9E0 Slot: 5
+	protected override long ToLong(Unit.Status value) { }
+
+	// RVA: 0x23AB9F0 Offset: 0x23ABAF1 VA: 0x23AB9F0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private struct Unit.ChangeValue // TypeDefIndex: 13486
 {
 	// Fields
@@ -109,6 +121,17 @@ private struct Unit.ChangeValue // TypeDefIndex: 13486
 }
 
 // Namespace: 
+public enum Unit.GuardType // TypeDefIndex: 13487
+{
+	// Fields
+	public int value__; // 0x0
+	public const Unit.GuardType None = 0;
+	public const Unit.GuardType ChainGuard = 1;
+	public const Unit.GuardType DualGuard = 2;
+	public const Unit.GuardType NotEnoughHP = 3;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278E40 Offset: 0x278F41 VA: 0x278E40
 [Serializable]
 private sealed class Unit.ItemsForSelectedWeapon.<>c // TypeDefIndex: 13488
@@ -130,6 +153,30 @@ private sealed class Unit.ItemsForSelectedWeapon.<>c // TypeDefIndex: 13488
 }
 
 // Namespace: 
+private abstract class Unit.ItemsForSelectedWeapon // TypeDefIndex: 13489
+{
+	// Fields
+	protected ItemData[] m_Items; // 0x10
+
+	// Methods
+
+	// RVA: 0x23AB850 Offset: 0x23AB951 VA: 0x23AB850
+	public void Sort() { }
+
+	// RVA: 0x23AB990 Offset: 0x23ABA91 VA: 0x23AB990
+	public int GetCount() { }
+
+	// RVA: 0x23AB9A0 Offset: 0x23ABAA1 VA: 0x23AB9A0
+	public ItemData Get(int index) { }
+
+	// RVA: -1 Offset: -1 Slot: 4
+	protected abstract void Prepare();
+
+	// RVA: 0x23AB410 Offset: 0x23AB511 VA: 0x23AB410
+	protected void .ctor() { }
+}
+
+// Namespace: 
 private class Unit.ChartItemsForSelectedWeapon : Unit.ItemsForSelectedWeapon // TypeDefIndex: 13490
 {
 	// Fields
@@ -141,6 +188,21 @@ private class Unit.ChartItemsForSelectedWeapon : Unit.ItemsForSelectedWeapon // 
 	public void .ctor(ChartData.Item[] chartItems) { }
 
 	// RVA: 0x23AB420 Offset: 0x23AB521 VA: 0x23AB420 Slot: 4
+	protected override void Prepare() { }
+}
+
+// Namespace: 
+private class Unit.DisposItemsForSelectedWeapon : Unit.ItemsForSelectedWeapon // TypeDefIndex: 13491
+{
+	// Fields
+	private DisposData m_Data; // 0x18
+
+	// Methods
+
+	// RVA: 0x23AB580 Offset: 0x23AB681 VA: 0x23AB580
+	public void .ctor(DisposData data) { }
+
+	// RVA: 0x23AB5C0 Offset: 0x23AB6C1 VA: 0x23AB5C0 Slot: 4
 	protected override void Prepare() { }
 }
 
@@ -163,11 +225,56 @@ public sealed class Unit.FuncUnitItem : MulticastDelegate // TypeDefIndex: 13492
 }
 
 // Namespace: 
+private class Unit.CalcInfo // TypeDefIndex: 13493
+{
+	// Fields
+	public int Count; // 0x10
+	public int Attack; // 0x14
+	public int Hit; // 0x18
+	public int Avoid; // 0x1C
+	public int Critical; // 0x20
+	public int Secure; // 0x24
+	public int Continuous; // 0x28
+	public int PhysicalAttack; // 0x2C
+	public int MagicAttack; // 0x30
+	public int PhysicalDefense; // 0x34
+	public int MagicDefense; // 0x38
+
+	// Methods
+
+	// RVA: 0x23AA440 Offset: 0x23AA541 VA: 0x23AA440
+	public void Clear() { }
+
+	// RVA: 0x23AA460 Offset: 0x23AA561 VA: 0x23AA460
+	public Unit.CalcInfo Update(Unit unit) { }
+
+	// RVA: 0x23AB160 Offset: 0x23AB261 VA: 0x23AB160
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278E50 Offset: 0x278F51 VA: 0x278E50
 private struct Unit.<>c__DisplayClass416_0 // TypeDefIndex: 13494
 {
 	// Fields
 	public bool isBullet; // 0x0
 	public Unit <>4__this; // 0x8
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278E60 Offset: 0x278F61 VA: 0x278E60
+private sealed class Unit.<>c__DisplayClass446_0 // TypeDefIndex: 13495
+{
+	// Fields
+	public Unit <>4__this; // 0x10
+	public Unit.FuncUnitItem func; // 0x18
+
+	// Methods
+
+	// RVA: 0x23A9B00 Offset: 0x23A9C01 VA: 0x23A9B00
+	public void .ctor() { }
+
+	// RVA: 0x23A9B10 Offset: 0x23A9C11 VA: 0x23A9B10
+	internal void <ForEachCanEquipItem>b__0(UnitItem unitItem) { }
 }
 

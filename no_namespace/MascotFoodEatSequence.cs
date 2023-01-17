@@ -1,4 +1,13 @@
 // Namespace: 
+private enum MascotFoodEatSequence.Label // TypeDefIndex: 10847
+{
+	// Fields
+	public int value__; // 0x0
+	public const MascotFoodEatSequence.Label EatFood = 0;
+	public const MascotFoodEatSequence.Label Exit = 1;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2773F0 Offset: 0x2774F1 VA: 0x2773F0
 private sealed class MascotFoodEatSequence.<EatFood>d__10 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10848
 {

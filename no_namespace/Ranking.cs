@@ -16,6 +16,35 @@ private sealed class Ranking.<>c__DisplayClass9_0 // TypeDefIndex: 12832
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2787B0 Offset: 0x2788B1 VA: 0x2787B0
+private sealed class Ranking.<>c__DisplayClass10_0 // TypeDefIndex: 12833
+{
+	// Fields
+	public int netRankingIndex; // 0x10
+	public GodData result; // 0x18
+
+	// Methods
+
+	// RVA: 0x1F2B080 Offset: 0x1F2B181 VA: 0x1F2B080
+	public void .ctor() { }
+
+	// RVA: 0x1F2B090 Offset: 0x1F2B191 VA: 0x1F2B090
+	internal void <GetGodDataByNetRankingIndex>b__0(GodData godData) { }
+}
+
+// Namespace: 
+public enum Ranking.RankingMode // TypeDefIndex: 14925
+{
+	// Fields
+	public int value__; // 0x0
+	public const Ranking.RankingMode RANKING_MODE_RANGE = 0;
+	public const Ranking.RankingMode RANKING_MODE_NEAR = 1;
+	public const Ranking.RankingMode RANKING_MODE_FRIEND_RANGE = 2;
+	public const Ranking.RankingMode RANKING_MODE_FRIEND_NEAR = 3;
+	public const Ranking.RankingMode RANKING_MODE_USER = 4;
+}
+
+// Namespace: 
 public enum Ranking.FilterGroupIndex // TypeDefIndex: 14926
 {
 	// Fields
@@ -28,12 +57,30 @@ public enum Ranking.FilterGroupIndex // TypeDefIndex: 14926
 }
 
 // Namespace: 
+public enum Ranking.OrderBy // TypeDefIndex: 14927
+{
+	// Fields
+	public int value__; // 0x0
+	public const Ranking.OrderBy ORDER_BY_ASC = 0;
+	public const Ranking.OrderBy ORDER_BY_DESC = 1;
+}
+
+// Namespace: 
 public enum Ranking.UpdateMode // TypeDefIndex: 14928
 {
 	// Fields
 	public int value__; // 0x0
 	public const Ranking.UpdateMode UPDATE_MODE_NORMAL = 0;
 	public const Ranking.UpdateMode UPDATE_MODE_DELETE_OLD = 1;
+}
+
+// Namespace: 
+public enum Ranking.OrderCalculation // TypeDefIndex: 14929
+{
+	// Fields
+	public int value__; // 0x0
+	public const Ranking.OrderCalculation ORDER_CALCULATION_113 = 0;
+	public const Ranking.OrderCalculation ORDER_CALCULATION_123 = 1;
 }
 
 // Namespace: 
@@ -47,6 +94,20 @@ public enum Ranking.TimeScope // TypeDefIndex: 14930
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x27ACF0 Offset: 0x27ADF1 VA: 0x27ACF0
+public enum Ranking.ModificationFlag // TypeDefIndex: 14931
+{
+	// Fields
+	public int value__; // 0x0
+	public const Ranking.ModificationFlag MODIFICATION_FLAG_NONE = 0;
+	public const Ranking.ModificationFlag MODIFICATION_FLAG_GROUP0 = 1;
+	public const Ranking.ModificationFlag MODIFICATION_FLAG_GROUP1 = 2;
+	public const Ranking.ModificationFlag MODIFICATION_FLAG_GROUP2 = 4;
+	public const Ranking.ModificationFlag MODIFICATION_FLAG_GROUP3 = 8;
+	public const Ranking.ModificationFlag MODIFICATION_FLAG_PARAM = 16;
+}
+
+// Namespace: 
 [FlagsAttribute] // RVA: 0x27AD00 Offset: 0x27AE01 VA: 0x27AD00
 public enum Ranking.StatsFlag // TypeDefIndex: 14932
 {
@@ -57,6 +118,24 @@ public enum Ranking.StatsFlag // TypeDefIndex: 14932
 	public const Ranking.StatsFlag STATS_FLAG_MIN = 4;
 	public const Ranking.StatsFlag STATS_FLAG_MAX = 8;
 	public const Ranking.StatsFlag STATS_FLAG_AVERAGE = 16;
+}
+
+// Namespace: 
+public sealed class Ranking.GetCommonDataCB : MulticastDelegate // TypeDefIndex: 14933
+{
+	// Methods
+
+	// RVA: 0x1F2BD70 Offset: 0x1F2BE71 VA: 0x1F2BD70
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F2BD90 Offset: 0x1F2BE91 VA: 0x1F2BD90 Slot: 13
+	public virtual void Invoke(AsyncResult asyncResult, List<byte> data) { }
+
+	// RVA: 0x1F2C100 Offset: 0x1F2C201 VA: 0x1F2C100 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, List<byte> data, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F2C130 Offset: 0x1F2C231 VA: 0x1F2C130 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -78,6 +157,24 @@ public sealed class Ranking.GetRankingCB : MulticastDelegate // TypeDefIndex: 14
 }
 
 // Namespace: 
+public sealed class Ranking.GetApproxOrderCB : MulticastDelegate // TypeDefIndex: 14935
+{
+	// Methods
+
+	// RVA: 0x1F2B190 Offset: 0x1F2B291 VA: 0x1F2B190
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F2B1B0 Offset: 0x1F2B2B1 VA: 0x1F2B1B0 Slot: 13
+	public virtual void Invoke(AsyncResult asyncResult, uint rank) { }
+
+	// RVA: 0x1F2B520 Offset: 0x1F2B621 VA: 0x1F2B520 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, uint rank, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F2B5C0 Offset: 0x1F2B6C1 VA: 0x1F2B5C0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class Ranking.GetStatsCB : MulticastDelegate // TypeDefIndex: 14936
 {
 	// Methods
@@ -92,6 +189,24 @@ public sealed class Ranking.GetStatsCB : MulticastDelegate // TypeDefIndex: 1493
 	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, RankingStats stats, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F2CB90 Offset: 0x1F2CC91 VA: 0x1F2CB90 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class Ranking.GetCachedTopXRankingCB : MulticastDelegate // TypeDefIndex: 14937
+{
+	// Methods
+
+	// RVA: 0x1F2B5D0 Offset: 0x1F2B6D1 VA: 0x1F2B5D0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F2B5F0 Offset: 0x1F2B6F1 VA: 0x1F2B5F0 Slot: 13
+	public virtual void Invoke(AsyncResult asyncResult, RankingCachedResult info) { }
+
+	// RVA: 0x1F2B960 Offset: 0x1F2BA61 VA: 0x1F2B960 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, RankingCachedResult info, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F2B990 Offset: 0x1F2BA91 VA: 0x1F2B990 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -123,6 +238,14 @@ public enum Ranking2.Ranking2SortFlags // TypeDefIndex: 14940
 }
 
 // Namespace: 
+public enum Ranking2.Ranking2GetOptionFlags // TypeDefIndex: 14941
+{
+	// Fields
+	public int value__; // 0x0
+	public const Ranking2.Ranking2GetOptionFlags NOTHING = 0;
+}
+
+// Namespace: 
 public enum Ranking2.Ranking2Mode // TypeDefIndex: 14942
 {
 	// Fields
@@ -133,6 +256,20 @@ public enum Ranking2.Ranking2Mode // TypeDefIndex: 14942
 	public const Ranking2.Ranking2Mode FRIEND_RANKING = 3;
 	public const Ranking2.Ranking2Mode MIN = 0;
 	public const Ranking2.Ranking2Mode MAX = 3;
+}
+
+// Namespace: 
+public enum Ranking2.Ranking2ResetMode // TypeDefIndex: 14943
+{
+	// Fields
+	public byte value__; // 0x0
+	public const Ranking2.Ranking2ResetMode NOTHING = 0;
+	public const Ranking2.Ranking2ResetMode EVERYDAY = 1;
+	public const Ranking2.Ranking2ResetMode EVERYWEEK = 2;
+	public const Ranking2.Ranking2ResetMode MULTI_MONTH = 3;
+	public const Ranking2.Ranking2ResetMode MULTI_MONTH_WEEKDAY = 4;
+	public const Ranking2.Ranking2ResetMode MIN = 0;
+	public const Ranking2.Ranking2ResetMode MAX = 4;
 }
 
 // Namespace: 
@@ -150,6 +287,24 @@ public sealed class Ranking2.GetCommonDataCB : MulticastDelegate // TypeDefIndex
 	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, Ranking2CommonData data, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F2D330 Offset: 0x1F2D431 VA: 0x1F2D330 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class Ranking2.GetRankingCB : MulticastDelegate // TypeDefIndex: 14945
+{
+	// Methods
+
+	// RVA: 0x1F2E0D0 Offset: 0x1F2E1D1 VA: 0x1F2E0D0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F2E0F0 Offset: 0x1F2E1F1 VA: 0x1F2E0F0 Slot: 13
+	public virtual void Invoke(AsyncResult asyncResult, Ranking2Info info) { }
+
+	// RVA: 0x1F2E460 Offset: 0x1F2E561 VA: 0x1F2E460 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, Ranking2Info info, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F2E490 Offset: 0x1F2E591 VA: 0x1F2E490 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -172,6 +327,24 @@ public sealed class Ranking2.GetCategorySettingCB : MulticastDelegate // TypeDef
 }
 
 // Namespace: 
+public sealed class Ranking2.GetRanking2ChartInfoCB : MulticastDelegate // TypeDefIndex: 14947
+{
+	// Methods
+
+	// RVA: 0x1F2D340 Offset: 0x1F2D441 VA: 0x1F2D340
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F2D360 Offset: 0x1F2D461 VA: 0x1F2D360 Slot: 13
+	public virtual void Invoke(AsyncResult asyncResult, Ranking2ChartInfo info) { }
+
+	// RVA: 0x1F2D6D0 Offset: 0x1F2D7D1 VA: 0x1F2D6D0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, Ranking2ChartInfo info, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F2D700 Offset: 0x1F2D801 VA: 0x1F2D700 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class Ranking2.GetRanking2ChartInfoListCB : MulticastDelegate // TypeDefIndex: 14948
 {
 	// Methods
@@ -186,6 +359,24 @@ public sealed class Ranking2.GetRanking2ChartInfoListCB : MulticastDelegate // T
 	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, List<Ranking2ChartInfo> info, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F2DAD0 Offset: 0x1F2DBD1 VA: 0x1F2DAD0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class Ranking2.GetRanking2EstimateScoreRankCB : MulticastDelegate // TypeDefIndex: 14949
+{
+	// Methods
+
+	// RVA: 0x1F2DAE0 Offset: 0x1F2DBE1 VA: 0x1F2DAE0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F2DB00 Offset: 0x1F2DC01 VA: 0x1F2DB00 Slot: 13
+	public virtual void Invoke(AsyncResult asyncResult, Ranking2EstimateScoreRankOutput info) { }
+
+	// RVA: 0x1F2E020 Offset: 0x1F2E121 VA: 0x1F2E020 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncResult asyncResult, Ranking2EstimateScoreRankOutput info, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F2E0C0 Offset: 0x1F2E1C1 VA: 0x1F2E0C0 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 

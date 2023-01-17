@@ -23,6 +23,72 @@ public abstract class RingListSequence.PageData // TypeDefIndex: 13108
 }
 
 // Namespace: 
+public class RingListSequence.GodPageData : RingListSequence.PageData // TypeDefIndex: 13109
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x29B9D0 Offset: 0x29BAD1 VA: 0x29B9D0
+	private GodData <Data>k__BackingField; // 0x18
+	[CompilerGeneratedAttribute] // RVA: 0x29B9E0 Offset: 0x29BAE1 VA: 0x29B9E0
+	private int <RelatedGroupIndex>k__BackingField; // 0x20
+	[CompilerGeneratedAttribute] // RVA: 0x29B9F0 Offset: 0x29BAF1 VA: 0x29B9F0
+	private int <RelatedGroupPageDataNum>k__BackingField; // 0x24
+	[CompilerGeneratedAttribute] // RVA: 0x29BA00 Offset: 0x29BB01 VA: 0x29BA00
+	private BasicMenuSelect <MenuSelect>k__BackingField; // 0x28
+
+	// Properties
+	public GodData Data { get; set; }
+	public int RelatedGroupIndex { get; set; }
+	public int RelatedGroupPageDataNum { get; set; }
+	public BasicMenuSelect MenuSelect { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB250 Offset: 0x2CB351 VA: 0x2CB250
+	// RVA: 0x1F50AD0 Offset: 0x1F50BD1 VA: 0x1F50AD0
+	public GodData get_Data() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB260 Offset: 0x2CB361 VA: 0x2CB260
+	// RVA: 0x1F50AE0 Offset: 0x1F50BE1 VA: 0x1F50AE0
+	public void set_Data(GodData value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB270 Offset: 0x2CB371 VA: 0x2CB270
+	// RVA: 0x1F50AF0 Offset: 0x1F50BF1 VA: 0x1F50AF0
+	public int get_RelatedGroupIndex() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB280 Offset: 0x2CB381 VA: 0x2CB280
+	// RVA: 0x1F50B00 Offset: 0x1F50C01 VA: 0x1F50B00
+	public void set_RelatedGroupIndex(int value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB290 Offset: 0x2CB391 VA: 0x2CB290
+	// RVA: 0x1F50B10 Offset: 0x1F50C11 VA: 0x1F50B10
+	public void set_RelatedGroupPageDataNum(int value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB2A0 Offset: 0x2CB3A1 VA: 0x2CB2A0
+	// RVA: 0x1F50B20 Offset: 0x1F50C21 VA: 0x1F50B20
+	public int get_RelatedGroupPageDataNum() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB2B0 Offset: 0x2CB3B1 VA: 0x2CB2B0
+	// RVA: 0x1F50B30 Offset: 0x1F50C31 VA: 0x1F50B30
+	public void set_MenuSelect(BasicMenuSelect value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB2C0 Offset: 0x2CB3C1 VA: 0x2CB2C0
+	// RVA: 0x1F50B40 Offset: 0x1F50C41 VA: 0x1F50B40
+	public BasicMenuSelect get_MenuSelect() { }
+
+	// RVA: 0x1F50B50 Offset: 0x1F50C51 VA: 0x1F50B50
+	public void Build(GodData godData) { }
+
+	// RVA: 0x1F50360 Offset: 0x1F50461 VA: 0x1F50360
+	public int GetMaxBondLevel() { }
+
+	// RVA: 0x1F50BE0 Offset: 0x1F50CE1 VA: 0x1F50BE0
+	public int GetToLv() { }
+
+	// RVA: 0x1F50CF0 Offset: 0x1F50DF1 VA: 0x1F50CF0
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class RingListSequence.RingPageData : RingListSequence.PageData // TypeDefIndex: 13110
 {
 	// Fields
@@ -142,6 +208,18 @@ public class RingListSequence.RingPageData : RingListSequence.PageData // TypeDe
 }
 
 // Namespace: 
+private class RingListSequence.PageDataList.GodComparer : IComparer<RingListSequence.GodPageData> // TypeDefIndex: 13111
+{
+	// Methods
+
+	// RVA: 0x21F71D0 Offset: 0x21F72D1 VA: 0x21F71D0 Slot: 4
+	public int Compare(RingListSequence.GodPageData a, RingListSequence.GodPageData b) { }
+
+	// RVA: 0x21F71F0 Offset: 0x21F72F1 VA: 0x21F71F0
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278A60 Offset: 0x278B61 VA: 0x278A60
 private sealed class RingListSequence.PageDataList.<>c__DisplayClass1_0 // TypeDefIndex: 13112
 {
@@ -162,6 +240,18 @@ private sealed class RingListSequence.PageDataList.<>c__DisplayClass1_0 // TypeD
 }
 
 // Namespace: 
+private class RingListSequence.PageDataList : List<RingListSequence.PageData> // TypeDefIndex: 13113
+{
+	// Methods
+
+	// RVA: 0x1F50D30 Offset: 0x1F50E31 VA: 0x1F50D30
+	public void Build() { }
+
+	// RVA: 0x1F516E0 Offset: 0x1F517E1 VA: 0x1F516E0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class RingListSequence.RelatedGroupWindow // TypeDefIndex: 13114
 {
 	// Fields
@@ -176,6 +266,26 @@ private class RingListSequence.RelatedGroupWindow // TypeDefIndex: 13114
 
 	// RVA: 0x1F51840 Offset: 0x1F51941 VA: 0x1F51840
 	public void SetText(RingListSequence.PageData pageData) { }
+}
+
+// Namespace: 
+private class RingListSequence.CharaArrowGroup // TypeDefIndex: 13115
+{
+	// Fields
+	private GameObject m_RootObject; // 0x10
+	private Image m_LeftArrowImage; // 0x18
+	private Image m_RightArrowImage; // 0x20
+
+	// Methods
+
+	// RVA: 0x1F4E230 Offset: 0x1F4E331 VA: 0x1F4E230
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x1F4E390 Offset: 0x1F4E491 VA: 0x1F4E390
+	public void ShowAll() { }
+
+	// RVA: 0x1F4E3D0 Offset: 0x1F4E4D1 VA: 0x1F4E3D0
+	public void HideAll() { }
 }
 
 // Namespace: 
@@ -200,6 +310,48 @@ private class RingListSequence.CharaImageController : IDisposable // TypeDefInde
 }
 
 // Namespace: 
+private class RingListSequence.CharaImage : IDisposable // TypeDefIndex: 13117
+{
+	// Fields
+	private GameObject m_RootObject; // 0x10
+	private Animator m_RootAnimator; // 0x18
+	private Image m_CharaImage; // 0x20
+	private Image m_FrameImage; // 0x28
+	private Image m_BackImage; // 0x30
+	private Material m_CharaMaterial; // 0x38
+	private Material m_FrameMaterial; // 0x40
+
+	// Methods
+
+	// RVA: 0x1F4E410 Offset: 0x1F4E511 VA: 0x1F4E410
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x1F4E5B0 Offset: 0x1F4E6B1 VA: 0x1F4E5B0 Slot: 4
+	public void Dispose() { }
+
+	// RVA: 0x1F4E630 Offset: 0x1F4E731 VA: 0x1F4E630
+	public void FadeIn() { }
+
+	// RVA: 0x1F4E6C0 Offset: 0x1F4E7C1 VA: 0x1F4E6C0
+	public void FadeOut() { }
+
+	// RVA: 0x1F4E750 Offset: 0x1F4E851 VA: 0x1F4E750
+	public void ChangeImage(RingListSequence.PageData pageData) { }
+
+	// RVA: 0x1F4E840 Offset: 0x1F4E941 VA: 0x1F4E840
+	private void ChangeGodChara(RingListSequence.GodPageData godPageData) { }
+
+	// RVA: 0x1F4E990 Offset: 0x1F4EA91 VA: 0x1F4E990
+	private void ChangeRingChara(RingListSequence.RingPageData ringPageData) { }
+
+	// RVA: 0x1F4EB80 Offset: 0x1F4EC81 VA: 0x1F4EB80
+	private void SetCharaImageSprite(Sprite sprite) { }
+
+	// RVA: 0x1F4ECF0 Offset: 0x1F4EDF1 VA: 0x1F4ECF0
+	private void SetFrameImageSprite(Sprite sprite) { }
+}
+
+// Namespace: 
 private class RingListSequence.CharaNavigation // TypeDefIndex: 13118
 {
 	// Fields
@@ -219,6 +371,19 @@ private class RingListSequence.CharaNavigation // TypeDefIndex: 13118
 
 	// RVA: 0x1F506F0 Offset: 0x1F507F1 VA: 0x1F506F0
 	public void SetCurrentPointIndex(int currentPointIndex) { }
+}
+
+// Namespace: 
+private enum RingListSequence.CharaInfoWindow.CharaDescriptionText // TypeDefIndex: 13119
+{
+	// Fields
+	public int value__; // 0x0
+	public const RingListSequence.CharaInfoWindow.CharaDescriptionText Overview = 0;
+	public const RingListSequence.CharaInfoWindow.CharaDescriptionText Commentary = 1;
+	public const RingListSequence.CharaInfoWindow.CharaDescriptionText SourceTitleHeader = 2;
+	public const RingListSequence.CharaInfoWindow.CharaDescriptionText SourceTitleBody0 = 3;
+	public const RingListSequence.CharaInfoWindow.CharaDescriptionText SourceTitleBody1 = 4;
+	public const RingListSequence.CharaInfoWindow.CharaDescriptionText Max = 5;
 }
 
 // Namespace: 
@@ -249,6 +414,25 @@ private class RingListSequence.CharaInfoWindow // TypeDefIndex: 13120
 }
 
 // Namespace: 
+private class RingListSequence.RingListWindow.RingInfo.Gain // TypeDefIndex: 13121
+{
+	// Fields
+	private TextMeshProUGUI m_NameText; // 0x10
+	private TextMeshProUGUI m_ParamText; // 0x18
+
+	// Methods
+
+	// RVA: 0x2D7DE60 Offset: 0x2D7DF61 VA: 0x2D7DE60
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x2D7DF70 Offset: 0x2D7E071 VA: 0x2D7DF70
+	public void SetName(CapabilityDefinition.Type capabilityType, bool isOpend) { }
+
+	// RVA: 0x2D7E080 Offset: 0x2D7E181 VA: 0x2D7E080
+	public void SetParam(int capabilityEnhance) { }
+}
+
+// Namespace: 
 private class RingListSequence.RingListWindow.RingInfo // TypeDefIndex: 13122
 {
 	// Fields
@@ -271,6 +455,27 @@ private class RingListSequence.RingListWindow.RingInfo // TypeDefIndex: 13122
 }
 
 // Namespace: 
+private class RingListSequence.RingListWindow.SkillInfo // TypeDefIndex: 13123
+{
+	// Fields
+	private GameObject m_RootObject; // 0x10
+	private Image m_IconImage; // 0x18
+	private TextMeshProUGUI m_NameText; // 0x20
+	private TextMeshProUGUI m_DescriptionText; // 0x28
+
+	// Methods
+
+	// RVA: 0x21F7840 Offset: 0x21F7941 VA: 0x21F7840
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x21F79E0 Offset: 0x21F7AE1 VA: 0x21F79E0
+	public void Clear() { }
+
+	// RVA: 0x21F7A60 Offset: 0x21F7B61 VA: 0x21F7A60
+	public void SetData(RingData ringData) { }
+}
+
+// Namespace: 
 private enum RingListSequence.RingListWindow.RingInfoRank // TypeDefIndex: 13124
 {
 	// Fields
@@ -280,6 +485,33 @@ private enum RingListSequence.RingListWindow.RingInfoRank // TypeDefIndex: 13124
 	public const RingListSequence.RingListWindow.RingInfoRank A = 2;
 	public const RingListSequence.RingListWindow.RingInfoRank S = 3;
 	public const RingListSequence.RingListWindow.RingInfoRank Max = 4;
+}
+
+// Namespace: 
+private class RingListSequence.RingListWindow // TypeDefIndex: 13125
+{
+	// Fields
+	private GameObject m_RootObject; // 0x10
+	private TextMeshProUGUI m_TitleText; // 0x18
+	private RingListSequence.RingListWindow.RingInfo[] m_RingInfo; // 0x20
+	private RingListSequence.RingListWindow.SkillInfo m_SkillInfo; // 0x28
+
+	// Methods
+
+	// RVA: 0x1F519A0 Offset: 0x1F51AA1 VA: 0x1F519A0
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x1F51DF0 Offset: 0x1F51EF1 VA: 0x1F51DF0
+	public void Clear() { }
+
+	// RVA: 0x1F51E90 Offset: 0x1F51F91 VA: 0x1F51E90
+	public void SetData(RingListSequence.RingPageData ringPageData) { }
+
+	// RVA: 0x1F51DE0 Offset: 0x1F51EE1 VA: 0x1F51DE0
+	public void Show() { }
+
+	// RVA: 0x1F51F50 Offset: 0x1F52051 VA: 0x1F51F50
+	public void Hide() { }
 }
 
 // Namespace: 
@@ -316,6 +548,48 @@ public class RingListSequence.GodAndRingListWindow.Menu : BasicMenu // TypeDefIn
 }
 
 // Namespace: 
+public class RingListSequence.GodAndRingListWindow.MenuItem : BasicMenuItem // TypeDefIndex: 13127
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x29BA90 Offset: 0x29BB91 VA: 0x29BA90
+	private RingListSequence.PageData <PageData>k__BackingField; // 0x68
+
+	// Properties
+	public RingListSequence.PageData PageData { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB3D0 Offset: 0x2CB4D1 VA: 0x2CB3D0
+	// RVA: 0x21F63C0 Offset: 0x21F64C1 VA: 0x21F63C0
+	public RingListSequence.PageData get_PageData() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB3E0 Offset: 0x2CB4E1 VA: 0x2CB3E0
+	// RVA: 0x21F63D0 Offset: 0x21F64D1 VA: 0x21F63D0
+	public void set_PageData(RingListSequence.PageData value) { }
+
+	// RVA: 0x21F63E0 Offset: 0x21F64E1 VA: 0x21F63E0
+	public void .ctor(RingListSequence.PageData pageData) { }
+
+	// RVA: 0x21F6420 Offset: 0x21F6521 VA: 0x21F6420 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x21F6750 Offset: 0x21F6851 VA: 0x21F6750 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x21F6630 Offset: 0x21F6731 VA: 0x21F6630
+	private bool IsGod() { }
+
+	// RVA: 0x21F66C0 Offset: 0x21F67C1 VA: 0x21F66C0
+	private bool IsRing() { }
+
+	// RVA: 0x21F6760 Offset: 0x21F6861 VA: 0x21F6760 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x21F6920 Offset: 0x21F6A21 VA: 0x21F6920 Slot: 19
+	public override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
 public class RingListSequence.GodAndRingListWindow.MenuContent : GodUnitSelectMenuContent // TypeDefIndex: 13128
 {
 	// Methods
@@ -327,6 +601,30 @@ public class RingListSequence.GodAndRingListWindow.MenuContent : GodUnitSelectMe
 	public static RingListSequence.GodAndRingListWindow.MenuContent CreateContent() { }
 
 	// RVA: 0x21F63B0 Offset: 0x21F64B1 VA: 0x21F63B0
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class RingListSequence.GodAndRingListWindow.MenuItemContent : BasicMenuItemContent // TypeDefIndex: 13129
+{
+	// Fields
+	private UnitMenuItemSetter m_Setter; // 0x48
+
+	// Methods
+
+	// RVA: 0x21F6A80 Offset: 0x21F6B81 VA: 0x21F6A80 Slot: 5
+	public override TextMeshProUGUI GetTextMeshProComponent() { }
+
+	// RVA: 0x21F6AA0 Offset: 0x21F6BA1 VA: 0x21F6AA0 Slot: 8
+	public override void Build(BasicMenuItem menuItem) { }
+
+	// RVA: 0x21F6E90 Offset: 0x21F6F91 VA: 0x21F6E90 Slot: 7
+	protected override void UpdateTextColor() { }
+
+	// RVA: 0x21F6B60 Offset: 0x21F6C61 VA: 0x21F6B60
+	public void SetupByMenuItem(RingListSequence.GodAndRingListWindow.MenuItem menuItem) { }
+
+	// RVA: 0x21F6EE0 Offset: 0x21F6FE1 VA: 0x21F6EE0
 	public void .ctor() { }
 }
 
@@ -347,6 +645,15 @@ private class RingListSequence.GodAndRingListWindow // TypeDefIndex: 13130
 
 	// RVA: 0x1F508B0 Offset: 0x1F509B1 VA: 0x1F508B0
 	public void CreateBind(ProcInst super, RingListSequence.PageData currentPageData) { }
+}
+
+// Namespace: 
+private enum RingListSequence.Label // TypeDefIndex: 13131
+{
+	// Fields
+	public int value__; // 0x0
+	public const RingListSequence.Label Start = 0;
+	public const RingListSequence.Label End = 1;
 }
 
 // Namespace: 

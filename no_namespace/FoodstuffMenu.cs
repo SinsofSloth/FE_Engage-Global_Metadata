@@ -17,6 +17,24 @@ public sealed class FoodstuffMenu.DecideEventHandler : MulticastDelegate // Type
 }
 
 // Namespace: 
+public sealed class FoodstuffMenu.CancelEventHandler : MulticastDelegate // TypeDefIndex: 14247
+{
+	// Methods
+
+	// RVA: 0x22DEBA0 Offset: 0x22DECA1 VA: 0x22DEBA0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x22DEBC0 Offset: 0x22DECC1 VA: 0x22DEBC0 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x22DEDD0 Offset: 0x22DEED1 VA: 0x22DEDD0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x22DEE00 Offset: 0x22DEF01 VA: 0x22DEE00 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public enum FoodstuffMenu.FoodstuffMenuItem.Type // TypeDefIndex: 14248
 {
 	// Fields
@@ -24,6 +42,24 @@ public enum FoodstuffMenu.FoodstuffMenuItem.Type // TypeDefIndex: 14248
 	public const FoodstuffMenu.FoodstuffMenuItem.Type Normal = 0;
 	public const FoodstuffMenu.FoodstuffMenuItem.Type Rare = 1;
 	public const FoodstuffMenu.FoodstuffMenuItem.Type Decide = 2;
+}
+
+// Namespace: 
+public sealed class FoodstuffMenu.FoodstuffMenuItem.OnChangeSelected : MulticastDelegate // TypeDefIndex: 14249
+{
+	// Methods
+
+	// RVA: 0x1DC8E60 Offset: 0x1DC8F61 VA: 0x1DC8E60
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1DC8E80 Offset: 0x1DC8F81 VA: 0x1DC8E80 Slot: 13
+	public virtual void Invoke(bool isSelected) { }
+
+	// RVA: 0x1DC90B0 Offset: 0x1DC91B1 VA: 0x1DC90B0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(bool isSelected, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1DC9150 Offset: 0x1DC9251 VA: 0x1DC9150 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -86,5 +122,26 @@ public class FoodstuffMenu.FoodstuffMenuItem : BasicMenuItem // TypeDefIndex: 14
 
 	// RVA: 0x22DF700 Offset: 0x22DF801 VA: 0x22DF700
 	private static void .cctor() { }
+}
+
+// Namespace: 
+public class FoodstuffMenu.FoodstuffSelectMenuManager : SingletonClass<FoodstuffMenu.FoodstuffSelectMenuManager> // TypeDefIndex: 14251
+{
+	// Fields
+	private BasicMenuSelect m_Select; // 0x20
+
+	// Methods
+
+	// RVA: 0x22DF710 Offset: 0x22DF811 VA: 0x22DF710 Slot: 5
+	protected override void OnCreate() { }
+
+	// RVA: 0x22DF790 Offset: 0x22DF891 VA: 0x22DF790
+	public void Save(FoodstuffMenu menu) { }
+
+	// RVA: 0x22DF7A0 Offset: 0x22DF8A1 VA: 0x22DF7A0
+	public void Restore(FoodstuffMenu menu) { }
+
+	// RVA: 0x22DF7E0 Offset: 0x22DF8E1 VA: 0x22DF7E0
+	public void .ctor() { }
 }
 

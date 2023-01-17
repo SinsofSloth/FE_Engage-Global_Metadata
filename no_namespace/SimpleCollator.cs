@@ -17,6 +17,19 @@ internal struct SimpleCollator.Context // TypeDefIndex: 38
 }
 
 // Namespace: 
+private struct SimpleCollator.PreviousInfo // TypeDefIndex: 39
+{
+	// Fields
+	public int Code; // 0x0
+	public byte* SortKey; // 0x8
+
+	// Methods
+
+	// RVA: 0x1C021C0 Offset: 0x1C022C1 VA: 0x1C021C0
+	public void .ctor(bool dummy) { }
+}
+
+// Namespace: 
 private struct SimpleCollator.Escape // TypeDefIndex: 40
 {
 	// Fields
@@ -25,5 +38,17 @@ private struct SimpleCollator.Escape // TypeDefIndex: 40
 	public int Start; // 0xC
 	public int End; // 0x10
 	public int Optional; // 0x14
+}
+
+// Namespace: 
+private enum SimpleCollator.ExtenderType // TypeDefIndex: 41
+{
+	// Fields
+	public int value__; // 0x0
+	public const SimpleCollator.ExtenderType None = 0;
+	public const SimpleCollator.ExtenderType Simple = 1;
+	public const SimpleCollator.ExtenderType Voiced = 2;
+	public const SimpleCollator.ExtenderType Conditional = 3;
+	public const SimpleCollator.ExtenderType Buggy = 4;
 }
 

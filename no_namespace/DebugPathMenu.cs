@@ -10,6 +10,15 @@ public enum DebugPathMenu.Categories // TypeDefIndex: 9104
 }
 
 // Namespace: 
+public enum DebugPathMenu.Result // TypeDefIndex: 9105
+{
+	// Fields
+	public int value__; // 0x0
+	public const DebugPathMenu.Result Selected = 0;
+	public const DebugPathMenu.Result Canceled = 1;
+}
+
+// Namespace: 
 public class DebugPathMenu.Setting // TypeDefIndex: 9106
 {
 	// Fields
@@ -78,6 +87,41 @@ public class DebugPathMenu.Setting // TypeDefIndex: 9106
 }
 
 // Namespace: 
+private class DebugPathMenu.EntryData // TypeDefIndex: 9107
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x286C30 Offset: 0x286D31 VA: 0x286C30
+	private bool <IsDirectory>k__BackingField; // 0x10
+	[CompilerGeneratedAttribute] // RVA: 0x286C40 Offset: 0x286D41 VA: 0x286C40
+	private string <Name>k__BackingField; // 0x18
+
+	// Properties
+	public bool IsDirectory { get; set; }
+	public string Name { get; set; }
+
+	// Methods
+
+	// RVA: 0x1E14B70 Offset: 0x1E14C71 VA: 0x1E14B70
+	public void .ctor(bool isDirectory, string name) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2AE420 Offset: 0x2AE521 VA: 0x2AE420
+	// RVA: 0x1E15220 Offset: 0x1E15321 VA: 0x1E15220
+	public bool get_IsDirectory() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2AE430 Offset: 0x2AE531 VA: 0x2AE430
+	// RVA: 0x1E15230 Offset: 0x1E15331 VA: 0x1E15230
+	public void set_IsDirectory(bool value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2AE440 Offset: 0x2AE541 VA: 0x2AE440
+	// RVA: 0x1E15240 Offset: 0x1E15341 VA: 0x1E15240
+	public string get_Name() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2AE450 Offset: 0x2AE551 VA: 0x2AE450
+	// RVA: 0x1E15250 Offset: 0x1E15351 VA: 0x1E15250
+	public void set_Name(string value) { }
+}
+
+// Namespace: 
 private class DebugPathMenu.EntryMenuItem : MenuItem // TypeDefIndex: 9108
 {
 	// Fields
@@ -123,6 +167,18 @@ private class DebugPathMenu.EntryMenuItem : MenuItem // TypeDefIndex: 9108
 }
 
 // Namespace: 
+private class DebugPathMenu.PCDriveMenu // TypeDefIndex: 9109
+{
+	// Methods
+
+	// RVA: 0x1E15BD0 Offset: 0x1E15CD1 VA: 0x1E15BD0
+	public static void CreateBind(ProcInst super, DebugPathMenu.Setting setting) { }
+
+	// RVA: 0x1E15E40 Offset: 0x1E15F41 VA: 0x1E15E40
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class DebugPathMenu.EntryMenu // TypeDefIndex: 9110
 {
 	// Methods
@@ -132,6 +188,24 @@ private class DebugPathMenu.EntryMenu // TypeDefIndex: 9110
 
 	// RVA: 0x1E15630 Offset: 0x1E15731 VA: 0x1E15630
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class DebugPathMenu.CategoriesMenu.PCMenuItem : MenuItem // TypeDefIndex: 9111
+{
+	// Fields
+	private DebugPathMenu.Setting m_Setting; // 0x20
+
+	// Methods
+
+	// RVA: 0x1DC1F00 Offset: 0x1DC2001 VA: 0x1DC1F00
+	public void .ctor(DebugPathMenu.Setting setting) { }
+
+	// RVA: 0x1DC1F40 Offset: 0x1DC2041 VA: 0x1DC1F40 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x1DC1F90 Offset: 0x1DC2091 VA: 0x1DC1F90 Slot: 12
+	public override MenuItem.Result ACall() { }
 }
 
 // Namespace: 
@@ -150,6 +224,18 @@ private class DebugPathMenu.CategoriesMenu.AssetsMenuItem : MenuItem // TypeDefI
 
 	// RVA: 0x1DC1EB0 Offset: 0x1DC1FB1 VA: 0x1DC1EB0 Slot: 12
 	public override MenuItem.Result ACall() { }
+}
+
+// Namespace: 
+private class DebugPathMenu.CategoriesMenu // TypeDefIndex: 9113
+{
+	// Methods
+
+	// RVA: 0x1E144A0 Offset: 0x1E145A1 VA: 0x1E144A0
+	public static void CreateBind(ProcInst super, DebugPathMenu.Setting setting) { }
+
+	// RVA: 0x1E145B0 Offset: 0x1E146B1 VA: 0x1E145B0
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -174,6 +260,18 @@ private class DebugPathMenu.ShowError.ErrorMenuItem : MenuItem // TypeDefIndex: 
 }
 
 // Namespace: 
+private class DebugPathMenu.ShowError // TypeDefIndex: 9115
+{
+	// Methods
+
+	// RVA: 0x1E154D0 Offset: 0x1E155D1 VA: 0x1E154D0
+	public static void CreateBind(ProcInst super, string message) { }
+
+	// RVA: 0x1E15F70 Offset: 0x1E16071 VA: 0x1E15F70
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class DebugPathMenu.Directory.EnumResult // TypeDefIndex: 9116
 {
 	// Fields
@@ -190,6 +288,39 @@ public class DebugPathMenu.Directory.EnumResult // TypeDefIndex: 9116
 
 	// RVA: 0x1DC2040 Offset: 0x1DC2141 VA: 0x1DC2040
 	public bool IsFailure() { }
+}
+
+// Namespace: 
+private class DebugPathMenu.Directory // TypeDefIndex: 9117
+{
+	// Methods
+
+	// RVA: 0x1E145C0 Offset: 0x1E146C1 VA: 0x1E145C0
+	public static DebugPathMenu.Directory.EnumResult EnumEntries(DebugPathMenu.Setting setting, string path) { }
+
+	// RVA: 0x1E148F0 Offset: 0x1E149F1 VA: 0x1E148F0
+	public static bool IsExists(string path) { }
+
+	// RVA: 0x1E145D0 Offset: 0x1E146D1 VA: 0x1E145D0
+	private static DebugPathMenu.Directory.EnumResult EnumEntriesNX(DebugPathMenu.Setting setting, string path) { }
+
+	// RVA: 0x1E149B0 Offset: 0x1E14AB1 VA: 0x1E149B0
+	private static DebugPathMenu.EntryData MakeEntryDataNX(bool isDirectory, string entryName) { }
+
+	// RVA: 0x1E14950 Offset: 0x1E14A51 VA: 0x1E14950
+	private static bool IsExistsNX(string path) { }
+
+	// RVA: 0x1E14BC0 Offset: 0x1E14CC1 VA: 0x1E14BC0
+	private static DebugPathMenu.Directory.EnumResult EnumEntriesWin(DebugPathMenu.Setting setting, string path) { }
+
+	// RVA: 0x1E14F90 Offset: 0x1E15091 VA: 0x1E14F90
+	private static DebugPathMenu.EntryData MakeEntryDataWin(bool isDirectory, string fullPath) { }
+
+	// RVA: 0x1E15200 Offset: 0x1E15301 VA: 0x1E15200
+	private static bool IsExistsWin(string path) { }
+
+	// RVA: 0x1E15210 Offset: 0x1E15311 VA: 0x1E15210
+	public void .ctor() { }
 }
 
 // Namespace: 

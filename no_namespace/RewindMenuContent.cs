@@ -27,6 +27,24 @@ private class RewindMenuContent.Phase // TypeDefIndex: 12612
 }
 
 // Namespace: 
+public class RewindMenuContent.ScrollArrow // TypeDefIndex: 12613
+{
+	// Fields
+	private GameObject m_RootObject; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F48E50 Offset: 0x1F48F51 VA: 0x1F48E50
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x1F48E90 Offset: 0x1F48F91 VA: 0x1F48E90
+	public void Show() { }
+
+	// RVA: 0x1F48EA0 Offset: 0x1F48FA1 VA: 0x1F48EA0
+	public void Hide() { }
+}
+
+// Namespace: 
 private class RewindMenuContent.RestRewindTimes // TypeDefIndex: 12614
 {
 	// Fields
@@ -41,5 +59,23 @@ private class RewindMenuContent.RestRewindTimes // TypeDefIndex: 12614
 
 	// RVA: 0x1F48D30 Offset: 0x1F48E31 VA: 0x1F48D30
 	public void SetTimes(int times) { }
+}
+
+// Namespace: 
+private class RewindMenuContent.KeyHelp // TypeDefIndex: 12615
+{
+	// Fields
+	private GameObject m_RootObject; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F483F0 Offset: 0x1F484F1 VA: 0x1F483F0
+	public void .ctor(GameObject rootObject) { }
+
+	// RVA: 0x1F48440 Offset: 0x1F48541 VA: 0x1F48440
+	public void Reset() { }
+
+	// RVA: 0x1F48520 Offset: 0x1F48621 VA: 0x1F48520
+	public void Set() { }
 }
 

@@ -19,6 +19,16 @@ public enum Language.Langs // TypeDefIndex: 13840
 }
 
 // Namespace: 
+public enum Language.Voices // TypeDefIndex: 13841
+{
+	// Fields
+	public int value__; // 0x0
+	public const Language.Voices Japanese = 0;
+	public const Language.Voices English = 1;
+	public const Language.Voices Max = 2;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2792D0 Offset: 0x2793D1 VA: 0x2792D0
 [Serializable]
 private sealed class Language.<>c // TypeDefIndex: 13842

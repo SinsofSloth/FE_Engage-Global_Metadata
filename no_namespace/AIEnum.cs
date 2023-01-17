@@ -1,4 +1,13 @@
 // Namespace: 
+public struct AIEnum.SkillRangeEnemyData // TypeDefIndex: 9255
+{
+	// Fields
+	public Unit unit; // 0x0
+	public sbyte x; // 0x8
+	public sbyte z; // 0x9
+}
+
+// Namespace: 
 public struct AIEnum.SkillRangeEnemyEnumerator : IEnumerable<AIEnum.SkillRangeEnemyData>, IEnumerable, IEnumerator<AIEnum.SkillRangeEnemyData>, IEnumerator, IDisposable // TypeDefIndex: 9256
 {
 	// Fields

@@ -18,6 +18,45 @@ private sealed class LaterTalkSequence.<>c__DisplayClass3_0 // TypeDefIndex: 129
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278950 Offset: 0x278A51 VA: 0x278950
+private sealed class LaterTalkSequence.<SetUp>d__16 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12987
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public LaterTalkSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAA80 Offset: 0x2CAB81 VA: 0x2CAA80
+	// RVA: 0x222F110 Offset: 0x222F211 VA: 0x222F110
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAA90 Offset: 0x2CAB91 VA: 0x2CAA90
+	// RVA: 0x222F140 Offset: 0x222F241 VA: 0x222F140 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x222F150 Offset: 0x222F251 VA: 0x222F150 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAAA0 Offset: 0x2CABA1 VA: 0x2CAAA0
+	// RVA: 0x222F710 Offset: 0x222F811 VA: 0x222F710 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAAB0 Offset: 0x2CABB1 VA: 0x2CAAB0
+	// RVA: 0x222F720 Offset: 0x222F821 VA: 0x222F720 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAAC0 Offset: 0x2CABC1 VA: 0x2CAAC0
+	// RVA: 0x222F760 Offset: 0x222F861 VA: 0x222F760 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278960 Offset: 0x278A61 VA: 0x278960
 private sealed class LaterTalkSequence.<FadeIn>d__26 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12988
 {
@@ -58,6 +97,45 @@ private sealed class LaterTalkSequence.<FadeIn>d__26 : IEnumerator<object>, IEnu
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278970 Offset: 0x278A71 VA: 0x278970
+private sealed class LaterTalkSequence.<Tick>d__28 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12989
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public LaterTalkSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB20 Offset: 0x2CAC21 VA: 0x2CAB20
+	// RVA: 0x222F980 Offset: 0x222FA81 VA: 0x222F980
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB30 Offset: 0x2CAC31 VA: 0x2CAB30
+	// RVA: 0x222F9B0 Offset: 0x222FAB1 VA: 0x222F9B0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x222F9C0 Offset: 0x222FAC1 VA: 0x222F9C0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB40 Offset: 0x2CAC41 VA: 0x2CAB40
+	// RVA: 0x222FBD0 Offset: 0x222FCD1 VA: 0x222FBD0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB50 Offset: 0x2CAC51 VA: 0x2CAB50
+	// RVA: 0x222FBE0 Offset: 0x222FCE1 VA: 0x222FBE0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB60 Offset: 0x2CAC61 VA: 0x2CAB60
+	// RVA: 0x222FC20 Offset: 0x222FD21 VA: 0x222FC20 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278980 Offset: 0x278A81 VA: 0x278980
 [Serializable]
 private sealed class LaterTalkSequence.<>c // TypeDefIndex: 12990
@@ -76,6 +154,45 @@ private sealed class LaterTalkSequence.<>c // TypeDefIndex: 12990
 
 	// RVA: 0x222DF00 Offset: 0x222E001 VA: 0x222DF00
 	internal void <FadeOut>b__29_0(Character chr) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278990 Offset: 0x278A91 VA: 0x278990
+private sealed class LaterTalkSequence.<FadeOut>d__29 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12991
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public LaterTalkSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB70 Offset: 0x2CAC71 VA: 0x2CAB70
+	// RVA: 0x222E8B0 Offset: 0x222E9B1 VA: 0x222E8B0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB80 Offset: 0x2CAC81 VA: 0x2CAB80
+	// RVA: 0x222E8E0 Offset: 0x222E9E1 VA: 0x222E8E0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x222E8F0 Offset: 0x222E9F1 VA: 0x222E8F0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CAB90 Offset: 0x2CAC91 VA: 0x2CAB90
+	// RVA: 0x222F0B0 Offset: 0x222F1B1 VA: 0x222F0B0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CABA0 Offset: 0x2CACA1 VA: 0x2CABA0
+	// RVA: 0x222F0C0 Offset: 0x222F1C1 VA: 0x222F0C0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CABB0 Offset: 0x2CACB1 VA: 0x2CABB0
+	// RVA: 0x222F100 Offset: 0x222F201 VA: 0x222F100 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 

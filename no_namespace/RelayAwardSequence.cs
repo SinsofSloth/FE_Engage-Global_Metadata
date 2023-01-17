@@ -1,4 +1,13 @@
 // Namespace: 
+private enum RelayAwardSequence.Label // TypeDefIndex: 12943
+{
+	// Fields
+	public int value__; // 0x0
+	public const RelayAwardSequence.Label UnitAward = 0;
+	public const RelayAwardSequence.Label End = 1;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278890 Offset: 0x278991 VA: 0x278890
 [Serializable]
 private sealed class RelayAwardSequence.<>c // TypeDefIndex: 12944

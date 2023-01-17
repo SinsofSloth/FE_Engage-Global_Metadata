@@ -1,4 +1,15 @@
 // Namespace: 
+public enum DragonRideDifficultSelectMenu.Result2 // TypeDefIndex: 10501
+{
+	// Fields
+	public int value__; // 0x0
+	public const DragonRideDifficultSelectMenu.Result2 Cancel = 0;
+	public const DragonRideDifficultSelectMenu.Result2 Normal = 1;
+	public const DragonRideDifficultSelectMenu.Result2 Hard = 2;
+	public const DragonRideDifficultSelectMenu.Result2 Expert = 3;
+}
+
+// Namespace: 
 public sealed class DragonRideDifficultSelectMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 10502
 {
 	// Methods
@@ -14,6 +25,26 @@ public sealed class DragonRideDifficultSelectMenu.DecideEventHandler : Multicast
 
 	// RVA: 0x1F00310 Offset: 0x1F00411 VA: 0x1F00310 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+private class DragonRideDifficultSelectMenu.DifficultyItem : BasicMenuItem // TypeDefIndex: 10503
+{
+	// Fields
+	private string m_DifficultID; // 0x68
+	private bool m_IsEnable; // 0x70
+	private bool m_IsExpert; // 0x71
+
+	// Methods
+
+	// RVA: 0x1F00320 Offset: 0x1F00421 VA: 0x1F00320
+	public void .ctor(string difficultID, bool enable, bool isExpert = False) { }
+
+	// RVA: 0x1F003C0 Offset: 0x1F004C1 VA: 0x1F003C0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1F00490 Offset: 0x1F00591 VA: 0x1F00490 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
 }
 
 // Namespace: 

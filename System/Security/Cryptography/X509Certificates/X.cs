@@ -1,4 +1,19 @@
 // Namespace: System.Security.Cryptography.X509Certificates
+[FlagsAttribute] // RVA: 0x4743E0 Offset: 0x4744E1 VA: 0x4743E0
+public enum X509KeyStorageFlags // TypeDefIndex: 977
+{
+	// Fields
+	public int value__; // 0x0
+	public const X509KeyStorageFlags DefaultKeySet = 0;
+	public const X509KeyStorageFlags UserKeySet = 1;
+	public const X509KeyStorageFlags MachineKeySet = 2;
+	public const X509KeyStorageFlags Exportable = 4;
+	public const X509KeyStorageFlags UserProtected = 8;
+	public const X509KeyStorageFlags PersistKeySet = 16;
+	public const X509KeyStorageFlags EphemeralKeySet = 32;
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 [MonoTODOAttribute] // RVA: 0x4743F0 Offset: 0x4744F1 VA: 0x4743F0
 [ComVisibleAttribute] // RVA: 0x4743F0 Offset: 0x4744F1 VA: 0x4743F0
 [Serializable]
@@ -96,6 +111,75 @@ public class X509Certificate : IDeserializationCallback, ISerializable, IDisposa
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+internal abstract class X509CertificateImpl : IDisposable // TypeDefIndex: 981
+{
+	// Fields
+	private byte[] cachedCertificateHash; // 0x10
+
+	// Properties
+	public abstract bool IsValid { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract bool get_IsValid();
+
+	// RVA: 0x34D90C0 Offset: 0x34D91C1 VA: 0x34D90C0
+	protected void ThrowIfContextInvalid() { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract X509CertificateImpl Clone();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract string GetIssuerName(bool legacyV1Mode);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract string GetSubjectName(bool legacyV1Mode);
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public abstract byte[] GetRawCertData();
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public abstract DateTime GetValidFrom();
+
+	// RVA: -1 Offset: -1 Slot: 11
+	public abstract DateTime GetValidUntil();
+
+	// RVA: 0x34D83F0 Offset: 0x34D84F1 VA: 0x34D83F0
+	public byte[] GetCertHash() { }
+
+	// RVA: -1 Offset: -1 Slot: 12
+	protected abstract byte[] GetCertHash(bool lazy);
+
+	// RVA: 0x34D91A0 Offset: 0x34D92A1 VA: 0x34D91A0 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public abstract bool Equals(X509CertificateImpl other, out bool result);
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public abstract byte[] GetSerialNumber();
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public abstract string ToString(bool full);
+
+	// RVA: 0x34D9230 Offset: 0x34D9331 VA: 0x34D9230 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x34D8E30 Offset: 0x34D8F31 VA: 0x34D8E30 Slot: 4
+	public void Dispose() { }
+
+	// RVA: 0x34D93C0 Offset: 0x34D94C1 VA: 0x34D93C0 Slot: 16
+	protected virtual void Dispose(bool disposing) { }
+
+	// RVA: 0x34D93D0 Offset: 0x34D94D1 VA: 0x34D93D0 Slot: 1
+	protected override void Finalize() { }
+
+	// RVA: 0x34D9450 Offset: 0x34D9551 VA: 0x34D9450
+	protected void .ctor() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 internal sealed class X509CertificateImplMono : X509CertificateImpl // TypeDefIndex: 982
 {
 	// Fields
@@ -147,6 +231,51 @@ internal sealed class X509CertificateImplMono : X509CertificateImpl // TypeDefIn
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+internal static class X509Helper // TypeDefIndex: 983
+{
+	// Fields
+	private static INativeCertificateHelper nativeHelper; // 0x0
+
+	// Methods
+
+	// RVA: 0x34DA3B0 Offset: 0x34DA4B1 VA: 0x34DA3B0
+	internal static void InstallNativeHelper(INativeCertificateHelper helper) { }
+
+	// RVA: 0x34DA430 Offset: 0x34DA531 VA: 0x34DA430
+	private static X509CertificateImpl Import(byte[] rawData) { }
+
+	// RVA: 0x34D8020 Offset: 0x34D8121 VA: 0x34D8020
+	public static X509CertificateImpl InitFromCertificate(X509CertificateImpl impl) { }
+
+	// RVA: 0x34D8240 Offset: 0x34D8341 VA: 0x34D8240
+	public static bool IsValid(X509CertificateImpl impl) { }
+
+	// RVA: 0x34D81D0 Offset: 0x34D82D1 VA: 0x34D81D0
+	internal static void ThrowIfContextInvalid(X509CertificateImpl impl) { }
+
+	// RVA: 0x34D9110 Offset: 0x34D9211 VA: 0x34D9110
+	internal static Exception GetInvalidContextException() { }
+
+	// RVA: 0x34DA620 Offset: 0x34DA721 VA: 0x34DA620
+	internal static X509Certificate ImportPkcs12(byte[] rawData, string password) { }
+
+	// RVA: 0x34DAA20 Offset: 0x34DAB21 VA: 0x34DAA20
+	private static byte[] PEM(string type, byte[] data) { }
+
+	// RVA: 0x34DAB50 Offset: 0x34DAC51 VA: 0x34DAB50
+	private static byte[] ConvertData(byte[] data) { }
+
+	// RVA: 0x34DA440 Offset: 0x34DA541 VA: 0x34DA440
+	private static X509CertificateImpl ImportCore(byte[] rawData) { }
+
+	// RVA: 0x34D8B20 Offset: 0x34D8C21 VA: 0x34D8B20
+	public static X509CertificateImpl Import(byte[] rawData, string password, X509KeyStorageFlags keyStorageFlags) { }
+
+	// RVA: 0x34D84A0 Offset: 0x34D85A1 VA: 0x34D84A0
+	public static string ToHexString(byte[] data) { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 [FlagsAttribute] // RVA: 0x30580 Offset: 0x30681 VA: 0x30580
 public enum X509ChainStatusFlags // TypeDefIndex: 2348
 {
@@ -181,6 +310,24 @@ public enum X509ChainStatusFlags // TypeDefIndex: 2348
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+[FlagsAttribute] // RVA: 0x30590 Offset: 0x30691 VA: 0x30590
+public enum X509KeyUsageFlags // TypeDefIndex: 2349
+{
+	// Fields
+	public int value__; // 0x0
+	public const X509KeyUsageFlags None = 0;
+	public const X509KeyUsageFlags EncipherOnly = 1;
+	public const X509KeyUsageFlags CrlSign = 2;
+	public const X509KeyUsageFlags KeyCertSign = 4;
+	public const X509KeyUsageFlags KeyAgreement = 8;
+	public const X509KeyUsageFlags DataEncipherment = 16;
+	public const X509KeyUsageFlags KeyEncipherment = 32;
+	public const X509KeyUsageFlags NonRepudiation = 64;
+	public const X509KeyUsageFlags DigitalSignature = 128;
+	public const X509KeyUsageFlags DecipherOnly = 32768;
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 public enum X509RevocationFlag // TypeDefIndex: 2350
 {
 	// Fields
@@ -191,6 +338,16 @@ public enum X509RevocationFlag // TypeDefIndex: 2350
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+public enum X509RevocationMode // TypeDefIndex: 2351
+{
+	// Fields
+	public int value__; // 0x0
+	public const X509RevocationMode NoCheck = 0;
+	public const X509RevocationMode Online = 1;
+	public const X509RevocationMode Offline = 2;
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 public enum X509SubjectKeyIdentifierHashAlgorithm // TypeDefIndex: 2352
 {
 	// Fields
@@ -198,6 +355,28 @@ public enum X509SubjectKeyIdentifierHashAlgorithm // TypeDefIndex: 2352
 	public const X509SubjectKeyIdentifierHashAlgorithm Sha1 = 0;
 	public const X509SubjectKeyIdentifierHashAlgorithm ShortSha1 = 1;
 	public const X509SubjectKeyIdentifierHashAlgorithm CapiSha1 = 2;
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+[FlagsAttribute] // RVA: 0x305A0 Offset: 0x306A1 VA: 0x305A0
+public enum X509VerificationFlags // TypeDefIndex: 2353
+{
+	// Fields
+	public int value__; // 0x0
+	public const X509VerificationFlags NoFlag = 0;
+	public const X509VerificationFlags IgnoreNotTimeValid = 1;
+	public const X509VerificationFlags IgnoreCtlNotTimeValid = 2;
+	public const X509VerificationFlags IgnoreNotTimeNested = 4;
+	public const X509VerificationFlags IgnoreInvalidBasicConstraints = 8;
+	public const X509VerificationFlags AllowUnknownCertificateAuthority = 16;
+	public const X509VerificationFlags IgnoreWrongUsage = 32;
+	public const X509VerificationFlags IgnoreInvalidName = 64;
+	public const X509VerificationFlags IgnoreInvalidPolicy = 128;
+	public const X509VerificationFlags IgnoreEndRevocationUnknown = 256;
+	public const X509VerificationFlags IgnoreCtlSignerRevocationUnknown = 512;
+	public const X509VerificationFlags IgnoreCertificateAuthorityRevocationUnknown = 1024;
+	public const X509VerificationFlags IgnoreRootRevocationUnknown = 2048;
+	public const X509VerificationFlags AllFlags = 4095;
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
@@ -216,6 +395,55 @@ internal class X509Utils // TypeDefIndex: 2354
 [MonoTODOAttribute] // RVA: 0x305B0 Offset: 0x306B1 VA: 0x305B0
 public sealed class X500DistinguishedName : AsnEncodedData // TypeDefIndex: 2356
 {}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+public sealed class X509BasicConstraintsExtension : X509Extension // TypeDefIndex: 2357
+{
+	// Fields
+	internal const string oid = "2.5.29.19";
+	internal const string friendlyName = "Basic Constraints";
+	private bool _certificateAuthority; // 0x21
+	private bool _hasPathLengthConstraint; // 0x22
+	private int _pathLengthConstraint; // 0x24
+	private AsnDecodeStatus _status; // 0x28
+
+	// Properties
+	public bool CertificateAuthority { get; }
+	public bool HasPathLengthConstraint { get; }
+	public int PathLengthConstraint { get; }
+
+	// Methods
+
+	// RVA: 0x1955E90 Offset: 0x1955F91 VA: 0x1955E90
+	public void .ctor() { }
+
+	// RVA: 0x1955F50 Offset: 0x1956051 VA: 0x1955F50
+	public void .ctor(AsnEncodedData encodedBasicConstraints, bool critical) { }
+
+	// RVA: 0x1956250 Offset: 0x1956351 VA: 0x1956250
+	public void .ctor(bool certificateAuthority, bool hasPathLengthConstraint, int pathLengthConstraint, bool critical) { }
+
+	// RVA: 0x19564F0 Offset: 0x19565F1 VA: 0x19564F0
+	public bool get_CertificateAuthority() { }
+
+	// RVA: 0x1956570 Offset: 0x1956671 VA: 0x1956570
+	public bool get_HasPathLengthConstraint() { }
+
+	// RVA: 0x19565F0 Offset: 0x19566F1 VA: 0x19565F0
+	public int get_PathLengthConstraint() { }
+
+	// RVA: 0x1956670 Offset: 0x1956771 VA: 0x1956670 Slot: 4
+	public override void CopyFrom(AsnEncodedData asnEncodedData) { }
+
+	// RVA: 0x1956040 Offset: 0x1956141 VA: 0x1956040
+	internal AsnDecodeStatus Decode(byte[] extension) { }
+
+	// RVA: 0x19563A0 Offset: 0x19564A1 VA: 0x19563A0
+	internal byte[] Encode() { }
+
+	// RVA: 0x1956850 Offset: 0x1956951 VA: 0x1956850 Slot: 5
+	internal override string ToString(bool multiLine) { }
+}
 
 // Namespace: System.Security.Cryptography.X509Certificates
 [Serializable]
@@ -295,6 +523,19 @@ public class X509Certificate2 : X509Certificate // TypeDefIndex: 2358
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+[DefaultMemberAttribute] // RVA: 0x305F0 Offset: 0x306F1 VA: 0x305F0
+public class X509Certificate2Collection : X509CertificateCollection // TypeDefIndex: 2359
+{
+	// Fields
+	private static string[] newline_split; // 0x0
+
+	// Methods
+
+	// RVA: 0x1957F70 Offset: 0x1958071 VA: 0x1957F70
+	private static void .cctor() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 internal abstract class X509Certificate2Impl : X509CertificateImpl // TypeDefIndex: 2360
 {
 	// Properties
@@ -329,6 +570,139 @@ internal abstract class X509Certificate2Impl : X509CertificateImpl // TypeDefInd
 
 	// RVA: 0x1958040 Offset: 0x1958141 VA: 0x1958040
 	protected void .ctor() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+internal class X509Certificate2ImplMono : X509Certificate2Impl // TypeDefIndex: 2361
+{
+	// Fields
+	private bool _archived; // 0x18
+	private X509ExtensionCollection _extensions; // 0x20
+	private PublicKey _publicKey; // 0x28
+	private X500DistinguishedName issuer_name; // 0x30
+	private X500DistinguishedName subject_name; // 0x38
+	private Oid signature_algorithm; // 0x40
+	private X509CertificateImplCollection intermediateCerts; // 0x48
+	private X509Certificate _cert; // 0x50
+	private static string empty_error; // 0x0
+	private static byte[] commonName; // 0x8
+	private static byte[] email; // 0x10
+	private static byte[] signedData; // 0x18
+
+	// Properties
+	public override bool IsValid { get; }
+	public override AsymmetricAlgorithm PrivateKey { get; }
+	public override PublicKey PublicKey { get; }
+	public override Oid SignatureAlgorithm { get; }
+	public override int Version { get; }
+	internal override X509CertificateImplCollection IntermediateCertificates { get; }
+
+	// Methods
+
+	// RVA: 0x1958050 Offset: 0x1958151 VA: 0x1958050 Slot: 5
+	public override bool get_IsValid() { }
+
+	// RVA: 0x1958060 Offset: 0x1958161 VA: 0x1958060
+	private void .ctor(X509Certificate cert) { }
+
+	// RVA: 0x19580A0 Offset: 0x19581A1 VA: 0x19580A0
+	private void .ctor(X509Certificate2ImplMono other) { }
+
+	// RVA: 0x19581B0 Offset: 0x19582B1 VA: 0x19581B0 Slot: 6
+	public override X509CertificateImpl Clone() { }
+
+	// RVA: 0x1958290 Offset: 0x1958391 VA: 0x1958290 Slot: 7
+	public override string GetIssuerName(bool legacyV1Mode) { }
+
+	// RVA: 0x1958350 Offset: 0x1958451 VA: 0x1958350 Slot: 8
+	public override string GetSubjectName(bool legacyV1Mode) { }
+
+	// RVA: 0x1958420 Offset: 0x1958521 VA: 0x1958420 Slot: 9
+	public override byte[] GetRawCertData() { }
+
+	// RVA: 0x1958450 Offset: 0x1958551 VA: 0x1958450 Slot: 12
+	protected override byte[] GetCertHash(bool lazy) { }
+
+	// RVA: 0x19584A0 Offset: 0x19585A1 VA: 0x19584A0 Slot: 10
+	public override DateTime GetValidFrom() { }
+
+	// RVA: 0x19584E0 Offset: 0x19585E1 VA: 0x19584E0 Slot: 11
+	public override DateTime GetValidUntil() { }
+
+	// RVA: 0x1958520 Offset: 0x1958621 VA: 0x1958520 Slot: 13
+	public override bool Equals(X509CertificateImpl other, out bool result) { }
+
+	// RVA: 0x1958530 Offset: 0x1958631 VA: 0x1958530 Slot: 14
+	public override byte[] GetSerialNumber() { }
+
+	// RVA: 0x1958560 Offset: 0x1958661 VA: 0x1958560
+	public void .ctor() { }
+
+	// RVA: 0x1958590 Offset: 0x1958691 VA: 0x1958590 Slot: 17
+	public override AsymmetricAlgorithm get_PrivateKey() { }
+
+	// RVA: 0x19588A0 Offset: 0x19589A1 VA: 0x19588A0 Slot: 18
+	public override PublicKey get_PublicKey() { }
+
+	// RVA: 0x1958A80 Offset: 0x1958B81 VA: 0x1958A80 Slot: 19
+	public override Oid get_SignatureAlgorithm() { }
+
+	// RVA: 0x1958BB0 Offset: 0x1958CB1 VA: 0x1958BB0 Slot: 20
+	public override int get_Version() { }
+
+	// RVA: 0x1958C60 Offset: 0x1958D61 VA: 0x1958C60
+	private X509Certificate ImportPkcs12(byte[] rawData, string password) { }
+
+	[MonoTODOAttribute] // RVA: 0x32210 Offset: 0x32311 VA: 0x32210
+	// RVA: 0x19594C0 Offset: 0x19595C1 VA: 0x19594C0 Slot: 22
+	public override void Import(byte[] rawData, string password, X509KeyStorageFlags keyStorageFlags) { }
+
+	// RVA: 0x1959740 Offset: 0x1959841 VA: 0x1959740 Slot: 23
+	public override void Reset() { }
+
+	// RVA: 0x19598D0 Offset: 0x19599D1 VA: 0x19598D0 Slot: 3
+	public override string ToString() { }
+
+	// RVA: 0x1959940 Offset: 0x1959A41 VA: 0x1959940 Slot: 15
+	public override string ToString(bool verbose) { }
+
+	// RVA: 0x1959FF0 Offset: 0x195A0F1 VA: 0x1959FF0
+	private static void AppendBuffer(StringBuilder sb, byte[] buffer) { }
+
+	// RVA: 0x195A0F0 Offset: 0x195A1F1 VA: 0x195A0F0 Slot: 21
+	internal override X509CertificateImplCollection get_IntermediateCertificates() { }
+
+	// RVA: 0x195A100 Offset: 0x195A201 VA: 0x195A100
+	private static void .cctor() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+[DefaultMemberAttribute] // RVA: 0x30630 Offset: 0x30731 VA: 0x30630
+[Serializable]
+public class X509CertificateCollection : CollectionBase // TypeDefIndex: 2363
+{
+	// Properties
+	public X509Certificate Item { get; }
+
+	// Methods
+
+	// RVA: 0x195A270 Offset: 0x195A371 VA: 0x195A270
+	public void .ctor() { }
+
+	// RVA: 0x195A280 Offset: 0x195A381 VA: 0x195A280
+	public void .ctor(X509CertificateCollection value) { }
+
+	// RVA: 0x195A430 Offset: 0x195A531 VA: 0x195A430
+	public X509Certificate get_Item(int index) { }
+
+	// RVA: 0x195A2B0 Offset: 0x195A3B1 VA: 0x195A2B0
+	public void AddRange(X509CertificateCollection value) { }
+
+	// RVA: 0x195A4E0 Offset: 0x195A5E1 VA: 0x195A4E0
+	public X509CertificateCollection.X509CertificateEnumerator GetEnumerator() { }
+
+	// RVA: 0x195A550 Offset: 0x195A651 VA: 0x195A550 Slot: 2
+	public override int GetHashCode() { }
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
@@ -373,6 +747,47 @@ internal class X509CertificateImplCollection : IDisposable // TypeDefIndex: 2364
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+public class X509Chain : IDisposable // TypeDefIndex: 2365
+{
+	// Fields
+	private X509ChainImpl impl; // 0x10
+
+	// Properties
+	internal X509ChainImpl Impl { get; }
+	public X509ChainElementCollection ChainElements { get; }
+	public X509ChainPolicy ChainPolicy { set; }
+
+	// Methods
+
+	// RVA: 0x195AA50 Offset: 0x195AB51 VA: 0x195AA50
+	internal X509ChainImpl get_Impl() { }
+
+	// RVA: 0x195AB00 Offset: 0x195AC01 VA: 0x195AB00
+	public void .ctor() { }
+
+	// RVA: 0x195AB80 Offset: 0x195AC81 VA: 0x195AB80
+	public void .ctor(bool useMachineContext) { }
+
+	// RVA: 0x195AC70 Offset: 0x195AD71 VA: 0x195AC70
+	internal void .ctor(X509ChainImpl impl) { }
+
+	// RVA: 0x195ACE0 Offset: 0x195ADE1 VA: 0x195ACE0
+	public X509ChainElementCollection get_ChainElements() { }
+
+	// RVA: 0x195AD40 Offset: 0x195AE41 VA: 0x195AD40
+	public void set_ChainPolicy(X509ChainPolicy value) { }
+
+	// RVA: 0x195ADB0 Offset: 0x195AEB1 VA: 0x195ADB0 Slot: 4
+	public void Dispose() { }
+
+	// RVA: 0x195AE30 Offset: 0x195AF31 VA: 0x195AE30 Slot: 5
+	protected virtual void Dispose(bool disposing) { }
+
+	// RVA: 0x195AF60 Offset: 0x195B061 VA: 0x195AF60 Slot: 1
+	protected override void Finalize() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 public class X509ChainElement // TypeDefIndex: 2366
 {
 	// Fields
@@ -389,6 +804,49 @@ public class X509ChainElement // TypeDefIndex: 2366
 
 	// RVA: 0x195B060 Offset: 0x195B161 VA: 0x195B060
 	public X509Certificate2 get_Certificate() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+[DefaultMemberAttribute] // RVA: 0x306B0 Offset: 0x307B1 VA: 0x306B0
+public sealed class X509ChainElementCollection : ICollection, IEnumerable // TypeDefIndex: 2367
+{
+	// Fields
+	private ArrayList _list; // 0x10
+
+	// Properties
+	public int Count { get; }
+	public bool IsSynchronized { get; }
+	public X509ChainElement Item { get; }
+	public object SyncRoot { get; }
+
+	// Methods
+
+	// RVA: 0x195B070 Offset: 0x195B171 VA: 0x195B070
+	internal void .ctor() { }
+
+	// RVA: 0x195B0F0 Offset: 0x195B1F1 VA: 0x195B0F0 Slot: 5
+	public int get_Count() { }
+
+	// RVA: 0x195B110 Offset: 0x195B211 VA: 0x195B110 Slot: 7
+	public bool get_IsSynchronized() { }
+
+	// RVA: 0x195B130 Offset: 0x195B231 VA: 0x195B130
+	public X509ChainElement get_Item(int index) { }
+
+	// RVA: 0x195B1D0 Offset: 0x195B2D1 VA: 0x195B1D0 Slot: 6
+	public object get_SyncRoot() { }
+
+	// RVA: 0x195B1F0 Offset: 0x195B2F1 VA: 0x195B1F0 Slot: 4
+	private void System.Collections.ICollection.CopyTo(Array array, int index) { }
+
+	// RVA: 0x195B210 Offset: 0x195B311 VA: 0x195B210 Slot: 8
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x195B3D0 Offset: 0x195B4D1 VA: 0x195B3D0
+	internal void Add(X509Certificate2 certificate) { }
+
+	// RVA: 0x195B4B0 Offset: 0x195B5B1 VA: 0x195B4B0
+	internal void Clear() { }
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
@@ -413,6 +871,44 @@ public sealed class X509ChainElementEnumerator : IEnumerator // TypeDefIndex: 23
 
 	// RVA: 0x195B630 Offset: 0x195B731 VA: 0x195B630 Slot: 6
 	public void Reset() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+internal abstract class X509ChainImpl : IDisposable // TypeDefIndex: 2369
+{
+	// Properties
+	public abstract bool IsValid { get; }
+	public abstract X509ChainElementCollection ChainElements { get; }
+	public abstract X509ChainPolicy ChainPolicy { set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public abstract bool get_IsValid();
+
+	// RVA: 0x195B6E0 Offset: 0x195B7E1 VA: 0x195B6E0
+	protected void ThrowIfContextInvalid() { }
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public abstract X509ChainElementCollection get_ChainElements();
+
+	// RVA: -1 Offset: -1 Slot: 7
+	public abstract void set_ChainPolicy(X509ChainPolicy value);
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public abstract void Reset();
+
+	// RVA: 0x195AEE0 Offset: 0x195AFE1 VA: 0x195AEE0 Slot: 4
+	public void Dispose() { }
+
+	// RVA: 0x195B7C0 Offset: 0x195B8C1 VA: 0x195B7C0 Slot: 9
+	protected virtual void Dispose(bool disposing) { }
+
+	// RVA: 0x195B7D0 Offset: 0x195B8D1 VA: 0x195B7D0 Slot: 1
+	protected override void Finalize() { }
+
+	// RVA: 0x195B850 Offset: 0x195B951 VA: 0x195B850
+	protected void .ctor() { }
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
@@ -461,6 +957,32 @@ internal class X509ChainImplMono : X509ChainImpl // TypeDefIndex: 2370
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
+public sealed class X509ChainPolicy // TypeDefIndex: 2371
+{
+	// Fields
+	private OidCollection apps; // 0x10
+	private OidCollection cert; // 0x18
+	private X509CertificateCollection store; // 0x20
+	private X509Certificate2Collection store2; // 0x28
+	private X509RevocationFlag rflag; // 0x30
+	private X509RevocationMode mode; // 0x34
+	private TimeSpan timeout; // 0x38
+	private X509VerificationFlags vflags; // 0x40
+	private DateTime vtime; // 0x48
+
+	// Methods
+
+	// RVA: 0x195B980 Offset: 0x195BA81 VA: 0x195B980
+	public void .ctor() { }
+
+	// RVA: 0x195C2B0 Offset: 0x195C3B1 VA: 0x195C2B0
+	internal void .ctor(X509CertificateCollection store) { }
+
+	// RVA: 0x195C170 Offset: 0x195C271 VA: 0x195C170
+	public void Reset() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
 public struct X509ChainStatus // TypeDefIndex: 2372
 {
 	// Fields
@@ -474,6 +996,28 @@ public struct X509ChainStatus // TypeDefIndex: 2372
 
 	// RVA: 0x195C2F0 Offset: 0x195C3F1 VA: 0x195C2F0
 	internal static string GetInformation(X509ChainStatusFlags flags) { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+public sealed class X509EnhancedKeyUsageExtension : X509Extension // TypeDefIndex: 2373
+{
+	// Fields
+	private OidCollection _enhKeyUsage; // 0x28
+	private AsnDecodeStatus _status; // 0x30
+
+	// Methods
+
+	// RVA: 0x195C4C0 Offset: 0x195C5C1 VA: 0x195C4C0
+	public void .ctor(AsnEncodedData encodedEnhancedKeyUsages, bool critical) { }
+
+	// RVA: 0x195C810 Offset: 0x195C911 VA: 0x195C810 Slot: 4
+	public override void CopyFrom(AsnEncodedData asnEncodedData) { }
+
+	// RVA: 0x195C5B0 Offset: 0x195C6B1 VA: 0x195C5B0
+	internal AsnDecodeStatus Decode(byte[] extension) { }
+
+	// RVA: 0x195C9F0 Offset: 0x195CAF1 VA: 0x195C9F0 Slot: 5
+	internal override string ToString(bool multiLine) { }
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
@@ -501,6 +1045,46 @@ public class X509Extension : AsnEncodedData // TypeDefIndex: 2374
 
 	// RVA: 0x1956AC0 Offset: 0x1956BC1 VA: 0x1956AC0
 	internal string FormatUnkownData(byte[] data) { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+[DefaultMemberAttribute] // RVA: 0x306F0 Offset: 0x307F1 VA: 0x306F0
+public sealed class X509ExtensionCollection // TypeDefIndex: 2375
+{
+	// Fields
+	private static byte[] Empty; // 0x0
+
+	// Methods
+
+	// RVA: 0x195CEB0 Offset: 0x195CFB1 VA: 0x195CEB0
+	private static void .cctor() { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+internal static class X509Helper2 // TypeDefIndex: 2377
+{
+	// Methods
+
+	// RVA: 0x195CF30 Offset: 0x195D031 VA: 0x195CF30
+	internal static void Initialize() { }
+
+	// RVA: 0x1956C90 Offset: 0x1956D91 VA: 0x1956C90
+	internal static void ThrowIfContextInvalid(X509CertificateImpl impl) { }
+
+	// RVA: 0x1957340 Offset: 0x1957441 VA: 0x1957340
+	internal static X509Certificate2Impl Import(byte[] rawData, string password, X509KeyStorageFlags keyStorageFlags, bool disableProvider = False) { }
+
+	// RVA: 0x195AC00 Offset: 0x195AD01 VA: 0x195AC00
+	internal static X509ChainImpl CreateChainImpl(bool useMachineContext) { }
+
+	// RVA: 0x195CF90 Offset: 0x195D091 VA: 0x195CF90
+	public static bool IsValid(X509ChainImpl impl) { }
+
+	// RVA: 0x195AAB0 Offset: 0x195ABB1 VA: 0x195AAB0
+	internal static void ThrowIfContextInvalid(X509ChainImpl impl) { }
+
+	// RVA: 0x195B730 Offset: 0x195B831 VA: 0x195B730
+	internal static Exception GetInvalidChainContextException() { }
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates
@@ -544,6 +1128,19 @@ public sealed class X509KeyUsageExtension : X509Extension // TypeDefIndex: 2378
 
 	// RVA: 0x195D800 Offset: 0x195D901 VA: 0x195D800 Slot: 5
 	internal override string ToString(bool multiLine) { }
+}
+
+// Namespace: System.Security.Cryptography.X509Certificates
+public sealed class X509Store // TypeDefIndex: 2379
+{
+	// Fields
+	private X509Certificate2Collection list; // 0x10
+	private X509Store store; // 0x18
+
+	// Methods
+
+	// RVA: 0x1913FF0 Offset: 0x19140F1 VA: 0x1913FF0
+	public void Close() { }
 }
 
 // Namespace: System.Security.Cryptography.X509Certificates

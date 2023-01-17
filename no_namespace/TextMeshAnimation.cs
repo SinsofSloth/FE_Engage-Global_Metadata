@@ -1,4 +1,16 @@
 // Namespace: 
+public enum TextMeshAnimation.EndType // TypeDefIndex: 13443
+{
+	// Fields
+	public int value__; // 0x0
+	public const TextMeshAnimation.EndType Loop = 0;
+	public const TextMeshAnimation.EndType ToNext = 1;
+	public const TextMeshAnimation.EndType Wait = 2;
+	public const TextMeshAnimation.EndType Hide = 3;
+	public const TextMeshAnimation.EndType Delete = 4;
+}
+
+// Namespace: 
 [Serializable]
 public class TextMeshAnimation.AnimationParams // TypeDefIndex: 13444
 {
@@ -52,6 +64,15 @@ public class TextMeshAnimation.AnimationParams // TypeDefIndex: 13444
 
 	// RVA: 0x2393300 Offset: 0x2393401 VA: 0x2393300
 	public void .ctor() { }
+}
+
+// Namespace: 
+public enum TextMeshAnimation.DelayTimeType // TypeDefIndex: 13445
+{
+	// Fields
+	public int value__; // 0x0
+	public const TextMeshAnimation.DelayTimeType Interval = 0;
+	public const TextMeshAnimation.DelayTimeType Total = 1;
 }
 
 // Namespace: 

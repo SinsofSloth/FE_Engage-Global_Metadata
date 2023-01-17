@@ -9,6 +9,22 @@ public enum MainThreadDispatcher.CullingMode // TypeDefIndex: 6692
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x130D0 Offset: 0x131D1 VA: 0x130D0
+private sealed class MainThreadDispatcher.<>c__DisplayClass6_0 // TypeDefIndex: 6693
+{
+	// Fields
+	public IEnumerator routine; // 0x10
+
+	// Methods
+
+	// RVA: 0x1AFE480 Offset: 0x1AFE581 VA: 0x1AFE480
+	public void .ctor() { }
+
+	// RVA: 0x1AFE490 Offset: 0x1AFE591 VA: 0x1AFE490
+	internal void <SendStartCoroutine>b__0(object _) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x130E0 Offset: 0x131E1 VA: 0x130E0
 private sealed class MainThreadDispatcher.<RunUpdateMicroCoroutine>d__31 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 6694
 {
@@ -44,6 +60,45 @@ private sealed class MainThreadDispatcher.<RunUpdateMicroCoroutine>d__31 : IEnum
 
 	[DebuggerHiddenAttribute] // RVA: 0x167D0 Offset: 0x168D1 VA: 0x167D0
 	// RVA: 0x1AFE930 Offset: 0x1AFEA31 VA: 0x1AFE930 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x130F0 Offset: 0x131F1 VA: 0x130F0
+private sealed class MainThreadDispatcher.<RunFixedUpdateMicroCoroutine>d__32 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 6695
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public MainThreadDispatcher <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x167E0 Offset: 0x168E1 VA: 0x167E0
+	// RVA: 0x1AFE6C0 Offset: 0x1AFE7C1 VA: 0x1AFE6C0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x167F0 Offset: 0x168F1 VA: 0x167F0
+	// RVA: 0x1AFE6F0 Offset: 0x1AFE7F1 VA: 0x1AFE6F0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1AFE700 Offset: 0x1AFE801 VA: 0x1AFE700 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x16800 Offset: 0x16901 VA: 0x16800
+	// RVA: 0x1AFE7C0 Offset: 0x1AFE8C1 VA: 0x1AFE7C0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x16810 Offset: 0x16911 VA: 0x16810
+	// RVA: 0x1AFE7D0 Offset: 0x1AFE8D1 VA: 0x1AFE7D0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x16820 Offset: 0x16921 VA: 0x16820
+	// RVA: 0x1AFE810 Offset: 0x1AFE911 VA: 0x1AFE810 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 
@@ -84,5 +139,26 @@ private sealed class MainThreadDispatcher.<RunEndOfFrameMicroCoroutine>d__33 : I
 	[DebuggerHiddenAttribute] // RVA: 0x16870 Offset: 0x16971 VA: 0x16870
 	// RVA: 0x1AFE6B0 Offset: 0x1AFE7B1 VA: 0x1AFE6B0 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x13110 Offset: 0x13211 VA: 0x13110
+[Serializable]
+private sealed class MainThreadDispatcher.<>c // TypeDefIndex: 6697
+{
+	// Fields
+	public static readonly MainThreadDispatcher.<>c <>9; // 0x0
+	public static Action<Exception> <>9__52_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x1AFE390 Offset: 0x1AFE491 VA: 0x1AFE390
+	private static void .cctor() { }
+
+	// RVA: 0x1AFE400 Offset: 0x1AFE501 VA: 0x1AFE400
+	public void .ctor() { }
+
+	// RVA: 0x1AFE410 Offset: 0x1AFE511 VA: 0x1AFE410
+	internal void <.ctor>b__52_0(Exception ex) { }
 }
 

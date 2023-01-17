@@ -47,6 +47,28 @@ public enum MapDeployTemplate.Flag<T> // TypeDefIndex: 11924
 }
 
 // Namespace: 
+public sealed class MapDeployTemplate.FlagField<T> : BitFieldTemplate64<MapDeployTemplate.Flag<T>> // TypeDefIndex: 11925
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 5
+	protected override long ToLong(MapDeployTemplate.Flag<T> value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x33DD620 Offset: 0x33DD721 VA: 0x33DD620
+	|-MapDeployTemplate.FlagField<object>.ToLong
+	*/
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x33DD630 Offset: 0x33DD731 VA: 0x33DD630
+	|-MapDeployTemplate.FlagField<object>..ctor
+	*/
+}
+
+// Namespace: 
 private enum MapDeployTemplate.ImageType<T> // TypeDefIndex: 11926
 {
 	// Fields
@@ -62,6 +84,17 @@ private enum MapDeployTemplate.ImageType<T> // TypeDefIndex: 11926
 }
 
 // Namespace: 
+public enum MapDeployTemplate.DisplayType<T> // TypeDefIndex: 11927
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapDeployTemplate.DisplayType<T> None = 0;
+	public const MapDeployTemplate.DisplayType<T> Always = 1;
+	public const MapDeployTemplate.DisplayType<T> Order = 2;
+	public const MapDeployTemplate.DisplayType<T> Num = 3;
+}
+
+// Namespace: 
 public struct MapDeployTemplate.Queue.Data<T> // TypeDefIndex: 11928
 {
 	// Fields
@@ -69,6 +102,136 @@ public struct MapDeployTemplate.Queue.Data<T> // TypeDefIndex: 11928
 	public byte z; // 0x0
 	public byte dir; // 0x0
 	public byte cost; // 0x0
+}
+
+// Namespace: 
+private class MapDeployTemplate.Queue<T> // TypeDefIndex: 11929
+{
+	// Fields
+	private const int QueueSize = 256;
+	private MapDeployTemplate.Queue.Data<T>[] m_Datas; // 0x0
+	private int m_Index; // 0x0
+
+	// Properties
+	public MapDeployTemplate.Queue.Data<T> Current { get; set; }
+	public int CurrentX { get; set; }
+	public int CurrentZ { get; set; }
+	public Dir.Type CurrentDir { get; set; }
+	public int CurrentCost { get; set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void Set(int x, int z, Dir.Type dir, int cost) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A873C0 Offset: 0x2A874C1 VA: 0x2A873C0
+	|-MapDeployTemplate.Queue<object>.Set
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Next() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87450 Offset: 0x2A87551 VA: 0x2A87450
+	|-MapDeployTemplate.Queue<object>.Next
+	*/
+
+	// RVA: -1 Offset: -1
+	public void ResetIndex() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87460 Offset: 0x2A87561 VA: 0x2A87460
+	|-MapDeployTemplate.Queue<object>.ResetIndex
+	*/
+
+	// RVA: -1 Offset: -1
+	public MapDeployTemplate.Queue.Data<T> get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87470 Offset: 0x2A87571 VA: 0x2A87470
+	|-MapDeployTemplate.Queue<object>.get_Current
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_Current(MapDeployTemplate.Queue.Data<T> value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A874B0 Offset: 0x2A875B1 VA: 0x2A874B0
+	|-MapDeployTemplate.Queue<object>.set_Current
+	*/
+
+	// RVA: -1 Offset: -1
+	public int get_CurrentX() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A874F0 Offset: 0x2A875F1 VA: 0x2A874F0
+	|-MapDeployTemplate.Queue<object>.get_CurrentX
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_CurrentX(int value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87530 Offset: 0x2A87631 VA: 0x2A87530
+	|-MapDeployTemplate.Queue<object>.set_CurrentX
+	*/
+
+	// RVA: -1 Offset: -1
+	public int get_CurrentZ() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87570 Offset: 0x2A87671 VA: 0x2A87570
+	|-MapDeployTemplate.Queue<object>.get_CurrentZ
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_CurrentZ(int value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A875B0 Offset: 0x2A876B1 VA: 0x2A875B0
+	|-MapDeployTemplate.Queue<object>.set_CurrentZ
+	*/
+
+	// RVA: -1 Offset: -1
+	public Dir.Type get_CurrentDir() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A875F0 Offset: 0x2A876F1 VA: 0x2A875F0
+	|-MapDeployTemplate.Queue<object>.get_CurrentDir
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_CurrentDir(Dir.Type value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87630 Offset: 0x2A87731 VA: 0x2A87630
+	|-MapDeployTemplate.Queue<object>.set_CurrentDir
+	*/
+
+	// RVA: -1 Offset: -1
+	public int get_CurrentCost() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A87670 Offset: 0x2A87771 VA: 0x2A87670
+	|-MapDeployTemplate.Queue<object>.get_CurrentCost
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_CurrentCost(int value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A876B0 Offset: 0x2A877B1 VA: 0x2A876B0
+	|-MapDeployTemplate.Queue<object>.set_CurrentCost
+	*/
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2A876F0 Offset: 0x2A877F1 VA: 0x2A876F0
+	|-MapDeployTemplate.Queue<object>..ctor
+	*/
 }
 
 // Namespace: 
@@ -94,6 +257,34 @@ public class MapDeployTemplate.SwapBufferScope<T> : IDisposable // TypeDefIndex:
 	|
 	|-RVA: 0x34B1AC0 Offset: 0x34B1BC1 VA: 0x34B1AC0
 	|-MapDeployTemplate.SwapBufferScope<object>.Dispose
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277CC0 Offset: 0x277DC1 VA: 0x277CC0
+private sealed class MapDeployTemplate.<>c__DisplayClass95_0<T> // TypeDefIndex: 11931
+{
+	// Fields
+	public Unit unit; // 0x0
+	public MapDeployTemplate<T> <>4__this; // 0x0
+	public MapSkill.UnitFunc <>9__0; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B42150 Offset: 0x2B42251 VA: 0x2B42150
+	|-MapDeployTemplate.<>c__DisplayClass95_0<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	internal void <UnitFillEngage>b__0(int x, int z, Unit target) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B42160 Offset: 0x2B42261 VA: 0x2B42160
+	|-MapDeployTemplate.<>c__DisplayClass95_0<object>.<UnitFillEngage>b__0
 	*/
 }
 

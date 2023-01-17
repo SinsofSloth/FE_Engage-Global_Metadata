@@ -17,6 +17,24 @@ public sealed class ProfileCardCommentListMenu.SelectEventHandler : MulticastDel
 }
 
 // Namespace: 
+public sealed class ProfileCardCommentListMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 11567
+{
+	// Methods
+
+	// RVA: 0x1F23300 Offset: 0x1F23401 VA: 0x1F23300
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F23320 Offset: 0x1F23421 VA: 0x1F23320 Slot: 13
+	public virtual void Invoke(ProfileCardCommentData commentData) { }
+
+	// RVA: 0x1F23680 Offset: 0x1F23781 VA: 0x1F23680 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProfileCardCommentData commentData, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F236B0 Offset: 0x1F237B1 VA: 0x1F236B0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ProfileCardCommentListMenu.CancelEventHandler : MulticastDelegate // TypeDefIndex: 11568
 {
 	// Methods
@@ -31,6 +49,24 @@ public sealed class ProfileCardCommentListMenu.CancelEventHandler : MulticastDel
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F232F0 Offset: 0x1F233F1 VA: 0x1F232F0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class ProfileCardCommentListMenu.DisposeEventHandler : MulticastDelegate // TypeDefIndex: 11569
+{
+	// Methods
+
+	// RVA: 0x1F236C0 Offset: 0x1F237C1 VA: 0x1F236C0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F236E0 Offset: 0x1F237E1 VA: 0x1F236E0 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x1F238F0 Offset: 0x1F239F1 VA: 0x1F238F0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F23920 Offset: 0x1F23A21 VA: 0x1F23920 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 

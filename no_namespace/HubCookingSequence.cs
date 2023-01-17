@@ -1,10 +1,50 @@
 // Namespace: 
+private enum HubCookingSequence.Label // TypeDefIndex: 10477
+{
+	// Fields
+	public int value__; // 0x0
+	public const HubCookingSequence.Label None = 0;
+	public const HubCookingSequence.Label Init = 1;
+	public const HubCookingSequence.Label SelectDish = 2;
+	public const HubCookingSequence.Label SelectWithUnits = 3;
+	public const HubCookingSequence.Label SelectFoodstuff = 4;
+	public const HubCookingSequence.Label EndSelect = 5;
+	public const HubCookingSequence.Label Cook = 6;
+	public const HubCookingSequence.Label StartCookPlay = 7;
+	public const HubCookingSequence.Label CookingResult = 8;
+	public const HubCookingSequence.Label AddAchieve = 9;
+	public const HubCookingSequence.Label QuitSelect = 10;
+	public const HubCookingSequence.Label Exit = 11;
+}
+
+// Namespace: 
 private enum HubCookingSequence.LookTarget // TypeDefIndex: 10478
 {
 	// Fields
 	public int value__; // 0x0
 	public const HubCookingSequence.LookTarget Camera = 0;
 	public const HubCookingSequence.LookTarget Other = 1;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276BB0 Offset: 0x276CB1 VA: 0x276BB0
+[Serializable]
+private sealed class HubCookingSequence.<>c // TypeDefIndex: 10479
+{
+	// Fields
+	public static readonly HubCookingSequence.<>c <>9; // 0x0
+	public static Action <>9__32_1; // 0x8
+
+	// Methods
+
+	// RVA: 0x1FACF50 Offset: 0x1FAD051 VA: 0x1FACF50
+	private static void .cctor() { }
+
+	// RVA: 0x1FACFC0 Offset: 0x1FAD0C1 VA: 0x1FACFC0
+	public void .ctor() { }
+
+	// RVA: 0x1FACFD0 Offset: 0x1FAD0D1 VA: 0x1FACFD0
+	internal void <OpenStartMenu>b__32_1() { }
 }
 
 // Namespace: 
@@ -47,6 +87,47 @@ private sealed class HubCookingSequence.<FightVoice>d__34 : IEnumerator<object>,
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276BD0 Offset: 0x276CD1 VA: 0x276BD0
+private sealed class HubCookingSequence.<DoCooking>d__43 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10481
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public HubCookingSequence <>4__this; // 0x20
+	private string <voiceEvent>5__2; // 0x28
+	private float <time>5__3; // 0x30
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA10 Offset: 0x2BEB11 VA: 0x2BEA10
+	// RVA: 0x1FAD2E0 Offset: 0x1FAD3E1 VA: 0x1FAD2E0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA20 Offset: 0x2BEB21 VA: 0x2BEA20
+	// RVA: 0x1FAD310 Offset: 0x1FAD411 VA: 0x1FAD310 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1FAD320 Offset: 0x1FAD421 VA: 0x1FAD320 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA30 Offset: 0x2BEB31 VA: 0x2BEA30
+	// RVA: 0x1FAD550 Offset: 0x1FAD651 VA: 0x1FAD550 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA40 Offset: 0x2BEB41 VA: 0x2BEA40
+	// RVA: 0x1FAD560 Offset: 0x1FAD661 VA: 0x1FAD560 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA50 Offset: 0x2BEB51 VA: 0x2BEA50
+	// RVA: 0x1FAD5A0 Offset: 0x1FAD6A1 VA: 0x1FAD5A0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x276BE0 Offset: 0x276CE1 VA: 0x276BE0
 private sealed class HubCookingSequence.<>c__DisplayClass45_0 // TypeDefIndex: 10482
 {
@@ -62,6 +143,46 @@ private sealed class HubCookingSequence.<>c__DisplayClass45_0 // TypeDefIndex: 1
 
 	// RVA: 0x1FAD090 Offset: 0x1FAD191 VA: 0x1FAD090
 	internal void <SetupSelectUnit>b__0(HubUnitController hubUnit) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276BF0 Offset: 0x276CF1 VA: 0x276BF0
+private sealed class HubCookingSequence.<RelianceUpWait>d__51 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10483
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public HubCookingSequence <>4__this; // 0x20
+	private bool <isTriggerA>5__2; // 0x28
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA60 Offset: 0x2BEB61 VA: 0x2BEA60
+	// RVA: 0x1FADC50 Offset: 0x1FADD51 VA: 0x1FADC50
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA70 Offset: 0x2BEB71 VA: 0x2BEA70
+	// RVA: 0x1FADC80 Offset: 0x1FADD81 VA: 0x1FADC80 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1FADC90 Offset: 0x1FADD91 VA: 0x1FADC90 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA80 Offset: 0x2BEB81 VA: 0x2BEA80
+	// RVA: 0x1FADFB0 Offset: 0x1FAE0B1 VA: 0x1FADFB0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEA90 Offset: 0x2BEB91 VA: 0x2BEA90
+	// RVA: 0x1FADFC0 Offset: 0x1FAE0C1 VA: 0x1FADFC0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEAA0 Offset: 0x2BEBA1 VA: 0x2BEAA0
+	// RVA: 0x1FAE000 Offset: 0x1FAE101 VA: 0x1FAE000 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 
@@ -104,6 +225,45 @@ private sealed class HubCookingSequence.<PanCamera>d__58 : IEnumerator<object>, 
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276C10 Offset: 0x276D11 VA: 0x276C10
+private sealed class HubCookingSequence.<ShowBentoResult>d__66 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10485
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public HubCookingSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEB00 Offset: 0x2BEC01 VA: 0x2BEB00
+	// RVA: 0x1FAE010 Offset: 0x1FAE111 VA: 0x1FAE010
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEB10 Offset: 0x2BEC11 VA: 0x2BEB10
+	// RVA: 0x1FAE040 Offset: 0x1FAE141 VA: 0x1FAE040 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1FAE050 Offset: 0x1FAE151 VA: 0x1FAE050 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEB20 Offset: 0x2BEC21 VA: 0x2BEB20
+	// RVA: 0x1FAE1C0 Offset: 0x1FAE2C1 VA: 0x1FAE1C0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEB30 Offset: 0x2BEC31 VA: 0x2BEB30
+	// RVA: 0x1FAE1D0 Offset: 0x1FAE2D1 VA: 0x1FAE1D0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BEB40 Offset: 0x2BEC41 VA: 0x2BEB40
+	// RVA: 0x1FAE210 Offset: 0x1FAE311 VA: 0x1FAE210 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x276C20 Offset: 0x276D21 VA: 0x276C20
 private sealed class HubCookingSequence.<>c__DisplayClass76_0 // TypeDefIndex: 10486
 {
@@ -117,5 +277,22 @@ private sealed class HubCookingSequence.<>c__DisplayClass76_0 // TypeDefIndex: 1
 
 	// RVA: 0x1FAD260 Offset: 0x1FAD361 VA: 0x1FAD260
 	internal bool <CreateBind>b__0() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276C30 Offset: 0x276D31 VA: 0x276C30
+private sealed class HubCookingSequence.<>c__DisplayClass77_0 // TypeDefIndex: 10487
+{
+	// Fields
+	public HubCookingSequence <>4__this; // 0x10
+	public Unit cookUnit; // 0x18
+
+	// Methods
+
+	// RVA: 0x1FAD270 Offset: 0x1FAD371 VA: 0x1FAD270
+	public void .ctor() { }
+
+	// RVA: 0x1FAD280 Offset: 0x1FAD381 VA: 0x1FAD280
+	internal void <GetCurrentCookUnit>b__0(Unit unit) { }
 }
 

@@ -1929,6 +1929,1251 @@ public sealed class Func<TResult> : MulticastDelegate // TypeDefIndex: 146
 }
 
 // Namespace: System
+[TypeForwardedFromAttribute] // RVA: 0x46FAB0 Offset: 0x46FBB1 VA: 0x46FAB0
+public sealed class Func<T, TResult> : MulticastDelegate // TypeDefIndex: 147
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E7DE80 Offset: 0x1E7DF81 VA: 0x1E7DE80
+	|-Func<<>f__AnonymousType0<SpringBone, int>, SpringBone>..ctor
+	|-Func<<>f__AnonymousType8<Type, Attribute[]>, <>f__AnonymousType9<Attribute[], Type>>..ctor
+	|-Func<IObserver<Unit>, IDisposable>..ctor
+	|-Func<object[], object>..ctor
+	|-Func<Action, UnityAction>..ctor
+	|-Func<AnimationClip, string>..ctor
+	|-Func<Assembly, IEnumerable<Type>>..ctor
+	|-Func<AssemblyName, Assembly>..ctor
+	|-Func<CatchBlock, CatchBlock>..ctor
+	|-Func<Component, string>..ctor
+	|-Func<DynValue, DynValue>..ctor
+	|-Func<DynValue, object>..ctor
+	|-Func<DynValue, string>..ctor
+	|-Func<DynamicExpression, WatchItem>..ctor
+	|-Func<DynamicsNull, SpringColliderSerialization.TransformSerializer>..ctor
+	|-Func<FieldInfo, VolumeParameter>..ctor
+	|-Func<GUIContent, string>..ctor
+	|-Func<GameObject, Transform>..ctor
+	|-Func<IAsyncResult, HttpWebResponse>..ctor
+	|-Func<IAsyncResult, Stream>..ctor
+	|-Func<IAsyncResult, WebResponse>..ctor
+	|-Func<Instruction, string>..ctor
+	|-Func<LabelScopeInfo, LabelScopeInfo>..ctor
+	|-Func<LightLambda, Delegate>..ctor
+	|-Func<MemberHolder, MemberInfo[]>..ctor
+	|-Func<MoonSharpHideMemberAttribute, string>..ctor
+	|-Func<MoonSharpUserDataMetamethodAttribute, string>..ctor
+	|-Func<object, DynValue>..ctor
+	|-Func<object, object>..ctor
+	|-Func<object, string>..ctor
+	|-Func<Object, Component>..ctor
+	|-Func<ParameterDescriptor, string>..ctor
+	|-Func<ParameterInfo, ParameterDescriptor>..ctor
+	|-Func<ParameterInfo, string>..ctor
+	|-Func<Processor, WatchItem>..ctor
+	|-Func<SkinnedMeshRenderer, Mesh>..ctor
+	|-Func<SourceCode, string>..ctor
+	|-Func<SpringBone, <>f__AnonymousType0<SpringBone, int>>..ctor
+	|-Func<SpringBone, Transform>..ctor
+	|-Func<SpringCapsuleCollider, string>..ctor
+	|-Func<SpringCapsuleCollider, SpringColliderSerialization.CapsuleColliderSerializer>..ctor
+	|-Func<SpringPanelCollider, string>..ctor
+	|-Func<SpringPanelCollider, SpringColliderSerialization.PanelColliderSerializer>..ctor
+	|-Func<SpringSphereCollider, string>..ctor
+	|-Func<SpringSphereCollider, SpringColliderSerialization.SphereColliderSerializer>..ctor
+	|-Func<string, GUIContent>..ctor
+	|-Func<string, SpringCapsuleCollider>..ctor
+	|-Func<string, SpringPanelCollider>..ctor
+	|-Func<string, SpringSphereCollider>..ctor
+	|-Func<string, string>..ctor
+	|-Func<string, SymbolRef>..ctor
+	|-Func<string, Transform>..ctor
+	|-Func<SymbolRef, DynValue>..ctor
+	|-Func<SymbolRef, string>..ctor
+	|-Func<SymbolRef, SymbolRefExpression>..ctor
+	|-Func<Transform, GameObject>..ctor
+	|-Func<Transform, string>..ctor
+	|-Func<Transform, SpringBoneSerialization.LengthLimitSerializer>..ctor
+	|-Func<Transform, SpringBoneSerialization.PivotSerializer>..ctor
+	|-Func<Type, <>f__AnonymousType8<Type, Attribute[]>>..ctor
+	|-Func<Type, IEnumerable<Component>>..ctor
+	|-Func<Type, string>..ctor
+	|-Func<AddressablesImpl.ResourceLocatorInfo, IResourceLocator>..ctor
+	|-Func<AddressablesImpl.ResourceLocatorInfo, string>..ctor
+	|-Func<AssetBundleBuildMap.AssetBundleEntry, IEnumerable<string>>..ctor
+	|-Func<AssetBundleBuildMap.AssetBundleEntry, IEnumerable<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>>..ctor
+	|-Func<AssetBundleBuildMap.AssetBundleEntry, string>..ctor
+	|-Func<SpringBoneSerialization.LengthLimitSerializer, Transform>..ctor
+	|-Func<SpringBoneSerialization.PivotSerializer, string>..ctor
+	|-Func<SpringBoneSerialization.SpringBoneSerializer, string>..ctor
+	|-Func<SpringColliderSerialization.IColliderSerializer, string>..ctor
+	|-Func<SpringColliderSerialization.TransformSerializer, string>..ctor
+	|
+	|-RVA: 0x1E7D2E0 Offset: 0x1E7D3E1 VA: 0x1E7D2E0
+	|-Func<<>f__AnonymousType8<Type, Attribute[]>, bool>..ctor
+	|-Func<IList<bool>, bool>..ctor
+	|-Func<AsyncDebugger, bool>..ctor
+	|-Func<Character, bool>..ctor
+	|-Func<Component, bool>..ctor
+	|-Func<DebugUIHandlerWidget, bool>..ctor
+	|-Func<DynValue, bool>..ctor
+	|-Func<Expression, bool>..ctor
+	|-Func<FieldInfo, bool>..ctor
+	|-Func<FoodstuffData, bool>..ctor
+	|-Func<GmapSpot, bool>..ctor
+	|-Func<IOverloadableMemberDescriptor, bool>..ctor
+	|-Func<IResourceProvider, bool>..ctor
+	|-Func<Mesh, bool>..ctor
+	|-Func<MethodInfo, bool>..ctor
+	|-Func<object, bool>..ctor
+	|-Func<ParameterDescriptor, bool>..ctor
+	|-Func<ParameterInfo, bool>..ctor
+	|-Func<SkillData, bool>..ctor
+	|-Func<SkinnedMeshRenderer, bool>..ctor
+	|-Func<SourceCode, bool>..ctor
+	|-Func<SpringBone, bool>..ctor
+	|-Func<SpringCapsuleCollider, bool>..ctor
+	|-Func<SpringPanelCollider, bool>..ctor
+	|-Func<SpringSphereCollider, bool>..ctor
+	|-Func<string, bool>..ctor
+	|-Func<SwitchCase, bool>..ctor
+	|-Func<TasteData, bool>..ctor
+	|-Func<Toggle, bool>..ctor
+	|-Func<Transform, bool>..ctor
+	|-Func<Type, bool>..ctor
+	|-Func<TypedStringToValueMap, bool>..ctor
+	|-Func<AddressablesImpl.ResourceLocatorInfo, bool>..ctor
+	|-Func<AssetBundleBuildMap.AssetBundleEntry, bool>..ctor
+	|-Func<DebugUI.Widget, bool>..ctor
+	|-Func<PlayerEditorConnectionEvents.MessageTypeSubscribers, bool>..ctor
+	|-Func<SpringBoneSerialization.LengthLimitSerializer, bool>..ctor
+	|-Func<SpringBoneSerialization.SpringBoneSerializer, bool>..ctor
+	|-Func<SpringColliderSerialization.IColliderSerializer, bool>..ctor
+	|-Func<SpringColliderSerialization.TransformSerializer, bool>..ctor
+	|-Func<TextRecordParsing.Record, bool>..ctor
+	|
+	|-RVA: 0x1E71A80 Offset: 0x1E71B81 VA: 0x1E71A80
+	|-Func<AsyncOperationHandle<List<string>>, AsyncOperationHandle<List<IResourceLocator>>>..ctor
+	|-Func<AsyncOperationHandle<ContentCatalogData>, AsyncOperationHandle<IResourceLocator>>..ctor
+	|-Func<AsyncOperationHandle<object>, AsyncOperationHandle<object>>..ctor
+	|
+	|-RVA: 0x1E71EC0 Offset: 0x1E71FC1 VA: 0x1E71EC0
+	|-Func<AsyncOperationHandle<SceneInstance>, AsyncOperationHandle<SceneInstance>>..ctor
+	|
+	|-RVA: 0x1E72300 Offset: 0x1E72401 VA: 0x1E72300
+	|-Func<KeyValuePair<int, object>, KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1E72650 Offset: 0x1E72751 VA: 0x1E72650
+	|-Func<KeyValuePair<int, object>, bool>..ctor
+	|
+	|-RVA: 0x1E729A0 Offset: 0x1E72AA1 VA: 0x1E729A0
+	|-Func<KeyValuePair<object, int>, int>..ctor
+	|-Func<KeyValuePair<Unit, int>, int>..ctor
+	|
+	|-RVA: 0x1E72CE0 Offset: 0x1E72DE1 VA: 0x1E72CE0
+	|-Func<KeyValuePair<object, int>, object>..ctor
+	|-Func<KeyValuePair<Unit, int>, Unit>..ctor
+	|
+	|-RVA: 0x1E73000 Offset: 0x1E73101 VA: 0x1E73000
+	|-Func<KeyValuePair<object, object>, KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1E73350 Offset: 0x1E73451 VA: 0x1E73350
+	|-Func<KeyValuePair<object, object>, UniTask<object>>..ctor
+	|
+	|-RVA: 0x1E736A0 Offset: 0x1E737A1 VA: 0x1E736A0
+	|-Func<KeyValuePair<object, object>, bool>..ctor
+	|-Func<KeyValuePair<string, object>, bool>..ctor
+	|
+	|-RVA: 0x1E739F0 Offset: 0x1E73AF1 VA: 0x1E739F0
+	|-Func<KeyValuePair<object, object>, int>..ctor
+	|
+	|-RVA: 0x1E73D30 Offset: 0x1E73E31 VA: 0x1E73D30
+	|-Func<KeyValuePair<object, object>, object>..ctor
+	|-Func<KeyValuePair<string, object>, string>..ctor
+	|-Func<KeyValuePair<Type, IUserDataDescriptor>, Type>..ctor
+	|
+	|-RVA: 0x1E74050 Offset: 0x1E74151 VA: 0x1E74050
+	|-Func<KeyValuePair<object, object>, UniTask>..ctor
+	|
+	|-RVA: 0x1E74390 Offset: 0x1E74491 VA: 0x1E74390
+	|-Func<Pair<int>, Pair<int>>..ctor
+	|
+	|-RVA: 0x1E746C0 Offset: 0x1E747C1 VA: 0x1E746C0
+	|-Func<UniTask<object>, UniTask<object>>..ctor
+	|
+	|-RVA: 0x1E74A10 Offset: 0x1E74B11 VA: 0x1E74A10
+	|-Func<UniTask<object>, bool>..ctor
+	|
+	|-RVA: 0x1E74D60 Offset: 0x1E74E61 VA: 0x1E74D60
+	|-Func<ValueTuple<object, object>, ValueTuple<object, object>>..ctor
+	|
+	|-RVA: 0x1E750B0 Offset: 0x1E751B1 VA: 0x1E750B0
+	|-Func<ValueTuple<float, int>, ValueTuple<float, int>>..ctor
+	|
+	|-RVA: 0x1E753E0 Offset: 0x1E754E1 VA: 0x1E753E0
+	|-Func<ValueTuple<float, int>, bool>..ctor
+	|
+	|-RVA: 0x1E75710 Offset: 0x1E75811 VA: 0x1E75710
+	|-Func<ValueTuple<float, Int32Enum>, ValueTuple<float, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1E75A40 Offset: 0x1E75B41 VA: 0x1E75A40
+	|-Func<ValueTuple<float, Int32Enum>, bool>..ctor
+	|
+	|-RVA: 0x1E7B740 Offset: 0x1E7B841 VA: 0x1E7B740
+	|-Func<AsyncDebugger, KeyValuePair<int, string>>..ctor
+	|-Func<object, KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1E7D6C0 Offset: 0x1E7D7C1 VA: 0x1E7D6C0
+	|-Func<AsyncDebugger, int>..ctor
+	|-Func<DynValue, int>..ctor
+	|-Func<FieldInfo, int>..ctor
+	|-Func<object, int>..ctor
+	|-Func<string, int>..ctor
+	|
+	|-RVA: 0x1E765F0 Offset: 0x1E766F1 VA: 0x1E765F0
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<IList<IAssetBundleResource>>>..ctor
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<IList<IResourceLocation>>>..ctor
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<GameObject>>..ctor
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<IResourceLocator>>..ctor
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<object>>..ctor
+	|
+	|-RVA: 0x1E75D70 Offset: 0x1E75E71 VA: 0x1E75D70
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<bool>>..ctor
+	|
+	|-RVA: 0x1E761B0 Offset: 0x1E762B1 VA: 0x1E761B0
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<long>>..ctor
+	|
+	|-RVA: 0x1E76A30 Offset: 0x1E76B31 VA: 0x1E76A30
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<SceneInstance>>..ctor
+	|
+	|-RVA: 0x1E76E70 Offset: 0x1E76F71 VA: 0x1E76E70
+	|-Func<bool, bool>..ctor
+	|
+	|-RVA: 0x1E77190 Offset: 0x1E77291 VA: 0x1E77190
+	|-Func<bool, object>..ctor
+	|
+	|-RVA: 0x1E77490 Offset: 0x1E77591 VA: 0x1E77490
+	|-Func<CancellationToken, Task<ValueTuple<int, int>>>..ctor
+	|-Func<CancellationToken, Task<HttpWebResponse>>..ctor
+	|-Func<CancellationToken, Task<Stream>>..ctor
+	|-Func<CancellationToken, object>..ctor
+	|
+	|-RVA: 0x1E777A0 Offset: 0x1E778A1 VA: 0x1E777A0
+	|-Func<char, bool>..ctor
+	|
+	|-RVA: 0x1E77AB0 Offset: 0x1E77BB1 VA: 0x1E77AB0
+	|-Func<char, char>..ctor
+	|
+	|-RVA: 0x1E77DC0 Offset: 0x1E77EC1 VA: 0x1E77DC0
+	|-Func<Color, bool>..ctor
+	|
+	|-RVA: 0x1E78150 Offset: 0x1E78251 VA: 0x1E78150
+	|-Func<ContourVertex, bool>..ctor
+	|
+	|-RVA: 0x1E78550 Offset: 0x1E78651 VA: 0x1E78550
+	|-Func<ContourVertex, Color>..ctor
+	|
+	|-RVA: 0x1E78950 Offset: 0x1E78A51 VA: 0x1E78950
+	|-Func<ContourVertex, Vector3>..ctor
+	|
+	|-RVA: 0x1E78D50 Offset: 0x1E78E51 VA: 0x1E78D50
+	|-Func<ContourVertex, float3>..ctor
+	|
+	|-RVA: 0x1E79150 Offset: 0x1E79251 VA: 0x1E79150
+	|-Func<DiagnosticEvent, int>..ctor
+	|
+	|-RVA: 0x1E79590 Offset: 0x1E79691 VA: 0x1E79590
+	|-Func<double, double>..ctor
+	|
+	|-RVA: 0x1E7EA00 Offset: 0x1E7EB01 VA: 0x1E7EA00
+	|-Func<Glyph, uint>..ctor
+	|-Func<KerningPair, uint>..ctor
+	|-Func<object, uint>..ctor
+	|-Func<TMP_Character, uint>..ctor
+	|-Func<TMP_GlyphPairAdjustmentRecord, uint>..ctor
+	|-Func<TMP_SpriteCharacter, uint>..ctor
+	|-Func<TMP_SpriteGlyph, uint>..ctor
+	|
+	|-RVA: 0x1E7F5A0 Offset: 0x1E7F6A1 VA: 0x1E7F5A0
+	|-Func<IAsyncResult, Unit>..ctor
+	|-Func<object, Unit>..ctor
+	|
+	|-RVA: 0x1E7E620 Offset: 0x1E7E721 VA: 0x1E7E620
+	|-Func<ILayoutElement, float>..ctor
+	|-Func<object, float>..ctor
+	|
+	|-RVA: 0x1E798B0 Offset: 0x1E799B1 VA: 0x1E798B0
+	|-Func<int, KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1E79BC0 Offset: 0x1E79CC1 VA: 0x1E79BC0
+	|-Func<int, UniTask<object>>..ctor
+	|
+	|-RVA: 0x1E79ED0 Offset: 0x1E79FD1 VA: 0x1E79ED0
+	|-Func<int, bool>..ctor
+	|
+	|-RVA: 0x1E7A1E0 Offset: 0x1E7A2E1 VA: 0x1E7A1E0
+	|-Func<int, int>..ctor
+	|
+	|-RVA: 0x1E7A4F0 Offset: 0x1E7A5F1 VA: 0x1E7A4F0
+	|-Func<int, object>..ctor
+	|-Func<int, Transform>..ctor
+	|
+	|-RVA: 0x1E7A7E0 Offset: 0x1E7A8E1 VA: 0x1E7A7E0
+	|-Func<int, UniTask>..ctor
+	|
+	|-RVA: 0x1E7AAF0 Offset: 0x1E7ABF1 VA: 0x1E7AAF0
+	|-Func<Int32Enum, bool>..ctor
+	|
+	|-RVA: 0x1E7AE30 Offset: 0x1E7AF31 VA: 0x1E7AE30
+	|-Func<long, bool>..ctor
+	|
+	|-RVA: 0x1E7B140 Offset: 0x1E7B241 VA: 0x1E7B140
+	|-Func<long, long>..ctor
+	|
+	|-RVA: 0x1E7B450 Offset: 0x1E7B551 VA: 0x1E7B450
+	|-Func<long, object>..ctor
+	|
+	|-RVA: 0x1E7BB20 Offset: 0x1E7BC21 VA: 0x1E7BB20
+	|-Func<object, Nullable<int>>..ctor
+	|
+	|-RVA: 0x1E7BF00 Offset: 0x1E7C001 VA: 0x1E7BF00
+	|-Func<object, UniTask<object>>..ctor
+	|
+	|-RVA: 0x1E7C2E0 Offset: 0x1E7C3E1 VA: 0x1E7C2E0
+	|-Func<object, ValueTuple<bool, object>>..ctor
+	|
+	|-RVA: 0x1E7C6C0 Offset: 0x1E7C7C1 VA: 0x1E7C6C0
+	|-Func<object, ValueTuple<int, int>>..ctor
+	|
+	|-RVA: 0x1E7CAA0 Offset: 0x1E7CBA1 VA: 0x1E7CAA0
+	|-Func<object, ValueTuple<object, object, int>>..ctor
+	|
+	|-RVA: 0x1E7CEC0 Offset: 0x1E7CFC1 VA: 0x1E7CEC0
+	|-Func<object, ValueTuple<object, bool, bool, object, object>>..ctor
+	|
+	|-RVA: 0x1E7DAA0 Offset: 0x1E7DBA1 VA: 0x1E7DAA0
+	|-Func<object, long>..ctor
+	|
+	|-RVA: 0x1E7E240 Offset: 0x1E7E341 VA: 0x1E7E240
+	|-Func<object, SceneInstance>..ctor
+	|
+	|-RVA: 0x1E7EDE0 Offset: 0x1E7EEE1 VA: 0x1E7EDE0
+	|-Func<object, ulong>..ctor
+	|
+	|-RVA: 0x1E7F1C0 Offset: 0x1E7F2C1 VA: 0x1E7F1C0
+	|-Func<object, UniTask>..ctor
+	|
+	|-RVA: 0x1E7F990 Offset: 0x1E7FA91 VA: 0x1E7F990
+	|-Func<object, VoidTaskResult>..ctor
+	|
+	|-RVA: 0x1E7FD80 Offset: 0x1E7FE81 VA: 0x1E7FD80
+	|-Func<float, bool>..ctor
+	|
+	|-RVA: 0x1E800A0 Offset: 0x1E801A1 VA: 0x1E800A0
+	|-Func<float, float>..ctor
+	|
+	|-RVA: 0x1E803C0 Offset: 0x1E804C1 VA: 0x1E803C0
+	|-Func<TablePair, KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1E80710 Offset: 0x1E80811 VA: 0x1E80710
+	|-Func<TablePair, UniTask<object>>..ctor
+	|
+	|-RVA: 0x1E80A60 Offset: 0x1E80B61 VA: 0x1E80A60
+	|-Func<TablePair, bool>..ctor
+	|
+	|-RVA: 0x1E810F0 Offset: 0x1E811F1 VA: 0x1E810F0
+	|-Func<TablePair, DynValue>..ctor
+	|-Func<TablePair, object>..ctor
+	|
+	|-RVA: 0x1E80DB0 Offset: 0x1E80EB1 VA: 0x1E80DB0
+	|-Func<TablePair, int>..ctor
+	|
+	|-RVA: 0x1E81410 Offset: 0x1E81511 VA: 0x1E81410
+	|-Func<TablePair, TablePair>..ctor
+	|
+	|-RVA: 0x1E81760 Offset: 0x1E81861 VA: 0x1E81760
+	|-Func<TablePair, UniTask>..ctor
+	|
+	|-RVA: 0x1E81AA0 Offset: 0x1E81BA1 VA: 0x1E81AA0
+	|-Func<ulong, object>..ctor
+	|
+	|-RVA: 0x1E81D90 Offset: 0x1E81E91 VA: 0x1E81D90
+	|-Func<ulong, ulong>..ctor
+	|
+	|-RVA: 0x1E820A0 Offset: 0x1E821A1 VA: 0x1E820A0
+	|-Func<UniTask, bool>..ctor
+	|
+	|-RVA: 0x1E823D0 Offset: 0x1E824D1 VA: 0x1E823D0
+	|-Func<UniTask, UniTask>..ctor
+	|
+	|-RVA: 0x1E82700 Offset: 0x1E82801 VA: 0x1E82700
+	|-Func<Unit, bool>..ctor
+	|
+	|-RVA: 0x1E82A40 Offset: 0x1E82B41 VA: 0x1E82A40
+	|-Func<Unit, object>..ctor
+	|
+	|-RVA: 0x1E82D50 Offset: 0x1E82E51 VA: 0x1E82D50
+	|-Func<Unit, Unit>..ctor
+	|
+	|-RVA: 0x1E83090 Offset: 0x1E83191 VA: 0x1E83090
+	|-Func<Vector3, bool>..ctor
+	|
+	|-RVA: 0x1E83420 Offset: 0x1E83521 VA: 0x1E83420
+	|-Func<float3, bool>..ctor
+	|
+	|-RVA: 0x1E837B0 Offset: 0x1E838B1 VA: 0x1E837B0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1E83B00 Offset: 0x1E83C01 VA: 0x1E83B00
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask<object>>..ctor
+	|
+	|-RVA: 0x1E83E50 Offset: 0x1E83F51 VA: 0x1E83E50
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, bool>..ctor
+	|
+	|-RVA: 0x1E841A0 Offset: 0x1E842A1 VA: 0x1E841A0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, int>..ctor
+	|
+	|-RVA: 0x1E844E0 Offset: 0x1E845E1 VA: 0x1E844E0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, object>..ctor
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, string>..ctor
+	|
+	|-RVA: 0x1E84800 Offset: 0x1E84901 VA: 0x1E84800
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T arg) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E71AA0 Offset: 0x1E71BA1 VA: 0x1E71AA0
+	|-Func<AsyncOperationHandle<object>, AsyncOperationHandle<object>>.Invoke
+	|
+	|-RVA: 0x1E71EE0 Offset: 0x1E71FE1 VA: 0x1E71EE0
+	|-Func<AsyncOperationHandle<SceneInstance>, AsyncOperationHandle<SceneInstance>>.Invoke
+	|
+	|-RVA: 0x1E72320 Offset: 0x1E72421 VA: 0x1E72320
+	|-Func<KeyValuePair<int, object>, KeyValuePair<int, object>>.Invoke
+	|
+	|-RVA: 0x1E72670 Offset: 0x1E72771 VA: 0x1E72670
+	|-Func<KeyValuePair<int, object>, bool>.Invoke
+	|
+	|-RVA: 0x1E729C0 Offset: 0x1E72AC1 VA: 0x1E729C0
+	|-Func<KeyValuePair<object, int>, int>.Invoke
+	|
+	|-RVA: 0x1E72D00 Offset: 0x1E72E01 VA: 0x1E72D00
+	|-Func<KeyValuePair<object, int>, object>.Invoke
+	|
+	|-RVA: 0x1E73020 Offset: 0x1E73121 VA: 0x1E73020
+	|-Func<KeyValuePair<object, object>, KeyValuePair<int, object>>.Invoke
+	|
+	|-RVA: 0x1E73370 Offset: 0x1E73471 VA: 0x1E73370
+	|-Func<KeyValuePair<object, object>, UniTask<object>>.Invoke
+	|
+	|-RVA: 0x1E736C0 Offset: 0x1E737C1 VA: 0x1E736C0
+	|-Func<KeyValuePair<object, object>, bool>.Invoke
+	|
+	|-RVA: 0x1E73A10 Offset: 0x1E73B11 VA: 0x1E73A10
+	|-Func<KeyValuePair<object, object>, int>.Invoke
+	|
+	|-RVA: 0x1E73D50 Offset: 0x1E73E51 VA: 0x1E73D50
+	|-Func<KeyValuePair<object, object>, object>.Invoke
+	|
+	|-RVA: 0x1E74070 Offset: 0x1E74171 VA: 0x1E74070
+	|-Func<KeyValuePair<object, object>, UniTask>.Invoke
+	|
+	|-RVA: 0x1E743B0 Offset: 0x1E744B1 VA: 0x1E743B0
+	|-Func<Pair<int>, Pair<int>>.Invoke
+	|
+	|-RVA: 0x1E746E0 Offset: 0x1E747E1 VA: 0x1E746E0
+	|-Func<UniTask<object>, UniTask<object>>.Invoke
+	|
+	|-RVA: 0x1E74A30 Offset: 0x1E74B31 VA: 0x1E74A30
+	|-Func<UniTask<object>, bool>.Invoke
+	|
+	|-RVA: 0x1E74D80 Offset: 0x1E74E81 VA: 0x1E74D80
+	|-Func<ValueTuple<object, object>, ValueTuple<object, object>>.Invoke
+	|
+	|-RVA: 0x1E750D0 Offset: 0x1E751D1 VA: 0x1E750D0
+	|-Func<ValueTuple<float, int>, ValueTuple<float, int>>.Invoke
+	|
+	|-RVA: 0x1E75400 Offset: 0x1E75501 VA: 0x1E75400
+	|-Func<ValueTuple<float, int>, bool>.Invoke
+	|
+	|-RVA: 0x1E75730 Offset: 0x1E75831 VA: 0x1E75730
+	|-Func<ValueTuple<float, Int32Enum>, ValueTuple<float, Int32Enum>>.Invoke
+	|
+	|-RVA: 0x1E75A60 Offset: 0x1E75B61 VA: 0x1E75A60
+	|-Func<ValueTuple<float, Int32Enum>, bool>.Invoke
+	|
+	|-RVA: 0x1E7DEA0 Offset: 0x1E7DFA1 VA: 0x1E7DEA0
+	|-Func<AssemblyName, Assembly>.Invoke
+	|-Func<DynValue, object>.Invoke
+	|-Func<GameObject, Transform>.Invoke
+	|-Func<IResourceLocation, string>.Invoke
+	|-Func<LightLambda, Delegate>.Invoke
+	|-Func<object, DynValue>.Invoke
+	|-Func<object, object>.Invoke
+	|-Func<SourceCode, string>.Invoke
+	|-Func<Stream, Task>.Invoke
+	|-Func<string, string>.Invoke
+	|
+	|-RVA: 0x1E75D90 Offset: 0x1E75E91 VA: 0x1E75D90
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<bool>>.Invoke
+	|
+	|-RVA: 0x1E761D0 Offset: 0x1E762D1 VA: 0x1E761D0
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<long>>.Invoke
+	|
+	|-RVA: 0x1E76610 Offset: 0x1E76711 VA: 0x1E76610
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<object>>.Invoke
+	|
+	|-RVA: 0x1E76A50 Offset: 0x1E76B51 VA: 0x1E76A50
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<SceneInstance>>.Invoke
+	|
+	|-RVA: 0x1E76E90 Offset: 0x1E76F91 VA: 0x1E76E90
+	|-Func<bool, bool>.Invoke
+	|
+	|-RVA: 0x1E771B0 Offset: 0x1E772B1 VA: 0x1E771B0
+	|-Func<bool, GameObject>.Invoke
+	|-Func<bool, object>.Invoke
+	|
+	|-RVA: 0x1E774B0 Offset: 0x1E775B1 VA: 0x1E774B0
+	|-Func<CancellationToken, IEnumerator>.Invoke
+	|-Func<CancellationToken, object>.Invoke
+	|
+	|-RVA: 0x1E777C0 Offset: 0x1E778C1 VA: 0x1E777C0
+	|-Func<char, bool>.Invoke
+	|
+	|-RVA: 0x1E77AD0 Offset: 0x1E77BD1 VA: 0x1E77AD0
+	|-Func<char, char>.Invoke
+	|
+	|-RVA: 0x1E7D300 Offset: 0x1E7D401 VA: 0x1E7D300
+	|-Func<Character, bool>.Invoke
+	|-Func<Exception, bool>.Invoke
+	|-Func<GmapSpot, bool>.Invoke
+	|-Func<object, bool>.Invoke
+	|-Func<SkillData, bool>.Invoke
+	|-Func<string, bool>.Invoke
+	|-Func<Transform, bool>.Invoke
+	|
+	|-RVA: 0x1E77DE0 Offset: 0x1E77EE1 VA: 0x1E77DE0
+	|-Func<Color, bool>.Invoke
+	|
+	|-RVA: 0x1E78170 Offset: 0x1E78271 VA: 0x1E78170
+	|-Func<ContourVertex, bool>.Invoke
+	|
+	|-RVA: 0x1E78570 Offset: 0x1E78671 VA: 0x1E78570
+	|-Func<ContourVertex, Color>.Invoke
+	|
+	|-RVA: 0x1E78970 Offset: 0x1E78A71 VA: 0x1E78970
+	|-Func<ContourVertex, Vector3>.Invoke
+	|
+	|-RVA: 0x1E78D70 Offset: 0x1E78E71 VA: 0x1E78D70
+	|-Func<ContourVertex, float3>.Invoke
+	|
+	|-RVA: 0x1E79170 Offset: 0x1E79271 VA: 0x1E79170
+	|-Func<DiagnosticEvent, int>.Invoke
+	|
+	|-RVA: 0x1E795B0 Offset: 0x1E796B1 VA: 0x1E795B0
+	|-Func<double, double>.Invoke
+	|
+	|-RVA: 0x1E7E640 Offset: 0x1E7E741 VA: 0x1E7E640
+	|-Func<ILayoutElement, float>.Invoke
+	|-Func<object, float>.Invoke
+	|
+	|-RVA: 0x1E798D0 Offset: 0x1E799D1 VA: 0x1E798D0
+	|-Func<int, KeyValuePair<int, object>>.Invoke
+	|
+	|-RVA: 0x1E79BE0 Offset: 0x1E79CE1 VA: 0x1E79BE0
+	|-Func<int, UniTask<object>>.Invoke
+	|
+	|-RVA: 0x1E79EF0 Offset: 0x1E79FF1 VA: 0x1E79EF0
+	|-Func<int, bool>.Invoke
+	|
+	|-RVA: 0x1E7A200 Offset: 0x1E7A301 VA: 0x1E7A200
+	|-Func<int, int>.Invoke
+	|
+	|-RVA: 0x1E7A510 Offset: 0x1E7A611 VA: 0x1E7A510
+	|-Func<int, object>.Invoke
+	|
+	|-RVA: 0x1E7A800 Offset: 0x1E7A901 VA: 0x1E7A800
+	|-Func<int, UniTask>.Invoke
+	|
+	|-RVA: 0x1E7AB10 Offset: 0x1E7AC11 VA: 0x1E7AB10
+	|-Func<Int32Enum, bool>.Invoke
+	|-Func<NativeInputUpdateType, bool>.Invoke
+	|
+	|-RVA: 0x1E7AE50 Offset: 0x1E7AF51 VA: 0x1E7AE50
+	|-Func<long, bool>.Invoke
+	|
+	|-RVA: 0x1E7B160 Offset: 0x1E7B261 VA: 0x1E7B160
+	|-Func<long, long>.Invoke
+	|
+	|-RVA: 0x1E7B470 Offset: 0x1E7B571 VA: 0x1E7B470
+	|-Func<long, object>.Invoke
+	|
+	|-RVA: 0x1E7D6E0 Offset: 0x1E7D7E1 VA: 0x1E7D6E0
+	|-Func<LuaState, int>.Invoke
+	|-Func<object, int>.Invoke
+	|-Func<string, int>.Invoke
+	|
+	|-RVA: 0x1E7B760 Offset: 0x1E7B861 VA: 0x1E7B760
+	|-Func<object, KeyValuePair<int, object>>.Invoke
+	|
+	|-RVA: 0x1E7BB40 Offset: 0x1E7BC41 VA: 0x1E7BB40
+	|-Func<object, Nullable<int>>.Invoke
+	|
+	|-RVA: 0x1E7BF20 Offset: 0x1E7C021 VA: 0x1E7BF20
+	|-Func<object, UniTask<object>>.Invoke
+	|
+	|-RVA: 0x1E7C300 Offset: 0x1E7C401 VA: 0x1E7C300
+	|-Func<object, ValueTuple<bool, object>>.Invoke
+	|
+	|-RVA: 0x1E7C6E0 Offset: 0x1E7C7E1 VA: 0x1E7C6E0
+	|-Func<object, ValueTuple<int, int>>.Invoke
+	|
+	|-RVA: 0x1E7CAC0 Offset: 0x1E7CBC1 VA: 0x1E7CAC0
+	|-Func<object, ValueTuple<object, object, int>>.Invoke
+	|
+	|-RVA: 0x1E7CEE0 Offset: 0x1E7CFE1 VA: 0x1E7CEE0
+	|-Func<object, ValueTuple<object, bool, bool, object, object>>.Invoke
+	|
+	|-RVA: 0x1E7DAC0 Offset: 0x1E7DBC1 VA: 0x1E7DAC0
+	|-Func<object, long>.Invoke
+	|
+	|-RVA: 0x1E7E260 Offset: 0x1E7E361 VA: 0x1E7E260
+	|-Func<object, SceneInstance>.Invoke
+	|
+	|-RVA: 0x1E7EA20 Offset: 0x1E7EB21 VA: 0x1E7EA20
+	|-Func<object, uint>.Invoke
+	|
+	|-RVA: 0x1E7EE00 Offset: 0x1E7EF01 VA: 0x1E7EE00
+	|-Func<object, ulong>.Invoke
+	|
+	|-RVA: 0x1E7F1E0 Offset: 0x1E7F2E1 VA: 0x1E7F1E0
+	|-Func<object, UniTask>.Invoke
+	|
+	|-RVA: 0x1E7F5C0 Offset: 0x1E7F6C1 VA: 0x1E7F5C0
+	|-Func<object, Unit>.Invoke
+	|
+	|-RVA: 0x1E7F9B0 Offset: 0x1E7FAB1 VA: 0x1E7F9B0
+	|-Func<object, VoidTaskResult>.Invoke
+	|
+	|-RVA: 0x1E7FDA0 Offset: 0x1E7FEA1 VA: 0x1E7FDA0
+	|-Func<float, bool>.Invoke
+	|
+	|-RVA: 0x1E800C0 Offset: 0x1E801C1 VA: 0x1E800C0
+	|-Func<float, float>.Invoke
+	|
+	|-RVA: 0x1E803E0 Offset: 0x1E804E1 VA: 0x1E803E0
+	|-Func<TablePair, KeyValuePair<int, object>>.Invoke
+	|
+	|-RVA: 0x1E80730 Offset: 0x1E80831 VA: 0x1E80730
+	|-Func<TablePair, UniTask<object>>.Invoke
+	|
+	|-RVA: 0x1E80A80 Offset: 0x1E80B81 VA: 0x1E80A80
+	|-Func<TablePair, bool>.Invoke
+	|
+	|-RVA: 0x1E80DD0 Offset: 0x1E80ED1 VA: 0x1E80DD0
+	|-Func<TablePair, int>.Invoke
+	|
+	|-RVA: 0x1E81110 Offset: 0x1E81211 VA: 0x1E81110
+	|-Func<TablePair, object>.Invoke
+	|
+	|-RVA: 0x1E81430 Offset: 0x1E81531 VA: 0x1E81430
+	|-Func<TablePair, TablePair>.Invoke
+	|
+	|-RVA: 0x1E81780 Offset: 0x1E81881 VA: 0x1E81780
+	|-Func<TablePair, UniTask>.Invoke
+	|
+	|-RVA: 0x1E81AC0 Offset: 0x1E81BC1 VA: 0x1E81AC0
+	|-Func<ulong, object>.Invoke
+	|
+	|-RVA: 0x1E81DB0 Offset: 0x1E81EB1 VA: 0x1E81DB0
+	|-Func<ulong, ulong>.Invoke
+	|
+	|-RVA: 0x1E820C0 Offset: 0x1E821C1 VA: 0x1E820C0
+	|-Func<UniTask, bool>.Invoke
+	|
+	|-RVA: 0x1E823F0 Offset: 0x1E824F1 VA: 0x1E823F0
+	|-Func<UniTask, UniTask>.Invoke
+	|
+	|-RVA: 0x1E82720 Offset: 0x1E82821 VA: 0x1E82720
+	|-Func<Unit, bool>.Invoke
+	|
+	|-RVA: 0x1E82A60 Offset: 0x1E82B61 VA: 0x1E82A60
+	|-Func<Unit, object>.Invoke
+	|
+	|-RVA: 0x1E82D70 Offset: 0x1E82E71 VA: 0x1E82D70
+	|-Func<Unit, Unit>.Invoke
+	|
+	|-RVA: 0x1E830B0 Offset: 0x1E831B1 VA: 0x1E830B0
+	|-Func<Vector3, bool>.Invoke
+	|
+	|-RVA: 0x1E83440 Offset: 0x1E83541 VA: 0x1E83440
+	|-Func<float3, bool>.Invoke
+	|
+	|-RVA: 0x1E837D0 Offset: 0x1E838D1 VA: 0x1E837D0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, KeyValuePair<int, object>>.Invoke
+	|
+	|-RVA: 0x1E83B20 Offset: 0x1E83C21 VA: 0x1E83B20
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask<object>>.Invoke
+	|
+	|-RVA: 0x1E83E70 Offset: 0x1E83F71 VA: 0x1E83E70
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, bool>.Invoke
+	|
+	|-RVA: 0x1E841C0 Offset: 0x1E842C1 VA: 0x1E841C0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, int>.Invoke
+	|
+	|-RVA: 0x1E84500 Offset: 0x1E84601 VA: 0x1E84500
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, object>.Invoke
+	|
+	|-RVA: 0x1E84820 Offset: 0x1E84921 VA: 0x1E84820
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T arg, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E71DE0 Offset: 0x1E71EE1 VA: 0x1E71DE0
+	|-Func<AsyncOperationHandle<object>, AsyncOperationHandle<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E72220 Offset: 0x1E72321 VA: 0x1E72220
+	|-Func<AsyncOperationHandle<SceneInstance>, AsyncOperationHandle<SceneInstance>>.BeginInvoke
+	|
+	|-RVA: 0x1E72590 Offset: 0x1E72691 VA: 0x1E72590
+	|-Func<KeyValuePair<int, object>, KeyValuePair<int, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E728E0 Offset: 0x1E729E1 VA: 0x1E728E0
+	|-Func<KeyValuePair<int, object>, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E72C20 Offset: 0x1E72D21 VA: 0x1E72C20
+	|-Func<KeyValuePair<object, int>, int>.BeginInvoke
+	|
+	|-RVA: 0x1E72F60 Offset: 0x1E73061 VA: 0x1E72F60
+	|-Func<KeyValuePair<object, int>, object>.BeginInvoke
+	|
+	|-RVA: 0x1E73290 Offset: 0x1E73391 VA: 0x1E73290
+	|-Func<KeyValuePair<object, object>, KeyValuePair<int, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E735E0 Offset: 0x1E736E1 VA: 0x1E735E0
+	|-Func<KeyValuePair<object, object>, UniTask<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E73930 Offset: 0x1E73A31 VA: 0x1E73930
+	|-Func<KeyValuePair<object, object>, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E73C70 Offset: 0x1E73D71 VA: 0x1E73C70
+	|-Func<KeyValuePair<object, object>, int>.BeginInvoke
+	|
+	|-RVA: 0x1E73FB0 Offset: 0x1E740B1 VA: 0x1E73FB0
+	|-Func<KeyValuePair<object, object>, object>.BeginInvoke
+	|
+	|-RVA: 0x1E742D0 Offset: 0x1E743D1 VA: 0x1E742D0
+	|-Func<KeyValuePair<object, object>, UniTask>.BeginInvoke
+	|
+	|-RVA: 0x1E74600 Offset: 0x1E74701 VA: 0x1E74600
+	|-Func<Pair<int>, Pair<int>>.BeginInvoke
+	|
+	|-RVA: 0x1E74950 Offset: 0x1E74A51 VA: 0x1E74950
+	|-Func<UniTask<object>, UniTask<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E74CA0 Offset: 0x1E74DA1 VA: 0x1E74CA0
+	|-Func<UniTask<object>, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E74FF0 Offset: 0x1E750F1 VA: 0x1E74FF0
+	|-Func<ValueTuple<object, object>, ValueTuple<object, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E75320 Offset: 0x1E75421 VA: 0x1E75320
+	|-Func<ValueTuple<float, int>, ValueTuple<float, int>>.BeginInvoke
+	|
+	|-RVA: 0x1E75650 Offset: 0x1E75751 VA: 0x1E75650
+	|-Func<ValueTuple<float, int>, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E75980 Offset: 0x1E75A81 VA: 0x1E75980
+	|-Func<ValueTuple<float, Int32Enum>, ValueTuple<float, Int32Enum>>.BeginInvoke
+	|
+	|-RVA: 0x1E75CB0 Offset: 0x1E75DB1 VA: 0x1E75CB0
+	|-Func<ValueTuple<float, Int32Enum>, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E760D0 Offset: 0x1E761D1 VA: 0x1E760D0
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<bool>>.BeginInvoke
+	|
+	|-RVA: 0x1E76510 Offset: 0x1E76611 VA: 0x1E76510
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<long>>.BeginInvoke
+	|
+	|-RVA: 0x1E76950 Offset: 0x1E76A51 VA: 0x1E76950
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E76D90 Offset: 0x1E76E91 VA: 0x1E76D90
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<SceneInstance>>.BeginInvoke
+	|
+	|-RVA: 0x1E770C0 Offset: 0x1E771C1 VA: 0x1E770C0
+	|-Func<bool, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E773E0 Offset: 0x1E774E1 VA: 0x1E773E0
+	|-Func<bool, object>.BeginInvoke
+	|
+	|-RVA: 0x1E77700 Offset: 0x1E77801 VA: 0x1E77700
+	|-Func<CancellationToken, object>.BeginInvoke
+	|
+	|-RVA: 0x1E779F0 Offset: 0x1E77AF1 VA: 0x1E779F0
+	|-Func<char, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E77D00 Offset: 0x1E77E01 VA: 0x1E77D00
+	|-Func<char, char>.BeginInvoke
+	|
+	|-RVA: 0x1E78080 Offset: 0x1E78181 VA: 0x1E78080
+	|-Func<Color, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E78490 Offset: 0x1E78591 VA: 0x1E78490
+	|-Func<ContourVertex, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E78890 Offset: 0x1E78991 VA: 0x1E78890
+	|-Func<ContourVertex, Color>.BeginInvoke
+	|
+	|-RVA: 0x1E78C90 Offset: 0x1E78D91 VA: 0x1E78C90
+	|-Func<ContourVertex, Vector3>.BeginInvoke
+	|
+	|-RVA: 0x1E79090 Offset: 0x1E79191 VA: 0x1E79090
+	|-Func<ContourVertex, float3>.BeginInvoke
+	|
+	|-RVA: 0x1E794D0 Offset: 0x1E795D1 VA: 0x1E794D0
+	|-Func<DiagnosticEvent, int>.BeginInvoke
+	|
+	|-RVA: 0x1E797F0 Offset: 0x1E798F1 VA: 0x1E797F0
+	|-Func<double, double>.BeginInvoke
+	|
+	|-RVA: 0x1E79B00 Offset: 0x1E79C01 VA: 0x1E79B00
+	|-Func<int, KeyValuePair<int, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E79E10 Offset: 0x1E79F11 VA: 0x1E79E10
+	|-Func<int, UniTask<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E7A120 Offset: 0x1E7A221 VA: 0x1E7A120
+	|-Func<int, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E7A430 Offset: 0x1E7A531 VA: 0x1E7A430
+	|-Func<int, int>.BeginInvoke
+	|
+	|-RVA: 0x1E7A740 Offset: 0x1E7A841 VA: 0x1E7A740
+	|-Func<int, object>.BeginInvoke
+	|
+	|-RVA: 0x1E7AA30 Offset: 0x1E7AB31 VA: 0x1E7AA30
+	|-Func<int, UniTask>.BeginInvoke
+	|
+	|-RVA: 0x1E7AD70 Offset: 0x1E7AE71 VA: 0x1E7AD70
+	|-Func<Int32Enum, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E7B080 Offset: 0x1E7B181 VA: 0x1E7B080
+	|-Func<long, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E7B390 Offset: 0x1E7B491 VA: 0x1E7B390
+	|-Func<long, long>.BeginInvoke
+	|
+	|-RVA: 0x1E7B6A0 Offset: 0x1E7B7A1 VA: 0x1E7B6A0
+	|-Func<long, object>.BeginInvoke
+	|
+	|-RVA: 0x1E7BAC0 Offset: 0x1E7BBC1 VA: 0x1E7BAC0
+	|-Func<object, KeyValuePair<int, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E7BEA0 Offset: 0x1E7BFA1 VA: 0x1E7BEA0
+	|-Func<object, Nullable<int>>.BeginInvoke
+	|
+	|-RVA: 0x1E7C280 Offset: 0x1E7C381 VA: 0x1E7C280
+	|-Func<object, UniTask<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E7C660 Offset: 0x1E7C761 VA: 0x1E7C660
+	|-Func<object, ValueTuple<bool, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E7CA40 Offset: 0x1E7CB41 VA: 0x1E7CA40
+	|-Func<object, ValueTuple<int, int>>.BeginInvoke
+	|
+	|-RVA: 0x1E7CE40 Offset: 0x1E7CF41 VA: 0x1E7CE40
+	|-Func<object, ValueTuple<object, object, int>>.BeginInvoke
+	|
+	|-RVA: 0x1E7D260 Offset: 0x1E7D361 VA: 0x1E7D260
+	|-Func<object, ValueTuple<object, bool, bool, object, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E7D660 Offset: 0x1E7D761 VA: 0x1E7D660
+	|-Func<object, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E7DA40 Offset: 0x1E7DB41 VA: 0x1E7DA40
+	|-Func<object, int>.BeginInvoke
+	|
+	|-RVA: 0x1E7DE20 Offset: 0x1E7DF21 VA: 0x1E7DE20
+	|-Func<object, long>.BeginInvoke
+	|
+	|-RVA: 0x1E7E200 Offset: 0x1E7E301 VA: 0x1E7E200
+	|-Func<object, object>.BeginInvoke
+	|
+	|-RVA: 0x1E7E5C0 Offset: 0x1E7E6C1 VA: 0x1E7E5C0
+	|-Func<object, SceneInstance>.BeginInvoke
+	|
+	|-RVA: 0x1E7E9A0 Offset: 0x1E7EAA1 VA: 0x1E7E9A0
+	|-Func<object, float>.BeginInvoke
+	|
+	|-RVA: 0x1E7ED80 Offset: 0x1E7EE81 VA: 0x1E7ED80
+	|-Func<object, uint>.BeginInvoke
+	|
+	|-RVA: 0x1E7F160 Offset: 0x1E7F261 VA: 0x1E7F160
+	|-Func<object, ulong>.BeginInvoke
+	|
+	|-RVA: 0x1E7F540 Offset: 0x1E7F641 VA: 0x1E7F540
+	|-Func<object, UniTask>.BeginInvoke
+	|
+	|-RVA: 0x1E7F930 Offset: 0x1E7FA31 VA: 0x1E7F930
+	|-Func<object, Unit>.BeginInvoke
+	|
+	|-RVA: 0x1E7FD20 Offset: 0x1E7FE21 VA: 0x1E7FD20
+	|-Func<object, VoidTaskResult>.BeginInvoke
+	|
+	|-RVA: 0x1E7FFE0 Offset: 0x1E800E1 VA: 0x1E7FFE0
+	|-Func<float, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E80300 Offset: 0x1E80401 VA: 0x1E80300
+	|-Func<float, float>.BeginInvoke
+	|
+	|-RVA: 0x1E80650 Offset: 0x1E80751 VA: 0x1E80650
+	|-Func<TablePair, KeyValuePair<int, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E809A0 Offset: 0x1E80AA1 VA: 0x1E809A0
+	|-Func<TablePair, UniTask<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E80CF0 Offset: 0x1E80DF1 VA: 0x1E80CF0
+	|-Func<TablePair, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E81030 Offset: 0x1E81131 VA: 0x1E81030
+	|-Func<TablePair, int>.BeginInvoke
+	|
+	|-RVA: 0x1E81370 Offset: 0x1E81471 VA: 0x1E81370
+	|-Func<TablePair, object>.BeginInvoke
+	|
+	|-RVA: 0x1E816A0 Offset: 0x1E817A1 VA: 0x1E816A0
+	|-Func<TablePair, TablePair>.BeginInvoke
+	|
+	|-RVA: 0x1E819E0 Offset: 0x1E81AE1 VA: 0x1E819E0
+	|-Func<TablePair, UniTask>.BeginInvoke
+	|
+	|-RVA: 0x1E81CF0 Offset: 0x1E81DF1 VA: 0x1E81CF0
+	|-Func<ulong, object>.BeginInvoke
+	|
+	|-RVA: 0x1E81FE0 Offset: 0x1E820E1 VA: 0x1E81FE0
+	|-Func<ulong, ulong>.BeginInvoke
+	|
+	|-RVA: 0x1E82310 Offset: 0x1E82411 VA: 0x1E82310
+	|-Func<UniTask, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E82640 Offset: 0x1E82741 VA: 0x1E82640
+	|-Func<UniTask, UniTask>.BeginInvoke
+	|
+	|-RVA: 0x1E82980 Offset: 0x1E82A81 VA: 0x1E82980
+	|-Func<Unit, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E82CB0 Offset: 0x1E82DB1 VA: 0x1E82CB0
+	|-Func<Unit, object>.BeginInvoke
+	|
+	|-RVA: 0x1E82FD0 Offset: 0x1E830D1 VA: 0x1E82FD0
+	|-Func<Unit, Unit>.BeginInvoke
+	|
+	|-RVA: 0x1E83350 Offset: 0x1E83451 VA: 0x1E83350
+	|-Func<Vector3, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E836E0 Offset: 0x1E837E1 VA: 0x1E836E0
+	|-Func<float3, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E83A40 Offset: 0x1E83B41 VA: 0x1E83A40
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, KeyValuePair<int, object>>.BeginInvoke
+	|
+	|-RVA: 0x1E83D90 Offset: 0x1E83E91 VA: 0x1E83D90
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask<object>>.BeginInvoke
+	|
+	|-RVA: 0x1E840E0 Offset: 0x1E841E1 VA: 0x1E840E0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, bool>.BeginInvoke
+	|
+	|-RVA: 0x1E84420 Offset: 0x1E84521 VA: 0x1E84420
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, int>.BeginInvoke
+	|
+	|-RVA: 0x1E84760 Offset: 0x1E84861 VA: 0x1E84760
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, object>.BeginInvoke
+	|
+	|-RVA: 0x1E84A80 Offset: 0x1E84B81 VA: 0x1E84A80
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E71E70 Offset: 0x1E71F71 VA: 0x1E71E70
+	|-Func<AsyncOperationHandle<object>, AsyncOperationHandle<object>>.EndInvoke
+	|
+	|-RVA: 0x1E722B0 Offset: 0x1E723B1 VA: 0x1E722B0
+	|-Func<AsyncOperationHandle<SceneInstance>, AsyncOperationHandle<SceneInstance>>.EndInvoke
+	|
+	|-RVA: 0x1E72620 Offset: 0x1E72721 VA: 0x1E72620
+	|-Func<KeyValuePair<int, object>, KeyValuePair<int, object>>.EndInvoke
+	|
+	|-RVA: 0x1E72970 Offset: 0x1E72A71 VA: 0x1E72970
+	|-Func<KeyValuePair<int, object>, bool>.EndInvoke
+	|
+	|-RVA: 0x1E72CB0 Offset: 0x1E72DB1 VA: 0x1E72CB0
+	|-Func<KeyValuePair<object, int>, int>.EndInvoke
+	|
+	|-RVA: 0x1E72FF0 Offset: 0x1E730F1 VA: 0x1E72FF0
+	|-Func<KeyValuePair<object, int>, object>.EndInvoke
+	|
+	|-RVA: 0x1E73320 Offset: 0x1E73421 VA: 0x1E73320
+	|-Func<KeyValuePair<object, object>, KeyValuePair<int, object>>.EndInvoke
+	|
+	|-RVA: 0x1E73670 Offset: 0x1E73771 VA: 0x1E73670
+	|-Func<KeyValuePair<object, object>, UniTask<object>>.EndInvoke
+	|
+	|-RVA: 0x1E739C0 Offset: 0x1E73AC1 VA: 0x1E739C0
+	|-Func<KeyValuePair<object, object>, bool>.EndInvoke
+	|
+	|-RVA: 0x1E73D00 Offset: 0x1E73E01 VA: 0x1E73D00
+	|-Func<KeyValuePair<object, object>, int>.EndInvoke
+	|
+	|-RVA: 0x1E74040 Offset: 0x1E74141 VA: 0x1E74040
+	|-Func<KeyValuePair<object, object>, object>.EndInvoke
+	|
+	|-RVA: 0x1E74360 Offset: 0x1E74461 VA: 0x1E74360
+	|-Func<KeyValuePair<object, object>, UniTask>.EndInvoke
+	|
+	|-RVA: 0x1E74690 Offset: 0x1E74791 VA: 0x1E74690
+	|-Func<Pair<int>, Pair<int>>.EndInvoke
+	|
+	|-RVA: 0x1E749E0 Offset: 0x1E74AE1 VA: 0x1E749E0
+	|-Func<UniTask<object>, UniTask<object>>.EndInvoke
+	|
+	|-RVA: 0x1E74D30 Offset: 0x1E74E31 VA: 0x1E74D30
+	|-Func<UniTask<object>, bool>.EndInvoke
+	|
+	|-RVA: 0x1E75080 Offset: 0x1E75181 VA: 0x1E75080
+	|-Func<ValueTuple<object, object>, ValueTuple<object, object>>.EndInvoke
+	|
+	|-RVA: 0x1E753B0 Offset: 0x1E754B1 VA: 0x1E753B0
+	|-Func<ValueTuple<float, int>, ValueTuple<float, int>>.EndInvoke
+	|
+	|-RVA: 0x1E756E0 Offset: 0x1E757E1 VA: 0x1E756E0
+	|-Func<ValueTuple<float, int>, bool>.EndInvoke
+	|
+	|-RVA: 0x1E75A10 Offset: 0x1E75B11 VA: 0x1E75A10
+	|-Func<ValueTuple<float, Int32Enum>, ValueTuple<float, Int32Enum>>.EndInvoke
+	|
+	|-RVA: 0x1E75D40 Offset: 0x1E75E41 VA: 0x1E75D40
+	|-Func<ValueTuple<float, Int32Enum>, bool>.EndInvoke
+	|
+	|-RVA: 0x1E76160 Offset: 0x1E76261 VA: 0x1E76160
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<bool>>.EndInvoke
+	|
+	|-RVA: 0x1E765A0 Offset: 0x1E766A1 VA: 0x1E765A0
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<long>>.EndInvoke
+	|
+	|-RVA: 0x1E769E0 Offset: 0x1E76AE1 VA: 0x1E769E0
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<object>>.EndInvoke
+	|
+	|-RVA: 0x1E76E20 Offset: 0x1E76F21 VA: 0x1E76E20
+	|-Func<AsyncOperationHandle, AsyncOperationHandle<SceneInstance>>.EndInvoke
+	|
+	|-RVA: 0x1E77160 Offset: 0x1E77261 VA: 0x1E77160
+	|-Func<bool, bool>.EndInvoke
+	|
+	|-RVA: 0x1E77480 Offset: 0x1E77581 VA: 0x1E77480
+	|-Func<bool, object>.EndInvoke
+	|
+	|-RVA: 0x1E77790 Offset: 0x1E77891 VA: 0x1E77790
+	|-Func<CancellationToken, object>.EndInvoke
+	|
+	|-RVA: 0x1E77A80 Offset: 0x1E77B81 VA: 0x1E77A80
+	|-Func<char, bool>.EndInvoke
+	|
+	|-RVA: 0x1E77D90 Offset: 0x1E77E91 VA: 0x1E77D90
+	|-Func<char, char>.EndInvoke
+	|
+	|-RVA: 0x1E78120 Offset: 0x1E78221 VA: 0x1E78120
+	|-Func<Color, bool>.EndInvoke
+	|
+	|-RVA: 0x1E78520 Offset: 0x1E78621 VA: 0x1E78520
+	|-Func<ContourVertex, bool>.EndInvoke
+	|
+	|-RVA: 0x1E78920 Offset: 0x1E78A21 VA: 0x1E78920
+	|-Func<ContourVertex, Color>.EndInvoke
+	|
+	|-RVA: 0x1E78D20 Offset: 0x1E78E21 VA: 0x1E78D20
+	|-Func<ContourVertex, Vector3>.EndInvoke
+	|
+	|-RVA: 0x1E79120 Offset: 0x1E79221 VA: 0x1E79120
+	|-Func<ContourVertex, float3>.EndInvoke
+	|
+	|-RVA: 0x1E79560 Offset: 0x1E79661 VA: 0x1E79560
+	|-Func<DiagnosticEvent, int>.EndInvoke
+	|
+	|-RVA: 0x1E79880 Offset: 0x1E79981 VA: 0x1E79880
+	|-Func<double, double>.EndInvoke
+	|
+	|-RVA: 0x1E79B90 Offset: 0x1E79C91 VA: 0x1E79B90
+	|-Func<int, KeyValuePair<int, object>>.EndInvoke
+	|
+	|-RVA: 0x1E79EA0 Offset: 0x1E79FA1 VA: 0x1E79EA0
+	|-Func<int, UniTask<object>>.EndInvoke
+	|
+	|-RVA: 0x1E7A1B0 Offset: 0x1E7A2B1 VA: 0x1E7A1B0
+	|-Func<int, bool>.EndInvoke
+	|
+	|-RVA: 0x1E7A4C0 Offset: 0x1E7A5C1 VA: 0x1E7A4C0
+	|-Func<int, int>.EndInvoke
+	|
+	|-RVA: 0x1E7A7D0 Offset: 0x1E7A8D1 VA: 0x1E7A7D0
+	|-Func<int, object>.EndInvoke
+	|
+	|-RVA: 0x1E7AAC0 Offset: 0x1E7ABC1 VA: 0x1E7AAC0
+	|-Func<int, UniTask>.EndInvoke
+	|
+	|-RVA: 0x1E7AE00 Offset: 0x1E7AF01 VA: 0x1E7AE00
+	|-Func<Int32Enum, bool>.EndInvoke
+	|
+	|-RVA: 0x1E7B110 Offset: 0x1E7B211 VA: 0x1E7B110
+	|-Func<long, bool>.EndInvoke
+	|
+	|-RVA: 0x1E7B420 Offset: 0x1E7B521 VA: 0x1E7B420
+	|-Func<long, long>.EndInvoke
+	|
+	|-RVA: 0x1E7B730 Offset: 0x1E7B831 VA: 0x1E7B730
+	|-Func<long, object>.EndInvoke
+	|
+	|-RVA: 0x1E7BAF0 Offset: 0x1E7BBF1 VA: 0x1E7BAF0
+	|-Func<object, KeyValuePair<int, object>>.EndInvoke
+	|
+	|-RVA: 0x1E7BED0 Offset: 0x1E7BFD1 VA: 0x1E7BED0
+	|-Func<object, Nullable<int>>.EndInvoke
+	|
+	|-RVA: 0x1E7C2B0 Offset: 0x1E7C3B1 VA: 0x1E7C2B0
+	|-Func<object, UniTask<object>>.EndInvoke
+	|
+	|-RVA: 0x1E7C690 Offset: 0x1E7C791 VA: 0x1E7C690
+	|-Func<object, ValueTuple<bool, object>>.EndInvoke
+	|
+	|-RVA: 0x1E7CA70 Offset: 0x1E7CB71 VA: 0x1E7CA70
+	|-Func<object, ValueTuple<int, int>>.EndInvoke
+	|
+	|-RVA: 0x1E7CE70 Offset: 0x1E7CF71 VA: 0x1E7CE70
+	|-Func<object, ValueTuple<object, object, int>>.EndInvoke
+	|
+	|-RVA: 0x1E7D290 Offset: 0x1E7D391 VA: 0x1E7D290
+	|-Func<object, ValueTuple<object, bool, bool, object, object>>.EndInvoke
+	|
+	|-RVA: 0x1E7D690 Offset: 0x1E7D791 VA: 0x1E7D690
+	|-Func<object, bool>.EndInvoke
+	|
+	|-RVA: 0x1E7DA70 Offset: 0x1E7DB71 VA: 0x1E7DA70
+	|-Func<object, int>.EndInvoke
+	|
+	|-RVA: 0x1E7DE50 Offset: 0x1E7DF51 VA: 0x1E7DE50
+	|-Func<object, long>.EndInvoke
+	|
+	|-RVA: 0x1E7E230 Offset: 0x1E7E331 VA: 0x1E7E230
+	|-Func<object, object>.EndInvoke
+	|
+	|-RVA: 0x1E7E5F0 Offset: 0x1E7E6F1 VA: 0x1E7E5F0
+	|-Func<object, SceneInstance>.EndInvoke
+	|
+	|-RVA: 0x1E7E9D0 Offset: 0x1E7EAD1 VA: 0x1E7E9D0
+	|-Func<object, float>.EndInvoke
+	|
+	|-RVA: 0x1E7EDB0 Offset: 0x1E7EEB1 VA: 0x1E7EDB0
+	|-Func<object, uint>.EndInvoke
+	|
+	|-RVA: 0x1E7F190 Offset: 0x1E7F291 VA: 0x1E7F190
+	|-Func<object, ulong>.EndInvoke
+	|
+	|-RVA: 0x1E7F570 Offset: 0x1E7F671 VA: 0x1E7F570
+	|-Func<object, UniTask>.EndInvoke
+	|
+	|-RVA: 0x1E7F960 Offset: 0x1E7FA61 VA: 0x1E7F960
+	|-Func<object, Unit>.EndInvoke
+	|
+	|-RVA: 0x1E7FD50 Offset: 0x1E7FE51 VA: 0x1E7FD50
+	|-Func<object, VoidTaskResult>.EndInvoke
+	|
+	|-RVA: 0x1E80070 Offset: 0x1E80171 VA: 0x1E80070
+	|-Func<float, bool>.EndInvoke
+	|
+	|-RVA: 0x1E80390 Offset: 0x1E80491 VA: 0x1E80390
+	|-Func<float, float>.EndInvoke
+	|
+	|-RVA: 0x1E806E0 Offset: 0x1E807E1 VA: 0x1E806E0
+	|-Func<TablePair, KeyValuePair<int, object>>.EndInvoke
+	|
+	|-RVA: 0x1E80A30 Offset: 0x1E80B31 VA: 0x1E80A30
+	|-Func<TablePair, UniTask<object>>.EndInvoke
+	|
+	|-RVA: 0x1E80D80 Offset: 0x1E80E81 VA: 0x1E80D80
+	|-Func<TablePair, bool>.EndInvoke
+	|
+	|-RVA: 0x1E810C0 Offset: 0x1E811C1 VA: 0x1E810C0
+	|-Func<TablePair, int>.EndInvoke
+	|
+	|-RVA: 0x1E81400 Offset: 0x1E81501 VA: 0x1E81400
+	|-Func<TablePair, object>.EndInvoke
+	|
+	|-RVA: 0x1E81730 Offset: 0x1E81831 VA: 0x1E81730
+	|-Func<TablePair, TablePair>.EndInvoke
+	|
+	|-RVA: 0x1E81A70 Offset: 0x1E81B71 VA: 0x1E81A70
+	|-Func<TablePair, UniTask>.EndInvoke
+	|
+	|-RVA: 0x1E81D80 Offset: 0x1E81E81 VA: 0x1E81D80
+	|-Func<ulong, object>.EndInvoke
+	|
+	|-RVA: 0x1E82070 Offset: 0x1E82171 VA: 0x1E82070
+	|-Func<ulong, ulong>.EndInvoke
+	|
+	|-RVA: 0x1E823A0 Offset: 0x1E824A1 VA: 0x1E823A0
+	|-Func<UniTask, bool>.EndInvoke
+	|
+	|-RVA: 0x1E826D0 Offset: 0x1E827D1 VA: 0x1E826D0
+	|-Func<UniTask, UniTask>.EndInvoke
+	|
+	|-RVA: 0x1E82A10 Offset: 0x1E82B11 VA: 0x1E82A10
+	|-Func<Unit, bool>.EndInvoke
+	|
+	|-RVA: 0x1E82D40 Offset: 0x1E82E41 VA: 0x1E82D40
+	|-Func<Unit, object>.EndInvoke
+	|
+	|-RVA: 0x1E83060 Offset: 0x1E83161 VA: 0x1E83060
+	|-Func<Unit, Unit>.EndInvoke
+	|
+	|-RVA: 0x1E833F0 Offset: 0x1E834F1 VA: 0x1E833F0
+	|-Func<Vector3, bool>.EndInvoke
+	|
+	|-RVA: 0x1E83780 Offset: 0x1E83881 VA: 0x1E83780
+	|-Func<float3, bool>.EndInvoke
+	|
+	|-RVA: 0x1E83AD0 Offset: 0x1E83BD1 VA: 0x1E83AD0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, KeyValuePair<int, object>>.EndInvoke
+	|
+	|-RVA: 0x1E83E20 Offset: 0x1E83F21 VA: 0x1E83E20
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask<object>>.EndInvoke
+	|
+	|-RVA: 0x1E84170 Offset: 0x1E84271 VA: 0x1E84170
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, bool>.EndInvoke
+	|
+	|-RVA: 0x1E844B0 Offset: 0x1E845B1 VA: 0x1E844B0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, int>.EndInvoke
+	|
+	|-RVA: 0x1E847F0 Offset: 0x1E848F1 VA: 0x1E847F0
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, object>.EndInvoke
+	|
+	|-RVA: 0x1E84B10 Offset: 0x1E84C11 VA: 0x1E84B10
+	|-Func<AssetBundleBuildMap.AssetBundleEntry.AssetPathString, UniTask>.EndInvoke
+	*/
+}
+
+// Namespace: System
 [TypeForwardedFromAttribute] // RVA: 0x46FAF0 Offset: 0x46FBF1 VA: 0x46FAF0
 public sealed class Func<T1, T2, TResult> : MulticastDelegate // TypeDefIndex: 148
 {
@@ -2291,6 +3536,64 @@ public sealed class Func<T1, T2, TResult> : MulticastDelegate // TypeDefIndex: 1
 }
 
 // Namespace: System
+[TypeForwardedFromAttribute] // RVA: 0x46FB30 Offset: 0x46FC31 VA: 0x46FB30
+public sealed class Func<T1, T2, T3, TResult> : MulticastDelegate // TypeDefIndex: 149
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8A800 Offset: 0x1E8A901 VA: 0x1E8A800
+	|-Func<Assembly, string, bool, Type>..ctor
+	|-Func<object, object, bool, object>..ctor
+	|
+	|-RVA: 0x1E8AC80 Offset: 0x1E8AD81 VA: 0x1E8AC80
+	|-Func<EndPoint, AsyncCallback, object, IAsyncResult>..ctor
+	|-Func<object, object, object, object>..ctor
+	|-Func<object, ScriptExecutionContext, CallbackArguments, DynValue>..ctor
+	|-Func<object, ScriptExecutionContext, CallbackArguments, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8A820 Offset: 0x1E8A921 VA: 0x1E8A820
+	|-Func<Assembly, string, bool, Type>.Invoke
+	|-Func<object, object, bool, object>.Invoke
+	|
+	|-RVA: 0x1E8ACA0 Offset: 0x1E8ADA1 VA: 0x1E8ACA0
+	|-Func<object, object, object, object>.Invoke
+	|-Func<object, ScriptExecutionContext, CallbackArguments, DynValue>.Invoke
+	|-Func<object, ScriptExecutionContext, CallbackArguments, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8ABC0 Offset: 0x1E8ACC1 VA: 0x1E8ABC0
+	|-Func<object, object, bool, object>.BeginInvoke
+	|
+	|-RVA: 0x1E8B040 Offset: 0x1E8B141 VA: 0x1E8B040
+	|-Func<object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8AC70 Offset: 0x1E8AD71 VA: 0x1E8AC70
+	|-Func<object, object, bool, object>.EndInvoke
+	|
+	|-RVA: 0x1E8B070 Offset: 0x1E8B171 VA: 0x1E8B070
+	|-Func<object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
 [TypeForwardedFromAttribute] // RVA: 0x46FB70 Offset: 0x46FC71 VA: 0x46FB70
 public sealed class Func<T1, T2, T3, T4, TResult> : MulticastDelegate // TypeDefIndex: 150
 {
@@ -2392,6 +3695,44 @@ public sealed class Func<T1, T2, T3, T4, TResult> : MulticastDelegate // TypeDef
 }
 
 // Namespace: System
+public sealed class Func<T1, T2, T3, T4, T5, TResult> : MulticastDelegate // TypeDefIndex: 155
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8CC60 Offset: 0x1E8CD61 VA: 0x1E8CC60
+	|-Func<object, object, object, object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8CC80 Offset: 0x1E8CD81 VA: 0x1E8CC80
+	|-Func<object, object, object, object, object, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8D060 Offset: 0x1E8D161 VA: 0x1E8D060
+	|-Func<object, object, object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8D0A0 Offset: 0x1E8D1A1 VA: 0x1E8D0A0
+	|-Func<object, object, object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
 public sealed class Func<T1, T2, T3, T4, T5, T6, TResult> : MulticastDelegate // TypeDefIndex: 156
 {
 	// Methods
@@ -2426,6 +3767,44 @@ public sealed class Func<T1, T2, T3, T4, T5, T6, TResult> : MulticastDelegate //
 	|
 	|-RVA: 0x1E8D4F0 Offset: 0x1E8D5F1 VA: 0x1E8D4F0
 	|-Func<object, object, object, object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
+public sealed class Func<T1, T2, T3, T4, T5, T6, T7, TResult> : MulticastDelegate // TypeDefIndex: 157
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8D500 Offset: 0x1E8D601 VA: 0x1E8D500
+	|-Func<object, object, object, object, object, object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8D520 Offset: 0x1E8D621 VA: 0x1E8D520
+	|-Func<object, object, object, object, object, object, object, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8D920 Offset: 0x1E8DA21 VA: 0x1E8D920
+	|-Func<object, object, object, object, object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E8D960 Offset: 0x1E8DA61 VA: 0x1E8D960
+	|-Func<object, object, object, object, object, object, object, object>.EndInvoke
 	*/
 }
 
@@ -2468,6 +3847,44 @@ public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> : MulticastDel
 }
 
 // Namespace: System
+public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult> : MulticastDelegate // TypeDefIndex: 2711
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6F270 Offset: 0x1E6F371 VA: 0x1E6F270
+	|-Func<object, object, object, object, object, object, object, object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6F290 Offset: 0x1E6F391 VA: 0x1E6F290
+	|-Func<object, object, object, object, object, object, object, object, object, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6F6A0 Offset: 0x1E6F7A1 VA: 0x1E6F6A0
+	|-Func<object, object, object, object, object, object, object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6F6E0 Offset: 0x1E6F7E1 VA: 0x1E6F6E0
+	|-Func<object, object, object, object, object, object, object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
 public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult> : MulticastDelegate // TypeDefIndex: 2712
 {
 	// Methods
@@ -2502,6 +3919,44 @@ public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult> : Mul
 	|
 	|-RVA: 0x1E6FB60 Offset: 0x1E6FC61 VA: 0x1E6FB60
 	|-Func<object, object, object, object, object, object, object, object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
+public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult> : MulticastDelegate // TypeDefIndex: 2713
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6FB70 Offset: 0x1E6FC71 VA: 0x1E6FB70
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6FB90 Offset: 0x1E6FC91 VA: 0x1E6FB90
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E6FFC0 Offset: 0x1E700C1 VA: 0x1E6FFC0
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E70010 Offset: 0x1E70111 VA: 0x1E70010
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object>.EndInvoke
 	*/
 }
 
@@ -2544,6 +3999,44 @@ public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TRes
 }
 
 // Namespace: System
+public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult> : MulticastDelegate // TypeDefIndex: 2715
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E704E0 Offset: 0x1E705E1 VA: 0x1E704E0
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E70500 Offset: 0x1E70601 VA: 0x1E70500
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E70980 Offset: 0x1E70A81 VA: 0x1E70980
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E709D0 Offset: 0x1E70AD1 VA: 0x1E709D0
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
 public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult> : MulticastDelegate // TypeDefIndex: 2716
 {
 	// Methods
@@ -2578,6 +4071,44 @@ public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13,
 	|
 	|-RVA: 0x1E70F20 Offset: 0x1E71021 VA: 0x1E70F20
 	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object>.EndInvoke
+	*/
+}
+
+// Namespace: System
+public sealed class Func<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult> : MulticastDelegate // TypeDefIndex: 2717
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E70F30 Offset: 0x1E71031 VA: 0x1E70F30
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual TResult Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E70F50 Offset: 0x1E71051 VA: 0x1E70F50
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E71440 Offset: 0x1E71541 VA: 0x1E71440
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual TResult EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1E714A0 Offset: 0x1E715A1 VA: 0x1E714A0
+	|-Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object>.EndInvoke
 	*/
 }
 

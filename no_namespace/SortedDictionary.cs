@@ -171,6 +171,103 @@ public struct SortedDictionary.Enumerator<TKey, TValue> : IEnumerator<KeyValuePa
 }
 
 // Namespace: 
+public struct SortedDictionary.KeyCollection.Enumerator<TKey, TValue> : IEnumerator<TKey>, IDisposable, IEnumerator // TypeDefIndex: 2419
+{
+	// Fields
+	private SortedDictionary.Enumerator<TKey, TValue> _dictEnum; // 0x0
+
+	// Properties
+	public TKey Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	internal void .ctor(SortedDictionary<TKey, TValue> dictionary) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x349F5A0 Offset: 0x349F6A1 VA: 0x349F5A0
+	|-SortedDictionary.KeyCollection.Enumerator<int, bool>..ctor
+	|
+	|-RVA: 0x34A3ED0 Offset: 0x34A3FD1 VA: 0x34A3ED0
+	|-SortedDictionary.KeyCollection.Enumerator<int, int>..ctor
+	|
+	|-RVA: 0x35D6240 Offset: 0x35D6341 VA: 0x35D6240
+	|-SortedDictionary.KeyCollection.Enumerator<object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x349F660 Offset: 0x349F761 VA: 0x349F660
+	|-SortedDictionary.KeyCollection.Enumerator<int, bool>.Dispose
+	|
+	|-RVA: 0x34A3F90 Offset: 0x34A4091 VA: 0x34A3F90
+	|-SortedDictionary.KeyCollection.Enumerator<int, int>.Dispose
+	|
+	|-RVA: 0x35D6300 Offset: 0x35D6401 VA: 0x35D6300
+	|-SortedDictionary.KeyCollection.Enumerator<object, object>.Dispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public bool MoveNext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x349F6C0 Offset: 0x349F7C1 VA: 0x349F6C0
+	|-SortedDictionary.KeyCollection.Enumerator<int, bool>.MoveNext
+	|
+	|-RVA: 0x34A3FF0 Offset: 0x34A40F1 VA: 0x34A3FF0
+	|-SortedDictionary.KeyCollection.Enumerator<int, int>.MoveNext
+	|
+	|-RVA: 0x35D6360 Offset: 0x35D6461 VA: 0x35D6360
+	|-SortedDictionary.KeyCollection.Enumerator<object, object>.MoveNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public TKey get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x349F720 Offset: 0x349F821 VA: 0x349F720
+	|-SortedDictionary.KeyCollection.Enumerator<int, bool>.get_Current
+	|
+	|-RVA: 0x34A4050 Offset: 0x34A4151 VA: 0x34A4050
+	|-SortedDictionary.KeyCollection.Enumerator<int, int>.get_Current
+	|
+	|-RVA: 0x35D63C0 Offset: 0x35D64C1 VA: 0x35D63C0
+	|-SortedDictionary.KeyCollection.Enumerator<object, object>.get_Current
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x349F7A0 Offset: 0x349F8A1 VA: 0x349F7A0
+	|-SortedDictionary.KeyCollection.Enumerator<int, bool>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x34A40D0 Offset: 0x34A41D1 VA: 0x34A40D0
+	|-SortedDictionary.KeyCollection.Enumerator<int, int>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x35D6440 Offset: 0x35D6541 VA: 0x35D6440
+	|-SortedDictionary.KeyCollection.Enumerator<object, object>.System.Collections.IEnumerator.get_Current
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x349F930 Offset: 0x349FA31 VA: 0x349F930
+	|-SortedDictionary.KeyCollection.Enumerator<int, bool>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x34A4260 Offset: 0x34A4361 VA: 0x34A4260
+	|-SortedDictionary.KeyCollection.Enumerator<int, int>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x35D6570 Offset: 0x35D6671 VA: 0x35D6570
+	|-SortedDictionary.KeyCollection.Enumerator<object, object>.System.Collections.IEnumerator.Reset
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x30BB0 Offset: 0x30CB1 VA: 0x30BB0
 private sealed class SortedDictionary.KeyCollection.<>c__DisplayClass5_0<TKey, TValue> // TypeDefIndex: 2420
 {
@@ -210,6 +307,30 @@ private sealed class SortedDictionary.KeyCollection.<>c__DisplayClass5_0<TKey, T
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x30BC0 Offset: 0x30CC1 VA: 0x30BC0
+private sealed class SortedDictionary.KeyCollection.<>c__DisplayClass6_0<TKey, TValue> // TypeDefIndex: 2421
+{
+	// Fields
+	public int index; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3F0B0 Offset: 0x2B3F1B1 VA: 0x2B3F0B0
+	|-SortedDictionary.KeyCollection.<>c__DisplayClass6_0<int, bool>..ctor
+	|
+	|-RVA: 0x2B3F0D0 Offset: 0x2B3F1D1 VA: 0x2B3F0D0
+	|-SortedDictionary.KeyCollection.<>c__DisplayClass6_0<int, int>..ctor
+	|
+	|-RVA: 0x2B3F0F0 Offset: 0x2B3F1F1 VA: 0x2B3F0F0
+	|-SortedDictionary.KeyCollection.<>c__DisplayClass6_0<object, object>..ctor
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x30BD0 Offset: 0x30CD1 VA: 0x30BD0
 private sealed class SortedDictionary.KeyCollection.<>c__DisplayClass6_1<TKey, TValue> // TypeDefIndex: 2422
 {
@@ -245,6 +366,206 @@ private sealed class SortedDictionary.KeyCollection.<>c__DisplayClass6_1<TKey, T
 	|
 	|-RVA: 0x2B3FCA0 Offset: 0x2B3FDA1 VA: 0x2B3FCA0
 	|-SortedDictionary.KeyCollection.<>c__DisplayClass6_1<object, object>.<System.Collections.ICollection.CopyTo>b__0
+	*/
+}
+
+// Namespace: 
+[DebuggerTypeProxyAttribute] // RVA: 0x30B20 Offset: 0x30C21 VA: 0x30B20
+[DebuggerDisplayAttribute] // RVA: 0x30B20 Offset: 0x30C21 VA: 0x30B20
+[Serializable]
+public sealed class SortedDictionary.KeyCollection<TKey, TValue> : ICollection<TKey>, IEnumerable<TKey>, IEnumerable, ICollection, IReadOnlyCollection<TKey> // TypeDefIndex: 2423
+{
+	// Fields
+	private SortedDictionary<TKey, TValue> _dictionary; // 0x0
+
+	// Properties
+	public int Count { get; }
+	private bool System.Collections.Generic.ICollection<TKey>.IsReadOnly { get; }
+	private bool System.Collections.ICollection.IsSynchronized { get; }
+	private object System.Collections.ICollection.SyncRoot { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(SortedDictionary<TKey, TValue> dictionary) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F82C60 Offset: 0x2F82D61 VA: 0x2F82C60
+	|-SortedDictionary.KeyCollection<int, bool>..ctor
+	|
+	|-RVA: 0x2F85EE0 Offset: 0x2F85FE1 VA: 0x2F85EE0
+	|-SortedDictionary.KeyCollection<int, int>..ctor
+	|
+	|-RVA: 0x288F2E0 Offset: 0x288F3E1 VA: 0x288F2E0
+	|-SortedDictionary.KeyCollection<object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 11
+	private IEnumerator<TKey> System.Collections.Generic.IEnumerable<TKey>.GetEnumerator() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F82CE0 Offset: 0x2F82DE1 VA: 0x2F82CE0
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.Generic.IEnumerable<TKey>.GetEnumerator
+	|
+	|-RVA: 0x2F85F60 Offset: 0x2F86061 VA: 0x2F85F60
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.Generic.IEnumerable<TKey>.GetEnumerator
+	|
+	|-RVA: 0x288F360 Offset: 0x288F461 VA: 0x288F360
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.Generic.IEnumerable<TKey>.GetEnumerator
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 12
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F82D70 Offset: 0x2F82E71 VA: 0x2F82D70
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.IEnumerable.GetEnumerator
+	|
+	|-RVA: 0x2F85FF0 Offset: 0x2F860F1 VA: 0x2F85FF0
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.IEnumerable.GetEnumerator
+	|
+	|-RVA: 0x288F3F0 Offset: 0x288F4F1 VA: 0x288F3F0
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.IEnumerable.GetEnumerator
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public void CopyTo(TKey[] array, int index) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F82E00 Offset: 0x2F82F01 VA: 0x2F82E00
+	|-SortedDictionary.KeyCollection<int, bool>.CopyTo
+	|
+	|-RVA: 0x2F86080 Offset: 0x2F86181 VA: 0x2F86080
+	|-SortedDictionary.KeyCollection<int, int>.CopyTo
+	|
+	|-RVA: 0x288F480 Offset: 0x288F581 VA: 0x288F480
+	|-SortedDictionary.KeyCollection<object, object>.CopyTo
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	private void System.Collections.ICollection.CopyTo(Array array, int index) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F83020 Offset: 0x2F83121 VA: 0x2F83020
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.ICollection.CopyTo
+	|
+	|-RVA: 0x2F862A0 Offset: 0x2F863A1 VA: 0x2F862A0
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.ICollection.CopyTo
+	|
+	|-RVA: 0x288F6A0 Offset: 0x288F7A1 VA: 0x288F6A0
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.ICollection.CopyTo
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 17
+	public int get_Count() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F83470 Offset: 0x2F83571 VA: 0x2F83470
+	|-SortedDictionary.KeyCollection<int, bool>.get_Count
+	|
+	|-RVA: 0x2F866F0 Offset: 0x2F867F1 VA: 0x2F866F0
+	|-SortedDictionary.KeyCollection<int, int>.get_Count
+	|
+	|-RVA: 0x288FAF0 Offset: 0x288FBF1 VA: 0x288FAF0
+	|-SortedDictionary.KeyCollection<object, object>.get_Count
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	private bool System.Collections.Generic.ICollection<TKey>.get_IsReadOnly() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F83490 Offset: 0x2F83591 VA: 0x2F83490
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.Generic.ICollection<TKey>.get_IsReadOnly
+	|
+	|-RVA: 0x2F86710 Offset: 0x2F86811 VA: 0x2F86710
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.Generic.ICollection<TKey>.get_IsReadOnly
+	|
+	|-RVA: 0x288FB10 Offset: 0x288FC11 VA: 0x288FB10
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.Generic.ICollection<TKey>.get_IsReadOnly
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	private void System.Collections.Generic.ICollection<TKey>.Add(TKey item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F834A0 Offset: 0x2F835A1 VA: 0x2F834A0
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.Generic.ICollection<TKey>.Add
+	|
+	|-RVA: 0x2F86720 Offset: 0x2F86821 VA: 0x2F86720
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.Generic.ICollection<TKey>.Add
+	|
+	|-RVA: 0x288FB20 Offset: 0x288FC21 VA: 0x288FB20
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.Generic.ICollection<TKey>.Add
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 7
+	private void System.Collections.Generic.ICollection<TKey>.Clear() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F83500 Offset: 0x2F83601 VA: 0x2F83500
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.Generic.ICollection<TKey>.Clear
+	|
+	|-RVA: 0x2F86780 Offset: 0x2F86881 VA: 0x2F86780
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.Generic.ICollection<TKey>.Clear
+	|
+	|-RVA: 0x288FB80 Offset: 0x288FC81 VA: 0x288FB80
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.Generic.ICollection<TKey>.Clear
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	private bool System.Collections.Generic.ICollection<TKey>.Contains(TKey item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F83560 Offset: 0x2F83661 VA: 0x2F83560
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.Generic.ICollection<TKey>.Contains
+	|
+	|-RVA: 0x2F867E0 Offset: 0x2F868E1 VA: 0x2F867E0
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.Generic.ICollection<TKey>.Contains
+	|
+	|-RVA: 0x288FBE0 Offset: 0x288FCE1 VA: 0x288FBE0
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.Generic.ICollection<TKey>.Contains
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	private bool System.Collections.Generic.ICollection<TKey>.Remove(TKey item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F83580 Offset: 0x2F83681 VA: 0x2F83580
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.Generic.ICollection<TKey>.Remove
+	|
+	|-RVA: 0x2F86800 Offset: 0x2F86901 VA: 0x2F86800
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.Generic.ICollection<TKey>.Remove
+	|
+	|-RVA: 0x288FC00 Offset: 0x288FD01 VA: 0x288FC00
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.Generic.ICollection<TKey>.Remove
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 16
+	private bool System.Collections.ICollection.get_IsSynchronized() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F835E0 Offset: 0x2F836E1 VA: 0x2F835E0
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.ICollection.get_IsSynchronized
+	|
+	|-RVA: 0x2F86860 Offset: 0x2F86961 VA: 0x2F86860
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.ICollection.get_IsSynchronized
+	|
+	|-RVA: 0x288FC60 Offset: 0x288FD61 VA: 0x288FC60
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.ICollection.get_IsSynchronized
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	private object System.Collections.ICollection.get_SyncRoot() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F835F0 Offset: 0x2F836F1 VA: 0x2F835F0
+	|-SortedDictionary.KeyCollection<int, bool>.System.Collections.ICollection.get_SyncRoot
+	|
+	|-RVA: 0x2F86870 Offset: 0x2F86971 VA: 0x2F86870
+	|-SortedDictionary.KeyCollection<int, int>.System.Collections.ICollection.get_SyncRoot
+	|
+	|-RVA: 0x288FC70 Offset: 0x288FD71 VA: 0x288FC70
+	|-SortedDictionary.KeyCollection<object, object>.System.Collections.ICollection.get_SyncRoot
 	*/
 }
 
@@ -346,6 +667,45 @@ public struct SortedDictionary.ValueCollection.Enumerator<TKey, TValue> : IEnume
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x30C70 Offset: 0x30D71 VA: 0x30C70
+private sealed class SortedDictionary.ValueCollection.<>c__DisplayClass5_0<TKey, TValue> // TypeDefIndex: 2425
+{
+	// Fields
+	public TValue[] array; // 0x0
+	public int index; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3EDE0 Offset: 0x2B3EEE1 VA: 0x2B3EDE0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass5_0<int, bool>..ctor
+	|
+	|-RVA: 0x2B3EEF0 Offset: 0x2B3EFF1 VA: 0x2B3EEF0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass5_0<int, int>..ctor
+	|
+	|-RVA: 0x2B3EFF0 Offset: 0x2B3F0F1 VA: 0x2B3EFF0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass5_0<object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	internal bool <CopyTo>b__0(SortedSet.Node<KeyValuePair<TKey, TValue>> node) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3EDF0 Offset: 0x2B3EEF1 VA: 0x2B3EDF0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass5_0<int, bool>.<CopyTo>b__0
+	|
+	|-RVA: 0x2B3EF00 Offset: 0x2B3F001 VA: 0x2B3EF00
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass5_0<int, int>.<CopyTo>b__0
+	|
+	|-RVA: 0x2B3F000 Offset: 0x2B3F101 VA: 0x2B3F000
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass5_0<object, object>.<CopyTo>b__0
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x30C80 Offset: 0x30D81 VA: 0x30C80
 private sealed class SortedDictionary.ValueCollection.<>c__DisplayClass6_0<TKey, TValue> // TypeDefIndex: 2426
 {
@@ -366,6 +726,45 @@ private sealed class SortedDictionary.ValueCollection.<>c__DisplayClass6_0<TKey,
 	|
 	|-RVA: 0x2B3F100 Offset: 0x2B3F201 VA: 0x2B3F100
 	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_0<object, object>..ctor
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x30C90 Offset: 0x30D91 VA: 0x30C90
+private sealed class SortedDictionary.ValueCollection.<>c__DisplayClass6_1<TKey, TValue> // TypeDefIndex: 2427
+{
+	// Fields
+	public object[] objects; // 0x0
+	public SortedDictionary.ValueCollection.<>c__DisplayClass6_0<TKey, TValue> CS$<>8__locals1; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3F9D0 Offset: 0x2B3FAD1 VA: 0x2B3F9D0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_1<int, bool>..ctor
+	|
+	|-RVA: 0x2B3FBA0 Offset: 0x2B3FCA1 VA: 0x2B3FBA0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_1<int, int>..ctor
+	|
+	|-RVA: 0x2B3FD40 Offset: 0x2B3FE41 VA: 0x2B3FD40
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_1<object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	internal bool <System.Collections.ICollection.CopyTo>b__0(SortedSet.Node<KeyValuePair<TKey, TValue>> node) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3F9E0 Offset: 0x2B3FAE1 VA: 0x2B3F9E0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_1<int, bool>.<System.Collections.ICollection.CopyTo>b__0
+	|
+	|-RVA: 0x2B3FBB0 Offset: 0x2B3FCB1 VA: 0x2B3FBB0
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_1<int, int>.<System.Collections.ICollection.CopyTo>b__0
+	|
+	|-RVA: 0x2B3FD50 Offset: 0x2B3FE51 VA: 0x2B3FD50
+	|-SortedDictionary.ValueCollection.<>c__DisplayClass6_1<object, object>.<System.Collections.ICollection.CopyTo>b__0
 	*/
 }
 
@@ -570,6 +969,44 @@ public sealed class SortedDictionary.ValueCollection<TKey, TValue> : ICollection
 }
 
 // Namespace: 
+[Serializable]
+internal sealed class SortedDictionary.KeyValuePairComparer<TKey, TValue> : Comparer<KeyValuePair<TKey, TValue>> // TypeDefIndex: 2429
+{
+	// Fields
+	internal IComparer<TKey> keyComparer; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(IComparer<TKey> keyComparer) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2899DC0 Offset: 0x2899EC1 VA: 0x2899DC0
+	|-SortedDictionary.KeyValuePairComparer<int, bool>..ctor
+	|
+	|-RVA: 0x2899EF0 Offset: 0x2899FF1 VA: 0x2899EF0
+	|-SortedDictionary.KeyValuePairComparer<int, int>..ctor
+	|
+	|-RVA: 0x289A020 Offset: 0x289A121 VA: 0x289A020
+	|-SortedDictionary.KeyValuePairComparer<object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public override int Compare(KeyValuePair<TKey, TValue> x, KeyValuePair<TKey, TValue> y) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2899E40 Offset: 0x2899F41 VA: 0x2899E40
+	|-SortedDictionary.KeyValuePairComparer<int, bool>.Compare
+	|
+	|-RVA: 0x2899F70 Offset: 0x289A071 VA: 0x2899F70
+	|-SortedDictionary.KeyValuePairComparer<int, int>.Compare
+	|
+	|-RVA: 0x289A0A0 Offset: 0x289A1A1 VA: 0x289A0A0
+	|-SortedDictionary.KeyValuePairComparer<object, object>.Compare
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x30CA0 Offset: 0x30DA1 VA: 0x30CA0
 private sealed class SortedDictionary.<>c__DisplayClass34_0<TKey, TValue> // TypeDefIndex: 2430
 {
@@ -605,6 +1042,45 @@ private sealed class SortedDictionary.<>c__DisplayClass34_0<TKey, TValue> // Typ
 	|
 	|-RVA: 0x2B3C210 Offset: 0x2B3C311 VA: 0x2B3C210
 	|-SortedDictionary.<>c__DisplayClass34_0<object, object>.<ContainsValue>b__0
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x30CB0 Offset: 0x30DB1 VA: 0x30CB0
+private sealed class SortedDictionary.<>c__DisplayClass34_1<TKey, TValue> // TypeDefIndex: 2431
+{
+	// Fields
+	public EqualityComparer<TValue> valueComparer; // 0x0
+	public SortedDictionary.<>c__DisplayClass34_0<TKey, TValue> CS$<>8__locals1; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3C270 Offset: 0x2B3C371 VA: 0x2B3C270
+	|-SortedDictionary.<>c__DisplayClass34_1<int, bool>..ctor
+	|
+	|-RVA: 0x2B3C300 Offset: 0x2B3C401 VA: 0x2B3C300
+	|-SortedDictionary.<>c__DisplayClass34_1<int, int>..ctor
+	|
+	|-RVA: 0x2B3C380 Offset: 0x2B3C481 VA: 0x2B3C380
+	|-SortedDictionary.<>c__DisplayClass34_1<object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	internal bool <ContainsValue>b__1(SortedSet.Node<KeyValuePair<TKey, TValue>> node) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3C280 Offset: 0x2B3C381 VA: 0x2B3C280
+	|-SortedDictionary.<>c__DisplayClass34_1<int, bool>.<ContainsValue>b__1
+	|
+	|-RVA: 0x2B3C310 Offset: 0x2B3C411 VA: 0x2B3C310
+	|-SortedDictionary.<>c__DisplayClass34_1<int, int>.<ContainsValue>b__1
+	|
+	|-RVA: 0x2B3C390 Offset: 0x2B3C491 VA: 0x2B3C390
+	|-SortedDictionary.<>c__DisplayClass34_1<object, object>.<ContainsValue>b__1
 	*/
 }
 

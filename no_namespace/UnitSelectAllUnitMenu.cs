@@ -42,6 +42,27 @@ private class UnitSelectAllUnitMenu.EntrustMenuItem : BasicMenuItem // TypeDefIn
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278B00 Offset: 0x278C01 VA: 0x278B00
+[Serializable]
+private sealed class UnitSelectAllUnitMenu.StoreAllMenuItem.<>c // TypeDefIndex: 13305
+{
+	// Fields
+	public static readonly UnitSelectAllUnitMenu.StoreAllMenuItem.<>c <>9; // 0x0
+	public static UnitSelectAllUnitMenu.ConfirmSequence.FailureEventHandler <>9__3_2; // 0x8
+
+	// Methods
+
+	// RVA: 0x2D6A7F0 Offset: 0x2D6A8F1 VA: 0x2D6A7F0
+	private static void .cctor() { }
+
+	// RVA: 0x2D6A860 Offset: 0x2D6A961 VA: 0x2D6A860
+	public void .ctor() { }
+
+	// RVA: 0x2D6A870 Offset: 0x2D6A971 VA: 0x2D6A870
+	internal void <ACall>b__3_2(ProcInst super) { }
+}
+
+// Namespace: 
 private class UnitSelectAllUnitMenu.StoreAllMenuItem : BasicMenuItem // TypeDefIndex: 13306
 {
 	// Fields
@@ -84,6 +105,24 @@ private class UnitSelectAllUnitMenu.StoreAllMenuItem : BasicMenuItem // TypeDefI
 }
 
 // Namespace: 
+public sealed class UnitSelectAllUnitMenu.ConfirmDialog.DecideEventHandler : MulticastDelegate // TypeDefIndex: 13307
+{
+	// Methods
+
+	// RVA: 0x2D69AB0 Offset: 0x2D69BB1 VA: 0x2D69AB0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D698A0 Offset: 0x2D699A1 VA: 0x2D698A0 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x2D69AD0 Offset: 0x2D69BD1 VA: 0x2D69AD0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D69B00 Offset: 0x2D69C01 VA: 0x2D69B00 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class UnitSelectAllUnitMenu.ConfirmDialog.CloseEventHandler : MulticastDelegate // TypeDefIndex: 13308
 {
 	// Methods
@@ -102,6 +141,24 @@ public sealed class UnitSelectAllUnitMenu.ConfirmDialog.CloseEventHandler : Mult
 }
 
 // Namespace: 
+private class UnitSelectAllUnitMenu.ConfirmDialog.ConfirmYesDialogItem : BasicDialogItemYes // TypeDefIndex: 13309
+{
+	// Fields
+	private UnitSelectAllUnitMenu.ConfirmDialog.DecideEventHandler m_DecideEventHander; // 0x70
+
+	// Methods
+
+	// RVA: 0x2D69830 Offset: 0x2D69931 VA: 0x2D69830
+	public void .ctor(string text, UnitSelectAllUnitMenu.ConfirmDialog.DecideEventHandler decide) { }
+
+	// RVA: 0x2D69870 Offset: 0x2D69971 VA: 0x2D69870 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D69880 Offset: 0x2D69981 VA: 0x2D69880 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class UnitSelectAllUnitMenu.ConfirmDialog.ConfirmNoDialogItem : BasicDialogItemNo // TypeDefIndex: 13310
 {
 	// Methods
@@ -114,11 +171,41 @@ private class UnitSelectAllUnitMenu.ConfirmDialog.ConfirmNoDialogItem : BasicDia
 }
 
 // Namespace: 
+private class UnitSelectAllUnitMenu.ConfirmDialog : YesNoDialog // TypeDefIndex: 13311
+{
+	// Methods
+
+	// RVA: 0x1ED5330 Offset: 0x1ED5431 VA: 0x1ED5330
+	public static void CreateBind(ProcInst super, string msg, string yes, UnitSelectAllUnitMenu.ConfirmDialog.DecideEventHandler decide) { }
+
+	// RVA: 0x1ED5590 Offset: 0x1ED5691 VA: 0x1ED5590
+	private void .ctor(List<BasicMenuItem> menuItemList) { }
+}
+
+// Namespace: 
 private enum UnitSelectAllUnitMenu.ConfirmSequence.Label // TypeDefIndex: 13312
 {
 	// Fields
 	public int value__; // 0x0
 	public const UnitSelectAllUnitMenu.ConfirmSequence.Label End = 0;
+}
+
+// Namespace: 
+public sealed class UnitSelectAllUnitMenu.ConfirmSequence.DecideEventHandler : MulticastDelegate // TypeDefIndex: 13313
+{
+	// Methods
+
+	// RVA: 0x2D6A6D0 Offset: 0x2D6A7D1 VA: 0x2D6A6D0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D69B30 Offset: 0x2D69C31 VA: 0x2D69B30 Slot: 13
+	public virtual void Invoke(ProcInst super) { }
+
+	// RVA: 0x2D6A6F0 Offset: 0x2D6A7F1 VA: 0x2D6A6F0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProcInst super, AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D6A720 Offset: 0x2D6A821 VA: 0x2D6A720 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -140,6 +227,24 @@ public sealed class UnitSelectAllUnitMenu.ConfirmSequence.CheckEventHandler : Mu
 }
 
 // Namespace: 
+public sealed class UnitSelectAllUnitMenu.ConfirmSequence.FailureEventHandler : MulticastDelegate // TypeDefIndex: 13315
+{
+	// Methods
+
+	// RVA: 0x2D6A790 Offset: 0x2D6A891 VA: 0x2D6A790
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D6A0D0 Offset: 0x2D6A1D1 VA: 0x2D6A0D0 Slot: 13
+	public virtual void Invoke(ProcInst super) { }
+
+	// RVA: 0x2D6A7B0 Offset: 0x2D6A8B1 VA: 0x2D6A7B0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProcInst super, AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D6A7E0 Offset: 0x2D6A8E1 VA: 0x2D6A7E0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class UnitSelectAllUnitMenu.ConfirmSequence.EndEventHandler : MulticastDelegate // TypeDefIndex: 13316
 {
 	// Methods
@@ -155,6 +260,35 @@ public sealed class UnitSelectAllUnitMenu.ConfirmSequence.EndEventHandler : Mult
 
 	// RVA: 0x2D6A780 Offset: 0x2D6A881 VA: 0x2D6A780 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278B10 Offset: 0x278C11 VA: 0x278B10
+private sealed class UnitSelectAllUnitMenu.ConfirmSequence.<>c__DisplayClass5_0 // TypeDefIndex: 13317
+{
+	// Fields
+	public UnitSelectAllUnitMenu.ConfirmSequence.DecideEventHandler decide; // 0x10
+	public UnitSelectAllUnitMenu.ConfirmSequence p; // 0x18
+	public UnitSelectAllUnitMenu.ConfirmSequence.CheckEventHandler check; // 0x20
+	public UnitSelectAllUnitMenu.ConfirmSequence.FailureEventHandler failure; // 0x28
+	public UnitSelectAllUnitMenu.ConfirmSequence.EndEventHandler end; // 0x30
+
+	// Methods
+
+	// RVA: 0x2D69B10 Offset: 0x2D69C11 VA: 0x2D69B10
+	public void .ctor() { }
+
+	// RVA: 0x2D69B20 Offset: 0x2D69C21 VA: 0x2D69B20
+	internal void <CreateBind>b__0() { }
+
+	// RVA: 0x2D69E90 Offset: 0x2D69F91 VA: 0x2D69E90
+	internal bool <CreateBind>b__1() { }
+
+	// RVA: 0x2D6A0C0 Offset: 0x2D6A1C1 VA: 0x2D6A0C0
+	internal void <CreateBind>b__2() { }
+
+	// RVA: 0x2D6A430 Offset: 0x2D6A531 VA: 0x2D6A430
+	internal void <CreateBind>b__3() { }
 }
 
 // Namespace: 

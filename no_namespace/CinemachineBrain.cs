@@ -1,4 +1,16 @@
 // Namespace: 
+[DocumentationSortingAttribute] // RVA: 0x1A700 Offset: 0x1A801 VA: 0x1A700
+public enum CinemachineBrain.UpdateMethod // TypeDefIndex: 5733
+{
+	// Fields
+	public int value__; // 0x0
+	public const CinemachineBrain.UpdateMethod FixedUpdate = 0;
+	public const CinemachineBrain.UpdateMethod LateUpdate = 1;
+	public const CinemachineBrain.UpdateMethod SmartUpdate = 2;
+	public const CinemachineBrain.UpdateMethod ManualUpdate = 3;
+}
+
+// Namespace: 
 [DocumentationSortingAttribute] // RVA: 0x1A720 Offset: 0x1A821 VA: 0x1A720
 public enum CinemachineBrain.BrainUpdateMethod // TypeDefIndex: 5734
 {
@@ -10,11 +22,43 @@ public enum CinemachineBrain.BrainUpdateMethod // TypeDefIndex: 5734
 
 // Namespace: 
 [Serializable]
+public class CinemachineBrain.BrainEvent : UnityEvent<CinemachineBrain> // TypeDefIndex: 5735
+{
+	// Methods
+
+	// RVA: 0x1A88040 Offset: 0x1A88141 VA: 0x1A88040
+	public void .ctor() { }
+}
+
+// Namespace: 
+[Serializable]
 public class CinemachineBrain.VcamActivatedEvent : UnityEvent<ICinemachineCamera, ICinemachineCamera> // TypeDefIndex: 5736
 {
 	// Methods
 
 	// RVA: 0x1A881C0 Offset: 0x1A882C1 VA: 0x1A881C0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class CinemachineBrain.BrainFrame // TypeDefIndex: 5737
+{
+	// Fields
+	public int id; // 0x10
+	public CinemachineBlend blend; // 0x18
+	public CinemachineBlend workingBlend; // 0x20
+	public BlendSourceVirtualCamera workingBlendSource; // 0x28
+	public float deltaTimeOverride; // 0x30
+
+	// Properties
+	public bool Active { get; }
+
+	// Methods
+
+	// RVA: 0x1A880A0 Offset: 0x1A881A1 VA: 0x1A880A0
+	public bool get_Active() { }
+
+	// RVA: 0x1A880B0 Offset: 0x1A881B1 VA: 0x1A880B0
 	public void .ctor() { }
 }
 

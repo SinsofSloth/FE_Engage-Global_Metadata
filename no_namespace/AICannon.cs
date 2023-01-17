@@ -44,6 +44,22 @@ public class AICannon.CannonData // TypeDefIndex: 9234
 }
 
 // Namespace: 
+private struct AICannon.ChangeEquipScope : IDisposable // TypeDefIndex: 9235
+{
+	// Fields
+	private Unit m_Actor; // 0x0
+	private int m_EquippedIndex; // 0x8
+
+	// Methods
+
+	// RVA: 0x2F2EA70 Offset: 0x2F2EB71 VA: 0x2F2EA70
+	public void .ctor(Unit actor) { }
+
+	// RVA: 0x2F2EAB0 Offset: 0x2F2EBB1 VA: 0x2F2EAB0 Slot: 4
+	public void Dispose() { }
+}
+
+// Namespace: 
 private struct AICannon.CannonSkillScope : IDisposable // TypeDefIndex: 9236
 {
 	// Fields
@@ -57,6 +73,25 @@ private struct AICannon.CannonSkillScope : IDisposable // TypeDefIndex: 9236
 
 	// RVA: 0x2F2EA60 Offset: 0x2F2EB61 VA: 0x2F2EA60 Slot: 4
 	public void Dispose() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2752D0 Offset: 0x2753D1 VA: 0x2752D0
+private sealed class AICannon.<>c__DisplayClass8_0 // TypeDefIndex: 9237
+{
+	// Fields
+	public Unit actor; // 0x10
+	public AICannon <>4__this; // 0x18
+	public bool isClever; // 0x20
+	public AICannon.CannonData targetCannon; // 0x28
+	public Unit targetUnit; // 0x30
+	public uint score; // 0x38
+	public int itemIndex; // 0x3C
+
+	// Methods
+
+	// RVA: 0x2F2DD20 Offset: 0x2F2DE21 VA: 0x2F2DD20
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -76,6 +111,30 @@ private sealed class AICannon.<>c__DisplayClass8_1 // TypeDefIndex: 9238
 
 	// RVA: 0x2F2DD40 Offset: 0x2F2DE41 VA: 0x2F2DD40
 	internal void <Think>b__0(int x, int z, int range) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2752F0 Offset: 0x2753F1 VA: 0x2752F0
+private sealed class AICannon.<>c__DisplayClass9_0 // TypeDefIndex: 9239
+{
+	// Fields
+	public Unit actor; // 0x10
+	public int enemyCount; // 0x18
+	public int[] enemyDists; // 0x20
+	public Unit[] nearEnemies; // 0x28
+	public AICannon <>4__this; // 0x30
+	public MapFor.PosFunction <>9__1; // 0x38
+
+	// Methods
+
+	// RVA: 0x2F2DFD0 Offset: 0x2F2E0D1 VA: 0x2F2DFD0
+	public void .ctor() { }
+
+	// RVA: 0x2F2DFE0 Offset: 0x2F2E0E1 VA: 0x2F2DFE0
+	internal void <ThinkFireCannon>b__0(Unit unit) { }
+
+	// RVA: 0x2F2E870 Offset: 0x2F2E971 VA: 0x2F2E870
+	internal void <ThinkFireCannon>b__1(int x, int z) { }
 }
 
 // Namespace: 

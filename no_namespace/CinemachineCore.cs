@@ -10,6 +10,24 @@ public enum CinemachineCore.Stage // TypeDefIndex: 5824
 }
 
 // Namespace: 
+public sealed class CinemachineCore.AxisInputDelegate : MulticastDelegate // TypeDefIndex: 5825
+{
+	// Methods
+
+	// RVA: 0x1A76EB0 Offset: 0x1A76FB1 VA: 0x1A76EB0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1A88B60 Offset: 0x1A88C61 VA: 0x1A88B60 Slot: 13
+	public virtual float Invoke(string axisName) { }
+
+	// RVA: 0x1A88EC0 Offset: 0x1A88FC1 VA: 0x1A88EC0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(string axisName, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1A88EF0 Offset: 0x1A88FF1 VA: 0x1A88EF0 Slot: 15
+	public virtual float EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class CinemachineCore.GetBlendOverrideDelegate : MulticastDelegate // TypeDefIndex: 5826
 {
 	// Methods
@@ -25,6 +43,21 @@ public sealed class CinemachineCore.GetBlendOverrideDelegate : MulticastDelegate
 
 	// RVA: 0x1A893D0 Offset: 0x1A894D1 VA: 0x1A893D0 Slot: 15
 	public virtual CinemachineBlendDefinition EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+private class CinemachineCore.UpdateStatus // TypeDefIndex: 5827
+{
+	// Fields
+	public int lastUpdateFrame; // 0x10
+	public int lastUpdateFixedFrame; // 0x14
+	public UpdateTracker.UpdateClock lastUpdateMode; // 0x18
+	public float lastUpdateDeltaTime; // 0x1C
+
+	// Methods
+
+	// RVA: 0x1A89400 Offset: 0x1A89501 VA: 0x1A89400
+	public void .ctor() { }
 }
 
 // Namespace: 

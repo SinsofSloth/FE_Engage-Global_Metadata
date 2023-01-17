@@ -7,12 +7,55 @@ public struct ArenaOrderSequence.GodInfo // TypeDefIndex: 10456
 }
 
 // Namespace: 
+public enum ArenaOrderSequence.Label // TypeDefIndex: 10457
+{
+	// Fields
+	public int value__; // 0x0
+	public const ArenaOrderSequence.Label Top = 0;
+	public const ArenaOrderSequence.Label ExpSelectUnit = 1;
+	public const ArenaOrderSequence.Label BondSelectUnit = 2;
+	public const ArenaOrderSequence.Label BondSelectEmblem = 3;
+	public const ArenaOrderSequence.Label BondSelectLevel = 4;
+	public const ArenaOrderSequence.Label Training = 5;
+	public const ArenaOrderSequence.Label Result = 6;
+	public const ArenaOrderSequence.Label End = 7;
+}
+
+// Namespace: 
 public enum ArenaOrderSequence.TrainType // TypeDefIndex: 10458
 {
 	// Fields
 	public int value__; // 0x0
 	public const ArenaOrderSequence.TrainType Random = 0;
 	public const ArenaOrderSequence.TrainType Emblem = 1;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276B70 Offset: 0x276C71 VA: 0x276B70
+private sealed class ArenaOrderSequence.<>c__DisplayClass65_0 // TypeDefIndex: 10459
+{
+	// Fields
+	public ArenaOrderSequence p; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F672C0 Offset: 0x1F673C1 VA: 0x1F672C0
+	public void .ctor() { }
+
+	// RVA: 0x1F672D0 Offset: 0x1F673D1 VA: 0x1F672D0
+	internal void <CreateBind>b__0() { }
+
+	// RVA: 0x1F67350 Offset: 0x1F67451 VA: 0x1F67350
+	internal void <CreateBind>b__1() { }
+
+	// RVA: 0x1F673D0 Offset: 0x1F674D1 VA: 0x1F673D0
+	internal void <CreateBind>b__2() { }
+
+	// RVA: 0x1F67450 Offset: 0x1F67551 VA: 0x1F67450
+	internal void <CreateBind>b__3() { }
+
+	// RVA: 0x1F674D0 Offset: 0x1F675D1 VA: 0x1F674D0
+	internal void <CreateBind>b__4() { }
 }
 
 // Namespace: 
@@ -51,6 +94,22 @@ private sealed class ArenaOrderSequence.<Load>d__66 : IEnumerator<object>, IEnum
 	[DebuggerHiddenAttribute] // RVA: 0x2BE730 Offset: 0x2BE831 VA: 0x2BE730
 	// RVA: 0x1F679F0 Offset: 0x1F67AF1 VA: 0x1F679F0 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276B90 Offset: 0x276C91 VA: 0x276B90
+private sealed class ArenaOrderSequence.<>c__DisplayClass80_0 // TypeDefIndex: 10461
+{
+	// Fields
+	public List<Unit> unitList; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F67550 Offset: 0x1F67651 VA: 0x1F67550
+	public void .ctor() { }
+
+	// RVA: 0x1F67560 Offset: 0x1F67661 VA: 0x1F67560
+	internal void <SetupRandomUnit>b__0(Unit unit) { }
 }
 
 // Namespace: 

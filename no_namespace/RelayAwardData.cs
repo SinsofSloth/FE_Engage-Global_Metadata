@@ -32,6 +32,18 @@ public enum RelayAwardData.Kinds // TypeDefIndex: 10020
 }
 
 // Namespace: 
+public enum RelayAwardData.CompareOp // TypeDefIndex: 10021
+{
+	// Fields
+	public int value__; // 0x0
+	public const RelayAwardData.CompareOp Greater = 0;
+	public const RelayAwardData.CompareOp Less = 1;
+	public const RelayAwardData.CompareOp Zero = 2;
+	public const RelayAwardData.CompareOp MixedLess = 3;
+	public const RelayAwardData.CompareOp AttackGreaterKillLess = 4;
+}
+
+// Namespace: 
 [FlagsAttribute] // RVA: 0x276400 Offset: 0x276501 VA: 0x276400
 public enum RelayAwardData.Flags // TypeDefIndex: 10022
 {
@@ -42,6 +54,21 @@ public enum RelayAwardData.Flags // TypeDefIndex: 10022
 	public const RelayAwardData.Flags Negative = 4;
 	public const RelayAwardData.Flags AttackPlus = 8;
 	public const RelayAwardData.Flags AttackMinus = 16;
+}
+
+// Namespace: 
+public sealed class RelayAwardData.FlagField : BitFieldTemplate32<RelayAwardData.Flags> // TypeDefIndex: 10023
+{
+	// Methods
+
+	// RVA: 0x1F3DA20 Offset: 0x1F3DB21 VA: 0x1F3DA20
+	public void .ctor(int f) { }
+
+	// RVA: 0x1F3DA80 Offset: 0x1F3DB81 VA: 0x1F3DA80
+	public void .ctor(RelayAwardData.Flags f) { }
+
+	// RVA: 0x1F3DAE0 Offset: 0x1F3DBE1 VA: 0x1F3DAE0 Slot: 5
+	protected override int ToInt(RelayAwardData.Flags value) { }
 }
 
 // Namespace: 

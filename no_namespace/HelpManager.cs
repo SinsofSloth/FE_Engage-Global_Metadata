@@ -1,4 +1,16 @@
 // Namespace: 
+public enum HelpManager.Item.Dir // TypeDefIndex: 11811
+{
+	// Fields
+	public int value__; // 0x0
+	public const HelpManager.Item.Dir Up = 0;
+	public const HelpManager.Item.Dir Down = 1;
+	public const HelpManager.Item.Dir Right = 2;
+	public const HelpManager.Item.Dir Left = 3;
+	public const HelpManager.Item.Dir Num = 4;
+}
+
+// Namespace: 
 private class HelpManager.Item // TypeDefIndex: 11812
 {
 	// Fields
@@ -32,6 +44,21 @@ private class HelpManager.Item // TypeDefIndex: 11812
 }
 
 // Namespace: 
+public enum HelpManager.SituationType // TypeDefIndex: 11813
+{
+	// Fields
+	public int value__; // 0x0
+	public const HelpManager.SituationType None = 0;
+	public const HelpManager.SituationType UnitStatus = 1;
+	public const HelpManager.SituationType RingSelect = 2;
+	public const HelpManager.SituationType UnitInfo = 3;
+	public const HelpManager.SituationType BattleInfo = 4;
+	public const HelpManager.SituationType BattleEngageInfo = 5;
+	public const HelpManager.SituationType BattleAlternateInfo = 6;
+	public const HelpManager.SituationType OnlyMapTerrainInfo = 7;
+}
+
+// Namespace: 
 public enum HelpManager.HelpItemType // TypeDefIndex: 11814
 {
 	// Fields
@@ -55,6 +82,31 @@ public enum HelpManager.HelpItemType // TypeDefIndex: 11814
 	public const HelpManager.HelpItemType GodSkill = 16;
 	public const HelpManager.HelpItemType TerrainInfoSkill = 17;
 	public const HelpManager.HelpItemType Enchantment = 18;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277B10 Offset: 0x277C11 VA: 0x277B10
+private sealed class HelpManager.<>c__DisplayClass12_0 // TypeDefIndex: 11815
+{
+	// Fields
+	public Action<HelpManager.Item, float> ArignUp; // 0x10
+	public Action<HelpManager.Item, float> ArignDown; // 0x18
+	public Action<HelpManager.Item, float> ArignLeft; // 0x20
+	public Action<HelpManager.Item, float> ArignRight; // 0x28
+
+	// Methods
+
+	// RVA: 0x1FAA150 Offset: 0x1FAA251 VA: 0x1FAA150
+	public void .ctor() { }
+
+	// RVA: 0x1FAA160 Offset: 0x1FAA261 VA: 0x1FAA160
+	internal void <Setup>b__4(HelpManager.Item item, float up, float down) { }
+
+	// RVA: 0x1FAA1F0 Offset: 0x1FAA2F1 VA: 0x1FAA1F0
+	internal void <Setup>b__5(HelpManager.Item item, float left, float right) { }
+
+	// RVA: 0x1FAA280 Offset: 0x1FAA381 VA: 0x1FAA280
+	internal void <Setup>b__6(HelpManager.Item item, float up, float down, float left, float right) { }
 }
 
 // Namespace: 

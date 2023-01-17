@@ -10,6 +10,17 @@ public enum Dish.Liking // TypeDefIndex: 13516
 }
 
 // Namespace: 
+public enum Dish.RelianceResult.TryResult // TypeDefIndex: 13517
+{
+	// Fields
+	public int value__; // 0x0
+	public const Dish.RelianceResult.TryResult None = -1;
+	public const Dish.RelianceResult.TryResult Success = 0;
+	public const Dish.RelianceResult.TryResult Faileur = 1;
+	public const Dish.RelianceResult.TryResult NotExists = 2;
+}
+
+// Namespace: 
 public struct Dish.RelianceResult // TypeDefIndex: 13518
 {
 	// Fields

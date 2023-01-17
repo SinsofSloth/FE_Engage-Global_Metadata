@@ -28,6 +28,11552 @@ private sealed class Array.ArrayEnumerator : IEnumerator, ICloneable // TypeDefI
 }
 
 // Namespace: 
+internal struct Array.InternalEnumerator<T> : IEnumerator<T>, IDisposable, IEnumerator // TypeDefIndex: 115
+{
+	// Fields
+	private readonly Array array; // 0x0
+	private int idx; // 0x0
+
+	// Properties
+	public T Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	internal void .ctor(Array array) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1EB3790 Offset: 0x1EB3891 VA: 0x1EB3790
+	|-Array.InternalEnumerator<ArraySegment<byte>>..ctor
+	|
+	|-RVA: 0x1EB3A00 Offset: 0x1EB3B01 VA: 0x1EB3A00
+	|-Array.InternalEnumerator<AsyncOperationHandle<object>>..ctor
+	|
+	|-RVA: 0x1EB3C90 Offset: 0x1EB3D91 VA: 0x1EB3C90
+	|-Array.InternalEnumerator<MapDeployTemplate.Queue.Data<object>>..ctor
+	|
+	|-RVA: 0x1EB3EF0 Offset: 0x1EB3FF1 VA: 0x1EB3EF0
+	|-Array.InternalEnumerator<Nex.DataStore.ParamPool.Data<object>>..ctor
+	|
+	|-RVA: 0x1EB4160 Offset: 0x1EB4261 VA: 0x1EB4160
+	|-Array.InternalEnumerator<Nex.Screening.ParamPool.Data<object>>..ctor
+	|
+	|-RVA: 0x1EB43D0 Offset: 0x1EB44D1 VA: 0x1EB43D0
+	|-Array.InternalEnumerator<IntervalTree.Entry<object>>..ctor
+	|
+	|-RVA: 0x1EB4660 Offset: 0x1EB4761 VA: 0x1EB4660
+	|-Array.InternalEnumerator<Dictionary.Entry<ValueTuple<object, int>, object>>..ctor
+	|
+	|-RVA: 0x1EB48F0 Offset: 0x1EB49F1 VA: 0x1EB48F0
+	|-Array.InternalEnumerator<Dictionary.Entry<byte, object>>..ctor
+	|
+	|-RVA: 0x1EB4B80 Offset: 0x1EB4C81 VA: 0x1EB4B80
+	|-Array.InternalEnumerator<Dictionary.Entry<CancellationToken, object>>..ctor
+	|
+	|-RVA: 0x1EB4E10 Offset: 0x1EB4F11 VA: 0x1EB4E10
+	|-Array.InternalEnumerator<Dictionary.Entry<char, object>>..ctor
+	|
+	|-RVA: 0x1EB50A0 Offset: 0x1EB51A1 VA: 0x1EB50A0
+	|-Array.InternalEnumerator<Dictionary.Entry<Guid, object>>..ctor
+	|
+	|-RVA: 0x1EB5330 Offset: 0x1EB5431 VA: 0x1EB5330
+	|-Array.InternalEnumerator<Dictionary.Entry<int, bool>>..ctor
+	|
+	|-RVA: 0x1EB55A0 Offset: 0x1EB56A1 VA: 0x1EB55A0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, byte>>..ctor
+	|
+	|-RVA: 0x1EB5810 Offset: 0x1EB5911 VA: 0x1EB5810
+	|-Array.InternalEnumerator<Dictionary.Entry<int, char>>..ctor
+	|
+	|-RVA: 0x1EB5A80 Offset: 0x1EB5B81 VA: 0x1EB5A80
+	|-Array.InternalEnumerator<Dictionary.Entry<int, DiagnosticEvent>>..ctor
+	|
+	|-RVA: 0x1EB5D30 Offset: 0x1EB5E31 VA: 0x1EB5D30
+	|-Array.InternalEnumerator<Dictionary.Entry<int, int>>..ctor
+	|
+	|-RVA: 0x1EB5FA0 Offset: 0x1EB60A1 VA: 0x1EB5FA0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EB6210 Offset: 0x1EB6311 VA: 0x1EB6210
+	|-Array.InternalEnumerator<Dictionary.Entry<int, long>>..ctor
+	|
+	|-RVA: 0x1EB64A0 Offset: 0x1EB65A1 VA: 0x1EB64A0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, MapPos>>..ctor
+	|
+	|-RVA: 0x1EB6730 Offset: 0x1EB6831 VA: 0x1EB6730
+	|-Array.InternalEnumerator<Dictionary.Entry<int, object>>..ctor
+	|
+	|-RVA: 0x1EB69C0 Offset: 0x1EB6AC1 VA: 0x1EB69C0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, uint>>..ctor
+	|
+	|-RVA: 0x1EB6C30 Offset: 0x1EB6D31 VA: 0x1EB6C30
+	|-Array.InternalEnumerator<Dictionary.Entry<int, AIThink.EnchantThink.SurroundingInfo>>..ctor
+	|
+	|-RVA: 0x1EB6EA0 Offset: 0x1EB6FA1 VA: 0x1EB6EA0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, bool>>..ctor
+	|
+	|-RVA: 0x1EB7110 Offset: 0x1EB7211 VA: 0x1EB7110
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, int>>..ctor
+	|
+	|-RVA: 0x1EB7380 Offset: 0x1EB7481 VA: 0x1EB7380
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EB75F0 Offset: 0x1EB76F1 VA: 0x1EB75F0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, object>>..ctor
+	|
+	|-RVA: 0x1EB7880 Offset: 0x1EB7981 VA: 0x1EB7880
+	|-Array.InternalEnumerator<Dictionary.Entry<long, object>>..ctor
+	|
+	|-RVA: 0x1EB7B10 Offset: 0x1EB7C11 VA: 0x1EB7B10
+	|-Array.InternalEnumerator<Dictionary.Entry<MapPos, int>>..ctor
+	|
+	|-RVA: 0x1EB7DA0 Offset: 0x1EB7EA1 VA: 0x1EB7DA0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle<object>>>..ctor
+	|
+	|-RVA: 0x1EB8050 Offset: 0x1EB8151 VA: 0x1EB8050
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle>>..ctor
+	|
+	|-RVA: 0x1EB8300 Offset: 0x1EB8401 VA: 0x1EB8300
+	|-Array.InternalEnumerator<Dictionary.Entry<object, bool>>..ctor
+	|
+	|-RVA: 0x1EB8590 Offset: 0x1EB8691 VA: 0x1EB8590
+	|-Array.InternalEnumerator<Dictionary.Entry<object, byte>>..ctor
+	|
+	|-RVA: 0x1EB8820 Offset: 0x1EB8921 VA: 0x1EB8820
+	|-Array.InternalEnumerator<Dictionary.Entry<object, int>>..ctor
+	|
+	|-RVA: 0x1EB8AB0 Offset: 0x1EB8BB1 VA: 0x1EB8AB0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EB8D40 Offset: 0x1EB8E41 VA: 0x1EB8D40
+	|-Array.InternalEnumerator<Dictionary.Entry<object, IntPtr>>..ctor
+	|
+	|-RVA: 0x1EB8FD0 Offset: 0x1EB90D1 VA: 0x1EB8FD0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, object>>..ctor
+	|
+	|-RVA: 0x1EB9260 Offset: 0x1EB9361 VA: 0x1EB9260
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Playable>>..ctor
+	|
+	|-RVA: 0x1EB94F0 Offset: 0x1EB95F1 VA: 0x1EB94F0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ResourceLocator>>..ctor
+	|
+	|-RVA: 0x1EB9780 Offset: 0x1EB9881 VA: 0x1EB9780
+	|-Array.InternalEnumerator<Dictionary.Entry<object, float>>..ctor
+	|
+	|-RVA: 0x1EB9A10 Offset: 0x1EB9B11 VA: 0x1EB9A10
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ushort>>..ctor
+	|
+	|-RVA: 0x1EB9CA0 Offset: 0x1EB9DA1 VA: 0x1EB9CA0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, GameVariable.Value>>..ctor
+	|
+	|-RVA: 0x1EB9F30 Offset: 0x1EBA031 VA: 0x1EB9F30
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, DataStoreRatingInfo>>..ctor
+	|
+	|-RVA: 0x1EBA1E0 Offset: 0x1EBA2E1 VA: 0x1EBA1E0
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, object>>..ctor
+	|
+	|-RVA: 0x1EBA470 Offset: 0x1EBA571 VA: 0x1EBA470
+	|-Array.InternalEnumerator<Dictionary.Entry<ushort, int>>..ctor
+	|
+	|-RVA: 0x1EBA6E0 Offset: 0x1EBA7E1 VA: 0x1EBA6E0
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, int>>..ctor
+	|
+	|-RVA: 0x1EBA950 Offset: 0x1EBAA51 VA: 0x1EBA950
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, object>>..ctor
+	|
+	|-RVA: 0x1EBABE0 Offset: 0x1EBACE1 VA: 0x1EBABE0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Friend>>..ctor
+	|
+	|-RVA: 0x1EBAE70 Offset: 0x1EBAF71 VA: 0x1EBAE70
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EBB100 Offset: 0x1EBB201 VA: 0x1EBB100
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, object>>..ctor
+	|
+	|-RVA: 0x1EBB390 Offset: 0x1EBB491 VA: 0x1EBB390
+	|-Array.InternalEnumerator<Dictionary.Entry<Vector3, int>>..ctor
+	|
+	|-RVA: 0x1EBB620 Offset: 0x1EBB721 VA: 0x1EBB620
+	|-Array.InternalEnumerator<Dictionary.Entry<XPathNodeRef, XPathNodeRef>>..ctor
+	|
+	|-RVA: 0x1EBB8D0 Offset: 0x1EBB9D1 VA: 0x1EBB8D0
+	|-Array.InternalEnumerator<Dictionary.Entry<TerrainUtility.TerrainMap.TileCoord, object>>..ctor
+	|
+	|-RVA: 0x1EBBB60 Offset: 0x1EBBC61 VA: 0x1EBBB60
+	|-Array.InternalEnumerator<PriorityQueue.IndexedItem<object>>..ctor
+	|
+	|-RVA: 0x1EBBDD0 Offset: 0x1EBBED1 VA: 0x1EBBDD0
+	|-Array.InternalEnumerator<KeyValuePair<ValueTuple<object, int>, object>>..ctor
+	|
+	|-RVA: 0x1EBC060 Offset: 0x1EBC161 VA: 0x1EBC060
+	|-Array.InternalEnumerator<KeyValuePair<byte, object>>..ctor
+	|
+	|-RVA: 0x1EBC2D0 Offset: 0x1EBC3D1 VA: 0x1EBC2D0
+	|-Array.InternalEnumerator<KeyValuePair<CancellationToken, object>>..ctor
+	|
+	|-RVA: 0x1EBC540 Offset: 0x1EBC641 VA: 0x1EBC540
+	|-Array.InternalEnumerator<KeyValuePair<char, object>>..ctor
+	|
+	|-RVA: 0x1EBC7B0 Offset: 0x1EBC8B1 VA: 0x1EBC7B0
+	|-Array.InternalEnumerator<KeyValuePair<DateTime, object>>..ctor
+	|
+	|-RVA: 0x1EBCA20 Offset: 0x1EBCB21 VA: 0x1EBCA20
+	|-Array.InternalEnumerator<KeyValuePair<Guid, object>>..ctor
+	|
+	|-RVA: 0x1EBCCB0 Offset: 0x1EBCDB1 VA: 0x1EBCCB0
+	|-Array.InternalEnumerator<KeyValuePair<int, bool>>..ctor
+	|
+	|-RVA: 0x1EBCF20 Offset: 0x1EBD021 VA: 0x1EBCF20
+	|-Array.InternalEnumerator<KeyValuePair<int, byte>>..ctor
+	|
+	|-RVA: 0x1EBD190 Offset: 0x1EBD291 VA: 0x1EBD190
+	|-Array.InternalEnumerator<KeyValuePair<int, char>>..ctor
+	|
+	|-RVA: 0x1EBD400 Offset: 0x1EBD501 VA: 0x1EBD400
+	|-Array.InternalEnumerator<KeyValuePair<int, DiagnosticEvent>>..ctor
+	|
+	|-RVA: 0x1EBD6B0 Offset: 0x1EBD7B1 VA: 0x1EBD6B0
+	|-Array.InternalEnumerator<KeyValuePair<int, int>>..ctor
+	|
+	|-RVA: 0x1EBD920 Offset: 0x1EBDA21 VA: 0x1EBD920
+	|-Array.InternalEnumerator<KeyValuePair<int, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EBDB90 Offset: 0x1EBDC91 VA: 0x1EBDB90
+	|-Array.InternalEnumerator<KeyValuePair<int, long>>..ctor
+	|
+	|-RVA: 0x1EBDE00 Offset: 0x1EBDF01 VA: 0x1EBDE00
+	|-Array.InternalEnumerator<KeyValuePair<int, MapPos>>..ctor
+	|
+	|-RVA: 0x1EBE070 Offset: 0x1EBE171 VA: 0x1EBE070
+	|-Array.InternalEnumerator<KeyValuePair<int, object>>..ctor
+	|
+	|-RVA: 0x1EBE2E0 Offset: 0x1EBE3E1 VA: 0x1EBE2E0
+	|-Array.InternalEnumerator<KeyValuePair<int, uint>>..ctor
+	|
+	|-RVA: 0x1EBE550 Offset: 0x1EBE651 VA: 0x1EBE550
+	|-Array.InternalEnumerator<KeyValuePair<int, AIThink.EnchantThink.SurroundingInfo>>..ctor
+	|
+	|-RVA: 0x1EBE7C0 Offset: 0x1EBE8C1 VA: 0x1EBE7C0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, bool>>..ctor
+	|
+	|-RVA: 0x1EBEA30 Offset: 0x1EBEB31 VA: 0x1EBEA30
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, int>>..ctor
+	|
+	|-RVA: 0x1EBECA0 Offset: 0x1EBEDA1 VA: 0x1EBECA0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EBEF10 Offset: 0x1EBF011 VA: 0x1EBEF10
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, object>>..ctor
+	|
+	|-RVA: 0x1EBF180 Offset: 0x1EBF281 VA: 0x1EBF180
+	|-Array.InternalEnumerator<KeyValuePair<long, object>>..ctor
+	|
+	|-RVA: 0x1EBF3F0 Offset: 0x1EBF4F1 VA: 0x1EBF3F0
+	|-Array.InternalEnumerator<KeyValuePair<MapPos, int>>..ctor
+	|
+	|-RVA: 0x1EBF660 Offset: 0x1EBF761 VA: 0x1EBF660
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle<object>>>..ctor
+	|
+	|-RVA: 0x1EBF8F0 Offset: 0x1EBF9F1 VA: 0x1EBF8F0
+	|-Array.InternalEnumerator<KeyValuePair<object, ValueTuple<int, DateTime, object>>>..ctor
+	|
+	|-RVA: 0x1EBFB80 Offset: 0x1EBFC81 VA: 0x1EBFB80
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle>>..ctor
+	|
+	|-RVA: 0x1EBFE10 Offset: 0x1EBFF11 VA: 0x1EBFE10
+	|-Array.InternalEnumerator<KeyValuePair<object, bool>>..ctor
+	|
+	|-RVA: 0x1EC0080 Offset: 0x1EC0181 VA: 0x1EC0080
+	|-Array.InternalEnumerator<KeyValuePair<object, byte>>..ctor
+	|
+	|-RVA: 0x1EC02F0 Offset: 0x1EC03F1 VA: 0x1EC02F0
+	|-Array.InternalEnumerator<KeyValuePair<object, int>>..ctor
+	|
+	|-RVA: 0x1EC0560 Offset: 0x1EC0661 VA: 0x1EC0560
+	|-Array.InternalEnumerator<KeyValuePair<object, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EC07D0 Offset: 0x1EC08D1 VA: 0x1EC07D0
+	|-Array.InternalEnumerator<KeyValuePair<object, IntPtr>>..ctor
+	|
+	|-RVA: 0x1EC0A40 Offset: 0x1EC0B41 VA: 0x1EC0A40
+	|-Array.InternalEnumerator<KeyValuePair<object, object>>..ctor
+	|
+	|-RVA: 0x1EC0CB0 Offset: 0x1EC0DB1 VA: 0x1EC0CB0
+	|-Array.InternalEnumerator<KeyValuePair<object, Playable>>..ctor
+	|
+	|-RVA: 0x1EC0F40 Offset: 0x1EC1041 VA: 0x1EC0F40
+	|-Array.InternalEnumerator<KeyValuePair<object, ResourceLocator>>..ctor
+	|
+	|-RVA: 0x1EC11D0 Offset: 0x1EC12D1 VA: 0x1EC11D0
+	|-Array.InternalEnumerator<KeyValuePair<object, float>>..ctor
+	|
+	|-RVA: 0x1EC1440 Offset: 0x1EC1541 VA: 0x1EC1440
+	|-Array.InternalEnumerator<KeyValuePair<object, ushort>>..ctor
+	|
+	|-RVA: 0x1EC16B0 Offset: 0x1EC17B1 VA: 0x1EC16B0
+	|-Array.InternalEnumerator<KeyValuePair<object, GameVariable.Value>>..ctor
+	|
+	|-RVA: 0x1EC1940 Offset: 0x1EC1A41 VA: 0x1EC1940
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, DataStoreRatingInfo>>..ctor
+	|
+	|-RVA: 0x1EC1BD0 Offset: 0x1EC1CD1 VA: 0x1EC1BD0
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, object>>..ctor
+	|
+	|-RVA: 0x1EC1E40 Offset: 0x1EC1F41 VA: 0x1EC1E40
+	|-Array.InternalEnumerator<KeyValuePair<ushort, int>>..ctor
+	|
+	|-RVA: 0x1EC20B0 Offset: 0x1EC21B1 VA: 0x1EC20B0
+	|-Array.InternalEnumerator<KeyValuePair<uint, int>>..ctor
+	|
+	|-RVA: 0x1EC2320 Offset: 0x1EC2421 VA: 0x1EC2320
+	|-Array.InternalEnumerator<KeyValuePair<uint, object>>..ctor
+	|
+	|-RVA: 0x1EC2590 Offset: 0x1EC2691 VA: 0x1EC2590
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Friend>>..ctor
+	|
+	|-RVA: 0x1EC2820 Offset: 0x1EC2921 VA: 0x1EC2820
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EC2A90 Offset: 0x1EC2B91 VA: 0x1EC2A90
+	|-Array.InternalEnumerator<KeyValuePair<ulong, object>>..ctor
+	|
+	|-RVA: 0x1EC2D00 Offset: 0x1EC2E01 VA: 0x1EC2D00
+	|-Array.InternalEnumerator<KeyValuePair<Vector3, int>>..ctor
+	|
+	|-RVA: 0x1EC2F70 Offset: 0x1EC3071 VA: 0x1EC2F70
+	|-Array.InternalEnumerator<KeyValuePair<XPathNodeRef, XPathNodeRef>>..ctor
+	|
+	|-RVA: 0x1EC3200 Offset: 0x1EC3301 VA: 0x1EC3200
+	|-Array.InternalEnumerator<KeyValuePair<TerrainUtility.TerrainMap.TileCoord, object>>..ctor
+	|
+	|-RVA: 0x1EC3470 Offset: 0x1EC3571 VA: 0x1EC3470
+	|-Array.InternalEnumerator<NativeArray<PreTile>>..ctor
+	|
+	|-RVA: 0x1EC36E0 Offset: 0x1EC37E1 VA: 0x1EC36E0
+	|-Array.InternalEnumerator<CommonBattleSequence.Reliance<object>>..ctor
+	|
+	|-RVA: 0x1EC3970 Offset: 0x1EC3A71 VA: 0x1EC3970
+	|-Array.InternalEnumerator<RenderGraphResourcePool.ResourceLogInfo<object>>..ctor
+	|
+	|-RVA: 0x1EC3BE0 Offset: 0x1EC3CE1 VA: 0x1EC3BE0
+	|-Array.InternalEnumerator<HashSet.Slot<ValueTuple<object, int>>>..ctor
+	|
+	|-RVA: 0x1EC3E70 Offset: 0x1EC3F71 VA: 0x1EC3E70
+	|-Array.InternalEnumerator<HashSet.Slot<AsyncOperationHandle>>..ctor
+	|
+	|-RVA: 0x1EC4100 Offset: 0x1EC4201 VA: 0x1EC4100
+	|-Array.InternalEnumerator<HashSet.Slot<int>>..ctor
+	|
+	|-RVA: 0x1EC4370 Offset: 0x1EC4471 VA: 0x1EC4370
+	|-Array.InternalEnumerator<HashSet.Slot<Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EC45E0 Offset: 0x1EC46E1 VA: 0x1EC45E0
+	|-Array.InternalEnumerator<Set.Slot<Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EC4850 Offset: 0x1EC4951 VA: 0x1EC4850
+	|-Array.InternalEnumerator<HashSet.Slot<MapPos>>..ctor
+	|
+	|-RVA: 0x1EC4AC0 Offset: 0x1EC4BC1 VA: 0x1EC4AC0
+	|-Array.InternalEnumerator<HashSet.Slot<object>>..ctor
+	|
+	|-RVA: 0x1EC4D30 Offset: 0x1EC4E31 VA: 0x1EC4D30
+	|-Array.InternalEnumerator<Set.Slot<object>>..ctor
+	|
+	|-RVA: 0x1EC4FC0 Offset: 0x1EC50C1 VA: 0x1EC4FC0
+	|-Array.InternalEnumerator<HashSet.Slot<uint>>..ctor
+	|
+	|-RVA: 0x1EC5230 Offset: 0x1EC5331 VA: 0x1EC5230
+	|-Array.InternalEnumerator<HashSet.Slot<ulong>>..ctor
+	|
+	|-RVA: 0x1EC54A0 Offset: 0x1EC55A1 VA: 0x1EC54A0
+	|-Array.InternalEnumerator<Set.Slot<Vector3>>..ctor
+	|
+	|-RVA: 0x1EC5730 Offset: 0x1EC5831 VA: 0x1EC5730
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Color32>>..ctor
+	|
+	|-RVA: 0x1EC59C0 Offset: 0x1EC5AC1 VA: 0x1EC59C0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<HighlightState>>..ctor
+	|
+	|-RVA: 0x1EC5C70 Offset: 0x1EC5D71 VA: 0x1EC5C70
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<int>>..ctor
+	|
+	|-RVA: 0x1EC5F00 Offset: 0x1EC6001 VA: 0x1EC5F00
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Int32Enum>>..ctor
+	|
+	|-RVA: 0x1EC6190 Offset: 0x1EC6291 VA: 0x1EC6190
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<MaterialReference>>..ctor
+	|
+	|-RVA: 0x1EC6460 Offset: 0x1EC6561 VA: 0x1EC6460
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<object>>..ctor
+	|
+	|-RVA: 0x1EC6710 Offset: 0x1EC6811 VA: 0x1EC6710
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<float>>..ctor
+	|
+	|-RVA: 0x1EC69A0 Offset: 0x1EC6AA1 VA: 0x1EC69A0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<WordWrapState>>..ctor
+	|
+	|-RVA: 0x1EC6C30 Offset: 0x1EC6D31 VA: 0x1EC6C30
+	|-Array.InternalEnumerator<TimeInterval<object>>..ctor
+	|
+	|-RVA: 0x1EC6EA0 Offset: 0x1EC6FA1 VA: 0x1EC6EA0
+	|-Array.InternalEnumerator<Timestamped<object>>..ctor
+	|
+	|-RVA: 0x1EC7130 Offset: 0x1EC7231 VA: 0x1EC7130
+	|-Array.InternalEnumerator<UniTask<object>>..ctor
+	|
+	|-RVA: 0x1EC73A0 Offset: 0x1EC74A1 VA: 0x1EC73A0
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x1EC7610 Offset: 0x1EC7711 VA: 0x1EC7610
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x1EC78A0 Offset: 0x1EC79A1 VA: 0x1EC78A0
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask<object>>>..ctor
+	|
+	|-RVA: 0x1EC7B30 Offset: 0x1EC7C31 VA: 0x1EC7B30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>..ctor
+	|
+	|-RVA: 0x1EC7DC0 Offset: 0x1EC7EC1 VA: 0x1EC7DC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>..ctor
+	|
+	|-RVA: 0x1EC8070 Offset: 0x1EC8171 VA: 0x1EC8070
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>>..ctor
+	|
+	|-RVA: 0x1EC8320 Offset: 0x1EC8421 VA: 0x1EC8320
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>>..ctor
+	|
+	|-RVA: 0x1EC8580 Offset: 0x1EC8681 VA: 0x1EC8580
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>>..ctor
+	|
+	|-RVA: 0x2AF8020 Offset: 0x2AF8121 VA: 0x2AF8020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>>..ctor
+	|
+	|-RVA: 0x2AF82D0 Offset: 0x2AF83D1 VA: 0x2AF82D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>>..ctor
+	|
+	|-RVA: 0x2AF8530 Offset: 0x2AF8631 VA: 0x2AF8530
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>>..ctor
+	|
+	|-RVA: 0x2AF87E0 Offset: 0x2AF88E1 VA: 0x2AF87E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>>..ctor
+	|
+	|-RVA: 0x2AF8A90 Offset: 0x2AF8B91 VA: 0x2AF8A90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>>..ctor
+	|
+	|-RVA: 0x2AF8D20 Offset: 0x2AF8E21 VA: 0x2AF8D20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>>..ctor
+	|
+	|-RVA: 0x2AF8FD0 Offset: 0x2AF90D1 VA: 0x2AF8FD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AF9280 Offset: 0x2AF9381 VA: 0x2AF9280
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>>..ctor
+	|
+	|-RVA: 0x2AF9530 Offset: 0x2AF9631 VA: 0x2AF9530
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>>..ctor
+	|
+	|-RVA: 0x2AF97E0 Offset: 0x2AF98E1 VA: 0x2AF97E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>>..ctor
+	|
+	|-RVA: 0x2AF9A70 Offset: 0x2AF9B71 VA: 0x2AF9A70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>>..ctor
+	|
+	|-RVA: 0x2AF9D20 Offset: 0x2AF9E21 VA: 0x2AF9D20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>>..ctor
+	|
+	|-RVA: 0x2AF9F80 Offset: 0x2AFA081 VA: 0x2AF9F80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>>..ctor
+	|
+	|-RVA: 0x2AFA230 Offset: 0x2AFA331 VA: 0x2AFA230
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>>..ctor
+	|
+	|-RVA: 0x2AFA4C0 Offset: 0x2AFA5C1 VA: 0x2AFA4C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>>..ctor
+	|
+	|-RVA: 0x2AFA770 Offset: 0x2AFA871 VA: 0x2AFA770
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFAA20 Offset: 0x2AFAB21 VA: 0x2AFAA20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFACD0 Offset: 0x2AFADD1 VA: 0x2AFACD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFAF80 Offset: 0x2AFB081 VA: 0x2AFAF80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFB230 Offset: 0x2AFB331 VA: 0x2AFB230
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFB500 Offset: 0x2AFB601 VA: 0x2AFB500
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFB7D0 Offset: 0x2AFB8D1 VA: 0x2AFB7D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFBAA0 Offset: 0x2AFBBA1 VA: 0x2AFBAA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>..ctor
+	|
+	|-RVA: 0x2AFBD00 Offset: 0x2AFBE01 VA: 0x2AFBD00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>..ctor
+	|
+	|-RVA: 0x2AFBF60 Offset: 0x2AFC061 VA: 0x2AFBF60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>..ctor
+	|
+	|-RVA: 0x2AFC210 Offset: 0x2AFC311 VA: 0x2AFC210
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>..ctor
+	|
+	|-RVA: 0x2AFC470 Offset: 0x2AFC571 VA: 0x2AFC470
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>..ctor
+	|
+	|-RVA: 0x2AFC700 Offset: 0x2AFC801 VA: 0x2AFC700
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>..ctor
+	|
+	|-RVA: 0x2AFC9B0 Offset: 0x2AFCAB1 VA: 0x2AFC9B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>..ctor
+	|
+	|-RVA: 0x2AFCC40 Offset: 0x2AFCD41 VA: 0x2AFCC40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>..ctor
+	|
+	|-RVA: 0x2AFCEF0 Offset: 0x2AFCFF1 VA: 0x2AFCEF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2AFD1A0 Offset: 0x2AFD2A1 VA: 0x2AFD1A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>..ctor
+	|
+	|-RVA: 0x2AFD430 Offset: 0x2AFD531 VA: 0x2AFD430
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>..ctor
+	|
+	|-RVA: 0x2AFD6C0 Offset: 0x2AFD7C1 VA: 0x2AFD6C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>..ctor
+	|
+	|-RVA: 0x2AFD950 Offset: 0x2AFDA51 VA: 0x2AFD950
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>..ctor
+	|
+	|-RVA: 0x2AFDC00 Offset: 0x2AFDD01 VA: 0x2AFDC00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>..ctor
+	|
+	|-RVA: 0x2AFDE60 Offset: 0x2AFDF61 VA: 0x2AFDE60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>..ctor
+	|
+	|-RVA: 0x2AFE0F0 Offset: 0x2AFE1F1 VA: 0x2AFE0F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>..ctor
+	|
+	|-RVA: 0x2AFE3A0 Offset: 0x2AFE4A1 VA: 0x2AFE3A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>..ctor
+	|
+	|-RVA: 0x2AFE630 Offset: 0x2AFE731 VA: 0x2AFE630
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>..ctor
+	|
+	|-RVA: 0x2AFE8E0 Offset: 0x2AFE9E1 VA: 0x2AFE8E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>..ctor
+	|
+	|-RVA: 0x2AFEB90 Offset: 0x2AFEC91 VA: 0x2AFEB90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFEE40 Offset: 0x2AFEF41 VA: 0x2AFEE40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>..ctor
+	|
+	|-RVA: 0x2AFF0F0 Offset: 0x2AFF1F1 VA: 0x2AFF0F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFF3C0 Offset: 0x2AFF4C1 VA: 0x2AFF3C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>..ctor
+	|
+	|-RVA: 0x2AFF670 Offset: 0x2AFF771 VA: 0x2AFF670
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFF940 Offset: 0x2AFFA41 VA: 0x2AFF940
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>..ctor
+	|
+	|-RVA: 0x2AFFBF0 Offset: 0x2AFFCF1 VA: 0x2AFFBF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2AFFEE0 Offset: 0x2AFFFE1 VA: 0x2AFFEE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>..ctor
+	|
+	|-RVA: 0x2B001B0 Offset: 0x2B002B1 VA: 0x2B001B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2B004A0 Offset: 0x2B005A1 VA: 0x2B004A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>..ctor
+	|
+	|-RVA: 0x2B00770 Offset: 0x2B00871 VA: 0x2B00770
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>..ctor
+	|
+	|-RVA: 0x2B009D0 Offset: 0x2B00AD1 VA: 0x2B009D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>..ctor
+	|
+	|-RVA: 0x2B00C30 Offset: 0x2B00D31 VA: 0x2B00C30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>..ctor
+	|
+	|-RVA: 0x2B00EE0 Offset: 0x2B00FE1 VA: 0x2B00EE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>..ctor
+	|
+	|-RVA: 0x2B01140 Offset: 0x2B01241 VA: 0x2B01140
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>..ctor
+	|
+	|-RVA: 0x2B013F0 Offset: 0x2B014F1 VA: 0x2B013F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>..ctor
+	|
+	|-RVA: 0x2B01680 Offset: 0x2B01781 VA: 0x2B01680
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>..ctor
+	|
+	|-RVA: 0x2B018F0 Offset: 0x2B019F1 VA: 0x2B018F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>..ctor
+	|
+	|-RVA: 0x2B01B80 Offset: 0x2B01C81 VA: 0x2B01B80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2B01E10 Offset: 0x2B01F11 VA: 0x2B01E10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>..ctor
+	|
+	|-RVA: 0x2B020C0 Offset: 0x2B021C1 VA: 0x2B020C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>..ctor
+	|
+	|-RVA: 0x2B02370 Offset: 0x2B02471 VA: 0x2B02370
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>..ctor
+	|
+	|-RVA: 0x2B025E0 Offset: 0x2B026E1 VA: 0x2B025E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>..ctor
+	|
+	|-RVA: 0x2B02870 Offset: 0x2B02971 VA: 0x2B02870
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>..ctor
+	|
+	|-RVA: 0x2B02AD0 Offset: 0x2B02BD1 VA: 0x2B02AD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>..ctor
+	|
+	|-RVA: 0x2B02D60 Offset: 0x2B02E61 VA: 0x2B02D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>..ctor
+	|
+	|-RVA: 0x2B02FF0 Offset: 0x2B030F1 VA: 0x2B02FF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>..ctor
+	|
+	|-RVA: 0x2B032A0 Offset: 0x2B033A1 VA: 0x2B032A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>..ctor
+	|
+	|-RVA: 0x2B03530 Offset: 0x2B03631 VA: 0x2B03530
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>..ctor
+	|
+	|-RVA: 0x2B037C0 Offset: 0x2B038C1 VA: 0x2B037C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B03A70 Offset: 0x2B03B71 VA: 0x2B03A70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>..ctor
+	|
+	|-RVA: 0x2B03D20 Offset: 0x2B03E21 VA: 0x2B03D20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B03FF0 Offset: 0x2B040F1 VA: 0x2B03FF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>..ctor
+	|
+	|-RVA: 0x2B042A0 Offset: 0x2B043A1 VA: 0x2B042A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B04570 Offset: 0x2B04671 VA: 0x2B04570
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>..ctor
+	|
+	|-RVA: 0x2B04820 Offset: 0x2B04921 VA: 0x2B04820
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B04B10 Offset: 0x2B04C11 VA: 0x2B04B10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>..ctor
+	|
+	|-RVA: 0x2B04DC0 Offset: 0x2B04EC1 VA: 0x2B04DC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B050B0 Offset: 0x2B051B1 VA: 0x2B050B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>..ctor
+	|
+	|-RVA: 0x2B05380 Offset: 0x2B05481 VA: 0x2B05380
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2B05610 Offset: 0x2B05711 VA: 0x2B05610
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>..ctor
+	|
+	|-RVA: 0x2B058A0 Offset: 0x2B059A1 VA: 0x2B058A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>..ctor
+	|
+	|-RVA: 0x2B05B00 Offset: 0x2B05C01 VA: 0x2B05B00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, bool>>>..ctor
+	|
+	|-RVA: 0x2B05D60 Offset: 0x2B05E61 VA: 0x2B05D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Bounds>>>..ctor
+	|
+	|-RVA: 0x2B05FF0 Offset: 0x2B060F1 VA: 0x2B05FF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, byte>>>..ctor
+	|
+	|-RVA: 0x2B06250 Offset: 0x2B06351 VA: 0x2B06250
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Color>>>..ctor
+	|
+	|-RVA: 0x2B064E0 Offset: 0x2B065E1 VA: 0x2B064E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, double>>>..ctor
+	|
+	|-RVA: 0x2B06770 Offset: 0x2B06871 VA: 0x2B06770
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, int>>>..ctor
+	|
+	|-RVA: 0x2B069E0 Offset: 0x2B06AE1 VA: 0x2B069E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, long>>>..ctor
+	|
+	|-RVA: 0x2B06C70 Offset: 0x2B06D71 VA: 0x2B06C70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x2B06F00 Offset: 0x2B07001 VA: 0x2B06F00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Quaternion>>>..ctor
+	|
+	|-RVA: 0x2B07190 Offset: 0x2B07291 VA: 0x2B07190
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Rect>>>..ctor
+	|
+	|-RVA: 0x2B07420 Offset: 0x2B07521 VA: 0x2B07420
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, float>>>..ctor
+	|
+	|-RVA: 0x2B07690 Offset: 0x2B07791 VA: 0x2B07690
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask>>>..ctor
+	|
+	|-RVA: 0x2B07920 Offset: 0x2B07A21 VA: 0x2B07920
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Unit>>>..ctor
+	|
+	|-RVA: 0x2B07B80 Offset: 0x2B07C81 VA: 0x2B07B80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector2>>>..ctor
+	|
+	|-RVA: 0x2B07DF0 Offset: 0x2B07EF1 VA: 0x2B07DF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector3>>>..ctor
+	|
+	|-RVA: 0x2B08080 Offset: 0x2B08181 VA: 0x2B08080
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector4>>>..ctor
+	|
+	|-RVA: 0x2B08310 Offset: 0x2B08411 VA: 0x2B08310
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, object>>>..ctor
+	|
+	|-RVA: 0x2B085A0 Offset: 0x2B086A1 VA: 0x2B085A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object>>>..ctor
+	|
+	|-RVA: 0x2B08830 Offset: 0x2B08931 VA: 0x2B08830
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2B08AE0 Offset: 0x2B08BE1 VA: 0x2B08AE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object>>>..ctor
+	|
+	|-RVA: 0x2B08D70 Offset: 0x2B08E71 VA: 0x2B08D70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2B09020 Offset: 0x2B09121 VA: 0x2B09020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object>>>..ctor
+	|
+	|-RVA: 0x2B092D0 Offset: 0x2B093D1 VA: 0x2B092D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2B095A0 Offset: 0x2B096A1 VA: 0x2B095A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object>>>..ctor
+	|
+	|-RVA: 0x2B09850 Offset: 0x2B09951 VA: 0x2B09850
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2B09B20 Offset: 0x2B09C21 VA: 0x2B09B20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>..ctor
+	|
+	|-RVA: 0x2B09DD0 Offset: 0x2B09ED1 VA: 0x2B09DD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2B0A0C0 Offset: 0x2B0A1C1 VA: 0x2B0A0C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>..ctor
+	|
+	|-RVA: 0x2B0A370 Offset: 0x2B0A471 VA: 0x2B0A370
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B0A660 Offset: 0x2B0A761 VA: 0x2B0A660
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>..ctor
+	|
+	|-RVA: 0x2B0A8F0 Offset: 0x2B0A9F1 VA: 0x2B0A8F0
+	|-Array.InternalEnumerator<ValueTuple<bool, AsyncUnit>>..ctor
+	|
+	|-RVA: 0x2B0AB50 Offset: 0x2B0AC51 VA: 0x2B0AB50
+	|-Array.InternalEnumerator<ValueTuple<bool, bool>>..ctor
+	|
+	|-RVA: 0x2B0ADB0 Offset: 0x2B0AEB1 VA: 0x2B0ADB0
+	|-Array.InternalEnumerator<ValueTuple<bool, Bounds>>..ctor
+	|
+	|-RVA: 0x2B0B060 Offset: 0x2B0B161 VA: 0x2B0B060
+	|-Array.InternalEnumerator<ValueTuple<bool, byte>>..ctor
+	|
+	|-RVA: 0x2B0B2C0 Offset: 0x2B0B3C1 VA: 0x2B0B2C0
+	|-Array.InternalEnumerator<ValueTuple<bool, Color>>..ctor
+	|
+	|-RVA: 0x2B0B550 Offset: 0x2B0B651 VA: 0x2B0B550
+	|-Array.InternalEnumerator<ValueTuple<bool, double>>..ctor
+	|
+	|-RVA: 0x2B0B7C0 Offset: 0x2B0B8C1 VA: 0x2B0B7C0
+	|-Array.InternalEnumerator<ValueTuple<bool, int>>..ctor
+	|
+	|-RVA: 0x2B0BA30 Offset: 0x2B0BB31 VA: 0x2B0BA30
+	|-Array.InternalEnumerator<ValueTuple<bool, long>>..ctor
+	|
+	|-RVA: 0x2B0BCA0 Offset: 0x2B0BDA1 VA: 0x2B0BCA0
+	|-Array.InternalEnumerator<ValueTuple<bool, object>>..ctor
+	|
+	|-RVA: 0x2B0BF10 Offset: 0x2B0C011 VA: 0x2B0BF10
+	|-Array.InternalEnumerator<ValueTuple<bool, Quaternion>>..ctor
+	|
+	|-RVA: 0x2B0C1A0 Offset: 0x2B0C2A1 VA: 0x2B0C1A0
+	|-Array.InternalEnumerator<ValueTuple<bool, Rect>>..ctor
+	|
+	|-RVA: 0x2B0C430 Offset: 0x2B0C531 VA: 0x2B0C430
+	|-Array.InternalEnumerator<ValueTuple<bool, float>>..ctor
+	|
+	|-RVA: 0x2B0C6A0 Offset: 0x2B0C7A1 VA: 0x2B0C6A0
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask>>..ctor
+	|
+	|-RVA: 0x2B0C910 Offset: 0x2B0CA11 VA: 0x2B0C910
+	|-Array.InternalEnumerator<ValueTuple<bool, Unit>>..ctor
+	|
+	|-RVA: 0x2B0CB70 Offset: 0x2B0CC71 VA: 0x2B0CB70
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector2>>..ctor
+	|
+	|-RVA: 0x2B0CDE0 Offset: 0x2B0CEE1 VA: 0x2B0CDE0
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector3>>..ctor
+	|
+	|-RVA: 0x2B0D050 Offset: 0x2B0D151 VA: 0x2B0D050
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector4>>..ctor
+	|
+	|-RVA: 0x2B0D2E0 Offset: 0x2B0D3E1 VA: 0x2B0D2E0
+	|-Array.InternalEnumerator<ValueTuple<int, bool>>..ctor
+	|
+	|-RVA: 0x2B0D550 Offset: 0x2B0D651 VA: 0x2B0D550
+	|-Array.InternalEnumerator<ValueTuple<int, Bounds>>..ctor
+	|
+	|-RVA: 0x2B0D800 Offset: 0x2B0D901 VA: 0x2B0D800
+	|-Array.InternalEnumerator<ValueTuple<int, byte>>..ctor
+	|
+	|-RVA: 0x2B0DA70 Offset: 0x2B0DB71 VA: 0x2B0DA70
+	|-Array.InternalEnumerator<ValueTuple<int, Color>>..ctor
+	|
+	|-RVA: 0x2B0DD00 Offset: 0x2B0DE01 VA: 0x2B0DD00
+	|-Array.InternalEnumerator<ValueTuple<int, double>>..ctor
+	|
+	|-RVA: 0x2B0DF70 Offset: 0x2B0E071 VA: 0x2B0DF70
+	|-Array.InternalEnumerator<ValueTuple<int, int>>..ctor
+	|
+	|-RVA: 0x2B0E1E0 Offset: 0x2B0E2E1 VA: 0x2B0E1E0
+	|-Array.InternalEnumerator<ValueTuple<int, long>>..ctor
+	|
+	|-RVA: 0x2B0E450 Offset: 0x2B0E551 VA: 0x2B0E450
+	|-Array.InternalEnumerator<ValueTuple<int, object>>..ctor
+	|
+	|-RVA: 0x2B0E6C0 Offset: 0x2B0E7C1 VA: 0x2B0E6C0
+	|-Array.InternalEnumerator<ValueTuple<int, Quaternion>>..ctor
+	|
+	|-RVA: 0x2B0E950 Offset: 0x2B0EA51 VA: 0x2B0E950
+	|-Array.InternalEnumerator<ValueTuple<int, Rect>>..ctor
+	|
+	|-RVA: 0x2B0EBE0 Offset: 0x2B0ECE1 VA: 0x2B0EBE0
+	|-Array.InternalEnumerator<ValueTuple<int, float>>..ctor
+	|
+	|-RVA: 0x2B0EE50 Offset: 0x2B0EF51 VA: 0x2B0EE50
+	|-Array.InternalEnumerator<ValueTuple<int, Unit>>..ctor
+	|
+	|-RVA: 0x2B0F0C0 Offset: 0x2B0F1C1 VA: 0x2B0F0C0
+	|-Array.InternalEnumerator<ValueTuple<int, Vector2>>..ctor
+	|
+	|-RVA: 0x2B0F330 Offset: 0x2B0F431 VA: 0x2B0F330
+	|-Array.InternalEnumerator<ValueTuple<int, Vector3>>..ctor
+	|
+	|-RVA: 0x2B0F5A0 Offset: 0x2B0F6A1 VA: 0x2B0F5A0
+	|-Array.InternalEnumerator<ValueTuple<int, Vector4>>..ctor
+	|
+	|-RVA: 0x2B0F830 Offset: 0x2B0F931 VA: 0x2B0F830
+	|-Array.InternalEnumerator<ValueTuple<Int32Enum, int>>..ctor
+	|
+	|-RVA: 0x2B0FAA0 Offset: 0x2B0FBA1 VA: 0x2B0FAA0
+	|-Array.InternalEnumerator<ValueTuple<object, ValueTuple<object, int>>>..ctor
+	|
+	|-RVA: 0x2B0FD30 Offset: 0x2B0FE31 VA: 0x2B0FD30
+	|-Array.InternalEnumerator<ValueTuple<object, int>>..ctor
+	|
+	|-RVA: 0x2B0FFA0 Offset: 0x2B100A1 VA: 0x2B0FFA0
+	|-Array.InternalEnumerator<ValueTuple<object, object>>..ctor
+	|
+	|-RVA: 0x2B10210 Offset: 0x2B10311 VA: 0x2B10210
+	|-Array.InternalEnumerator<ValueTuple<object, float>>..ctor
+	|
+	|-RVA: 0x2B10480 Offset: 0x2B10581 VA: 0x2B10480
+	|-Array.InternalEnumerator<ValueTuple<Vector3, float>>..ctor
+	|
+	|-RVA: 0x2ADFE30 Offset: 0x2ADFF31 VA: 0x2ADFE30
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x2AE00E0 Offset: 0x2AE01E1 VA: 0x2AE00E0
+	|-Array.InternalEnumerator<ValueTuple<object, Int32Enum, int>>..ctor
+	|
+	|-RVA: 0x2AE0350 Offset: 0x2AE0451 VA: 0x2AE0350
+	|-Array.InternalEnumerator<ValueTuple<object, object, object>>..ctor
+	|
+	|-RVA: 0x2AE05E0 Offset: 0x2AE06E1 VA: 0x2AE05E0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x2AE0890 Offset: 0x2AE0991 VA: 0x2AE0890
+	|-Array.InternalEnumerator<ValueTuple<object, int, int, int>>..ctor
+	|
+	|-RVA: 0x2AE0B20 Offset: 0x2AE0C21 VA: 0x2AE0B20
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object>>..ctor
+	|
+	|-RVA: 0x2AE0DB0 Offset: 0x2AE0EB1 VA: 0x2AE0DB0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x2AE1080 Offset: 0x2AE1181 VA: 0x2AE1080
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object>>..ctor
+	|
+	|-RVA: 0x2AE1330 Offset: 0x2AE1431 VA: 0x2AE1330
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x2AE1600 Offset: 0x2AE1701 VA: 0x2AE1600
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object>>..ctor
+	|
+	|-RVA: 0x2AE18B0 Offset: 0x2AE19B1 VA: 0x2AE18B0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>..ctor
+	|
+	|-RVA: 0x2AE1BA0 Offset: 0x2AE1CA1 VA: 0x2AE1BA0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object, object>>..ctor
+	|
+	|-RVA: 0x2AE1E50 Offset: 0x2AE1F51 VA: 0x2AE1E50
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2AE2140 Offset: 0x2AE2241 VA: 0x2AE2140
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>..ctor
+	|
+	|-RVA: 0x2AE23D0 Offset: 0x2AE24D1 VA: 0x2AE23D0
+	|-Array.InternalEnumerator<AnimatorClipInfo>..ctor
+	|
+	|-RVA: 0x2AE2640 Offset: 0x2AE2741 VA: 0x2AE2640
+	|-Array.InternalEnumerator<AsyncOperationHandle>..ctor
+	|
+	|-RVA: 0x2AE28D0 Offset: 0x2AE29D1 VA: 0x2AE28D0
+	|-Array.InternalEnumerator<AsyncUnit>..ctor
+	|
+	|-RVA: 0x2AE2B30 Offset: 0x2AE2C31 VA: 0x2AE2B30
+	|-Array.InternalEnumerator<BatchVisibility>..ctor
+	|
+	|-RVA: 0x2AE2DA0 Offset: 0x2AE2EA1 VA: 0x2AE2DA0
+	|-Array.InternalEnumerator<BoneWeight>..ctor
+	|
+	|-RVA: 0x2AE3030 Offset: 0x2AE3131 VA: 0x2AE3030
+	|-Array.InternalEnumerator<BoneWeight1>..ctor
+	|
+	|-RVA: 0x2AE32A0 Offset: 0x2AE33A1 VA: 0x2AE32A0
+	|-Array.InternalEnumerator<bool>..ctor
+	|
+	|-RVA: 0x2AE3510 Offset: 0x2AE3611 VA: 0x2AE3510
+	|-Array.InternalEnumerator<Bounds>..ctor
+	|
+	|-RVA: 0x2AE37A0 Offset: 0x2AE38A1 VA: 0x2AE37A0
+	|-Array.InternalEnumerator<byte>..ctor
+	|
+	|-RVA: 0x2AE3A10 Offset: 0x2AE3B11 VA: 0x2AE3A10
+	|-Array.InternalEnumerator<ByteEnum>..ctor
+	|
+	|-RVA: 0x2AE3C80 Offset: 0x2AE3D81 VA: 0x2AE3C80
+	|-Array.InternalEnumerator<CameraInfo>..ctor
+	|
+	|-RVA: 0x2AE3EF0 Offset: 0x2AE3FF1 VA: 0x2AE3EF0
+	|-Array.InternalEnumerator<CancellationToken>..ctor
+	|
+	|-RVA: 0x2AE4160 Offset: 0x2AE4261 VA: 0x2AE4160
+	|-Array.InternalEnumerator<CancellationTokenRegistration>..ctor
+	|
+	|-RVA: 0x2AE43F0 Offset: 0x2AE44F1 VA: 0x2AE43F0
+	|-Array.InternalEnumerator<char>..ctor
+	|
+	|-RVA: 0x2AE4660 Offset: 0x2AE4761 VA: 0x2AE4660
+	|-Array.InternalEnumerator<ClusteringData>..ctor
+	|
+	|-RVA: 0x2AE48F0 Offset: 0x2AE49F1 VA: 0x2AE48F0
+	|-Array.InternalEnumerator<ClusteringProcessorState>..ctor
+	|
+	|-RVA: 0x2AE4B80 Offset: 0x2AE4C81 VA: 0x2AE4B80
+	|-Array.InternalEnumerator<Color>..ctor
+	|
+	|-RVA: 0x2AE4E00 Offset: 0x2AE4F01 VA: 0x2AE4E00
+	|-Array.InternalEnumerator<Color32>..ctor
+	|
+	|-RVA: 0x2AE5060 Offset: 0x2AE5161 VA: 0x2AE5060
+	|-Array.InternalEnumerator<Color4u8>..ctor
+	|
+	|-RVA: 0x2AE52C0 Offset: 0x2AE53C1 VA: 0x2AE52C0
+	|-Array.InternalEnumerator<ColorBlock>..ctor
+	|
+	|-RVA: 0x2AE5590 Offset: 0x2AE5691 VA: 0x2AE5590
+	|-Array.InternalEnumerator<CombineInstance>..ctor
+	|
+	|-RVA: 0x2AE5880 Offset: 0x2AE5981 VA: 0x2AE5880
+	|-Array.InternalEnumerator<ConstraintSource>..ctor
+	|
+	|-RVA: 0x2AE5AF0 Offset: 0x2AE5BF1 VA: 0x2AE5AF0
+	|-Array.InternalEnumerator<ContactPoint>..ctor
+	|
+	|-RVA: 0x2AE5DA0 Offset: 0x2AE5EA1 VA: 0x2AE5DA0
+	|-Array.InternalEnumerator<ContactPoint2D>..ctor
+	|
+	|-RVA: 0x2AE6050 Offset: 0x2AE6151 VA: 0x2AE6050
+	|-Array.InternalEnumerator<ContourVertex>..ctor
+	|
+	|-RVA: 0x2AE62E0 Offset: 0x2AE63E1 VA: 0x2AE62E0
+	|-Array.InternalEnumerator<CustomAttributeNamedArgument>..ctor
+	|
+	|-RVA: 0x2AE6570 Offset: 0x2AE6671 VA: 0x2AE6570
+	|-Array.InternalEnumerator<CustomAttributeTypedArgument>..ctor
+	|
+	|-RVA: 0x2AE67E0 Offset: 0x2AE68E1 VA: 0x2AE67E0
+	|-Array.InternalEnumerator<DataStoreRatingInfo>..ctor
+	|
+	|-RVA: 0x2AE6A70 Offset: 0x2AE6B71 VA: 0x2AE6A70
+	|-Array.InternalEnumerator<DataStoreResult>..ctor
+	|
+	|-RVA: 0x2AE6CE0 Offset: 0x2AE6DE1 VA: 0x2AE6CE0
+	|-Array.InternalEnumerator<DateTime>..ctor
+	|
+	|-RVA: 0x2AE6F50 Offset: 0x2AE7051 VA: 0x2AE6F50
+	|-Array.InternalEnumerator<DateTimeOffset>..ctor
+	|
+	|-RVA: 0x2AE71C0 Offset: 0x2AE72C1 VA: 0x2AE71C0
+	|-Array.InternalEnumerator<DebugPadState>..ctor
+	|
+	|-RVA: 0x2AE7450 Offset: 0x2AE7551 VA: 0x2AE7450
+	|-Array.InternalEnumerator<Decimal>..ctor
+	|
+	|-RVA: 0x2AE76C0 Offset: 0x2AE77C1 VA: 0x2AE76C0
+	|-Array.InternalEnumerator<DeferredTiler>..ctor
+	|
+	|-RVA: 0x2AE79B0 Offset: 0x2AE7AB1 VA: 0x2AE79B0
+	|-Array.InternalEnumerator<DeviceHandle>..ctor
+	|
+	|-RVA: 0x2AE7C20 Offset: 0x2AE7D21 VA: 0x2AE7C20
+	|-Array.InternalEnumerator<DiagnosticEvent>..ctor
+	|
+	|-RVA: 0x2AE7ED0 Offset: 0x2AE7FD1 VA: 0x2AE7ED0
+	|-Array.InternalEnumerator<DictionaryEntry>..ctor
+	|
+	|-RVA: 0x2AE8140 Offset: 0x2AE8241 VA: 0x2AE8140
+	|-Array.InternalEnumerator<DictionaryInfo>..ctor
+	|
+	|-RVA: 0x2AE83B0 Offset: 0x2AE84B1 VA: 0x2AE83B0
+	|-Array.InternalEnumerator<DirectoryEntry>..ctor
+	|
+	|-RVA: 0x2AE8640 Offset: 0x2AE8741 VA: 0x2AE8640
+	|-Array.InternalEnumerator<double>..ctor
+	|
+	|-RVA: 0x2AE88B0 Offset: 0x2AE89B1 VA: 0x2AE88B0
+	|-Array.InternalEnumerator<Ephemeron>..ctor
+	|
+	|-RVA: 0x2AE8B20 Offset: 0x2AE8C21 VA: 0x2AE8B20
+	|-Array.InternalEnumerator<FXZ>..ctor
+	|
+	|-RVA: 0x2AE8D90 Offset: 0x2AE8E91 VA: 0x2AE8D90
+	|-Array.InternalEnumerator<Finger>..ctor
+	|
+	|-RVA: 0x2AE9040 Offset: 0x2AE9141 VA: 0x2AE9040
+	|-Array.InternalEnumerator<Float2>..ctor
+	|
+	|-RVA: 0x2AE92B0 Offset: 0x2AE93B1 VA: 0x2AE92B0
+	|-Array.InternalEnumerator<Friend>..ctor
+	|
+	|-RVA: 0x2AE9550 Offset: 0x2AE9651 VA: 0x2AE9550
+	|-Array.InternalEnumerator<GCHandle>..ctor
+	|
+	|-RVA: 0x2AE97B0 Offset: 0x2AE98B1 VA: 0x2AE97B0
+	|-Array.InternalEnumerator<GesturePoint>..ctor
+	|
+	|-RVA: 0x2AE9A20 Offset: 0x2AE9B21 VA: 0x2AE9A20
+	|-Array.InternalEnumerator<GestureState>..ctor
+	|
+	|-RVA: 0x2AE9CF0 Offset: 0x2AE9DF1 VA: 0x2AE9CF0
+	|-Array.InternalEnumerator<GlyphMarshallingStruct>..ctor
+	|
+	|-RVA: 0x2AE9FA0 Offset: 0x2AEA0A1 VA: 0x2AE9FA0
+	|-Array.InternalEnumerator<GlyphPairAdjustmentRecord>..ctor
+	|
+	|-RVA: 0x2AEA250 Offset: 0x2AEA351 VA: 0x2AEA250
+	|-Array.InternalEnumerator<GlyphRect>..ctor
+	|
+	|-RVA: 0x2AEA4C0 Offset: 0x2AEA5C1 VA: 0x2AEA4C0
+	|-Array.InternalEnumerator<Guid>..ctor
+	|
+	|-RVA: 0x2AEA730 Offset: 0x2AEA831 VA: 0x2AEA730
+	|-Array.InternalEnumerator<Hand>..ctor
+	|
+	|-RVA: 0x2AEA9C0 Offset: 0x2AEAAC1 VA: 0x2AEA9C0
+	|-Array.InternalEnumerator<HandAnalysisImageState>..ctor
+	|
+	|-RVA: 0x2AEAC30 Offset: 0x2AEAD31 VA: 0x2AEAC30
+	|-Array.InternalEnumerator<HandAnalysisSilhouetteState>..ctor
+	|
+	|-RVA: 0x2AEAEC0 Offset: 0x2AEAFC1 VA: 0x2AEAEC0
+	|-Array.InternalEnumerator<HeaderVariantInfo>..ctor
+	|
+	|-RVA: 0x2AEB130 Offset: 0x2AEB231 VA: 0x2AEB130
+	|-Array.InternalEnumerator<HighlightState>..ctor
+	|
+	|-RVA: 0x2AEB3C0 Offset: 0x2AEB4C1 VA: 0x2AEB3C0
+	|-Array.InternalEnumerator<HumanBone>..ctor
+	|
+	|-RVA: 0x2AEB670 Offset: 0x2AEB771 VA: 0x2AEB670
+	|-Array.InternalEnumerator<short>..ctor
+	|
+	|-RVA: 0x2AEB8E0 Offset: 0x2AEB9E1 VA: 0x2AEB8E0
+	|-Array.InternalEnumerator<int>..ctor
+	|
+	|-RVA: 0x2AEBB50 Offset: 0x2AEBC51 VA: 0x2AEBB50
+	|-Array.InternalEnumerator<Int32Enum>..ctor
+	|
+	|-RVA: 0x2AEBDC0 Offset: 0x2AEBEC1 VA: 0x2AEBDC0
+	|-Array.InternalEnumerator<long>..ctor
+	|
+	|-RVA: 0x2AEC030 Offset: 0x2AEC131 VA: 0x2AEC030
+	|-Array.InternalEnumerator<Int64Enum>..ctor
+	|
+	|-RVA: 0x2AEC2A0 Offset: 0x2AEC3A1 VA: 0x2AEC2A0
+	|-Array.InternalEnumerator<IntPtr>..ctor
+	|
+	|-RVA: 0x2AEC510 Offset: 0x2AEC611 VA: 0x2AEC510
+	|-Array.InternalEnumerator<InternalCodePageDataItem>..ctor
+	|
+	|-RVA: 0x2AEC780 Offset: 0x2AEC881 VA: 0x2AEC780
+	|-Array.InternalEnumerator<InternalEncodingDataItem>..ctor
+	|
+	|-RVA: 0x2AEC9F0 Offset: 0x2AECAF1 VA: 0x2AEC9F0
+	|-Array.InternalEnumerator<InterpretedFrameInfo>..ctor
+	|
+	|-RVA: 0x2AECC60 Offset: 0x2AECD61 VA: 0x2AECC60
+	|-Array.InternalEnumerator<IntervalTreeNode>..ctor
+	|
+	|-RVA: 0x2AECEF0 Offset: 0x2AECFF1 VA: 0x2AECEF0
+	|-Array.InternalEnumerator<JobHandle>..ctor
+	|
+	|-RVA: 0x2AED160 Offset: 0x2AED261 VA: 0x2AED160
+	|-Array.InternalEnumerator<Keyframe>..ctor
+	|
+	|-RVA: 0x2AED410 Offset: 0x2AED511 VA: 0x2AED410
+	|-Array.InternalEnumerator<LOD>..ctor
+	|
+	|-RVA: 0x2AED680 Offset: 0x2AED781 VA: 0x2AED680
+	|-Array.InternalEnumerator<LayerMask>..ctor
+	|
+	|-RVA: 0x2AED8E0 Offset: 0x2AED9E1 VA: 0x2AED8E0
+	|-Array.InternalEnumerator<LengthLimitProperties>..ctor
+	|
+	|-RVA: 0x2AEDB50 Offset: 0x2AEDC51 VA: 0x2AEDB50
+	|-Array.InternalEnumerator<Light2DBlendStyle>..ctor
+	|
+	|-RVA: 0x2AEDE20 Offset: 0x2AEDF21 VA: 0x2AEDE20
+	|-Array.InternalEnumerator<LightDataGI>..ctor
+	|
+	|-RVA: 0x2AEE0F0 Offset: 0x2AEE1F1 VA: 0x2AEE0F0
+	|-Array.InternalEnumerator<LocalDefinition>..ctor
+	|
+	|-RVA: 0x2AEE360 Offset: 0x2AEE461 VA: 0x2AEE360
+	|-Array.InternalEnumerator<MapPos>..ctor
+	|
+	|-RVA: 0x2AEE5D0 Offset: 0x2AEE6D1 VA: 0x2AEE5D0
+	|-Array.InternalEnumerator<MapRange>..ctor
+	|
+	|-RVA: 0x2AEE840 Offset: 0x2AEE941 VA: 0x2AEE840
+	|-Array.InternalEnumerator<MaterialReference>..ctor
+	|
+	|-RVA: 0x2AEEAF0 Offset: 0x2AEEBF1 VA: 0x2AEEAF0
+	|-Array.InternalEnumerator<Matrix4x4>..ctor
+	|
+	|-RVA: 0x2AEEDA0 Offset: 0x2AEEEA1 VA: 0x2AEEDA0
+	|-Array.InternalEnumerator<MomentProcessorState>..ctor
+	|
+	|-RVA: 0x2AEF030 Offset: 0x2AEF131 VA: 0x2AEF030
+	|-Array.InternalEnumerator<MomentStatistic>..ctor
+	|
+	|-RVA: 0x2AEF2B0 Offset: 0x2AEF3B1 VA: 0x2AEF2B0
+	|-Array.InternalEnumerator<Navigation>..ctor
+	|
+	|-RVA: 0x2AEF560 Offset: 0x2AEF661 VA: 0x2AEF560
+	|-Array.InternalEnumerator<NetworkServiceAccountId>..ctor
+	|
+	|-RVA: 0x2AEF7D0 Offset: 0x2AEF8D1 VA: 0x2AEF7D0
+	|-Array.InternalEnumerator<NpadFullKeyState>..ctor
+	|
+	|-RVA: 0x2AEFA80 Offset: 0x2AEFB81 VA: 0x2AEFA80
+	|-Array.InternalEnumerator<NpadHandheldState>..ctor
+	|
+	|-RVA: 0x2AEFD30 Offset: 0x2AEFE31 VA: 0x2AEFD30
+	|-Array.InternalEnumerator<NpadJoyDualState>..ctor
+	|
+	|-RVA: 0x2AEFFE0 Offset: 0x2AF00E1 VA: 0x2AEFFE0
+	|-Array.InternalEnumerator<NpadJoyLeftState>..ctor
+	|
+	|-RVA: 0x2AF0290 Offset: 0x2AF0391 VA: 0x2AF0290
+	|-Array.InternalEnumerator<NpadJoyRightState>..ctor
+	|
+	|-RVA: 0x2AF0540 Offset: 0x2AF0641 VA: 0x2AF0540
+	|-Array.InternalEnumerator<NpadStateArrayItem>..ctor
+	|
+	|-RVA: 0x2AF07F0 Offset: 0x2AF08F1 VA: 0x2AF07F0
+	|-Array.InternalEnumerator<NsUid>..ctor
+	|
+	|-RVA: 0x2AF0A60 Offset: 0x2AF0B61 VA: 0x2AF0A60
+	|-Array.InternalEnumerator<object>..ctor
+	|
+	|-RVA: 0x2AF0C80 Offset: 0x2AF0D81 VA: 0x2AF0C80
+	|-Array.InternalEnumerator<ObjectInitializationData>..ctor
+	|
+	|-RVA: 0x2AF0F30 Offset: 0x2AF1031 VA: 0x2AF0F30
+	|-Array.InternalEnumerator<ParameterModifier>..ctor
+	|
+	|-RVA: 0x2AF11A0 Offset: 0x2AF12A1 VA: 0x2AF11A0
+	|-Array.InternalEnumerator<Plane>..ctor
+	|
+	|-RVA: 0x2AF1420 Offset: 0x2AF1521 VA: 0x2AF1420
+	|-Array.InternalEnumerator<Playable>..ctor
+	|
+	|-RVA: 0x2AF1690 Offset: 0x2AF1791 VA: 0x2AF1690
+	|-Array.InternalEnumerator<PlayableBinding>..ctor
+	|
+	|-RVA: 0x2AF1920 Offset: 0x2AF1A21 VA: 0x2AF1920
+	|-Array.InternalEnumerator<PlayerLoopSystem>..ctor
+	|
+	|-RVA: 0x2AF1BD0 Offset: 0x2AF1CD1 VA: 0x2AF1BD0
+	|-Array.InternalEnumerator<PlayerLoopSystemInternal>..ctor
+	|
+	|-RVA: 0x2AF1E80 Offset: 0x2AF1F81 VA: 0x2AF1E80
+	|-Array.InternalEnumerator<PreTile>..ctor
+	|
+	|-RVA: 0x2AF2130 Offset: 0x2AF2231 VA: 0x2AF2130
+	|-Array.InternalEnumerator<Profile>..ctor
+	|
+	|-RVA: 0x2AF23D0 Offset: 0x2AF24D1 VA: 0x2AF23D0
+	|-Array.InternalEnumerator<Protrusion>..ctor
+	|
+	|-RVA: 0x2AF2640 Offset: 0x2AF2741 VA: 0x2AF2640
+	|-Array.InternalEnumerator<Quaternion>..ctor
+	|
+	|-RVA: 0x2AF28C0 Offset: 0x2AF29C1 VA: 0x2AF28C0
+	|-Array.InternalEnumerator<RandomSeed>..ctor
+	|
+	|-RVA: 0x2AF2B30 Offset: 0x2AF2C31 VA: 0x2AF2B30
+	|-Array.InternalEnumerator<RangePositionInfo>..ctor
+	|
+	|-RVA: 0x2AF2DA0 Offset: 0x2AF2EA1 VA: 0x2AF2DA0
+	|-Array.InternalEnumerator<Ranking2ChartInfoInput>..ctor
+	|
+	|-RVA: 0x2AF3010 Offset: 0x2AF3111 VA: 0x2AF3010
+	|-Array.InternalEnumerator<RaycastHit>..ctor
+	|
+	|-RVA: 0x2AF32C0 Offset: 0x2AF33C1 VA: 0x2AF32C0
+	|-Array.InternalEnumerator<RaycastHit2D>..ctor
+	|
+	|-RVA: 0x2AF3570 Offset: 0x2AF3671 VA: 0x2AF3570
+	|-Array.InternalEnumerator<RaycastResult>..ctor
+	|
+	|-RVA: 0x2AF3840 Offset: 0x2AF3941 VA: 0x2AF3840
+	|-Array.InternalEnumerator<Rect>..ctor
+	|
+	|-RVA: 0x2AF3AC0 Offset: 0x2AF3BC1 VA: 0x2AF3AC0
+	|-Array.InternalEnumerator<RenderBuffer>..ctor
+	|
+	|-RVA: 0x2AF3D30 Offset: 0x2AF3E31 VA: 0x2AF3D30
+	|-Array.InternalEnumerator<RenderStateBlock>..ctor
+	|
+	|-RVA: 0x2AF4020 Offset: 0x2AF4121 VA: 0x2AF4020
+	|-Array.InternalEnumerator<RenderTargetHandle>..ctor
+	|
+	|-RVA: 0x2AF42D0 Offset: 0x2AF43D1 VA: 0x2AF42D0
+	|-Array.InternalEnumerator<RenderTargetIdentifier>..ctor
+	|
+	|-RVA: 0x2AF4580 Offset: 0x2AF4681 VA: 0x2AF4580
+	|-Array.InternalEnumerator<RendererListHandle>..ctor
+	|
+	|-RVA: 0x2AF47F0 Offset: 0x2AF48F1 VA: 0x2AF47F0
+	|-Array.InternalEnumerator<ResourceHandle>..ctor
+	|
+	|-RVA: 0x2AF4A60 Offset: 0x2AF4B61 VA: 0x2AF4A60
+	|-Array.InternalEnumerator<ResourceLocator>..ctor
+	|
+	|-RVA: 0x2AF4CD0 Offset: 0x2AF4DD1 VA: 0x2AF4CD0
+	|-Array.InternalEnumerator<RichTextTagAttribute>..ctor
+	|
+	|-RVA: 0x2AF4F60 Offset: 0x2AF5061 VA: 0x2AF4F60
+	|-Array.InternalEnumerator<RuntimeLabel>..ctor
+	|
+	|-RVA: 0x2AF51D0 Offset: 0x2AF52D1 VA: 0x2AF51D0
+	|-Array.InternalEnumerator<sbyte>..ctor
+	|
+	|-RVA: 0x2AF5440 Offset: 0x2AF5541 VA: 0x2AF5440
+	|-Array.InternalEnumerator<SerializedType>..ctor
+	|
+	|-RVA: 0x2AF56D0 Offset: 0x2AF57D1 VA: 0x2AF56D0
+	|-Array.InternalEnumerator<ShaderKeyword>..ctor
+	|
+	|-RVA: 0x2AF5930 Offset: 0x2AF5A31 VA: 0x2AF5930
+	|-Array.InternalEnumerator<ShaderTagId>..ctor
+	|
+	|-RVA: 0x2AF5B90 Offset: 0x2AF5C91 VA: 0x2AF5B90
+	|-Array.InternalEnumerator<ShadowSliceData>..ctor
+	|
+	|-RVA: 0x2AF5E20 Offset: 0x2AF5F21 VA: 0x2AF5E20
+	|-Array.InternalEnumerator<Shape>..ctor
+	|
+	|-RVA: 0x2AF60B0 Offset: 0x2AF61B1 VA: 0x2AF60B0
+	|-Array.InternalEnumerator<float>..ctor
+	|
+	|-RVA: 0x2AF6320 Offset: 0x2AF6421 VA: 0x2AF6320
+	|-Array.InternalEnumerator<SixAxisSensorHandle>..ctor
+	|
+	|-RVA: 0x2AF6580 Offset: 0x2AF6681 VA: 0x2AF6580
+	|-Array.InternalEnumerator<SixAxisSensorState>..ctor
+	|
+	|-RVA: 0x2AF6850 Offset: 0x2AF6951 VA: 0x2AF6850
+	|-Array.InternalEnumerator<SkeletonBone>..ctor
+	|
+	|-RVA: 0x2AF6B00 Offset: 0x2AF6C01 VA: 0x2AF6B00
+	|-Array.InternalEnumerator<SortingLayer>..ctor
+	|
+	|-RVA: 0x2AF6D60 Offset: 0x2AF6E61 VA: 0x2AF6D60
+	|-Array.InternalEnumerator<SphericalHarmonicsL2>..ctor
+	|
+	|-RVA: 0x2AF7050 Offset: 0x2AF7151 VA: 0x2AF7050
+	|-Array.InternalEnumerator<SpinLock>..ctor
+	|
+	|-RVA: 0x2AF72B0 Offset: 0x2AF73B1 VA: 0x2AF72B0
+	|-Array.InternalEnumerator<SpringBoneComponents>..ctor
+	|
+	|-RVA: 0x2AF7580 Offset: 0x2AF7681 VA: 0x2AF7580
+	|-Array.InternalEnumerator<SpringBoneProperties>..ctor
+	|
+	|-RVA: 0x2AF7810 Offset: 0x2AF7911 VA: 0x2AF7810
+	|-Array.InternalEnumerator<SpringColliderComponents>..ctor
+	|
+	|-RVA: 0x2AF7B00 Offset: 0x2AF7C01 VA: 0x2AF7B00
+	|-Array.InternalEnumerator<SpringColliderProperties>..ctor
+	|
+	|-RVA: 0x2AF7D70 Offset: 0x2AF7E71 VA: 0x2AF7D70
+	|-Array.InternalEnumerator<SpringForceComponent>..ctor
+	|
+	|-RVA: 0x29823E0 Offset: 0x29824E1 VA: 0x29823E0
+	|-Array.InternalEnumerator<SpringJobElement>..ctor
+	|
+	|-RVA: 0x2982670 Offset: 0x2982771 VA: 0x2982670
+	|-Array.InternalEnumerator<SpriteState>..ctor
+	|
+	|-RVA: 0x2982900 Offset: 0x2982A01 VA: 0x2982900
+	|-Array.InternalEnumerator<SubMeshDescriptor>..ctor
+	|
+	|-RVA: 0x2982BB0 Offset: 0x2982CB1 VA: 0x2982BB0
+	|-Array.InternalEnumerator<TMP_CharacterInfo>..ctor
+	|
+	|-RVA: 0x2982E40 Offset: 0x2982F41 VA: 0x2982E40
+	|-Array.InternalEnumerator<TMP_FontWeightPair>..ctor
+	|
+	|-RVA: 0x29830B0 Offset: 0x29831B1 VA: 0x29830B0
+	|-Array.InternalEnumerator<TMP_LineInfo>..ctor
+	|
+	|-RVA: 0x29833A0 Offset: 0x29834A1 VA: 0x29833A0
+	|-Array.InternalEnumerator<TMP_LinkInfo>..ctor
+	|
+	|-RVA: 0x2983650 Offset: 0x2983751 VA: 0x2983650
+	|-Array.InternalEnumerator<TMP_MeshInfo>..ctor
+	|
+	|-RVA: 0x2983920 Offset: 0x2983A21 VA: 0x2983920
+	|-Array.InternalEnumerator<TMP_PageInfo>..ctor
+	|
+	|-RVA: 0x2983BB0 Offset: 0x2983CB1 VA: 0x2983BB0
+	|-Array.InternalEnumerator<TMP_WordInfo>..ctor
+	|
+	|-RVA: 0x2983E40 Offset: 0x2983F41 VA: 0x2983E40
+	|-Array.InternalEnumerator<TablePair>..ctor
+	|
+	|-RVA: 0x29840B0 Offset: 0x29841B1 VA: 0x29840B0
+	|-Array.InternalEnumerator<TextureHandle>..ctor
+	|
+	|-RVA: 0x2984320 Offset: 0x2984421 VA: 0x2984320
+	|-Array.InternalEnumerator<TimeSpan>..ctor
+	|
+	|-RVA: 0x2984590 Offset: 0x2984691 VA: 0x2984590
+	|-Array.InternalEnumerator<Touch>..ctor
+	|
+	|-RVA: 0x2984860 Offset: 0x2984961 VA: 0x2984860
+	|-Array.InternalEnumerator<TouchScreenState1>..ctor
+	|
+	|-RVA: 0x2984B10 Offset: 0x2984C11 VA: 0x2984B10
+	|-Array.InternalEnumerator<TouchScreenState10>..ctor
+	|
+	|-RVA: 0x2984DA0 Offset: 0x2984EA1 VA: 0x2984DA0
+	|-Array.InternalEnumerator<TouchScreenState11>..ctor
+	|
+	|-RVA: 0x2985030 Offset: 0x2985131 VA: 0x2985030
+	|-Array.InternalEnumerator<TouchScreenState12>..ctor
+	|
+	|-RVA: 0x29852C0 Offset: 0x29853C1 VA: 0x29852C0
+	|-Array.InternalEnumerator<TouchScreenState13>..ctor
+	|
+	|-RVA: 0x2985550 Offset: 0x2985651 VA: 0x2985550
+	|-Array.InternalEnumerator<TouchScreenState14>..ctor
+	|
+	|-RVA: 0x29857E0 Offset: 0x29858E1 VA: 0x29857E0
+	|-Array.InternalEnumerator<TouchScreenState15>..ctor
+	|
+	|-RVA: 0x2985A70 Offset: 0x2985B71 VA: 0x2985A70
+	|-Array.InternalEnumerator<TouchScreenState16>..ctor
+	|
+	|-RVA: 0x2985D00 Offset: 0x2985E01 VA: 0x2985D00
+	|-Array.InternalEnumerator<TouchScreenState2>..ctor
+	|
+	|-RVA: 0x2985FD0 Offset: 0x29860D1 VA: 0x2985FD0
+	|-Array.InternalEnumerator<TouchScreenState3>..ctor
+	|
+	|-RVA: 0x2986260 Offset: 0x2986361 VA: 0x2986260
+	|-Array.InternalEnumerator<TouchScreenState4>..ctor
+	|
+	|-RVA: 0x29864F0 Offset: 0x29865F1 VA: 0x29864F0
+	|-Array.InternalEnumerator<TouchScreenState5>..ctor
+	|
+	|-RVA: 0x2986780 Offset: 0x2986881 VA: 0x2986780
+	|-Array.InternalEnumerator<TouchScreenState6>..ctor
+	|
+	|-RVA: 0x2986A10 Offset: 0x2986B11 VA: 0x2986A10
+	|-Array.InternalEnumerator<TouchScreenState7>..ctor
+	|
+	|-RVA: 0x2986CA0 Offset: 0x2986DA1 VA: 0x2986CA0
+	|-Array.InternalEnumerator<TouchScreenState8>..ctor
+	|
+	|-RVA: 0x2986F30 Offset: 0x2987031 VA: 0x2986F30
+	|-Array.InternalEnumerator<TouchScreenState9>..ctor
+	|
+	|-RVA: 0x29871C0 Offset: 0x29872C1 VA: 0x29871C0
+	|-Array.InternalEnumerator<TouchState>..ctor
+	|
+	|-RVA: 0x2987470 Offset: 0x2987571 VA: 0x2987470
+	|-Array.InternalEnumerator<TrailHand>..ctor
+	|
+	|-RVA: 0x2987700 Offset: 0x2987801 VA: 0x2987700
+	|-Array.InternalEnumerator<TrailVertex>..ctor
+	|
+	|-RVA: 0x2987990 Offset: 0x2987A91 VA: 0x2987990
+	|-Array.InternalEnumerator<UICharInfo>..ctor
+	|
+	|-RVA: 0x2987C10 Offset: 0x2987D11 VA: 0x2987C10
+	|-Array.InternalEnumerator<UILineInfo>..ctor
+	|
+	|-RVA: 0x2987E80 Offset: 0x2987F81 VA: 0x2987E80
+	|-Array.InternalEnumerator<UIVertex>..ctor
+	|
+	|-RVA: 0x2988170 Offset: 0x2988271 VA: 0x2988170
+	|-Array.InternalEnumerator<ushort>..ctor
+	|
+	|-RVA: 0x29883E0 Offset: 0x29884E1 VA: 0x29883E0
+	|-Array.InternalEnumerator<UInt16Enum>..ctor
+	|
+	|-RVA: 0x2988650 Offset: 0x2988751 VA: 0x2988650
+	|-Array.InternalEnumerator<uint>..ctor
+	|
+	|-RVA: 0x29888C0 Offset: 0x29889C1 VA: 0x29888C0
+	|-Array.InternalEnumerator<UInt32Enum>..ctor
+	|
+	|-RVA: 0x2988B30 Offset: 0x2988C31 VA: 0x2988B30
+	|-Array.InternalEnumerator<ulong>..ctor
+	|
+	|-RVA: 0x2988DA0 Offset: 0x2988EA1 VA: 0x2988DA0
+	|-Array.InternalEnumerator<Uid>..ctor
+	|
+	|-RVA: 0x2989010 Offset: 0x2989111 VA: 0x2989010
+	|-Array.InternalEnumerator<UniTask>..ctor
+	|
+	|-RVA: 0x2989280 Offset: 0x2989381 VA: 0x2989280
+	|-Array.InternalEnumerator<Unit>..ctor
+	|
+	|-RVA: 0x29894E0 Offset: 0x29895E1 VA: 0x29894E0
+	|-Array.InternalEnumerator<UnitEnum>..ctor
+	|
+	|-RVA: 0x2989750 Offset: 0x2989851 VA: 0x2989750
+	|-Array.InternalEnumerator<UserWord>..ctor
+	|
+	|-RVA: 0x29899C0 Offset: 0x2989AC1 VA: 0x29899C0
+	|-Array.InternalEnumerator<Vector2>..ctor
+	|
+	|-RVA: 0x2989C30 Offset: 0x2989D31 VA: 0x2989C30
+	|-Array.InternalEnumerator<Vector2Int>..ctor
+	|
+	|-RVA: 0x2989EA0 Offset: 0x2989FA1 VA: 0x2989EA0
+	|-Array.InternalEnumerator<Vector3>..ctor
+	|
+	|-RVA: 0x298A120 Offset: 0x298A221 VA: 0x298A120
+	|-Array.InternalEnumerator<Vector4>..ctor
+	|
+	|-RVA: 0x298A3A0 Offset: 0x298A4A1 VA: 0x298A3A0
+	|-Array.InternalEnumerator<VertexAttributeDescriptor>..ctor
+	|
+	|-RVA: 0x298A610 Offset: 0x298A711 VA: 0x298A610
+	|-Array.InternalEnumerator<VibrationDeviceHandle>..ctor
+	|
+	|-RVA: 0x298A870 Offset: 0x298A971 VA: 0x298A870
+	|-Array.InternalEnumerator<VibrationDeviceInfo>..ctor
+	|
+	|-RVA: 0x298AAE0 Offset: 0x298ABE1 VA: 0x298AAE0
+	|-Array.InternalEnumerator<VibrationValue>..ctor
+	|
+	|-RVA: 0x298AD60 Offset: 0x298AE61 VA: 0x298AD60
+	|-Array.InternalEnumerator<VisibleLight>..ctor
+	|
+	|-RVA: 0x298B050 Offset: 0x298B151 VA: 0x298B050
+	|-Array.InternalEnumerator<WordWrapState>..ctor
+	|
+	|-RVA: 0x298B2E0 Offset: 0x298B3E1 VA: 0x298B2E0
+	|-Array.InternalEnumerator<X509ChainStatus>..ctor
+	|
+	|-RVA: 0x298B550 Offset: 0x298B651 VA: 0x298B550
+	|-Array.InternalEnumerator<XPathNode>..ctor
+	|
+	|-RVA: 0x298B7E0 Offset: 0x298B8E1 VA: 0x298B7E0
+	|-Array.InternalEnumerator<XPathNodeRef>..ctor
+	|
+	|-RVA: 0x298BA50 Offset: 0x298BB51 VA: 0x298BA50
+	|-Array.InternalEnumerator<XRView>..ctor
+	|
+	|-RVA: 0x298BCE0 Offset: 0x298BDE1 VA: 0x298BCE0
+	|-Array.InternalEnumerator<float3>..ctor
+	|
+	|-RVA: 0x298BF60 Offset: 0x298C061 VA: 0x298BF60
+	|-Array.InternalEnumerator<float4x4>..ctor
+	|
+	|-RVA: 0x298C210 Offset: 0x298C311 VA: 0x298C210
+	|-Array.InternalEnumerator<jvalue>..ctor
+	|
+	|-RVA: 0x298C480 Offset: 0x298C581 VA: 0x298C480
+	|-Array.InternalEnumerator<uint4>..ctor
+	|
+	|-RVA: 0x298C6F0 Offset: 0x298C7F1 VA: 0x298C6F0
+	|-Array.InternalEnumerator<AICrossfire.PositionTable>..ctor
+	|
+	|-RVA: 0x298C950 Offset: 0x298CA51 VA: 0x298C950
+	|-Array.InternalEnumerator<AIEnum.SkillRangeEnemyData>..ctor
+	|
+	|-RVA: 0x298CBC0 Offset: 0x298CCC1 VA: 0x298CBC0
+	|-Array.InternalEnumerator<AIOrder.UnitPriority>..ctor
+	|
+	|-RVA: 0x298CE30 Offset: 0x298CF31 VA: 0x298CE30
+	|-Array.InternalEnumerator<AmiiboSequence.GainItemData>..ctor
+	|
+	|-RVA: 0x298D0A0 Offset: 0x298D1A1 VA: 0x298D0A0
+	|-Array.InternalEnumerator<AnimationOutputWeightProcessor.WeightInfo>..ctor
+	|
+	|-RVA: 0x298D350 Offset: 0x298D451 VA: 0x298D350
+	|-Array.InternalEnumerator<ArenaOrderSequence.GodInfo>..ctor
+	|
+	|-RVA: 0x298D5C0 Offset: 0x298D6C1 VA: 0x298D5C0
+	|-Array.InternalEnumerator<BattleInfo.SupportData>..ctor
+	|
+	|-RVA: 0x298D830 Offset: 0x298D931 VA: 0x298D830
+	|-Array.InternalEnumerator<BeforeRenderHelper.OrderBlock>..ctor
+	|
+	|-RVA: 0x298DAA0 Offset: 0x298DBA1 VA: 0x298DAA0
+	|-Array.InternalEnumerator<Camera.RenderRequest>..ctor
+	|
+	|-RVA: 0x298DD30 Offset: 0x298DE31 VA: 0x298DD30
+	|-Array.InternalEnumerator<CameraState.CustomBlendable>..ctor
+	|
+	|-RVA: 0x298DFA0 Offset: 0x298E0A1 VA: 0x298DFA0
+	|-Array.InternalEnumerator<CinemachineBlendListCamera.Instruction>..ctor
+	|
+	|-RVA: 0x298E230 Offset: 0x298E331 VA: 0x298E230
+	|-Array.InternalEnumerator<CinemachineBlenderSettings.CustomBlend>..ctor
+	|
+	|-RVA: 0x298E4C0 Offset: 0x298E5C1 VA: 0x298E4C0
+	|-Array.InternalEnumerator<CinemachineClearShot.Pair>..ctor
+	|
+	|-RVA: 0x298E730 Offset: 0x298E831 VA: 0x298E730
+	|-Array.InternalEnumerator<CinemachineFreeLook.Orbit>..ctor
+	|
+	|-RVA: 0x298E9A0 Offset: 0x298EAA1 VA: 0x298E9A0
+	|-Array.InternalEnumerator<CinemachinePath.Waypoint>..ctor
+	|
+	|-RVA: 0x298EC50 Offset: 0x298ED51 VA: 0x298EC50
+	|-Array.InternalEnumerator<CinemachineSmoothPath.Waypoint>..ctor
+	|
+	|-RVA: 0x298EED0 Offset: 0x298EFD1 VA: 0x298EED0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.HashPair>..ctor
+	|
+	|-RVA: 0x298F140 Offset: 0x298F241 VA: 0x298F140
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.Instruction>..ctor
+	|
+	|-RVA: 0x298F3D0 Offset: 0x298F4D1 VA: 0x298F3D0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.ParentHash>..ctor
+	|
+	|-RVA: 0x298F640 Offset: 0x298F741 VA: 0x298F640
+	|-Array.InternalEnumerator<CinemachineTargetGroup.Target>..ctor
+	|
+	|-RVA: 0x298F8B0 Offset: 0x298F9B1 VA: 0x298F8B0
+	|-Array.InternalEnumerator<CodePointIndexer.TableRange>..ctor
+	|
+	|-RVA: 0x298FB40 Offset: 0x298FC41 VA: 0x298FB40
+	|-Array.InternalEnumerator<ContentCatalogData.Bucket>..ctor
+	|
+	|-RVA: 0x298FDB0 Offset: 0x298FEB1 VA: 0x298FDB0
+	|-Array.InternalEnumerator<CookieTokenizer.RecognizedAttribute>..ctor
+	|
+	|-RVA: 0x2990020 Offset: 0x2990121 VA: 0x2990020
+	|-Array.InternalEnumerator<DeferredLights.DrawCall>..ctor
+	|
+	|-RVA: 0x29902D0 Offset: 0x29903D1 VA: 0x29902D0
+	|-Array.InternalEnumerator<DeferredShaderData.ComputeBufferInfo>..ctor
+	|
+	|-RVA: 0x2990540 Offset: 0x2990641 VA: 0x2990540
+	|-Array.InternalEnumerator<DeferredTiler.PrePunctualLight>..ctor
+	|
+	|-RVA: 0x29907D0 Offset: 0x29908D1 VA: 0x29907D0
+	|-Array.InternalEnumerator<DelayedActionManager.DelegateInfo>..ctor
+	|
+	|-RVA: 0x2990A60 Offset: 0x2990B61 VA: 0x2990A60
+	|-Array.InternalEnumerator<Detail.AsyncResultInt>..ctor
+	|
+	|-RVA: 0x2990D10 Offset: 0x2990E11 VA: 0x2990D10
+	|-Array.InternalEnumerator<Detail.CppArray>..ctor
+	|
+	|-RVA: 0x2990F80 Offset: 0x2991081 VA: 0x2990F80
+	|-Array.InternalEnumerator<Detail.NotificationEventInt>..ctor
+	|
+	|-RVA: 0x2991230 Offset: 0x2991331 VA: 0x2991230
+	|-Array.InternalEnumerator<DisposUnit.Item>..ctor
+	|
+	|-RVA: 0x29914A0 Offset: 0x29915A1 VA: 0x29914A0
+	|-Array.InternalEnumerator<DragonRidePresetParamData.CourseData>..ctor
+	|
+	|-RVA: 0x2991710 Offset: 0x2991811 VA: 0x2991710
+	|-Array.InternalEnumerator<DragonRideTargetGroup.ChainParam>..ctor
+	|
+	|-RVA: 0x2991980 Offset: 0x2991A81 VA: 0x2991980
+	|-Array.InternalEnumerator<DynamicMesh.State>..ctor
+	|
+	|-RVA: 0x2991BF0 Offset: 0x2991CF1 VA: 0x2991BF0
+	|-Array.InternalEnumerator<FXZEx.HitPoint>..ctor
+	|
+	|-RVA: 0x2991EA0 Offset: 0x2991FA1 VA: 0x2991EA0
+	|-Array.InternalEnumerator<FishingRadicalParamData.RadicalParam>..ctor
+	|
+	|-RVA: 0x2992120 Offset: 0x2992221 VA: 0x2992120
+	|-Array.InternalEnumerator<GameVariable.Value>..ctor
+	|
+	|-RVA: 0x2992390 Offset: 0x2992491 VA: 0x2992390
+	|-Array.InternalEnumerator<GmapPathAdjuster.TargetModel>..ctor
+	|
+	|-RVA: 0x2992620 Offset: 0x2992721 VA: 0x2992620
+	|-Array.InternalEnumerator<GmapSpotAdjuster.TargetModel>..ctor
+	|
+	|-RVA: 0x29928B0 Offset: 0x29929B1 VA: 0x29928B0
+	|-Array.InternalEnumerator<GrounderQuadruped.Foot>..ctor
+	|
+	|-RVA: 0x2992B60 Offset: 0x2992C61 VA: 0x2992B60
+	|-Array.InternalEnumerator<Hashtable.bucket>..ctor
+	|
+	|-RVA: 0x2992DF0 Offset: 0x2992EF1 VA: 0x2992DF0
+	|-Array.InternalEnumerator<HeadingTracker.Item>..ctor
+	|
+	|-RVA: 0x2993080 Offset: 0x2993181 VA: 0x2993080
+	|-Array.InternalEnumerator<HubAccessoryRoomCamera.BackgroundSettings>..ctor
+	|
+	|-RVA: 0x2993330 Offset: 0x2993431 VA: 0x2993330
+	|-Array.InternalEnumerator<HubFastTravel.Location>..ctor
+	|
+	|-RVA: 0x29935C0 Offset: 0x29936C1 VA: 0x29935C0
+	|-Array.InternalEnumerator<HubLensFlare.Flare>..ctor
+	|
+	|-RVA: 0x2993870 Offset: 0x2993971 VA: 0x2993870
+	|-Array.InternalEnumerator<HubLookAtController.LookAtIKParam>..ctor
+	|
+	|-RVA: 0x2993AF0 Offset: 0x2993BF1 VA: 0x2993AF0
+	|-Array.InternalEnumerator<HubMaterialArray.MaterialInfo>..ctor
+	|
+	|-RVA: 0x2993D60 Offset: 0x2993E61 VA: 0x2993D60
+	|-Array.InternalEnumerator<IKSolverLimb.AxisDirection>..ctor
+	|
+	|-RVA: 0x2994010 Offset: 0x2994111 VA: 0x2994010
+	|-Array.InternalEnumerator<InventoryPoolItemMenuContent.KindBgNameClass>..ctor
+	|
+	|-RVA: 0x2994280 Offset: 0x2994381 VA: 0x2994280
+	|-Array.InternalEnumerator<LightUtility.ParametricLightMeshVertex>..ctor
+	|
+	|-RVA: 0x2994530 Offset: 0x2994631 VA: 0x2994530
+	|-Array.InternalEnumerator<LightUtility.SpriteLightMeshVertex>..ctor
+	|
+	|-RVA: 0x29947E0 Offset: 0x29948E1 VA: 0x29947E0
+	|-Array.InternalEnumerator<Map.Pos>..ctor
+	|
+	|-RVA: 0x2994A50 Offset: 0x2994B51 VA: 0x2994A50
+	|-Array.InternalEnumerator<MapGodExp.KindDesc>..ctor
+	|
+	|-RVA: 0x2994CC0 Offset: 0x2994DC1 VA: 0x2994CC0
+	|-Array.InternalEnumerator<MapHistory.Command>..ctor
+	|
+	|-RVA: 0x2994F30 Offset: 0x2995031 VA: 0x2994F30
+	|-Array.InternalEnumerator<MapImage.BackupTerrain>..ctor
+	|
+	|-RVA: 0x29951A0 Offset: 0x29952A1 VA: 0x29951A0
+	|-Array.InternalEnumerator<MapImageRange.Pos>..ctor
+	|
+	|-RVA: 0x2995400 Offset: 0x2995501 VA: 0x2995400
+	|-Array.InternalEnumerator<MapKillBonus.KillBonus>..ctor
+	|
+	|-RVA: 0x2995670 Offset: 0x2995771 VA: 0x2995670
+	|-Array.InternalEnumerator<MapKillBonus.KilledBonus>..ctor
+	|
+	|-RVA: 0x29958E0 Offset: 0x29959E1 VA: 0x29958E0
+	|-Array.InternalEnumerator<MapMind.Record>..ctor
+	|
+	|-RVA: 0x2995BB0 Offset: 0x2995CB1 VA: 0x2995BB0
+	|-Array.InternalEnumerator<MapMind.Target>..ctor
+	|
+	|-RVA: 0x2995E40 Offset: 0x2995F41 VA: 0x2995E40
+	|-Array.InternalEnumerator<MapPanelDebug.Entity>..ctor
+	|
+	|-RVA: 0x29960D0 Offset: 0x29961D1 VA: 0x29960D0
+	|-Array.InternalEnumerator<NexRanking.Data>..ctor
+	|
+	|-RVA: 0x2996340 Offset: 0x2996441 VA: 0x2996340
+	|-Array.InternalEnumerator<NexVersus.RatingData>..ctor
+	|
+	|-RVA: 0x29965B0 Offset: 0x29966B1 VA: 0x29965B0
+	|-Array.InternalEnumerator<NoiseSettings.TransformNoiseParams>..ctor
+	|
+	|-RVA: 0x2996860 Offset: 0x2996961 VA: 0x2996860
+	|-Array.InternalEnumerator<PackedPlayModeBuildLogs.RuntimeBuildLog>..ctor
+	|
+	|-RVA: 0x2996AD0 Offset: 0x2996BD1 VA: 0x2996AD0
+	|-Array.InternalEnumerator<ParameterizedStrings.FormatParam>..ctor
+	|
+	|-RVA: 0x2996D40 Offset: 0x2996E41 VA: 0x2996D40
+	|-Array.InternalEnumerator<ParticleSystem.Particle>..ctor
+	|
+	|-RVA: 0x2996FD0 Offset: 0x29970D1 VA: 0x2996FD0
+	|-Array.InternalEnumerator<ProfileCard.Achievement>..ctor
+	|
+	|-RVA: 0x2997240 Offset: 0x2997341 VA: 0x2997240
+	|-Array.InternalEnumerator<ProfileCard.SortieCount>..ctor
+	|
+	|-RVA: 0x29974D0 Offset: 0x29975D1 VA: 0x29974D0
+	|-Array.InternalEnumerator<QualitySettingsStack.Settings>..ctor
+	|
+	|-RVA: 0x2997780 Offset: 0x2997881 VA: 0x2997780
+	|-Array.InternalEnumerator<RangeData.Offset>..ctor
+	|
+	|-RVA: 0x29979F0 Offset: 0x2997AF1 VA: 0x29979F0
+	|-Array.InternalEnumerator<RegexCharClass.LowerCaseMapping>..ctor
+	|
+	|-RVA: 0x2997C60 Offset: 0x2997D61 VA: 0x2997C60
+	|-Array.InternalEnumerator<Relay.ChooseAwardeeData>..ctor
+	|
+	|-RVA: 0x2997EF0 Offset: 0x2997FF1 VA: 0x2997EF0
+	|-Array.InternalEnumerator<RelayAwardData.Info>..ctor
+	|
+	|-RVA: 0x2998160 Offset: 0x2998261 VA: 0x2998160
+	|-Array.InternalEnumerator<RenderGraph.CompiledPassInfo>..ctor
+	|
+	|-RVA: 0x2998430 Offset: 0x2998531 VA: 0x2998430
+	|-Array.InternalEnumerator<RenderGraph.CompiledResourceInfo>..ctor
+	|
+	|-RVA: 0x29986C0 Offset: 0x29987C1 VA: 0x29986C0
+	|-Array.InternalEnumerator<RenderGraphDebugData.PassDebugData>..ctor
+	|
+	|-RVA: 0x2998950 Offset: 0x2998A51 VA: 0x2998950
+	|-Array.InternalEnumerator<RenderGraphDebugData.ResourceDebugData>..ctor
+	|
+	|-RVA: 0x2998C00 Offset: 0x2998D01 VA: 0x2998C00
+	|-Array.InternalEnumerator<RenderGraphResourceRegistry.RendererListResource>..ctor
+	|
+	|-RVA: 0x2998E90 Offset: 0x2998F91 VA: 0x2998E90
+	|-Array.InternalEnumerator<RingCleaningUnitSelectMenu.GodParam>..ctor
+	|
+	|-RVA: 0x2999100 Offset: 0x2999201 VA: 0x2999100
+	|-Array.InternalEnumerator<SampleWave.Data>..ctor
+	|
+	|-RVA: 0x2999380 Offset: 0x2999481 VA: 0x2999380
+	|-Array.InternalEnumerator<SampleWave.Temp>..ctor
+	|
+	|-RVA: 0x29995F0 Offset: 0x29996F1 VA: 0x29995F0
+	|-Array.InternalEnumerator<SendMouseEvents.HitInfo>..ctor
+	|
+	|-RVA: 0x2999860 Offset: 0x2999961 VA: 0x2999860
+	|-Array.InternalEnumerator<SequenceNode.SequenceConstructPosContext>..ctor
+	|
+	|-RVA: 0x2999B10 Offset: 0x2999C11 VA: 0x2999B10
+	|-Array.InternalEnumerator<ShaderInput.LightData>..ctor
+	|
+	|-RVA: 0x2999DE0 Offset: 0x2999EE1 VA: 0x2999DE0
+	|-Array.InternalEnumerator<ShaderInput.ShadowData>..ctor
+	|
+	|-RVA: 0x299A0B0 Offset: 0x299A1B1 VA: 0x299A0B0
+	|-Array.InternalEnumerator<ShadowUtility.Edge>..ctor
+	|
+	|-RVA: 0x2D7F620 Offset: 0x2D7F721 VA: 0x2D7F620
+	|-Array.InternalEnumerator<SimpleAnimationPlayable.QueuedState>..ctor
+	|
+	|-RVA: 0x2D7F890 Offset: 0x2D7F991 VA: 0x2D7F890
+	|-Array.InternalEnumerator<SkillArray.Entity>..ctor
+	|
+	|-RVA: 0x2D7FAF0 Offset: 0x2D7FBF1 VA: 0x2D7FAF0
+	|-Array.InternalEnumerator<Socket.WSABUF>..ctor
+	|
+	|-RVA: 0x2D7FD60 Offset: 0x2D7FE61 VA: 0x2D7FD60
+	|-Array.InternalEnumerator<Stream.Info>..ctor
+	|
+	|-RVA: 0x2D7FFD0 Offset: 0x2D800D1 VA: 0x2D7FFD0
+	|-Array.InternalEnumerator<TMP_Text.UnicodeChar>..ctor
+	|
+	|-RVA: 0x2D80240 Offset: 0x2D80341 VA: 0x2D80240
+	|-Array.InternalEnumerator<TexturePacker_JsonArray.Frame>..ctor
+	|
+	|-RVA: 0x2D804F0 Offset: 0x2D805F1 VA: 0x2D804F0
+	|-Array.InternalEnumerator<TimeNotificationBehaviour.NotificationEntry>..ctor
+	|
+	|-RVA: 0x2D80780 Offset: 0x2D80881 VA: 0x2D80780
+	|-Array.InternalEnumerator<UnitySynchronizationContext.WorkRequest>..ctor
+	|
+	|-RVA: 0x2D80A10 Offset: 0x2D80B11 VA: 0x2D80A10
+	|-Array.InternalEnumerator<XmlNamespaceManager.NamespaceDeclaration>..ctor
+	|
+	|-RVA: 0x2D80CA0 Offset: 0x2D80DA1 VA: 0x2D80CA0
+	|-Array.InternalEnumerator<XmlSchemaObjectTable.XmlSchemaObjectEntry>..ctor
+	|
+	|-RVA: 0x2D80F10 Offset: 0x2D81011 VA: 0x2D80F10
+	|-Array.InternalEnumerator<XmlTextReaderImpl.ParsingState>..ctor
+	|
+	|-RVA: 0x2D81200 Offset: 0x2D81301 VA: 0x2D81200
+	|-Array.InternalEnumerator<AIThink.EnchantThink.Desc>..ctor
+	|
+	|-RVA: 0x2D81470 Offset: 0x2D81571 VA: 0x2D81470
+	|-Array.InternalEnumerator<AIThink.EnchantThink.ItemInfo>..ctor
+	|
+	|-RVA: 0x2D816D0 Offset: 0x2D817D1 VA: 0x2D816D0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.SurroundingInfo>..ctor
+	|
+	|-RVA: 0x2D81930 Offset: 0x2D81A31 VA: 0x2D81930
+	|-Array.InternalEnumerator<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>..ctor
+	|
+	|-RVA: 0x2D81BA0 Offset: 0x2D81CA1 VA: 0x2D81BA0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreChangeMetaParamInt>..ctor
+	|
+	|-RVA: 0x2D81E30 Offset: 0x2D81F31 VA: 0x2D81E30
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreDeleteParamInt>..ctor
+	|
+	|-RVA: 0x2D820A0 Offset: 0x2D821A1 VA: 0x2D820A0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreGetMetaParamInt>..ctor
+	|
+	|-RVA: 0x2D82350 Offset: 0x2D82451 VA: 0x2D82350
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreMetaInfoInt>..ctor
+	|
+	|-RVA: 0x2D825E0 Offset: 0x2D826E1 VA: 0x2D825E0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePasswordInfoInt>..ctor
+	|
+	|-RVA: 0x2D82870 Offset: 0x2D82971 VA: 0x2D82870
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePersistenceInfoInt>..ctor
+	|
+	|-RVA: 0x2D82B00 Offset: 0x2D82C01 VA: 0x2D82B00
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePreparePostParamInt>..ctor
+	|
+	|-RVA: 0x2D82D90 Offset: 0x2D82E91 VA: 0x2D82D90
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRateObjectParamInt>..ctor
+	|
+	|-RVA: 0x2D83000 Offset: 0x2D83101 VA: 0x2D83000
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingInitParamInt>..ctor
+	|
+	|-RVA: 0x2D83290 Offset: 0x2D83391 VA: 0x2D83290
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingTargetInt>..ctor
+	|
+	|-RVA: 0x2D83500 Offset: 0x2D83601 VA: 0x2D83500
+	|-Array.InternalEnumerator<Detail.Ranking.RankingCachedResultInt>..ctor
+	|
+	|-RVA: 0x2D837B0 Offset: 0x2D838B1 VA: 0x2D837B0
+	|-Array.InternalEnumerator<Detail.Ranking.RankingOrderParamInt>..ctor
+	|
+	|-RVA: 0x2D83A20 Offset: 0x2D83B21 VA: 0x2D83A20
+	|-Array.InternalEnumerator<Detail.Ranking.RankingRankDataInt>..ctor
+	|
+	|-RVA: 0x2D83CD0 Offset: 0x2D83DD1 VA: 0x2D83CD0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ChartInfoInt>..ctor
+	|
+	|-RVA: 0x2D83FA0 Offset: 0x2D840A1 VA: 0x2D83FA0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2RankDataInt>..ctor
+	|
+	|-RVA: 0x2D84250 Offset: 0x2D84351 VA: 0x2D84250
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ScoreDataInt>..ctor
+	|
+	|-RVA: 0x2D844C0 Offset: 0x2D845C1 VA: 0x2D844C0
+	|-Array.InternalEnumerator<Detail.Screening.ScreeningContextInfoInt>..ctor
+	|
+	|-RVA: 0x2D84750 Offset: 0x2D84851 VA: 0x2D84750
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberContentInt>..ctor
+	|
+	|-RVA: 0x2D84A20 Offset: 0x2D84B21 VA: 0x2D84A20
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberGetContentParamInt>..ctor
+	|
+	|-RVA: 0x2D84CB0 Offset: 0x2D84DB1 VA: 0x2D84CB0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusInfoInt>..ctor
+	|
+	|-RVA: 0x2D84F60 Offset: 0x2D85061 VA: 0x2D84F60
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusParamInt>..ctor
+	|
+	|-RVA: 0x2D851F0 Offset: 0x2D852F1 VA: 0x2D851F0
+	|-Array.InternalEnumerator<Detail.Utility.IntegerSettings>..ctor
+	|
+	|-RVA: 0x2D85460 Offset: 0x2D85561 VA: 0x2D85460
+	|-Array.InternalEnumerator<Detail.Utility.UniqueIdInfoInt>..ctor
+	|
+	|-RVA: 0x2D856D0 Offset: 0x2D857D1 VA: 0x2D856D0
+	|-Array.InternalEnumerator<FacetsChecker.FacetsCompiler.Map>..ctor
+	|
+	|-RVA: 0x2D85940 Offset: 0x2D85A41 VA: 0x2D85940
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Appearance>..ctor
+	|
+	|-RVA: 0x2D85BD0 Offset: 0x2D85CD1 VA: 0x2D85BD0
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Leaving>..ctor
+	|
+	|-RVA: 0x2D85E30 Offset: 0x2D85F31 VA: 0x2D85E30
+	|-Array.InternalEnumerator<MapHistory.ReplayUnitMap.Data>..ctor
+	|
+	|-RVA: 0x2D860A0 Offset: 0x2D861A1 VA: 0x2D860A0
+	|-Array.InternalEnumerator<MapHistory.Rewind.LatestInspectorData>..ctor
+	|
+	|-RVA: 0x2D86300 Offset: 0x2D86401 VA: 0x2D86300
+	|-Array.InternalEnumerator<MapHistory.Rewind.WorkTerrainData>..ctor
+	|
+	|-RVA: 0x2D86560 Offset: 0x2D86661 VA: 0x2D86560
+	|-Array.InternalEnumerator<MapHistory.RewindUnitMap.Data>..ctor
+	|
+	|-RVA: 0x2D86810 Offset: 0x2D86911 VA: 0x2D86810
+	|-Array.InternalEnumerator<MapKillBonus.Work.Pos>..ctor
+	|
+	|-RVA: 0x2D86A70 Offset: 0x2D86B71 VA: 0x2D86A70
+	|-Array.InternalEnumerator<MapSkill.AroundCalculator.Result>..ctor
+	|
+	|-RVA: 0x2D86CE0 Offset: 0x2D86DE1 VA: 0x2D86CE0
+	|-Array.InternalEnumerator<Nex.ApiCallChecker.Guideline>..ctor
+	|
+	|-RVA: 0x2D86F50 Offset: 0x2D87051 VA: 0x2D86F50
+	|-Array.InternalEnumerator<Ngc.MaskTextSequenceBase.Data>..ctor
+	|
+	|-RVA: 0x2D871E0 Offset: 0x2D872E1 VA: 0x2D871E0
+	|-Array.InternalEnumerator<TargetPositionCache.CacheCurve.Item>..ctor
+	|
+	|-RVA: 0x2D87490 Offset: 0x2D87591 VA: 0x2D87490
+	|-Array.InternalEnumerator<TargetPositionCache.CacheEntry.RecordingItem>..ctor
+	|
+	|-RVA: 0x2D87740 Offset: 0x2D87841 VA: 0x2D87740
+	|-Array.InternalEnumerator<TerrainUtility.TerrainMap.TileCoord>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1EB37C0 Offset: 0x1EB38C1 VA: 0x1EB37C0
+	|-Array.InternalEnumerator<ArraySegment<byte>>.Dispose
+	|
+	|-RVA: 0x1EB3A30 Offset: 0x1EB3B31 VA: 0x1EB3A30
+	|-Array.InternalEnumerator<AsyncOperationHandle<object>>.Dispose
+	|
+	|-RVA: 0x1EB3CC0 Offset: 0x1EB3DC1 VA: 0x1EB3CC0
+	|-Array.InternalEnumerator<MapDeployTemplate.Queue.Data<object>>.Dispose
+	|
+	|-RVA: 0x1EB3F20 Offset: 0x1EB4021 VA: 0x1EB3F20
+	|-Array.InternalEnumerator<Nex.DataStore.ParamPool.Data<object>>.Dispose
+	|
+	|-RVA: 0x1EB4190 Offset: 0x1EB4291 VA: 0x1EB4190
+	|-Array.InternalEnumerator<Nex.Screening.ParamPool.Data<object>>.Dispose
+	|
+	|-RVA: 0x1EB4400 Offset: 0x1EB4501 VA: 0x1EB4400
+	|-Array.InternalEnumerator<IntervalTree.Entry<object>>.Dispose
+	|
+	|-RVA: 0x1EB4690 Offset: 0x1EB4791 VA: 0x1EB4690
+	|-Array.InternalEnumerator<Dictionary.Entry<ValueTuple<object, int>, object>>.Dispose
+	|
+	|-RVA: 0x1EB4920 Offset: 0x1EB4A21 VA: 0x1EB4920
+	|-Array.InternalEnumerator<Dictionary.Entry<byte, object>>.Dispose
+	|
+	|-RVA: 0x1EB4BB0 Offset: 0x1EB4CB1 VA: 0x1EB4BB0
+	|-Array.InternalEnumerator<Dictionary.Entry<CancellationToken, object>>.Dispose
+	|
+	|-RVA: 0x1EB4E40 Offset: 0x1EB4F41 VA: 0x1EB4E40
+	|-Array.InternalEnumerator<Dictionary.Entry<char, object>>.Dispose
+	|
+	|-RVA: 0x1EB50D0 Offset: 0x1EB51D1 VA: 0x1EB50D0
+	|-Array.InternalEnumerator<Dictionary.Entry<Guid, object>>.Dispose
+	|
+	|-RVA: 0x1EB5360 Offset: 0x1EB5461 VA: 0x1EB5360
+	|-Array.InternalEnumerator<Dictionary.Entry<int, bool>>.Dispose
+	|
+	|-RVA: 0x1EB55D0 Offset: 0x1EB56D1 VA: 0x1EB55D0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, byte>>.Dispose
+	|
+	|-RVA: 0x1EB5840 Offset: 0x1EB5941 VA: 0x1EB5840
+	|-Array.InternalEnumerator<Dictionary.Entry<int, char>>.Dispose
+	|
+	|-RVA: 0x1EB5AB0 Offset: 0x1EB5BB1 VA: 0x1EB5AB0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, DiagnosticEvent>>.Dispose
+	|
+	|-RVA: 0x1EB5D60 Offset: 0x1EB5E61 VA: 0x1EB5D60
+	|-Array.InternalEnumerator<Dictionary.Entry<int, int>>.Dispose
+	|
+	|-RVA: 0x1EB5FD0 Offset: 0x1EB60D1 VA: 0x1EB5FD0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EB6240 Offset: 0x1EB6341 VA: 0x1EB6240
+	|-Array.InternalEnumerator<Dictionary.Entry<int, long>>.Dispose
+	|
+	|-RVA: 0x1EB64D0 Offset: 0x1EB65D1 VA: 0x1EB64D0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, MapPos>>.Dispose
+	|
+	|-RVA: 0x1EB6760 Offset: 0x1EB6861 VA: 0x1EB6760
+	|-Array.InternalEnumerator<Dictionary.Entry<int, object>>.Dispose
+	|
+	|-RVA: 0x1EB69F0 Offset: 0x1EB6AF1 VA: 0x1EB69F0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, uint>>.Dispose
+	|
+	|-RVA: 0x1EB6C60 Offset: 0x1EB6D61 VA: 0x1EB6C60
+	|-Array.InternalEnumerator<Dictionary.Entry<int, AIThink.EnchantThink.SurroundingInfo>>.Dispose
+	|
+	|-RVA: 0x1EB6ED0 Offset: 0x1EB6FD1 VA: 0x1EB6ED0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, bool>>.Dispose
+	|
+	|-RVA: 0x1EB7140 Offset: 0x1EB7241 VA: 0x1EB7140
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, int>>.Dispose
+	|
+	|-RVA: 0x1EB73B0 Offset: 0x1EB74B1 VA: 0x1EB73B0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EB7620 Offset: 0x1EB7721 VA: 0x1EB7620
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, object>>.Dispose
+	|
+	|-RVA: 0x1EB78B0 Offset: 0x1EB79B1 VA: 0x1EB78B0
+	|-Array.InternalEnumerator<Dictionary.Entry<long, object>>.Dispose
+	|
+	|-RVA: 0x1EB7B40 Offset: 0x1EB7C41 VA: 0x1EB7B40
+	|-Array.InternalEnumerator<Dictionary.Entry<MapPos, int>>.Dispose
+	|
+	|-RVA: 0x1EB7DD0 Offset: 0x1EB7ED1 VA: 0x1EB7DD0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle<object>>>.Dispose
+	|
+	|-RVA: 0x1EB8080 Offset: 0x1EB8181 VA: 0x1EB8080
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle>>.Dispose
+	|
+	|-RVA: 0x1EB8330 Offset: 0x1EB8431 VA: 0x1EB8330
+	|-Array.InternalEnumerator<Dictionary.Entry<object, bool>>.Dispose
+	|
+	|-RVA: 0x1EB85C0 Offset: 0x1EB86C1 VA: 0x1EB85C0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, byte>>.Dispose
+	|
+	|-RVA: 0x1EB8850 Offset: 0x1EB8951 VA: 0x1EB8850
+	|-Array.InternalEnumerator<Dictionary.Entry<object, int>>.Dispose
+	|
+	|-RVA: 0x1EB8AE0 Offset: 0x1EB8BE1 VA: 0x1EB8AE0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EB8D70 Offset: 0x1EB8E71 VA: 0x1EB8D70
+	|-Array.InternalEnumerator<Dictionary.Entry<object, IntPtr>>.Dispose
+	|
+	|-RVA: 0x1EB9000 Offset: 0x1EB9101 VA: 0x1EB9000
+	|-Array.InternalEnumerator<Dictionary.Entry<object, object>>.Dispose
+	|
+	|-RVA: 0x1EB9290 Offset: 0x1EB9391 VA: 0x1EB9290
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Playable>>.Dispose
+	|
+	|-RVA: 0x1EB9520 Offset: 0x1EB9621 VA: 0x1EB9520
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ResourceLocator>>.Dispose
+	|
+	|-RVA: 0x1EB97B0 Offset: 0x1EB98B1 VA: 0x1EB97B0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, float>>.Dispose
+	|
+	|-RVA: 0x1EB9A40 Offset: 0x1EB9B41 VA: 0x1EB9A40
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ushort>>.Dispose
+	|
+	|-RVA: 0x1EB9CD0 Offset: 0x1EB9DD1 VA: 0x1EB9CD0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, GameVariable.Value>>.Dispose
+	|
+	|-RVA: 0x1EB9F60 Offset: 0x1EBA061 VA: 0x1EB9F60
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, DataStoreRatingInfo>>.Dispose
+	|
+	|-RVA: 0x1EBA210 Offset: 0x1EBA311 VA: 0x1EBA210
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, object>>.Dispose
+	|
+	|-RVA: 0x1EBA4A0 Offset: 0x1EBA5A1 VA: 0x1EBA4A0
+	|-Array.InternalEnumerator<Dictionary.Entry<ushort, int>>.Dispose
+	|
+	|-RVA: 0x1EBA710 Offset: 0x1EBA811 VA: 0x1EBA710
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, int>>.Dispose
+	|
+	|-RVA: 0x1EBA980 Offset: 0x1EBAA81 VA: 0x1EBA980
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, object>>.Dispose
+	|
+	|-RVA: 0x1EBAC10 Offset: 0x1EBAD11 VA: 0x1EBAC10
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Friend>>.Dispose
+	|
+	|-RVA: 0x1EBAEA0 Offset: 0x1EBAFA1 VA: 0x1EBAEA0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EBB130 Offset: 0x1EBB231 VA: 0x1EBB130
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, object>>.Dispose
+	|
+	|-RVA: 0x1EBB3C0 Offset: 0x1EBB4C1 VA: 0x1EBB3C0
+	|-Array.InternalEnumerator<Dictionary.Entry<Vector3, int>>.Dispose
+	|
+	|-RVA: 0x1EBB650 Offset: 0x1EBB751 VA: 0x1EBB650
+	|-Array.InternalEnumerator<Dictionary.Entry<XPathNodeRef, XPathNodeRef>>.Dispose
+	|
+	|-RVA: 0x1EBB900 Offset: 0x1EBBA01 VA: 0x1EBB900
+	|-Array.InternalEnumerator<Dictionary.Entry<TerrainUtility.TerrainMap.TileCoord, object>>.Dispose
+	|
+	|-RVA: 0x1EBBB90 Offset: 0x1EBBC91 VA: 0x1EBBB90
+	|-Array.InternalEnumerator<PriorityQueue.IndexedItem<object>>.Dispose
+	|
+	|-RVA: 0x1EBBE00 Offset: 0x1EBBF01 VA: 0x1EBBE00
+	|-Array.InternalEnumerator<KeyValuePair<ValueTuple<object, int>, object>>.Dispose
+	|
+	|-RVA: 0x1EBC090 Offset: 0x1EBC191 VA: 0x1EBC090
+	|-Array.InternalEnumerator<KeyValuePair<byte, object>>.Dispose
+	|
+	|-RVA: 0x1EBC300 Offset: 0x1EBC401 VA: 0x1EBC300
+	|-Array.InternalEnumerator<KeyValuePair<CancellationToken, object>>.Dispose
+	|
+	|-RVA: 0x1EBC570 Offset: 0x1EBC671 VA: 0x1EBC570
+	|-Array.InternalEnumerator<KeyValuePair<char, object>>.Dispose
+	|
+	|-RVA: 0x1EBC7E0 Offset: 0x1EBC8E1 VA: 0x1EBC7E0
+	|-Array.InternalEnumerator<KeyValuePair<DateTime, object>>.Dispose
+	|
+	|-RVA: 0x1EBCA50 Offset: 0x1EBCB51 VA: 0x1EBCA50
+	|-Array.InternalEnumerator<KeyValuePair<Guid, object>>.Dispose
+	|
+	|-RVA: 0x1EBCCE0 Offset: 0x1EBCDE1 VA: 0x1EBCCE0
+	|-Array.InternalEnumerator<KeyValuePair<int, bool>>.Dispose
+	|
+	|-RVA: 0x1EBCF50 Offset: 0x1EBD051 VA: 0x1EBCF50
+	|-Array.InternalEnumerator<KeyValuePair<int, byte>>.Dispose
+	|
+	|-RVA: 0x1EBD1C0 Offset: 0x1EBD2C1 VA: 0x1EBD1C0
+	|-Array.InternalEnumerator<KeyValuePair<int, char>>.Dispose
+	|
+	|-RVA: 0x1EBD430 Offset: 0x1EBD531 VA: 0x1EBD430
+	|-Array.InternalEnumerator<KeyValuePair<int, DiagnosticEvent>>.Dispose
+	|
+	|-RVA: 0x1EBD6E0 Offset: 0x1EBD7E1 VA: 0x1EBD6E0
+	|-Array.InternalEnumerator<KeyValuePair<int, int>>.Dispose
+	|
+	|-RVA: 0x1EBD950 Offset: 0x1EBDA51 VA: 0x1EBD950
+	|-Array.InternalEnumerator<KeyValuePair<int, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EBDBC0 Offset: 0x1EBDCC1 VA: 0x1EBDBC0
+	|-Array.InternalEnumerator<KeyValuePair<int, long>>.Dispose
+	|
+	|-RVA: 0x1EBDE30 Offset: 0x1EBDF31 VA: 0x1EBDE30
+	|-Array.InternalEnumerator<KeyValuePair<int, MapPos>>.Dispose
+	|
+	|-RVA: 0x1EBE0A0 Offset: 0x1EBE1A1 VA: 0x1EBE0A0
+	|-Array.InternalEnumerator<KeyValuePair<int, object>>.Dispose
+	|
+	|-RVA: 0x1EBE310 Offset: 0x1EBE411 VA: 0x1EBE310
+	|-Array.InternalEnumerator<KeyValuePair<int, uint>>.Dispose
+	|
+	|-RVA: 0x1EBE580 Offset: 0x1EBE681 VA: 0x1EBE580
+	|-Array.InternalEnumerator<KeyValuePair<int, AIThink.EnchantThink.SurroundingInfo>>.Dispose
+	|
+	|-RVA: 0x1EBE7F0 Offset: 0x1EBE8F1 VA: 0x1EBE7F0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, bool>>.Dispose
+	|
+	|-RVA: 0x1EBEA60 Offset: 0x1EBEB61 VA: 0x1EBEA60
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, int>>.Dispose
+	|
+	|-RVA: 0x1EBECD0 Offset: 0x1EBEDD1 VA: 0x1EBECD0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EBEF40 Offset: 0x1EBF041 VA: 0x1EBEF40
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, object>>.Dispose
+	|
+	|-RVA: 0x1EBF1B0 Offset: 0x1EBF2B1 VA: 0x1EBF1B0
+	|-Array.InternalEnumerator<KeyValuePair<long, object>>.Dispose
+	|
+	|-RVA: 0x1EBF420 Offset: 0x1EBF521 VA: 0x1EBF420
+	|-Array.InternalEnumerator<KeyValuePair<MapPos, int>>.Dispose
+	|
+	|-RVA: 0x1EBF690 Offset: 0x1EBF791 VA: 0x1EBF690
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle<object>>>.Dispose
+	|
+	|-RVA: 0x1EBF920 Offset: 0x1EBFA21 VA: 0x1EBF920
+	|-Array.InternalEnumerator<KeyValuePair<object, ValueTuple<int, DateTime, object>>>.Dispose
+	|
+	|-RVA: 0x1EBFBB0 Offset: 0x1EBFCB1 VA: 0x1EBFBB0
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle>>.Dispose
+	|
+	|-RVA: 0x1EBFE40 Offset: 0x1EBFF41 VA: 0x1EBFE40
+	|-Array.InternalEnumerator<KeyValuePair<object, bool>>.Dispose
+	|
+	|-RVA: 0x1EC00B0 Offset: 0x1EC01B1 VA: 0x1EC00B0
+	|-Array.InternalEnumerator<KeyValuePair<object, byte>>.Dispose
+	|
+	|-RVA: 0x1EC0320 Offset: 0x1EC0421 VA: 0x1EC0320
+	|-Array.InternalEnumerator<KeyValuePair<object, int>>.Dispose
+	|
+	|-RVA: 0x1EC0590 Offset: 0x1EC0691 VA: 0x1EC0590
+	|-Array.InternalEnumerator<KeyValuePair<object, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EC0800 Offset: 0x1EC0901 VA: 0x1EC0800
+	|-Array.InternalEnumerator<KeyValuePair<object, IntPtr>>.Dispose
+	|
+	|-RVA: 0x1EC0A70 Offset: 0x1EC0B71 VA: 0x1EC0A70
+	|-Array.InternalEnumerator<KeyValuePair<object, object>>.Dispose
+	|
+	|-RVA: 0x1EC0CE0 Offset: 0x1EC0DE1 VA: 0x1EC0CE0
+	|-Array.InternalEnumerator<KeyValuePair<object, Playable>>.Dispose
+	|
+	|-RVA: 0x1EC0F70 Offset: 0x1EC1071 VA: 0x1EC0F70
+	|-Array.InternalEnumerator<KeyValuePair<object, ResourceLocator>>.Dispose
+	|
+	|-RVA: 0x1EC1200 Offset: 0x1EC1301 VA: 0x1EC1200
+	|-Array.InternalEnumerator<KeyValuePair<object, float>>.Dispose
+	|
+	|-RVA: 0x1EC1470 Offset: 0x1EC1571 VA: 0x1EC1470
+	|-Array.InternalEnumerator<KeyValuePair<object, ushort>>.Dispose
+	|
+	|-RVA: 0x1EC16E0 Offset: 0x1EC17E1 VA: 0x1EC16E0
+	|-Array.InternalEnumerator<KeyValuePair<object, GameVariable.Value>>.Dispose
+	|
+	|-RVA: 0x1EC1970 Offset: 0x1EC1A71 VA: 0x1EC1970
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, DataStoreRatingInfo>>.Dispose
+	|
+	|-RVA: 0x1EC1C00 Offset: 0x1EC1D01 VA: 0x1EC1C00
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, object>>.Dispose
+	|
+	|-RVA: 0x1EC1E70 Offset: 0x1EC1F71 VA: 0x1EC1E70
+	|-Array.InternalEnumerator<KeyValuePair<ushort, int>>.Dispose
+	|
+	|-RVA: 0x1EC20E0 Offset: 0x1EC21E1 VA: 0x1EC20E0
+	|-Array.InternalEnumerator<KeyValuePair<uint, int>>.Dispose
+	|
+	|-RVA: 0x1EC2350 Offset: 0x1EC2451 VA: 0x1EC2350
+	|-Array.InternalEnumerator<KeyValuePair<uint, object>>.Dispose
+	|
+	|-RVA: 0x1EC25C0 Offset: 0x1EC26C1 VA: 0x1EC25C0
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Friend>>.Dispose
+	|
+	|-RVA: 0x1EC2850 Offset: 0x1EC2951 VA: 0x1EC2850
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EC2AC0 Offset: 0x1EC2BC1 VA: 0x1EC2AC0
+	|-Array.InternalEnumerator<KeyValuePair<ulong, object>>.Dispose
+	|
+	|-RVA: 0x1EC2D30 Offset: 0x1EC2E31 VA: 0x1EC2D30
+	|-Array.InternalEnumerator<KeyValuePair<Vector3, int>>.Dispose
+	|
+	|-RVA: 0x1EC2FA0 Offset: 0x1EC30A1 VA: 0x1EC2FA0
+	|-Array.InternalEnumerator<KeyValuePair<XPathNodeRef, XPathNodeRef>>.Dispose
+	|
+	|-RVA: 0x1EC3230 Offset: 0x1EC3331 VA: 0x1EC3230
+	|-Array.InternalEnumerator<KeyValuePair<TerrainUtility.TerrainMap.TileCoord, object>>.Dispose
+	|
+	|-RVA: 0x1EC34A0 Offset: 0x1EC35A1 VA: 0x1EC34A0
+	|-Array.InternalEnumerator<NativeArray<PreTile>>.Dispose
+	|
+	|-RVA: 0x1EC3710 Offset: 0x1EC3811 VA: 0x1EC3710
+	|-Array.InternalEnumerator<CommonBattleSequence.Reliance<object>>.Dispose
+	|
+	|-RVA: 0x1EC39A0 Offset: 0x1EC3AA1 VA: 0x1EC39A0
+	|-Array.InternalEnumerator<RenderGraphResourcePool.ResourceLogInfo<object>>.Dispose
+	|
+	|-RVA: 0x1EC3C10 Offset: 0x1EC3D11 VA: 0x1EC3C10
+	|-Array.InternalEnumerator<HashSet.Slot<ValueTuple<object, int>>>.Dispose
+	|
+	|-RVA: 0x1EC3EA0 Offset: 0x1EC3FA1 VA: 0x1EC3EA0
+	|-Array.InternalEnumerator<HashSet.Slot<AsyncOperationHandle>>.Dispose
+	|
+	|-RVA: 0x1EC4130 Offset: 0x1EC4231 VA: 0x1EC4130
+	|-Array.InternalEnumerator<HashSet.Slot<int>>.Dispose
+	|
+	|-RVA: 0x1EC43A0 Offset: 0x1EC44A1 VA: 0x1EC43A0
+	|-Array.InternalEnumerator<HashSet.Slot<Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EC4610 Offset: 0x1EC4711 VA: 0x1EC4610
+	|-Array.InternalEnumerator<Set.Slot<Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EC4880 Offset: 0x1EC4981 VA: 0x1EC4880
+	|-Array.InternalEnumerator<HashSet.Slot<MapPos>>.Dispose
+	|
+	|-RVA: 0x1EC4AF0 Offset: 0x1EC4BF1 VA: 0x1EC4AF0
+	|-Array.InternalEnumerator<HashSet.Slot<object>>.Dispose
+	|
+	|-RVA: 0x1EC4D60 Offset: 0x1EC4E61 VA: 0x1EC4D60
+	|-Array.InternalEnumerator<Set.Slot<object>>.Dispose
+	|
+	|-RVA: 0x1EC4FF0 Offset: 0x1EC50F1 VA: 0x1EC4FF0
+	|-Array.InternalEnumerator<HashSet.Slot<uint>>.Dispose
+	|
+	|-RVA: 0x1EC5260 Offset: 0x1EC5361 VA: 0x1EC5260
+	|-Array.InternalEnumerator<HashSet.Slot<ulong>>.Dispose
+	|
+	|-RVA: 0x1EC54D0 Offset: 0x1EC55D1 VA: 0x1EC54D0
+	|-Array.InternalEnumerator<Set.Slot<Vector3>>.Dispose
+	|
+	|-RVA: 0x1EC5760 Offset: 0x1EC5861 VA: 0x1EC5760
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Color32>>.Dispose
+	|
+	|-RVA: 0x1EC59F0 Offset: 0x1EC5AF1 VA: 0x1EC59F0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<HighlightState>>.Dispose
+	|
+	|-RVA: 0x1EC5CA0 Offset: 0x1EC5DA1 VA: 0x1EC5CA0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<int>>.Dispose
+	|
+	|-RVA: 0x1EC5F30 Offset: 0x1EC6031 VA: 0x1EC5F30
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Int32Enum>>.Dispose
+	|
+	|-RVA: 0x1EC61C0 Offset: 0x1EC62C1 VA: 0x1EC61C0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<MaterialReference>>.Dispose
+	|
+	|-RVA: 0x1EC6490 Offset: 0x1EC6591 VA: 0x1EC6490
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<object>>.Dispose
+	|
+	|-RVA: 0x1EC6740 Offset: 0x1EC6841 VA: 0x1EC6740
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<float>>.Dispose
+	|
+	|-RVA: 0x1EC69D0 Offset: 0x1EC6AD1 VA: 0x1EC69D0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<WordWrapState>>.Dispose
+	|
+	|-RVA: 0x1EC6C60 Offset: 0x1EC6D61 VA: 0x1EC6C60
+	|-Array.InternalEnumerator<TimeInterval<object>>.Dispose
+	|
+	|-RVA: 0x1EC6ED0 Offset: 0x1EC6FD1 VA: 0x1EC6ED0
+	|-Array.InternalEnumerator<Timestamped<object>>.Dispose
+	|
+	|-RVA: 0x1EC7160 Offset: 0x1EC7261 VA: 0x1EC7160
+	|-Array.InternalEnumerator<UniTask<object>>.Dispose
+	|
+	|-RVA: 0x1EC73D0 Offset: 0x1EC74D1 VA: 0x1EC73D0
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x1EC7640 Offset: 0x1EC7741 VA: 0x1EC7640
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x1EC78D0 Offset: 0x1EC79D1 VA: 0x1EC78D0
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask<object>>>.Dispose
+	|
+	|-RVA: 0x1EC7B60 Offset: 0x1EC7C61 VA: 0x1EC7B60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>.Dispose
+	|
+	|-RVA: 0x1EC7DF0 Offset: 0x1EC7EF1 VA: 0x1EC7DF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>.Dispose
+	|
+	|-RVA: 0x1EC80A0 Offset: 0x1EC81A1 VA: 0x1EC80A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>>.Dispose
+	|
+	|-RVA: 0x1EC8350 Offset: 0x1EC8451 VA: 0x1EC8350
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>>.Dispose
+	|
+	|-RVA: 0x1EC85B0 Offset: 0x1EC86B1 VA: 0x1EC85B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF8050 Offset: 0x2AF8151 VA: 0x2AF8050
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF8300 Offset: 0x2AF8401 VA: 0x2AF8300
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF8560 Offset: 0x2AF8661 VA: 0x2AF8560
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF8810 Offset: 0x2AF8911 VA: 0x2AF8810
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF8AC0 Offset: 0x2AF8BC1 VA: 0x2AF8AC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF8D50 Offset: 0x2AF8E51 VA: 0x2AF8D50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF9000 Offset: 0x2AF9101 VA: 0x2AF9000
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF92B0 Offset: 0x2AF93B1 VA: 0x2AF92B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF9560 Offset: 0x2AF9661 VA: 0x2AF9560
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF9810 Offset: 0x2AF9911 VA: 0x2AF9810
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF9AA0 Offset: 0x2AF9BA1 VA: 0x2AF9AA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF9D50 Offset: 0x2AF9E51 VA: 0x2AF9D50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>>.Dispose
+	|
+	|-RVA: 0x2AF9FB0 Offset: 0x2AFA0B1 VA: 0x2AF9FB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFA260 Offset: 0x2AFA361 VA: 0x2AFA260
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFA4F0 Offset: 0x2AFA5F1 VA: 0x2AFA4F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFA7A0 Offset: 0x2AFA8A1 VA: 0x2AFA7A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFAA50 Offset: 0x2AFAB51 VA: 0x2AFAA50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFAD00 Offset: 0x2AFAE01 VA: 0x2AFAD00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFAFB0 Offset: 0x2AFB0B1 VA: 0x2AFAFB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFB260 Offset: 0x2AFB361 VA: 0x2AFB260
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFB530 Offset: 0x2AFB631 VA: 0x2AFB530
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFB800 Offset: 0x2AFB901 VA: 0x2AFB800
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFBAD0 Offset: 0x2AFBBD1 VA: 0x2AFBAD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>.Dispose
+	|
+	|-RVA: 0x2AFBD30 Offset: 0x2AFBE31 VA: 0x2AFBD30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>.Dispose
+	|
+	|-RVA: 0x2AFBF90 Offset: 0x2AFC091 VA: 0x2AFBF90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>.Dispose
+	|
+	|-RVA: 0x2AFC240 Offset: 0x2AFC341 VA: 0x2AFC240
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>.Dispose
+	|
+	|-RVA: 0x2AFC4A0 Offset: 0x2AFC5A1 VA: 0x2AFC4A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>.Dispose
+	|
+	|-RVA: 0x2AFC730 Offset: 0x2AFC831 VA: 0x2AFC730
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>.Dispose
+	|
+	|-RVA: 0x2AFC9E0 Offset: 0x2AFCAE1 VA: 0x2AFC9E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>.Dispose
+	|
+	|-RVA: 0x2AFCC70 Offset: 0x2AFCD71 VA: 0x2AFCC70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>.Dispose
+	|
+	|-RVA: 0x2AFCF20 Offset: 0x2AFD021 VA: 0x2AFCF20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2AFD1D0 Offset: 0x2AFD2D1 VA: 0x2AFD1D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>.Dispose
+	|
+	|-RVA: 0x2AFD460 Offset: 0x2AFD561 VA: 0x2AFD460
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>.Dispose
+	|
+	|-RVA: 0x2AFD6F0 Offset: 0x2AFD7F1 VA: 0x2AFD6F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>.Dispose
+	|
+	|-RVA: 0x2AFD980 Offset: 0x2AFDA81 VA: 0x2AFD980
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>.Dispose
+	|
+	|-RVA: 0x2AFDC30 Offset: 0x2AFDD31 VA: 0x2AFDC30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>.Dispose
+	|
+	|-RVA: 0x2AFDE90 Offset: 0x2AFDF91 VA: 0x2AFDE90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>.Dispose
+	|
+	|-RVA: 0x2AFE120 Offset: 0x2AFE221 VA: 0x2AFE120
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>.Dispose
+	|
+	|-RVA: 0x2AFE3D0 Offset: 0x2AFE4D1 VA: 0x2AFE3D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>.Dispose
+	|
+	|-RVA: 0x2AFE660 Offset: 0x2AFE761 VA: 0x2AFE660
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>.Dispose
+	|
+	|-RVA: 0x2AFE910 Offset: 0x2AFEA11 VA: 0x2AFE910
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>.Dispose
+	|
+	|-RVA: 0x2AFEBC0 Offset: 0x2AFECC1 VA: 0x2AFEBC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFEE70 Offset: 0x2AFEF71 VA: 0x2AFEE70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>.Dispose
+	|
+	|-RVA: 0x2AFF120 Offset: 0x2AFF221 VA: 0x2AFF120
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFF3F0 Offset: 0x2AFF4F1 VA: 0x2AFF3F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>.Dispose
+	|
+	|-RVA: 0x2AFF6A0 Offset: 0x2AFF7A1 VA: 0x2AFF6A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFF970 Offset: 0x2AFFA71 VA: 0x2AFF970
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>.Dispose
+	|
+	|-RVA: 0x2AFFC20 Offset: 0x2AFFD21 VA: 0x2AFFC20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2AFFF10 Offset: 0x2B00011 VA: 0x2AFFF10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B001E0 Offset: 0x2B002E1 VA: 0x2B001E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2B004D0 Offset: 0x2B005D1 VA: 0x2B004D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B007A0 Offset: 0x2B008A1 VA: 0x2B007A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>.Dispose
+	|
+	|-RVA: 0x2B00A00 Offset: 0x2B00B01 VA: 0x2B00A00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>.Dispose
+	|
+	|-RVA: 0x2B00C60 Offset: 0x2B00D61 VA: 0x2B00C60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>.Dispose
+	|
+	|-RVA: 0x2B00F10 Offset: 0x2B01011 VA: 0x2B00F10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>.Dispose
+	|
+	|-RVA: 0x2B01170 Offset: 0x2B01271 VA: 0x2B01170
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>.Dispose
+	|
+	|-RVA: 0x2B01420 Offset: 0x2B01521 VA: 0x2B01420
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>.Dispose
+	|
+	|-RVA: 0x2B016B0 Offset: 0x2B017B1 VA: 0x2B016B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>.Dispose
+	|
+	|-RVA: 0x2B01920 Offset: 0x2B01A21 VA: 0x2B01920
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>.Dispose
+	|
+	|-RVA: 0x2B01BB0 Offset: 0x2B01CB1 VA: 0x2B01BB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2B01E40 Offset: 0x2B01F41 VA: 0x2B01E40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>.Dispose
+	|
+	|-RVA: 0x2B020F0 Offset: 0x2B021F1 VA: 0x2B020F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>.Dispose
+	|
+	|-RVA: 0x2B023A0 Offset: 0x2B024A1 VA: 0x2B023A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>.Dispose
+	|
+	|-RVA: 0x2B02610 Offset: 0x2B02711 VA: 0x2B02610
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>.Dispose
+	|
+	|-RVA: 0x2B028A0 Offset: 0x2B029A1 VA: 0x2B028A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>.Dispose
+	|
+	|-RVA: 0x2B02B00 Offset: 0x2B02C01 VA: 0x2B02B00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>.Dispose
+	|
+	|-RVA: 0x2B02D90 Offset: 0x2B02E91 VA: 0x2B02D90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>.Dispose
+	|
+	|-RVA: 0x2B03020 Offset: 0x2B03121 VA: 0x2B03020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>.Dispose
+	|
+	|-RVA: 0x2B032D0 Offset: 0x2B033D1 VA: 0x2B032D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>.Dispose
+	|
+	|-RVA: 0x2B03560 Offset: 0x2B03661 VA: 0x2B03560
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>.Dispose
+	|
+	|-RVA: 0x2B037F0 Offset: 0x2B038F1 VA: 0x2B037F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B03AA0 Offset: 0x2B03BA1 VA: 0x2B03AA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>.Dispose
+	|
+	|-RVA: 0x2B03D50 Offset: 0x2B03E51 VA: 0x2B03D50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B04020 Offset: 0x2B04121 VA: 0x2B04020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>.Dispose
+	|
+	|-RVA: 0x2B042D0 Offset: 0x2B043D1 VA: 0x2B042D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B045A0 Offset: 0x2B046A1 VA: 0x2B045A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>.Dispose
+	|
+	|-RVA: 0x2B04850 Offset: 0x2B04951 VA: 0x2B04850
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B04B40 Offset: 0x2B04C41 VA: 0x2B04B40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>.Dispose
+	|
+	|-RVA: 0x2B04DF0 Offset: 0x2B04EF1 VA: 0x2B04DF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B050E0 Offset: 0x2B051E1 VA: 0x2B050E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>.Dispose
+	|
+	|-RVA: 0x2B053B0 Offset: 0x2B054B1 VA: 0x2B053B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2B05640 Offset: 0x2B05741 VA: 0x2B05640
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.Dispose
+	|
+	|-RVA: 0x2B058D0 Offset: 0x2B059D1 VA: 0x2B058D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>.Dispose
+	|
+	|-RVA: 0x2B05B30 Offset: 0x2B05C31 VA: 0x2B05B30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, bool>>>.Dispose
+	|
+	|-RVA: 0x2B05D90 Offset: 0x2B05E91 VA: 0x2B05D90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Bounds>>>.Dispose
+	|
+	|-RVA: 0x2B06020 Offset: 0x2B06121 VA: 0x2B06020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, byte>>>.Dispose
+	|
+	|-RVA: 0x2B06280 Offset: 0x2B06381 VA: 0x2B06280
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Color>>>.Dispose
+	|
+	|-RVA: 0x2B06510 Offset: 0x2B06611 VA: 0x2B06510
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, double>>>.Dispose
+	|
+	|-RVA: 0x2B067A0 Offset: 0x2B068A1 VA: 0x2B067A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, int>>>.Dispose
+	|
+	|-RVA: 0x2B06A10 Offset: 0x2B06B11 VA: 0x2B06A10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, long>>>.Dispose
+	|
+	|-RVA: 0x2B06CA0 Offset: 0x2B06DA1 VA: 0x2B06CA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x2B06F30 Offset: 0x2B07031 VA: 0x2B06F30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Quaternion>>>.Dispose
+	|
+	|-RVA: 0x2B071C0 Offset: 0x2B072C1 VA: 0x2B071C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Rect>>>.Dispose
+	|
+	|-RVA: 0x2B07450 Offset: 0x2B07551 VA: 0x2B07450
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, float>>>.Dispose
+	|
+	|-RVA: 0x2B076C0 Offset: 0x2B077C1 VA: 0x2B076C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask>>>.Dispose
+	|
+	|-RVA: 0x2B07950 Offset: 0x2B07A51 VA: 0x2B07950
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Unit>>>.Dispose
+	|
+	|-RVA: 0x2B07BB0 Offset: 0x2B07CB1 VA: 0x2B07BB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector2>>>.Dispose
+	|
+	|-RVA: 0x2B07E20 Offset: 0x2B07F21 VA: 0x2B07E20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector3>>>.Dispose
+	|
+	|-RVA: 0x2B080B0 Offset: 0x2B081B1 VA: 0x2B080B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector4>>>.Dispose
+	|
+	|-RVA: 0x2B08340 Offset: 0x2B08441 VA: 0x2B08340
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, object>>>.Dispose
+	|
+	|-RVA: 0x2B085D0 Offset: 0x2B086D1 VA: 0x2B085D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object>>>.Dispose
+	|
+	|-RVA: 0x2B08860 Offset: 0x2B08961 VA: 0x2B08860
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2B08B10 Offset: 0x2B08C11 VA: 0x2B08B10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object>>>.Dispose
+	|
+	|-RVA: 0x2B08DA0 Offset: 0x2B08EA1 VA: 0x2B08DA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2B09050 Offset: 0x2B09151 VA: 0x2B09050
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object>>>.Dispose
+	|
+	|-RVA: 0x2B09300 Offset: 0x2B09401 VA: 0x2B09300
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2B095D0 Offset: 0x2B096D1 VA: 0x2B095D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object>>>.Dispose
+	|
+	|-RVA: 0x2B09880 Offset: 0x2B09981 VA: 0x2B09880
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2B09B50 Offset: 0x2B09C51 VA: 0x2B09B50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>.Dispose
+	|
+	|-RVA: 0x2B09E00 Offset: 0x2B09F01 VA: 0x2B09E00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2B0A0F0 Offset: 0x2B0A1F1 VA: 0x2B0A0F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>.Dispose
+	|
+	|-RVA: 0x2B0A3A0 Offset: 0x2B0A4A1 VA: 0x2B0A3A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B0A690 Offset: 0x2B0A791 VA: 0x2B0A690
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.Dispose
+	|
+	|-RVA: 0x2B0A920 Offset: 0x2B0AA21 VA: 0x2B0A920
+	|-Array.InternalEnumerator<ValueTuple<bool, AsyncUnit>>.Dispose
+	|
+	|-RVA: 0x2B0AB80 Offset: 0x2B0AC81 VA: 0x2B0AB80
+	|-Array.InternalEnumerator<ValueTuple<bool, bool>>.Dispose
+	|
+	|-RVA: 0x2B0ADE0 Offset: 0x2B0AEE1 VA: 0x2B0ADE0
+	|-Array.InternalEnumerator<ValueTuple<bool, Bounds>>.Dispose
+	|
+	|-RVA: 0x2B0B090 Offset: 0x2B0B191 VA: 0x2B0B090
+	|-Array.InternalEnumerator<ValueTuple<bool, byte>>.Dispose
+	|
+	|-RVA: 0x2B0B2F0 Offset: 0x2B0B3F1 VA: 0x2B0B2F0
+	|-Array.InternalEnumerator<ValueTuple<bool, Color>>.Dispose
+	|
+	|-RVA: 0x2B0B580 Offset: 0x2B0B681 VA: 0x2B0B580
+	|-Array.InternalEnumerator<ValueTuple<bool, double>>.Dispose
+	|
+	|-RVA: 0x2B0B7F0 Offset: 0x2B0B8F1 VA: 0x2B0B7F0
+	|-Array.InternalEnumerator<ValueTuple<bool, int>>.Dispose
+	|
+	|-RVA: 0x2B0BA60 Offset: 0x2B0BB61 VA: 0x2B0BA60
+	|-Array.InternalEnumerator<ValueTuple<bool, long>>.Dispose
+	|
+	|-RVA: 0x2B0BCD0 Offset: 0x2B0BDD1 VA: 0x2B0BCD0
+	|-Array.InternalEnumerator<ValueTuple<bool, object>>.Dispose
+	|
+	|-RVA: 0x2B0BF40 Offset: 0x2B0C041 VA: 0x2B0BF40
+	|-Array.InternalEnumerator<ValueTuple<bool, Quaternion>>.Dispose
+	|
+	|-RVA: 0x2B0C1D0 Offset: 0x2B0C2D1 VA: 0x2B0C1D0
+	|-Array.InternalEnumerator<ValueTuple<bool, Rect>>.Dispose
+	|
+	|-RVA: 0x2B0C460 Offset: 0x2B0C561 VA: 0x2B0C460
+	|-Array.InternalEnumerator<ValueTuple<bool, float>>.Dispose
+	|
+	|-RVA: 0x2B0C6D0 Offset: 0x2B0C7D1 VA: 0x2B0C6D0
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask>>.Dispose
+	|
+	|-RVA: 0x2B0C940 Offset: 0x2B0CA41 VA: 0x2B0C940
+	|-Array.InternalEnumerator<ValueTuple<bool, Unit>>.Dispose
+	|
+	|-RVA: 0x2B0CBA0 Offset: 0x2B0CCA1 VA: 0x2B0CBA0
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector2>>.Dispose
+	|
+	|-RVA: 0x2B0CE10 Offset: 0x2B0CF11 VA: 0x2B0CE10
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector3>>.Dispose
+	|
+	|-RVA: 0x2B0D080 Offset: 0x2B0D181 VA: 0x2B0D080
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector4>>.Dispose
+	|
+	|-RVA: 0x2B0D310 Offset: 0x2B0D411 VA: 0x2B0D310
+	|-Array.InternalEnumerator<ValueTuple<int, bool>>.Dispose
+	|
+	|-RVA: 0x2B0D580 Offset: 0x2B0D681 VA: 0x2B0D580
+	|-Array.InternalEnumerator<ValueTuple<int, Bounds>>.Dispose
+	|
+	|-RVA: 0x2B0D830 Offset: 0x2B0D931 VA: 0x2B0D830
+	|-Array.InternalEnumerator<ValueTuple<int, byte>>.Dispose
+	|
+	|-RVA: 0x2B0DAA0 Offset: 0x2B0DBA1 VA: 0x2B0DAA0
+	|-Array.InternalEnumerator<ValueTuple<int, Color>>.Dispose
+	|
+	|-RVA: 0x2B0DD30 Offset: 0x2B0DE31 VA: 0x2B0DD30
+	|-Array.InternalEnumerator<ValueTuple<int, double>>.Dispose
+	|
+	|-RVA: 0x2B0DFA0 Offset: 0x2B0E0A1 VA: 0x2B0DFA0
+	|-Array.InternalEnumerator<ValueTuple<int, int>>.Dispose
+	|
+	|-RVA: 0x2B0E210 Offset: 0x2B0E311 VA: 0x2B0E210
+	|-Array.InternalEnumerator<ValueTuple<int, long>>.Dispose
+	|
+	|-RVA: 0x2B0E480 Offset: 0x2B0E581 VA: 0x2B0E480
+	|-Array.InternalEnumerator<ValueTuple<int, object>>.Dispose
+	|
+	|-RVA: 0x2B0E6F0 Offset: 0x2B0E7F1 VA: 0x2B0E6F0
+	|-Array.InternalEnumerator<ValueTuple<int, Quaternion>>.Dispose
+	|
+	|-RVA: 0x2B0E980 Offset: 0x2B0EA81 VA: 0x2B0E980
+	|-Array.InternalEnumerator<ValueTuple<int, Rect>>.Dispose
+	|
+	|-RVA: 0x2B0EC10 Offset: 0x2B0ED11 VA: 0x2B0EC10
+	|-Array.InternalEnumerator<ValueTuple<int, float>>.Dispose
+	|
+	|-RVA: 0x2B0EE80 Offset: 0x2B0EF81 VA: 0x2B0EE80
+	|-Array.InternalEnumerator<ValueTuple<int, Unit>>.Dispose
+	|
+	|-RVA: 0x2B0F0F0 Offset: 0x2B0F1F1 VA: 0x2B0F0F0
+	|-Array.InternalEnumerator<ValueTuple<int, Vector2>>.Dispose
+	|
+	|-RVA: 0x2B0F360 Offset: 0x2B0F461 VA: 0x2B0F360
+	|-Array.InternalEnumerator<ValueTuple<int, Vector3>>.Dispose
+	|
+	|-RVA: 0x2B0F5D0 Offset: 0x2B0F6D1 VA: 0x2B0F5D0
+	|-Array.InternalEnumerator<ValueTuple<int, Vector4>>.Dispose
+	|
+	|-RVA: 0x2B0F860 Offset: 0x2B0F961 VA: 0x2B0F860
+	|-Array.InternalEnumerator<ValueTuple<Int32Enum, int>>.Dispose
+	|
+	|-RVA: 0x2B0FAD0 Offset: 0x2B0FBD1 VA: 0x2B0FAD0
+	|-Array.InternalEnumerator<ValueTuple<object, ValueTuple<object, int>>>.Dispose
+	|
+	|-RVA: 0x2B0FD60 Offset: 0x2B0FE61 VA: 0x2B0FD60
+	|-Array.InternalEnumerator<ValueTuple<object, int>>.Dispose
+	|
+	|-RVA: 0x2B0FFD0 Offset: 0x2B100D1 VA: 0x2B0FFD0
+	|-Array.InternalEnumerator<ValueTuple<object, object>>.Dispose
+	|
+	|-RVA: 0x2B10240 Offset: 0x2B10341 VA: 0x2B10240
+	|-Array.InternalEnumerator<ValueTuple<object, float>>.Dispose
+	|
+	|-RVA: 0x2B104B0 Offset: 0x2B105B1 VA: 0x2B104B0
+	|-Array.InternalEnumerator<ValueTuple<Vector3, float>>.Dispose
+	|
+	|-RVA: 0x2ADFE60 Offset: 0x2ADFF61 VA: 0x2ADFE60
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x2AE0110 Offset: 0x2AE0211 VA: 0x2AE0110
+	|-Array.InternalEnumerator<ValueTuple<object, Int32Enum, int>>.Dispose
+	|
+	|-RVA: 0x2AE0380 Offset: 0x2AE0481 VA: 0x2AE0380
+	|-Array.InternalEnumerator<ValueTuple<object, object, object>>.Dispose
+	|
+	|-RVA: 0x2AE0610 Offset: 0x2AE0711 VA: 0x2AE0610
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x2AE08C0 Offset: 0x2AE09C1 VA: 0x2AE08C0
+	|-Array.InternalEnumerator<ValueTuple<object, int, int, int>>.Dispose
+	|
+	|-RVA: 0x2AE0B50 Offset: 0x2AE0C51 VA: 0x2AE0B50
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object>>.Dispose
+	|
+	|-RVA: 0x2AE0DE0 Offset: 0x2AE0EE1 VA: 0x2AE0DE0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x2AE10B0 Offset: 0x2AE11B1 VA: 0x2AE10B0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object>>.Dispose
+	|
+	|-RVA: 0x2AE1360 Offset: 0x2AE1461 VA: 0x2AE1360
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x2AE1630 Offset: 0x2AE1731 VA: 0x2AE1630
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object>>.Dispose
+	|
+	|-RVA: 0x2AE18E0 Offset: 0x2AE19E1 VA: 0x2AE18E0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.Dispose
+	|
+	|-RVA: 0x2AE1BD0 Offset: 0x2AE1CD1 VA: 0x2AE1BD0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object, object>>.Dispose
+	|
+	|-RVA: 0x2AE1E80 Offset: 0x2AE1F81 VA: 0x2AE1E80
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2AE2170 Offset: 0x2AE2271 VA: 0x2AE2170
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>.Dispose
+	|
+	|-RVA: 0x2AE2400 Offset: 0x2AE2501 VA: 0x2AE2400
+	|-Array.InternalEnumerator<AnimatorClipInfo>.Dispose
+	|
+	|-RVA: 0x2AE2670 Offset: 0x2AE2771 VA: 0x2AE2670
+	|-Array.InternalEnumerator<AsyncOperationHandle>.Dispose
+	|
+	|-RVA: 0x2AE2900 Offset: 0x2AE2A01 VA: 0x2AE2900
+	|-Array.InternalEnumerator<AsyncUnit>.Dispose
+	|
+	|-RVA: 0x2AE2B60 Offset: 0x2AE2C61 VA: 0x2AE2B60
+	|-Array.InternalEnumerator<BatchVisibility>.Dispose
+	|
+	|-RVA: 0x2AE2DD0 Offset: 0x2AE2ED1 VA: 0x2AE2DD0
+	|-Array.InternalEnumerator<BoneWeight>.Dispose
+	|
+	|-RVA: 0x2AE3060 Offset: 0x2AE3161 VA: 0x2AE3060
+	|-Array.InternalEnumerator<BoneWeight1>.Dispose
+	|
+	|-RVA: 0x2AE32D0 Offset: 0x2AE33D1 VA: 0x2AE32D0
+	|-Array.InternalEnumerator<bool>.Dispose
+	|
+	|-RVA: 0x2AE3540 Offset: 0x2AE3641 VA: 0x2AE3540
+	|-Array.InternalEnumerator<Bounds>.Dispose
+	|
+	|-RVA: 0x2AE37D0 Offset: 0x2AE38D1 VA: 0x2AE37D0
+	|-Array.InternalEnumerator<byte>.Dispose
+	|
+	|-RVA: 0x2AE3A40 Offset: 0x2AE3B41 VA: 0x2AE3A40
+	|-Array.InternalEnumerator<ByteEnum>.Dispose
+	|
+	|-RVA: 0x2AE3CB0 Offset: 0x2AE3DB1 VA: 0x2AE3CB0
+	|-Array.InternalEnumerator<CameraInfo>.Dispose
+	|
+	|-RVA: 0x2AE3F20 Offset: 0x2AE4021 VA: 0x2AE3F20
+	|-Array.InternalEnumerator<CancellationToken>.Dispose
+	|
+	|-RVA: 0x2AE4190 Offset: 0x2AE4291 VA: 0x2AE4190
+	|-Array.InternalEnumerator<CancellationTokenRegistration>.Dispose
+	|
+	|-RVA: 0x2AE4420 Offset: 0x2AE4521 VA: 0x2AE4420
+	|-Array.InternalEnumerator<char>.Dispose
+	|
+	|-RVA: 0x2AE4690 Offset: 0x2AE4791 VA: 0x2AE4690
+	|-Array.InternalEnumerator<ClusteringData>.Dispose
+	|
+	|-RVA: 0x2AE4920 Offset: 0x2AE4A21 VA: 0x2AE4920
+	|-Array.InternalEnumerator<ClusteringProcessorState>.Dispose
+	|
+	|-RVA: 0x2AE4BB0 Offset: 0x2AE4CB1 VA: 0x2AE4BB0
+	|-Array.InternalEnumerator<Color>.Dispose
+	|
+	|-RVA: 0x2AE4E30 Offset: 0x2AE4F31 VA: 0x2AE4E30
+	|-Array.InternalEnumerator<Color32>.Dispose
+	|
+	|-RVA: 0x2AE5090 Offset: 0x2AE5191 VA: 0x2AE5090
+	|-Array.InternalEnumerator<Color4u8>.Dispose
+	|
+	|-RVA: 0x2AE52F0 Offset: 0x2AE53F1 VA: 0x2AE52F0
+	|-Array.InternalEnumerator<ColorBlock>.Dispose
+	|
+	|-RVA: 0x2AE55C0 Offset: 0x2AE56C1 VA: 0x2AE55C0
+	|-Array.InternalEnumerator<CombineInstance>.Dispose
+	|
+	|-RVA: 0x2AE58B0 Offset: 0x2AE59B1 VA: 0x2AE58B0
+	|-Array.InternalEnumerator<ConstraintSource>.Dispose
+	|
+	|-RVA: 0x2AE5B20 Offset: 0x2AE5C21 VA: 0x2AE5B20
+	|-Array.InternalEnumerator<ContactPoint>.Dispose
+	|
+	|-RVA: 0x2AE5DD0 Offset: 0x2AE5ED1 VA: 0x2AE5DD0
+	|-Array.InternalEnumerator<ContactPoint2D>.Dispose
+	|
+	|-RVA: 0x2AE6080 Offset: 0x2AE6181 VA: 0x2AE6080
+	|-Array.InternalEnumerator<ContourVertex>.Dispose
+	|
+	|-RVA: 0x2AE6310 Offset: 0x2AE6411 VA: 0x2AE6310
+	|-Array.InternalEnumerator<CustomAttributeNamedArgument>.Dispose
+	|
+	|-RVA: 0x2AE65A0 Offset: 0x2AE66A1 VA: 0x2AE65A0
+	|-Array.InternalEnumerator<CustomAttributeTypedArgument>.Dispose
+	|
+	|-RVA: 0x2AE6810 Offset: 0x2AE6911 VA: 0x2AE6810
+	|-Array.InternalEnumerator<DataStoreRatingInfo>.Dispose
+	|
+	|-RVA: 0x2AE6AA0 Offset: 0x2AE6BA1 VA: 0x2AE6AA0
+	|-Array.InternalEnumerator<DataStoreResult>.Dispose
+	|
+	|-RVA: 0x2AE6D10 Offset: 0x2AE6E11 VA: 0x2AE6D10
+	|-Array.InternalEnumerator<DateTime>.Dispose
+	|
+	|-RVA: 0x2AE6F80 Offset: 0x2AE7081 VA: 0x2AE6F80
+	|-Array.InternalEnumerator<DateTimeOffset>.Dispose
+	|
+	|-RVA: 0x2AE71F0 Offset: 0x2AE72F1 VA: 0x2AE71F0
+	|-Array.InternalEnumerator<DebugPadState>.Dispose
+	|
+	|-RVA: 0x2AE7480 Offset: 0x2AE7581 VA: 0x2AE7480
+	|-Array.InternalEnumerator<Decimal>.Dispose
+	|
+	|-RVA: 0x2AE76F0 Offset: 0x2AE77F1 VA: 0x2AE76F0
+	|-Array.InternalEnumerator<DeferredTiler>.Dispose
+	|
+	|-RVA: 0x2AE79E0 Offset: 0x2AE7AE1 VA: 0x2AE79E0
+	|-Array.InternalEnumerator<DeviceHandle>.Dispose
+	|
+	|-RVA: 0x2AE7C50 Offset: 0x2AE7D51 VA: 0x2AE7C50
+	|-Array.InternalEnumerator<DiagnosticEvent>.Dispose
+	|
+	|-RVA: 0x2AE7F00 Offset: 0x2AE8001 VA: 0x2AE7F00
+	|-Array.InternalEnumerator<DictionaryEntry>.Dispose
+	|
+	|-RVA: 0x2AE8170 Offset: 0x2AE8271 VA: 0x2AE8170
+	|-Array.InternalEnumerator<DictionaryInfo>.Dispose
+	|
+	|-RVA: 0x2AE83E0 Offset: 0x2AE84E1 VA: 0x2AE83E0
+	|-Array.InternalEnumerator<DirectoryEntry>.Dispose
+	|
+	|-RVA: 0x2AE8670 Offset: 0x2AE8771 VA: 0x2AE8670
+	|-Array.InternalEnumerator<double>.Dispose
+	|
+	|-RVA: 0x2AE88E0 Offset: 0x2AE89E1 VA: 0x2AE88E0
+	|-Array.InternalEnumerator<Ephemeron>.Dispose
+	|
+	|-RVA: 0x2AE8B50 Offset: 0x2AE8C51 VA: 0x2AE8B50
+	|-Array.InternalEnumerator<FXZ>.Dispose
+	|
+	|-RVA: 0x2AE8DC0 Offset: 0x2AE8EC1 VA: 0x2AE8DC0
+	|-Array.InternalEnumerator<Finger>.Dispose
+	|
+	|-RVA: 0x2AE9070 Offset: 0x2AE9171 VA: 0x2AE9070
+	|-Array.InternalEnumerator<Float2>.Dispose
+	|
+	|-RVA: 0x2AE92E0 Offset: 0x2AE93E1 VA: 0x2AE92E0
+	|-Array.InternalEnumerator<Friend>.Dispose
+	|
+	|-RVA: 0x2AE9580 Offset: 0x2AE9681 VA: 0x2AE9580
+	|-Array.InternalEnumerator<GCHandle>.Dispose
+	|
+	|-RVA: 0x2AE97E0 Offset: 0x2AE98E1 VA: 0x2AE97E0
+	|-Array.InternalEnumerator<GesturePoint>.Dispose
+	|
+	|-RVA: 0x2AE9A50 Offset: 0x2AE9B51 VA: 0x2AE9A50
+	|-Array.InternalEnumerator<GestureState>.Dispose
+	|
+	|-RVA: 0x2AE9D20 Offset: 0x2AE9E21 VA: 0x2AE9D20
+	|-Array.InternalEnumerator<GlyphMarshallingStruct>.Dispose
+	|
+	|-RVA: 0x2AE9FD0 Offset: 0x2AEA0D1 VA: 0x2AE9FD0
+	|-Array.InternalEnumerator<GlyphPairAdjustmentRecord>.Dispose
+	|
+	|-RVA: 0x2AEA280 Offset: 0x2AEA381 VA: 0x2AEA280
+	|-Array.InternalEnumerator<GlyphRect>.Dispose
+	|
+	|-RVA: 0x2AEA4F0 Offset: 0x2AEA5F1 VA: 0x2AEA4F0
+	|-Array.InternalEnumerator<Guid>.Dispose
+	|
+	|-RVA: 0x2AEA760 Offset: 0x2AEA861 VA: 0x2AEA760
+	|-Array.InternalEnumerator<Hand>.Dispose
+	|
+	|-RVA: 0x2AEA9F0 Offset: 0x2AEAAF1 VA: 0x2AEA9F0
+	|-Array.InternalEnumerator<HandAnalysisImageState>.Dispose
+	|
+	|-RVA: 0x2AEAC60 Offset: 0x2AEAD61 VA: 0x2AEAC60
+	|-Array.InternalEnumerator<HandAnalysisSilhouetteState>.Dispose
+	|
+	|-RVA: 0x2AEAEF0 Offset: 0x2AEAFF1 VA: 0x2AEAEF0
+	|-Array.InternalEnumerator<HeaderVariantInfo>.Dispose
+	|
+	|-RVA: 0x2AEB160 Offset: 0x2AEB261 VA: 0x2AEB160
+	|-Array.InternalEnumerator<HighlightState>.Dispose
+	|
+	|-RVA: 0x2AEB3F0 Offset: 0x2AEB4F1 VA: 0x2AEB3F0
+	|-Array.InternalEnumerator<HumanBone>.Dispose
+	|
+	|-RVA: 0x2AEB6A0 Offset: 0x2AEB7A1 VA: 0x2AEB6A0
+	|-Array.InternalEnumerator<short>.Dispose
+	|
+	|-RVA: 0x2AEB910 Offset: 0x2AEBA11 VA: 0x2AEB910
+	|-Array.InternalEnumerator<int>.Dispose
+	|
+	|-RVA: 0x2AEBB80 Offset: 0x2AEBC81 VA: 0x2AEBB80
+	|-Array.InternalEnumerator<Int32Enum>.Dispose
+	|
+	|-RVA: 0x2AEBDF0 Offset: 0x2AEBEF1 VA: 0x2AEBDF0
+	|-Array.InternalEnumerator<long>.Dispose
+	|
+	|-RVA: 0x2AEC060 Offset: 0x2AEC161 VA: 0x2AEC060
+	|-Array.InternalEnumerator<Int64Enum>.Dispose
+	|
+	|-RVA: 0x2AEC2D0 Offset: 0x2AEC3D1 VA: 0x2AEC2D0
+	|-Array.InternalEnumerator<IntPtr>.Dispose
+	|
+	|-RVA: 0x2AEC540 Offset: 0x2AEC641 VA: 0x2AEC540
+	|-Array.InternalEnumerator<InternalCodePageDataItem>.Dispose
+	|
+	|-RVA: 0x2AEC7B0 Offset: 0x2AEC8B1 VA: 0x2AEC7B0
+	|-Array.InternalEnumerator<InternalEncodingDataItem>.Dispose
+	|
+	|-RVA: 0x2AECA20 Offset: 0x2AECB21 VA: 0x2AECA20
+	|-Array.InternalEnumerator<InterpretedFrameInfo>.Dispose
+	|
+	|-RVA: 0x2AECC90 Offset: 0x2AECD91 VA: 0x2AECC90
+	|-Array.InternalEnumerator<IntervalTreeNode>.Dispose
+	|
+	|-RVA: 0x2AECF20 Offset: 0x2AED021 VA: 0x2AECF20
+	|-Array.InternalEnumerator<JobHandle>.Dispose
+	|
+	|-RVA: 0x2AED190 Offset: 0x2AED291 VA: 0x2AED190
+	|-Array.InternalEnumerator<Keyframe>.Dispose
+	|
+	|-RVA: 0x2AED440 Offset: 0x2AED541 VA: 0x2AED440
+	|-Array.InternalEnumerator<LOD>.Dispose
+	|
+	|-RVA: 0x2AED6B0 Offset: 0x2AED7B1 VA: 0x2AED6B0
+	|-Array.InternalEnumerator<LayerMask>.Dispose
+	|
+	|-RVA: 0x2AED910 Offset: 0x2AEDA11 VA: 0x2AED910
+	|-Array.InternalEnumerator<LengthLimitProperties>.Dispose
+	|
+	|-RVA: 0x2AEDB80 Offset: 0x2AEDC81 VA: 0x2AEDB80
+	|-Array.InternalEnumerator<Light2DBlendStyle>.Dispose
+	|
+	|-RVA: 0x2AEDE50 Offset: 0x2AEDF51 VA: 0x2AEDE50
+	|-Array.InternalEnumerator<LightDataGI>.Dispose
+	|
+	|-RVA: 0x2AEE120 Offset: 0x2AEE221 VA: 0x2AEE120
+	|-Array.InternalEnumerator<LocalDefinition>.Dispose
+	|
+	|-RVA: 0x2AEE390 Offset: 0x2AEE491 VA: 0x2AEE390
+	|-Array.InternalEnumerator<MapPos>.Dispose
+	|
+	|-RVA: 0x2AEE600 Offset: 0x2AEE701 VA: 0x2AEE600
+	|-Array.InternalEnumerator<MapRange>.Dispose
+	|
+	|-RVA: 0x2AEE870 Offset: 0x2AEE971 VA: 0x2AEE870
+	|-Array.InternalEnumerator<MaterialReference>.Dispose
+	|
+	|-RVA: 0x2AEEB20 Offset: 0x2AEEC21 VA: 0x2AEEB20
+	|-Array.InternalEnumerator<Matrix4x4>.Dispose
+	|
+	|-RVA: 0x2AEEDD0 Offset: 0x2AEEED1 VA: 0x2AEEDD0
+	|-Array.InternalEnumerator<MomentProcessorState>.Dispose
+	|
+	|-RVA: 0x2AEF060 Offset: 0x2AEF161 VA: 0x2AEF060
+	|-Array.InternalEnumerator<MomentStatistic>.Dispose
+	|
+	|-RVA: 0x2AEF2E0 Offset: 0x2AEF3E1 VA: 0x2AEF2E0
+	|-Array.InternalEnumerator<Navigation>.Dispose
+	|
+	|-RVA: 0x2AEF590 Offset: 0x2AEF691 VA: 0x2AEF590
+	|-Array.InternalEnumerator<NetworkServiceAccountId>.Dispose
+	|
+	|-RVA: 0x2AEF800 Offset: 0x2AEF901 VA: 0x2AEF800
+	|-Array.InternalEnumerator<NpadFullKeyState>.Dispose
+	|
+	|-RVA: 0x2AEFAB0 Offset: 0x2AEFBB1 VA: 0x2AEFAB0
+	|-Array.InternalEnumerator<NpadHandheldState>.Dispose
+	|
+	|-RVA: 0x2AEFD60 Offset: 0x2AEFE61 VA: 0x2AEFD60
+	|-Array.InternalEnumerator<NpadJoyDualState>.Dispose
+	|
+	|-RVA: 0x2AF0010 Offset: 0x2AF0111 VA: 0x2AF0010
+	|-Array.InternalEnumerator<NpadJoyLeftState>.Dispose
+	|
+	|-RVA: 0x2AF02C0 Offset: 0x2AF03C1 VA: 0x2AF02C0
+	|-Array.InternalEnumerator<NpadJoyRightState>.Dispose
+	|
+	|-RVA: 0x2AF0570 Offset: 0x2AF0671 VA: 0x2AF0570
+	|-Array.InternalEnumerator<NpadStateArrayItem>.Dispose
+	|
+	|-RVA: 0x2AF0820 Offset: 0x2AF0921 VA: 0x2AF0820
+	|-Array.InternalEnumerator<NsUid>.Dispose
+	|
+	|-RVA: 0x2AF0A90 Offset: 0x2AF0B91 VA: 0x2AF0A90
+	|-Array.InternalEnumerator<object>.Dispose
+	|
+	|-RVA: 0x2AF0CB0 Offset: 0x2AF0DB1 VA: 0x2AF0CB0
+	|-Array.InternalEnumerator<ObjectInitializationData>.Dispose
+	|
+	|-RVA: 0x2AF0F60 Offset: 0x2AF1061 VA: 0x2AF0F60
+	|-Array.InternalEnumerator<ParameterModifier>.Dispose
+	|
+	|-RVA: 0x2AF11D0 Offset: 0x2AF12D1 VA: 0x2AF11D0
+	|-Array.InternalEnumerator<Plane>.Dispose
+	|
+	|-RVA: 0x2AF1450 Offset: 0x2AF1551 VA: 0x2AF1450
+	|-Array.InternalEnumerator<Playable>.Dispose
+	|
+	|-RVA: 0x2AF16C0 Offset: 0x2AF17C1 VA: 0x2AF16C0
+	|-Array.InternalEnumerator<PlayableBinding>.Dispose
+	|
+	|-RVA: 0x2AF1950 Offset: 0x2AF1A51 VA: 0x2AF1950
+	|-Array.InternalEnumerator<PlayerLoopSystem>.Dispose
+	|
+	|-RVA: 0x2AF1C00 Offset: 0x2AF1D01 VA: 0x2AF1C00
+	|-Array.InternalEnumerator<PlayerLoopSystemInternal>.Dispose
+	|
+	|-RVA: 0x2AF1EB0 Offset: 0x2AF1FB1 VA: 0x2AF1EB0
+	|-Array.InternalEnumerator<PreTile>.Dispose
+	|
+	|-RVA: 0x2AF2160 Offset: 0x2AF2261 VA: 0x2AF2160
+	|-Array.InternalEnumerator<Profile>.Dispose
+	|
+	|-RVA: 0x2AF2400 Offset: 0x2AF2501 VA: 0x2AF2400
+	|-Array.InternalEnumerator<Protrusion>.Dispose
+	|
+	|-RVA: 0x2AF2670 Offset: 0x2AF2771 VA: 0x2AF2670
+	|-Array.InternalEnumerator<Quaternion>.Dispose
+	|
+	|-RVA: 0x2AF28F0 Offset: 0x2AF29F1 VA: 0x2AF28F0
+	|-Array.InternalEnumerator<RandomSeed>.Dispose
+	|
+	|-RVA: 0x2AF2B60 Offset: 0x2AF2C61 VA: 0x2AF2B60
+	|-Array.InternalEnumerator<RangePositionInfo>.Dispose
+	|
+	|-RVA: 0x2AF2DD0 Offset: 0x2AF2ED1 VA: 0x2AF2DD0
+	|-Array.InternalEnumerator<Ranking2ChartInfoInput>.Dispose
+	|
+	|-RVA: 0x2AF3040 Offset: 0x2AF3141 VA: 0x2AF3040
+	|-Array.InternalEnumerator<RaycastHit>.Dispose
+	|
+	|-RVA: 0x2AF32F0 Offset: 0x2AF33F1 VA: 0x2AF32F0
+	|-Array.InternalEnumerator<RaycastHit2D>.Dispose
+	|
+	|-RVA: 0x2AF35A0 Offset: 0x2AF36A1 VA: 0x2AF35A0
+	|-Array.InternalEnumerator<RaycastResult>.Dispose
+	|
+	|-RVA: 0x2AF3870 Offset: 0x2AF3971 VA: 0x2AF3870
+	|-Array.InternalEnumerator<Rect>.Dispose
+	|
+	|-RVA: 0x2AF3AF0 Offset: 0x2AF3BF1 VA: 0x2AF3AF0
+	|-Array.InternalEnumerator<RenderBuffer>.Dispose
+	|
+	|-RVA: 0x2AF3D60 Offset: 0x2AF3E61 VA: 0x2AF3D60
+	|-Array.InternalEnumerator<RenderStateBlock>.Dispose
+	|
+	|-RVA: 0x2AF4050 Offset: 0x2AF4151 VA: 0x2AF4050
+	|-Array.InternalEnumerator<RenderTargetHandle>.Dispose
+	|
+	|-RVA: 0x2AF4300 Offset: 0x2AF4401 VA: 0x2AF4300
+	|-Array.InternalEnumerator<RenderTargetIdentifier>.Dispose
+	|
+	|-RVA: 0x2AF45B0 Offset: 0x2AF46B1 VA: 0x2AF45B0
+	|-Array.InternalEnumerator<RendererListHandle>.Dispose
+	|
+	|-RVA: 0x2AF4820 Offset: 0x2AF4921 VA: 0x2AF4820
+	|-Array.InternalEnumerator<ResourceHandle>.Dispose
+	|
+	|-RVA: 0x2AF4A90 Offset: 0x2AF4B91 VA: 0x2AF4A90
+	|-Array.InternalEnumerator<ResourceLocator>.Dispose
+	|
+	|-RVA: 0x2AF4D00 Offset: 0x2AF4E01 VA: 0x2AF4D00
+	|-Array.InternalEnumerator<RichTextTagAttribute>.Dispose
+	|
+	|-RVA: 0x2AF4F90 Offset: 0x2AF5091 VA: 0x2AF4F90
+	|-Array.InternalEnumerator<RuntimeLabel>.Dispose
+	|
+	|-RVA: 0x2AF5200 Offset: 0x2AF5301 VA: 0x2AF5200
+	|-Array.InternalEnumerator<sbyte>.Dispose
+	|
+	|-RVA: 0x2AF5470 Offset: 0x2AF5571 VA: 0x2AF5470
+	|-Array.InternalEnumerator<SerializedType>.Dispose
+	|
+	|-RVA: 0x2AF5700 Offset: 0x2AF5801 VA: 0x2AF5700
+	|-Array.InternalEnumerator<ShaderKeyword>.Dispose
+	|
+	|-RVA: 0x2AF5960 Offset: 0x2AF5A61 VA: 0x2AF5960
+	|-Array.InternalEnumerator<ShaderTagId>.Dispose
+	|
+	|-RVA: 0x2AF5BC0 Offset: 0x2AF5CC1 VA: 0x2AF5BC0
+	|-Array.InternalEnumerator<ShadowSliceData>.Dispose
+	|
+	|-RVA: 0x2AF5E50 Offset: 0x2AF5F51 VA: 0x2AF5E50
+	|-Array.InternalEnumerator<Shape>.Dispose
+	|
+	|-RVA: 0x2AF60E0 Offset: 0x2AF61E1 VA: 0x2AF60E0
+	|-Array.InternalEnumerator<float>.Dispose
+	|
+	|-RVA: 0x2AF6350 Offset: 0x2AF6451 VA: 0x2AF6350
+	|-Array.InternalEnumerator<SixAxisSensorHandle>.Dispose
+	|
+	|-RVA: 0x2AF65B0 Offset: 0x2AF66B1 VA: 0x2AF65B0
+	|-Array.InternalEnumerator<SixAxisSensorState>.Dispose
+	|
+	|-RVA: 0x2AF6880 Offset: 0x2AF6981 VA: 0x2AF6880
+	|-Array.InternalEnumerator<SkeletonBone>.Dispose
+	|
+	|-RVA: 0x2AF6B30 Offset: 0x2AF6C31 VA: 0x2AF6B30
+	|-Array.InternalEnumerator<SortingLayer>.Dispose
+	|
+	|-RVA: 0x2AF6D90 Offset: 0x2AF6E91 VA: 0x2AF6D90
+	|-Array.InternalEnumerator<SphericalHarmonicsL2>.Dispose
+	|
+	|-RVA: 0x2AF7080 Offset: 0x2AF7181 VA: 0x2AF7080
+	|-Array.InternalEnumerator<SpinLock>.Dispose
+	|
+	|-RVA: 0x2AF72E0 Offset: 0x2AF73E1 VA: 0x2AF72E0
+	|-Array.InternalEnumerator<SpringBoneComponents>.Dispose
+	|
+	|-RVA: 0x2AF75B0 Offset: 0x2AF76B1 VA: 0x2AF75B0
+	|-Array.InternalEnumerator<SpringBoneProperties>.Dispose
+	|
+	|-RVA: 0x2AF7840 Offset: 0x2AF7941 VA: 0x2AF7840
+	|-Array.InternalEnumerator<SpringColliderComponents>.Dispose
+	|
+	|-RVA: 0x2AF7B30 Offset: 0x2AF7C31 VA: 0x2AF7B30
+	|-Array.InternalEnumerator<SpringColliderProperties>.Dispose
+	|
+	|-RVA: 0x2AF7DA0 Offset: 0x2AF7EA1 VA: 0x2AF7DA0
+	|-Array.InternalEnumerator<SpringForceComponent>.Dispose
+	|
+	|-RVA: 0x2982410 Offset: 0x2982511 VA: 0x2982410
+	|-Array.InternalEnumerator<SpringJobElement>.Dispose
+	|
+	|-RVA: 0x29826A0 Offset: 0x29827A1 VA: 0x29826A0
+	|-Array.InternalEnumerator<SpriteState>.Dispose
+	|
+	|-RVA: 0x2982930 Offset: 0x2982A31 VA: 0x2982930
+	|-Array.InternalEnumerator<SubMeshDescriptor>.Dispose
+	|
+	|-RVA: 0x2982BE0 Offset: 0x2982CE1 VA: 0x2982BE0
+	|-Array.InternalEnumerator<TMP_CharacterInfo>.Dispose
+	|
+	|-RVA: 0x2982E70 Offset: 0x2982F71 VA: 0x2982E70
+	|-Array.InternalEnumerator<TMP_FontWeightPair>.Dispose
+	|
+	|-RVA: 0x29830E0 Offset: 0x29831E1 VA: 0x29830E0
+	|-Array.InternalEnumerator<TMP_LineInfo>.Dispose
+	|
+	|-RVA: 0x29833D0 Offset: 0x29834D1 VA: 0x29833D0
+	|-Array.InternalEnumerator<TMP_LinkInfo>.Dispose
+	|
+	|-RVA: 0x2983680 Offset: 0x2983781 VA: 0x2983680
+	|-Array.InternalEnumerator<TMP_MeshInfo>.Dispose
+	|
+	|-RVA: 0x2983950 Offset: 0x2983A51 VA: 0x2983950
+	|-Array.InternalEnumerator<TMP_PageInfo>.Dispose
+	|
+	|-RVA: 0x2983BE0 Offset: 0x2983CE1 VA: 0x2983BE0
+	|-Array.InternalEnumerator<TMP_WordInfo>.Dispose
+	|
+	|-RVA: 0x2983E70 Offset: 0x2983F71 VA: 0x2983E70
+	|-Array.InternalEnumerator<TablePair>.Dispose
+	|
+	|-RVA: 0x29840E0 Offset: 0x29841E1 VA: 0x29840E0
+	|-Array.InternalEnumerator<TextureHandle>.Dispose
+	|
+	|-RVA: 0x2984350 Offset: 0x2984451 VA: 0x2984350
+	|-Array.InternalEnumerator<TimeSpan>.Dispose
+	|
+	|-RVA: 0x29845C0 Offset: 0x29846C1 VA: 0x29845C0
+	|-Array.InternalEnumerator<Touch>.Dispose
+	|
+	|-RVA: 0x2984890 Offset: 0x2984991 VA: 0x2984890
+	|-Array.InternalEnumerator<TouchScreenState1>.Dispose
+	|
+	|-RVA: 0x2984B40 Offset: 0x2984C41 VA: 0x2984B40
+	|-Array.InternalEnumerator<TouchScreenState10>.Dispose
+	|
+	|-RVA: 0x2984DD0 Offset: 0x2984ED1 VA: 0x2984DD0
+	|-Array.InternalEnumerator<TouchScreenState11>.Dispose
+	|
+	|-RVA: 0x2985060 Offset: 0x2985161 VA: 0x2985060
+	|-Array.InternalEnumerator<TouchScreenState12>.Dispose
+	|
+	|-RVA: 0x29852F0 Offset: 0x29853F1 VA: 0x29852F0
+	|-Array.InternalEnumerator<TouchScreenState13>.Dispose
+	|
+	|-RVA: 0x2985580 Offset: 0x2985681 VA: 0x2985580
+	|-Array.InternalEnumerator<TouchScreenState14>.Dispose
+	|
+	|-RVA: 0x2985810 Offset: 0x2985911 VA: 0x2985810
+	|-Array.InternalEnumerator<TouchScreenState15>.Dispose
+	|
+	|-RVA: 0x2985AA0 Offset: 0x2985BA1 VA: 0x2985AA0
+	|-Array.InternalEnumerator<TouchScreenState16>.Dispose
+	|
+	|-RVA: 0x2985D30 Offset: 0x2985E31 VA: 0x2985D30
+	|-Array.InternalEnumerator<TouchScreenState2>.Dispose
+	|
+	|-RVA: 0x2986000 Offset: 0x2986101 VA: 0x2986000
+	|-Array.InternalEnumerator<TouchScreenState3>.Dispose
+	|
+	|-RVA: 0x2986290 Offset: 0x2986391 VA: 0x2986290
+	|-Array.InternalEnumerator<TouchScreenState4>.Dispose
+	|
+	|-RVA: 0x2986520 Offset: 0x2986621 VA: 0x2986520
+	|-Array.InternalEnumerator<TouchScreenState5>.Dispose
+	|
+	|-RVA: 0x29867B0 Offset: 0x29868B1 VA: 0x29867B0
+	|-Array.InternalEnumerator<TouchScreenState6>.Dispose
+	|
+	|-RVA: 0x2986A40 Offset: 0x2986B41 VA: 0x2986A40
+	|-Array.InternalEnumerator<TouchScreenState7>.Dispose
+	|
+	|-RVA: 0x2986CD0 Offset: 0x2986DD1 VA: 0x2986CD0
+	|-Array.InternalEnumerator<TouchScreenState8>.Dispose
+	|
+	|-RVA: 0x2986F60 Offset: 0x2987061 VA: 0x2986F60
+	|-Array.InternalEnumerator<TouchScreenState9>.Dispose
+	|
+	|-RVA: 0x29871F0 Offset: 0x29872F1 VA: 0x29871F0
+	|-Array.InternalEnumerator<TouchState>.Dispose
+	|
+	|-RVA: 0x29874A0 Offset: 0x29875A1 VA: 0x29874A0
+	|-Array.InternalEnumerator<TrailHand>.Dispose
+	|
+	|-RVA: 0x2987730 Offset: 0x2987831 VA: 0x2987730
+	|-Array.InternalEnumerator<TrailVertex>.Dispose
+	|
+	|-RVA: 0x29879C0 Offset: 0x2987AC1 VA: 0x29879C0
+	|-Array.InternalEnumerator<UICharInfo>.Dispose
+	|
+	|-RVA: 0x2987C40 Offset: 0x2987D41 VA: 0x2987C40
+	|-Array.InternalEnumerator<UILineInfo>.Dispose
+	|
+	|-RVA: 0x2987EB0 Offset: 0x2987FB1 VA: 0x2987EB0
+	|-Array.InternalEnumerator<UIVertex>.Dispose
+	|
+	|-RVA: 0x29881A0 Offset: 0x29882A1 VA: 0x29881A0
+	|-Array.InternalEnumerator<ushort>.Dispose
+	|
+	|-RVA: 0x2988410 Offset: 0x2988511 VA: 0x2988410
+	|-Array.InternalEnumerator<UInt16Enum>.Dispose
+	|
+	|-RVA: 0x2988680 Offset: 0x2988781 VA: 0x2988680
+	|-Array.InternalEnumerator<uint>.Dispose
+	|
+	|-RVA: 0x29888F0 Offset: 0x29889F1 VA: 0x29888F0
+	|-Array.InternalEnumerator<UInt32Enum>.Dispose
+	|
+	|-RVA: 0x2988B60 Offset: 0x2988C61 VA: 0x2988B60
+	|-Array.InternalEnumerator<ulong>.Dispose
+	|
+	|-RVA: 0x2988DD0 Offset: 0x2988ED1 VA: 0x2988DD0
+	|-Array.InternalEnumerator<Uid>.Dispose
+	|
+	|-RVA: 0x2989040 Offset: 0x2989141 VA: 0x2989040
+	|-Array.InternalEnumerator<UniTask>.Dispose
+	|
+	|-RVA: 0x29892B0 Offset: 0x29893B1 VA: 0x29892B0
+	|-Array.InternalEnumerator<Unit>.Dispose
+	|
+	|-RVA: 0x2989510 Offset: 0x2989611 VA: 0x2989510
+	|-Array.InternalEnumerator<UnitEnum>.Dispose
+	|
+	|-RVA: 0x2989780 Offset: 0x2989881 VA: 0x2989780
+	|-Array.InternalEnumerator<UserWord>.Dispose
+	|
+	|-RVA: 0x29899F0 Offset: 0x2989AF1 VA: 0x29899F0
+	|-Array.InternalEnumerator<Vector2>.Dispose
+	|
+	|-RVA: 0x2989C60 Offset: 0x2989D61 VA: 0x2989C60
+	|-Array.InternalEnumerator<Vector2Int>.Dispose
+	|
+	|-RVA: 0x2989ED0 Offset: 0x2989FD1 VA: 0x2989ED0
+	|-Array.InternalEnumerator<Vector3>.Dispose
+	|
+	|-RVA: 0x298A150 Offset: 0x298A251 VA: 0x298A150
+	|-Array.InternalEnumerator<Vector4>.Dispose
+	|
+	|-RVA: 0x298A3D0 Offset: 0x298A4D1 VA: 0x298A3D0
+	|-Array.InternalEnumerator<VertexAttributeDescriptor>.Dispose
+	|
+	|-RVA: 0x298A640 Offset: 0x298A741 VA: 0x298A640
+	|-Array.InternalEnumerator<VibrationDeviceHandle>.Dispose
+	|
+	|-RVA: 0x298A8A0 Offset: 0x298A9A1 VA: 0x298A8A0
+	|-Array.InternalEnumerator<VibrationDeviceInfo>.Dispose
+	|
+	|-RVA: 0x298AB10 Offset: 0x298AC11 VA: 0x298AB10
+	|-Array.InternalEnumerator<VibrationValue>.Dispose
+	|
+	|-RVA: 0x298AD90 Offset: 0x298AE91 VA: 0x298AD90
+	|-Array.InternalEnumerator<VisibleLight>.Dispose
+	|
+	|-RVA: 0x298B080 Offset: 0x298B181 VA: 0x298B080
+	|-Array.InternalEnumerator<WordWrapState>.Dispose
+	|
+	|-RVA: 0x298B310 Offset: 0x298B411 VA: 0x298B310
+	|-Array.InternalEnumerator<X509ChainStatus>.Dispose
+	|
+	|-RVA: 0x298B580 Offset: 0x298B681 VA: 0x298B580
+	|-Array.InternalEnumerator<XPathNode>.Dispose
+	|
+	|-RVA: 0x298B810 Offset: 0x298B911 VA: 0x298B810
+	|-Array.InternalEnumerator<XPathNodeRef>.Dispose
+	|
+	|-RVA: 0x298BA80 Offset: 0x298BB81 VA: 0x298BA80
+	|-Array.InternalEnumerator<XRView>.Dispose
+	|
+	|-RVA: 0x298BD10 Offset: 0x298BE11 VA: 0x298BD10
+	|-Array.InternalEnumerator<float3>.Dispose
+	|
+	|-RVA: 0x298BF90 Offset: 0x298C091 VA: 0x298BF90
+	|-Array.InternalEnumerator<float4x4>.Dispose
+	|
+	|-RVA: 0x298C240 Offset: 0x298C341 VA: 0x298C240
+	|-Array.InternalEnumerator<jvalue>.Dispose
+	|
+	|-RVA: 0x298C4B0 Offset: 0x298C5B1 VA: 0x298C4B0
+	|-Array.InternalEnumerator<uint4>.Dispose
+	|
+	|-RVA: 0x298C720 Offset: 0x298C821 VA: 0x298C720
+	|-Array.InternalEnumerator<AICrossfire.PositionTable>.Dispose
+	|
+	|-RVA: 0x298C980 Offset: 0x298CA81 VA: 0x298C980
+	|-Array.InternalEnumerator<AIEnum.SkillRangeEnemyData>.Dispose
+	|
+	|-RVA: 0x298CBF0 Offset: 0x298CCF1 VA: 0x298CBF0
+	|-Array.InternalEnumerator<AIOrder.UnitPriority>.Dispose
+	|
+	|-RVA: 0x298CE60 Offset: 0x298CF61 VA: 0x298CE60
+	|-Array.InternalEnumerator<AmiiboSequence.GainItemData>.Dispose
+	|
+	|-RVA: 0x298D0D0 Offset: 0x298D1D1 VA: 0x298D0D0
+	|-Array.InternalEnumerator<AnimationOutputWeightProcessor.WeightInfo>.Dispose
+	|
+	|-RVA: 0x298D380 Offset: 0x298D481 VA: 0x298D380
+	|-Array.InternalEnumerator<ArenaOrderSequence.GodInfo>.Dispose
+	|
+	|-RVA: 0x298D5F0 Offset: 0x298D6F1 VA: 0x298D5F0
+	|-Array.InternalEnumerator<BattleInfo.SupportData>.Dispose
+	|
+	|-RVA: 0x298D860 Offset: 0x298D961 VA: 0x298D860
+	|-Array.InternalEnumerator<BeforeRenderHelper.OrderBlock>.Dispose
+	|
+	|-RVA: 0x298DAD0 Offset: 0x298DBD1 VA: 0x298DAD0
+	|-Array.InternalEnumerator<Camera.RenderRequest>.Dispose
+	|
+	|-RVA: 0x298DD60 Offset: 0x298DE61 VA: 0x298DD60
+	|-Array.InternalEnumerator<CameraState.CustomBlendable>.Dispose
+	|
+	|-RVA: 0x298DFD0 Offset: 0x298E0D1 VA: 0x298DFD0
+	|-Array.InternalEnumerator<CinemachineBlendListCamera.Instruction>.Dispose
+	|
+	|-RVA: 0x298E260 Offset: 0x298E361 VA: 0x298E260
+	|-Array.InternalEnumerator<CinemachineBlenderSettings.CustomBlend>.Dispose
+	|
+	|-RVA: 0x298E4F0 Offset: 0x298E5F1 VA: 0x298E4F0
+	|-Array.InternalEnumerator<CinemachineClearShot.Pair>.Dispose
+	|
+	|-RVA: 0x298E760 Offset: 0x298E861 VA: 0x298E760
+	|-Array.InternalEnumerator<CinemachineFreeLook.Orbit>.Dispose
+	|
+	|-RVA: 0x298E9D0 Offset: 0x298EAD1 VA: 0x298E9D0
+	|-Array.InternalEnumerator<CinemachinePath.Waypoint>.Dispose
+	|
+	|-RVA: 0x298EC80 Offset: 0x298ED81 VA: 0x298EC80
+	|-Array.InternalEnumerator<CinemachineSmoothPath.Waypoint>.Dispose
+	|
+	|-RVA: 0x298EF00 Offset: 0x298F001 VA: 0x298EF00
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.HashPair>.Dispose
+	|
+	|-RVA: 0x298F170 Offset: 0x298F271 VA: 0x298F170
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.Instruction>.Dispose
+	|
+	|-RVA: 0x298F400 Offset: 0x298F501 VA: 0x298F400
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.ParentHash>.Dispose
+	|
+	|-RVA: 0x298F670 Offset: 0x298F771 VA: 0x298F670
+	|-Array.InternalEnumerator<CinemachineTargetGroup.Target>.Dispose
+	|
+	|-RVA: 0x298F8E0 Offset: 0x298F9E1 VA: 0x298F8E0
+	|-Array.InternalEnumerator<CodePointIndexer.TableRange>.Dispose
+	|
+	|-RVA: 0x298FB70 Offset: 0x298FC71 VA: 0x298FB70
+	|-Array.InternalEnumerator<ContentCatalogData.Bucket>.Dispose
+	|
+	|-RVA: 0x298FDE0 Offset: 0x298FEE1 VA: 0x298FDE0
+	|-Array.InternalEnumerator<CookieTokenizer.RecognizedAttribute>.Dispose
+	|
+	|-RVA: 0x2990050 Offset: 0x2990151 VA: 0x2990050
+	|-Array.InternalEnumerator<DeferredLights.DrawCall>.Dispose
+	|
+	|-RVA: 0x2990300 Offset: 0x2990401 VA: 0x2990300
+	|-Array.InternalEnumerator<DeferredShaderData.ComputeBufferInfo>.Dispose
+	|
+	|-RVA: 0x2990570 Offset: 0x2990671 VA: 0x2990570
+	|-Array.InternalEnumerator<DeferredTiler.PrePunctualLight>.Dispose
+	|
+	|-RVA: 0x2990800 Offset: 0x2990901 VA: 0x2990800
+	|-Array.InternalEnumerator<DelayedActionManager.DelegateInfo>.Dispose
+	|
+	|-RVA: 0x2990A90 Offset: 0x2990B91 VA: 0x2990A90
+	|-Array.InternalEnumerator<Detail.AsyncResultInt>.Dispose
+	|
+	|-RVA: 0x2990D40 Offset: 0x2990E41 VA: 0x2990D40
+	|-Array.InternalEnumerator<Detail.CppArray>.Dispose
+	|
+	|-RVA: 0x2990FB0 Offset: 0x29910B1 VA: 0x2990FB0
+	|-Array.InternalEnumerator<Detail.NotificationEventInt>.Dispose
+	|
+	|-RVA: 0x2991260 Offset: 0x2991361 VA: 0x2991260
+	|-Array.InternalEnumerator<DisposUnit.Item>.Dispose
+	|
+	|-RVA: 0x29914D0 Offset: 0x29915D1 VA: 0x29914D0
+	|-Array.InternalEnumerator<DragonRidePresetParamData.CourseData>.Dispose
+	|
+	|-RVA: 0x2991740 Offset: 0x2991841 VA: 0x2991740
+	|-Array.InternalEnumerator<DragonRideTargetGroup.ChainParam>.Dispose
+	|
+	|-RVA: 0x29919B0 Offset: 0x2991AB1 VA: 0x29919B0
+	|-Array.InternalEnumerator<DynamicMesh.State>.Dispose
+	|
+	|-RVA: 0x2991C20 Offset: 0x2991D21 VA: 0x2991C20
+	|-Array.InternalEnumerator<FXZEx.HitPoint>.Dispose
+	|
+	|-RVA: 0x2991ED0 Offset: 0x2991FD1 VA: 0x2991ED0
+	|-Array.InternalEnumerator<FishingRadicalParamData.RadicalParam>.Dispose
+	|
+	|-RVA: 0x2992150 Offset: 0x2992251 VA: 0x2992150
+	|-Array.InternalEnumerator<GameVariable.Value>.Dispose
+	|
+	|-RVA: 0x29923C0 Offset: 0x29924C1 VA: 0x29923C0
+	|-Array.InternalEnumerator<GmapPathAdjuster.TargetModel>.Dispose
+	|
+	|-RVA: 0x2992650 Offset: 0x2992751 VA: 0x2992650
+	|-Array.InternalEnumerator<GmapSpotAdjuster.TargetModel>.Dispose
+	|
+	|-RVA: 0x29928E0 Offset: 0x29929E1 VA: 0x29928E0
+	|-Array.InternalEnumerator<GrounderQuadruped.Foot>.Dispose
+	|
+	|-RVA: 0x2992B90 Offset: 0x2992C91 VA: 0x2992B90
+	|-Array.InternalEnumerator<Hashtable.bucket>.Dispose
+	|
+	|-RVA: 0x2992E20 Offset: 0x2992F21 VA: 0x2992E20
+	|-Array.InternalEnumerator<HeadingTracker.Item>.Dispose
+	|
+	|-RVA: 0x29930B0 Offset: 0x29931B1 VA: 0x29930B0
+	|-Array.InternalEnumerator<HubAccessoryRoomCamera.BackgroundSettings>.Dispose
+	|
+	|-RVA: 0x2993360 Offset: 0x2993461 VA: 0x2993360
+	|-Array.InternalEnumerator<HubFastTravel.Location>.Dispose
+	|
+	|-RVA: 0x29935F0 Offset: 0x29936F1 VA: 0x29935F0
+	|-Array.InternalEnumerator<HubLensFlare.Flare>.Dispose
+	|
+	|-RVA: 0x29938A0 Offset: 0x29939A1 VA: 0x29938A0
+	|-Array.InternalEnumerator<HubLookAtController.LookAtIKParam>.Dispose
+	|
+	|-RVA: 0x2993B20 Offset: 0x2993C21 VA: 0x2993B20
+	|-Array.InternalEnumerator<HubMaterialArray.MaterialInfo>.Dispose
+	|
+	|-RVA: 0x2993D90 Offset: 0x2993E91 VA: 0x2993D90
+	|-Array.InternalEnumerator<IKSolverLimb.AxisDirection>.Dispose
+	|
+	|-RVA: 0x2994040 Offset: 0x2994141 VA: 0x2994040
+	|-Array.InternalEnumerator<InventoryPoolItemMenuContent.KindBgNameClass>.Dispose
+	|
+	|-RVA: 0x29942B0 Offset: 0x29943B1 VA: 0x29942B0
+	|-Array.InternalEnumerator<LightUtility.ParametricLightMeshVertex>.Dispose
+	|
+	|-RVA: 0x2994560 Offset: 0x2994661 VA: 0x2994560
+	|-Array.InternalEnumerator<LightUtility.SpriteLightMeshVertex>.Dispose
+	|
+	|-RVA: 0x2994810 Offset: 0x2994911 VA: 0x2994810
+	|-Array.InternalEnumerator<Map.Pos>.Dispose
+	|
+	|-RVA: 0x2994A80 Offset: 0x2994B81 VA: 0x2994A80
+	|-Array.InternalEnumerator<MapGodExp.KindDesc>.Dispose
+	|
+	|-RVA: 0x2994CF0 Offset: 0x2994DF1 VA: 0x2994CF0
+	|-Array.InternalEnumerator<MapHistory.Command>.Dispose
+	|
+	|-RVA: 0x2994F60 Offset: 0x2995061 VA: 0x2994F60
+	|-Array.InternalEnumerator<MapImage.BackupTerrain>.Dispose
+	|
+	|-RVA: 0x29951D0 Offset: 0x29952D1 VA: 0x29951D0
+	|-Array.InternalEnumerator<MapImageRange.Pos>.Dispose
+	|
+	|-RVA: 0x2995430 Offset: 0x2995531 VA: 0x2995430
+	|-Array.InternalEnumerator<MapKillBonus.KillBonus>.Dispose
+	|
+	|-RVA: 0x29956A0 Offset: 0x29957A1 VA: 0x29956A0
+	|-Array.InternalEnumerator<MapKillBonus.KilledBonus>.Dispose
+	|
+	|-RVA: 0x2995910 Offset: 0x2995A11 VA: 0x2995910
+	|-Array.InternalEnumerator<MapMind.Record>.Dispose
+	|
+	|-RVA: 0x2995BE0 Offset: 0x2995CE1 VA: 0x2995BE0
+	|-Array.InternalEnumerator<MapMind.Target>.Dispose
+	|
+	|-RVA: 0x2995E70 Offset: 0x2995F71 VA: 0x2995E70
+	|-Array.InternalEnumerator<MapPanelDebug.Entity>.Dispose
+	|
+	|-RVA: 0x2996100 Offset: 0x2996201 VA: 0x2996100
+	|-Array.InternalEnumerator<NexRanking.Data>.Dispose
+	|
+	|-RVA: 0x2996370 Offset: 0x2996471 VA: 0x2996370
+	|-Array.InternalEnumerator<NexVersus.RatingData>.Dispose
+	|
+	|-RVA: 0x29965E0 Offset: 0x29966E1 VA: 0x29965E0
+	|-Array.InternalEnumerator<NoiseSettings.TransformNoiseParams>.Dispose
+	|
+	|-RVA: 0x2996890 Offset: 0x2996991 VA: 0x2996890
+	|-Array.InternalEnumerator<PackedPlayModeBuildLogs.RuntimeBuildLog>.Dispose
+	|
+	|-RVA: 0x2996B00 Offset: 0x2996C01 VA: 0x2996B00
+	|-Array.InternalEnumerator<ParameterizedStrings.FormatParam>.Dispose
+	|
+	|-RVA: 0x2996D70 Offset: 0x2996E71 VA: 0x2996D70
+	|-Array.InternalEnumerator<ParticleSystem.Particle>.Dispose
+	|
+	|-RVA: 0x2997000 Offset: 0x2997101 VA: 0x2997000
+	|-Array.InternalEnumerator<ProfileCard.Achievement>.Dispose
+	|
+	|-RVA: 0x2997270 Offset: 0x2997371 VA: 0x2997270
+	|-Array.InternalEnumerator<ProfileCard.SortieCount>.Dispose
+	|
+	|-RVA: 0x2997500 Offset: 0x2997601 VA: 0x2997500
+	|-Array.InternalEnumerator<QualitySettingsStack.Settings>.Dispose
+	|
+	|-RVA: 0x29977B0 Offset: 0x29978B1 VA: 0x29977B0
+	|-Array.InternalEnumerator<RangeData.Offset>.Dispose
+	|
+	|-RVA: 0x2997A20 Offset: 0x2997B21 VA: 0x2997A20
+	|-Array.InternalEnumerator<RegexCharClass.LowerCaseMapping>.Dispose
+	|
+	|-RVA: 0x2997C90 Offset: 0x2997D91 VA: 0x2997C90
+	|-Array.InternalEnumerator<Relay.ChooseAwardeeData>.Dispose
+	|
+	|-RVA: 0x2997F20 Offset: 0x2998021 VA: 0x2997F20
+	|-Array.InternalEnumerator<RelayAwardData.Info>.Dispose
+	|
+	|-RVA: 0x2998190 Offset: 0x2998291 VA: 0x2998190
+	|-Array.InternalEnumerator<RenderGraph.CompiledPassInfo>.Dispose
+	|
+	|-RVA: 0x2998460 Offset: 0x2998561 VA: 0x2998460
+	|-Array.InternalEnumerator<RenderGraph.CompiledResourceInfo>.Dispose
+	|
+	|-RVA: 0x29986F0 Offset: 0x29987F1 VA: 0x29986F0
+	|-Array.InternalEnumerator<RenderGraphDebugData.PassDebugData>.Dispose
+	|
+	|-RVA: 0x2998980 Offset: 0x2998A81 VA: 0x2998980
+	|-Array.InternalEnumerator<RenderGraphDebugData.ResourceDebugData>.Dispose
+	|
+	|-RVA: 0x2998C30 Offset: 0x2998D31 VA: 0x2998C30
+	|-Array.InternalEnumerator<RenderGraphResourceRegistry.RendererListResource>.Dispose
+	|
+	|-RVA: 0x2998EC0 Offset: 0x2998FC1 VA: 0x2998EC0
+	|-Array.InternalEnumerator<RingCleaningUnitSelectMenu.GodParam>.Dispose
+	|
+	|-RVA: 0x2999130 Offset: 0x2999231 VA: 0x2999130
+	|-Array.InternalEnumerator<SampleWave.Data>.Dispose
+	|
+	|-RVA: 0x29993B0 Offset: 0x29994B1 VA: 0x29993B0
+	|-Array.InternalEnumerator<SampleWave.Temp>.Dispose
+	|
+	|-RVA: 0x2999620 Offset: 0x2999721 VA: 0x2999620
+	|-Array.InternalEnumerator<SendMouseEvents.HitInfo>.Dispose
+	|
+	|-RVA: 0x2999890 Offset: 0x2999991 VA: 0x2999890
+	|-Array.InternalEnumerator<SequenceNode.SequenceConstructPosContext>.Dispose
+	|
+	|-RVA: 0x2999B40 Offset: 0x2999C41 VA: 0x2999B40
+	|-Array.InternalEnumerator<ShaderInput.LightData>.Dispose
+	|
+	|-RVA: 0x2999E10 Offset: 0x2999F11 VA: 0x2999E10
+	|-Array.InternalEnumerator<ShaderInput.ShadowData>.Dispose
+	|
+	|-RVA: 0x299A0E0 Offset: 0x299A1E1 VA: 0x299A0E0
+	|-Array.InternalEnumerator<ShadowUtility.Edge>.Dispose
+	|
+	|-RVA: 0x2D7F650 Offset: 0x2D7F751 VA: 0x2D7F650
+	|-Array.InternalEnumerator<SimpleAnimationPlayable.QueuedState>.Dispose
+	|
+	|-RVA: 0x2D7F8C0 Offset: 0x2D7F9C1 VA: 0x2D7F8C0
+	|-Array.InternalEnumerator<SkillArray.Entity>.Dispose
+	|
+	|-RVA: 0x2D7FB20 Offset: 0x2D7FC21 VA: 0x2D7FB20
+	|-Array.InternalEnumerator<Socket.WSABUF>.Dispose
+	|
+	|-RVA: 0x2D7FD90 Offset: 0x2D7FE91 VA: 0x2D7FD90
+	|-Array.InternalEnumerator<Stream.Info>.Dispose
+	|
+	|-RVA: 0x2D80000 Offset: 0x2D80101 VA: 0x2D80000
+	|-Array.InternalEnumerator<TMP_Text.UnicodeChar>.Dispose
+	|
+	|-RVA: 0x2D80270 Offset: 0x2D80371 VA: 0x2D80270
+	|-Array.InternalEnumerator<TexturePacker_JsonArray.Frame>.Dispose
+	|
+	|-RVA: 0x2D80520 Offset: 0x2D80621 VA: 0x2D80520
+	|-Array.InternalEnumerator<TimeNotificationBehaviour.NotificationEntry>.Dispose
+	|
+	|-RVA: 0x2D807B0 Offset: 0x2D808B1 VA: 0x2D807B0
+	|-Array.InternalEnumerator<UnitySynchronizationContext.WorkRequest>.Dispose
+	|
+	|-RVA: 0x2D80A40 Offset: 0x2D80B41 VA: 0x2D80A40
+	|-Array.InternalEnumerator<XmlNamespaceManager.NamespaceDeclaration>.Dispose
+	|
+	|-RVA: 0x2D80CD0 Offset: 0x2D80DD1 VA: 0x2D80CD0
+	|-Array.InternalEnumerator<XmlSchemaObjectTable.XmlSchemaObjectEntry>.Dispose
+	|
+	|-RVA: 0x2D80F40 Offset: 0x2D81041 VA: 0x2D80F40
+	|-Array.InternalEnumerator<XmlTextReaderImpl.ParsingState>.Dispose
+	|
+	|-RVA: 0x2D81230 Offset: 0x2D81331 VA: 0x2D81230
+	|-Array.InternalEnumerator<AIThink.EnchantThink.Desc>.Dispose
+	|
+	|-RVA: 0x2D814A0 Offset: 0x2D815A1 VA: 0x2D814A0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.ItemInfo>.Dispose
+	|
+	|-RVA: 0x2D81700 Offset: 0x2D81801 VA: 0x2D81700
+	|-Array.InternalEnumerator<AIThink.EnchantThink.SurroundingInfo>.Dispose
+	|
+	|-RVA: 0x2D81960 Offset: 0x2D81A61 VA: 0x2D81960
+	|-Array.InternalEnumerator<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>.Dispose
+	|
+	|-RVA: 0x2D81BD0 Offset: 0x2D81CD1 VA: 0x2D81BD0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreChangeMetaParamInt>.Dispose
+	|
+	|-RVA: 0x2D81E60 Offset: 0x2D81F61 VA: 0x2D81E60
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreDeleteParamInt>.Dispose
+	|
+	|-RVA: 0x2D820D0 Offset: 0x2D821D1 VA: 0x2D820D0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreGetMetaParamInt>.Dispose
+	|
+	|-RVA: 0x2D82380 Offset: 0x2D82481 VA: 0x2D82380
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreMetaInfoInt>.Dispose
+	|
+	|-RVA: 0x2D82610 Offset: 0x2D82711 VA: 0x2D82610
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePasswordInfoInt>.Dispose
+	|
+	|-RVA: 0x2D828A0 Offset: 0x2D829A1 VA: 0x2D828A0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePersistenceInfoInt>.Dispose
+	|
+	|-RVA: 0x2D82B30 Offset: 0x2D82C31 VA: 0x2D82B30
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePreparePostParamInt>.Dispose
+	|
+	|-RVA: 0x2D82DC0 Offset: 0x2D82EC1 VA: 0x2D82DC0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRateObjectParamInt>.Dispose
+	|
+	|-RVA: 0x2D83030 Offset: 0x2D83131 VA: 0x2D83030
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingInitParamInt>.Dispose
+	|
+	|-RVA: 0x2D832C0 Offset: 0x2D833C1 VA: 0x2D832C0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingTargetInt>.Dispose
+	|
+	|-RVA: 0x2D83530 Offset: 0x2D83631 VA: 0x2D83530
+	|-Array.InternalEnumerator<Detail.Ranking.RankingCachedResultInt>.Dispose
+	|
+	|-RVA: 0x2D837E0 Offset: 0x2D838E1 VA: 0x2D837E0
+	|-Array.InternalEnumerator<Detail.Ranking.RankingOrderParamInt>.Dispose
+	|
+	|-RVA: 0x2D83A50 Offset: 0x2D83B51 VA: 0x2D83A50
+	|-Array.InternalEnumerator<Detail.Ranking.RankingRankDataInt>.Dispose
+	|
+	|-RVA: 0x2D83D00 Offset: 0x2D83E01 VA: 0x2D83D00
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ChartInfoInt>.Dispose
+	|
+	|-RVA: 0x2D83FD0 Offset: 0x2D840D1 VA: 0x2D83FD0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2RankDataInt>.Dispose
+	|
+	|-RVA: 0x2D84280 Offset: 0x2D84381 VA: 0x2D84280
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ScoreDataInt>.Dispose
+	|
+	|-RVA: 0x2D844F0 Offset: 0x2D845F1 VA: 0x2D844F0
+	|-Array.InternalEnumerator<Detail.Screening.ScreeningContextInfoInt>.Dispose
+	|
+	|-RVA: 0x2D84780 Offset: 0x2D84881 VA: 0x2D84780
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberContentInt>.Dispose
+	|
+	|-RVA: 0x2D84A50 Offset: 0x2D84B51 VA: 0x2D84A50
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberGetContentParamInt>.Dispose
+	|
+	|-RVA: 0x2D84CE0 Offset: 0x2D84DE1 VA: 0x2D84CE0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusInfoInt>.Dispose
+	|
+	|-RVA: 0x2D84F90 Offset: 0x2D85091 VA: 0x2D84F90
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusParamInt>.Dispose
+	|
+	|-RVA: 0x2D85220 Offset: 0x2D85321 VA: 0x2D85220
+	|-Array.InternalEnumerator<Detail.Utility.IntegerSettings>.Dispose
+	|
+	|-RVA: 0x2D85490 Offset: 0x2D85591 VA: 0x2D85490
+	|-Array.InternalEnumerator<Detail.Utility.UniqueIdInfoInt>.Dispose
+	|
+	|-RVA: 0x2D85700 Offset: 0x2D85801 VA: 0x2D85700
+	|-Array.InternalEnumerator<FacetsChecker.FacetsCompiler.Map>.Dispose
+	|
+	|-RVA: 0x2D85970 Offset: 0x2D85A71 VA: 0x2D85970
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Appearance>.Dispose
+	|
+	|-RVA: 0x2D85C00 Offset: 0x2D85D01 VA: 0x2D85C00
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Leaving>.Dispose
+	|
+	|-RVA: 0x2D85E60 Offset: 0x2D85F61 VA: 0x2D85E60
+	|-Array.InternalEnumerator<MapHistory.ReplayUnitMap.Data>.Dispose
+	|
+	|-RVA: 0x2D860D0 Offset: 0x2D861D1 VA: 0x2D860D0
+	|-Array.InternalEnumerator<MapHistory.Rewind.LatestInspectorData>.Dispose
+	|
+	|-RVA: 0x2D86330 Offset: 0x2D86431 VA: 0x2D86330
+	|-Array.InternalEnumerator<MapHistory.Rewind.WorkTerrainData>.Dispose
+	|
+	|-RVA: 0x2D86590 Offset: 0x2D86691 VA: 0x2D86590
+	|-Array.InternalEnumerator<MapHistory.RewindUnitMap.Data>.Dispose
+	|
+	|-RVA: 0x2D86840 Offset: 0x2D86941 VA: 0x2D86840
+	|-Array.InternalEnumerator<MapKillBonus.Work.Pos>.Dispose
+	|
+	|-RVA: 0x2D86AA0 Offset: 0x2D86BA1 VA: 0x2D86AA0
+	|-Array.InternalEnumerator<MapSkill.AroundCalculator.Result>.Dispose
+	|
+	|-RVA: 0x2D86D10 Offset: 0x2D86E11 VA: 0x2D86D10
+	|-Array.InternalEnumerator<Nex.ApiCallChecker.Guideline>.Dispose
+	|
+	|-RVA: 0x2D86F80 Offset: 0x2D87081 VA: 0x2D86F80
+	|-Array.InternalEnumerator<Ngc.MaskTextSequenceBase.Data>.Dispose
+	|
+	|-RVA: 0x2D87210 Offset: 0x2D87311 VA: 0x2D87210
+	|-Array.InternalEnumerator<TargetPositionCache.CacheCurve.Item>.Dispose
+	|
+	|-RVA: 0x2D874C0 Offset: 0x2D875C1 VA: 0x2D874C0
+	|-Array.InternalEnumerator<TargetPositionCache.CacheEntry.RecordingItem>.Dispose
+	|
+	|-RVA: 0x2D87770 Offset: 0x2D87871 VA: 0x2D87770
+	|-Array.InternalEnumerator<TerrainUtility.TerrainMap.TileCoord>.Dispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public bool MoveNext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1EB37D0 Offset: 0x1EB38D1 VA: 0x1EB37D0
+	|-Array.InternalEnumerator<ArraySegment<byte>>.MoveNext
+	|
+	|-RVA: 0x1EB3A40 Offset: 0x1EB3B41 VA: 0x1EB3A40
+	|-Array.InternalEnumerator<AsyncOperationHandle<object>>.MoveNext
+	|
+	|-RVA: 0x1EB3CD0 Offset: 0x1EB3DD1 VA: 0x1EB3CD0
+	|-Array.InternalEnumerator<MapDeployTemplate.Queue.Data<object>>.MoveNext
+	|
+	|-RVA: 0x1EB3F30 Offset: 0x1EB4031 VA: 0x1EB3F30
+	|-Array.InternalEnumerator<Nex.DataStore.ParamPool.Data<object>>.MoveNext
+	|
+	|-RVA: 0x1EB41A0 Offset: 0x1EB42A1 VA: 0x1EB41A0
+	|-Array.InternalEnumerator<Nex.Screening.ParamPool.Data<object>>.MoveNext
+	|
+	|-RVA: 0x1EB4410 Offset: 0x1EB4511 VA: 0x1EB4410
+	|-Array.InternalEnumerator<IntervalTree.Entry<object>>.MoveNext
+	|
+	|-RVA: 0x1EB46A0 Offset: 0x1EB47A1 VA: 0x1EB46A0
+	|-Array.InternalEnumerator<Dictionary.Entry<ValueTuple<object, int>, object>>.MoveNext
+	|
+	|-RVA: 0x1EB4930 Offset: 0x1EB4A31 VA: 0x1EB4930
+	|-Array.InternalEnumerator<Dictionary.Entry<byte, object>>.MoveNext
+	|
+	|-RVA: 0x1EB4BC0 Offset: 0x1EB4CC1 VA: 0x1EB4BC0
+	|-Array.InternalEnumerator<Dictionary.Entry<CancellationToken, object>>.MoveNext
+	|
+	|-RVA: 0x1EB4E50 Offset: 0x1EB4F51 VA: 0x1EB4E50
+	|-Array.InternalEnumerator<Dictionary.Entry<char, object>>.MoveNext
+	|
+	|-RVA: 0x1EB50E0 Offset: 0x1EB51E1 VA: 0x1EB50E0
+	|-Array.InternalEnumerator<Dictionary.Entry<Guid, object>>.MoveNext
+	|
+	|-RVA: 0x1EB5370 Offset: 0x1EB5471 VA: 0x1EB5370
+	|-Array.InternalEnumerator<Dictionary.Entry<int, bool>>.MoveNext
+	|
+	|-RVA: 0x1EB55E0 Offset: 0x1EB56E1 VA: 0x1EB55E0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, byte>>.MoveNext
+	|
+	|-RVA: 0x1EB5850 Offset: 0x1EB5951 VA: 0x1EB5850
+	|-Array.InternalEnumerator<Dictionary.Entry<int, char>>.MoveNext
+	|
+	|-RVA: 0x1EB5AC0 Offset: 0x1EB5BC1 VA: 0x1EB5AC0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, DiagnosticEvent>>.MoveNext
+	|
+	|-RVA: 0x1EB5D70 Offset: 0x1EB5E71 VA: 0x1EB5D70
+	|-Array.InternalEnumerator<Dictionary.Entry<int, int>>.MoveNext
+	|
+	|-RVA: 0x1EB5FE0 Offset: 0x1EB60E1 VA: 0x1EB5FE0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EB6250 Offset: 0x1EB6351 VA: 0x1EB6250
+	|-Array.InternalEnumerator<Dictionary.Entry<int, long>>.MoveNext
+	|
+	|-RVA: 0x1EB64E0 Offset: 0x1EB65E1 VA: 0x1EB64E0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, MapPos>>.MoveNext
+	|
+	|-RVA: 0x1EB6770 Offset: 0x1EB6871 VA: 0x1EB6770
+	|-Array.InternalEnumerator<Dictionary.Entry<int, object>>.MoveNext
+	|
+	|-RVA: 0x1EB6A00 Offset: 0x1EB6B01 VA: 0x1EB6A00
+	|-Array.InternalEnumerator<Dictionary.Entry<int, uint>>.MoveNext
+	|
+	|-RVA: 0x1EB6C70 Offset: 0x1EB6D71 VA: 0x1EB6C70
+	|-Array.InternalEnumerator<Dictionary.Entry<int, AIThink.EnchantThink.SurroundingInfo>>.MoveNext
+	|
+	|-RVA: 0x1EB6EE0 Offset: 0x1EB6FE1 VA: 0x1EB6EE0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, bool>>.MoveNext
+	|
+	|-RVA: 0x1EB7150 Offset: 0x1EB7251 VA: 0x1EB7150
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, int>>.MoveNext
+	|
+	|-RVA: 0x1EB73C0 Offset: 0x1EB74C1 VA: 0x1EB73C0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EB7630 Offset: 0x1EB7731 VA: 0x1EB7630
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, object>>.MoveNext
+	|
+	|-RVA: 0x1EB78C0 Offset: 0x1EB79C1 VA: 0x1EB78C0
+	|-Array.InternalEnumerator<Dictionary.Entry<long, object>>.MoveNext
+	|
+	|-RVA: 0x1EB7B50 Offset: 0x1EB7C51 VA: 0x1EB7B50
+	|-Array.InternalEnumerator<Dictionary.Entry<MapPos, int>>.MoveNext
+	|
+	|-RVA: 0x1EB7DE0 Offset: 0x1EB7EE1 VA: 0x1EB7DE0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle<object>>>.MoveNext
+	|
+	|-RVA: 0x1EB8090 Offset: 0x1EB8191 VA: 0x1EB8090
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle>>.MoveNext
+	|
+	|-RVA: 0x1EB8340 Offset: 0x1EB8441 VA: 0x1EB8340
+	|-Array.InternalEnumerator<Dictionary.Entry<object, bool>>.MoveNext
+	|
+	|-RVA: 0x1EB85D0 Offset: 0x1EB86D1 VA: 0x1EB85D0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, byte>>.MoveNext
+	|
+	|-RVA: 0x1EB8860 Offset: 0x1EB8961 VA: 0x1EB8860
+	|-Array.InternalEnumerator<Dictionary.Entry<object, int>>.MoveNext
+	|
+	|-RVA: 0x1EB8AF0 Offset: 0x1EB8BF1 VA: 0x1EB8AF0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EB8D80 Offset: 0x1EB8E81 VA: 0x1EB8D80
+	|-Array.InternalEnumerator<Dictionary.Entry<object, IntPtr>>.MoveNext
+	|
+	|-RVA: 0x1EB9010 Offset: 0x1EB9111 VA: 0x1EB9010
+	|-Array.InternalEnumerator<Dictionary.Entry<object, object>>.MoveNext
+	|
+	|-RVA: 0x1EB92A0 Offset: 0x1EB93A1 VA: 0x1EB92A0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Playable>>.MoveNext
+	|
+	|-RVA: 0x1EB9530 Offset: 0x1EB9631 VA: 0x1EB9530
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ResourceLocator>>.MoveNext
+	|
+	|-RVA: 0x1EB97C0 Offset: 0x1EB98C1 VA: 0x1EB97C0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, float>>.MoveNext
+	|
+	|-RVA: 0x1EB9A50 Offset: 0x1EB9B51 VA: 0x1EB9A50
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ushort>>.MoveNext
+	|
+	|-RVA: 0x1EB9CE0 Offset: 0x1EB9DE1 VA: 0x1EB9CE0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, GameVariable.Value>>.MoveNext
+	|
+	|-RVA: 0x1EB9F70 Offset: 0x1EBA071 VA: 0x1EB9F70
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, DataStoreRatingInfo>>.MoveNext
+	|
+	|-RVA: 0x1EBA220 Offset: 0x1EBA321 VA: 0x1EBA220
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, object>>.MoveNext
+	|
+	|-RVA: 0x1EBA4B0 Offset: 0x1EBA5B1 VA: 0x1EBA4B0
+	|-Array.InternalEnumerator<Dictionary.Entry<ushort, int>>.MoveNext
+	|
+	|-RVA: 0x1EBA720 Offset: 0x1EBA821 VA: 0x1EBA720
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, int>>.MoveNext
+	|
+	|-RVA: 0x1EBA990 Offset: 0x1EBAA91 VA: 0x1EBA990
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, object>>.MoveNext
+	|
+	|-RVA: 0x1EBAC20 Offset: 0x1EBAD21 VA: 0x1EBAC20
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Friend>>.MoveNext
+	|
+	|-RVA: 0x1EBAEB0 Offset: 0x1EBAFB1 VA: 0x1EBAEB0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EBB140 Offset: 0x1EBB241 VA: 0x1EBB140
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, object>>.MoveNext
+	|
+	|-RVA: 0x1EBB3D0 Offset: 0x1EBB4D1 VA: 0x1EBB3D0
+	|-Array.InternalEnumerator<Dictionary.Entry<Vector3, int>>.MoveNext
+	|
+	|-RVA: 0x1EBB660 Offset: 0x1EBB761 VA: 0x1EBB660
+	|-Array.InternalEnumerator<Dictionary.Entry<XPathNodeRef, XPathNodeRef>>.MoveNext
+	|
+	|-RVA: 0x1EBB910 Offset: 0x1EBBA11 VA: 0x1EBB910
+	|-Array.InternalEnumerator<Dictionary.Entry<TerrainUtility.TerrainMap.TileCoord, object>>.MoveNext
+	|
+	|-RVA: 0x1EBBBA0 Offset: 0x1EBBCA1 VA: 0x1EBBBA0
+	|-Array.InternalEnumerator<PriorityQueue.IndexedItem<object>>.MoveNext
+	|
+	|-RVA: 0x1EBBE10 Offset: 0x1EBBF11 VA: 0x1EBBE10
+	|-Array.InternalEnumerator<KeyValuePair<ValueTuple<object, int>, object>>.MoveNext
+	|
+	|-RVA: 0x1EBC0A0 Offset: 0x1EBC1A1 VA: 0x1EBC0A0
+	|-Array.InternalEnumerator<KeyValuePair<byte, object>>.MoveNext
+	|
+	|-RVA: 0x1EBC310 Offset: 0x1EBC411 VA: 0x1EBC310
+	|-Array.InternalEnumerator<KeyValuePair<CancellationToken, object>>.MoveNext
+	|
+	|-RVA: 0x1EBC580 Offset: 0x1EBC681 VA: 0x1EBC580
+	|-Array.InternalEnumerator<KeyValuePair<char, object>>.MoveNext
+	|
+	|-RVA: 0x1EBC7F0 Offset: 0x1EBC8F1 VA: 0x1EBC7F0
+	|-Array.InternalEnumerator<KeyValuePair<DateTime, object>>.MoveNext
+	|
+	|-RVA: 0x1EBCA60 Offset: 0x1EBCB61 VA: 0x1EBCA60
+	|-Array.InternalEnumerator<KeyValuePair<Guid, object>>.MoveNext
+	|
+	|-RVA: 0x1EBCCF0 Offset: 0x1EBCDF1 VA: 0x1EBCCF0
+	|-Array.InternalEnumerator<KeyValuePair<int, bool>>.MoveNext
+	|
+	|-RVA: 0x1EBCF60 Offset: 0x1EBD061 VA: 0x1EBCF60
+	|-Array.InternalEnumerator<KeyValuePair<int, byte>>.MoveNext
+	|
+	|-RVA: 0x1EBD1D0 Offset: 0x1EBD2D1 VA: 0x1EBD1D0
+	|-Array.InternalEnumerator<KeyValuePair<int, char>>.MoveNext
+	|
+	|-RVA: 0x1EBD440 Offset: 0x1EBD541 VA: 0x1EBD440
+	|-Array.InternalEnumerator<KeyValuePair<int, DiagnosticEvent>>.MoveNext
+	|
+	|-RVA: 0x1EBD6F0 Offset: 0x1EBD7F1 VA: 0x1EBD6F0
+	|-Array.InternalEnumerator<KeyValuePair<int, int>>.MoveNext
+	|
+	|-RVA: 0x1EBD960 Offset: 0x1EBDA61 VA: 0x1EBD960
+	|-Array.InternalEnumerator<KeyValuePair<int, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EBDBD0 Offset: 0x1EBDCD1 VA: 0x1EBDBD0
+	|-Array.InternalEnumerator<KeyValuePair<int, long>>.MoveNext
+	|
+	|-RVA: 0x1EBDE40 Offset: 0x1EBDF41 VA: 0x1EBDE40
+	|-Array.InternalEnumerator<KeyValuePair<int, MapPos>>.MoveNext
+	|
+	|-RVA: 0x1EBE0B0 Offset: 0x1EBE1B1 VA: 0x1EBE0B0
+	|-Array.InternalEnumerator<KeyValuePair<int, object>>.MoveNext
+	|
+	|-RVA: 0x1EBE320 Offset: 0x1EBE421 VA: 0x1EBE320
+	|-Array.InternalEnumerator<KeyValuePair<int, uint>>.MoveNext
+	|
+	|-RVA: 0x1EBE590 Offset: 0x1EBE691 VA: 0x1EBE590
+	|-Array.InternalEnumerator<KeyValuePair<int, AIThink.EnchantThink.SurroundingInfo>>.MoveNext
+	|
+	|-RVA: 0x1EBE800 Offset: 0x1EBE901 VA: 0x1EBE800
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, bool>>.MoveNext
+	|
+	|-RVA: 0x1EBEA70 Offset: 0x1EBEB71 VA: 0x1EBEA70
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, int>>.MoveNext
+	|
+	|-RVA: 0x1EBECE0 Offset: 0x1EBEDE1 VA: 0x1EBECE0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EBEF50 Offset: 0x1EBF051 VA: 0x1EBEF50
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, object>>.MoveNext
+	|
+	|-RVA: 0x1EBF1C0 Offset: 0x1EBF2C1 VA: 0x1EBF1C0
+	|-Array.InternalEnumerator<KeyValuePair<long, object>>.MoveNext
+	|
+	|-RVA: 0x1EBF430 Offset: 0x1EBF531 VA: 0x1EBF430
+	|-Array.InternalEnumerator<KeyValuePair<MapPos, int>>.MoveNext
+	|
+	|-RVA: 0x1EBF6A0 Offset: 0x1EBF7A1 VA: 0x1EBF6A0
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle<object>>>.MoveNext
+	|
+	|-RVA: 0x1EBF930 Offset: 0x1EBFA31 VA: 0x1EBF930
+	|-Array.InternalEnumerator<KeyValuePair<object, ValueTuple<int, DateTime, object>>>.MoveNext
+	|
+	|-RVA: 0x1EBFBC0 Offset: 0x1EBFCC1 VA: 0x1EBFBC0
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle>>.MoveNext
+	|
+	|-RVA: 0x1EBFE50 Offset: 0x1EBFF51 VA: 0x1EBFE50
+	|-Array.InternalEnumerator<KeyValuePair<object, bool>>.MoveNext
+	|
+	|-RVA: 0x1EC00C0 Offset: 0x1EC01C1 VA: 0x1EC00C0
+	|-Array.InternalEnumerator<KeyValuePair<object, byte>>.MoveNext
+	|
+	|-RVA: 0x1EC0330 Offset: 0x1EC0431 VA: 0x1EC0330
+	|-Array.InternalEnumerator<KeyValuePair<object, int>>.MoveNext
+	|
+	|-RVA: 0x1EC05A0 Offset: 0x1EC06A1 VA: 0x1EC05A0
+	|-Array.InternalEnumerator<KeyValuePair<object, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EC0810 Offset: 0x1EC0911 VA: 0x1EC0810
+	|-Array.InternalEnumerator<KeyValuePair<object, IntPtr>>.MoveNext
+	|
+	|-RVA: 0x1EC0A80 Offset: 0x1EC0B81 VA: 0x1EC0A80
+	|-Array.InternalEnumerator<KeyValuePair<object, object>>.MoveNext
+	|
+	|-RVA: 0x1EC0CF0 Offset: 0x1EC0DF1 VA: 0x1EC0CF0
+	|-Array.InternalEnumerator<KeyValuePair<object, Playable>>.MoveNext
+	|
+	|-RVA: 0x1EC0F80 Offset: 0x1EC1081 VA: 0x1EC0F80
+	|-Array.InternalEnumerator<KeyValuePair<object, ResourceLocator>>.MoveNext
+	|
+	|-RVA: 0x1EC1210 Offset: 0x1EC1311 VA: 0x1EC1210
+	|-Array.InternalEnumerator<KeyValuePair<object, float>>.MoveNext
+	|
+	|-RVA: 0x1EC1480 Offset: 0x1EC1581 VA: 0x1EC1480
+	|-Array.InternalEnumerator<KeyValuePair<object, ushort>>.MoveNext
+	|
+	|-RVA: 0x1EC16F0 Offset: 0x1EC17F1 VA: 0x1EC16F0
+	|-Array.InternalEnumerator<KeyValuePair<object, GameVariable.Value>>.MoveNext
+	|
+	|-RVA: 0x1EC1980 Offset: 0x1EC1A81 VA: 0x1EC1980
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, DataStoreRatingInfo>>.MoveNext
+	|
+	|-RVA: 0x1EC1C10 Offset: 0x1EC1D11 VA: 0x1EC1C10
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, object>>.MoveNext
+	|
+	|-RVA: 0x1EC1E80 Offset: 0x1EC1F81 VA: 0x1EC1E80
+	|-Array.InternalEnumerator<KeyValuePair<ushort, int>>.MoveNext
+	|
+	|-RVA: 0x1EC20F0 Offset: 0x1EC21F1 VA: 0x1EC20F0
+	|-Array.InternalEnumerator<KeyValuePair<uint, int>>.MoveNext
+	|
+	|-RVA: 0x1EC2360 Offset: 0x1EC2461 VA: 0x1EC2360
+	|-Array.InternalEnumerator<KeyValuePair<uint, object>>.MoveNext
+	|
+	|-RVA: 0x1EC25D0 Offset: 0x1EC26D1 VA: 0x1EC25D0
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Friend>>.MoveNext
+	|
+	|-RVA: 0x1EC2860 Offset: 0x1EC2961 VA: 0x1EC2860
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EC2AD0 Offset: 0x1EC2BD1 VA: 0x1EC2AD0
+	|-Array.InternalEnumerator<KeyValuePair<ulong, object>>.MoveNext
+	|
+	|-RVA: 0x1EC2D40 Offset: 0x1EC2E41 VA: 0x1EC2D40
+	|-Array.InternalEnumerator<KeyValuePair<Vector3, int>>.MoveNext
+	|
+	|-RVA: 0x1EC2FB0 Offset: 0x1EC30B1 VA: 0x1EC2FB0
+	|-Array.InternalEnumerator<KeyValuePair<XPathNodeRef, XPathNodeRef>>.MoveNext
+	|
+	|-RVA: 0x1EC3240 Offset: 0x1EC3341 VA: 0x1EC3240
+	|-Array.InternalEnumerator<KeyValuePair<TerrainUtility.TerrainMap.TileCoord, object>>.MoveNext
+	|
+	|-RVA: 0x1EC34B0 Offset: 0x1EC35B1 VA: 0x1EC34B0
+	|-Array.InternalEnumerator<NativeArray<PreTile>>.MoveNext
+	|
+	|-RVA: 0x1EC3720 Offset: 0x1EC3821 VA: 0x1EC3720
+	|-Array.InternalEnumerator<CommonBattleSequence.Reliance<object>>.MoveNext
+	|
+	|-RVA: 0x1EC39B0 Offset: 0x1EC3AB1 VA: 0x1EC39B0
+	|-Array.InternalEnumerator<RenderGraphResourcePool.ResourceLogInfo<object>>.MoveNext
+	|
+	|-RVA: 0x1EC3C20 Offset: 0x1EC3D21 VA: 0x1EC3C20
+	|-Array.InternalEnumerator<HashSet.Slot<ValueTuple<object, int>>>.MoveNext
+	|
+	|-RVA: 0x1EC3EB0 Offset: 0x1EC3FB1 VA: 0x1EC3EB0
+	|-Array.InternalEnumerator<HashSet.Slot<AsyncOperationHandle>>.MoveNext
+	|
+	|-RVA: 0x1EC4140 Offset: 0x1EC4241 VA: 0x1EC4140
+	|-Array.InternalEnumerator<HashSet.Slot<int>>.MoveNext
+	|
+	|-RVA: 0x1EC43B0 Offset: 0x1EC44B1 VA: 0x1EC43B0
+	|-Array.InternalEnumerator<HashSet.Slot<Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EC4620 Offset: 0x1EC4721 VA: 0x1EC4620
+	|-Array.InternalEnumerator<Set.Slot<Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EC4890 Offset: 0x1EC4991 VA: 0x1EC4890
+	|-Array.InternalEnumerator<HashSet.Slot<MapPos>>.MoveNext
+	|
+	|-RVA: 0x1EC4B00 Offset: 0x1EC4C01 VA: 0x1EC4B00
+	|-Array.InternalEnumerator<HashSet.Slot<object>>.MoveNext
+	|
+	|-RVA: 0x1EC4D70 Offset: 0x1EC4E71 VA: 0x1EC4D70
+	|-Array.InternalEnumerator<Set.Slot<object>>.MoveNext
+	|
+	|-RVA: 0x1EC5000 Offset: 0x1EC5101 VA: 0x1EC5000
+	|-Array.InternalEnumerator<HashSet.Slot<uint>>.MoveNext
+	|
+	|-RVA: 0x1EC5270 Offset: 0x1EC5371 VA: 0x1EC5270
+	|-Array.InternalEnumerator<HashSet.Slot<ulong>>.MoveNext
+	|
+	|-RVA: 0x1EC54E0 Offset: 0x1EC55E1 VA: 0x1EC54E0
+	|-Array.InternalEnumerator<Set.Slot<Vector3>>.MoveNext
+	|
+	|-RVA: 0x1EC5770 Offset: 0x1EC5871 VA: 0x1EC5770
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Color32>>.MoveNext
+	|
+	|-RVA: 0x1EC5A00 Offset: 0x1EC5B01 VA: 0x1EC5A00
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<HighlightState>>.MoveNext
+	|
+	|-RVA: 0x1EC5CB0 Offset: 0x1EC5DB1 VA: 0x1EC5CB0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<int>>.MoveNext
+	|
+	|-RVA: 0x1EC5F40 Offset: 0x1EC6041 VA: 0x1EC5F40
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Int32Enum>>.MoveNext
+	|
+	|-RVA: 0x1EC61D0 Offset: 0x1EC62D1 VA: 0x1EC61D0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<MaterialReference>>.MoveNext
+	|
+	|-RVA: 0x1EC64A0 Offset: 0x1EC65A1 VA: 0x1EC64A0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<object>>.MoveNext
+	|
+	|-RVA: 0x1EC6750 Offset: 0x1EC6851 VA: 0x1EC6750
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<float>>.MoveNext
+	|
+	|-RVA: 0x1EC69E0 Offset: 0x1EC6AE1 VA: 0x1EC69E0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<WordWrapState>>.MoveNext
+	|
+	|-RVA: 0x1EC6C70 Offset: 0x1EC6D71 VA: 0x1EC6C70
+	|-Array.InternalEnumerator<TimeInterval<object>>.MoveNext
+	|
+	|-RVA: 0x1EC6EE0 Offset: 0x1EC6FE1 VA: 0x1EC6EE0
+	|-Array.InternalEnumerator<Timestamped<object>>.MoveNext
+	|
+	|-RVA: 0x1EC7170 Offset: 0x1EC7271 VA: 0x1EC7170
+	|-Array.InternalEnumerator<UniTask<object>>.MoveNext
+	|
+	|-RVA: 0x1EC73E0 Offset: 0x1EC74E1 VA: 0x1EC73E0
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x1EC7650 Offset: 0x1EC7751 VA: 0x1EC7650
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x1EC78E0 Offset: 0x1EC79E1 VA: 0x1EC78E0
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask<object>>>.MoveNext
+	|
+	|-RVA: 0x1EC7B70 Offset: 0x1EC7C71 VA: 0x1EC7B70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>.MoveNext
+	|
+	|-RVA: 0x1EC7E00 Offset: 0x1EC7F01 VA: 0x1EC7E00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>.MoveNext
+	|
+	|-RVA: 0x1EC80B0 Offset: 0x1EC81B1 VA: 0x1EC80B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>>.MoveNext
+	|
+	|-RVA: 0x1EC8360 Offset: 0x1EC8461 VA: 0x1EC8360
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>>.MoveNext
+	|
+	|-RVA: 0x1EC85C0 Offset: 0x1EC86C1 VA: 0x1EC85C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF8060 Offset: 0x2AF8161 VA: 0x2AF8060
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF8310 Offset: 0x2AF8411 VA: 0x2AF8310
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF8570 Offset: 0x2AF8671 VA: 0x2AF8570
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF8820 Offset: 0x2AF8921 VA: 0x2AF8820
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF8AD0 Offset: 0x2AF8BD1 VA: 0x2AF8AD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF8D60 Offset: 0x2AF8E61 VA: 0x2AF8D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF9010 Offset: 0x2AF9111 VA: 0x2AF9010
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF92C0 Offset: 0x2AF93C1 VA: 0x2AF92C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF9570 Offset: 0x2AF9671 VA: 0x2AF9570
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF9820 Offset: 0x2AF9921 VA: 0x2AF9820
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF9AB0 Offset: 0x2AF9BB1 VA: 0x2AF9AB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF9D60 Offset: 0x2AF9E61 VA: 0x2AF9D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AF9FC0 Offset: 0x2AFA0C1 VA: 0x2AF9FC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFA270 Offset: 0x2AFA371 VA: 0x2AFA270
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFA500 Offset: 0x2AFA601 VA: 0x2AFA500
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFA7B0 Offset: 0x2AFA8B1 VA: 0x2AFA7B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFAA60 Offset: 0x2AFAB61 VA: 0x2AFAA60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFAD10 Offset: 0x2AFAE11 VA: 0x2AFAD10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFAFC0 Offset: 0x2AFB0C1 VA: 0x2AFAFC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFB270 Offset: 0x2AFB371 VA: 0x2AFB270
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFB540 Offset: 0x2AFB641 VA: 0x2AFB540
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFB810 Offset: 0x2AFB911 VA: 0x2AFB810
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFBAE0 Offset: 0x2AFBBE1 VA: 0x2AFBAE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFBD40 Offset: 0x2AFBE41 VA: 0x2AFBD40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFBFA0 Offset: 0x2AFC0A1 VA: 0x2AFBFA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFC250 Offset: 0x2AFC351 VA: 0x2AFC250
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFC4B0 Offset: 0x2AFC5B1 VA: 0x2AFC4B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFC740 Offset: 0x2AFC841 VA: 0x2AFC740
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFC9F0 Offset: 0x2AFCAF1 VA: 0x2AFC9F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFCC80 Offset: 0x2AFCD81 VA: 0x2AFCC80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFCF30 Offset: 0x2AFD031 VA: 0x2AFCF30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFD1E0 Offset: 0x2AFD2E1 VA: 0x2AFD1E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFD470 Offset: 0x2AFD571 VA: 0x2AFD470
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFD700 Offset: 0x2AFD801 VA: 0x2AFD700
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFD990 Offset: 0x2AFDA91 VA: 0x2AFD990
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFDC40 Offset: 0x2AFDD41 VA: 0x2AFDC40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFDEA0 Offset: 0x2AFDFA1 VA: 0x2AFDEA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFE130 Offset: 0x2AFE231 VA: 0x2AFE130
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFE3E0 Offset: 0x2AFE4E1 VA: 0x2AFE3E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFE670 Offset: 0x2AFE771 VA: 0x2AFE670
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFE920 Offset: 0x2AFEA21 VA: 0x2AFE920
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFEBD0 Offset: 0x2AFECD1 VA: 0x2AFEBD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFEE80 Offset: 0x2AFEF81 VA: 0x2AFEE80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFF130 Offset: 0x2AFF231 VA: 0x2AFF130
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFF400 Offset: 0x2AFF501 VA: 0x2AFF400
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFF6B0 Offset: 0x2AFF7B1 VA: 0x2AFF6B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFF980 Offset: 0x2AFFA81 VA: 0x2AFF980
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFFC30 Offset: 0x2AFFD31 VA: 0x2AFFC30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2AFFF20 Offset: 0x2B00021 VA: 0x2AFFF20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B001F0 Offset: 0x2B002F1 VA: 0x2B001F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2B004E0 Offset: 0x2B005E1 VA: 0x2B004E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B007B0 Offset: 0x2B008B1 VA: 0x2B007B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>.MoveNext
+	|
+	|-RVA: 0x2B00A10 Offset: 0x2B00B11 VA: 0x2B00A10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>.MoveNext
+	|
+	|-RVA: 0x2B00C70 Offset: 0x2B00D71 VA: 0x2B00C70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>.MoveNext
+	|
+	|-RVA: 0x2B00F20 Offset: 0x2B01021 VA: 0x2B00F20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>.MoveNext
+	|
+	|-RVA: 0x2B01180 Offset: 0x2B01281 VA: 0x2B01180
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>.MoveNext
+	|
+	|-RVA: 0x2B01430 Offset: 0x2B01531 VA: 0x2B01430
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>.MoveNext
+	|
+	|-RVA: 0x2B016C0 Offset: 0x2B017C1 VA: 0x2B016C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>.MoveNext
+	|
+	|-RVA: 0x2B01930 Offset: 0x2B01A31 VA: 0x2B01930
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>.MoveNext
+	|
+	|-RVA: 0x2B01BC0 Offset: 0x2B01CC1 VA: 0x2B01BC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B01E50 Offset: 0x2B01F51 VA: 0x2B01E50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>.MoveNext
+	|
+	|-RVA: 0x2B02100 Offset: 0x2B02201 VA: 0x2B02100
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>.MoveNext
+	|
+	|-RVA: 0x2B023B0 Offset: 0x2B024B1 VA: 0x2B023B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>.MoveNext
+	|
+	|-RVA: 0x2B02620 Offset: 0x2B02721 VA: 0x2B02620
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>.MoveNext
+	|
+	|-RVA: 0x2B028B0 Offset: 0x2B029B1 VA: 0x2B028B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>.MoveNext
+	|
+	|-RVA: 0x2B02B10 Offset: 0x2B02C11 VA: 0x2B02B10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>.MoveNext
+	|
+	|-RVA: 0x2B02DA0 Offset: 0x2B02EA1 VA: 0x2B02DA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>.MoveNext
+	|
+	|-RVA: 0x2B03030 Offset: 0x2B03131 VA: 0x2B03030
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>.MoveNext
+	|
+	|-RVA: 0x2B032E0 Offset: 0x2B033E1 VA: 0x2B032E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B03570 Offset: 0x2B03671 VA: 0x2B03570
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B03800 Offset: 0x2B03901 VA: 0x2B03800
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B03AB0 Offset: 0x2B03BB1 VA: 0x2B03AB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B03D60 Offset: 0x2B03E61 VA: 0x2B03D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B04030 Offset: 0x2B04131 VA: 0x2B04030
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B042E0 Offset: 0x2B043E1 VA: 0x2B042E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B045B0 Offset: 0x2B046B1 VA: 0x2B045B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B04860 Offset: 0x2B04961 VA: 0x2B04860
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B04B50 Offset: 0x2B04C51 VA: 0x2B04B50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B04E00 Offset: 0x2B04F01 VA: 0x2B04E00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B050F0 Offset: 0x2B051F1 VA: 0x2B050F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B053C0 Offset: 0x2B054C1 VA: 0x2B053C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2B05650 Offset: 0x2B05751 VA: 0x2B05650
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.MoveNext
+	|
+	|-RVA: 0x2B058E0 Offset: 0x2B059E1 VA: 0x2B058E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>.MoveNext
+	|
+	|-RVA: 0x2B05B40 Offset: 0x2B05C41 VA: 0x2B05B40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, bool>>>.MoveNext
+	|
+	|-RVA: 0x2B05DA0 Offset: 0x2B05EA1 VA: 0x2B05DA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Bounds>>>.MoveNext
+	|
+	|-RVA: 0x2B06030 Offset: 0x2B06131 VA: 0x2B06030
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, byte>>>.MoveNext
+	|
+	|-RVA: 0x2B06290 Offset: 0x2B06391 VA: 0x2B06290
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Color>>>.MoveNext
+	|
+	|-RVA: 0x2B06520 Offset: 0x2B06621 VA: 0x2B06520
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, double>>>.MoveNext
+	|
+	|-RVA: 0x2B067B0 Offset: 0x2B068B1 VA: 0x2B067B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, int>>>.MoveNext
+	|
+	|-RVA: 0x2B06A20 Offset: 0x2B06B21 VA: 0x2B06A20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, long>>>.MoveNext
+	|
+	|-RVA: 0x2B06CB0 Offset: 0x2B06DB1 VA: 0x2B06CB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x2B06F40 Offset: 0x2B07041 VA: 0x2B06F40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Quaternion>>>.MoveNext
+	|
+	|-RVA: 0x2B071D0 Offset: 0x2B072D1 VA: 0x2B071D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Rect>>>.MoveNext
+	|
+	|-RVA: 0x2B07460 Offset: 0x2B07561 VA: 0x2B07460
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, float>>>.MoveNext
+	|
+	|-RVA: 0x2B076D0 Offset: 0x2B077D1 VA: 0x2B076D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask>>>.MoveNext
+	|
+	|-RVA: 0x2B07960 Offset: 0x2B07A61 VA: 0x2B07960
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Unit>>>.MoveNext
+	|
+	|-RVA: 0x2B07BC0 Offset: 0x2B07CC1 VA: 0x2B07BC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector2>>>.MoveNext
+	|
+	|-RVA: 0x2B07E30 Offset: 0x2B07F31 VA: 0x2B07E30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector3>>>.MoveNext
+	|
+	|-RVA: 0x2B080C0 Offset: 0x2B081C1 VA: 0x2B080C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector4>>>.MoveNext
+	|
+	|-RVA: 0x2B08350 Offset: 0x2B08451 VA: 0x2B08350
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, object>>>.MoveNext
+	|
+	|-RVA: 0x2B085E0 Offset: 0x2B086E1 VA: 0x2B085E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object>>>.MoveNext
+	|
+	|-RVA: 0x2B08870 Offset: 0x2B08971 VA: 0x2B08870
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B08B20 Offset: 0x2B08C21 VA: 0x2B08B20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object>>>.MoveNext
+	|
+	|-RVA: 0x2B08DB0 Offset: 0x2B08EB1 VA: 0x2B08DB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B09060 Offset: 0x2B09161 VA: 0x2B09060
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object>>>.MoveNext
+	|
+	|-RVA: 0x2B09310 Offset: 0x2B09411 VA: 0x2B09310
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B095E0 Offset: 0x2B096E1 VA: 0x2B095E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object>>>.MoveNext
+	|
+	|-RVA: 0x2B09890 Offset: 0x2B09991 VA: 0x2B09890
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B09B60 Offset: 0x2B09C61 VA: 0x2B09B60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>.MoveNext
+	|
+	|-RVA: 0x2B09E10 Offset: 0x2B09F11 VA: 0x2B09E10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2B0A100 Offset: 0x2B0A201 VA: 0x2B0A100
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>.MoveNext
+	|
+	|-RVA: 0x2B0A3B0 Offset: 0x2B0A4B1 VA: 0x2B0A3B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B0A6A0 Offset: 0x2B0A7A1 VA: 0x2B0A6A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.MoveNext
+	|
+	|-RVA: 0x2B0A930 Offset: 0x2B0AA31 VA: 0x2B0A930
+	|-Array.InternalEnumerator<ValueTuple<bool, AsyncUnit>>.MoveNext
+	|
+	|-RVA: 0x2B0AB90 Offset: 0x2B0AC91 VA: 0x2B0AB90
+	|-Array.InternalEnumerator<ValueTuple<bool, bool>>.MoveNext
+	|
+	|-RVA: 0x2B0ADF0 Offset: 0x2B0AEF1 VA: 0x2B0ADF0
+	|-Array.InternalEnumerator<ValueTuple<bool, Bounds>>.MoveNext
+	|
+	|-RVA: 0x2B0B0A0 Offset: 0x2B0B1A1 VA: 0x2B0B0A0
+	|-Array.InternalEnumerator<ValueTuple<bool, byte>>.MoveNext
+	|
+	|-RVA: 0x2B0B300 Offset: 0x2B0B401 VA: 0x2B0B300
+	|-Array.InternalEnumerator<ValueTuple<bool, Color>>.MoveNext
+	|
+	|-RVA: 0x2B0B590 Offset: 0x2B0B691 VA: 0x2B0B590
+	|-Array.InternalEnumerator<ValueTuple<bool, double>>.MoveNext
+	|
+	|-RVA: 0x2B0B800 Offset: 0x2B0B901 VA: 0x2B0B800
+	|-Array.InternalEnumerator<ValueTuple<bool, int>>.MoveNext
+	|
+	|-RVA: 0x2B0BA70 Offset: 0x2B0BB71 VA: 0x2B0BA70
+	|-Array.InternalEnumerator<ValueTuple<bool, long>>.MoveNext
+	|
+	|-RVA: 0x2B0BCE0 Offset: 0x2B0BDE1 VA: 0x2B0BCE0
+	|-Array.InternalEnumerator<ValueTuple<bool, object>>.MoveNext
+	|
+	|-RVA: 0x2B0BF50 Offset: 0x2B0C051 VA: 0x2B0BF50
+	|-Array.InternalEnumerator<ValueTuple<bool, Quaternion>>.MoveNext
+	|
+	|-RVA: 0x2B0C1E0 Offset: 0x2B0C2E1 VA: 0x2B0C1E0
+	|-Array.InternalEnumerator<ValueTuple<bool, Rect>>.MoveNext
+	|
+	|-RVA: 0x2B0C470 Offset: 0x2B0C571 VA: 0x2B0C470
+	|-Array.InternalEnumerator<ValueTuple<bool, float>>.MoveNext
+	|
+	|-RVA: 0x2B0C6E0 Offset: 0x2B0C7E1 VA: 0x2B0C6E0
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask>>.MoveNext
+	|
+	|-RVA: 0x2B0C950 Offset: 0x2B0CA51 VA: 0x2B0C950
+	|-Array.InternalEnumerator<ValueTuple<bool, Unit>>.MoveNext
+	|
+	|-RVA: 0x2B0CBB0 Offset: 0x2B0CCB1 VA: 0x2B0CBB0
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector2>>.MoveNext
+	|
+	|-RVA: 0x2B0CE20 Offset: 0x2B0CF21 VA: 0x2B0CE20
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector3>>.MoveNext
+	|
+	|-RVA: 0x2B0D090 Offset: 0x2B0D191 VA: 0x2B0D090
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector4>>.MoveNext
+	|
+	|-RVA: 0x2B0D320 Offset: 0x2B0D421 VA: 0x2B0D320
+	|-Array.InternalEnumerator<ValueTuple<int, bool>>.MoveNext
+	|
+	|-RVA: 0x2B0D590 Offset: 0x2B0D691 VA: 0x2B0D590
+	|-Array.InternalEnumerator<ValueTuple<int, Bounds>>.MoveNext
+	|
+	|-RVA: 0x2B0D840 Offset: 0x2B0D941 VA: 0x2B0D840
+	|-Array.InternalEnumerator<ValueTuple<int, byte>>.MoveNext
+	|
+	|-RVA: 0x2B0DAB0 Offset: 0x2B0DBB1 VA: 0x2B0DAB0
+	|-Array.InternalEnumerator<ValueTuple<int, Color>>.MoveNext
+	|
+	|-RVA: 0x2B0DD40 Offset: 0x2B0DE41 VA: 0x2B0DD40
+	|-Array.InternalEnumerator<ValueTuple<int, double>>.MoveNext
+	|
+	|-RVA: 0x2B0DFB0 Offset: 0x2B0E0B1 VA: 0x2B0DFB0
+	|-Array.InternalEnumerator<ValueTuple<int, int>>.MoveNext
+	|
+	|-RVA: 0x2B0E220 Offset: 0x2B0E321 VA: 0x2B0E220
+	|-Array.InternalEnumerator<ValueTuple<int, long>>.MoveNext
+	|
+	|-RVA: 0x2B0E490 Offset: 0x2B0E591 VA: 0x2B0E490
+	|-Array.InternalEnumerator<ValueTuple<int, object>>.MoveNext
+	|
+	|-RVA: 0x2B0E700 Offset: 0x2B0E801 VA: 0x2B0E700
+	|-Array.InternalEnumerator<ValueTuple<int, Quaternion>>.MoveNext
+	|
+	|-RVA: 0x2B0E990 Offset: 0x2B0EA91 VA: 0x2B0E990
+	|-Array.InternalEnumerator<ValueTuple<int, Rect>>.MoveNext
+	|
+	|-RVA: 0x2B0EC20 Offset: 0x2B0ED21 VA: 0x2B0EC20
+	|-Array.InternalEnumerator<ValueTuple<int, float>>.MoveNext
+	|
+	|-RVA: 0x2B0EE90 Offset: 0x2B0EF91 VA: 0x2B0EE90
+	|-Array.InternalEnumerator<ValueTuple<int, Unit>>.MoveNext
+	|
+	|-RVA: 0x2B0F100 Offset: 0x2B0F201 VA: 0x2B0F100
+	|-Array.InternalEnumerator<ValueTuple<int, Vector2>>.MoveNext
+	|
+	|-RVA: 0x2B0F370 Offset: 0x2B0F471 VA: 0x2B0F370
+	|-Array.InternalEnumerator<ValueTuple<int, Vector3>>.MoveNext
+	|
+	|-RVA: 0x2B0F5E0 Offset: 0x2B0F6E1 VA: 0x2B0F5E0
+	|-Array.InternalEnumerator<ValueTuple<int, Vector4>>.MoveNext
+	|
+	|-RVA: 0x2B0F870 Offset: 0x2B0F971 VA: 0x2B0F870
+	|-Array.InternalEnumerator<ValueTuple<Int32Enum, int>>.MoveNext
+	|
+	|-RVA: 0x2B0FAE0 Offset: 0x2B0FBE1 VA: 0x2B0FAE0
+	|-Array.InternalEnumerator<ValueTuple<object, ValueTuple<object, int>>>.MoveNext
+	|
+	|-RVA: 0x2B0FD70 Offset: 0x2B0FE71 VA: 0x2B0FD70
+	|-Array.InternalEnumerator<ValueTuple<object, int>>.MoveNext
+	|
+	|-RVA: 0x2B0FFE0 Offset: 0x2B100E1 VA: 0x2B0FFE0
+	|-Array.InternalEnumerator<ValueTuple<object, object>>.MoveNext
+	|
+	|-RVA: 0x2B10250 Offset: 0x2B10351 VA: 0x2B10250
+	|-Array.InternalEnumerator<ValueTuple<object, float>>.MoveNext
+	|
+	|-RVA: 0x2B104C0 Offset: 0x2B105C1 VA: 0x2B104C0
+	|-Array.InternalEnumerator<ValueTuple<Vector3, float>>.MoveNext
+	|
+	|-RVA: 0x2ADFE70 Offset: 0x2ADFF71 VA: 0x2ADFE70
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x2AE0120 Offset: 0x2AE0221 VA: 0x2AE0120
+	|-Array.InternalEnumerator<ValueTuple<object, Int32Enum, int>>.MoveNext
+	|
+	|-RVA: 0x2AE0390 Offset: 0x2AE0491 VA: 0x2AE0390
+	|-Array.InternalEnumerator<ValueTuple<object, object, object>>.MoveNext
+	|
+	|-RVA: 0x2AE0620 Offset: 0x2AE0721 VA: 0x2AE0620
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x2AE08D0 Offset: 0x2AE09D1 VA: 0x2AE08D0
+	|-Array.InternalEnumerator<ValueTuple<object, int, int, int>>.MoveNext
+	|
+	|-RVA: 0x2AE0B60 Offset: 0x2AE0C61 VA: 0x2AE0B60
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object>>.MoveNext
+	|
+	|-RVA: 0x2AE0DF0 Offset: 0x2AE0EF1 VA: 0x2AE0DF0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x2AE10C0 Offset: 0x2AE11C1 VA: 0x2AE10C0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object>>.MoveNext
+	|
+	|-RVA: 0x2AE1370 Offset: 0x2AE1471 VA: 0x2AE1370
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x2AE1640 Offset: 0x2AE1741 VA: 0x2AE1640
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object>>.MoveNext
+	|
+	|-RVA: 0x2AE18F0 Offset: 0x2AE19F1 VA: 0x2AE18F0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.MoveNext
+	|
+	|-RVA: 0x2AE1BE0 Offset: 0x2AE1CE1 VA: 0x2AE1BE0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object, object>>.MoveNext
+	|
+	|-RVA: 0x2AE1E90 Offset: 0x2AE1F91 VA: 0x2AE1E90
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2AE2180 Offset: 0x2AE2281 VA: 0x2AE2180
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>.MoveNext
+	|
+	|-RVA: 0x2AE2410 Offset: 0x2AE2511 VA: 0x2AE2410
+	|-Array.InternalEnumerator<AnimatorClipInfo>.MoveNext
+	|
+	|-RVA: 0x2AE2680 Offset: 0x2AE2781 VA: 0x2AE2680
+	|-Array.InternalEnumerator<AsyncOperationHandle>.MoveNext
+	|
+	|-RVA: 0x2AE2910 Offset: 0x2AE2A11 VA: 0x2AE2910
+	|-Array.InternalEnumerator<AsyncUnit>.MoveNext
+	|
+	|-RVA: 0x2AE2B70 Offset: 0x2AE2C71 VA: 0x2AE2B70
+	|-Array.InternalEnumerator<BatchVisibility>.MoveNext
+	|
+	|-RVA: 0x2AE2DE0 Offset: 0x2AE2EE1 VA: 0x2AE2DE0
+	|-Array.InternalEnumerator<BoneWeight>.MoveNext
+	|
+	|-RVA: 0x2AE3070 Offset: 0x2AE3171 VA: 0x2AE3070
+	|-Array.InternalEnumerator<BoneWeight1>.MoveNext
+	|
+	|-RVA: 0x2AE32E0 Offset: 0x2AE33E1 VA: 0x2AE32E0
+	|-Array.InternalEnumerator<bool>.MoveNext
+	|
+	|-RVA: 0x2AE3550 Offset: 0x2AE3651 VA: 0x2AE3550
+	|-Array.InternalEnumerator<Bounds>.MoveNext
+	|
+	|-RVA: 0x2AE37E0 Offset: 0x2AE38E1 VA: 0x2AE37E0
+	|-Array.InternalEnumerator<byte>.MoveNext
+	|
+	|-RVA: 0x2AE3A50 Offset: 0x2AE3B51 VA: 0x2AE3A50
+	|-Array.InternalEnumerator<ByteEnum>.MoveNext
+	|
+	|-RVA: 0x2AE3CC0 Offset: 0x2AE3DC1 VA: 0x2AE3CC0
+	|-Array.InternalEnumerator<CameraInfo>.MoveNext
+	|
+	|-RVA: 0x2AE3F30 Offset: 0x2AE4031 VA: 0x2AE3F30
+	|-Array.InternalEnumerator<CancellationToken>.MoveNext
+	|
+	|-RVA: 0x2AE41A0 Offset: 0x2AE42A1 VA: 0x2AE41A0
+	|-Array.InternalEnumerator<CancellationTokenRegistration>.MoveNext
+	|
+	|-RVA: 0x2AE4430 Offset: 0x2AE4531 VA: 0x2AE4430
+	|-Array.InternalEnumerator<char>.MoveNext
+	|
+	|-RVA: 0x2AE46A0 Offset: 0x2AE47A1 VA: 0x2AE46A0
+	|-Array.InternalEnumerator<ClusteringData>.MoveNext
+	|
+	|-RVA: 0x2AE4930 Offset: 0x2AE4A31 VA: 0x2AE4930
+	|-Array.InternalEnumerator<ClusteringProcessorState>.MoveNext
+	|
+	|-RVA: 0x2AE4BC0 Offset: 0x2AE4CC1 VA: 0x2AE4BC0
+	|-Array.InternalEnumerator<Color>.MoveNext
+	|
+	|-RVA: 0x2AE4E40 Offset: 0x2AE4F41 VA: 0x2AE4E40
+	|-Array.InternalEnumerator<Color32>.MoveNext
+	|
+	|-RVA: 0x2AE50A0 Offset: 0x2AE51A1 VA: 0x2AE50A0
+	|-Array.InternalEnumerator<Color4u8>.MoveNext
+	|
+	|-RVA: 0x2AE5300 Offset: 0x2AE5401 VA: 0x2AE5300
+	|-Array.InternalEnumerator<ColorBlock>.MoveNext
+	|
+	|-RVA: 0x2AE55D0 Offset: 0x2AE56D1 VA: 0x2AE55D0
+	|-Array.InternalEnumerator<CombineInstance>.MoveNext
+	|
+	|-RVA: 0x2AE58C0 Offset: 0x2AE59C1 VA: 0x2AE58C0
+	|-Array.InternalEnumerator<ConstraintSource>.MoveNext
+	|
+	|-RVA: 0x2AE5B30 Offset: 0x2AE5C31 VA: 0x2AE5B30
+	|-Array.InternalEnumerator<ContactPoint>.MoveNext
+	|
+	|-RVA: 0x2AE5DE0 Offset: 0x2AE5EE1 VA: 0x2AE5DE0
+	|-Array.InternalEnumerator<ContactPoint2D>.MoveNext
+	|
+	|-RVA: 0x2AE6090 Offset: 0x2AE6191 VA: 0x2AE6090
+	|-Array.InternalEnumerator<ContourVertex>.MoveNext
+	|
+	|-RVA: 0x2AE6320 Offset: 0x2AE6421 VA: 0x2AE6320
+	|-Array.InternalEnumerator<CustomAttributeNamedArgument>.MoveNext
+	|
+	|-RVA: 0x2AE65B0 Offset: 0x2AE66B1 VA: 0x2AE65B0
+	|-Array.InternalEnumerator<CustomAttributeTypedArgument>.MoveNext
+	|
+	|-RVA: 0x2AE6820 Offset: 0x2AE6921 VA: 0x2AE6820
+	|-Array.InternalEnumerator<DataStoreRatingInfo>.MoveNext
+	|
+	|-RVA: 0x2AE6AB0 Offset: 0x2AE6BB1 VA: 0x2AE6AB0
+	|-Array.InternalEnumerator<DataStoreResult>.MoveNext
+	|
+	|-RVA: 0x2AE6D20 Offset: 0x2AE6E21 VA: 0x2AE6D20
+	|-Array.InternalEnumerator<DateTime>.MoveNext
+	|
+	|-RVA: 0x2AE6F90 Offset: 0x2AE7091 VA: 0x2AE6F90
+	|-Array.InternalEnumerator<DateTimeOffset>.MoveNext
+	|
+	|-RVA: 0x2AE7200 Offset: 0x2AE7301 VA: 0x2AE7200
+	|-Array.InternalEnumerator<DebugPadState>.MoveNext
+	|
+	|-RVA: 0x2AE7490 Offset: 0x2AE7591 VA: 0x2AE7490
+	|-Array.InternalEnumerator<Decimal>.MoveNext
+	|
+	|-RVA: 0x2AE7700 Offset: 0x2AE7801 VA: 0x2AE7700
+	|-Array.InternalEnumerator<DeferredTiler>.MoveNext
+	|
+	|-RVA: 0x2AE79F0 Offset: 0x2AE7AF1 VA: 0x2AE79F0
+	|-Array.InternalEnumerator<DeviceHandle>.MoveNext
+	|
+	|-RVA: 0x2AE7C60 Offset: 0x2AE7D61 VA: 0x2AE7C60
+	|-Array.InternalEnumerator<DiagnosticEvent>.MoveNext
+	|
+	|-RVA: 0x2AE7F10 Offset: 0x2AE8011 VA: 0x2AE7F10
+	|-Array.InternalEnumerator<DictionaryEntry>.MoveNext
+	|
+	|-RVA: 0x2AE8180 Offset: 0x2AE8281 VA: 0x2AE8180
+	|-Array.InternalEnumerator<DictionaryInfo>.MoveNext
+	|
+	|-RVA: 0x2AE83F0 Offset: 0x2AE84F1 VA: 0x2AE83F0
+	|-Array.InternalEnumerator<DirectoryEntry>.MoveNext
+	|
+	|-RVA: 0x2AE8680 Offset: 0x2AE8781 VA: 0x2AE8680
+	|-Array.InternalEnumerator<double>.MoveNext
+	|
+	|-RVA: 0x2AE88F0 Offset: 0x2AE89F1 VA: 0x2AE88F0
+	|-Array.InternalEnumerator<Ephemeron>.MoveNext
+	|
+	|-RVA: 0x2AE8B60 Offset: 0x2AE8C61 VA: 0x2AE8B60
+	|-Array.InternalEnumerator<FXZ>.MoveNext
+	|
+	|-RVA: 0x2AE8DD0 Offset: 0x2AE8ED1 VA: 0x2AE8DD0
+	|-Array.InternalEnumerator<Finger>.MoveNext
+	|
+	|-RVA: 0x2AE9080 Offset: 0x2AE9181 VA: 0x2AE9080
+	|-Array.InternalEnumerator<Float2>.MoveNext
+	|
+	|-RVA: 0x2AE92F0 Offset: 0x2AE93F1 VA: 0x2AE92F0
+	|-Array.InternalEnumerator<Friend>.MoveNext
+	|
+	|-RVA: 0x2AE9590 Offset: 0x2AE9691 VA: 0x2AE9590
+	|-Array.InternalEnumerator<GCHandle>.MoveNext
+	|
+	|-RVA: 0x2AE97F0 Offset: 0x2AE98F1 VA: 0x2AE97F0
+	|-Array.InternalEnumerator<GesturePoint>.MoveNext
+	|
+	|-RVA: 0x2AE9A60 Offset: 0x2AE9B61 VA: 0x2AE9A60
+	|-Array.InternalEnumerator<GestureState>.MoveNext
+	|
+	|-RVA: 0x2AE9D30 Offset: 0x2AE9E31 VA: 0x2AE9D30
+	|-Array.InternalEnumerator<GlyphMarshallingStruct>.MoveNext
+	|
+	|-RVA: 0x2AE9FE0 Offset: 0x2AEA0E1 VA: 0x2AE9FE0
+	|-Array.InternalEnumerator<GlyphPairAdjustmentRecord>.MoveNext
+	|
+	|-RVA: 0x2AEA290 Offset: 0x2AEA391 VA: 0x2AEA290
+	|-Array.InternalEnumerator<GlyphRect>.MoveNext
+	|
+	|-RVA: 0x2AEA500 Offset: 0x2AEA601 VA: 0x2AEA500
+	|-Array.InternalEnumerator<Guid>.MoveNext
+	|
+	|-RVA: 0x2AEA770 Offset: 0x2AEA871 VA: 0x2AEA770
+	|-Array.InternalEnumerator<Hand>.MoveNext
+	|
+	|-RVA: 0x2AEAA00 Offset: 0x2AEAB01 VA: 0x2AEAA00
+	|-Array.InternalEnumerator<HandAnalysisImageState>.MoveNext
+	|
+	|-RVA: 0x2AEAC70 Offset: 0x2AEAD71 VA: 0x2AEAC70
+	|-Array.InternalEnumerator<HandAnalysisSilhouetteState>.MoveNext
+	|
+	|-RVA: 0x2AEAF00 Offset: 0x2AEB001 VA: 0x2AEAF00
+	|-Array.InternalEnumerator<HeaderVariantInfo>.MoveNext
+	|
+	|-RVA: 0x2AEB170 Offset: 0x2AEB271 VA: 0x2AEB170
+	|-Array.InternalEnumerator<HighlightState>.MoveNext
+	|
+	|-RVA: 0x2AEB400 Offset: 0x2AEB501 VA: 0x2AEB400
+	|-Array.InternalEnumerator<HumanBone>.MoveNext
+	|
+	|-RVA: 0x2AEB6B0 Offset: 0x2AEB7B1 VA: 0x2AEB6B0
+	|-Array.InternalEnumerator<short>.MoveNext
+	|
+	|-RVA: 0x2AEB920 Offset: 0x2AEBA21 VA: 0x2AEB920
+	|-Array.InternalEnumerator<int>.MoveNext
+	|
+	|-RVA: 0x2AEBB90 Offset: 0x2AEBC91 VA: 0x2AEBB90
+	|-Array.InternalEnumerator<Int32Enum>.MoveNext
+	|
+	|-RVA: 0x2AEBE00 Offset: 0x2AEBF01 VA: 0x2AEBE00
+	|-Array.InternalEnumerator<long>.MoveNext
+	|
+	|-RVA: 0x2AEC070 Offset: 0x2AEC171 VA: 0x2AEC070
+	|-Array.InternalEnumerator<Int64Enum>.MoveNext
+	|
+	|-RVA: 0x2AEC2E0 Offset: 0x2AEC3E1 VA: 0x2AEC2E0
+	|-Array.InternalEnumerator<IntPtr>.MoveNext
+	|
+	|-RVA: 0x2AEC550 Offset: 0x2AEC651 VA: 0x2AEC550
+	|-Array.InternalEnumerator<InternalCodePageDataItem>.MoveNext
+	|
+	|-RVA: 0x2AEC7C0 Offset: 0x2AEC8C1 VA: 0x2AEC7C0
+	|-Array.InternalEnumerator<InternalEncodingDataItem>.MoveNext
+	|
+	|-RVA: 0x2AECA30 Offset: 0x2AECB31 VA: 0x2AECA30
+	|-Array.InternalEnumerator<InterpretedFrameInfo>.MoveNext
+	|
+	|-RVA: 0x2AECCA0 Offset: 0x2AECDA1 VA: 0x2AECCA0
+	|-Array.InternalEnumerator<IntervalTreeNode>.MoveNext
+	|
+	|-RVA: 0x2AECF30 Offset: 0x2AED031 VA: 0x2AECF30
+	|-Array.InternalEnumerator<JobHandle>.MoveNext
+	|
+	|-RVA: 0x2AED1A0 Offset: 0x2AED2A1 VA: 0x2AED1A0
+	|-Array.InternalEnumerator<Keyframe>.MoveNext
+	|
+	|-RVA: 0x2AED450 Offset: 0x2AED551 VA: 0x2AED450
+	|-Array.InternalEnumerator<LOD>.MoveNext
+	|
+	|-RVA: 0x2AED6C0 Offset: 0x2AED7C1 VA: 0x2AED6C0
+	|-Array.InternalEnumerator<LayerMask>.MoveNext
+	|
+	|-RVA: 0x2AED920 Offset: 0x2AEDA21 VA: 0x2AED920
+	|-Array.InternalEnumerator<LengthLimitProperties>.MoveNext
+	|
+	|-RVA: 0x2AEDB90 Offset: 0x2AEDC91 VA: 0x2AEDB90
+	|-Array.InternalEnumerator<Light2DBlendStyle>.MoveNext
+	|
+	|-RVA: 0x2AEDE60 Offset: 0x2AEDF61 VA: 0x2AEDE60
+	|-Array.InternalEnumerator<LightDataGI>.MoveNext
+	|
+	|-RVA: 0x2AEE130 Offset: 0x2AEE231 VA: 0x2AEE130
+	|-Array.InternalEnumerator<LocalDefinition>.MoveNext
+	|
+	|-RVA: 0x2AEE3A0 Offset: 0x2AEE4A1 VA: 0x2AEE3A0
+	|-Array.InternalEnumerator<MapPos>.MoveNext
+	|
+	|-RVA: 0x2AEE610 Offset: 0x2AEE711 VA: 0x2AEE610
+	|-Array.InternalEnumerator<MapRange>.MoveNext
+	|
+	|-RVA: 0x2AEE880 Offset: 0x2AEE981 VA: 0x2AEE880
+	|-Array.InternalEnumerator<MaterialReference>.MoveNext
+	|
+	|-RVA: 0x2AEEB30 Offset: 0x2AEEC31 VA: 0x2AEEB30
+	|-Array.InternalEnumerator<Matrix4x4>.MoveNext
+	|
+	|-RVA: 0x2AEEDE0 Offset: 0x2AEEEE1 VA: 0x2AEEDE0
+	|-Array.InternalEnumerator<MomentProcessorState>.MoveNext
+	|
+	|-RVA: 0x2AEF070 Offset: 0x2AEF171 VA: 0x2AEF070
+	|-Array.InternalEnumerator<MomentStatistic>.MoveNext
+	|
+	|-RVA: 0x2AEF2F0 Offset: 0x2AEF3F1 VA: 0x2AEF2F0
+	|-Array.InternalEnumerator<Navigation>.MoveNext
+	|
+	|-RVA: 0x2AEF5A0 Offset: 0x2AEF6A1 VA: 0x2AEF5A0
+	|-Array.InternalEnumerator<NetworkServiceAccountId>.MoveNext
+	|
+	|-RVA: 0x2AEF810 Offset: 0x2AEF911 VA: 0x2AEF810
+	|-Array.InternalEnumerator<NpadFullKeyState>.MoveNext
+	|
+	|-RVA: 0x2AEFAC0 Offset: 0x2AEFBC1 VA: 0x2AEFAC0
+	|-Array.InternalEnumerator<NpadHandheldState>.MoveNext
+	|
+	|-RVA: 0x2AEFD70 Offset: 0x2AEFE71 VA: 0x2AEFD70
+	|-Array.InternalEnumerator<NpadJoyDualState>.MoveNext
+	|
+	|-RVA: 0x2AF0020 Offset: 0x2AF0121 VA: 0x2AF0020
+	|-Array.InternalEnumerator<NpadJoyLeftState>.MoveNext
+	|
+	|-RVA: 0x2AF02D0 Offset: 0x2AF03D1 VA: 0x2AF02D0
+	|-Array.InternalEnumerator<NpadJoyRightState>.MoveNext
+	|
+	|-RVA: 0x2AF0580 Offset: 0x2AF0681 VA: 0x2AF0580
+	|-Array.InternalEnumerator<NpadStateArrayItem>.MoveNext
+	|
+	|-RVA: 0x2AF0830 Offset: 0x2AF0931 VA: 0x2AF0830
+	|-Array.InternalEnumerator<NsUid>.MoveNext
+	|
+	|-RVA: 0x2AF0AA0 Offset: 0x2AF0BA1 VA: 0x2AF0AA0
+	|-Array.InternalEnumerator<object>.MoveNext
+	|
+	|-RVA: 0x2AF0CC0 Offset: 0x2AF0DC1 VA: 0x2AF0CC0
+	|-Array.InternalEnumerator<ObjectInitializationData>.MoveNext
+	|
+	|-RVA: 0x2AF0F70 Offset: 0x2AF1071 VA: 0x2AF0F70
+	|-Array.InternalEnumerator<ParameterModifier>.MoveNext
+	|
+	|-RVA: 0x2AF11E0 Offset: 0x2AF12E1 VA: 0x2AF11E0
+	|-Array.InternalEnumerator<Plane>.MoveNext
+	|
+	|-RVA: 0x2AF1460 Offset: 0x2AF1561 VA: 0x2AF1460
+	|-Array.InternalEnumerator<Playable>.MoveNext
+	|
+	|-RVA: 0x2AF16D0 Offset: 0x2AF17D1 VA: 0x2AF16D0
+	|-Array.InternalEnumerator<PlayableBinding>.MoveNext
+	|
+	|-RVA: 0x2AF1960 Offset: 0x2AF1A61 VA: 0x2AF1960
+	|-Array.InternalEnumerator<PlayerLoopSystem>.MoveNext
+	|
+	|-RVA: 0x2AF1C10 Offset: 0x2AF1D11 VA: 0x2AF1C10
+	|-Array.InternalEnumerator<PlayerLoopSystemInternal>.MoveNext
+	|
+	|-RVA: 0x2AF1EC0 Offset: 0x2AF1FC1 VA: 0x2AF1EC0
+	|-Array.InternalEnumerator<PreTile>.MoveNext
+	|
+	|-RVA: 0x2AF2170 Offset: 0x2AF2271 VA: 0x2AF2170
+	|-Array.InternalEnumerator<Profile>.MoveNext
+	|
+	|-RVA: 0x2AF2410 Offset: 0x2AF2511 VA: 0x2AF2410
+	|-Array.InternalEnumerator<Protrusion>.MoveNext
+	|
+	|-RVA: 0x2AF2680 Offset: 0x2AF2781 VA: 0x2AF2680
+	|-Array.InternalEnumerator<Quaternion>.MoveNext
+	|
+	|-RVA: 0x2AF2900 Offset: 0x2AF2A01 VA: 0x2AF2900
+	|-Array.InternalEnumerator<RandomSeed>.MoveNext
+	|
+	|-RVA: 0x2AF2B70 Offset: 0x2AF2C71 VA: 0x2AF2B70
+	|-Array.InternalEnumerator<RangePositionInfo>.MoveNext
+	|
+	|-RVA: 0x2AF2DE0 Offset: 0x2AF2EE1 VA: 0x2AF2DE0
+	|-Array.InternalEnumerator<Ranking2ChartInfoInput>.MoveNext
+	|
+	|-RVA: 0x2AF3050 Offset: 0x2AF3151 VA: 0x2AF3050
+	|-Array.InternalEnumerator<RaycastHit>.MoveNext
+	|
+	|-RVA: 0x2AF3300 Offset: 0x2AF3401 VA: 0x2AF3300
+	|-Array.InternalEnumerator<RaycastHit2D>.MoveNext
+	|
+	|-RVA: 0x2AF35B0 Offset: 0x2AF36B1 VA: 0x2AF35B0
+	|-Array.InternalEnumerator<RaycastResult>.MoveNext
+	|
+	|-RVA: 0x2AF3880 Offset: 0x2AF3981 VA: 0x2AF3880
+	|-Array.InternalEnumerator<Rect>.MoveNext
+	|
+	|-RVA: 0x2AF3B00 Offset: 0x2AF3C01 VA: 0x2AF3B00
+	|-Array.InternalEnumerator<RenderBuffer>.MoveNext
+	|
+	|-RVA: 0x2AF3D70 Offset: 0x2AF3E71 VA: 0x2AF3D70
+	|-Array.InternalEnumerator<RenderStateBlock>.MoveNext
+	|
+	|-RVA: 0x2AF4060 Offset: 0x2AF4161 VA: 0x2AF4060
+	|-Array.InternalEnumerator<RenderTargetHandle>.MoveNext
+	|
+	|-RVA: 0x2AF4310 Offset: 0x2AF4411 VA: 0x2AF4310
+	|-Array.InternalEnumerator<RenderTargetIdentifier>.MoveNext
+	|
+	|-RVA: 0x2AF45C0 Offset: 0x2AF46C1 VA: 0x2AF45C0
+	|-Array.InternalEnumerator<RendererListHandle>.MoveNext
+	|
+	|-RVA: 0x2AF4830 Offset: 0x2AF4931 VA: 0x2AF4830
+	|-Array.InternalEnumerator<ResourceHandle>.MoveNext
+	|
+	|-RVA: 0x2AF4AA0 Offset: 0x2AF4BA1 VA: 0x2AF4AA0
+	|-Array.InternalEnumerator<ResourceLocator>.MoveNext
+	|
+	|-RVA: 0x2AF4D10 Offset: 0x2AF4E11 VA: 0x2AF4D10
+	|-Array.InternalEnumerator<RichTextTagAttribute>.MoveNext
+	|
+	|-RVA: 0x2AF4FA0 Offset: 0x2AF50A1 VA: 0x2AF4FA0
+	|-Array.InternalEnumerator<RuntimeLabel>.MoveNext
+	|
+	|-RVA: 0x2AF5210 Offset: 0x2AF5311 VA: 0x2AF5210
+	|-Array.InternalEnumerator<sbyte>.MoveNext
+	|
+	|-RVA: 0x2AF5480 Offset: 0x2AF5581 VA: 0x2AF5480
+	|-Array.InternalEnumerator<SerializedType>.MoveNext
+	|
+	|-RVA: 0x2AF5710 Offset: 0x2AF5811 VA: 0x2AF5710
+	|-Array.InternalEnumerator<ShaderKeyword>.MoveNext
+	|
+	|-RVA: 0x2AF5970 Offset: 0x2AF5A71 VA: 0x2AF5970
+	|-Array.InternalEnumerator<ShaderTagId>.MoveNext
+	|
+	|-RVA: 0x2AF5BD0 Offset: 0x2AF5CD1 VA: 0x2AF5BD0
+	|-Array.InternalEnumerator<ShadowSliceData>.MoveNext
+	|
+	|-RVA: 0x2AF5E60 Offset: 0x2AF5F61 VA: 0x2AF5E60
+	|-Array.InternalEnumerator<Shape>.MoveNext
+	|
+	|-RVA: 0x2AF60F0 Offset: 0x2AF61F1 VA: 0x2AF60F0
+	|-Array.InternalEnumerator<float>.MoveNext
+	|
+	|-RVA: 0x2AF6360 Offset: 0x2AF6461 VA: 0x2AF6360
+	|-Array.InternalEnumerator<SixAxisSensorHandle>.MoveNext
+	|
+	|-RVA: 0x2AF65C0 Offset: 0x2AF66C1 VA: 0x2AF65C0
+	|-Array.InternalEnumerator<SixAxisSensorState>.MoveNext
+	|
+	|-RVA: 0x2AF6890 Offset: 0x2AF6991 VA: 0x2AF6890
+	|-Array.InternalEnumerator<SkeletonBone>.MoveNext
+	|
+	|-RVA: 0x2AF6B40 Offset: 0x2AF6C41 VA: 0x2AF6B40
+	|-Array.InternalEnumerator<SortingLayer>.MoveNext
+	|
+	|-RVA: 0x2AF6DA0 Offset: 0x2AF6EA1 VA: 0x2AF6DA0
+	|-Array.InternalEnumerator<SphericalHarmonicsL2>.MoveNext
+	|
+	|-RVA: 0x2AF7090 Offset: 0x2AF7191 VA: 0x2AF7090
+	|-Array.InternalEnumerator<SpinLock>.MoveNext
+	|
+	|-RVA: 0x2AF72F0 Offset: 0x2AF73F1 VA: 0x2AF72F0
+	|-Array.InternalEnumerator<SpringBoneComponents>.MoveNext
+	|
+	|-RVA: 0x2AF75C0 Offset: 0x2AF76C1 VA: 0x2AF75C0
+	|-Array.InternalEnumerator<SpringBoneProperties>.MoveNext
+	|
+	|-RVA: 0x2AF7850 Offset: 0x2AF7951 VA: 0x2AF7850
+	|-Array.InternalEnumerator<SpringColliderComponents>.MoveNext
+	|
+	|-RVA: 0x2AF7B40 Offset: 0x2AF7C41 VA: 0x2AF7B40
+	|-Array.InternalEnumerator<SpringColliderProperties>.MoveNext
+	|
+	|-RVA: 0x2AF7DB0 Offset: 0x2AF7EB1 VA: 0x2AF7DB0
+	|-Array.InternalEnumerator<SpringForceComponent>.MoveNext
+	|
+	|-RVA: 0x2982420 Offset: 0x2982521 VA: 0x2982420
+	|-Array.InternalEnumerator<SpringJobElement>.MoveNext
+	|
+	|-RVA: 0x29826B0 Offset: 0x29827B1 VA: 0x29826B0
+	|-Array.InternalEnumerator<SpriteState>.MoveNext
+	|
+	|-RVA: 0x2982940 Offset: 0x2982A41 VA: 0x2982940
+	|-Array.InternalEnumerator<SubMeshDescriptor>.MoveNext
+	|
+	|-RVA: 0x2982BF0 Offset: 0x2982CF1 VA: 0x2982BF0
+	|-Array.InternalEnumerator<TMP_CharacterInfo>.MoveNext
+	|
+	|-RVA: 0x2982E80 Offset: 0x2982F81 VA: 0x2982E80
+	|-Array.InternalEnumerator<TMP_FontWeightPair>.MoveNext
+	|
+	|-RVA: 0x29830F0 Offset: 0x29831F1 VA: 0x29830F0
+	|-Array.InternalEnumerator<TMP_LineInfo>.MoveNext
+	|
+	|-RVA: 0x29833E0 Offset: 0x29834E1 VA: 0x29833E0
+	|-Array.InternalEnumerator<TMP_LinkInfo>.MoveNext
+	|
+	|-RVA: 0x2983690 Offset: 0x2983791 VA: 0x2983690
+	|-Array.InternalEnumerator<TMP_MeshInfo>.MoveNext
+	|
+	|-RVA: 0x2983960 Offset: 0x2983A61 VA: 0x2983960
+	|-Array.InternalEnumerator<TMP_PageInfo>.MoveNext
+	|
+	|-RVA: 0x2983BF0 Offset: 0x2983CF1 VA: 0x2983BF0
+	|-Array.InternalEnumerator<TMP_WordInfo>.MoveNext
+	|
+	|-RVA: 0x2983E80 Offset: 0x2983F81 VA: 0x2983E80
+	|-Array.InternalEnumerator<TablePair>.MoveNext
+	|
+	|-RVA: 0x29840F0 Offset: 0x29841F1 VA: 0x29840F0
+	|-Array.InternalEnumerator<TextureHandle>.MoveNext
+	|
+	|-RVA: 0x2984360 Offset: 0x2984461 VA: 0x2984360
+	|-Array.InternalEnumerator<TimeSpan>.MoveNext
+	|
+	|-RVA: 0x29845D0 Offset: 0x29846D1 VA: 0x29845D0
+	|-Array.InternalEnumerator<Touch>.MoveNext
+	|
+	|-RVA: 0x29848A0 Offset: 0x29849A1 VA: 0x29848A0
+	|-Array.InternalEnumerator<TouchScreenState1>.MoveNext
+	|
+	|-RVA: 0x2984B50 Offset: 0x2984C51 VA: 0x2984B50
+	|-Array.InternalEnumerator<TouchScreenState10>.MoveNext
+	|
+	|-RVA: 0x2984DE0 Offset: 0x2984EE1 VA: 0x2984DE0
+	|-Array.InternalEnumerator<TouchScreenState11>.MoveNext
+	|
+	|-RVA: 0x2985070 Offset: 0x2985171 VA: 0x2985070
+	|-Array.InternalEnumerator<TouchScreenState12>.MoveNext
+	|
+	|-RVA: 0x2985300 Offset: 0x2985401 VA: 0x2985300
+	|-Array.InternalEnumerator<TouchScreenState13>.MoveNext
+	|
+	|-RVA: 0x2985590 Offset: 0x2985691 VA: 0x2985590
+	|-Array.InternalEnumerator<TouchScreenState14>.MoveNext
+	|
+	|-RVA: 0x2985820 Offset: 0x2985921 VA: 0x2985820
+	|-Array.InternalEnumerator<TouchScreenState15>.MoveNext
+	|
+	|-RVA: 0x2985AB0 Offset: 0x2985BB1 VA: 0x2985AB0
+	|-Array.InternalEnumerator<TouchScreenState16>.MoveNext
+	|
+	|-RVA: 0x2985D40 Offset: 0x2985E41 VA: 0x2985D40
+	|-Array.InternalEnumerator<TouchScreenState2>.MoveNext
+	|
+	|-RVA: 0x2986010 Offset: 0x2986111 VA: 0x2986010
+	|-Array.InternalEnumerator<TouchScreenState3>.MoveNext
+	|
+	|-RVA: 0x29862A0 Offset: 0x29863A1 VA: 0x29862A0
+	|-Array.InternalEnumerator<TouchScreenState4>.MoveNext
+	|
+	|-RVA: 0x2986530 Offset: 0x2986631 VA: 0x2986530
+	|-Array.InternalEnumerator<TouchScreenState5>.MoveNext
+	|
+	|-RVA: 0x29867C0 Offset: 0x29868C1 VA: 0x29867C0
+	|-Array.InternalEnumerator<TouchScreenState6>.MoveNext
+	|
+	|-RVA: 0x2986A50 Offset: 0x2986B51 VA: 0x2986A50
+	|-Array.InternalEnumerator<TouchScreenState7>.MoveNext
+	|
+	|-RVA: 0x2986CE0 Offset: 0x2986DE1 VA: 0x2986CE0
+	|-Array.InternalEnumerator<TouchScreenState8>.MoveNext
+	|
+	|-RVA: 0x2986F70 Offset: 0x2987071 VA: 0x2986F70
+	|-Array.InternalEnumerator<TouchScreenState9>.MoveNext
+	|
+	|-RVA: 0x2987200 Offset: 0x2987301 VA: 0x2987200
+	|-Array.InternalEnumerator<TouchState>.MoveNext
+	|
+	|-RVA: 0x29874B0 Offset: 0x29875B1 VA: 0x29874B0
+	|-Array.InternalEnumerator<TrailHand>.MoveNext
+	|
+	|-RVA: 0x2987740 Offset: 0x2987841 VA: 0x2987740
+	|-Array.InternalEnumerator<TrailVertex>.MoveNext
+	|
+	|-RVA: 0x29879D0 Offset: 0x2987AD1 VA: 0x29879D0
+	|-Array.InternalEnumerator<UICharInfo>.MoveNext
+	|
+	|-RVA: 0x2987C50 Offset: 0x2987D51 VA: 0x2987C50
+	|-Array.InternalEnumerator<UILineInfo>.MoveNext
+	|
+	|-RVA: 0x2987EC0 Offset: 0x2987FC1 VA: 0x2987EC0
+	|-Array.InternalEnumerator<UIVertex>.MoveNext
+	|
+	|-RVA: 0x29881B0 Offset: 0x29882B1 VA: 0x29881B0
+	|-Array.InternalEnumerator<ushort>.MoveNext
+	|
+	|-RVA: 0x2988420 Offset: 0x2988521 VA: 0x2988420
+	|-Array.InternalEnumerator<UInt16Enum>.MoveNext
+	|
+	|-RVA: 0x2988690 Offset: 0x2988791 VA: 0x2988690
+	|-Array.InternalEnumerator<uint>.MoveNext
+	|
+	|-RVA: 0x2988900 Offset: 0x2988A01 VA: 0x2988900
+	|-Array.InternalEnumerator<UInt32Enum>.MoveNext
+	|
+	|-RVA: 0x2988B70 Offset: 0x2988C71 VA: 0x2988B70
+	|-Array.InternalEnumerator<ulong>.MoveNext
+	|
+	|-RVA: 0x2988DE0 Offset: 0x2988EE1 VA: 0x2988DE0
+	|-Array.InternalEnumerator<Uid>.MoveNext
+	|
+	|-RVA: 0x2989050 Offset: 0x2989151 VA: 0x2989050
+	|-Array.InternalEnumerator<UniTask>.MoveNext
+	|
+	|-RVA: 0x29892C0 Offset: 0x29893C1 VA: 0x29892C0
+	|-Array.InternalEnumerator<Unit>.MoveNext
+	|
+	|-RVA: 0x2989520 Offset: 0x2989621 VA: 0x2989520
+	|-Array.InternalEnumerator<UnitEnum>.MoveNext
+	|
+	|-RVA: 0x2989790 Offset: 0x2989891 VA: 0x2989790
+	|-Array.InternalEnumerator<UserWord>.MoveNext
+	|
+	|-RVA: 0x2989A00 Offset: 0x2989B01 VA: 0x2989A00
+	|-Array.InternalEnumerator<Vector2>.MoveNext
+	|
+	|-RVA: 0x2989C70 Offset: 0x2989D71 VA: 0x2989C70
+	|-Array.InternalEnumerator<Vector2Int>.MoveNext
+	|
+	|-RVA: 0x2989EE0 Offset: 0x2989FE1 VA: 0x2989EE0
+	|-Array.InternalEnumerator<Vector3>.MoveNext
+	|
+	|-RVA: 0x298A160 Offset: 0x298A261 VA: 0x298A160
+	|-Array.InternalEnumerator<Vector4>.MoveNext
+	|
+	|-RVA: 0x298A3E0 Offset: 0x298A4E1 VA: 0x298A3E0
+	|-Array.InternalEnumerator<VertexAttributeDescriptor>.MoveNext
+	|
+	|-RVA: 0x298A650 Offset: 0x298A751 VA: 0x298A650
+	|-Array.InternalEnumerator<VibrationDeviceHandle>.MoveNext
+	|
+	|-RVA: 0x298A8B0 Offset: 0x298A9B1 VA: 0x298A8B0
+	|-Array.InternalEnumerator<VibrationDeviceInfo>.MoveNext
+	|
+	|-RVA: 0x298AB20 Offset: 0x298AC21 VA: 0x298AB20
+	|-Array.InternalEnumerator<VibrationValue>.MoveNext
+	|
+	|-RVA: 0x298ADA0 Offset: 0x298AEA1 VA: 0x298ADA0
+	|-Array.InternalEnumerator<VisibleLight>.MoveNext
+	|
+	|-RVA: 0x298B090 Offset: 0x298B191 VA: 0x298B090
+	|-Array.InternalEnumerator<WordWrapState>.MoveNext
+	|
+	|-RVA: 0x298B320 Offset: 0x298B421 VA: 0x298B320
+	|-Array.InternalEnumerator<X509ChainStatus>.MoveNext
+	|
+	|-RVA: 0x298B590 Offset: 0x298B691 VA: 0x298B590
+	|-Array.InternalEnumerator<XPathNode>.MoveNext
+	|
+	|-RVA: 0x298B820 Offset: 0x298B921 VA: 0x298B820
+	|-Array.InternalEnumerator<XPathNodeRef>.MoveNext
+	|
+	|-RVA: 0x298BA90 Offset: 0x298BB91 VA: 0x298BA90
+	|-Array.InternalEnumerator<XRView>.MoveNext
+	|
+	|-RVA: 0x298BD20 Offset: 0x298BE21 VA: 0x298BD20
+	|-Array.InternalEnumerator<float3>.MoveNext
+	|
+	|-RVA: 0x298BFA0 Offset: 0x298C0A1 VA: 0x298BFA0
+	|-Array.InternalEnumerator<float4x4>.MoveNext
+	|
+	|-RVA: 0x298C250 Offset: 0x298C351 VA: 0x298C250
+	|-Array.InternalEnumerator<jvalue>.MoveNext
+	|
+	|-RVA: 0x298C4C0 Offset: 0x298C5C1 VA: 0x298C4C0
+	|-Array.InternalEnumerator<uint4>.MoveNext
+	|
+	|-RVA: 0x298C730 Offset: 0x298C831 VA: 0x298C730
+	|-Array.InternalEnumerator<AICrossfire.PositionTable>.MoveNext
+	|
+	|-RVA: 0x298C990 Offset: 0x298CA91 VA: 0x298C990
+	|-Array.InternalEnumerator<AIEnum.SkillRangeEnemyData>.MoveNext
+	|
+	|-RVA: 0x298CC00 Offset: 0x298CD01 VA: 0x298CC00
+	|-Array.InternalEnumerator<AIOrder.UnitPriority>.MoveNext
+	|
+	|-RVA: 0x298CE70 Offset: 0x298CF71 VA: 0x298CE70
+	|-Array.InternalEnumerator<AmiiboSequence.GainItemData>.MoveNext
+	|
+	|-RVA: 0x298D0E0 Offset: 0x298D1E1 VA: 0x298D0E0
+	|-Array.InternalEnumerator<AnimationOutputWeightProcessor.WeightInfo>.MoveNext
+	|
+	|-RVA: 0x298D390 Offset: 0x298D491 VA: 0x298D390
+	|-Array.InternalEnumerator<ArenaOrderSequence.GodInfo>.MoveNext
+	|
+	|-RVA: 0x298D600 Offset: 0x298D701 VA: 0x298D600
+	|-Array.InternalEnumerator<BattleInfo.SupportData>.MoveNext
+	|
+	|-RVA: 0x298D870 Offset: 0x298D971 VA: 0x298D870
+	|-Array.InternalEnumerator<BeforeRenderHelper.OrderBlock>.MoveNext
+	|
+	|-RVA: 0x298DAE0 Offset: 0x298DBE1 VA: 0x298DAE0
+	|-Array.InternalEnumerator<Camera.RenderRequest>.MoveNext
+	|
+	|-RVA: 0x298DD70 Offset: 0x298DE71 VA: 0x298DD70
+	|-Array.InternalEnumerator<CameraState.CustomBlendable>.MoveNext
+	|
+	|-RVA: 0x298DFE0 Offset: 0x298E0E1 VA: 0x298DFE0
+	|-Array.InternalEnumerator<CinemachineBlendListCamera.Instruction>.MoveNext
+	|
+	|-RVA: 0x298E270 Offset: 0x298E371 VA: 0x298E270
+	|-Array.InternalEnumerator<CinemachineBlenderSettings.CustomBlend>.MoveNext
+	|
+	|-RVA: 0x298E500 Offset: 0x298E601 VA: 0x298E500
+	|-Array.InternalEnumerator<CinemachineClearShot.Pair>.MoveNext
+	|
+	|-RVA: 0x298E770 Offset: 0x298E871 VA: 0x298E770
+	|-Array.InternalEnumerator<CinemachineFreeLook.Orbit>.MoveNext
+	|
+	|-RVA: 0x298E9E0 Offset: 0x298EAE1 VA: 0x298E9E0
+	|-Array.InternalEnumerator<CinemachinePath.Waypoint>.MoveNext
+	|
+	|-RVA: 0x298EC90 Offset: 0x298ED91 VA: 0x298EC90
+	|-Array.InternalEnumerator<CinemachineSmoothPath.Waypoint>.MoveNext
+	|
+	|-RVA: 0x298EF10 Offset: 0x298F011 VA: 0x298EF10
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.HashPair>.MoveNext
+	|
+	|-RVA: 0x298F180 Offset: 0x298F281 VA: 0x298F180
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.Instruction>.MoveNext
+	|
+	|-RVA: 0x298F410 Offset: 0x298F511 VA: 0x298F410
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.ParentHash>.MoveNext
+	|
+	|-RVA: 0x298F680 Offset: 0x298F781 VA: 0x298F680
+	|-Array.InternalEnumerator<CinemachineTargetGroup.Target>.MoveNext
+	|
+	|-RVA: 0x298F8F0 Offset: 0x298F9F1 VA: 0x298F8F0
+	|-Array.InternalEnumerator<CodePointIndexer.TableRange>.MoveNext
+	|
+	|-RVA: 0x298FB80 Offset: 0x298FC81 VA: 0x298FB80
+	|-Array.InternalEnumerator<ContentCatalogData.Bucket>.MoveNext
+	|
+	|-RVA: 0x298FDF0 Offset: 0x298FEF1 VA: 0x298FDF0
+	|-Array.InternalEnumerator<CookieTokenizer.RecognizedAttribute>.MoveNext
+	|
+	|-RVA: 0x2990060 Offset: 0x2990161 VA: 0x2990060
+	|-Array.InternalEnumerator<DeferredLights.DrawCall>.MoveNext
+	|
+	|-RVA: 0x2990310 Offset: 0x2990411 VA: 0x2990310
+	|-Array.InternalEnumerator<DeferredShaderData.ComputeBufferInfo>.MoveNext
+	|
+	|-RVA: 0x2990580 Offset: 0x2990681 VA: 0x2990580
+	|-Array.InternalEnumerator<DeferredTiler.PrePunctualLight>.MoveNext
+	|
+	|-RVA: 0x2990810 Offset: 0x2990911 VA: 0x2990810
+	|-Array.InternalEnumerator<DelayedActionManager.DelegateInfo>.MoveNext
+	|
+	|-RVA: 0x2990AA0 Offset: 0x2990BA1 VA: 0x2990AA0
+	|-Array.InternalEnumerator<Detail.AsyncResultInt>.MoveNext
+	|
+	|-RVA: 0x2990D50 Offset: 0x2990E51 VA: 0x2990D50
+	|-Array.InternalEnumerator<Detail.CppArray>.MoveNext
+	|
+	|-RVA: 0x2990FC0 Offset: 0x29910C1 VA: 0x2990FC0
+	|-Array.InternalEnumerator<Detail.NotificationEventInt>.MoveNext
+	|
+	|-RVA: 0x2991270 Offset: 0x2991371 VA: 0x2991270
+	|-Array.InternalEnumerator<DisposUnit.Item>.MoveNext
+	|
+	|-RVA: 0x29914E0 Offset: 0x29915E1 VA: 0x29914E0
+	|-Array.InternalEnumerator<DragonRidePresetParamData.CourseData>.MoveNext
+	|
+	|-RVA: 0x2991750 Offset: 0x2991851 VA: 0x2991750
+	|-Array.InternalEnumerator<DragonRideTargetGroup.ChainParam>.MoveNext
+	|
+	|-RVA: 0x29919C0 Offset: 0x2991AC1 VA: 0x29919C0
+	|-Array.InternalEnumerator<DynamicMesh.State>.MoveNext
+	|
+	|-RVA: 0x2991C30 Offset: 0x2991D31 VA: 0x2991C30
+	|-Array.InternalEnumerator<FXZEx.HitPoint>.MoveNext
+	|
+	|-RVA: 0x2991EE0 Offset: 0x2991FE1 VA: 0x2991EE0
+	|-Array.InternalEnumerator<FishingRadicalParamData.RadicalParam>.MoveNext
+	|
+	|-RVA: 0x2992160 Offset: 0x2992261 VA: 0x2992160
+	|-Array.InternalEnumerator<GameVariable.Value>.MoveNext
+	|
+	|-RVA: 0x29923D0 Offset: 0x29924D1 VA: 0x29923D0
+	|-Array.InternalEnumerator<GmapPathAdjuster.TargetModel>.MoveNext
+	|
+	|-RVA: 0x2992660 Offset: 0x2992761 VA: 0x2992660
+	|-Array.InternalEnumerator<GmapSpotAdjuster.TargetModel>.MoveNext
+	|
+	|-RVA: 0x29928F0 Offset: 0x29929F1 VA: 0x29928F0
+	|-Array.InternalEnumerator<GrounderQuadruped.Foot>.MoveNext
+	|
+	|-RVA: 0x2992BA0 Offset: 0x2992CA1 VA: 0x2992BA0
+	|-Array.InternalEnumerator<Hashtable.bucket>.MoveNext
+	|
+	|-RVA: 0x2992E30 Offset: 0x2992F31 VA: 0x2992E30
+	|-Array.InternalEnumerator<HeadingTracker.Item>.MoveNext
+	|
+	|-RVA: 0x29930C0 Offset: 0x29931C1 VA: 0x29930C0
+	|-Array.InternalEnumerator<HubAccessoryRoomCamera.BackgroundSettings>.MoveNext
+	|
+	|-RVA: 0x2993370 Offset: 0x2993471 VA: 0x2993370
+	|-Array.InternalEnumerator<HubFastTravel.Location>.MoveNext
+	|
+	|-RVA: 0x2993600 Offset: 0x2993701 VA: 0x2993600
+	|-Array.InternalEnumerator<HubLensFlare.Flare>.MoveNext
+	|
+	|-RVA: 0x29938B0 Offset: 0x29939B1 VA: 0x29938B0
+	|-Array.InternalEnumerator<HubLookAtController.LookAtIKParam>.MoveNext
+	|
+	|-RVA: 0x2993B30 Offset: 0x2993C31 VA: 0x2993B30
+	|-Array.InternalEnumerator<HubMaterialArray.MaterialInfo>.MoveNext
+	|
+	|-RVA: 0x2993DA0 Offset: 0x2993EA1 VA: 0x2993DA0
+	|-Array.InternalEnumerator<IKSolverLimb.AxisDirection>.MoveNext
+	|
+	|-RVA: 0x2994050 Offset: 0x2994151 VA: 0x2994050
+	|-Array.InternalEnumerator<InventoryPoolItemMenuContent.KindBgNameClass>.MoveNext
+	|
+	|-RVA: 0x29942C0 Offset: 0x29943C1 VA: 0x29942C0
+	|-Array.InternalEnumerator<LightUtility.ParametricLightMeshVertex>.MoveNext
+	|
+	|-RVA: 0x2994570 Offset: 0x2994671 VA: 0x2994570
+	|-Array.InternalEnumerator<LightUtility.SpriteLightMeshVertex>.MoveNext
+	|
+	|-RVA: 0x2994820 Offset: 0x2994921 VA: 0x2994820
+	|-Array.InternalEnumerator<Map.Pos>.MoveNext
+	|
+	|-RVA: 0x2994A90 Offset: 0x2994B91 VA: 0x2994A90
+	|-Array.InternalEnumerator<MapGodExp.KindDesc>.MoveNext
+	|
+	|-RVA: 0x2994D00 Offset: 0x2994E01 VA: 0x2994D00
+	|-Array.InternalEnumerator<MapHistory.Command>.MoveNext
+	|
+	|-RVA: 0x2994F70 Offset: 0x2995071 VA: 0x2994F70
+	|-Array.InternalEnumerator<MapImage.BackupTerrain>.MoveNext
+	|
+	|-RVA: 0x29951E0 Offset: 0x29952E1 VA: 0x29951E0
+	|-Array.InternalEnumerator<MapImageRange.Pos>.MoveNext
+	|
+	|-RVA: 0x2995440 Offset: 0x2995541 VA: 0x2995440
+	|-Array.InternalEnumerator<MapKillBonus.KillBonus>.MoveNext
+	|
+	|-RVA: 0x29956B0 Offset: 0x29957B1 VA: 0x29956B0
+	|-Array.InternalEnumerator<MapKillBonus.KilledBonus>.MoveNext
+	|
+	|-RVA: 0x2995920 Offset: 0x2995A21 VA: 0x2995920
+	|-Array.InternalEnumerator<MapMind.Record>.MoveNext
+	|
+	|-RVA: 0x2995BF0 Offset: 0x2995CF1 VA: 0x2995BF0
+	|-Array.InternalEnumerator<MapMind.Target>.MoveNext
+	|
+	|-RVA: 0x2995E80 Offset: 0x2995F81 VA: 0x2995E80
+	|-Array.InternalEnumerator<MapPanelDebug.Entity>.MoveNext
+	|
+	|-RVA: 0x2996110 Offset: 0x2996211 VA: 0x2996110
+	|-Array.InternalEnumerator<NexRanking.Data>.MoveNext
+	|
+	|-RVA: 0x2996380 Offset: 0x2996481 VA: 0x2996380
+	|-Array.InternalEnumerator<NexVersus.RatingData>.MoveNext
+	|
+	|-RVA: 0x29965F0 Offset: 0x29966F1 VA: 0x29965F0
+	|-Array.InternalEnumerator<NoiseSettings.TransformNoiseParams>.MoveNext
+	|
+	|-RVA: 0x29968A0 Offset: 0x29969A1 VA: 0x29968A0
+	|-Array.InternalEnumerator<PackedPlayModeBuildLogs.RuntimeBuildLog>.MoveNext
+	|
+	|-RVA: 0x2996B10 Offset: 0x2996C11 VA: 0x2996B10
+	|-Array.InternalEnumerator<ParameterizedStrings.FormatParam>.MoveNext
+	|
+	|-RVA: 0x2996D80 Offset: 0x2996E81 VA: 0x2996D80
+	|-Array.InternalEnumerator<ParticleSystem.Particle>.MoveNext
+	|
+	|-RVA: 0x2997010 Offset: 0x2997111 VA: 0x2997010
+	|-Array.InternalEnumerator<ProfileCard.Achievement>.MoveNext
+	|
+	|-RVA: 0x2997280 Offset: 0x2997381 VA: 0x2997280
+	|-Array.InternalEnumerator<ProfileCard.SortieCount>.MoveNext
+	|
+	|-RVA: 0x2997510 Offset: 0x2997611 VA: 0x2997510
+	|-Array.InternalEnumerator<QualitySettingsStack.Settings>.MoveNext
+	|
+	|-RVA: 0x29977C0 Offset: 0x29978C1 VA: 0x29977C0
+	|-Array.InternalEnumerator<RangeData.Offset>.MoveNext
+	|
+	|-RVA: 0x2997A30 Offset: 0x2997B31 VA: 0x2997A30
+	|-Array.InternalEnumerator<RegexCharClass.LowerCaseMapping>.MoveNext
+	|
+	|-RVA: 0x2997CA0 Offset: 0x2997DA1 VA: 0x2997CA0
+	|-Array.InternalEnumerator<Relay.ChooseAwardeeData>.MoveNext
+	|
+	|-RVA: 0x2997F30 Offset: 0x2998031 VA: 0x2997F30
+	|-Array.InternalEnumerator<RelayAwardData.Info>.MoveNext
+	|
+	|-RVA: 0x29981A0 Offset: 0x29982A1 VA: 0x29981A0
+	|-Array.InternalEnumerator<RenderGraph.CompiledPassInfo>.MoveNext
+	|
+	|-RVA: 0x2998470 Offset: 0x2998571 VA: 0x2998470
+	|-Array.InternalEnumerator<RenderGraph.CompiledResourceInfo>.MoveNext
+	|
+	|-RVA: 0x2998700 Offset: 0x2998801 VA: 0x2998700
+	|-Array.InternalEnumerator<RenderGraphDebugData.PassDebugData>.MoveNext
+	|
+	|-RVA: 0x2998990 Offset: 0x2998A91 VA: 0x2998990
+	|-Array.InternalEnumerator<RenderGraphDebugData.ResourceDebugData>.MoveNext
+	|
+	|-RVA: 0x2998C40 Offset: 0x2998D41 VA: 0x2998C40
+	|-Array.InternalEnumerator<RenderGraphResourceRegistry.RendererListResource>.MoveNext
+	|
+	|-RVA: 0x2998ED0 Offset: 0x2998FD1 VA: 0x2998ED0
+	|-Array.InternalEnumerator<RingCleaningUnitSelectMenu.GodParam>.MoveNext
+	|
+	|-RVA: 0x2999140 Offset: 0x2999241 VA: 0x2999140
+	|-Array.InternalEnumerator<SampleWave.Data>.MoveNext
+	|
+	|-RVA: 0x29993C0 Offset: 0x29994C1 VA: 0x29993C0
+	|-Array.InternalEnumerator<SampleWave.Temp>.MoveNext
+	|
+	|-RVA: 0x2999630 Offset: 0x2999731 VA: 0x2999630
+	|-Array.InternalEnumerator<SendMouseEvents.HitInfo>.MoveNext
+	|
+	|-RVA: 0x29998A0 Offset: 0x29999A1 VA: 0x29998A0
+	|-Array.InternalEnumerator<SequenceNode.SequenceConstructPosContext>.MoveNext
+	|
+	|-RVA: 0x2999B50 Offset: 0x2999C51 VA: 0x2999B50
+	|-Array.InternalEnumerator<ShaderInput.LightData>.MoveNext
+	|
+	|-RVA: 0x2999E20 Offset: 0x2999F21 VA: 0x2999E20
+	|-Array.InternalEnumerator<ShaderInput.ShadowData>.MoveNext
+	|
+	|-RVA: 0x299A0F0 Offset: 0x299A1F1 VA: 0x299A0F0
+	|-Array.InternalEnumerator<ShadowUtility.Edge>.MoveNext
+	|
+	|-RVA: 0x2D7F660 Offset: 0x2D7F761 VA: 0x2D7F660
+	|-Array.InternalEnumerator<SimpleAnimationPlayable.QueuedState>.MoveNext
+	|
+	|-RVA: 0x2D7F8D0 Offset: 0x2D7F9D1 VA: 0x2D7F8D0
+	|-Array.InternalEnumerator<SkillArray.Entity>.MoveNext
+	|
+	|-RVA: 0x2D7FB30 Offset: 0x2D7FC31 VA: 0x2D7FB30
+	|-Array.InternalEnumerator<Socket.WSABUF>.MoveNext
+	|
+	|-RVA: 0x2D7FDA0 Offset: 0x2D7FEA1 VA: 0x2D7FDA0
+	|-Array.InternalEnumerator<Stream.Info>.MoveNext
+	|
+	|-RVA: 0x2D80010 Offset: 0x2D80111 VA: 0x2D80010
+	|-Array.InternalEnumerator<TMP_Text.UnicodeChar>.MoveNext
+	|
+	|-RVA: 0x2D80280 Offset: 0x2D80381 VA: 0x2D80280
+	|-Array.InternalEnumerator<TexturePacker_JsonArray.Frame>.MoveNext
+	|
+	|-RVA: 0x2D80530 Offset: 0x2D80631 VA: 0x2D80530
+	|-Array.InternalEnumerator<TimeNotificationBehaviour.NotificationEntry>.MoveNext
+	|
+	|-RVA: 0x2D807C0 Offset: 0x2D808C1 VA: 0x2D807C0
+	|-Array.InternalEnumerator<UnitySynchronizationContext.WorkRequest>.MoveNext
+	|
+	|-RVA: 0x2D80A50 Offset: 0x2D80B51 VA: 0x2D80A50
+	|-Array.InternalEnumerator<XmlNamespaceManager.NamespaceDeclaration>.MoveNext
+	|
+	|-RVA: 0x2D80CE0 Offset: 0x2D80DE1 VA: 0x2D80CE0
+	|-Array.InternalEnumerator<XmlSchemaObjectTable.XmlSchemaObjectEntry>.MoveNext
+	|
+	|-RVA: 0x2D80F50 Offset: 0x2D81051 VA: 0x2D80F50
+	|-Array.InternalEnumerator<XmlTextReaderImpl.ParsingState>.MoveNext
+	|
+	|-RVA: 0x2D81240 Offset: 0x2D81341 VA: 0x2D81240
+	|-Array.InternalEnumerator<AIThink.EnchantThink.Desc>.MoveNext
+	|
+	|-RVA: 0x2D814B0 Offset: 0x2D815B1 VA: 0x2D814B0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.ItemInfo>.MoveNext
+	|
+	|-RVA: 0x2D81710 Offset: 0x2D81811 VA: 0x2D81710
+	|-Array.InternalEnumerator<AIThink.EnchantThink.SurroundingInfo>.MoveNext
+	|
+	|-RVA: 0x2D81970 Offset: 0x2D81A71 VA: 0x2D81970
+	|-Array.InternalEnumerator<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>.MoveNext
+	|
+	|-RVA: 0x2D81BE0 Offset: 0x2D81CE1 VA: 0x2D81BE0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreChangeMetaParamInt>.MoveNext
+	|
+	|-RVA: 0x2D81E70 Offset: 0x2D81F71 VA: 0x2D81E70
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreDeleteParamInt>.MoveNext
+	|
+	|-RVA: 0x2D820E0 Offset: 0x2D821E1 VA: 0x2D820E0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreGetMetaParamInt>.MoveNext
+	|
+	|-RVA: 0x2D82390 Offset: 0x2D82491 VA: 0x2D82390
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreMetaInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D82620 Offset: 0x2D82721 VA: 0x2D82620
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePasswordInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D828B0 Offset: 0x2D829B1 VA: 0x2D828B0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePersistenceInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D82B40 Offset: 0x2D82C41 VA: 0x2D82B40
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePreparePostParamInt>.MoveNext
+	|
+	|-RVA: 0x2D82DD0 Offset: 0x2D82ED1 VA: 0x2D82DD0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRateObjectParamInt>.MoveNext
+	|
+	|-RVA: 0x2D83040 Offset: 0x2D83141 VA: 0x2D83040
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingInitParamInt>.MoveNext
+	|
+	|-RVA: 0x2D832D0 Offset: 0x2D833D1 VA: 0x2D832D0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingTargetInt>.MoveNext
+	|
+	|-RVA: 0x2D83540 Offset: 0x2D83641 VA: 0x2D83540
+	|-Array.InternalEnumerator<Detail.Ranking.RankingCachedResultInt>.MoveNext
+	|
+	|-RVA: 0x2D837F0 Offset: 0x2D838F1 VA: 0x2D837F0
+	|-Array.InternalEnumerator<Detail.Ranking.RankingOrderParamInt>.MoveNext
+	|
+	|-RVA: 0x2D83A60 Offset: 0x2D83B61 VA: 0x2D83A60
+	|-Array.InternalEnumerator<Detail.Ranking.RankingRankDataInt>.MoveNext
+	|
+	|-RVA: 0x2D83D10 Offset: 0x2D83E11 VA: 0x2D83D10
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ChartInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D83FE0 Offset: 0x2D840E1 VA: 0x2D83FE0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2RankDataInt>.MoveNext
+	|
+	|-RVA: 0x2D84290 Offset: 0x2D84391 VA: 0x2D84290
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ScoreDataInt>.MoveNext
+	|
+	|-RVA: 0x2D84500 Offset: 0x2D84601 VA: 0x2D84500
+	|-Array.InternalEnumerator<Detail.Screening.ScreeningContextInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D84790 Offset: 0x2D84891 VA: 0x2D84790
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberContentInt>.MoveNext
+	|
+	|-RVA: 0x2D84A60 Offset: 0x2D84B61 VA: 0x2D84A60
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberGetContentParamInt>.MoveNext
+	|
+	|-RVA: 0x2D84CF0 Offset: 0x2D84DF1 VA: 0x2D84CF0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D84FA0 Offset: 0x2D850A1 VA: 0x2D84FA0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusParamInt>.MoveNext
+	|
+	|-RVA: 0x2D85230 Offset: 0x2D85331 VA: 0x2D85230
+	|-Array.InternalEnumerator<Detail.Utility.IntegerSettings>.MoveNext
+	|
+	|-RVA: 0x2D854A0 Offset: 0x2D855A1 VA: 0x2D854A0
+	|-Array.InternalEnumerator<Detail.Utility.UniqueIdInfoInt>.MoveNext
+	|
+	|-RVA: 0x2D85710 Offset: 0x2D85811 VA: 0x2D85710
+	|-Array.InternalEnumerator<FacetsChecker.FacetsCompiler.Map>.MoveNext
+	|
+	|-RVA: 0x2D85980 Offset: 0x2D85A81 VA: 0x2D85980
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Appearance>.MoveNext
+	|
+	|-RVA: 0x2D85C10 Offset: 0x2D85D11 VA: 0x2D85C10
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Leaving>.MoveNext
+	|
+	|-RVA: 0x2D85E70 Offset: 0x2D85F71 VA: 0x2D85E70
+	|-Array.InternalEnumerator<MapHistory.ReplayUnitMap.Data>.MoveNext
+	|
+	|-RVA: 0x2D860E0 Offset: 0x2D861E1 VA: 0x2D860E0
+	|-Array.InternalEnumerator<MapHistory.Rewind.LatestInspectorData>.MoveNext
+	|
+	|-RVA: 0x2D86340 Offset: 0x2D86441 VA: 0x2D86340
+	|-Array.InternalEnumerator<MapHistory.Rewind.WorkTerrainData>.MoveNext
+	|
+	|-RVA: 0x2D865A0 Offset: 0x2D866A1 VA: 0x2D865A0
+	|-Array.InternalEnumerator<MapHistory.RewindUnitMap.Data>.MoveNext
+	|
+	|-RVA: 0x2D86850 Offset: 0x2D86951 VA: 0x2D86850
+	|-Array.InternalEnumerator<MapKillBonus.Work.Pos>.MoveNext
+	|
+	|-RVA: 0x2D86AB0 Offset: 0x2D86BB1 VA: 0x2D86AB0
+	|-Array.InternalEnumerator<MapSkill.AroundCalculator.Result>.MoveNext
+	|
+	|-RVA: 0x2D86D20 Offset: 0x2D86E21 VA: 0x2D86D20
+	|-Array.InternalEnumerator<Nex.ApiCallChecker.Guideline>.MoveNext
+	|
+	|-RVA: 0x2D86F90 Offset: 0x2D87091 VA: 0x2D86F90
+	|-Array.InternalEnumerator<Ngc.MaskTextSequenceBase.Data>.MoveNext
+	|
+	|-RVA: 0x2D87220 Offset: 0x2D87321 VA: 0x2D87220
+	|-Array.InternalEnumerator<TargetPositionCache.CacheCurve.Item>.MoveNext
+	|
+	|-RVA: 0x2D874D0 Offset: 0x2D875D1 VA: 0x2D874D0
+	|-Array.InternalEnumerator<TargetPositionCache.CacheEntry.RecordingItem>.MoveNext
+	|
+	|-RVA: 0x2D87780 Offset: 0x2D87881 VA: 0x2D87780
+	|-Array.InternalEnumerator<TerrainUtility.TerrainMap.TileCoord>.MoveNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public T get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1EB3830 Offset: 0x1EB3931 VA: 0x1EB3830
+	|-Array.InternalEnumerator<ArraySegment<byte>>.get_Current
+	|
+	|-RVA: 0x1EB3AA0 Offset: 0x1EB3BA1 VA: 0x1EB3AA0
+	|-Array.InternalEnumerator<AsyncOperationHandle<object>>.get_Current
+	|
+	|-RVA: 0x1EB3D30 Offset: 0x1EB3E31 VA: 0x1EB3D30
+	|-Array.InternalEnumerator<MapDeployTemplate.Queue.Data<object>>.get_Current
+	|
+	|-RVA: 0x1EB3F90 Offset: 0x1EB4091 VA: 0x1EB3F90
+	|-Array.InternalEnumerator<Nex.DataStore.ParamPool.Data<object>>.get_Current
+	|
+	|-RVA: 0x1EB4200 Offset: 0x1EB4301 VA: 0x1EB4200
+	|-Array.InternalEnumerator<Nex.Screening.ParamPool.Data<object>>.get_Current
+	|
+	|-RVA: 0x1EB4470 Offset: 0x1EB4571 VA: 0x1EB4470
+	|-Array.InternalEnumerator<IntervalTree.Entry<object>>.get_Current
+	|
+	|-RVA: 0x1EB4700 Offset: 0x1EB4801 VA: 0x1EB4700
+	|-Array.InternalEnumerator<Dictionary.Entry<ValueTuple<object, int>, object>>.get_Current
+	|
+	|-RVA: 0x1EB4990 Offset: 0x1EB4A91 VA: 0x1EB4990
+	|-Array.InternalEnumerator<Dictionary.Entry<byte, object>>.get_Current
+	|
+	|-RVA: 0x1EB4C20 Offset: 0x1EB4D21 VA: 0x1EB4C20
+	|-Array.InternalEnumerator<Dictionary.Entry<CancellationToken, object>>.get_Current
+	|
+	|-RVA: 0x1EB4EB0 Offset: 0x1EB4FB1 VA: 0x1EB4EB0
+	|-Array.InternalEnumerator<Dictionary.Entry<char, object>>.get_Current
+	|
+	|-RVA: 0x1EB5140 Offset: 0x1EB5241 VA: 0x1EB5140
+	|-Array.InternalEnumerator<Dictionary.Entry<Guid, object>>.get_Current
+	|
+	|-RVA: 0x1EB53D0 Offset: 0x1EB54D1 VA: 0x1EB53D0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, bool>>.get_Current
+	|
+	|-RVA: 0x1EB5640 Offset: 0x1EB5741 VA: 0x1EB5640
+	|-Array.InternalEnumerator<Dictionary.Entry<int, byte>>.get_Current
+	|
+	|-RVA: 0x1EB58B0 Offset: 0x1EB59B1 VA: 0x1EB58B0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, char>>.get_Current
+	|
+	|-RVA: 0x1EB5B20 Offset: 0x1EB5C21 VA: 0x1EB5B20
+	|-Array.InternalEnumerator<Dictionary.Entry<int, DiagnosticEvent>>.get_Current
+	|
+	|-RVA: 0x1EB5DD0 Offset: 0x1EB5ED1 VA: 0x1EB5DD0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, int>>.get_Current
+	|
+	|-RVA: 0x1EB6040 Offset: 0x1EB6141 VA: 0x1EB6040
+	|-Array.InternalEnumerator<Dictionary.Entry<int, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EB62B0 Offset: 0x1EB63B1 VA: 0x1EB62B0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, long>>.get_Current
+	|
+	|-RVA: 0x1EB6540 Offset: 0x1EB6641 VA: 0x1EB6540
+	|-Array.InternalEnumerator<Dictionary.Entry<int, MapPos>>.get_Current
+	|
+	|-RVA: 0x1EB67D0 Offset: 0x1EB68D1 VA: 0x1EB67D0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, object>>.get_Current
+	|
+	|-RVA: 0x1EB6A60 Offset: 0x1EB6B61 VA: 0x1EB6A60
+	|-Array.InternalEnumerator<Dictionary.Entry<int, uint>>.get_Current
+	|
+	|-RVA: 0x1EB6CD0 Offset: 0x1EB6DD1 VA: 0x1EB6CD0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, AIThink.EnchantThink.SurroundingInfo>>.get_Current
+	|
+	|-RVA: 0x1EB6F40 Offset: 0x1EB7041 VA: 0x1EB6F40
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, bool>>.get_Current
+	|
+	|-RVA: 0x1EB71B0 Offset: 0x1EB72B1 VA: 0x1EB71B0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, int>>.get_Current
+	|
+	|-RVA: 0x1EB7420 Offset: 0x1EB7521 VA: 0x1EB7420
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EB7690 Offset: 0x1EB7791 VA: 0x1EB7690
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, object>>.get_Current
+	|
+	|-RVA: 0x1EB7920 Offset: 0x1EB7A21 VA: 0x1EB7920
+	|-Array.InternalEnumerator<Dictionary.Entry<long, object>>.get_Current
+	|
+	|-RVA: 0x1EB7BB0 Offset: 0x1EB7CB1 VA: 0x1EB7BB0
+	|-Array.InternalEnumerator<Dictionary.Entry<MapPos, int>>.get_Current
+	|
+	|-RVA: 0x1EB7E40 Offset: 0x1EB7F41 VA: 0x1EB7E40
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle<object>>>.get_Current
+	|
+	|-RVA: 0x1EB80F0 Offset: 0x1EB81F1 VA: 0x1EB80F0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle>>.get_Current
+	|
+	|-RVA: 0x1EB83A0 Offset: 0x1EB84A1 VA: 0x1EB83A0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, bool>>.get_Current
+	|
+	|-RVA: 0x1EB8630 Offset: 0x1EB8731 VA: 0x1EB8630
+	|-Array.InternalEnumerator<Dictionary.Entry<object, byte>>.get_Current
+	|
+	|-RVA: 0x1EB88C0 Offset: 0x1EB89C1 VA: 0x1EB88C0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, int>>.get_Current
+	|
+	|-RVA: 0x1EB8B50 Offset: 0x1EB8C51 VA: 0x1EB8B50
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EB8DE0 Offset: 0x1EB8EE1 VA: 0x1EB8DE0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, IntPtr>>.get_Current
+	|
+	|-RVA: 0x1EB9070 Offset: 0x1EB9171 VA: 0x1EB9070
+	|-Array.InternalEnumerator<Dictionary.Entry<object, object>>.get_Current
+	|
+	|-RVA: 0x1EB9300 Offset: 0x1EB9401 VA: 0x1EB9300
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Playable>>.get_Current
+	|
+	|-RVA: 0x1EB9590 Offset: 0x1EB9691 VA: 0x1EB9590
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ResourceLocator>>.get_Current
+	|
+	|-RVA: 0x1EB9820 Offset: 0x1EB9921 VA: 0x1EB9820
+	|-Array.InternalEnumerator<Dictionary.Entry<object, float>>.get_Current
+	|
+	|-RVA: 0x1EB9AB0 Offset: 0x1EB9BB1 VA: 0x1EB9AB0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ushort>>.get_Current
+	|
+	|-RVA: 0x1EB9D40 Offset: 0x1EB9E41 VA: 0x1EB9D40
+	|-Array.InternalEnumerator<Dictionary.Entry<object, GameVariable.Value>>.get_Current
+	|
+	|-RVA: 0x1EB9FD0 Offset: 0x1EBA0D1 VA: 0x1EB9FD0
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, DataStoreRatingInfo>>.get_Current
+	|
+	|-RVA: 0x1EBA280 Offset: 0x1EBA381 VA: 0x1EBA280
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, object>>.get_Current
+	|
+	|-RVA: 0x1EBA510 Offset: 0x1EBA611 VA: 0x1EBA510
+	|-Array.InternalEnumerator<Dictionary.Entry<ushort, int>>.get_Current
+	|
+	|-RVA: 0x1EBA780 Offset: 0x1EBA881 VA: 0x1EBA780
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, int>>.get_Current
+	|
+	|-RVA: 0x1EBA9F0 Offset: 0x1EBAAF1 VA: 0x1EBA9F0
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, object>>.get_Current
+	|
+	|-RVA: 0x1EBAC80 Offset: 0x1EBAD81 VA: 0x1EBAC80
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Friend>>.get_Current
+	|
+	|-RVA: 0x1EBAF10 Offset: 0x1EBB011 VA: 0x1EBAF10
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EBB1A0 Offset: 0x1EBB2A1 VA: 0x1EBB1A0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, object>>.get_Current
+	|
+	|-RVA: 0x1EBB430 Offset: 0x1EBB531 VA: 0x1EBB430
+	|-Array.InternalEnumerator<Dictionary.Entry<Vector3, int>>.get_Current
+	|
+	|-RVA: 0x1EBB6C0 Offset: 0x1EBB7C1 VA: 0x1EBB6C0
+	|-Array.InternalEnumerator<Dictionary.Entry<XPathNodeRef, XPathNodeRef>>.get_Current
+	|
+	|-RVA: 0x1EBB970 Offset: 0x1EBBA71 VA: 0x1EBB970
+	|-Array.InternalEnumerator<Dictionary.Entry<TerrainUtility.TerrainMap.TileCoord, object>>.get_Current
+	|
+	|-RVA: 0x1EBBC00 Offset: 0x1EBBD01 VA: 0x1EBBC00
+	|-Array.InternalEnumerator<PriorityQueue.IndexedItem<object>>.get_Current
+	|
+	|-RVA: 0x1EBBE70 Offset: 0x1EBBF71 VA: 0x1EBBE70
+	|-Array.InternalEnumerator<KeyValuePair<ValueTuple<object, int>, object>>.get_Current
+	|
+	|-RVA: 0x1EBC100 Offset: 0x1EBC201 VA: 0x1EBC100
+	|-Array.InternalEnumerator<KeyValuePair<byte, object>>.get_Current
+	|
+	|-RVA: 0x1EBC370 Offset: 0x1EBC471 VA: 0x1EBC370
+	|-Array.InternalEnumerator<KeyValuePair<CancellationToken, object>>.get_Current
+	|
+	|-RVA: 0x1EBC5E0 Offset: 0x1EBC6E1 VA: 0x1EBC5E0
+	|-Array.InternalEnumerator<KeyValuePair<char, object>>.get_Current
+	|
+	|-RVA: 0x1EBC850 Offset: 0x1EBC951 VA: 0x1EBC850
+	|-Array.InternalEnumerator<KeyValuePair<DateTime, object>>.get_Current
+	|
+	|-RVA: 0x1EBCAC0 Offset: 0x1EBCBC1 VA: 0x1EBCAC0
+	|-Array.InternalEnumerator<KeyValuePair<Guid, object>>.get_Current
+	|
+	|-RVA: 0x1EBCD50 Offset: 0x1EBCE51 VA: 0x1EBCD50
+	|-Array.InternalEnumerator<KeyValuePair<int, bool>>.get_Current
+	|
+	|-RVA: 0x1EBCFC0 Offset: 0x1EBD0C1 VA: 0x1EBCFC0
+	|-Array.InternalEnumerator<KeyValuePair<int, byte>>.get_Current
+	|
+	|-RVA: 0x1EBD230 Offset: 0x1EBD331 VA: 0x1EBD230
+	|-Array.InternalEnumerator<KeyValuePair<int, char>>.get_Current
+	|
+	|-RVA: 0x1EBD4A0 Offset: 0x1EBD5A1 VA: 0x1EBD4A0
+	|-Array.InternalEnumerator<KeyValuePair<int, DiagnosticEvent>>.get_Current
+	|
+	|-RVA: 0x1EBD750 Offset: 0x1EBD851 VA: 0x1EBD750
+	|-Array.InternalEnumerator<KeyValuePair<int, int>>.get_Current
+	|
+	|-RVA: 0x1EBD9C0 Offset: 0x1EBDAC1 VA: 0x1EBD9C0
+	|-Array.InternalEnumerator<KeyValuePair<int, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EBDC30 Offset: 0x1EBDD31 VA: 0x1EBDC30
+	|-Array.InternalEnumerator<KeyValuePair<int, long>>.get_Current
+	|
+	|-RVA: 0x1EBDEA0 Offset: 0x1EBDFA1 VA: 0x1EBDEA0
+	|-Array.InternalEnumerator<KeyValuePair<int, MapPos>>.get_Current
+	|
+	|-RVA: 0x1EBE110 Offset: 0x1EBE211 VA: 0x1EBE110
+	|-Array.InternalEnumerator<KeyValuePair<int, object>>.get_Current
+	|
+	|-RVA: 0x1EBE380 Offset: 0x1EBE481 VA: 0x1EBE380
+	|-Array.InternalEnumerator<KeyValuePair<int, uint>>.get_Current
+	|
+	|-RVA: 0x1EBE5F0 Offset: 0x1EBE6F1 VA: 0x1EBE5F0
+	|-Array.InternalEnumerator<KeyValuePair<int, AIThink.EnchantThink.SurroundingInfo>>.get_Current
+	|
+	|-RVA: 0x1EBE860 Offset: 0x1EBE961 VA: 0x1EBE860
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, bool>>.get_Current
+	|
+	|-RVA: 0x1EBEAD0 Offset: 0x1EBEBD1 VA: 0x1EBEAD0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, int>>.get_Current
+	|
+	|-RVA: 0x1EBED40 Offset: 0x1EBEE41 VA: 0x1EBED40
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EBEFB0 Offset: 0x1EBF0B1 VA: 0x1EBEFB0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, object>>.get_Current
+	|
+	|-RVA: 0x1EBF220 Offset: 0x1EBF321 VA: 0x1EBF220
+	|-Array.InternalEnumerator<KeyValuePair<long, object>>.get_Current
+	|
+	|-RVA: 0x1EBF490 Offset: 0x1EBF591 VA: 0x1EBF490
+	|-Array.InternalEnumerator<KeyValuePair<MapPos, int>>.get_Current
+	|
+	|-RVA: 0x1EBF700 Offset: 0x1EBF801 VA: 0x1EBF700
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle<object>>>.get_Current
+	|
+	|-RVA: 0x1EBF990 Offset: 0x1EBFA91 VA: 0x1EBF990
+	|-Array.InternalEnumerator<KeyValuePair<object, ValueTuple<int, DateTime, object>>>.get_Current
+	|
+	|-RVA: 0x1EBFC20 Offset: 0x1EBFD21 VA: 0x1EBFC20
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle>>.get_Current
+	|
+	|-RVA: 0x1EBFEB0 Offset: 0x1EBFFB1 VA: 0x1EBFEB0
+	|-Array.InternalEnumerator<KeyValuePair<object, bool>>.get_Current
+	|
+	|-RVA: 0x1EC0120 Offset: 0x1EC0221 VA: 0x1EC0120
+	|-Array.InternalEnumerator<KeyValuePair<object, byte>>.get_Current
+	|
+	|-RVA: 0x1EC0390 Offset: 0x1EC0491 VA: 0x1EC0390
+	|-Array.InternalEnumerator<KeyValuePair<object, int>>.get_Current
+	|
+	|-RVA: 0x1EC0600 Offset: 0x1EC0701 VA: 0x1EC0600
+	|-Array.InternalEnumerator<KeyValuePair<object, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EC0870 Offset: 0x1EC0971 VA: 0x1EC0870
+	|-Array.InternalEnumerator<KeyValuePair<object, IntPtr>>.get_Current
+	|
+	|-RVA: 0x1EC0AE0 Offset: 0x1EC0BE1 VA: 0x1EC0AE0
+	|-Array.InternalEnumerator<KeyValuePair<object, object>>.get_Current
+	|
+	|-RVA: 0x1EC0D50 Offset: 0x1EC0E51 VA: 0x1EC0D50
+	|-Array.InternalEnumerator<KeyValuePair<object, Playable>>.get_Current
+	|
+	|-RVA: 0x1EC0FE0 Offset: 0x1EC10E1 VA: 0x1EC0FE0
+	|-Array.InternalEnumerator<KeyValuePair<object, ResourceLocator>>.get_Current
+	|
+	|-RVA: 0x1EC1270 Offset: 0x1EC1371 VA: 0x1EC1270
+	|-Array.InternalEnumerator<KeyValuePair<object, float>>.get_Current
+	|
+	|-RVA: 0x1EC14E0 Offset: 0x1EC15E1 VA: 0x1EC14E0
+	|-Array.InternalEnumerator<KeyValuePair<object, ushort>>.get_Current
+	|
+	|-RVA: 0x1EC1750 Offset: 0x1EC1851 VA: 0x1EC1750
+	|-Array.InternalEnumerator<KeyValuePair<object, GameVariable.Value>>.get_Current
+	|
+	|-RVA: 0x1EC19E0 Offset: 0x1EC1AE1 VA: 0x1EC19E0
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, DataStoreRatingInfo>>.get_Current
+	|
+	|-RVA: 0x1EC1C70 Offset: 0x1EC1D71 VA: 0x1EC1C70
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, object>>.get_Current
+	|
+	|-RVA: 0x1EC1EE0 Offset: 0x1EC1FE1 VA: 0x1EC1EE0
+	|-Array.InternalEnumerator<KeyValuePair<ushort, int>>.get_Current
+	|
+	|-RVA: 0x1EC2150 Offset: 0x1EC2251 VA: 0x1EC2150
+	|-Array.InternalEnumerator<KeyValuePair<uint, int>>.get_Current
+	|
+	|-RVA: 0x1EC23C0 Offset: 0x1EC24C1 VA: 0x1EC23C0
+	|-Array.InternalEnumerator<KeyValuePair<uint, object>>.get_Current
+	|
+	|-RVA: 0x1EC2630 Offset: 0x1EC2731 VA: 0x1EC2630
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Friend>>.get_Current
+	|
+	|-RVA: 0x1EC28C0 Offset: 0x1EC29C1 VA: 0x1EC28C0
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EC2B30 Offset: 0x1EC2C31 VA: 0x1EC2B30
+	|-Array.InternalEnumerator<KeyValuePair<ulong, object>>.get_Current
+	|
+	|-RVA: 0x1EC2DA0 Offset: 0x1EC2EA1 VA: 0x1EC2DA0
+	|-Array.InternalEnumerator<KeyValuePair<Vector3, int>>.get_Current
+	|
+	|-RVA: 0x1EC3010 Offset: 0x1EC3111 VA: 0x1EC3010
+	|-Array.InternalEnumerator<KeyValuePair<XPathNodeRef, XPathNodeRef>>.get_Current
+	|
+	|-RVA: 0x1EC32A0 Offset: 0x1EC33A1 VA: 0x1EC32A0
+	|-Array.InternalEnumerator<KeyValuePair<TerrainUtility.TerrainMap.TileCoord, object>>.get_Current
+	|
+	|-RVA: 0x1EC3510 Offset: 0x1EC3611 VA: 0x1EC3510
+	|-Array.InternalEnumerator<NativeArray<PreTile>>.get_Current
+	|
+	|-RVA: 0x1EC3780 Offset: 0x1EC3881 VA: 0x1EC3780
+	|-Array.InternalEnumerator<CommonBattleSequence.Reliance<object>>.get_Current
+	|
+	|-RVA: 0x1EC3A10 Offset: 0x1EC3B11 VA: 0x1EC3A10
+	|-Array.InternalEnumerator<RenderGraphResourcePool.ResourceLogInfo<object>>.get_Current
+	|
+	|-RVA: 0x1EC3C80 Offset: 0x1EC3D81 VA: 0x1EC3C80
+	|-Array.InternalEnumerator<HashSet.Slot<ValueTuple<object, int>>>.get_Current
+	|
+	|-RVA: 0x1EC3F10 Offset: 0x1EC4011 VA: 0x1EC3F10
+	|-Array.InternalEnumerator<HashSet.Slot<AsyncOperationHandle>>.get_Current
+	|
+	|-RVA: 0x1EC41A0 Offset: 0x1EC42A1 VA: 0x1EC41A0
+	|-Array.InternalEnumerator<HashSet.Slot<int>>.get_Current
+	|
+	|-RVA: 0x1EC4410 Offset: 0x1EC4511 VA: 0x1EC4410
+	|-Array.InternalEnumerator<HashSet.Slot<Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EC4680 Offset: 0x1EC4781 VA: 0x1EC4680
+	|-Array.InternalEnumerator<Set.Slot<Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EC48F0 Offset: 0x1EC49F1 VA: 0x1EC48F0
+	|-Array.InternalEnumerator<HashSet.Slot<MapPos>>.get_Current
+	|
+	|-RVA: 0x1EC4B60 Offset: 0x1EC4C61 VA: 0x1EC4B60
+	|-Array.InternalEnumerator<HashSet.Slot<object>>.get_Current
+	|
+	|-RVA: 0x1EC4DD0 Offset: 0x1EC4ED1 VA: 0x1EC4DD0
+	|-Array.InternalEnumerator<Set.Slot<object>>.get_Current
+	|
+	|-RVA: 0x1EC5060 Offset: 0x1EC5161 VA: 0x1EC5060
+	|-Array.InternalEnumerator<HashSet.Slot<uint>>.get_Current
+	|
+	|-RVA: 0x1EC52D0 Offset: 0x1EC53D1 VA: 0x1EC52D0
+	|-Array.InternalEnumerator<HashSet.Slot<ulong>>.get_Current
+	|
+	|-RVA: 0x1EC5540 Offset: 0x1EC5641 VA: 0x1EC5540
+	|-Array.InternalEnumerator<Set.Slot<Vector3>>.get_Current
+	|
+	|-RVA: 0x1EC57D0 Offset: 0x1EC58D1 VA: 0x1EC57D0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Color32>>.get_Current
+	|
+	|-RVA: 0x1EC5A60 Offset: 0x1EC5B61 VA: 0x1EC5A60
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<HighlightState>>.get_Current
+	|
+	|-RVA: 0x1EC5D10 Offset: 0x1EC5E11 VA: 0x1EC5D10
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<int>>.get_Current
+	|
+	|-RVA: 0x1EC5FA0 Offset: 0x1EC60A1 VA: 0x1EC5FA0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Int32Enum>>.get_Current
+	|
+	|-RVA: 0x1EC6230 Offset: 0x1EC6331 VA: 0x1EC6230
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<MaterialReference>>.get_Current
+	|
+	|-RVA: 0x1EC6500 Offset: 0x1EC6601 VA: 0x1EC6500
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<object>>.get_Current
+	|
+	|-RVA: 0x1EC67B0 Offset: 0x1EC68B1 VA: 0x1EC67B0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<float>>.get_Current
+	|
+	|-RVA: 0x1EC6A40 Offset: 0x1EC6B41 VA: 0x1EC6A40
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<WordWrapState>>.get_Current
+	|
+	|-RVA: 0x1EC6CD0 Offset: 0x1EC6DD1 VA: 0x1EC6CD0
+	|-Array.InternalEnumerator<TimeInterval<object>>.get_Current
+	|
+	|-RVA: 0x1EC6F40 Offset: 0x1EC7041 VA: 0x1EC6F40
+	|-Array.InternalEnumerator<Timestamped<object>>.get_Current
+	|
+	|-RVA: 0x1EC71D0 Offset: 0x1EC72D1 VA: 0x1EC71D0
+	|-Array.InternalEnumerator<UniTask<object>>.get_Current
+	|
+	|-RVA: 0x1EC7440 Offset: 0x1EC7541 VA: 0x1EC7440
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x1EC76B0 Offset: 0x1EC77B1 VA: 0x1EC76B0
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x1EC7940 Offset: 0x1EC7A41 VA: 0x1EC7940
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask<object>>>.get_Current
+	|
+	|-RVA: 0x1EC7BD0 Offset: 0x1EC7CD1 VA: 0x1EC7BD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>.get_Current
+	|
+	|-RVA: 0x1EC7E60 Offset: 0x1EC7F61 VA: 0x1EC7E60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>.get_Current
+	|
+	|-RVA: 0x1EC8110 Offset: 0x1EC8211 VA: 0x1EC8110
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>>.get_Current
+	|
+	|-RVA: 0x1EC83C0 Offset: 0x1EC84C1 VA: 0x1EC83C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>>.get_Current
+	|
+	|-RVA: 0x1EC8620 Offset: 0x1EC8721 VA: 0x1EC8620
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF80C0 Offset: 0x2AF81C1 VA: 0x2AF80C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF8370 Offset: 0x2AF8471 VA: 0x2AF8370
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF85D0 Offset: 0x2AF86D1 VA: 0x2AF85D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF8880 Offset: 0x2AF8981 VA: 0x2AF8880
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF8B30 Offset: 0x2AF8C31 VA: 0x2AF8B30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF8DC0 Offset: 0x2AF8EC1 VA: 0x2AF8DC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF9070 Offset: 0x2AF9171 VA: 0x2AF9070
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF9320 Offset: 0x2AF9421 VA: 0x2AF9320
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF95D0 Offset: 0x2AF96D1 VA: 0x2AF95D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF9880 Offset: 0x2AF9981 VA: 0x2AF9880
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF9B10 Offset: 0x2AF9C11 VA: 0x2AF9B10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>>.get_Current
+	|
+	|-RVA: 0x2AF9DC0 Offset: 0x2AF9EC1 VA: 0x2AF9DC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFA020 Offset: 0x2AFA121 VA: 0x2AFA020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFA2D0 Offset: 0x2AFA3D1 VA: 0x2AFA2D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFA560 Offset: 0x2AFA661 VA: 0x2AFA560
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFA810 Offset: 0x2AFA911 VA: 0x2AFA810
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFAAC0 Offset: 0x2AFABC1 VA: 0x2AFAAC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFAD70 Offset: 0x2AFAE71 VA: 0x2AFAD70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFB020 Offset: 0x2AFB121 VA: 0x2AFB020
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFB2D0 Offset: 0x2AFB3D1 VA: 0x2AFB2D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFB5A0 Offset: 0x2AFB6A1 VA: 0x2AFB5A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFB870 Offset: 0x2AFB971 VA: 0x2AFB870
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFBB40 Offset: 0x2AFBC41 VA: 0x2AFBB40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>.get_Current
+	|
+	|-RVA: 0x2AFBDA0 Offset: 0x2AFBEA1 VA: 0x2AFBDA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>.get_Current
+	|
+	|-RVA: 0x2AFC000 Offset: 0x2AFC101 VA: 0x2AFC000
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>.get_Current
+	|
+	|-RVA: 0x2AFC2B0 Offset: 0x2AFC3B1 VA: 0x2AFC2B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>.get_Current
+	|
+	|-RVA: 0x2AFC510 Offset: 0x2AFC611 VA: 0x2AFC510
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>.get_Current
+	|
+	|-RVA: 0x2AFC7A0 Offset: 0x2AFC8A1 VA: 0x2AFC7A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>.get_Current
+	|
+	|-RVA: 0x2AFCA50 Offset: 0x2AFCB51 VA: 0x2AFCA50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>.get_Current
+	|
+	|-RVA: 0x2AFCCE0 Offset: 0x2AFCDE1 VA: 0x2AFCCE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>.get_Current
+	|
+	|-RVA: 0x2AFCF90 Offset: 0x2AFD091 VA: 0x2AFCF90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2AFD240 Offset: 0x2AFD341 VA: 0x2AFD240
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>.get_Current
+	|
+	|-RVA: 0x2AFD4D0 Offset: 0x2AFD5D1 VA: 0x2AFD4D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>.get_Current
+	|
+	|-RVA: 0x2AFD760 Offset: 0x2AFD861 VA: 0x2AFD760
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>.get_Current
+	|
+	|-RVA: 0x2AFD9F0 Offset: 0x2AFDAF1 VA: 0x2AFD9F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>.get_Current
+	|
+	|-RVA: 0x2AFDCA0 Offset: 0x2AFDDA1 VA: 0x2AFDCA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>.get_Current
+	|
+	|-RVA: 0x2AFDF00 Offset: 0x2AFE001 VA: 0x2AFDF00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>.get_Current
+	|
+	|-RVA: 0x2AFE190 Offset: 0x2AFE291 VA: 0x2AFE190
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>.get_Current
+	|
+	|-RVA: 0x2AFE440 Offset: 0x2AFE541 VA: 0x2AFE440
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>.get_Current
+	|
+	|-RVA: 0x2AFE6D0 Offset: 0x2AFE7D1 VA: 0x2AFE6D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>.get_Current
+	|
+	|-RVA: 0x2AFE980 Offset: 0x2AFEA81 VA: 0x2AFE980
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>.get_Current
+	|
+	|-RVA: 0x2AFEC30 Offset: 0x2AFED31 VA: 0x2AFEC30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFEEE0 Offset: 0x2AFEFE1 VA: 0x2AFEEE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>.get_Current
+	|
+	|-RVA: 0x2AFF190 Offset: 0x2AFF291 VA: 0x2AFF190
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFF460 Offset: 0x2AFF561 VA: 0x2AFF460
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>.get_Current
+	|
+	|-RVA: 0x2AFF710 Offset: 0x2AFF811 VA: 0x2AFF710
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFF9E0 Offset: 0x2AFFAE1 VA: 0x2AFF9E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>.get_Current
+	|
+	|-RVA: 0x2AFFC90 Offset: 0x2AFFD91 VA: 0x2AFFC90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2AFFF80 Offset: 0x2B00081 VA: 0x2AFFF80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B00250 Offset: 0x2B00351 VA: 0x2B00250
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2B00540 Offset: 0x2B00641 VA: 0x2B00540
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B00810 Offset: 0x2B00911 VA: 0x2B00810
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>.get_Current
+	|
+	|-RVA: 0x2B00A70 Offset: 0x2B00B71 VA: 0x2B00A70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>.get_Current
+	|
+	|-RVA: 0x2B00CD0 Offset: 0x2B00DD1 VA: 0x2B00CD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>.get_Current
+	|
+	|-RVA: 0x2B00F80 Offset: 0x2B01081 VA: 0x2B00F80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>.get_Current
+	|
+	|-RVA: 0x2B011E0 Offset: 0x2B012E1 VA: 0x2B011E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>.get_Current
+	|
+	|-RVA: 0x2B01490 Offset: 0x2B01591 VA: 0x2B01490
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>.get_Current
+	|
+	|-RVA: 0x2B01720 Offset: 0x2B01821 VA: 0x2B01720
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>.get_Current
+	|
+	|-RVA: 0x2B01990 Offset: 0x2B01A91 VA: 0x2B01990
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>.get_Current
+	|
+	|-RVA: 0x2B01C20 Offset: 0x2B01D21 VA: 0x2B01C20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2B01EB0 Offset: 0x2B01FB1 VA: 0x2B01EB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>.get_Current
+	|
+	|-RVA: 0x2B02160 Offset: 0x2B02261 VA: 0x2B02160
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>.get_Current
+	|
+	|-RVA: 0x2B02410 Offset: 0x2B02511 VA: 0x2B02410
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>.get_Current
+	|
+	|-RVA: 0x2B02680 Offset: 0x2B02781 VA: 0x2B02680
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>.get_Current
+	|
+	|-RVA: 0x2B02910 Offset: 0x2B02A11 VA: 0x2B02910
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>.get_Current
+	|
+	|-RVA: 0x2B02B70 Offset: 0x2B02C71 VA: 0x2B02B70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>.get_Current
+	|
+	|-RVA: 0x2B02E00 Offset: 0x2B02F01 VA: 0x2B02E00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>.get_Current
+	|
+	|-RVA: 0x2B03090 Offset: 0x2B03191 VA: 0x2B03090
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>.get_Current
+	|
+	|-RVA: 0x2B03340 Offset: 0x2B03441 VA: 0x2B03340
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>.get_Current
+	|
+	|-RVA: 0x2B035D0 Offset: 0x2B036D1 VA: 0x2B035D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>.get_Current
+	|
+	|-RVA: 0x2B03860 Offset: 0x2B03961 VA: 0x2B03860
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B03B10 Offset: 0x2B03C11 VA: 0x2B03B10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>.get_Current
+	|
+	|-RVA: 0x2B03DC0 Offset: 0x2B03EC1 VA: 0x2B03DC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B04090 Offset: 0x2B04191 VA: 0x2B04090
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>.get_Current
+	|
+	|-RVA: 0x2B04340 Offset: 0x2B04441 VA: 0x2B04340
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B04610 Offset: 0x2B04711 VA: 0x2B04610
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>.get_Current
+	|
+	|-RVA: 0x2B048C0 Offset: 0x2B049C1 VA: 0x2B048C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B04BB0 Offset: 0x2B04CB1 VA: 0x2B04BB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>.get_Current
+	|
+	|-RVA: 0x2B04E60 Offset: 0x2B04F61 VA: 0x2B04E60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B05150 Offset: 0x2B05251 VA: 0x2B05150
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>.get_Current
+	|
+	|-RVA: 0x2B05420 Offset: 0x2B05521 VA: 0x2B05420
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2B056B0 Offset: 0x2B057B1 VA: 0x2B056B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.get_Current
+	|
+	|-RVA: 0x2B05940 Offset: 0x2B05A41 VA: 0x2B05940
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>.get_Current
+	|
+	|-RVA: 0x2B05BA0 Offset: 0x2B05CA1 VA: 0x2B05BA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, bool>>>.get_Current
+	|
+	|-RVA: 0x2B05E00 Offset: 0x2B05F01 VA: 0x2B05E00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Bounds>>>.get_Current
+	|
+	|-RVA: 0x2B06090 Offset: 0x2B06191 VA: 0x2B06090
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, byte>>>.get_Current
+	|
+	|-RVA: 0x2B062F0 Offset: 0x2B063F1 VA: 0x2B062F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Color>>>.get_Current
+	|
+	|-RVA: 0x2B06580 Offset: 0x2B06681 VA: 0x2B06580
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, double>>>.get_Current
+	|
+	|-RVA: 0x2B06810 Offset: 0x2B06911 VA: 0x2B06810
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, int>>>.get_Current
+	|
+	|-RVA: 0x2B06A80 Offset: 0x2B06B81 VA: 0x2B06A80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, long>>>.get_Current
+	|
+	|-RVA: 0x2B06D10 Offset: 0x2B06E11 VA: 0x2B06D10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x2B06FA0 Offset: 0x2B070A1 VA: 0x2B06FA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Quaternion>>>.get_Current
+	|
+	|-RVA: 0x2B07230 Offset: 0x2B07331 VA: 0x2B07230
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Rect>>>.get_Current
+	|
+	|-RVA: 0x2B074C0 Offset: 0x2B075C1 VA: 0x2B074C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, float>>>.get_Current
+	|
+	|-RVA: 0x2B07730 Offset: 0x2B07831 VA: 0x2B07730
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask>>>.get_Current
+	|
+	|-RVA: 0x2B079C0 Offset: 0x2B07AC1 VA: 0x2B079C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Unit>>>.get_Current
+	|
+	|-RVA: 0x2B07C20 Offset: 0x2B07D21 VA: 0x2B07C20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector2>>>.get_Current
+	|
+	|-RVA: 0x2B07E90 Offset: 0x2B07F91 VA: 0x2B07E90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector3>>>.get_Current
+	|
+	|-RVA: 0x2B08120 Offset: 0x2B08221 VA: 0x2B08120
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector4>>>.get_Current
+	|
+	|-RVA: 0x2B083B0 Offset: 0x2B084B1 VA: 0x2B083B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, object>>>.get_Current
+	|
+	|-RVA: 0x2B08640 Offset: 0x2B08741 VA: 0x2B08640
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object>>>.get_Current
+	|
+	|-RVA: 0x2B088D0 Offset: 0x2B089D1 VA: 0x2B088D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2B08B80 Offset: 0x2B08C81 VA: 0x2B08B80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object>>>.get_Current
+	|
+	|-RVA: 0x2B08E10 Offset: 0x2B08F11 VA: 0x2B08E10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2B090C0 Offset: 0x2B091C1 VA: 0x2B090C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object>>>.get_Current
+	|
+	|-RVA: 0x2B09370 Offset: 0x2B09471 VA: 0x2B09370
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2B09640 Offset: 0x2B09741 VA: 0x2B09640
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object>>>.get_Current
+	|
+	|-RVA: 0x2B098F0 Offset: 0x2B099F1 VA: 0x2B098F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2B09BC0 Offset: 0x2B09CC1 VA: 0x2B09BC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>.get_Current
+	|
+	|-RVA: 0x2B09E70 Offset: 0x2B09F71 VA: 0x2B09E70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2B0A160 Offset: 0x2B0A261 VA: 0x2B0A160
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>.get_Current
+	|
+	|-RVA: 0x2B0A410 Offset: 0x2B0A511 VA: 0x2B0A410
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B0A700 Offset: 0x2B0A801 VA: 0x2B0A700
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.get_Current
+	|
+	|-RVA: 0x2B0A990 Offset: 0x2B0AA91 VA: 0x2B0A990
+	|-Array.InternalEnumerator<ValueTuple<bool, AsyncUnit>>.get_Current
+	|
+	|-RVA: 0x2B0ABF0 Offset: 0x2B0ACF1 VA: 0x2B0ABF0
+	|-Array.InternalEnumerator<ValueTuple<bool, bool>>.get_Current
+	|
+	|-RVA: 0x2B0AE50 Offset: 0x2B0AF51 VA: 0x2B0AE50
+	|-Array.InternalEnumerator<ValueTuple<bool, Bounds>>.get_Current
+	|
+	|-RVA: 0x2B0B100 Offset: 0x2B0B201 VA: 0x2B0B100
+	|-Array.InternalEnumerator<ValueTuple<bool, byte>>.get_Current
+	|
+	|-RVA: 0x2B0B360 Offset: 0x2B0B461 VA: 0x2B0B360
+	|-Array.InternalEnumerator<ValueTuple<bool, Color>>.get_Current
+	|
+	|-RVA: 0x2B0B5F0 Offset: 0x2B0B6F1 VA: 0x2B0B5F0
+	|-Array.InternalEnumerator<ValueTuple<bool, double>>.get_Current
+	|
+	|-RVA: 0x2B0B860 Offset: 0x2B0B961 VA: 0x2B0B860
+	|-Array.InternalEnumerator<ValueTuple<bool, int>>.get_Current
+	|
+	|-RVA: 0x2B0BAD0 Offset: 0x2B0BBD1 VA: 0x2B0BAD0
+	|-Array.InternalEnumerator<ValueTuple<bool, long>>.get_Current
+	|
+	|-RVA: 0x2B0BD40 Offset: 0x2B0BE41 VA: 0x2B0BD40
+	|-Array.InternalEnumerator<ValueTuple<bool, object>>.get_Current
+	|
+	|-RVA: 0x2B0BFB0 Offset: 0x2B0C0B1 VA: 0x2B0BFB0
+	|-Array.InternalEnumerator<ValueTuple<bool, Quaternion>>.get_Current
+	|
+	|-RVA: 0x2B0C240 Offset: 0x2B0C341 VA: 0x2B0C240
+	|-Array.InternalEnumerator<ValueTuple<bool, Rect>>.get_Current
+	|
+	|-RVA: 0x2B0C4D0 Offset: 0x2B0C5D1 VA: 0x2B0C4D0
+	|-Array.InternalEnumerator<ValueTuple<bool, float>>.get_Current
+	|
+	|-RVA: 0x2B0C740 Offset: 0x2B0C841 VA: 0x2B0C740
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask>>.get_Current
+	|
+	|-RVA: 0x2B0C9B0 Offset: 0x2B0CAB1 VA: 0x2B0C9B0
+	|-Array.InternalEnumerator<ValueTuple<bool, Unit>>.get_Current
+	|
+	|-RVA: 0x2B0CC10 Offset: 0x2B0CD11 VA: 0x2B0CC10
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector2>>.get_Current
+	|
+	|-RVA: 0x2B0CE80 Offset: 0x2B0CF81 VA: 0x2B0CE80
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector3>>.get_Current
+	|
+	|-RVA: 0x2B0D0F0 Offset: 0x2B0D1F1 VA: 0x2B0D0F0
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector4>>.get_Current
+	|
+	|-RVA: 0x2B0D380 Offset: 0x2B0D481 VA: 0x2B0D380
+	|-Array.InternalEnumerator<ValueTuple<int, bool>>.get_Current
+	|
+	|-RVA: 0x2B0D5F0 Offset: 0x2B0D6F1 VA: 0x2B0D5F0
+	|-Array.InternalEnumerator<ValueTuple<int, Bounds>>.get_Current
+	|
+	|-RVA: 0x2B0D8A0 Offset: 0x2B0D9A1 VA: 0x2B0D8A0
+	|-Array.InternalEnumerator<ValueTuple<int, byte>>.get_Current
+	|
+	|-RVA: 0x2B0DB10 Offset: 0x2B0DC11 VA: 0x2B0DB10
+	|-Array.InternalEnumerator<ValueTuple<int, Color>>.get_Current
+	|
+	|-RVA: 0x2B0DDA0 Offset: 0x2B0DEA1 VA: 0x2B0DDA0
+	|-Array.InternalEnumerator<ValueTuple<int, double>>.get_Current
+	|
+	|-RVA: 0x2B0E010 Offset: 0x2B0E111 VA: 0x2B0E010
+	|-Array.InternalEnumerator<ValueTuple<int, int>>.get_Current
+	|
+	|-RVA: 0x2B0E280 Offset: 0x2B0E381 VA: 0x2B0E280
+	|-Array.InternalEnumerator<ValueTuple<int, long>>.get_Current
+	|
+	|-RVA: 0x2B0E4F0 Offset: 0x2B0E5F1 VA: 0x2B0E4F0
+	|-Array.InternalEnumerator<ValueTuple<int, object>>.get_Current
+	|
+	|-RVA: 0x2B0E760 Offset: 0x2B0E861 VA: 0x2B0E760
+	|-Array.InternalEnumerator<ValueTuple<int, Quaternion>>.get_Current
+	|
+	|-RVA: 0x2B0E9F0 Offset: 0x2B0EAF1 VA: 0x2B0E9F0
+	|-Array.InternalEnumerator<ValueTuple<int, Rect>>.get_Current
+	|
+	|-RVA: 0x2B0EC80 Offset: 0x2B0ED81 VA: 0x2B0EC80
+	|-Array.InternalEnumerator<ValueTuple<int, float>>.get_Current
+	|
+	|-RVA: 0x2B0EEF0 Offset: 0x2B0EFF1 VA: 0x2B0EEF0
+	|-Array.InternalEnumerator<ValueTuple<int, Unit>>.get_Current
+	|
+	|-RVA: 0x2B0F160 Offset: 0x2B0F261 VA: 0x2B0F160
+	|-Array.InternalEnumerator<ValueTuple<int, Vector2>>.get_Current
+	|
+	|-RVA: 0x2B0F3D0 Offset: 0x2B0F4D1 VA: 0x2B0F3D0
+	|-Array.InternalEnumerator<ValueTuple<int, Vector3>>.get_Current
+	|
+	|-RVA: 0x2B0F640 Offset: 0x2B0F741 VA: 0x2B0F640
+	|-Array.InternalEnumerator<ValueTuple<int, Vector4>>.get_Current
+	|
+	|-RVA: 0x2B0F8D0 Offset: 0x2B0F9D1 VA: 0x2B0F8D0
+	|-Array.InternalEnumerator<ValueTuple<Int32Enum, int>>.get_Current
+	|
+	|-RVA: 0x2B0FB40 Offset: 0x2B0FC41 VA: 0x2B0FB40
+	|-Array.InternalEnumerator<ValueTuple<object, ValueTuple<object, int>>>.get_Current
+	|
+	|-RVA: 0x2B0FDD0 Offset: 0x2B0FED1 VA: 0x2B0FDD0
+	|-Array.InternalEnumerator<ValueTuple<object, int>>.get_Current
+	|
+	|-RVA: 0x2B10040 Offset: 0x2B10141 VA: 0x2B10040
+	|-Array.InternalEnumerator<ValueTuple<object, object>>.get_Current
+	|
+	|-RVA: 0x2B102B0 Offset: 0x2B103B1 VA: 0x2B102B0
+	|-Array.InternalEnumerator<ValueTuple<object, float>>.get_Current
+	|
+	|-RVA: 0x2B10520 Offset: 0x2B10621 VA: 0x2B10520
+	|-Array.InternalEnumerator<ValueTuple<Vector3, float>>.get_Current
+	|
+	|-RVA: 0x2ADFED0 Offset: 0x2ADFFD1 VA: 0x2ADFED0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x2AE0180 Offset: 0x2AE0281 VA: 0x2AE0180
+	|-Array.InternalEnumerator<ValueTuple<object, Int32Enum, int>>.get_Current
+	|
+	|-RVA: 0x2AE03F0 Offset: 0x2AE04F1 VA: 0x2AE03F0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object>>.get_Current
+	|
+	|-RVA: 0x2AE0680 Offset: 0x2AE0781 VA: 0x2AE0680
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x2AE0930 Offset: 0x2AE0A31 VA: 0x2AE0930
+	|-Array.InternalEnumerator<ValueTuple<object, int, int, int>>.get_Current
+	|
+	|-RVA: 0x2AE0BC0 Offset: 0x2AE0CC1 VA: 0x2AE0BC0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object>>.get_Current
+	|
+	|-RVA: 0x2AE0E50 Offset: 0x2AE0F51 VA: 0x2AE0E50
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x2AE1120 Offset: 0x2AE1221 VA: 0x2AE1120
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object>>.get_Current
+	|
+	|-RVA: 0x2AE13D0 Offset: 0x2AE14D1 VA: 0x2AE13D0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x2AE16A0 Offset: 0x2AE17A1 VA: 0x2AE16A0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object>>.get_Current
+	|
+	|-RVA: 0x2AE1950 Offset: 0x2AE1A51 VA: 0x2AE1950
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.get_Current
+	|
+	|-RVA: 0x2AE1C40 Offset: 0x2AE1D41 VA: 0x2AE1C40
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object, object>>.get_Current
+	|
+	|-RVA: 0x2AE1EF0 Offset: 0x2AE1FF1 VA: 0x2AE1EF0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2AE21E0 Offset: 0x2AE22E1 VA: 0x2AE21E0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>.get_Current
+	|
+	|-RVA: 0x2AE2470 Offset: 0x2AE2571 VA: 0x2AE2470
+	|-Array.InternalEnumerator<AnimatorClipInfo>.get_Current
+	|
+	|-RVA: 0x2AE26E0 Offset: 0x2AE27E1 VA: 0x2AE26E0
+	|-Array.InternalEnumerator<AsyncOperationHandle>.get_Current
+	|
+	|-RVA: 0x2AE2970 Offset: 0x2AE2A71 VA: 0x2AE2970
+	|-Array.InternalEnumerator<AsyncUnit>.get_Current
+	|
+	|-RVA: 0x2AE2BD0 Offset: 0x2AE2CD1 VA: 0x2AE2BD0
+	|-Array.InternalEnumerator<BatchVisibility>.get_Current
+	|
+	|-RVA: 0x2AE2E40 Offset: 0x2AE2F41 VA: 0x2AE2E40
+	|-Array.InternalEnumerator<BoneWeight>.get_Current
+	|
+	|-RVA: 0x2AE30D0 Offset: 0x2AE31D1 VA: 0x2AE30D0
+	|-Array.InternalEnumerator<BoneWeight1>.get_Current
+	|
+	|-RVA: 0x2AE3340 Offset: 0x2AE3441 VA: 0x2AE3340
+	|-Array.InternalEnumerator<bool>.get_Current
+	|
+	|-RVA: 0x2AE35B0 Offset: 0x2AE36B1 VA: 0x2AE35B0
+	|-Array.InternalEnumerator<Bounds>.get_Current
+	|
+	|-RVA: 0x2AE3840 Offset: 0x2AE3941 VA: 0x2AE3840
+	|-Array.InternalEnumerator<byte>.get_Current
+	|
+	|-RVA: 0x2AE3AB0 Offset: 0x2AE3BB1 VA: 0x2AE3AB0
+	|-Array.InternalEnumerator<ByteEnum>.get_Current
+	|
+	|-RVA: 0x2AE3D20 Offset: 0x2AE3E21 VA: 0x2AE3D20
+	|-Array.InternalEnumerator<CameraInfo>.get_Current
+	|
+	|-RVA: 0x2AE3F90 Offset: 0x2AE4091 VA: 0x2AE3F90
+	|-Array.InternalEnumerator<CancellationToken>.get_Current
+	|
+	|-RVA: 0x2AE4200 Offset: 0x2AE4301 VA: 0x2AE4200
+	|-Array.InternalEnumerator<CancellationTokenRegistration>.get_Current
+	|
+	|-RVA: 0x2AE4490 Offset: 0x2AE4591 VA: 0x2AE4490
+	|-Array.InternalEnumerator<char>.get_Current
+	|
+	|-RVA: 0x2AE4700 Offset: 0x2AE4801 VA: 0x2AE4700
+	|-Array.InternalEnumerator<ClusteringData>.get_Current
+	|
+	|-RVA: 0x2AE4990 Offset: 0x2AE4A91 VA: 0x2AE4990
+	|-Array.InternalEnumerator<ClusteringProcessorState>.get_Current
+	|
+	|-RVA: 0x2AE4C20 Offset: 0x2AE4D21 VA: 0x2AE4C20
+	|-Array.InternalEnumerator<Color>.get_Current
+	|
+	|-RVA: 0x2AE4EA0 Offset: 0x2AE4FA1 VA: 0x2AE4EA0
+	|-Array.InternalEnumerator<Color32>.get_Current
+	|
+	|-RVA: 0x2AE5100 Offset: 0x2AE5201 VA: 0x2AE5100
+	|-Array.InternalEnumerator<Color4u8>.get_Current
+	|
+	|-RVA: 0x2AE5360 Offset: 0x2AE5461 VA: 0x2AE5360
+	|-Array.InternalEnumerator<ColorBlock>.get_Current
+	|
+	|-RVA: 0x2AE5630 Offset: 0x2AE5731 VA: 0x2AE5630
+	|-Array.InternalEnumerator<CombineInstance>.get_Current
+	|
+	|-RVA: 0x2AE5920 Offset: 0x2AE5A21 VA: 0x2AE5920
+	|-Array.InternalEnumerator<ConstraintSource>.get_Current
+	|
+	|-RVA: 0x2AE5B90 Offset: 0x2AE5C91 VA: 0x2AE5B90
+	|-Array.InternalEnumerator<ContactPoint>.get_Current
+	|
+	|-RVA: 0x2AE5E40 Offset: 0x2AE5F41 VA: 0x2AE5E40
+	|-Array.InternalEnumerator<ContactPoint2D>.get_Current
+	|
+	|-RVA: 0x2AE60F0 Offset: 0x2AE61F1 VA: 0x2AE60F0
+	|-Array.InternalEnumerator<ContourVertex>.get_Current
+	|
+	|-RVA: 0x2AE6380 Offset: 0x2AE6481 VA: 0x2AE6380
+	|-Array.InternalEnumerator<CustomAttributeNamedArgument>.get_Current
+	|
+	|-RVA: 0x2AE6610 Offset: 0x2AE6711 VA: 0x2AE6610
+	|-Array.InternalEnumerator<CustomAttributeTypedArgument>.get_Current
+	|
+	|-RVA: 0x2AE6880 Offset: 0x2AE6981 VA: 0x2AE6880
+	|-Array.InternalEnumerator<DataStoreRatingInfo>.get_Current
+	|
+	|-RVA: 0x2AE6B10 Offset: 0x2AE6C11 VA: 0x2AE6B10
+	|-Array.InternalEnumerator<DataStoreResult>.get_Current
+	|
+	|-RVA: 0x2AE6D80 Offset: 0x2AE6E81 VA: 0x2AE6D80
+	|-Array.InternalEnumerator<DateTime>.get_Current
+	|
+	|-RVA: 0x2AE6FF0 Offset: 0x2AE70F1 VA: 0x2AE6FF0
+	|-Array.InternalEnumerator<DateTimeOffset>.get_Current
+	|
+	|-RVA: 0x2AE7260 Offset: 0x2AE7361 VA: 0x2AE7260
+	|-Array.InternalEnumerator<DebugPadState>.get_Current
+	|
+	|-RVA: 0x2AE74F0 Offset: 0x2AE75F1 VA: 0x2AE74F0
+	|-Array.InternalEnumerator<Decimal>.get_Current
+	|
+	|-RVA: 0x2AE7760 Offset: 0x2AE7861 VA: 0x2AE7760
+	|-Array.InternalEnumerator<DeferredTiler>.get_Current
+	|
+	|-RVA: 0x2AE7A50 Offset: 0x2AE7B51 VA: 0x2AE7A50
+	|-Array.InternalEnumerator<DeviceHandle>.get_Current
+	|
+	|-RVA: 0x2AE7CC0 Offset: 0x2AE7DC1 VA: 0x2AE7CC0
+	|-Array.InternalEnumerator<DiagnosticEvent>.get_Current
+	|
+	|-RVA: 0x2AE7F70 Offset: 0x2AE8071 VA: 0x2AE7F70
+	|-Array.InternalEnumerator<DictionaryEntry>.get_Current
+	|
+	|-RVA: 0x2AE81E0 Offset: 0x2AE82E1 VA: 0x2AE81E0
+	|-Array.InternalEnumerator<DictionaryInfo>.get_Current
+	|
+	|-RVA: 0x2AE8450 Offset: 0x2AE8551 VA: 0x2AE8450
+	|-Array.InternalEnumerator<DirectoryEntry>.get_Current
+	|
+	|-RVA: 0x2AE86E0 Offset: 0x2AE87E1 VA: 0x2AE86E0
+	|-Array.InternalEnumerator<double>.get_Current
+	|
+	|-RVA: 0x2AE8950 Offset: 0x2AE8A51 VA: 0x2AE8950
+	|-Array.InternalEnumerator<Ephemeron>.get_Current
+	|
+	|-RVA: 0x2AE8BC0 Offset: 0x2AE8CC1 VA: 0x2AE8BC0
+	|-Array.InternalEnumerator<FXZ>.get_Current
+	|
+	|-RVA: 0x2AE8E30 Offset: 0x2AE8F31 VA: 0x2AE8E30
+	|-Array.InternalEnumerator<Finger>.get_Current
+	|
+	|-RVA: 0x2AE90E0 Offset: 0x2AE91E1 VA: 0x2AE90E0
+	|-Array.InternalEnumerator<Float2>.get_Current
+	|
+	|-RVA: 0x2AE9350 Offset: 0x2AE9451 VA: 0x2AE9350
+	|-Array.InternalEnumerator<Friend>.get_Current
+	|
+	|-RVA: 0x2AE95F0 Offset: 0x2AE96F1 VA: 0x2AE95F0
+	|-Array.InternalEnumerator<GCHandle>.get_Current
+	|
+	|-RVA: 0x2AE9850 Offset: 0x2AE9951 VA: 0x2AE9850
+	|-Array.InternalEnumerator<GesturePoint>.get_Current
+	|
+	|-RVA: 0x2AE9AC0 Offset: 0x2AE9BC1 VA: 0x2AE9AC0
+	|-Array.InternalEnumerator<GestureState>.get_Current
+	|
+	|-RVA: 0x2AE9D90 Offset: 0x2AE9E91 VA: 0x2AE9D90
+	|-Array.InternalEnumerator<GlyphMarshallingStruct>.get_Current
+	|
+	|-RVA: 0x2AEA040 Offset: 0x2AEA141 VA: 0x2AEA040
+	|-Array.InternalEnumerator<GlyphPairAdjustmentRecord>.get_Current
+	|
+	|-RVA: 0x2AEA2F0 Offset: 0x2AEA3F1 VA: 0x2AEA2F0
+	|-Array.InternalEnumerator<GlyphRect>.get_Current
+	|
+	|-RVA: 0x2AEA560 Offset: 0x2AEA661 VA: 0x2AEA560
+	|-Array.InternalEnumerator<Guid>.get_Current
+	|
+	|-RVA: 0x2AEA7D0 Offset: 0x2AEA8D1 VA: 0x2AEA7D0
+	|-Array.InternalEnumerator<Hand>.get_Current
+	|
+	|-RVA: 0x2AEAA60 Offset: 0x2AEAB61 VA: 0x2AEAA60
+	|-Array.InternalEnumerator<HandAnalysisImageState>.get_Current
+	|
+	|-RVA: 0x2AEACD0 Offset: 0x2AEADD1 VA: 0x2AEACD0
+	|-Array.InternalEnumerator<HandAnalysisSilhouetteState>.get_Current
+	|
+	|-RVA: 0x2AEAF60 Offset: 0x2AEB061 VA: 0x2AEAF60
+	|-Array.InternalEnumerator<HeaderVariantInfo>.get_Current
+	|
+	|-RVA: 0x2AEB1D0 Offset: 0x2AEB2D1 VA: 0x2AEB1D0
+	|-Array.InternalEnumerator<HighlightState>.get_Current
+	|
+	|-RVA: 0x2AEB460 Offset: 0x2AEB561 VA: 0x2AEB460
+	|-Array.InternalEnumerator<HumanBone>.get_Current
+	|
+	|-RVA: 0x2AEB710 Offset: 0x2AEB811 VA: 0x2AEB710
+	|-Array.InternalEnumerator<short>.get_Current
+	|
+	|-RVA: 0x2AEB980 Offset: 0x2AEBA81 VA: 0x2AEB980
+	|-Array.InternalEnumerator<int>.get_Current
+	|
+	|-RVA: 0x2AEBBF0 Offset: 0x2AEBCF1 VA: 0x2AEBBF0
+	|-Array.InternalEnumerator<Int32Enum>.get_Current
+	|
+	|-RVA: 0x2AEBE60 Offset: 0x2AEBF61 VA: 0x2AEBE60
+	|-Array.InternalEnumerator<long>.get_Current
+	|
+	|-RVA: 0x2AEC0D0 Offset: 0x2AEC1D1 VA: 0x2AEC0D0
+	|-Array.InternalEnumerator<Int64Enum>.get_Current
+	|
+	|-RVA: 0x2AEC340 Offset: 0x2AEC441 VA: 0x2AEC340
+	|-Array.InternalEnumerator<IntPtr>.get_Current
+	|
+	|-RVA: 0x2AEC5B0 Offset: 0x2AEC6B1 VA: 0x2AEC5B0
+	|-Array.InternalEnumerator<InternalCodePageDataItem>.get_Current
+	|
+	|-RVA: 0x2AEC820 Offset: 0x2AEC921 VA: 0x2AEC820
+	|-Array.InternalEnumerator<InternalEncodingDataItem>.get_Current
+	|
+	|-RVA: 0x2AECA90 Offset: 0x2AECB91 VA: 0x2AECA90
+	|-Array.InternalEnumerator<InterpretedFrameInfo>.get_Current
+	|
+	|-RVA: 0x2AECD00 Offset: 0x2AECE01 VA: 0x2AECD00
+	|-Array.InternalEnumerator<IntervalTreeNode>.get_Current
+	|
+	|-RVA: 0x2AECF90 Offset: 0x2AED091 VA: 0x2AECF90
+	|-Array.InternalEnumerator<JobHandle>.get_Current
+	|
+	|-RVA: 0x2AED200 Offset: 0x2AED301 VA: 0x2AED200
+	|-Array.InternalEnumerator<Keyframe>.get_Current
+	|
+	|-RVA: 0x2AED4B0 Offset: 0x2AED5B1 VA: 0x2AED4B0
+	|-Array.InternalEnumerator<LOD>.get_Current
+	|
+	|-RVA: 0x2AED720 Offset: 0x2AED821 VA: 0x2AED720
+	|-Array.InternalEnumerator<LayerMask>.get_Current
+	|
+	|-RVA: 0x2AED980 Offset: 0x2AEDA81 VA: 0x2AED980
+	|-Array.InternalEnumerator<LengthLimitProperties>.get_Current
+	|
+	|-RVA: 0x2AEDBF0 Offset: 0x2AEDCF1 VA: 0x2AEDBF0
+	|-Array.InternalEnumerator<Light2DBlendStyle>.get_Current
+	|
+	|-RVA: 0x2AEDEC0 Offset: 0x2AEDFC1 VA: 0x2AEDEC0
+	|-Array.InternalEnumerator<LightDataGI>.get_Current
+	|
+	|-RVA: 0x2AEE190 Offset: 0x2AEE291 VA: 0x2AEE190
+	|-Array.InternalEnumerator<LocalDefinition>.get_Current
+	|
+	|-RVA: 0x2AEE400 Offset: 0x2AEE501 VA: 0x2AEE400
+	|-Array.InternalEnumerator<MapPos>.get_Current
+	|
+	|-RVA: 0x2AEE670 Offset: 0x2AEE771 VA: 0x2AEE670
+	|-Array.InternalEnumerator<MapRange>.get_Current
+	|
+	|-RVA: 0x2AEE8E0 Offset: 0x2AEE9E1 VA: 0x2AEE8E0
+	|-Array.InternalEnumerator<MaterialReference>.get_Current
+	|
+	|-RVA: 0x2AEEB90 Offset: 0x2AEEC91 VA: 0x2AEEB90
+	|-Array.InternalEnumerator<Matrix4x4>.get_Current
+	|
+	|-RVA: 0x2AEEE40 Offset: 0x2AEEF41 VA: 0x2AEEE40
+	|-Array.InternalEnumerator<MomentProcessorState>.get_Current
+	|
+	|-RVA: 0x2AEF0D0 Offset: 0x2AEF1D1 VA: 0x2AEF0D0
+	|-Array.InternalEnumerator<MomentStatistic>.get_Current
+	|
+	|-RVA: 0x2AEF350 Offset: 0x2AEF451 VA: 0x2AEF350
+	|-Array.InternalEnumerator<Navigation>.get_Current
+	|
+	|-RVA: 0x2AEF600 Offset: 0x2AEF701 VA: 0x2AEF600
+	|-Array.InternalEnumerator<NetworkServiceAccountId>.get_Current
+	|
+	|-RVA: 0x2AEF870 Offset: 0x2AEF971 VA: 0x2AEF870
+	|-Array.InternalEnumerator<NpadFullKeyState>.get_Current
+	|
+	|-RVA: 0x2AEFB20 Offset: 0x2AEFC21 VA: 0x2AEFB20
+	|-Array.InternalEnumerator<NpadHandheldState>.get_Current
+	|
+	|-RVA: 0x2AEFDD0 Offset: 0x2AEFED1 VA: 0x2AEFDD0
+	|-Array.InternalEnumerator<NpadJoyDualState>.get_Current
+	|
+	|-RVA: 0x2AF0080 Offset: 0x2AF0181 VA: 0x2AF0080
+	|-Array.InternalEnumerator<NpadJoyLeftState>.get_Current
+	|
+	|-RVA: 0x2AF0330 Offset: 0x2AF0431 VA: 0x2AF0330
+	|-Array.InternalEnumerator<NpadJoyRightState>.get_Current
+	|
+	|-RVA: 0x2AF05E0 Offset: 0x2AF06E1 VA: 0x2AF05E0
+	|-Array.InternalEnumerator<NpadStateArrayItem>.get_Current
+	|
+	|-RVA: 0x2AF0890 Offset: 0x2AF0991 VA: 0x2AF0890
+	|-Array.InternalEnumerator<NsUid>.get_Current
+	|
+	|-RVA: 0x2AF0B00 Offset: 0x2AF0C01 VA: 0x2AF0B00
+	|-Array.InternalEnumerator<object>.get_Current
+	|
+	|-RVA: 0x2AF0D20 Offset: 0x2AF0E21 VA: 0x2AF0D20
+	|-Array.InternalEnumerator<ObjectInitializationData>.get_Current
+	|
+	|-RVA: 0x2AF0FD0 Offset: 0x2AF10D1 VA: 0x2AF0FD0
+	|-Array.InternalEnumerator<ParameterModifier>.get_Current
+	|
+	|-RVA: 0x2AF1240 Offset: 0x2AF1341 VA: 0x2AF1240
+	|-Array.InternalEnumerator<Plane>.get_Current
+	|
+	|-RVA: 0x2AF14C0 Offset: 0x2AF15C1 VA: 0x2AF14C0
+	|-Array.InternalEnumerator<Playable>.get_Current
+	|
+	|-RVA: 0x2AF1730 Offset: 0x2AF1831 VA: 0x2AF1730
+	|-Array.InternalEnumerator<PlayableBinding>.get_Current
+	|
+	|-RVA: 0x2AF19C0 Offset: 0x2AF1AC1 VA: 0x2AF19C0
+	|-Array.InternalEnumerator<PlayerLoopSystem>.get_Current
+	|
+	|-RVA: 0x2AF1C70 Offset: 0x2AF1D71 VA: 0x2AF1C70
+	|-Array.InternalEnumerator<PlayerLoopSystemInternal>.get_Current
+	|
+	|-RVA: 0x2AF1F20 Offset: 0x2AF2021 VA: 0x2AF1F20
+	|-Array.InternalEnumerator<PreTile>.get_Current
+	|
+	|-RVA: 0x2AF21D0 Offset: 0x2AF22D1 VA: 0x2AF21D0
+	|-Array.InternalEnumerator<Profile>.get_Current
+	|
+	|-RVA: 0x2AF2470 Offset: 0x2AF2571 VA: 0x2AF2470
+	|-Array.InternalEnumerator<Protrusion>.get_Current
+	|
+	|-RVA: 0x2AF26E0 Offset: 0x2AF27E1 VA: 0x2AF26E0
+	|-Array.InternalEnumerator<Quaternion>.get_Current
+	|
+	|-RVA: 0x2AF2960 Offset: 0x2AF2A61 VA: 0x2AF2960
+	|-Array.InternalEnumerator<RandomSeed>.get_Current
+	|
+	|-RVA: 0x2AF2BD0 Offset: 0x2AF2CD1 VA: 0x2AF2BD0
+	|-Array.InternalEnumerator<RangePositionInfo>.get_Current
+	|
+	|-RVA: 0x2AF2E40 Offset: 0x2AF2F41 VA: 0x2AF2E40
+	|-Array.InternalEnumerator<Ranking2ChartInfoInput>.get_Current
+	|
+	|-RVA: 0x2AF30B0 Offset: 0x2AF31B1 VA: 0x2AF30B0
+	|-Array.InternalEnumerator<RaycastHit>.get_Current
+	|
+	|-RVA: 0x2AF3360 Offset: 0x2AF3461 VA: 0x2AF3360
+	|-Array.InternalEnumerator<RaycastHit2D>.get_Current
+	|
+	|-RVA: 0x2AF3610 Offset: 0x2AF3711 VA: 0x2AF3610
+	|-Array.InternalEnumerator<RaycastResult>.get_Current
+	|
+	|-RVA: 0x2AF38E0 Offset: 0x2AF39E1 VA: 0x2AF38E0
+	|-Array.InternalEnumerator<Rect>.get_Current
+	|
+	|-RVA: 0x2AF3B60 Offset: 0x2AF3C61 VA: 0x2AF3B60
+	|-Array.InternalEnumerator<RenderBuffer>.get_Current
+	|
+	|-RVA: 0x2AF3DD0 Offset: 0x2AF3ED1 VA: 0x2AF3DD0
+	|-Array.InternalEnumerator<RenderStateBlock>.get_Current
+	|
+	|-RVA: 0x2AF40C0 Offset: 0x2AF41C1 VA: 0x2AF40C0
+	|-Array.InternalEnumerator<RenderTargetHandle>.get_Current
+	|
+	|-RVA: 0x2AF4370 Offset: 0x2AF4471 VA: 0x2AF4370
+	|-Array.InternalEnumerator<RenderTargetIdentifier>.get_Current
+	|
+	|-RVA: 0x2AF4620 Offset: 0x2AF4721 VA: 0x2AF4620
+	|-Array.InternalEnumerator<RendererListHandle>.get_Current
+	|
+	|-RVA: 0x2AF4890 Offset: 0x2AF4991 VA: 0x2AF4890
+	|-Array.InternalEnumerator<ResourceHandle>.get_Current
+	|
+	|-RVA: 0x2AF4B00 Offset: 0x2AF4C01 VA: 0x2AF4B00
+	|-Array.InternalEnumerator<ResourceLocator>.get_Current
+	|
+	|-RVA: 0x2AF4D70 Offset: 0x2AF4E71 VA: 0x2AF4D70
+	|-Array.InternalEnumerator<RichTextTagAttribute>.get_Current
+	|
+	|-RVA: 0x2AF5000 Offset: 0x2AF5101 VA: 0x2AF5000
+	|-Array.InternalEnumerator<RuntimeLabel>.get_Current
+	|
+	|-RVA: 0x2AF5270 Offset: 0x2AF5371 VA: 0x2AF5270
+	|-Array.InternalEnumerator<sbyte>.get_Current
+	|
+	|-RVA: 0x2AF54E0 Offset: 0x2AF55E1 VA: 0x2AF54E0
+	|-Array.InternalEnumerator<SerializedType>.get_Current
+	|
+	|-RVA: 0x2AF5770 Offset: 0x2AF5871 VA: 0x2AF5770
+	|-Array.InternalEnumerator<ShaderKeyword>.get_Current
+	|
+	|-RVA: 0x2AF59D0 Offset: 0x2AF5AD1 VA: 0x2AF59D0
+	|-Array.InternalEnumerator<ShaderTagId>.get_Current
+	|
+	|-RVA: 0x2AF5C30 Offset: 0x2AF5D31 VA: 0x2AF5C30
+	|-Array.InternalEnumerator<ShadowSliceData>.get_Current
+	|
+	|-RVA: 0x2AF5EC0 Offset: 0x2AF5FC1 VA: 0x2AF5EC0
+	|-Array.InternalEnumerator<Shape>.get_Current
+	|
+	|-RVA: 0x2AF6150 Offset: 0x2AF6251 VA: 0x2AF6150
+	|-Array.InternalEnumerator<float>.get_Current
+	|
+	|-RVA: 0x2AF63C0 Offset: 0x2AF64C1 VA: 0x2AF63C0
+	|-Array.InternalEnumerator<SixAxisSensorHandle>.get_Current
+	|
+	|-RVA: 0x2AF6620 Offset: 0x2AF6721 VA: 0x2AF6620
+	|-Array.InternalEnumerator<SixAxisSensorState>.get_Current
+	|
+	|-RVA: 0x2AF68F0 Offset: 0x2AF69F1 VA: 0x2AF68F0
+	|-Array.InternalEnumerator<SkeletonBone>.get_Current
+	|
+	|-RVA: 0x2AF6BA0 Offset: 0x2AF6CA1 VA: 0x2AF6BA0
+	|-Array.InternalEnumerator<SortingLayer>.get_Current
+	|
+	|-RVA: 0x2AF6E00 Offset: 0x2AF6F01 VA: 0x2AF6E00
+	|-Array.InternalEnumerator<SphericalHarmonicsL2>.get_Current
+	|
+	|-RVA: 0x2AF70F0 Offset: 0x2AF71F1 VA: 0x2AF70F0
+	|-Array.InternalEnumerator<SpinLock>.get_Current
+	|
+	|-RVA: 0x2AF7350 Offset: 0x2AF7451 VA: 0x2AF7350
+	|-Array.InternalEnumerator<SpringBoneComponents>.get_Current
+	|
+	|-RVA: 0x2AF7620 Offset: 0x2AF7721 VA: 0x2AF7620
+	|-Array.InternalEnumerator<SpringBoneProperties>.get_Current
+	|
+	|-RVA: 0x2AF78B0 Offset: 0x2AF79B1 VA: 0x2AF78B0
+	|-Array.InternalEnumerator<SpringColliderComponents>.get_Current
+	|
+	|-RVA: 0x2AF7BA0 Offset: 0x2AF7CA1 VA: 0x2AF7BA0
+	|-Array.InternalEnumerator<SpringColliderProperties>.get_Current
+	|
+	|-RVA: 0x2AF7E10 Offset: 0x2AF7F11 VA: 0x2AF7E10
+	|-Array.InternalEnumerator<SpringForceComponent>.get_Current
+	|
+	|-RVA: 0x2982480 Offset: 0x2982581 VA: 0x2982480
+	|-Array.InternalEnumerator<SpringJobElement>.get_Current
+	|
+	|-RVA: 0x2982710 Offset: 0x2982811 VA: 0x2982710
+	|-Array.InternalEnumerator<SpriteState>.get_Current
+	|
+	|-RVA: 0x29829A0 Offset: 0x2982AA1 VA: 0x29829A0
+	|-Array.InternalEnumerator<SubMeshDescriptor>.get_Current
+	|
+	|-RVA: 0x2982C50 Offset: 0x2982D51 VA: 0x2982C50
+	|-Array.InternalEnumerator<TMP_CharacterInfo>.get_Current
+	|
+	|-RVA: 0x2982EE0 Offset: 0x2982FE1 VA: 0x2982EE0
+	|-Array.InternalEnumerator<TMP_FontWeightPair>.get_Current
+	|
+	|-RVA: 0x2983150 Offset: 0x2983251 VA: 0x2983150
+	|-Array.InternalEnumerator<TMP_LineInfo>.get_Current
+	|
+	|-RVA: 0x2983440 Offset: 0x2983541 VA: 0x2983440
+	|-Array.InternalEnumerator<TMP_LinkInfo>.get_Current
+	|
+	|-RVA: 0x29836F0 Offset: 0x29837F1 VA: 0x29836F0
+	|-Array.InternalEnumerator<TMP_MeshInfo>.get_Current
+	|
+	|-RVA: 0x29839C0 Offset: 0x2983AC1 VA: 0x29839C0
+	|-Array.InternalEnumerator<TMP_PageInfo>.get_Current
+	|
+	|-RVA: 0x2983C50 Offset: 0x2983D51 VA: 0x2983C50
+	|-Array.InternalEnumerator<TMP_WordInfo>.get_Current
+	|
+	|-RVA: 0x2983EE0 Offset: 0x2983FE1 VA: 0x2983EE0
+	|-Array.InternalEnumerator<TablePair>.get_Current
+	|
+	|-RVA: 0x2984150 Offset: 0x2984251 VA: 0x2984150
+	|-Array.InternalEnumerator<TextureHandle>.get_Current
+	|
+	|-RVA: 0x29843C0 Offset: 0x29844C1 VA: 0x29843C0
+	|-Array.InternalEnumerator<TimeSpan>.get_Current
+	|
+	|-RVA: 0x2984630 Offset: 0x2984731 VA: 0x2984630
+	|-Array.InternalEnumerator<Touch>.get_Current
+	|
+	|-RVA: 0x2984900 Offset: 0x2984A01 VA: 0x2984900
+	|-Array.InternalEnumerator<TouchScreenState1>.get_Current
+	|
+	|-RVA: 0x2984BB0 Offset: 0x2984CB1 VA: 0x2984BB0
+	|-Array.InternalEnumerator<TouchScreenState10>.get_Current
+	|
+	|-RVA: 0x2984E40 Offset: 0x2984F41 VA: 0x2984E40
+	|-Array.InternalEnumerator<TouchScreenState11>.get_Current
+	|
+	|-RVA: 0x29850D0 Offset: 0x29851D1 VA: 0x29850D0
+	|-Array.InternalEnumerator<TouchScreenState12>.get_Current
+	|
+	|-RVA: 0x2985360 Offset: 0x2985461 VA: 0x2985360
+	|-Array.InternalEnumerator<TouchScreenState13>.get_Current
+	|
+	|-RVA: 0x29855F0 Offset: 0x29856F1 VA: 0x29855F0
+	|-Array.InternalEnumerator<TouchScreenState14>.get_Current
+	|
+	|-RVA: 0x2985880 Offset: 0x2985981 VA: 0x2985880
+	|-Array.InternalEnumerator<TouchScreenState15>.get_Current
+	|
+	|-RVA: 0x2985B10 Offset: 0x2985C11 VA: 0x2985B10
+	|-Array.InternalEnumerator<TouchScreenState16>.get_Current
+	|
+	|-RVA: 0x2985DA0 Offset: 0x2985EA1 VA: 0x2985DA0
+	|-Array.InternalEnumerator<TouchScreenState2>.get_Current
+	|
+	|-RVA: 0x2986070 Offset: 0x2986171 VA: 0x2986070
+	|-Array.InternalEnumerator<TouchScreenState3>.get_Current
+	|
+	|-RVA: 0x2986300 Offset: 0x2986401 VA: 0x2986300
+	|-Array.InternalEnumerator<TouchScreenState4>.get_Current
+	|
+	|-RVA: 0x2986590 Offset: 0x2986691 VA: 0x2986590
+	|-Array.InternalEnumerator<TouchScreenState5>.get_Current
+	|
+	|-RVA: 0x2986820 Offset: 0x2986921 VA: 0x2986820
+	|-Array.InternalEnumerator<TouchScreenState6>.get_Current
+	|
+	|-RVA: 0x2986AB0 Offset: 0x2986BB1 VA: 0x2986AB0
+	|-Array.InternalEnumerator<TouchScreenState7>.get_Current
+	|
+	|-RVA: 0x2986D40 Offset: 0x2986E41 VA: 0x2986D40
+	|-Array.InternalEnumerator<TouchScreenState8>.get_Current
+	|
+	|-RVA: 0x2986FD0 Offset: 0x29870D1 VA: 0x2986FD0
+	|-Array.InternalEnumerator<TouchScreenState9>.get_Current
+	|
+	|-RVA: 0x2987260 Offset: 0x2987361 VA: 0x2987260
+	|-Array.InternalEnumerator<TouchState>.get_Current
+	|
+	|-RVA: 0x2987510 Offset: 0x2987611 VA: 0x2987510
+	|-Array.InternalEnumerator<TrailHand>.get_Current
+	|
+	|-RVA: 0x29877A0 Offset: 0x29878A1 VA: 0x29877A0
+	|-Array.InternalEnumerator<TrailVertex>.get_Current
+	|
+	|-RVA: 0x2987A30 Offset: 0x2987B31 VA: 0x2987A30
+	|-Array.InternalEnumerator<UICharInfo>.get_Current
+	|
+	|-RVA: 0x2987CB0 Offset: 0x2987DB1 VA: 0x2987CB0
+	|-Array.InternalEnumerator<UILineInfo>.get_Current
+	|
+	|-RVA: 0x2987F20 Offset: 0x2988021 VA: 0x2987F20
+	|-Array.InternalEnumerator<UIVertex>.get_Current
+	|
+	|-RVA: 0x2988210 Offset: 0x2988311 VA: 0x2988210
+	|-Array.InternalEnumerator<ushort>.get_Current
+	|
+	|-RVA: 0x2988480 Offset: 0x2988581 VA: 0x2988480
+	|-Array.InternalEnumerator<UInt16Enum>.get_Current
+	|
+	|-RVA: 0x29886F0 Offset: 0x29887F1 VA: 0x29886F0
+	|-Array.InternalEnumerator<uint>.get_Current
+	|
+	|-RVA: 0x2988960 Offset: 0x2988A61 VA: 0x2988960
+	|-Array.InternalEnumerator<UInt32Enum>.get_Current
+	|
+	|-RVA: 0x2988BD0 Offset: 0x2988CD1 VA: 0x2988BD0
+	|-Array.InternalEnumerator<ulong>.get_Current
+	|
+	|-RVA: 0x2988E40 Offset: 0x2988F41 VA: 0x2988E40
+	|-Array.InternalEnumerator<Uid>.get_Current
+	|
+	|-RVA: 0x29890B0 Offset: 0x29891B1 VA: 0x29890B0
+	|-Array.InternalEnumerator<UniTask>.get_Current
+	|
+	|-RVA: 0x2989320 Offset: 0x2989421 VA: 0x2989320
+	|-Array.InternalEnumerator<Unit>.get_Current
+	|
+	|-RVA: 0x2989580 Offset: 0x2989681 VA: 0x2989580
+	|-Array.InternalEnumerator<UnitEnum>.get_Current
+	|
+	|-RVA: 0x29897F0 Offset: 0x29898F1 VA: 0x29897F0
+	|-Array.InternalEnumerator<UserWord>.get_Current
+	|
+	|-RVA: 0x2989A60 Offset: 0x2989B61 VA: 0x2989A60
+	|-Array.InternalEnumerator<Vector2>.get_Current
+	|
+	|-RVA: 0x2989CD0 Offset: 0x2989DD1 VA: 0x2989CD0
+	|-Array.InternalEnumerator<Vector2Int>.get_Current
+	|
+	|-RVA: 0x2989F40 Offset: 0x298A041 VA: 0x2989F40
+	|-Array.InternalEnumerator<Vector3>.get_Current
+	|
+	|-RVA: 0x298A1C0 Offset: 0x298A2C1 VA: 0x298A1C0
+	|-Array.InternalEnumerator<Vector4>.get_Current
+	|
+	|-RVA: 0x298A440 Offset: 0x298A541 VA: 0x298A440
+	|-Array.InternalEnumerator<VertexAttributeDescriptor>.get_Current
+	|
+	|-RVA: 0x298A6B0 Offset: 0x298A7B1 VA: 0x298A6B0
+	|-Array.InternalEnumerator<VibrationDeviceHandle>.get_Current
+	|
+	|-RVA: 0x298A910 Offset: 0x298AA11 VA: 0x298A910
+	|-Array.InternalEnumerator<VibrationDeviceInfo>.get_Current
+	|
+	|-RVA: 0x298AB80 Offset: 0x298AC81 VA: 0x298AB80
+	|-Array.InternalEnumerator<VibrationValue>.get_Current
+	|
+	|-RVA: 0x298AE00 Offset: 0x298AF01 VA: 0x298AE00
+	|-Array.InternalEnumerator<VisibleLight>.get_Current
+	|
+	|-RVA: 0x298B0F0 Offset: 0x298B1F1 VA: 0x298B0F0
+	|-Array.InternalEnumerator<WordWrapState>.get_Current
+	|
+	|-RVA: 0x298B380 Offset: 0x298B481 VA: 0x298B380
+	|-Array.InternalEnumerator<X509ChainStatus>.get_Current
+	|
+	|-RVA: 0x298B5F0 Offset: 0x298B6F1 VA: 0x298B5F0
+	|-Array.InternalEnumerator<XPathNode>.get_Current
+	|
+	|-RVA: 0x298B880 Offset: 0x298B981 VA: 0x298B880
+	|-Array.InternalEnumerator<XPathNodeRef>.get_Current
+	|
+	|-RVA: 0x298BAF0 Offset: 0x298BBF1 VA: 0x298BAF0
+	|-Array.InternalEnumerator<XRView>.get_Current
+	|
+	|-RVA: 0x298BD80 Offset: 0x298BE81 VA: 0x298BD80
+	|-Array.InternalEnumerator<float3>.get_Current
+	|
+	|-RVA: 0x298C000 Offset: 0x298C101 VA: 0x298C000
+	|-Array.InternalEnumerator<float4x4>.get_Current
+	|
+	|-RVA: 0x298C2B0 Offset: 0x298C3B1 VA: 0x298C2B0
+	|-Array.InternalEnumerator<jvalue>.get_Current
+	|
+	|-RVA: 0x298C520 Offset: 0x298C621 VA: 0x298C520
+	|-Array.InternalEnumerator<uint4>.get_Current
+	|
+	|-RVA: 0x298C790 Offset: 0x298C891 VA: 0x298C790
+	|-Array.InternalEnumerator<AICrossfire.PositionTable>.get_Current
+	|
+	|-RVA: 0x298C9F0 Offset: 0x298CAF1 VA: 0x298C9F0
+	|-Array.InternalEnumerator<AIEnum.SkillRangeEnemyData>.get_Current
+	|
+	|-RVA: 0x298CC60 Offset: 0x298CD61 VA: 0x298CC60
+	|-Array.InternalEnumerator<AIOrder.UnitPriority>.get_Current
+	|
+	|-RVA: 0x298CED0 Offset: 0x298CFD1 VA: 0x298CED0
+	|-Array.InternalEnumerator<AmiiboSequence.GainItemData>.get_Current
+	|
+	|-RVA: 0x298D140 Offset: 0x298D241 VA: 0x298D140
+	|-Array.InternalEnumerator<AnimationOutputWeightProcessor.WeightInfo>.get_Current
+	|
+	|-RVA: 0x298D3F0 Offset: 0x298D4F1 VA: 0x298D3F0
+	|-Array.InternalEnumerator<ArenaOrderSequence.GodInfo>.get_Current
+	|
+	|-RVA: 0x298D660 Offset: 0x298D761 VA: 0x298D660
+	|-Array.InternalEnumerator<BattleInfo.SupportData>.get_Current
+	|
+	|-RVA: 0x298D8D0 Offset: 0x298D9D1 VA: 0x298D8D0
+	|-Array.InternalEnumerator<BeforeRenderHelper.OrderBlock>.get_Current
+	|
+	|-RVA: 0x298DB40 Offset: 0x298DC41 VA: 0x298DB40
+	|-Array.InternalEnumerator<Camera.RenderRequest>.get_Current
+	|
+	|-RVA: 0x298DDD0 Offset: 0x298DED1 VA: 0x298DDD0
+	|-Array.InternalEnumerator<CameraState.CustomBlendable>.get_Current
+	|
+	|-RVA: 0x298E040 Offset: 0x298E141 VA: 0x298E040
+	|-Array.InternalEnumerator<CinemachineBlendListCamera.Instruction>.get_Current
+	|
+	|-RVA: 0x298E2D0 Offset: 0x298E3D1 VA: 0x298E2D0
+	|-Array.InternalEnumerator<CinemachineBlenderSettings.CustomBlend>.get_Current
+	|
+	|-RVA: 0x298E560 Offset: 0x298E661 VA: 0x298E560
+	|-Array.InternalEnumerator<CinemachineClearShot.Pair>.get_Current
+	|
+	|-RVA: 0x298E7D0 Offset: 0x298E8D1 VA: 0x298E7D0
+	|-Array.InternalEnumerator<CinemachineFreeLook.Orbit>.get_Current
+	|
+	|-RVA: 0x298EA40 Offset: 0x298EB41 VA: 0x298EA40
+	|-Array.InternalEnumerator<CinemachinePath.Waypoint>.get_Current
+	|
+	|-RVA: 0x298ECF0 Offset: 0x298EDF1 VA: 0x298ECF0
+	|-Array.InternalEnumerator<CinemachineSmoothPath.Waypoint>.get_Current
+	|
+	|-RVA: 0x298EF70 Offset: 0x298F071 VA: 0x298EF70
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.HashPair>.get_Current
+	|
+	|-RVA: 0x298F1E0 Offset: 0x298F2E1 VA: 0x298F1E0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.Instruction>.get_Current
+	|
+	|-RVA: 0x298F470 Offset: 0x298F571 VA: 0x298F470
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.ParentHash>.get_Current
+	|
+	|-RVA: 0x298F6E0 Offset: 0x298F7E1 VA: 0x298F6E0
+	|-Array.InternalEnumerator<CinemachineTargetGroup.Target>.get_Current
+	|
+	|-RVA: 0x298F950 Offset: 0x298FA51 VA: 0x298F950
+	|-Array.InternalEnumerator<CodePointIndexer.TableRange>.get_Current
+	|
+	|-RVA: 0x298FBE0 Offset: 0x298FCE1 VA: 0x298FBE0
+	|-Array.InternalEnumerator<ContentCatalogData.Bucket>.get_Current
+	|
+	|-RVA: 0x298FE50 Offset: 0x298FF51 VA: 0x298FE50
+	|-Array.InternalEnumerator<CookieTokenizer.RecognizedAttribute>.get_Current
+	|
+	|-RVA: 0x29900C0 Offset: 0x29901C1 VA: 0x29900C0
+	|-Array.InternalEnumerator<DeferredLights.DrawCall>.get_Current
+	|
+	|-RVA: 0x2990370 Offset: 0x2990471 VA: 0x2990370
+	|-Array.InternalEnumerator<DeferredShaderData.ComputeBufferInfo>.get_Current
+	|
+	|-RVA: 0x29905E0 Offset: 0x29906E1 VA: 0x29905E0
+	|-Array.InternalEnumerator<DeferredTiler.PrePunctualLight>.get_Current
+	|
+	|-RVA: 0x2990870 Offset: 0x2990971 VA: 0x2990870
+	|-Array.InternalEnumerator<DelayedActionManager.DelegateInfo>.get_Current
+	|
+	|-RVA: 0x2990B00 Offset: 0x2990C01 VA: 0x2990B00
+	|-Array.InternalEnumerator<Detail.AsyncResultInt>.get_Current
+	|
+	|-RVA: 0x2990DB0 Offset: 0x2990EB1 VA: 0x2990DB0
+	|-Array.InternalEnumerator<Detail.CppArray>.get_Current
+	|
+	|-RVA: 0x2991020 Offset: 0x2991121 VA: 0x2991020
+	|-Array.InternalEnumerator<Detail.NotificationEventInt>.get_Current
+	|
+	|-RVA: 0x29912D0 Offset: 0x29913D1 VA: 0x29912D0
+	|-Array.InternalEnumerator<DisposUnit.Item>.get_Current
+	|
+	|-RVA: 0x2991540 Offset: 0x2991641 VA: 0x2991540
+	|-Array.InternalEnumerator<DragonRidePresetParamData.CourseData>.get_Current
+	|
+	|-RVA: 0x29917B0 Offset: 0x29918B1 VA: 0x29917B0
+	|-Array.InternalEnumerator<DragonRideTargetGroup.ChainParam>.get_Current
+	|
+	|-RVA: 0x2991A20 Offset: 0x2991B21 VA: 0x2991A20
+	|-Array.InternalEnumerator<DynamicMesh.State>.get_Current
+	|
+	|-RVA: 0x2991C90 Offset: 0x2991D91 VA: 0x2991C90
+	|-Array.InternalEnumerator<FXZEx.HitPoint>.get_Current
+	|
+	|-RVA: 0x2991F40 Offset: 0x2992041 VA: 0x2991F40
+	|-Array.InternalEnumerator<FishingRadicalParamData.RadicalParam>.get_Current
+	|
+	|-RVA: 0x29921C0 Offset: 0x29922C1 VA: 0x29921C0
+	|-Array.InternalEnumerator<GameVariable.Value>.get_Current
+	|
+	|-RVA: 0x2992430 Offset: 0x2992531 VA: 0x2992430
+	|-Array.InternalEnumerator<GmapPathAdjuster.TargetModel>.get_Current
+	|
+	|-RVA: 0x29926C0 Offset: 0x29927C1 VA: 0x29926C0
+	|-Array.InternalEnumerator<GmapSpotAdjuster.TargetModel>.get_Current
+	|
+	|-RVA: 0x2992950 Offset: 0x2992A51 VA: 0x2992950
+	|-Array.InternalEnumerator<GrounderQuadruped.Foot>.get_Current
+	|
+	|-RVA: 0x2992C00 Offset: 0x2992D01 VA: 0x2992C00
+	|-Array.InternalEnumerator<Hashtable.bucket>.get_Current
+	|
+	|-RVA: 0x2992E90 Offset: 0x2992F91 VA: 0x2992E90
+	|-Array.InternalEnumerator<HeadingTracker.Item>.get_Current
+	|
+	|-RVA: 0x2993120 Offset: 0x2993221 VA: 0x2993120
+	|-Array.InternalEnumerator<HubAccessoryRoomCamera.BackgroundSettings>.get_Current
+	|
+	|-RVA: 0x29933D0 Offset: 0x29934D1 VA: 0x29933D0
+	|-Array.InternalEnumerator<HubFastTravel.Location>.get_Current
+	|
+	|-RVA: 0x2993660 Offset: 0x2993761 VA: 0x2993660
+	|-Array.InternalEnumerator<HubLensFlare.Flare>.get_Current
+	|
+	|-RVA: 0x2993910 Offset: 0x2993A11 VA: 0x2993910
+	|-Array.InternalEnumerator<HubLookAtController.LookAtIKParam>.get_Current
+	|
+	|-RVA: 0x2993B90 Offset: 0x2993C91 VA: 0x2993B90
+	|-Array.InternalEnumerator<HubMaterialArray.MaterialInfo>.get_Current
+	|
+	|-RVA: 0x2993E00 Offset: 0x2993F01 VA: 0x2993E00
+	|-Array.InternalEnumerator<IKSolverLimb.AxisDirection>.get_Current
+	|
+	|-RVA: 0x29940B0 Offset: 0x29941B1 VA: 0x29940B0
+	|-Array.InternalEnumerator<InventoryPoolItemMenuContent.KindBgNameClass>.get_Current
+	|
+	|-RVA: 0x2994320 Offset: 0x2994421 VA: 0x2994320
+	|-Array.InternalEnumerator<LightUtility.ParametricLightMeshVertex>.get_Current
+	|
+	|-RVA: 0x29945D0 Offset: 0x29946D1 VA: 0x29945D0
+	|-Array.InternalEnumerator<LightUtility.SpriteLightMeshVertex>.get_Current
+	|
+	|-RVA: 0x2994880 Offset: 0x2994981 VA: 0x2994880
+	|-Array.InternalEnumerator<Map.Pos>.get_Current
+	|
+	|-RVA: 0x2994AF0 Offset: 0x2994BF1 VA: 0x2994AF0
+	|-Array.InternalEnumerator<MapGodExp.KindDesc>.get_Current
+	|
+	|-RVA: 0x2994D60 Offset: 0x2994E61 VA: 0x2994D60
+	|-Array.InternalEnumerator<MapHistory.Command>.get_Current
+	|
+	|-RVA: 0x2994FD0 Offset: 0x29950D1 VA: 0x2994FD0
+	|-Array.InternalEnumerator<MapImage.BackupTerrain>.get_Current
+	|
+	|-RVA: 0x2995240 Offset: 0x2995341 VA: 0x2995240
+	|-Array.InternalEnumerator<MapImageRange.Pos>.get_Current
+	|
+	|-RVA: 0x29954A0 Offset: 0x29955A1 VA: 0x29954A0
+	|-Array.InternalEnumerator<MapKillBonus.KillBonus>.get_Current
+	|
+	|-RVA: 0x2995710 Offset: 0x2995811 VA: 0x2995710
+	|-Array.InternalEnumerator<MapKillBonus.KilledBonus>.get_Current
+	|
+	|-RVA: 0x2995980 Offset: 0x2995A81 VA: 0x2995980
+	|-Array.InternalEnumerator<MapMind.Record>.get_Current
+	|
+	|-RVA: 0x2995C50 Offset: 0x2995D51 VA: 0x2995C50
+	|-Array.InternalEnumerator<MapMind.Target>.get_Current
+	|
+	|-RVA: 0x2995EE0 Offset: 0x2995FE1 VA: 0x2995EE0
+	|-Array.InternalEnumerator<MapPanelDebug.Entity>.get_Current
+	|
+	|-RVA: 0x2996170 Offset: 0x2996271 VA: 0x2996170
+	|-Array.InternalEnumerator<NexRanking.Data>.get_Current
+	|
+	|-RVA: 0x29963E0 Offset: 0x29964E1 VA: 0x29963E0
+	|-Array.InternalEnumerator<NexVersus.RatingData>.get_Current
+	|
+	|-RVA: 0x2996650 Offset: 0x2996751 VA: 0x2996650
+	|-Array.InternalEnumerator<NoiseSettings.TransformNoiseParams>.get_Current
+	|
+	|-RVA: 0x2996900 Offset: 0x2996A01 VA: 0x2996900
+	|-Array.InternalEnumerator<PackedPlayModeBuildLogs.RuntimeBuildLog>.get_Current
+	|
+	|-RVA: 0x2996B70 Offset: 0x2996C71 VA: 0x2996B70
+	|-Array.InternalEnumerator<ParameterizedStrings.FormatParam>.get_Current
+	|
+	|-RVA: 0x2996DE0 Offset: 0x2996EE1 VA: 0x2996DE0
+	|-Array.InternalEnumerator<ParticleSystem.Particle>.get_Current
+	|
+	|-RVA: 0x2997070 Offset: 0x2997171 VA: 0x2997070
+	|-Array.InternalEnumerator<ProfileCard.Achievement>.get_Current
+	|
+	|-RVA: 0x29972E0 Offset: 0x29973E1 VA: 0x29972E0
+	|-Array.InternalEnumerator<ProfileCard.SortieCount>.get_Current
+	|
+	|-RVA: 0x2997570 Offset: 0x2997671 VA: 0x2997570
+	|-Array.InternalEnumerator<QualitySettingsStack.Settings>.get_Current
+	|
+	|-RVA: 0x2997820 Offset: 0x2997921 VA: 0x2997820
+	|-Array.InternalEnumerator<RangeData.Offset>.get_Current
+	|
+	|-RVA: 0x2997A90 Offset: 0x2997B91 VA: 0x2997A90
+	|-Array.InternalEnumerator<RegexCharClass.LowerCaseMapping>.get_Current
+	|
+	|-RVA: 0x2997D00 Offset: 0x2997E01 VA: 0x2997D00
+	|-Array.InternalEnumerator<Relay.ChooseAwardeeData>.get_Current
+	|
+	|-RVA: 0x2997F90 Offset: 0x2998091 VA: 0x2997F90
+	|-Array.InternalEnumerator<RelayAwardData.Info>.get_Current
+	|
+	|-RVA: 0x2998200 Offset: 0x2998301 VA: 0x2998200
+	|-Array.InternalEnumerator<RenderGraph.CompiledPassInfo>.get_Current
+	|
+	|-RVA: 0x29984D0 Offset: 0x29985D1 VA: 0x29984D0
+	|-Array.InternalEnumerator<RenderGraph.CompiledResourceInfo>.get_Current
+	|
+	|-RVA: 0x2998760 Offset: 0x2998861 VA: 0x2998760
+	|-Array.InternalEnumerator<RenderGraphDebugData.PassDebugData>.get_Current
+	|
+	|-RVA: 0x29989F0 Offset: 0x2998AF1 VA: 0x29989F0
+	|-Array.InternalEnumerator<RenderGraphDebugData.ResourceDebugData>.get_Current
+	|
+	|-RVA: 0x2998CA0 Offset: 0x2998DA1 VA: 0x2998CA0
+	|-Array.InternalEnumerator<RenderGraphResourceRegistry.RendererListResource>.get_Current
+	|
+	|-RVA: 0x2998F30 Offset: 0x2999031 VA: 0x2998F30
+	|-Array.InternalEnumerator<RingCleaningUnitSelectMenu.GodParam>.get_Current
+	|
+	|-RVA: 0x29991A0 Offset: 0x29992A1 VA: 0x29991A0
+	|-Array.InternalEnumerator<SampleWave.Data>.get_Current
+	|
+	|-RVA: 0x2999420 Offset: 0x2999521 VA: 0x2999420
+	|-Array.InternalEnumerator<SampleWave.Temp>.get_Current
+	|
+	|-RVA: 0x2999690 Offset: 0x2999791 VA: 0x2999690
+	|-Array.InternalEnumerator<SendMouseEvents.HitInfo>.get_Current
+	|
+	|-RVA: 0x2999900 Offset: 0x2999A01 VA: 0x2999900
+	|-Array.InternalEnumerator<SequenceNode.SequenceConstructPosContext>.get_Current
+	|
+	|-RVA: 0x2999BB0 Offset: 0x2999CB1 VA: 0x2999BB0
+	|-Array.InternalEnumerator<ShaderInput.LightData>.get_Current
+	|
+	|-RVA: 0x2999E80 Offset: 0x2999F81 VA: 0x2999E80
+	|-Array.InternalEnumerator<ShaderInput.ShadowData>.get_Current
+	|
+	|-RVA: 0x299A150 Offset: 0x299A251 VA: 0x299A150
+	|-Array.InternalEnumerator<ShadowUtility.Edge>.get_Current
+	|
+	|-RVA: 0x2D7F6C0 Offset: 0x2D7F7C1 VA: 0x2D7F6C0
+	|-Array.InternalEnumerator<SimpleAnimationPlayable.QueuedState>.get_Current
+	|
+	|-RVA: 0x2D7F930 Offset: 0x2D7FA31 VA: 0x2D7F930
+	|-Array.InternalEnumerator<SkillArray.Entity>.get_Current
+	|
+	|-RVA: 0x2D7FB90 Offset: 0x2D7FC91 VA: 0x2D7FB90
+	|-Array.InternalEnumerator<Socket.WSABUF>.get_Current
+	|
+	|-RVA: 0x2D7FE00 Offset: 0x2D7FF01 VA: 0x2D7FE00
+	|-Array.InternalEnumerator<Stream.Info>.get_Current
+	|
+	|-RVA: 0x2D80070 Offset: 0x2D80171 VA: 0x2D80070
+	|-Array.InternalEnumerator<TMP_Text.UnicodeChar>.get_Current
+	|
+	|-RVA: 0x2D802E0 Offset: 0x2D803E1 VA: 0x2D802E0
+	|-Array.InternalEnumerator<TexturePacker_JsonArray.Frame>.get_Current
+	|
+	|-RVA: 0x2D80590 Offset: 0x2D80691 VA: 0x2D80590
+	|-Array.InternalEnumerator<TimeNotificationBehaviour.NotificationEntry>.get_Current
+	|
+	|-RVA: 0x2D80820 Offset: 0x2D80921 VA: 0x2D80820
+	|-Array.InternalEnumerator<UnitySynchronizationContext.WorkRequest>.get_Current
+	|
+	|-RVA: 0x2D80AB0 Offset: 0x2D80BB1 VA: 0x2D80AB0
+	|-Array.InternalEnumerator<XmlNamespaceManager.NamespaceDeclaration>.get_Current
+	|
+	|-RVA: 0x2D80D40 Offset: 0x2D80E41 VA: 0x2D80D40
+	|-Array.InternalEnumerator<XmlSchemaObjectTable.XmlSchemaObjectEntry>.get_Current
+	|
+	|-RVA: 0x2D80FB0 Offset: 0x2D810B1 VA: 0x2D80FB0
+	|-Array.InternalEnumerator<XmlTextReaderImpl.ParsingState>.get_Current
+	|
+	|-RVA: 0x2D812A0 Offset: 0x2D813A1 VA: 0x2D812A0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.Desc>.get_Current
+	|
+	|-RVA: 0x2D81510 Offset: 0x2D81611 VA: 0x2D81510
+	|-Array.InternalEnumerator<AIThink.EnchantThink.ItemInfo>.get_Current
+	|
+	|-RVA: 0x2D81770 Offset: 0x2D81871 VA: 0x2D81770
+	|-Array.InternalEnumerator<AIThink.EnchantThink.SurroundingInfo>.get_Current
+	|
+	|-RVA: 0x2D819D0 Offset: 0x2D81AD1 VA: 0x2D819D0
+	|-Array.InternalEnumerator<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>.get_Current
+	|
+	|-RVA: 0x2D81C40 Offset: 0x2D81D41 VA: 0x2D81C40
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreChangeMetaParamInt>.get_Current
+	|
+	|-RVA: 0x2D81ED0 Offset: 0x2D81FD1 VA: 0x2D81ED0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreDeleteParamInt>.get_Current
+	|
+	|-RVA: 0x2D82140 Offset: 0x2D82241 VA: 0x2D82140
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreGetMetaParamInt>.get_Current
+	|
+	|-RVA: 0x2D823F0 Offset: 0x2D824F1 VA: 0x2D823F0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreMetaInfoInt>.get_Current
+	|
+	|-RVA: 0x2D82680 Offset: 0x2D82781 VA: 0x2D82680
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePasswordInfoInt>.get_Current
+	|
+	|-RVA: 0x2D82910 Offset: 0x2D82A11 VA: 0x2D82910
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePersistenceInfoInt>.get_Current
+	|
+	|-RVA: 0x2D82BA0 Offset: 0x2D82CA1 VA: 0x2D82BA0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePreparePostParamInt>.get_Current
+	|
+	|-RVA: 0x2D82E30 Offset: 0x2D82F31 VA: 0x2D82E30
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRateObjectParamInt>.get_Current
+	|
+	|-RVA: 0x2D830A0 Offset: 0x2D831A1 VA: 0x2D830A0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingInitParamInt>.get_Current
+	|
+	|-RVA: 0x2D83330 Offset: 0x2D83431 VA: 0x2D83330
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingTargetInt>.get_Current
+	|
+	|-RVA: 0x2D835A0 Offset: 0x2D836A1 VA: 0x2D835A0
+	|-Array.InternalEnumerator<Detail.Ranking.RankingCachedResultInt>.get_Current
+	|
+	|-RVA: 0x2D83850 Offset: 0x2D83951 VA: 0x2D83850
+	|-Array.InternalEnumerator<Detail.Ranking.RankingOrderParamInt>.get_Current
+	|
+	|-RVA: 0x2D83AC0 Offset: 0x2D83BC1 VA: 0x2D83AC0
+	|-Array.InternalEnumerator<Detail.Ranking.RankingRankDataInt>.get_Current
+	|
+	|-RVA: 0x2D83D70 Offset: 0x2D83E71 VA: 0x2D83D70
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ChartInfoInt>.get_Current
+	|
+	|-RVA: 0x2D84040 Offset: 0x2D84141 VA: 0x2D84040
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2RankDataInt>.get_Current
+	|
+	|-RVA: 0x2D842F0 Offset: 0x2D843F1 VA: 0x2D842F0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ScoreDataInt>.get_Current
+	|
+	|-RVA: 0x2D84560 Offset: 0x2D84661 VA: 0x2D84560
+	|-Array.InternalEnumerator<Detail.Screening.ScreeningContextInfoInt>.get_Current
+	|
+	|-RVA: 0x2D847F0 Offset: 0x2D848F1 VA: 0x2D847F0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberContentInt>.get_Current
+	|
+	|-RVA: 0x2D84AC0 Offset: 0x2D84BC1 VA: 0x2D84AC0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberGetContentParamInt>.get_Current
+	|
+	|-RVA: 0x2D84D50 Offset: 0x2D84E51 VA: 0x2D84D50
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusInfoInt>.get_Current
+	|
+	|-RVA: 0x2D85000 Offset: 0x2D85101 VA: 0x2D85000
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusParamInt>.get_Current
+	|
+	|-RVA: 0x2D85290 Offset: 0x2D85391 VA: 0x2D85290
+	|-Array.InternalEnumerator<Detail.Utility.IntegerSettings>.get_Current
+	|
+	|-RVA: 0x2D85500 Offset: 0x2D85601 VA: 0x2D85500
+	|-Array.InternalEnumerator<Detail.Utility.UniqueIdInfoInt>.get_Current
+	|
+	|-RVA: 0x2D85770 Offset: 0x2D85871 VA: 0x2D85770
+	|-Array.InternalEnumerator<FacetsChecker.FacetsCompiler.Map>.get_Current
+	|
+	|-RVA: 0x2D859E0 Offset: 0x2D85AE1 VA: 0x2D859E0
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Appearance>.get_Current
+	|
+	|-RVA: 0x2D85C70 Offset: 0x2D85D71 VA: 0x2D85C70
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Leaving>.get_Current
+	|
+	|-RVA: 0x2D85ED0 Offset: 0x2D85FD1 VA: 0x2D85ED0
+	|-Array.InternalEnumerator<MapHistory.ReplayUnitMap.Data>.get_Current
+	|
+	|-RVA: 0x2D86140 Offset: 0x2D86241 VA: 0x2D86140
+	|-Array.InternalEnumerator<MapHistory.Rewind.LatestInspectorData>.get_Current
+	|
+	|-RVA: 0x2D863A0 Offset: 0x2D864A1 VA: 0x2D863A0
+	|-Array.InternalEnumerator<MapHistory.Rewind.WorkTerrainData>.get_Current
+	|
+	|-RVA: 0x2D86600 Offset: 0x2D86701 VA: 0x2D86600
+	|-Array.InternalEnumerator<MapHistory.RewindUnitMap.Data>.get_Current
+	|
+	|-RVA: 0x2D868B0 Offset: 0x2D869B1 VA: 0x2D868B0
+	|-Array.InternalEnumerator<MapKillBonus.Work.Pos>.get_Current
+	|
+	|-RVA: 0x2D86B10 Offset: 0x2D86C11 VA: 0x2D86B10
+	|-Array.InternalEnumerator<MapSkill.AroundCalculator.Result>.get_Current
+	|
+	|-RVA: 0x2D86D80 Offset: 0x2D86E81 VA: 0x2D86D80
+	|-Array.InternalEnumerator<Nex.ApiCallChecker.Guideline>.get_Current
+	|
+	|-RVA: 0x2D86FF0 Offset: 0x2D870F1 VA: 0x2D86FF0
+	|-Array.InternalEnumerator<Ngc.MaskTextSequenceBase.Data>.get_Current
+	|
+	|-RVA: 0x2D87280 Offset: 0x2D87381 VA: 0x2D87280
+	|-Array.InternalEnumerator<TargetPositionCache.CacheCurve.Item>.get_Current
+	|
+	|-RVA: 0x2D87530 Offset: 0x2D87631 VA: 0x2D87530
+	|-Array.InternalEnumerator<TargetPositionCache.CacheEntry.RecordingItem>.get_Current
+	|
+	|-RVA: 0x2D877E0 Offset: 0x2D878E1 VA: 0x2D877E0
+	|-Array.InternalEnumerator<TerrainUtility.TerrainMap.TileCoord>.get_Current
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1EB3960 Offset: 0x1EB3A61 VA: 0x1EB3960
+	|-Array.InternalEnumerator<ArraySegment<byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB3BE0 Offset: 0x1EB3CE1 VA: 0x1EB3BE0
+	|-Array.InternalEnumerator<AsyncOperationHandle<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB3E50 Offset: 0x1EB3F51 VA: 0x1EB3E50
+	|-Array.InternalEnumerator<MapDeployTemplate.Queue.Data<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB40C0 Offset: 0x1EB41C1 VA: 0x1EB40C0
+	|-Array.InternalEnumerator<Nex.DataStore.ParamPool.Data<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB4330 Offset: 0x1EB4431 VA: 0x1EB4330
+	|-Array.InternalEnumerator<Nex.Screening.ParamPool.Data<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB45B0 Offset: 0x1EB46B1 VA: 0x1EB45B0
+	|-Array.InternalEnumerator<IntervalTree.Entry<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB4840 Offset: 0x1EB4941 VA: 0x1EB4840
+	|-Array.InternalEnumerator<Dictionary.Entry<ValueTuple<object, int>, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB4AD0 Offset: 0x1EB4BD1 VA: 0x1EB4AD0
+	|-Array.InternalEnumerator<Dictionary.Entry<byte, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB4D60 Offset: 0x1EB4E61 VA: 0x1EB4D60
+	|-Array.InternalEnumerator<Dictionary.Entry<CancellationToken, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB4FF0 Offset: 0x1EB50F1 VA: 0x1EB4FF0
+	|-Array.InternalEnumerator<Dictionary.Entry<char, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB5280 Offset: 0x1EB5381 VA: 0x1EB5280
+	|-Array.InternalEnumerator<Dictionary.Entry<Guid, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB5500 Offset: 0x1EB5601 VA: 0x1EB5500
+	|-Array.InternalEnumerator<Dictionary.Entry<int, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB5770 Offset: 0x1EB5871 VA: 0x1EB5770
+	|-Array.InternalEnumerator<Dictionary.Entry<int, byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB59E0 Offset: 0x1EB5AE1 VA: 0x1EB59E0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, char>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB5C70 Offset: 0x1EB5D71 VA: 0x1EB5C70
+	|-Array.InternalEnumerator<Dictionary.Entry<int, DiagnosticEvent>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB5F00 Offset: 0x1EB6001 VA: 0x1EB5F00
+	|-Array.InternalEnumerator<Dictionary.Entry<int, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB6170 Offset: 0x1EB6271 VA: 0x1EB6170
+	|-Array.InternalEnumerator<Dictionary.Entry<int, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB63F0 Offset: 0x1EB64F1 VA: 0x1EB63F0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, long>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB6680 Offset: 0x1EB6781 VA: 0x1EB6680
+	|-Array.InternalEnumerator<Dictionary.Entry<int, MapPos>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB6910 Offset: 0x1EB6A11 VA: 0x1EB6910
+	|-Array.InternalEnumerator<Dictionary.Entry<int, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB6B90 Offset: 0x1EB6C91 VA: 0x1EB6B90
+	|-Array.InternalEnumerator<Dictionary.Entry<int, uint>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB6E00 Offset: 0x1EB6F01 VA: 0x1EB6E00
+	|-Array.InternalEnumerator<Dictionary.Entry<int, AIThink.EnchantThink.SurroundingInfo>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB7070 Offset: 0x1EB7171 VA: 0x1EB7070
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB72E0 Offset: 0x1EB73E1 VA: 0x1EB72E0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB7550 Offset: 0x1EB7651 VA: 0x1EB7550
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB77D0 Offset: 0x1EB78D1 VA: 0x1EB77D0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB7A60 Offset: 0x1EB7B61 VA: 0x1EB7A60
+	|-Array.InternalEnumerator<Dictionary.Entry<long, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB7CF0 Offset: 0x1EB7DF1 VA: 0x1EB7CF0
+	|-Array.InternalEnumerator<Dictionary.Entry<MapPos, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB7F90 Offset: 0x1EB8091 VA: 0x1EB7F90
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle<object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB8240 Offset: 0x1EB8341 VA: 0x1EB8240
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB84E0 Offset: 0x1EB85E1 VA: 0x1EB84E0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB8770 Offset: 0x1EB8871 VA: 0x1EB8770
+	|-Array.InternalEnumerator<Dictionary.Entry<object, byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB8A00 Offset: 0x1EB8B01 VA: 0x1EB8A00
+	|-Array.InternalEnumerator<Dictionary.Entry<object, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB8C90 Offset: 0x1EB8D91 VA: 0x1EB8C90
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB8F20 Offset: 0x1EB9021 VA: 0x1EB8F20
+	|-Array.InternalEnumerator<Dictionary.Entry<object, IntPtr>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB91B0 Offset: 0x1EB92B1 VA: 0x1EB91B0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB9440 Offset: 0x1EB9541 VA: 0x1EB9440
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Playable>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB96D0 Offset: 0x1EB97D1 VA: 0x1EB96D0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ResourceLocator>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB9960 Offset: 0x1EB9A61 VA: 0x1EB9960
+	|-Array.InternalEnumerator<Dictionary.Entry<object, float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB9BF0 Offset: 0x1EB9CF1 VA: 0x1EB9BF0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ushort>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EB9E80 Offset: 0x1EB9F81 VA: 0x1EB9E80
+	|-Array.InternalEnumerator<Dictionary.Entry<object, GameVariable.Value>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBA120 Offset: 0x1EBA221 VA: 0x1EBA120
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, DataStoreRatingInfo>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBA3C0 Offset: 0x1EBA4C1 VA: 0x1EBA3C0
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBA640 Offset: 0x1EBA741 VA: 0x1EBA640
+	|-Array.InternalEnumerator<Dictionary.Entry<ushort, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBA8B0 Offset: 0x1EBA9B1 VA: 0x1EBA8B0
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBAB30 Offset: 0x1EBAC31 VA: 0x1EBAB30
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBADC0 Offset: 0x1EBAEC1 VA: 0x1EBADC0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Friend>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBB050 Offset: 0x1EBB151 VA: 0x1EBB050
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBB2E0 Offset: 0x1EBB3E1 VA: 0x1EBB2E0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBB570 Offset: 0x1EBB671 VA: 0x1EBB570
+	|-Array.InternalEnumerator<Dictionary.Entry<Vector3, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBB810 Offset: 0x1EBB911 VA: 0x1EBB810
+	|-Array.InternalEnumerator<Dictionary.Entry<XPathNodeRef, XPathNodeRef>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBBAB0 Offset: 0x1EBBBB1 VA: 0x1EBBAB0
+	|-Array.InternalEnumerator<Dictionary.Entry<TerrainUtility.TerrainMap.TileCoord, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBBD30 Offset: 0x1EBBE31 VA: 0x1EBBD30
+	|-Array.InternalEnumerator<PriorityQueue.IndexedItem<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBBFB0 Offset: 0x1EBC0B1 VA: 0x1EBBFB0
+	|-Array.InternalEnumerator<KeyValuePair<ValueTuple<object, int>, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBC230 Offset: 0x1EBC331 VA: 0x1EBC230
+	|-Array.InternalEnumerator<KeyValuePair<byte, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBC4A0 Offset: 0x1EBC5A1 VA: 0x1EBC4A0
+	|-Array.InternalEnumerator<KeyValuePair<CancellationToken, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBC710 Offset: 0x1EBC811 VA: 0x1EBC710
+	|-Array.InternalEnumerator<KeyValuePair<char, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBC980 Offset: 0x1EBCA81 VA: 0x1EBC980
+	|-Array.InternalEnumerator<KeyValuePair<DateTime, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBCC00 Offset: 0x1EBCD01 VA: 0x1EBCC00
+	|-Array.InternalEnumerator<KeyValuePair<Guid, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBCE80 Offset: 0x1EBCF81 VA: 0x1EBCE80
+	|-Array.InternalEnumerator<KeyValuePair<int, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBD0F0 Offset: 0x1EBD1F1 VA: 0x1EBD0F0
+	|-Array.InternalEnumerator<KeyValuePair<int, byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBD360 Offset: 0x1EBD461 VA: 0x1EBD360
+	|-Array.InternalEnumerator<KeyValuePair<int, char>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBD5F0 Offset: 0x1EBD6F1 VA: 0x1EBD5F0
+	|-Array.InternalEnumerator<KeyValuePair<int, DiagnosticEvent>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBD880 Offset: 0x1EBD981 VA: 0x1EBD880
+	|-Array.InternalEnumerator<KeyValuePair<int, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBDAF0 Offset: 0x1EBDBF1 VA: 0x1EBDAF0
+	|-Array.InternalEnumerator<KeyValuePair<int, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBDD60 Offset: 0x1EBDE61 VA: 0x1EBDD60
+	|-Array.InternalEnumerator<KeyValuePair<int, long>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBDFC0 Offset: 0x1EBE0C1 VA: 0x1EBDFC0
+	|-Array.InternalEnumerator<KeyValuePair<int, MapPos>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBE240 Offset: 0x1EBE341 VA: 0x1EBE240
+	|-Array.InternalEnumerator<KeyValuePair<int, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBE4B0 Offset: 0x1EBE5B1 VA: 0x1EBE4B0
+	|-Array.InternalEnumerator<KeyValuePair<int, uint>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBE720 Offset: 0x1EBE821 VA: 0x1EBE720
+	|-Array.InternalEnumerator<KeyValuePair<int, AIThink.EnchantThink.SurroundingInfo>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBE990 Offset: 0x1EBEA91 VA: 0x1EBE990
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBEC00 Offset: 0x1EBED01 VA: 0x1EBEC00
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBEE70 Offset: 0x1EBEF71 VA: 0x1EBEE70
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBF0E0 Offset: 0x1EBF1E1 VA: 0x1EBF0E0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBF350 Offset: 0x1EBF451 VA: 0x1EBF350
+	|-Array.InternalEnumerator<KeyValuePair<long, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBF5B0 Offset: 0x1EBF6B1 VA: 0x1EBF5B0
+	|-Array.InternalEnumerator<KeyValuePair<MapPos, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBF840 Offset: 0x1EBF941 VA: 0x1EBF840
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle<object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBFAD0 Offset: 0x1EBFBD1 VA: 0x1EBFAD0
+	|-Array.InternalEnumerator<KeyValuePair<object, ValueTuple<int, DateTime, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBFD60 Offset: 0x1EBFE61 VA: 0x1EBFD60
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EBFFE0 Offset: 0x1EC00E1 VA: 0x1EBFFE0
+	|-Array.InternalEnumerator<KeyValuePair<object, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC0250 Offset: 0x1EC0351 VA: 0x1EC0250
+	|-Array.InternalEnumerator<KeyValuePair<object, byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC04C0 Offset: 0x1EC05C1 VA: 0x1EC04C0
+	|-Array.InternalEnumerator<KeyValuePair<object, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC0730 Offset: 0x1EC0831 VA: 0x1EC0730
+	|-Array.InternalEnumerator<KeyValuePair<object, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC09A0 Offset: 0x1EC0AA1 VA: 0x1EC09A0
+	|-Array.InternalEnumerator<KeyValuePair<object, IntPtr>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC0C10 Offset: 0x1EC0D11 VA: 0x1EC0C10
+	|-Array.InternalEnumerator<KeyValuePair<object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC0E90 Offset: 0x1EC0F91 VA: 0x1EC0E90
+	|-Array.InternalEnumerator<KeyValuePair<object, Playable>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC1120 Offset: 0x1EC1221 VA: 0x1EC1120
+	|-Array.InternalEnumerator<KeyValuePair<object, ResourceLocator>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC13A0 Offset: 0x1EC14A1 VA: 0x1EC13A0
+	|-Array.InternalEnumerator<KeyValuePair<object, float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC1610 Offset: 0x1EC1711 VA: 0x1EC1610
+	|-Array.InternalEnumerator<KeyValuePair<object, ushort>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC1890 Offset: 0x1EC1991 VA: 0x1EC1890
+	|-Array.InternalEnumerator<KeyValuePair<object, GameVariable.Value>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC1B20 Offset: 0x1EC1C21 VA: 0x1EC1B20
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, DataStoreRatingInfo>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC1DA0 Offset: 0x1EC1EA1 VA: 0x1EC1DA0
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC2010 Offset: 0x1EC2111 VA: 0x1EC2010
+	|-Array.InternalEnumerator<KeyValuePair<ushort, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC2280 Offset: 0x1EC2381 VA: 0x1EC2280
+	|-Array.InternalEnumerator<KeyValuePair<uint, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC24F0 Offset: 0x1EC25F1 VA: 0x1EC24F0
+	|-Array.InternalEnumerator<KeyValuePair<uint, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC2770 Offset: 0x1EC2871 VA: 0x1EC2770
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Friend>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC29F0 Offset: 0x1EC2AF1 VA: 0x1EC29F0
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC2C60 Offset: 0x1EC2D61 VA: 0x1EC2C60
+	|-Array.InternalEnumerator<KeyValuePair<ulong, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC2ED0 Offset: 0x1EC2FD1 VA: 0x1EC2ED0
+	|-Array.InternalEnumerator<KeyValuePair<Vector3, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC3150 Offset: 0x1EC3251 VA: 0x1EC3150
+	|-Array.InternalEnumerator<KeyValuePair<XPathNodeRef, XPathNodeRef>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC33D0 Offset: 0x1EC34D1 VA: 0x1EC33D0
+	|-Array.InternalEnumerator<KeyValuePair<TerrainUtility.TerrainMap.TileCoord, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC3640 Offset: 0x1EC3741 VA: 0x1EC3640
+	|-Array.InternalEnumerator<NativeArray<PreTile>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC38C0 Offset: 0x1EC39C1 VA: 0x1EC38C0
+	|-Array.InternalEnumerator<CommonBattleSequence.Reliance<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC3B40 Offset: 0x1EC3C41 VA: 0x1EC3B40
+	|-Array.InternalEnumerator<RenderGraphResourcePool.ResourceLogInfo<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC3DC0 Offset: 0x1EC3EC1 VA: 0x1EC3DC0
+	|-Array.InternalEnumerator<HashSet.Slot<ValueTuple<object, int>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC4050 Offset: 0x1EC4151 VA: 0x1EC4050
+	|-Array.InternalEnumerator<HashSet.Slot<AsyncOperationHandle>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC42C0 Offset: 0x1EC43C1 VA: 0x1EC42C0
+	|-Array.InternalEnumerator<HashSet.Slot<int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC4530 Offset: 0x1EC4631 VA: 0x1EC4530
+	|-Array.InternalEnumerator<HashSet.Slot<Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC47A0 Offset: 0x1EC48A1 VA: 0x1EC47A0
+	|-Array.InternalEnumerator<Set.Slot<Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC4A20 Offset: 0x1EC4B21 VA: 0x1EC4A20
+	|-Array.InternalEnumerator<HashSet.Slot<MapPos>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC4C90 Offset: 0x1EC4D91 VA: 0x1EC4C90
+	|-Array.InternalEnumerator<HashSet.Slot<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC4F10 Offset: 0x1EC5011 VA: 0x1EC4F10
+	|-Array.InternalEnumerator<Set.Slot<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC5180 Offset: 0x1EC5281 VA: 0x1EC5180
+	|-Array.InternalEnumerator<HashSet.Slot<uint>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC5400 Offset: 0x1EC5501 VA: 0x1EC5400
+	|-Array.InternalEnumerator<HashSet.Slot<ulong>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC5680 Offset: 0x1EC5781 VA: 0x1EC5680
+	|-Array.InternalEnumerator<Set.Slot<Vector3>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC5910 Offset: 0x1EC5A11 VA: 0x1EC5910
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Color32>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC5BB0 Offset: 0x1EC5CB1 VA: 0x1EC5BB0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<HighlightState>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC5E50 Offset: 0x1EC5F51 VA: 0x1EC5E50
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC60E0 Offset: 0x1EC61E1 VA: 0x1EC60E0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Int32Enum>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC6390 Offset: 0x1EC6491 VA: 0x1EC6390
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<MaterialReference>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC6650 Offset: 0x1EC6751 VA: 0x1EC6650
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC68F0 Offset: 0x1EC69F1 VA: 0x1EC68F0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC6B80 Offset: 0x1EC6C81 VA: 0x1EC6B80
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<WordWrapState>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC6E00 Offset: 0x1EC6F01 VA: 0x1EC6E00
+	|-Array.InternalEnumerator<TimeInterval<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC7080 Offset: 0x1EC7181 VA: 0x1EC7080
+	|-Array.InternalEnumerator<Timestamped<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC7300 Offset: 0x1EC7401 VA: 0x1EC7300
+	|-Array.InternalEnumerator<UniTask<object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC7570 Offset: 0x1EC7671 VA: 0x1EC7570
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC77F0 Offset: 0x1EC78F1 VA: 0x1EC77F0
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC7A80 Offset: 0x1EC7B81 VA: 0x1EC7A80
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask<object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC7D10 Offset: 0x1EC7E11 VA: 0x1EC7D10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC7FB0 Offset: 0x1EC80B1 VA: 0x1EC7FB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC8260 Offset: 0x1EC8361 VA: 0x1EC8260
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC84E0 Offset: 0x1EC85E1 VA: 0x1EC84E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x1EC8740 Offset: 0x1EC8841 VA: 0x1EC8740
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF8210 Offset: 0x2AF8311 VA: 0x2AF8210
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF8490 Offset: 0x2AF8591 VA: 0x2AF8490
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF8720 Offset: 0x2AF8821 VA: 0x2AF8720
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF89D0 Offset: 0x2AF8AD1 VA: 0x2AF89D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF8C70 Offset: 0x2AF8D71 VA: 0x2AF8C70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF8F10 Offset: 0x2AF9011 VA: 0x2AF8F10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF91C0 Offset: 0x2AF92C1 VA: 0x2AF91C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF9470 Offset: 0x2AF9571 VA: 0x2AF9470
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF9720 Offset: 0x2AF9821 VA: 0x2AF9720
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF99C0 Offset: 0x2AF9AC1 VA: 0x2AF99C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF9C60 Offset: 0x2AF9D61 VA: 0x2AF9C60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF9EE0 Offset: 0x2AF9FE1 VA: 0x2AF9EE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFA170 Offset: 0x2AFA271 VA: 0x2AFA170
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFA410 Offset: 0x2AFA511 VA: 0x2AFA410
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFA6B0 Offset: 0x2AFA7B1 VA: 0x2AFA6B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFA960 Offset: 0x2AFAA61 VA: 0x2AFA960
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFAC10 Offset: 0x2AFAD11 VA: 0x2AFAC10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFAEC0 Offset: 0x2AFAFC1 VA: 0x2AFAEC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFB170 Offset: 0x2AFB271 VA: 0x2AFB170
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFB430 Offset: 0x2AFB531 VA: 0x2AFB430
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFB700 Offset: 0x2AFB801 VA: 0x2AFB700
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFB9D0 Offset: 0x2AFBAD1 VA: 0x2AFB9D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFBC60 Offset: 0x2AFBD61 VA: 0x2AFBC60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFBEC0 Offset: 0x2AFBFC1 VA: 0x2AFBEC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFC150 Offset: 0x2AFC251 VA: 0x2AFC150
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFC3D0 Offset: 0x2AFC4D1 VA: 0x2AFC3D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFC650 Offset: 0x2AFC751 VA: 0x2AFC650
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFC8F0 Offset: 0x2AFC9F1 VA: 0x2AFC8F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFCB90 Offset: 0x2AFCC91 VA: 0x2AFCB90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFCE30 Offset: 0x2AFCF31 VA: 0x2AFCE30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFD0E0 Offset: 0x2AFD1E1 VA: 0x2AFD0E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFD380 Offset: 0x2AFD481 VA: 0x2AFD380
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFD610 Offset: 0x2AFD711 VA: 0x2AFD610
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFD8A0 Offset: 0x2AFD9A1 VA: 0x2AFD8A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFDB40 Offset: 0x2AFDC41 VA: 0x2AFDB40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFDDC0 Offset: 0x2AFDEC1 VA: 0x2AFDDC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFE040 Offset: 0x2AFE141 VA: 0x2AFE040
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFE2E0 Offset: 0x2AFE3E1 VA: 0x2AFE2E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFE580 Offset: 0x2AFE681 VA: 0x2AFE580
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFE820 Offset: 0x2AFE921 VA: 0x2AFE820
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFEAD0 Offset: 0x2AFEBD1 VA: 0x2AFEAD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFED80 Offset: 0x2AFEE81 VA: 0x2AFED80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFF030 Offset: 0x2AFF131 VA: 0x2AFF030
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFF2F0 Offset: 0x2AFF3F1 VA: 0x2AFF2F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFF5B0 Offset: 0x2AFF6B1 VA: 0x2AFF5B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFF870 Offset: 0x2AFF971 VA: 0x2AFF870
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFFB30 Offset: 0x2AFFC31 VA: 0x2AFFB30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AFFE00 Offset: 0x2AFFF01 VA: 0x2AFFE00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B000E0 Offset: 0x2B001E1 VA: 0x2B000E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B003C0 Offset: 0x2B004C1 VA: 0x2B003C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B006A0 Offset: 0x2B007A1 VA: 0x2B006A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B00930 Offset: 0x2B00A31 VA: 0x2B00930
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B00B90 Offset: 0x2B00C91 VA: 0x2B00B90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B00E20 Offset: 0x2B00F21 VA: 0x2B00E20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B010A0 Offset: 0x2B011A1 VA: 0x2B010A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B01330 Offset: 0x2B01431 VA: 0x2B01330
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B015D0 Offset: 0x2B016D1 VA: 0x2B015D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B01850 Offset: 0x2B01951 VA: 0x2B01850
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B01AD0 Offset: 0x2B01BD1 VA: 0x2B01AD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B01D60 Offset: 0x2B01E61 VA: 0x2B01D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B02000 Offset: 0x2B02101 VA: 0x2B02000
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B022B0 Offset: 0x2B023B1 VA: 0x2B022B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B02540 Offset: 0x2B02641 VA: 0x2B02540
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B027C0 Offset: 0x2B028C1 VA: 0x2B027C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B02A30 Offset: 0x2B02B31 VA: 0x2B02A30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B02CB0 Offset: 0x2B02DB1 VA: 0x2B02CB0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B02F40 Offset: 0x2B03041 VA: 0x2B02F40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B031E0 Offset: 0x2B032E1 VA: 0x2B031E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B03480 Offset: 0x2B03581 VA: 0x2B03480
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B03710 Offset: 0x2B03811 VA: 0x2B03710
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B039B0 Offset: 0x2B03AB1 VA: 0x2B039B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B03C60 Offset: 0x2B03D61 VA: 0x2B03C60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B03F20 Offset: 0x2B04021 VA: 0x2B03F20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B041E0 Offset: 0x2B042E1 VA: 0x2B041E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B044A0 Offset: 0x2B045A1 VA: 0x2B044A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B04760 Offset: 0x2B04861 VA: 0x2B04760
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B04A30 Offset: 0x2B04B31 VA: 0x2B04A30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B04D00 Offset: 0x2B04E01 VA: 0x2B04D00
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B04FD0 Offset: 0x2B050D1 VA: 0x2B04FD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B052B0 Offset: 0x2B053B1 VA: 0x2B052B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B05560 Offset: 0x2B05661 VA: 0x2B05560
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B057F0 Offset: 0x2B058F1 VA: 0x2B057F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B05A60 Offset: 0x2B05B61 VA: 0x2B05A60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B05CC0 Offset: 0x2B05DC1 VA: 0x2B05CC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, bool>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B05F40 Offset: 0x2B06041 VA: 0x2B05F40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Bounds>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B061B0 Offset: 0x2B062B1 VA: 0x2B061B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, byte>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B06430 Offset: 0x2B06531 VA: 0x2B06430
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Color>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B066C0 Offset: 0x2B067C1 VA: 0x2B066C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, double>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B06930 Offset: 0x2B06A31 VA: 0x2B06930
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, int>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B06BC0 Offset: 0x2B06CC1 VA: 0x2B06BC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, long>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B06E50 Offset: 0x2B06F51 VA: 0x2B06E50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B070E0 Offset: 0x2B071E1 VA: 0x2B070E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Quaternion>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B07370 Offset: 0x2B07471 VA: 0x2B07370
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Rect>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B075E0 Offset: 0x2B076E1 VA: 0x2B075E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, float>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B07870 Offset: 0x2B07971 VA: 0x2B07870
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B07AE0 Offset: 0x2B07BE1 VA: 0x2B07AE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Unit>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B07D50 Offset: 0x2B07E51 VA: 0x2B07D50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector2>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B07FD0 Offset: 0x2B080D1 VA: 0x2B07FD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector3>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B08260 Offset: 0x2B08361 VA: 0x2B08260
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector4>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B084F0 Offset: 0x2B085F1 VA: 0x2B084F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B08780 Offset: 0x2B08881 VA: 0x2B08780
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B08A20 Offset: 0x2B08B21 VA: 0x2B08A20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B08CC0 Offset: 0x2B08DC1 VA: 0x2B08CC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B08F60 Offset: 0x2B09061 VA: 0x2B08F60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B09210 Offset: 0x2B09311 VA: 0x2B09210
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B094D0 Offset: 0x2B095D1 VA: 0x2B094D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B09790 Offset: 0x2B09891 VA: 0x2B09790
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B09A50 Offset: 0x2B09B51 VA: 0x2B09A50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B09D10 Offset: 0x2B09E11 VA: 0x2B09D10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B09FE0 Offset: 0x2B0A0E1 VA: 0x2B09FE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0A2B0 Offset: 0x2B0A3B1 VA: 0x2B0A2B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0A580 Offset: 0x2B0A681 VA: 0x2B0A580
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0A840 Offset: 0x2B0A941 VA: 0x2B0A840
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0AAB0 Offset: 0x2B0ABB1 VA: 0x2B0AAB0
+	|-Array.InternalEnumerator<ValueTuple<bool, AsyncUnit>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0AD10 Offset: 0x2B0AE11 VA: 0x2B0AD10
+	|-Array.InternalEnumerator<ValueTuple<bool, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0AFA0 Offset: 0x2B0B0A1 VA: 0x2B0AFA0
+	|-Array.InternalEnumerator<ValueTuple<bool, Bounds>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0B220 Offset: 0x2B0B321 VA: 0x2B0B220
+	|-Array.InternalEnumerator<ValueTuple<bool, byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0B4A0 Offset: 0x2B0B5A1 VA: 0x2B0B4A0
+	|-Array.InternalEnumerator<ValueTuple<bool, Color>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0B720 Offset: 0x2B0B821 VA: 0x2B0B720
+	|-Array.InternalEnumerator<ValueTuple<bool, double>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0B990 Offset: 0x2B0BA91 VA: 0x2B0B990
+	|-Array.InternalEnumerator<ValueTuple<bool, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0BC00 Offset: 0x2B0BD01 VA: 0x2B0BC00
+	|-Array.InternalEnumerator<ValueTuple<bool, long>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0BE70 Offset: 0x2B0BF71 VA: 0x2B0BE70
+	|-Array.InternalEnumerator<ValueTuple<bool, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0C0F0 Offset: 0x2B0C1F1 VA: 0x2B0C0F0
+	|-Array.InternalEnumerator<ValueTuple<bool, Quaternion>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0C380 Offset: 0x2B0C481 VA: 0x2B0C380
+	|-Array.InternalEnumerator<ValueTuple<bool, Rect>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0C600 Offset: 0x2B0C701 VA: 0x2B0C600
+	|-Array.InternalEnumerator<ValueTuple<bool, float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0C870 Offset: 0x2B0C971 VA: 0x2B0C870
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0CAD0 Offset: 0x2B0CBD1 VA: 0x2B0CAD0
+	|-Array.InternalEnumerator<ValueTuple<bool, Unit>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0CD30 Offset: 0x2B0CE31 VA: 0x2B0CD30
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector2>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0CFB0 Offset: 0x2B0D0B1 VA: 0x2B0CFB0
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector3>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0D230 Offset: 0x2B0D331 VA: 0x2B0D230
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector4>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0D4B0 Offset: 0x2B0D5B1 VA: 0x2B0D4B0
+	|-Array.InternalEnumerator<ValueTuple<int, bool>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0D740 Offset: 0x2B0D841 VA: 0x2B0D740
+	|-Array.InternalEnumerator<ValueTuple<int, Bounds>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0D9D0 Offset: 0x2B0DAD1 VA: 0x2B0D9D0
+	|-Array.InternalEnumerator<ValueTuple<int, byte>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0DC50 Offset: 0x2B0DD51 VA: 0x2B0DC50
+	|-Array.InternalEnumerator<ValueTuple<int, Color>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0DED0 Offset: 0x2B0DFD1 VA: 0x2B0DED0
+	|-Array.InternalEnumerator<ValueTuple<int, double>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0E140 Offset: 0x2B0E241 VA: 0x2B0E140
+	|-Array.InternalEnumerator<ValueTuple<int, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0E3B0 Offset: 0x2B0E4B1 VA: 0x2B0E3B0
+	|-Array.InternalEnumerator<ValueTuple<int, long>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0E620 Offset: 0x2B0E721 VA: 0x2B0E620
+	|-Array.InternalEnumerator<ValueTuple<int, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0E8A0 Offset: 0x2B0E9A1 VA: 0x2B0E8A0
+	|-Array.InternalEnumerator<ValueTuple<int, Quaternion>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0EB30 Offset: 0x2B0EC31 VA: 0x2B0EB30
+	|-Array.InternalEnumerator<ValueTuple<int, Rect>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0EDB0 Offset: 0x2B0EEB1 VA: 0x2B0EDB0
+	|-Array.InternalEnumerator<ValueTuple<int, float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0F020 Offset: 0x2B0F121 VA: 0x2B0F020
+	|-Array.InternalEnumerator<ValueTuple<int, Unit>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0F280 Offset: 0x2B0F381 VA: 0x2B0F280
+	|-Array.InternalEnumerator<ValueTuple<int, Vector2>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0F500 Offset: 0x2B0F601 VA: 0x2B0F500
+	|-Array.InternalEnumerator<ValueTuple<int, Vector3>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0F780 Offset: 0x2B0F881 VA: 0x2B0F780
+	|-Array.InternalEnumerator<ValueTuple<int, Vector4>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0FA00 Offset: 0x2B0FB01 VA: 0x2B0FA00
+	|-Array.InternalEnumerator<ValueTuple<Int32Enum, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0FC80 Offset: 0x2B0FD81 VA: 0x2B0FC80
+	|-Array.InternalEnumerator<ValueTuple<object, ValueTuple<object, int>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B0FF00 Offset: 0x2B10001 VA: 0x2B0FF00
+	|-Array.InternalEnumerator<ValueTuple<object, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B10170 Offset: 0x2B10271 VA: 0x2B10170
+	|-Array.InternalEnumerator<ValueTuple<object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B103E0 Offset: 0x2B104E1 VA: 0x2B103E0
+	|-Array.InternalEnumerator<ValueTuple<object, float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2B10650 Offset: 0x2B10751 VA: 0x2B10650
+	|-Array.InternalEnumerator<ValueTuple<Vector3, float>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE0020 Offset: 0x2AE0121 VA: 0x2AE0020
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE02B0 Offset: 0x2AE03B1 VA: 0x2AE02B0
+	|-Array.InternalEnumerator<ValueTuple<object, Int32Enum, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE0530 Offset: 0x2AE0631 VA: 0x2AE0530
+	|-Array.InternalEnumerator<ValueTuple<object, object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE07D0 Offset: 0x2AE08D1 VA: 0x2AE07D0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE0A70 Offset: 0x2AE0B71 VA: 0x2AE0A70
+	|-Array.InternalEnumerator<ValueTuple<object, int, int, int>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE0D00 Offset: 0x2AE0E01 VA: 0x2AE0D00
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE0FB0 Offset: 0x2AE10B1 VA: 0x2AE0FB0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE1270 Offset: 0x2AE1371 VA: 0x2AE1270
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE1530 Offset: 0x2AE1631 VA: 0x2AE1530
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE17F0 Offset: 0x2AE18F1 VA: 0x2AE17F0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE1AC0 Offset: 0x2AE1BC1 VA: 0x2AE1AC0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE1D90 Offset: 0x2AE1E91 VA: 0x2AE1D90
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object, object>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE2060 Offset: 0x2AE2161 VA: 0x2AE2060
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE2320 Offset: 0x2AE2421 VA: 0x2AE2320
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE25A0 Offset: 0x2AE26A1 VA: 0x2AE25A0
+	|-Array.InternalEnumerator<AnimatorClipInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE2820 Offset: 0x2AE2921 VA: 0x2AE2820
+	|-Array.InternalEnumerator<AsyncOperationHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE2A90 Offset: 0x2AE2B91 VA: 0x2AE2A90
+	|-Array.InternalEnumerator<AsyncUnit>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE2CF0 Offset: 0x2AE2DF1 VA: 0x2AE2CF0
+	|-Array.InternalEnumerator<BatchVisibility>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE2F80 Offset: 0x2AE3081 VA: 0x2AE2F80
+	|-Array.InternalEnumerator<BoneWeight>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE3200 Offset: 0x2AE3301 VA: 0x2AE3200
+	|-Array.InternalEnumerator<BoneWeight1>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE3470 Offset: 0x2AE3571 VA: 0x2AE3470
+	|-Array.InternalEnumerator<bool>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE36F0 Offset: 0x2AE37F1 VA: 0x2AE36F0
+	|-Array.InternalEnumerator<Bounds>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE3970 Offset: 0x2AE3A71 VA: 0x2AE3970
+	|-Array.InternalEnumerator<byte>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE3BE0 Offset: 0x2AE3CE1 VA: 0x2AE3BE0
+	|-Array.InternalEnumerator<ByteEnum>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE3E50 Offset: 0x2AE3F51 VA: 0x2AE3E50
+	|-Array.InternalEnumerator<CameraInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE40C0 Offset: 0x2AE41C1 VA: 0x2AE40C0
+	|-Array.InternalEnumerator<CancellationToken>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE4340 Offset: 0x2AE4441 VA: 0x2AE4340
+	|-Array.InternalEnumerator<CancellationTokenRegistration>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE45C0 Offset: 0x2AE46C1 VA: 0x2AE45C0
+	|-Array.InternalEnumerator<char>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE4840 Offset: 0x2AE4941 VA: 0x2AE4840
+	|-Array.InternalEnumerator<ClusteringData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE4AD0 Offset: 0x2AE4BD1 VA: 0x2AE4AD0
+	|-Array.InternalEnumerator<ClusteringProcessorState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE4D50 Offset: 0x2AE4E51 VA: 0x2AE4D50
+	|-Array.InternalEnumerator<Color>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE4FC0 Offset: 0x2AE50C1 VA: 0x2AE4FC0
+	|-Array.InternalEnumerator<Color32>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE5220 Offset: 0x2AE5321 VA: 0x2AE5220
+	|-Array.InternalEnumerator<Color4u8>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE54C0 Offset: 0x2AE55C1 VA: 0x2AE54C0
+	|-Array.InternalEnumerator<ColorBlock>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE57A0 Offset: 0x2AE58A1 VA: 0x2AE57A0
+	|-Array.InternalEnumerator<CombineInstance>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE5A50 Offset: 0x2AE5B51 VA: 0x2AE5A50
+	|-Array.InternalEnumerator<ConstraintSource>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE5CE0 Offset: 0x2AE5DE1 VA: 0x2AE5CE0
+	|-Array.InternalEnumerator<ContactPoint>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE5F90 Offset: 0x2AE6091 VA: 0x2AE5F90
+	|-Array.InternalEnumerator<ContactPoint2D>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE6230 Offset: 0x2AE6331 VA: 0x2AE6230
+	|-Array.InternalEnumerator<ContourVertex>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE64C0 Offset: 0x2AE65C1 VA: 0x2AE64C0
+	|-Array.InternalEnumerator<CustomAttributeNamedArgument>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE6740 Offset: 0x2AE6841 VA: 0x2AE6740
+	|-Array.InternalEnumerator<CustomAttributeTypedArgument>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE69C0 Offset: 0x2AE6AC1 VA: 0x2AE69C0
+	|-Array.InternalEnumerator<DataStoreRatingInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE6C40 Offset: 0x2AE6D41 VA: 0x2AE6C40
+	|-Array.InternalEnumerator<DataStoreResult>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE6EB0 Offset: 0x2AE6FB1 VA: 0x2AE6EB0
+	|-Array.InternalEnumerator<DateTime>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE7120 Offset: 0x2AE7221 VA: 0x2AE7120
+	|-Array.InternalEnumerator<DateTimeOffset>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE73A0 Offset: 0x2AE74A1 VA: 0x2AE73A0
+	|-Array.InternalEnumerator<DebugPadState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE7620 Offset: 0x2AE7721 VA: 0x2AE7620
+	|-Array.InternalEnumerator<Decimal>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE78D0 Offset: 0x2AE79D1 VA: 0x2AE78D0
+	|-Array.InternalEnumerator<DeferredTiler>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE7B80 Offset: 0x2AE7C81 VA: 0x2AE7B80
+	|-Array.InternalEnumerator<DeviceHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE7E10 Offset: 0x2AE7F11 VA: 0x2AE7E10
+	|-Array.InternalEnumerator<DiagnosticEvent>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE80A0 Offset: 0x2AE81A1 VA: 0x2AE80A0
+	|-Array.InternalEnumerator<DictionaryEntry>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE8310 Offset: 0x2AE8411 VA: 0x2AE8310
+	|-Array.InternalEnumerator<DictionaryInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE8590 Offset: 0x2AE8691 VA: 0x2AE8590
+	|-Array.InternalEnumerator<DirectoryEntry>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE8810 Offset: 0x2AE8911 VA: 0x2AE8810
+	|-Array.InternalEnumerator<double>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE8A80 Offset: 0x2AE8B81 VA: 0x2AE8A80
+	|-Array.InternalEnumerator<Ephemeron>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE8CF0 Offset: 0x2AE8DF1 VA: 0x2AE8CF0
+	|-Array.InternalEnumerator<FXZ>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE8F80 Offset: 0x2AE9081 VA: 0x2AE8F80
+	|-Array.InternalEnumerator<Finger>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE9210 Offset: 0x2AE9311 VA: 0x2AE9210
+	|-Array.InternalEnumerator<Float2>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE94A0 Offset: 0x2AE95A1 VA: 0x2AE94A0
+	|-Array.InternalEnumerator<Friend>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE9710 Offset: 0x2AE9811 VA: 0x2AE9710
+	|-Array.InternalEnumerator<GCHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE9980 Offset: 0x2AE9A81 VA: 0x2AE9980
+	|-Array.InternalEnumerator<GesturePoint>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE9C20 Offset: 0x2AE9D21 VA: 0x2AE9C20
+	|-Array.InternalEnumerator<GestureState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AE9EE0 Offset: 0x2AE9FE1 VA: 0x2AE9EE0
+	|-Array.InternalEnumerator<GlyphMarshallingStruct>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEA190 Offset: 0x2AEA291 VA: 0x2AEA190
+	|-Array.InternalEnumerator<GlyphPairAdjustmentRecord>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEA420 Offset: 0x2AEA521 VA: 0x2AEA420
+	|-Array.InternalEnumerator<GlyphRect>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEA690 Offset: 0x2AEA791 VA: 0x2AEA690
+	|-Array.InternalEnumerator<Guid>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEA910 Offset: 0x2AEAA11 VA: 0x2AEA910
+	|-Array.InternalEnumerator<Hand>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEAB90 Offset: 0x2AEAC91 VA: 0x2AEAB90
+	|-Array.InternalEnumerator<HandAnalysisImageState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEAE10 Offset: 0x2AEAF11 VA: 0x2AEAE10
+	|-Array.InternalEnumerator<HandAnalysisSilhouetteState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEB090 Offset: 0x2AEB191 VA: 0x2AEB090
+	|-Array.InternalEnumerator<HeaderVariantInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEB310 Offset: 0x2AEB411 VA: 0x2AEB310
+	|-Array.InternalEnumerator<HighlightState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEB5B0 Offset: 0x2AEB6B1 VA: 0x2AEB5B0
+	|-Array.InternalEnumerator<HumanBone>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEB840 Offset: 0x2AEB941 VA: 0x2AEB840
+	|-Array.InternalEnumerator<short>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEBAB0 Offset: 0x2AEBBB1 VA: 0x2AEBAB0
+	|-Array.InternalEnumerator<int>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEBD20 Offset: 0x2AEBE21 VA: 0x2AEBD20
+	|-Array.InternalEnumerator<Int32Enum>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEBF90 Offset: 0x2AEC091 VA: 0x2AEBF90
+	|-Array.InternalEnumerator<long>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEC200 Offset: 0x2AEC301 VA: 0x2AEC200
+	|-Array.InternalEnumerator<Int64Enum>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEC470 Offset: 0x2AEC571 VA: 0x2AEC470
+	|-Array.InternalEnumerator<IntPtr>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEC6E0 Offset: 0x2AEC7E1 VA: 0x2AEC6E0
+	|-Array.InternalEnumerator<InternalCodePageDataItem>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEC950 Offset: 0x2AECA51 VA: 0x2AEC950
+	|-Array.InternalEnumerator<InternalEncodingDataItem>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AECBC0 Offset: 0x2AECCC1 VA: 0x2AECBC0
+	|-Array.InternalEnumerator<InterpretedFrameInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AECE40 Offset: 0x2AECF41 VA: 0x2AECE40
+	|-Array.InternalEnumerator<IntervalTreeNode>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AED0C0 Offset: 0x2AED1C1 VA: 0x2AED0C0
+	|-Array.InternalEnumerator<JobHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AED350 Offset: 0x2AED451 VA: 0x2AED350
+	|-Array.InternalEnumerator<Keyframe>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AED5E0 Offset: 0x2AED6E1 VA: 0x2AED5E0
+	|-Array.InternalEnumerator<LOD>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AED840 Offset: 0x2AED941 VA: 0x2AED840
+	|-Array.InternalEnumerator<LayerMask>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEDAB0 Offset: 0x2AEDBB1 VA: 0x2AEDAB0
+	|-Array.InternalEnumerator<LengthLimitProperties>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEDD50 Offset: 0x2AEDE51 VA: 0x2AEDD50
+	|-Array.InternalEnumerator<Light2DBlendStyle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEE020 Offset: 0x2AEE121 VA: 0x2AEE020
+	|-Array.InternalEnumerator<LightDataGI>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEE2C0 Offset: 0x2AEE3C1 VA: 0x2AEE2C0
+	|-Array.InternalEnumerator<LocalDefinition>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEE530 Offset: 0x2AEE631 VA: 0x2AEE530
+	|-Array.InternalEnumerator<MapPos>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEE790 Offset: 0x2AEE891 VA: 0x2AEE790
+	|-Array.InternalEnumerator<MapRange>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEEA30 Offset: 0x2AEEB31 VA: 0x2AEEA30
+	|-Array.InternalEnumerator<MaterialReference>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEECE0 Offset: 0x2AEEDE1 VA: 0x2AEECE0
+	|-Array.InternalEnumerator<Matrix4x4>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEEF80 Offset: 0x2AEF081 VA: 0x2AEEF80
+	|-Array.InternalEnumerator<MomentProcessorState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEF200 Offset: 0x2AEF301 VA: 0x2AEF200
+	|-Array.InternalEnumerator<MomentStatistic>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEF4A0 Offset: 0x2AEF5A1 VA: 0x2AEF4A0
+	|-Array.InternalEnumerator<Navigation>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEF730 Offset: 0x2AEF831 VA: 0x2AEF730
+	|-Array.InternalEnumerator<NetworkServiceAccountId>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEF9C0 Offset: 0x2AEFAC1 VA: 0x2AEF9C0
+	|-Array.InternalEnumerator<NpadFullKeyState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEFC70 Offset: 0x2AEFD71 VA: 0x2AEFC70
+	|-Array.InternalEnumerator<NpadHandheldState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AEFF20 Offset: 0x2AF0021 VA: 0x2AEFF20
+	|-Array.InternalEnumerator<NpadJoyDualState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF01D0 Offset: 0x2AF02D1 VA: 0x2AF01D0
+	|-Array.InternalEnumerator<NpadJoyLeftState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF0480 Offset: 0x2AF0581 VA: 0x2AF0480
+	|-Array.InternalEnumerator<NpadJoyRightState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF0730 Offset: 0x2AF0831 VA: 0x2AF0730
+	|-Array.InternalEnumerator<NpadStateArrayItem>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF09C0 Offset: 0x2AF0AC1 VA: 0x2AF09C0
+	|-Array.InternalEnumerator<NsUid>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF0C30 Offset: 0x2AF0D31 VA: 0x2AF0C30
+	|-Array.InternalEnumerator<object>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF0E70 Offset: 0x2AF0F71 VA: 0x2AF0E70
+	|-Array.InternalEnumerator<ObjectInitializationData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF1100 Offset: 0x2AF1201 VA: 0x2AF1100
+	|-Array.InternalEnumerator<ParameterModifier>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF1370 Offset: 0x2AF1471 VA: 0x2AF1370
+	|-Array.InternalEnumerator<Plane>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF15F0 Offset: 0x2AF16F1 VA: 0x2AF15F0
+	|-Array.InternalEnumerator<Playable>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF1870 Offset: 0x2AF1971 VA: 0x2AF1870
+	|-Array.InternalEnumerator<PlayableBinding>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF1B10 Offset: 0x2AF1C11 VA: 0x2AF1B10
+	|-Array.InternalEnumerator<PlayerLoopSystem>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF1DC0 Offset: 0x2AF1EC1 VA: 0x2AF1DC0
+	|-Array.InternalEnumerator<PlayerLoopSystemInternal>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF2070 Offset: 0x2AF2171 VA: 0x2AF2070
+	|-Array.InternalEnumerator<PreTile>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF2320 Offset: 0x2AF2421 VA: 0x2AF2320
+	|-Array.InternalEnumerator<Profile>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF25A0 Offset: 0x2AF26A1 VA: 0x2AF25A0
+	|-Array.InternalEnumerator<Protrusion>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF2810 Offset: 0x2AF2911 VA: 0x2AF2810
+	|-Array.InternalEnumerator<Quaternion>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF2A90 Offset: 0x2AF2B91 VA: 0x2AF2A90
+	|-Array.InternalEnumerator<RandomSeed>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF2D00 Offset: 0x2AF2E01 VA: 0x2AF2D00
+	|-Array.InternalEnumerator<RangePositionInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF2F70 Offset: 0x2AF3071 VA: 0x2AF2F70
+	|-Array.InternalEnumerator<Ranking2ChartInfoInput>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF3200 Offset: 0x2AF3301 VA: 0x2AF3200
+	|-Array.InternalEnumerator<RaycastHit>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF34B0 Offset: 0x2AF35B1 VA: 0x2AF34B0
+	|-Array.InternalEnumerator<RaycastHit2D>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF3770 Offset: 0x2AF3871 VA: 0x2AF3770
+	|-Array.InternalEnumerator<RaycastResult>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF3A10 Offset: 0x2AF3B11 VA: 0x2AF3A10
+	|-Array.InternalEnumerator<Rect>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF3C90 Offset: 0x2AF3D91 VA: 0x2AF3C90
+	|-Array.InternalEnumerator<RenderBuffer>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF3F40 Offset: 0x2AF4041 VA: 0x2AF3F40
+	|-Array.InternalEnumerator<RenderStateBlock>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF4210 Offset: 0x2AF4311 VA: 0x2AF4210
+	|-Array.InternalEnumerator<RenderTargetHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF44C0 Offset: 0x2AF45C1 VA: 0x2AF44C0
+	|-Array.InternalEnumerator<RenderTargetIdentifier>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF4750 Offset: 0x2AF4851 VA: 0x2AF4750
+	|-Array.InternalEnumerator<RendererListHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF49C0 Offset: 0x2AF4AC1 VA: 0x2AF49C0
+	|-Array.InternalEnumerator<ResourceHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF4C30 Offset: 0x2AF4D31 VA: 0x2AF4C30
+	|-Array.InternalEnumerator<ResourceLocator>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF4EB0 Offset: 0x2AF4FB1 VA: 0x2AF4EB0
+	|-Array.InternalEnumerator<RichTextTagAttribute>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF5120 Offset: 0x2AF5221 VA: 0x2AF5120
+	|-Array.InternalEnumerator<RuntimeLabel>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF53A0 Offset: 0x2AF54A1 VA: 0x2AF53A0
+	|-Array.InternalEnumerator<sbyte>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF5620 Offset: 0x2AF5721 VA: 0x2AF5620
+	|-Array.InternalEnumerator<SerializedType>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF5890 Offset: 0x2AF5991 VA: 0x2AF5890
+	|-Array.InternalEnumerator<ShaderKeyword>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF5AF0 Offset: 0x2AF5BF1 VA: 0x2AF5AF0
+	|-Array.InternalEnumerator<ShaderTagId>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF5D70 Offset: 0x2AF5E71 VA: 0x2AF5D70
+	|-Array.InternalEnumerator<ShadowSliceData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF6000 Offset: 0x2AF6101 VA: 0x2AF6000
+	|-Array.InternalEnumerator<Shape>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF6280 Offset: 0x2AF6381 VA: 0x2AF6280
+	|-Array.InternalEnumerator<float>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF64E0 Offset: 0x2AF65E1 VA: 0x2AF64E0
+	|-Array.InternalEnumerator<SixAxisSensorHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF6780 Offset: 0x2AF6881 VA: 0x2AF6780
+	|-Array.InternalEnumerator<SixAxisSensorState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF6A40 Offset: 0x2AF6B41 VA: 0x2AF6A40
+	|-Array.InternalEnumerator<SkeletonBone>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF6CC0 Offset: 0x2AF6DC1 VA: 0x2AF6CC0
+	|-Array.InternalEnumerator<SortingLayer>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF6F70 Offset: 0x2AF7071 VA: 0x2AF6F70
+	|-Array.InternalEnumerator<SphericalHarmonicsL2>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF7210 Offset: 0x2AF7311 VA: 0x2AF7210
+	|-Array.InternalEnumerator<SpinLock>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF74B0 Offset: 0x2AF75B1 VA: 0x2AF74B0
+	|-Array.InternalEnumerator<SpringBoneComponents>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF7760 Offset: 0x2AF7861 VA: 0x2AF7760
+	|-Array.InternalEnumerator<SpringBoneProperties>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF7A20 Offset: 0x2AF7B21 VA: 0x2AF7A20
+	|-Array.InternalEnumerator<SpringColliderComponents>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF7CD0 Offset: 0x2AF7DD1 VA: 0x2AF7CD0
+	|-Array.InternalEnumerator<SpringColliderProperties>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2AF7F60 Offset: 0x2AF8061 VA: 0x2AF7F60
+	|-Array.InternalEnumerator<SpringForceComponent>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29825C0 Offset: 0x29826C1 VA: 0x29825C0
+	|-Array.InternalEnumerator<SpringJobElement>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2982850 Offset: 0x2982951 VA: 0x2982850
+	|-Array.InternalEnumerator<SpriteState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2982AF0 Offset: 0x2982BF1 VA: 0x2982AF0
+	|-Array.InternalEnumerator<SubMeshDescriptor>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2982D90 Offset: 0x2982E91 VA: 0x2982D90
+	|-Array.InternalEnumerator<TMP_CharacterInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2983010 Offset: 0x2983111 VA: 0x2983010
+	|-Array.InternalEnumerator<TMP_FontWeightPair>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29832C0 Offset: 0x29833C1 VA: 0x29832C0
+	|-Array.InternalEnumerator<TMP_LineInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2983590 Offset: 0x2983691 VA: 0x2983590
+	|-Array.InternalEnumerator<TMP_LinkInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2983850 Offset: 0x2983951 VA: 0x2983850
+	|-Array.InternalEnumerator<TMP_MeshInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2983B00 Offset: 0x2983C01 VA: 0x2983B00
+	|-Array.InternalEnumerator<TMP_PageInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2983D90 Offset: 0x2983E91 VA: 0x2983D90
+	|-Array.InternalEnumerator<TMP_WordInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2984010 Offset: 0x2984111 VA: 0x2984010
+	|-Array.InternalEnumerator<TablePair>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2984280 Offset: 0x2984381 VA: 0x2984280
+	|-Array.InternalEnumerator<TextureHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29844F0 Offset: 0x29845F1 VA: 0x29844F0
+	|-Array.InternalEnumerator<TimeSpan>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2984790 Offset: 0x2984891 VA: 0x2984790
+	|-Array.InternalEnumerator<Touch>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2984A50 Offset: 0x2984B51 VA: 0x2984A50
+	|-Array.InternalEnumerator<TouchScreenState1>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2984CF0 Offset: 0x2984DF1 VA: 0x2984CF0
+	|-Array.InternalEnumerator<TouchScreenState10>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2984F80 Offset: 0x2985081 VA: 0x2984F80
+	|-Array.InternalEnumerator<TouchScreenState11>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2985210 Offset: 0x2985311 VA: 0x2985210
+	|-Array.InternalEnumerator<TouchScreenState12>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29854A0 Offset: 0x29855A1 VA: 0x29854A0
+	|-Array.InternalEnumerator<TouchScreenState13>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2985730 Offset: 0x2985831 VA: 0x2985730
+	|-Array.InternalEnumerator<TouchScreenState14>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29859C0 Offset: 0x2985AC1 VA: 0x29859C0
+	|-Array.InternalEnumerator<TouchScreenState15>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2985C50 Offset: 0x2985D51 VA: 0x2985C50
+	|-Array.InternalEnumerator<TouchScreenState16>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2985F00 Offset: 0x2986001 VA: 0x2985F00
+	|-Array.InternalEnumerator<TouchScreenState2>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29861B0 Offset: 0x29862B1 VA: 0x29861B0
+	|-Array.InternalEnumerator<TouchScreenState3>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2986440 Offset: 0x2986541 VA: 0x2986440
+	|-Array.InternalEnumerator<TouchScreenState4>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29866D0 Offset: 0x29867D1 VA: 0x29866D0
+	|-Array.InternalEnumerator<TouchScreenState5>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2986960 Offset: 0x2986A61 VA: 0x2986960
+	|-Array.InternalEnumerator<TouchScreenState6>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2986BF0 Offset: 0x2986CF1 VA: 0x2986BF0
+	|-Array.InternalEnumerator<TouchScreenState7>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2986E80 Offset: 0x2986F81 VA: 0x2986E80
+	|-Array.InternalEnumerator<TouchScreenState8>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2987110 Offset: 0x2987211 VA: 0x2987110
+	|-Array.InternalEnumerator<TouchScreenState9>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29873B0 Offset: 0x29874B1 VA: 0x29873B0
+	|-Array.InternalEnumerator<TouchState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2987650 Offset: 0x2987751 VA: 0x2987650
+	|-Array.InternalEnumerator<TrailHand>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29878E0 Offset: 0x29879E1 VA: 0x29878E0
+	|-Array.InternalEnumerator<TrailVertex>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2987B60 Offset: 0x2987C61 VA: 0x2987B60
+	|-Array.InternalEnumerator<UICharInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2987DE0 Offset: 0x2987EE1 VA: 0x2987DE0
+	|-Array.InternalEnumerator<UILineInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2988090 Offset: 0x2988191 VA: 0x2988090
+	|-Array.InternalEnumerator<UIVertex>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2988340 Offset: 0x2988441 VA: 0x2988340
+	|-Array.InternalEnumerator<ushort>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29885B0 Offset: 0x29886B1 VA: 0x29885B0
+	|-Array.InternalEnumerator<UInt16Enum>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2988820 Offset: 0x2988921 VA: 0x2988820
+	|-Array.InternalEnumerator<uint>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2988A90 Offset: 0x2988B91 VA: 0x2988A90
+	|-Array.InternalEnumerator<UInt32Enum>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2988D00 Offset: 0x2988E01 VA: 0x2988D00
+	|-Array.InternalEnumerator<ulong>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2988F70 Offset: 0x2989071 VA: 0x2988F70
+	|-Array.InternalEnumerator<Uid>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29891E0 Offset: 0x29892E1 VA: 0x29891E0
+	|-Array.InternalEnumerator<UniTask>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2989440 Offset: 0x2989541 VA: 0x2989440
+	|-Array.InternalEnumerator<Unit>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29896B0 Offset: 0x29897B1 VA: 0x29896B0
+	|-Array.InternalEnumerator<UnitEnum>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2989920 Offset: 0x2989A21 VA: 0x2989920
+	|-Array.InternalEnumerator<UserWord>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2989B90 Offset: 0x2989C91 VA: 0x2989B90
+	|-Array.InternalEnumerator<Vector2>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2989E00 Offset: 0x2989F01 VA: 0x2989E00
+	|-Array.InternalEnumerator<Vector2Int>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298A070 Offset: 0x298A171 VA: 0x298A070
+	|-Array.InternalEnumerator<Vector3>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298A2F0 Offset: 0x298A3F1 VA: 0x298A2F0
+	|-Array.InternalEnumerator<Vector4>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298A570 Offset: 0x298A671 VA: 0x298A570
+	|-Array.InternalEnumerator<VertexAttributeDescriptor>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298A7D0 Offset: 0x298A8D1 VA: 0x298A7D0
+	|-Array.InternalEnumerator<VibrationDeviceHandle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298AA40 Offset: 0x298AB41 VA: 0x298AA40
+	|-Array.InternalEnumerator<VibrationDeviceInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298ACB0 Offset: 0x298ADB1 VA: 0x298ACB0
+	|-Array.InternalEnumerator<VibrationValue>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298AF70 Offset: 0x298B071 VA: 0x298AF70
+	|-Array.InternalEnumerator<VisibleLight>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298B230 Offset: 0x298B331 VA: 0x298B230
+	|-Array.InternalEnumerator<WordWrapState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298B4B0 Offset: 0x298B5B1 VA: 0x298B4B0
+	|-Array.InternalEnumerator<X509ChainStatus>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298B730 Offset: 0x298B831 VA: 0x298B730
+	|-Array.InternalEnumerator<XPathNode>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298B9B0 Offset: 0x298BAB1 VA: 0x298B9B0
+	|-Array.InternalEnumerator<XPathNodeRef>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298BC30 Offset: 0x298BD31 VA: 0x298BC30
+	|-Array.InternalEnumerator<XRView>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298BEB0 Offset: 0x298BFB1 VA: 0x298BEB0
+	|-Array.InternalEnumerator<float3>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298C150 Offset: 0x298C251 VA: 0x298C150
+	|-Array.InternalEnumerator<float4x4>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298C3E0 Offset: 0x298C4E1 VA: 0x298C3E0
+	|-Array.InternalEnumerator<jvalue>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298C650 Offset: 0x298C751 VA: 0x298C650
+	|-Array.InternalEnumerator<uint4>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298C8B0 Offset: 0x298C9B1 VA: 0x298C8B0
+	|-Array.InternalEnumerator<AICrossfire.PositionTable>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298CB20 Offset: 0x298CC21 VA: 0x298CB20
+	|-Array.InternalEnumerator<AIEnum.SkillRangeEnemyData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298CD90 Offset: 0x298CE91 VA: 0x298CD90
+	|-Array.InternalEnumerator<AIOrder.UnitPriority>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298D000 Offset: 0x298D101 VA: 0x298D000
+	|-Array.InternalEnumerator<AmiiboSequence.GainItemData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298D290 Offset: 0x298D391 VA: 0x298D290
+	|-Array.InternalEnumerator<AnimationOutputWeightProcessor.WeightInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298D520 Offset: 0x298D621 VA: 0x298D520
+	|-Array.InternalEnumerator<ArenaOrderSequence.GodInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298D790 Offset: 0x298D891 VA: 0x298D790
+	|-Array.InternalEnumerator<BattleInfo.SupportData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298DA00 Offset: 0x298DB01 VA: 0x298DA00
+	|-Array.InternalEnumerator<BeforeRenderHelper.OrderBlock>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298DC80 Offset: 0x298DD81 VA: 0x298DC80
+	|-Array.InternalEnumerator<Camera.RenderRequest>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298DF00 Offset: 0x298E001 VA: 0x298DF00
+	|-Array.InternalEnumerator<CameraState.CustomBlendable>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298E180 Offset: 0x298E281 VA: 0x298E180
+	|-Array.InternalEnumerator<CinemachineBlendListCamera.Instruction>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298E410 Offset: 0x298E511 VA: 0x298E410
+	|-Array.InternalEnumerator<CinemachineBlenderSettings.CustomBlend>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298E690 Offset: 0x298E791 VA: 0x298E690
+	|-Array.InternalEnumerator<CinemachineClearShot.Pair>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298E900 Offset: 0x298EA01 VA: 0x298E900
+	|-Array.InternalEnumerator<CinemachineFreeLook.Orbit>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298EB90 Offset: 0x298EC91 VA: 0x298EB90
+	|-Array.InternalEnumerator<CinemachinePath.Waypoint>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298EE20 Offset: 0x298EF21 VA: 0x298EE20
+	|-Array.InternalEnumerator<CinemachineSmoothPath.Waypoint>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298F0A0 Offset: 0x298F1A1 VA: 0x298F0A0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.HashPair>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298F320 Offset: 0x298F421 VA: 0x298F320
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.Instruction>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298F5A0 Offset: 0x298F6A1 VA: 0x298F5A0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.ParentHash>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298F810 Offset: 0x298F911 VA: 0x298F810
+	|-Array.InternalEnumerator<CinemachineTargetGroup.Target>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298FA90 Offset: 0x298FB91 VA: 0x298FA90
+	|-Array.InternalEnumerator<CodePointIndexer.TableRange>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298FD10 Offset: 0x298FE11 VA: 0x298FD10
+	|-Array.InternalEnumerator<ContentCatalogData.Bucket>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x298FF80 Offset: 0x2990081 VA: 0x298FF80
+	|-Array.InternalEnumerator<CookieTokenizer.RecognizedAttribute>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2990210 Offset: 0x2990311 VA: 0x2990210
+	|-Array.InternalEnumerator<DeferredLights.DrawCall>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29904A0 Offset: 0x29905A1 VA: 0x29904A0
+	|-Array.InternalEnumerator<DeferredShaderData.ComputeBufferInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2990720 Offset: 0x2990821 VA: 0x2990720
+	|-Array.InternalEnumerator<DeferredTiler.PrePunctualLight>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29909B0 Offset: 0x2990AB1 VA: 0x29909B0
+	|-Array.InternalEnumerator<DelayedActionManager.DelegateInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2990C50 Offset: 0x2990D51 VA: 0x2990C50
+	|-Array.InternalEnumerator<Detail.AsyncResultInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2990EE0 Offset: 0x2990FE1 VA: 0x2990EE0
+	|-Array.InternalEnumerator<Detail.CppArray>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2991170 Offset: 0x2991271 VA: 0x2991170
+	|-Array.InternalEnumerator<Detail.NotificationEventInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2991400 Offset: 0x2991501 VA: 0x2991400
+	|-Array.InternalEnumerator<DisposUnit.Item>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2991660 Offset: 0x2991761 VA: 0x2991660
+	|-Array.InternalEnumerator<DragonRidePresetParamData.CourseData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29918E0 Offset: 0x29919E1 VA: 0x29918E0
+	|-Array.InternalEnumerator<DragonRideTargetGroup.ChainParam>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2991B50 Offset: 0x2991C51 VA: 0x2991B50
+	|-Array.InternalEnumerator<DynamicMesh.State>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2991DE0 Offset: 0x2991EE1 VA: 0x2991DE0
+	|-Array.InternalEnumerator<FXZEx.HitPoint>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2992070 Offset: 0x2992171 VA: 0x2992070
+	|-Array.InternalEnumerator<FishingRadicalParamData.RadicalParam>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29922F0 Offset: 0x29923F1 VA: 0x29922F0
+	|-Array.InternalEnumerator<GameVariable.Value>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2992570 Offset: 0x2992671 VA: 0x2992570
+	|-Array.InternalEnumerator<GmapPathAdjuster.TargetModel>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2992800 Offset: 0x2992901 VA: 0x2992800
+	|-Array.InternalEnumerator<GmapSpotAdjuster.TargetModel>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2992AA0 Offset: 0x2992BA1 VA: 0x2992AA0
+	|-Array.InternalEnumerator<GrounderQuadruped.Foot>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2992D40 Offset: 0x2992E41 VA: 0x2992D40
+	|-Array.InternalEnumerator<Hashtable.bucket>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2992FD0 Offset: 0x29930D1 VA: 0x2992FD0
+	|-Array.InternalEnumerator<HeadingTracker.Item>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2993270 Offset: 0x2993371 VA: 0x2993270
+	|-Array.InternalEnumerator<HubAccessoryRoomCamera.BackgroundSettings>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2993510 Offset: 0x2993611 VA: 0x2993510
+	|-Array.InternalEnumerator<HubFastTravel.Location>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29937B0 Offset: 0x29938B1 VA: 0x29937B0
+	|-Array.InternalEnumerator<HubLensFlare.Flare>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2993A40 Offset: 0x2993B41 VA: 0x2993A40
+	|-Array.InternalEnumerator<HubLookAtController.LookAtIKParam>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2993CC0 Offset: 0x2993DC1 VA: 0x2993CC0
+	|-Array.InternalEnumerator<HubMaterialArray.MaterialInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2993F50 Offset: 0x2994051 VA: 0x2993F50
+	|-Array.InternalEnumerator<IKSolverLimb.AxisDirection>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29941E0 Offset: 0x29942E1 VA: 0x29941E0
+	|-Array.InternalEnumerator<InventoryPoolItemMenuContent.KindBgNameClass>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2994470 Offset: 0x2994571 VA: 0x2994470
+	|-Array.InternalEnumerator<LightUtility.ParametricLightMeshVertex>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2994720 Offset: 0x2994821 VA: 0x2994720
+	|-Array.InternalEnumerator<LightUtility.SpriteLightMeshVertex>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29949B0 Offset: 0x2994AB1 VA: 0x29949B0
+	|-Array.InternalEnumerator<Map.Pos>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2994C20 Offset: 0x2994D21 VA: 0x2994C20
+	|-Array.InternalEnumerator<MapGodExp.KindDesc>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2994E90 Offset: 0x2994F91 VA: 0x2994E90
+	|-Array.InternalEnumerator<MapHistory.Command>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2995100 Offset: 0x2995201 VA: 0x2995100
+	|-Array.InternalEnumerator<MapImage.BackupTerrain>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2995360 Offset: 0x2995461 VA: 0x2995360
+	|-Array.InternalEnumerator<MapImageRange.Pos>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29955D0 Offset: 0x29956D1 VA: 0x29955D0
+	|-Array.InternalEnumerator<MapKillBonus.KillBonus>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2995840 Offset: 0x2995941 VA: 0x2995840
+	|-Array.InternalEnumerator<MapKillBonus.KilledBonus>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2995AE0 Offset: 0x2995BE1 VA: 0x2995AE0
+	|-Array.InternalEnumerator<MapMind.Record>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2995D90 Offset: 0x2995E91 VA: 0x2995D90
+	|-Array.InternalEnumerator<MapMind.Target>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2996020 Offset: 0x2996121 VA: 0x2996020
+	|-Array.InternalEnumerator<MapPanelDebug.Entity>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29962A0 Offset: 0x29963A1 VA: 0x29962A0
+	|-Array.InternalEnumerator<NexRanking.Data>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2996510 Offset: 0x2996611 VA: 0x2996510
+	|-Array.InternalEnumerator<NexVersus.RatingData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29967A0 Offset: 0x29968A1 VA: 0x29967A0
+	|-Array.InternalEnumerator<NoiseSettings.TransformNoiseParams>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2996A30 Offset: 0x2996B31 VA: 0x2996A30
+	|-Array.InternalEnumerator<PackedPlayModeBuildLogs.RuntimeBuildLog>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2996CA0 Offset: 0x2996DA1 VA: 0x2996CA0
+	|-Array.InternalEnumerator<ParameterizedStrings.FormatParam>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2996F20 Offset: 0x2997021 VA: 0x2996F20
+	|-Array.InternalEnumerator<ParticleSystem.Particle>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29971A0 Offset: 0x29972A1 VA: 0x29971A0
+	|-Array.InternalEnumerator<ProfileCard.Achievement>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2997420 Offset: 0x2997521 VA: 0x2997420
+	|-Array.InternalEnumerator<ProfileCard.SortieCount>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29976C0 Offset: 0x29977C1 VA: 0x29976C0
+	|-Array.InternalEnumerator<QualitySettingsStack.Settings>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2997950 Offset: 0x2997A51 VA: 0x2997950
+	|-Array.InternalEnumerator<RangeData.Offset>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2997BB0 Offset: 0x2997CB1 VA: 0x2997BB0
+	|-Array.InternalEnumerator<RegexCharClass.LowerCaseMapping>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2997E40 Offset: 0x2997F41 VA: 0x2997E40
+	|-Array.InternalEnumerator<Relay.ChooseAwardeeData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29980C0 Offset: 0x29981C1 VA: 0x29980C0
+	|-Array.InternalEnumerator<RelayAwardData.Info>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2998360 Offset: 0x2998461 VA: 0x2998360
+	|-Array.InternalEnumerator<RenderGraph.CompiledPassInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2998610 Offset: 0x2998711 VA: 0x2998610
+	|-Array.InternalEnumerator<RenderGraph.CompiledResourceInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29988A0 Offset: 0x29989A1 VA: 0x29988A0
+	|-Array.InternalEnumerator<RenderGraphDebugData.PassDebugData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2998B40 Offset: 0x2998C41 VA: 0x2998B40
+	|-Array.InternalEnumerator<RenderGraphDebugData.ResourceDebugData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2998DE0 Offset: 0x2998EE1 VA: 0x2998DE0
+	|-Array.InternalEnumerator<RenderGraphResourceRegistry.RendererListResource>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2999060 Offset: 0x2999161 VA: 0x2999060
+	|-Array.InternalEnumerator<RingCleaningUnitSelectMenu.GodParam>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29992D0 Offset: 0x29993D1 VA: 0x29992D0
+	|-Array.InternalEnumerator<SampleWave.Data>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2999550 Offset: 0x2999651 VA: 0x2999550
+	|-Array.InternalEnumerator<SampleWave.Temp>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x29997C0 Offset: 0x29998C1 VA: 0x29997C0
+	|-Array.InternalEnumerator<SendMouseEvents.HitInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2999A50 Offset: 0x2999B51 VA: 0x2999A50
+	|-Array.InternalEnumerator<SequenceNode.SequenceConstructPosContext>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2999D10 Offset: 0x2999E11 VA: 0x2999D10
+	|-Array.InternalEnumerator<ShaderInput.LightData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2999FE0 Offset: 0x299A0E1 VA: 0x2999FE0
+	|-Array.InternalEnumerator<ShaderInput.ShadowData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x299A2A0 Offset: 0x299A3A1 VA: 0x299A2A0
+	|-Array.InternalEnumerator<ShadowUtility.Edge>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D7F7F0 Offset: 0x2D7F8F1 VA: 0x2D7F7F0
+	|-Array.InternalEnumerator<SimpleAnimationPlayable.QueuedState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D7FA50 Offset: 0x2D7FB51 VA: 0x2D7FA50
+	|-Array.InternalEnumerator<SkillArray.Entity>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D7FCC0 Offset: 0x2D7FDC1 VA: 0x2D7FCC0
+	|-Array.InternalEnumerator<Socket.WSABUF>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D7FF20 Offset: 0x2D80021 VA: 0x2D7FF20
+	|-Array.InternalEnumerator<Stream.Info>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D80190 Offset: 0x2D80291 VA: 0x2D80190
+	|-Array.InternalEnumerator<TMP_Text.UnicodeChar>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D80430 Offset: 0x2D80531 VA: 0x2D80430
+	|-Array.InternalEnumerator<TexturePacker_JsonArray.Frame>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D806D0 Offset: 0x2D807D1 VA: 0x2D806D0
+	|-Array.InternalEnumerator<TimeNotificationBehaviour.NotificationEntry>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D80960 Offset: 0x2D80A61 VA: 0x2D80960
+	|-Array.InternalEnumerator<UnitySynchronizationContext.WorkRequest>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D80BF0 Offset: 0x2D80CF1 VA: 0x2D80BF0
+	|-Array.InternalEnumerator<XmlNamespaceManager.NamespaceDeclaration>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D80E70 Offset: 0x2D80F71 VA: 0x2D80E70
+	|-Array.InternalEnumerator<XmlSchemaObjectTable.XmlSchemaObjectEntry>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D81120 Offset: 0x2D81221 VA: 0x2D81120
+	|-Array.InternalEnumerator<XmlTextReaderImpl.ParsingState>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D813D0 Offset: 0x2D814D1 VA: 0x2D813D0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.Desc>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D81630 Offset: 0x2D81731 VA: 0x2D81630
+	|-Array.InternalEnumerator<AIThink.EnchantThink.ItemInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D81890 Offset: 0x2D81991 VA: 0x2D81890
+	|-Array.InternalEnumerator<AIThink.EnchantThink.SurroundingInfo>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D81B00 Offset: 0x2D81C01 VA: 0x2D81B00
+	|-Array.InternalEnumerator<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D81D80 Offset: 0x2D81E81 VA: 0x2D81D80
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreChangeMetaParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D82000 Offset: 0x2D82101 VA: 0x2D82000
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreDeleteParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D82290 Offset: 0x2D82391 VA: 0x2D82290
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreGetMetaParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D82530 Offset: 0x2D82631 VA: 0x2D82530
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreMetaInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D827C0 Offset: 0x2D828C1 VA: 0x2D827C0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePasswordInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D82A50 Offset: 0x2D82B51 VA: 0x2D82A50
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePersistenceInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D82CE0 Offset: 0x2D82DE1 VA: 0x2D82CE0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePreparePostParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D82F60 Offset: 0x2D83061 VA: 0x2D82F60
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRateObjectParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D831E0 Offset: 0x2D832E1 VA: 0x2D831E0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingInitParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D83460 Offset: 0x2D83561 VA: 0x2D83460
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingTargetInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D836F0 Offset: 0x2D837F1 VA: 0x2D836F0
+	|-Array.InternalEnumerator<Detail.Ranking.RankingCachedResultInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D83980 Offset: 0x2D83A81 VA: 0x2D83980
+	|-Array.InternalEnumerator<Detail.Ranking.RankingOrderParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D83C10 Offset: 0x2D83D11 VA: 0x2D83C10
+	|-Array.InternalEnumerator<Detail.Ranking.RankingRankDataInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D83ED0 Offset: 0x2D83FD1 VA: 0x2D83ED0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ChartInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D84190 Offset: 0x2D84291 VA: 0x2D84190
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2RankDataInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D84420 Offset: 0x2D84521 VA: 0x2D84420
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ScoreDataInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D846A0 Offset: 0x2D847A1 VA: 0x2D846A0
+	|-Array.InternalEnumerator<Detail.Screening.ScreeningContextInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D84950 Offset: 0x2D84A51 VA: 0x2D84950
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberContentInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D84C00 Offset: 0x2D84D01 VA: 0x2D84C00
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberGetContentParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D84EA0 Offset: 0x2D84FA1 VA: 0x2D84EA0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D85140 Offset: 0x2D85241 VA: 0x2D85140
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusParamInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D853C0 Offset: 0x2D854C1 VA: 0x2D853C0
+	|-Array.InternalEnumerator<Detail.Utility.IntegerSettings>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D85630 Offset: 0x2D85731 VA: 0x2D85630
+	|-Array.InternalEnumerator<Detail.Utility.UniqueIdInfoInt>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D858A0 Offset: 0x2D859A1 VA: 0x2D858A0
+	|-Array.InternalEnumerator<FacetsChecker.FacetsCompiler.Map>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D85B20 Offset: 0x2D85C21 VA: 0x2D85B20
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Appearance>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D85D90 Offset: 0x2D85E91 VA: 0x2D85D90
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Leaving>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D86000 Offset: 0x2D86101 VA: 0x2D86000
+	|-Array.InternalEnumerator<MapHistory.ReplayUnitMap.Data>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D86260 Offset: 0x2D86361 VA: 0x2D86260
+	|-Array.InternalEnumerator<MapHistory.Rewind.LatestInspectorData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D864C0 Offset: 0x2D865C1 VA: 0x2D864C0
+	|-Array.InternalEnumerator<MapHistory.Rewind.WorkTerrainData>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D86750 Offset: 0x2D86851 VA: 0x2D86750
+	|-Array.InternalEnumerator<MapHistory.RewindUnitMap.Data>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D869D0 Offset: 0x2D86AD1 VA: 0x2D869D0
+	|-Array.InternalEnumerator<MapKillBonus.Work.Pos>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D86C40 Offset: 0x2D86D41 VA: 0x2D86C40
+	|-Array.InternalEnumerator<MapSkill.AroundCalculator.Result>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D86EB0 Offset: 0x2D86FB1 VA: 0x2D86EB0
+	|-Array.InternalEnumerator<Nex.ApiCallChecker.Guideline>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D87130 Offset: 0x2D87231 VA: 0x2D87130
+	|-Array.InternalEnumerator<Ngc.MaskTextSequenceBase.Data>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D873D0 Offset: 0x2D874D1 VA: 0x2D873D0
+	|-Array.InternalEnumerator<TargetPositionCache.CacheCurve.Item>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D87680 Offset: 0x2D87781 VA: 0x2D87680
+	|-Array.InternalEnumerator<TargetPositionCache.CacheEntry.RecordingItem>.System.Collections.IEnumerator.Reset
+	|
+	|-RVA: 0x2D87910 Offset: 0x2D87A11 VA: 0x2D87910
+	|-Array.InternalEnumerator<TerrainUtility.TerrainMap.TileCoord>.System.Collections.IEnumerator.Reset
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1EB3970 Offset: 0x1EB3A71 VA: 0x1EB3970
+	|-Array.InternalEnumerator<ArraySegment<byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB3BF0 Offset: 0x1EB3CF1 VA: 0x1EB3BF0
+	|-Array.InternalEnumerator<AsyncOperationHandle<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB3E60 Offset: 0x1EB3F61 VA: 0x1EB3E60
+	|-Array.InternalEnumerator<MapDeployTemplate.Queue.Data<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB40D0 Offset: 0x1EB41D1 VA: 0x1EB40D0
+	|-Array.InternalEnumerator<Nex.DataStore.ParamPool.Data<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB4340 Offset: 0x1EB4441 VA: 0x1EB4340
+	|-Array.InternalEnumerator<Nex.Screening.ParamPool.Data<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB45C0 Offset: 0x1EB46C1 VA: 0x1EB45C0
+	|-Array.InternalEnumerator<IntervalTree.Entry<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB4850 Offset: 0x1EB4951 VA: 0x1EB4850
+	|-Array.InternalEnumerator<Dictionary.Entry<ValueTuple<object, int>, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB4AE0 Offset: 0x1EB4BE1 VA: 0x1EB4AE0
+	|-Array.InternalEnumerator<Dictionary.Entry<byte, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB4D70 Offset: 0x1EB4E71 VA: 0x1EB4D70
+	|-Array.InternalEnumerator<Dictionary.Entry<CancellationToken, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB5000 Offset: 0x1EB5101 VA: 0x1EB5000
+	|-Array.InternalEnumerator<Dictionary.Entry<char, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB5290 Offset: 0x1EB5391 VA: 0x1EB5290
+	|-Array.InternalEnumerator<Dictionary.Entry<Guid, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB5510 Offset: 0x1EB5611 VA: 0x1EB5510
+	|-Array.InternalEnumerator<Dictionary.Entry<int, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB5780 Offset: 0x1EB5881 VA: 0x1EB5780
+	|-Array.InternalEnumerator<Dictionary.Entry<int, byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB59F0 Offset: 0x1EB5AF1 VA: 0x1EB59F0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, char>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB5C80 Offset: 0x1EB5D81 VA: 0x1EB5C80
+	|-Array.InternalEnumerator<Dictionary.Entry<int, DiagnosticEvent>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB5F10 Offset: 0x1EB6011 VA: 0x1EB5F10
+	|-Array.InternalEnumerator<Dictionary.Entry<int, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB6180 Offset: 0x1EB6281 VA: 0x1EB6180
+	|-Array.InternalEnumerator<Dictionary.Entry<int, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB6400 Offset: 0x1EB6501 VA: 0x1EB6400
+	|-Array.InternalEnumerator<Dictionary.Entry<int, long>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB6690 Offset: 0x1EB6791 VA: 0x1EB6690
+	|-Array.InternalEnumerator<Dictionary.Entry<int, MapPos>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB6920 Offset: 0x1EB6A21 VA: 0x1EB6920
+	|-Array.InternalEnumerator<Dictionary.Entry<int, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB6BA0 Offset: 0x1EB6CA1 VA: 0x1EB6BA0
+	|-Array.InternalEnumerator<Dictionary.Entry<int, uint>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB6E10 Offset: 0x1EB6F11 VA: 0x1EB6E10
+	|-Array.InternalEnumerator<Dictionary.Entry<int, AIThink.EnchantThink.SurroundingInfo>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB7080 Offset: 0x1EB7181 VA: 0x1EB7080
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB72F0 Offset: 0x1EB73F1 VA: 0x1EB72F0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB7560 Offset: 0x1EB7661 VA: 0x1EB7560
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB77E0 Offset: 0x1EB78E1 VA: 0x1EB77E0
+	|-Array.InternalEnumerator<Dictionary.Entry<Int32Enum, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB7A70 Offset: 0x1EB7B71 VA: 0x1EB7A70
+	|-Array.InternalEnumerator<Dictionary.Entry<long, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB7D00 Offset: 0x1EB7E01 VA: 0x1EB7D00
+	|-Array.InternalEnumerator<Dictionary.Entry<MapPos, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB7FA0 Offset: 0x1EB80A1 VA: 0x1EB7FA0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle<object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB8250 Offset: 0x1EB8351 VA: 0x1EB8250
+	|-Array.InternalEnumerator<Dictionary.Entry<object, AsyncOperationHandle>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB84F0 Offset: 0x1EB85F1 VA: 0x1EB84F0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB8780 Offset: 0x1EB8881 VA: 0x1EB8780
+	|-Array.InternalEnumerator<Dictionary.Entry<object, byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB8A10 Offset: 0x1EB8B11 VA: 0x1EB8A10
+	|-Array.InternalEnumerator<Dictionary.Entry<object, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB8CA0 Offset: 0x1EB8DA1 VA: 0x1EB8CA0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB8F30 Offset: 0x1EB9031 VA: 0x1EB8F30
+	|-Array.InternalEnumerator<Dictionary.Entry<object, IntPtr>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB91C0 Offset: 0x1EB92C1 VA: 0x1EB91C0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB9450 Offset: 0x1EB9551 VA: 0x1EB9450
+	|-Array.InternalEnumerator<Dictionary.Entry<object, Playable>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB96E0 Offset: 0x1EB97E1 VA: 0x1EB96E0
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ResourceLocator>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB9970 Offset: 0x1EB9A71 VA: 0x1EB9970
+	|-Array.InternalEnumerator<Dictionary.Entry<object, float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB9C00 Offset: 0x1EB9D01 VA: 0x1EB9C00
+	|-Array.InternalEnumerator<Dictionary.Entry<object, ushort>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EB9E90 Offset: 0x1EB9F91 VA: 0x1EB9E90
+	|-Array.InternalEnumerator<Dictionary.Entry<object, GameVariable.Value>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBA130 Offset: 0x1EBA231 VA: 0x1EBA130
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, DataStoreRatingInfo>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBA3D0 Offset: 0x1EBA4D1 VA: 0x1EBA3D0
+	|-Array.InternalEnumerator<Dictionary.Entry<sbyte, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBA650 Offset: 0x1EBA751 VA: 0x1EBA650
+	|-Array.InternalEnumerator<Dictionary.Entry<ushort, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBA8C0 Offset: 0x1EBA9C1 VA: 0x1EBA8C0
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBAB40 Offset: 0x1EBAC41 VA: 0x1EBAB40
+	|-Array.InternalEnumerator<Dictionary.Entry<uint, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBADD0 Offset: 0x1EBAED1 VA: 0x1EBADD0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Friend>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBB060 Offset: 0x1EBB161 VA: 0x1EBB060
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBB2F0 Offset: 0x1EBB3F1 VA: 0x1EBB2F0
+	|-Array.InternalEnumerator<Dictionary.Entry<ulong, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBB580 Offset: 0x1EBB681 VA: 0x1EBB580
+	|-Array.InternalEnumerator<Dictionary.Entry<Vector3, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBB820 Offset: 0x1EBB921 VA: 0x1EBB820
+	|-Array.InternalEnumerator<Dictionary.Entry<XPathNodeRef, XPathNodeRef>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBBAC0 Offset: 0x1EBBBC1 VA: 0x1EBBAC0
+	|-Array.InternalEnumerator<Dictionary.Entry<TerrainUtility.TerrainMap.TileCoord, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBBD40 Offset: 0x1EBBE41 VA: 0x1EBBD40
+	|-Array.InternalEnumerator<PriorityQueue.IndexedItem<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBBFC0 Offset: 0x1EBC0C1 VA: 0x1EBBFC0
+	|-Array.InternalEnumerator<KeyValuePair<ValueTuple<object, int>, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBC240 Offset: 0x1EBC341 VA: 0x1EBC240
+	|-Array.InternalEnumerator<KeyValuePair<byte, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBC4B0 Offset: 0x1EBC5B1 VA: 0x1EBC4B0
+	|-Array.InternalEnumerator<KeyValuePair<CancellationToken, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBC720 Offset: 0x1EBC821 VA: 0x1EBC720
+	|-Array.InternalEnumerator<KeyValuePair<char, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBC990 Offset: 0x1EBCA91 VA: 0x1EBC990
+	|-Array.InternalEnumerator<KeyValuePair<DateTime, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBCC10 Offset: 0x1EBCD11 VA: 0x1EBCC10
+	|-Array.InternalEnumerator<KeyValuePair<Guid, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBCE90 Offset: 0x1EBCF91 VA: 0x1EBCE90
+	|-Array.InternalEnumerator<KeyValuePair<int, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBD100 Offset: 0x1EBD201 VA: 0x1EBD100
+	|-Array.InternalEnumerator<KeyValuePair<int, byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBD370 Offset: 0x1EBD471 VA: 0x1EBD370
+	|-Array.InternalEnumerator<KeyValuePair<int, char>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBD600 Offset: 0x1EBD701 VA: 0x1EBD600
+	|-Array.InternalEnumerator<KeyValuePair<int, DiagnosticEvent>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBD890 Offset: 0x1EBD991 VA: 0x1EBD890
+	|-Array.InternalEnumerator<KeyValuePair<int, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBDB00 Offset: 0x1EBDC01 VA: 0x1EBDB00
+	|-Array.InternalEnumerator<KeyValuePair<int, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBDD70 Offset: 0x1EBDE71 VA: 0x1EBDD70
+	|-Array.InternalEnumerator<KeyValuePair<int, long>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBDFD0 Offset: 0x1EBE0D1 VA: 0x1EBDFD0
+	|-Array.InternalEnumerator<KeyValuePair<int, MapPos>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBE250 Offset: 0x1EBE351 VA: 0x1EBE250
+	|-Array.InternalEnumerator<KeyValuePair<int, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBE4C0 Offset: 0x1EBE5C1 VA: 0x1EBE4C0
+	|-Array.InternalEnumerator<KeyValuePair<int, uint>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBE730 Offset: 0x1EBE831 VA: 0x1EBE730
+	|-Array.InternalEnumerator<KeyValuePair<int, AIThink.EnchantThink.SurroundingInfo>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBE9A0 Offset: 0x1EBEAA1 VA: 0x1EBE9A0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBEC10 Offset: 0x1EBED11 VA: 0x1EBEC10
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBEE80 Offset: 0x1EBEF81 VA: 0x1EBEE80
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBF0F0 Offset: 0x1EBF1F1 VA: 0x1EBF0F0
+	|-Array.InternalEnumerator<KeyValuePair<Int32Enum, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBF360 Offset: 0x1EBF461 VA: 0x1EBF360
+	|-Array.InternalEnumerator<KeyValuePair<long, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBF5C0 Offset: 0x1EBF6C1 VA: 0x1EBF5C0
+	|-Array.InternalEnumerator<KeyValuePair<MapPos, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBF850 Offset: 0x1EBF951 VA: 0x1EBF850
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle<object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBFAE0 Offset: 0x1EBFBE1 VA: 0x1EBFAE0
+	|-Array.InternalEnumerator<KeyValuePair<object, ValueTuple<int, DateTime, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBFD70 Offset: 0x1EBFE71 VA: 0x1EBFD70
+	|-Array.InternalEnumerator<KeyValuePair<object, AsyncOperationHandle>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EBFFF0 Offset: 0x1EC00F1 VA: 0x1EBFFF0
+	|-Array.InternalEnumerator<KeyValuePair<object, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC0260 Offset: 0x1EC0361 VA: 0x1EC0260
+	|-Array.InternalEnumerator<KeyValuePair<object, byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC04D0 Offset: 0x1EC05D1 VA: 0x1EC04D0
+	|-Array.InternalEnumerator<KeyValuePair<object, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC0740 Offset: 0x1EC0841 VA: 0x1EC0740
+	|-Array.InternalEnumerator<KeyValuePair<object, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC09B0 Offset: 0x1EC0AB1 VA: 0x1EC09B0
+	|-Array.InternalEnumerator<KeyValuePair<object, IntPtr>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC0C20 Offset: 0x1EC0D21 VA: 0x1EC0C20
+	|-Array.InternalEnumerator<KeyValuePair<object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC0EA0 Offset: 0x1EC0FA1 VA: 0x1EC0EA0
+	|-Array.InternalEnumerator<KeyValuePair<object, Playable>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC1130 Offset: 0x1EC1231 VA: 0x1EC1130
+	|-Array.InternalEnumerator<KeyValuePair<object, ResourceLocator>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC13B0 Offset: 0x1EC14B1 VA: 0x1EC13B0
+	|-Array.InternalEnumerator<KeyValuePair<object, float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC1620 Offset: 0x1EC1721 VA: 0x1EC1620
+	|-Array.InternalEnumerator<KeyValuePair<object, ushort>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC18A0 Offset: 0x1EC19A1 VA: 0x1EC18A0
+	|-Array.InternalEnumerator<KeyValuePair<object, GameVariable.Value>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC1B30 Offset: 0x1EC1C31 VA: 0x1EC1B30
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, DataStoreRatingInfo>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC1DB0 Offset: 0x1EC1EB1 VA: 0x1EC1DB0
+	|-Array.InternalEnumerator<KeyValuePair<sbyte, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2020 Offset: 0x1EC2121 VA: 0x1EC2020
+	|-Array.InternalEnumerator<KeyValuePair<ushort, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2290 Offset: 0x1EC2391 VA: 0x1EC2290
+	|-Array.InternalEnumerator<KeyValuePair<uint, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2500 Offset: 0x1EC2601 VA: 0x1EC2500
+	|-Array.InternalEnumerator<KeyValuePair<uint, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2780 Offset: 0x1EC2881 VA: 0x1EC2780
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Friend>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2A00 Offset: 0x1EC2B01 VA: 0x1EC2A00
+	|-Array.InternalEnumerator<KeyValuePair<ulong, Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2C70 Offset: 0x1EC2D71 VA: 0x1EC2C70
+	|-Array.InternalEnumerator<KeyValuePair<ulong, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC2EE0 Offset: 0x1EC2FE1 VA: 0x1EC2EE0
+	|-Array.InternalEnumerator<KeyValuePair<Vector3, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC3160 Offset: 0x1EC3261 VA: 0x1EC3160
+	|-Array.InternalEnumerator<KeyValuePair<XPathNodeRef, XPathNodeRef>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC33E0 Offset: 0x1EC34E1 VA: 0x1EC33E0
+	|-Array.InternalEnumerator<KeyValuePair<TerrainUtility.TerrainMap.TileCoord, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC3650 Offset: 0x1EC3751 VA: 0x1EC3650
+	|-Array.InternalEnumerator<NativeArray<PreTile>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC38D0 Offset: 0x1EC39D1 VA: 0x1EC38D0
+	|-Array.InternalEnumerator<CommonBattleSequence.Reliance<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC3B50 Offset: 0x1EC3C51 VA: 0x1EC3B50
+	|-Array.InternalEnumerator<RenderGraphResourcePool.ResourceLogInfo<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC3DD0 Offset: 0x1EC3ED1 VA: 0x1EC3DD0
+	|-Array.InternalEnumerator<HashSet.Slot<ValueTuple<object, int>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC4060 Offset: 0x1EC4161 VA: 0x1EC4060
+	|-Array.InternalEnumerator<HashSet.Slot<AsyncOperationHandle>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC42D0 Offset: 0x1EC43D1 VA: 0x1EC42D0
+	|-Array.InternalEnumerator<HashSet.Slot<int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC4540 Offset: 0x1EC4641 VA: 0x1EC4540
+	|-Array.InternalEnumerator<HashSet.Slot<Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC47B0 Offset: 0x1EC48B1 VA: 0x1EC47B0
+	|-Array.InternalEnumerator<Set.Slot<Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC4A30 Offset: 0x1EC4B31 VA: 0x1EC4A30
+	|-Array.InternalEnumerator<HashSet.Slot<MapPos>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC4CA0 Offset: 0x1EC4DA1 VA: 0x1EC4CA0
+	|-Array.InternalEnumerator<HashSet.Slot<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC4F20 Offset: 0x1EC5021 VA: 0x1EC4F20
+	|-Array.InternalEnumerator<Set.Slot<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC5190 Offset: 0x1EC5291 VA: 0x1EC5190
+	|-Array.InternalEnumerator<HashSet.Slot<uint>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC5410 Offset: 0x1EC5511 VA: 0x1EC5410
+	|-Array.InternalEnumerator<HashSet.Slot<ulong>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC5690 Offset: 0x1EC5791 VA: 0x1EC5690
+	|-Array.InternalEnumerator<Set.Slot<Vector3>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC5920 Offset: 0x1EC5A21 VA: 0x1EC5920
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Color32>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC5BC0 Offset: 0x1EC5CC1 VA: 0x1EC5BC0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<HighlightState>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC5E60 Offset: 0x1EC5F61 VA: 0x1EC5E60
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC60F0 Offset: 0x1EC61F1 VA: 0x1EC60F0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<Int32Enum>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC63A0 Offset: 0x1EC64A1 VA: 0x1EC63A0
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<MaterialReference>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC6660 Offset: 0x1EC6761 VA: 0x1EC6660
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC6900 Offset: 0x1EC6A01 VA: 0x1EC6900
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC6B90 Offset: 0x1EC6C91 VA: 0x1EC6B90
+	|-Array.InternalEnumerator<TMP_TextProcessingStack<WordWrapState>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC6E10 Offset: 0x1EC6F11 VA: 0x1EC6E10
+	|-Array.InternalEnumerator<TimeInterval<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7090 Offset: 0x1EC7191 VA: 0x1EC7090
+	|-Array.InternalEnumerator<Timestamped<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7310 Offset: 0x1EC7411 VA: 0x1EC7310
+	|-Array.InternalEnumerator<UniTask<object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7580 Offset: 0x1EC7681 VA: 0x1EC7580
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7800 Offset: 0x1EC7901 VA: 0x1EC7800
+	|-Array.InternalEnumerator<ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7A90 Offset: 0x1EC7B91 VA: 0x1EC7A90
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask<object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7D20 Offset: 0x1EC7E21 VA: 0x1EC7D20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC7FC0 Offset: 0x1EC80C1 VA: 0x1EC7FC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC8270 Offset: 0x1EC8371 VA: 0x1EC8270
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask<object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC84F0 Offset: 0x1EC85F1 VA: 0x1EC84F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x1EC8750 Offset: 0x1EC8851 VA: 0x1EC8750
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF8220 Offset: 0x2AF8321 VA: 0x2AF8220
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF84A0 Offset: 0x2AF85A1 VA: 0x2AF84A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF8730 Offset: 0x2AF8831 VA: 0x2AF8730
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF89E0 Offset: 0x2AF8AE1 VA: 0x2AF89E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF8C80 Offset: 0x2AF8D81 VA: 0x2AF8C80
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF8F20 Offset: 0x2AF9021 VA: 0x2AF8F20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF91D0 Offset: 0x2AF92D1 VA: 0x2AF91D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF9480 Offset: 0x2AF9581 VA: 0x2AF9480
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF9730 Offset: 0x2AF9831 VA: 0x2AF9730
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF99D0 Offset: 0x2AF9AD1 VA: 0x2AF99D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF9C70 Offset: 0x2AF9D71 VA: 0x2AF9C70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF9EF0 Offset: 0x2AF9FF1 VA: 0x2AF9EF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFA180 Offset: 0x2AFA281 VA: 0x2AFA180
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFA420 Offset: 0x2AFA521 VA: 0x2AFA420
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFA6C0 Offset: 0x2AFA7C1 VA: 0x2AFA6C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFA970 Offset: 0x2AFAA71 VA: 0x2AFA970
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFAC20 Offset: 0x2AFAD21 VA: 0x2AFAC20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFAED0 Offset: 0x2AFAFD1 VA: 0x2AFAED0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFB180 Offset: 0x2AFB281 VA: 0x2AFB180
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFB440 Offset: 0x2AFB541 VA: 0x2AFB440
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFB710 Offset: 0x2AFB811 VA: 0x2AFB710
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFB9E0 Offset: 0x2AFBAE1 VA: 0x2AFB9E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFBC70 Offset: 0x2AFBD71 VA: 0x2AFBC70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFBED0 Offset: 0x2AFBFD1 VA: 0x2AFBED0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFC160 Offset: 0x2AFC261 VA: 0x2AFC160
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFC3E0 Offset: 0x2AFC4E1 VA: 0x2AFC3E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFC660 Offset: 0x2AFC761 VA: 0x2AFC660
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFC900 Offset: 0x2AFCA01 VA: 0x2AFC900
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFCBA0 Offset: 0x2AFCCA1 VA: 0x2AFCBA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFCE40 Offset: 0x2AFCF41 VA: 0x2AFCE40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFD0F0 Offset: 0x2AFD1F1 VA: 0x2AFD0F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFD390 Offset: 0x2AFD491 VA: 0x2AFD390
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFD620 Offset: 0x2AFD721 VA: 0x2AFD620
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFD8B0 Offset: 0x2AFD9B1 VA: 0x2AFD8B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFDB50 Offset: 0x2AFDC51 VA: 0x2AFDB50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFDDD0 Offset: 0x2AFDED1 VA: 0x2AFDDD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFE050 Offset: 0x2AFE151 VA: 0x2AFE050
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFE2F0 Offset: 0x2AFE3F1 VA: 0x2AFE2F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFE590 Offset: 0x2AFE691 VA: 0x2AFE590
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFE830 Offset: 0x2AFE931 VA: 0x2AFE830
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFEAE0 Offset: 0x2AFEBE1 VA: 0x2AFEAE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFED90 Offset: 0x2AFEE91 VA: 0x2AFED90
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFF040 Offset: 0x2AFF141 VA: 0x2AFF040
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFF300 Offset: 0x2AFF401 VA: 0x2AFF300
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFF5C0 Offset: 0x2AFF6C1 VA: 0x2AFF5C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFF880 Offset: 0x2AFF981 VA: 0x2AFF880
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFFB40 Offset: 0x2AFFC41 VA: 0x2AFFB40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AFFE10 Offset: 0x2AFFF11 VA: 0x2AFFE10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B000F0 Offset: 0x2B001F1 VA: 0x2B000F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B003D0 Offset: 0x2B004D1 VA: 0x2B003D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B006B0 Offset: 0x2B007B1 VA: 0x2B006B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B00940 Offset: 0x2B00A41 VA: 0x2B00940
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B00BA0 Offset: 0x2B00CA1 VA: 0x2B00BA0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, bool>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B00E30 Offset: 0x2B00F31 VA: 0x2B00E30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Bounds>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B010B0 Offset: 0x2B011B1 VA: 0x2B010B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, byte>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B01340 Offset: 0x2B01441 VA: 0x2B01340
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Color>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B015E0 Offset: 0x2B016E1 VA: 0x2B015E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, double>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B01860 Offset: 0x2B01961 VA: 0x2B01860
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, int>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B01AE0 Offset: 0x2B01BE1 VA: 0x2B01AE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, long>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B01D70 Offset: 0x2B01E71 VA: 0x2B01D70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B02010 Offset: 0x2B02111 VA: 0x2B02010
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Quaternion>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B022C0 Offset: 0x2B023C1 VA: 0x2B022C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Rect>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B02550 Offset: 0x2B02651 VA: 0x2B02550
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, float>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B027D0 Offset: 0x2B028D1 VA: 0x2B027D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, UniTask>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B02A40 Offset: 0x2B02B41 VA: 0x2B02A40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Unit>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B02CC0 Offset: 0x2B02DC1 VA: 0x2B02CC0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector2>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B02F50 Offset: 0x2B03051 VA: 0x2B02F50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector3>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B031F0 Offset: 0x2B032F1 VA: 0x2B031F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<bool, Vector4>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B03490 Offset: 0x2B03591 VA: 0x2B03490
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B03720 Offset: 0x2B03821 VA: 0x2B03720
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B039C0 Offset: 0x2B03AC1 VA: 0x2B039C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B03C70 Offset: 0x2B03D71 VA: 0x2B03C70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B03F30 Offset: 0x2B04031 VA: 0x2B03F30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B041F0 Offset: 0x2B042F1 VA: 0x2B041F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B044B0 Offset: 0x2B045B1 VA: 0x2B044B0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B04770 Offset: 0x2B04871 VA: 0x2B04770
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B04A40 Offset: 0x2B04B41 VA: 0x2B04A40
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B04D10 Offset: 0x2B04E11 VA: 0x2B04D10
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B04FE0 Offset: 0x2B050E1 VA: 0x2B04FE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B052C0 Offset: 0x2B053C1 VA: 0x2B052C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B05570 Offset: 0x2B05671 VA: 0x2B05570
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B05800 Offset: 0x2B05901 VA: 0x2B05800
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B05A70 Offset: 0x2B05B71 VA: 0x2B05A70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, AsyncUnit>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B05CD0 Offset: 0x2B05DD1 VA: 0x2B05CD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, bool>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B05F50 Offset: 0x2B06051 VA: 0x2B05F50
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Bounds>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B061C0 Offset: 0x2B062C1 VA: 0x2B061C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, byte>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B06440 Offset: 0x2B06541 VA: 0x2B06440
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Color>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B066D0 Offset: 0x2B067D1 VA: 0x2B066D0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, double>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B06940 Offset: 0x2B06A41 VA: 0x2B06940
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, int>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B06BD0 Offset: 0x2B06CD1 VA: 0x2B06BD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, long>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B06E60 Offset: 0x2B06F61 VA: 0x2B06E60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B070F0 Offset: 0x2B071F1 VA: 0x2B070F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Quaternion>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B07380 Offset: 0x2B07481 VA: 0x2B07380
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Rect>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B075F0 Offset: 0x2B076F1 VA: 0x2B075F0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, float>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B07880 Offset: 0x2B07981 VA: 0x2B07880
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, UniTask>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B07AF0 Offset: 0x2B07BF1 VA: 0x2B07AF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Unit>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B07D60 Offset: 0x2B07E61 VA: 0x2B07D60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector2>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B07FE0 Offset: 0x2B080E1 VA: 0x2B07FE0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector3>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B08270 Offset: 0x2B08371 VA: 0x2B08270
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<bool, Vector4>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B08500 Offset: 0x2B08601 VA: 0x2B08500
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B08790 Offset: 0x2B08891 VA: 0x2B08790
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B08A30 Offset: 0x2B08B31 VA: 0x2B08A30
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B08CD0 Offset: 0x2B08DD1 VA: 0x2B08CD0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B08F70 Offset: 0x2B09071 VA: 0x2B08F70
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B09220 Offset: 0x2B09321 VA: 0x2B09220
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B094E0 Offset: 0x2B095E1 VA: 0x2B094E0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B097A0 Offset: 0x2B098A1 VA: 0x2B097A0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B09A60 Offset: 0x2B09B61 VA: 0x2B09A60
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B09D20 Offset: 0x2B09E21 VA: 0x2B09D20
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B09FF0 Offset: 0x2B0A0F1 VA: 0x2B09FF0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0A2C0 Offset: 0x2B0A3C1 VA: 0x2B0A2C0
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<object, object, object, object, object, object, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0A590 Offset: 0x2B0A691 VA: 0x2B0A590
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0A850 Offset: 0x2B0A951 VA: 0x2B0A850
+	|-Array.InternalEnumerator<ValueTuple<bool, ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0AAC0 Offset: 0x2B0ABC1 VA: 0x2B0AAC0
+	|-Array.InternalEnumerator<ValueTuple<bool, AsyncUnit>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0AD20 Offset: 0x2B0AE21 VA: 0x2B0AD20
+	|-Array.InternalEnumerator<ValueTuple<bool, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0AFB0 Offset: 0x2B0B0B1 VA: 0x2B0AFB0
+	|-Array.InternalEnumerator<ValueTuple<bool, Bounds>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0B230 Offset: 0x2B0B331 VA: 0x2B0B230
+	|-Array.InternalEnumerator<ValueTuple<bool, byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0B4B0 Offset: 0x2B0B5B1 VA: 0x2B0B4B0
+	|-Array.InternalEnumerator<ValueTuple<bool, Color>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0B730 Offset: 0x2B0B831 VA: 0x2B0B730
+	|-Array.InternalEnumerator<ValueTuple<bool, double>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0B9A0 Offset: 0x2B0BAA1 VA: 0x2B0B9A0
+	|-Array.InternalEnumerator<ValueTuple<bool, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0BC10 Offset: 0x2B0BD11 VA: 0x2B0BC10
+	|-Array.InternalEnumerator<ValueTuple<bool, long>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0BE80 Offset: 0x2B0BF81 VA: 0x2B0BE80
+	|-Array.InternalEnumerator<ValueTuple<bool, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0C100 Offset: 0x2B0C201 VA: 0x2B0C100
+	|-Array.InternalEnumerator<ValueTuple<bool, Quaternion>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0C390 Offset: 0x2B0C491 VA: 0x2B0C390
+	|-Array.InternalEnumerator<ValueTuple<bool, Rect>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0C610 Offset: 0x2B0C711 VA: 0x2B0C610
+	|-Array.InternalEnumerator<ValueTuple<bool, float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0C880 Offset: 0x2B0C981 VA: 0x2B0C880
+	|-Array.InternalEnumerator<ValueTuple<bool, UniTask>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0CAE0 Offset: 0x2B0CBE1 VA: 0x2B0CAE0
+	|-Array.InternalEnumerator<ValueTuple<bool, Unit>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0CD40 Offset: 0x2B0CE41 VA: 0x2B0CD40
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector2>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0CFC0 Offset: 0x2B0D0C1 VA: 0x2B0CFC0
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector3>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0D240 Offset: 0x2B0D341 VA: 0x2B0D240
+	|-Array.InternalEnumerator<ValueTuple<bool, Vector4>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0D4C0 Offset: 0x2B0D5C1 VA: 0x2B0D4C0
+	|-Array.InternalEnumerator<ValueTuple<int, bool>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0D750 Offset: 0x2B0D851 VA: 0x2B0D750
+	|-Array.InternalEnumerator<ValueTuple<int, Bounds>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0D9E0 Offset: 0x2B0DAE1 VA: 0x2B0D9E0
+	|-Array.InternalEnumerator<ValueTuple<int, byte>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0DC60 Offset: 0x2B0DD61 VA: 0x2B0DC60
+	|-Array.InternalEnumerator<ValueTuple<int, Color>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0DEE0 Offset: 0x2B0DFE1 VA: 0x2B0DEE0
+	|-Array.InternalEnumerator<ValueTuple<int, double>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0E150 Offset: 0x2B0E251 VA: 0x2B0E150
+	|-Array.InternalEnumerator<ValueTuple<int, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0E3C0 Offset: 0x2B0E4C1 VA: 0x2B0E3C0
+	|-Array.InternalEnumerator<ValueTuple<int, long>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0E630 Offset: 0x2B0E731 VA: 0x2B0E630
+	|-Array.InternalEnumerator<ValueTuple<int, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0E8B0 Offset: 0x2B0E9B1 VA: 0x2B0E8B0
+	|-Array.InternalEnumerator<ValueTuple<int, Quaternion>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0EB40 Offset: 0x2B0EC41 VA: 0x2B0EB40
+	|-Array.InternalEnumerator<ValueTuple<int, Rect>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0EDC0 Offset: 0x2B0EEC1 VA: 0x2B0EDC0
+	|-Array.InternalEnumerator<ValueTuple<int, float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0F030 Offset: 0x2B0F131 VA: 0x2B0F030
+	|-Array.InternalEnumerator<ValueTuple<int, Unit>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0F290 Offset: 0x2B0F391 VA: 0x2B0F290
+	|-Array.InternalEnumerator<ValueTuple<int, Vector2>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0F510 Offset: 0x2B0F611 VA: 0x2B0F510
+	|-Array.InternalEnumerator<ValueTuple<int, Vector3>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0F790 Offset: 0x2B0F891 VA: 0x2B0F790
+	|-Array.InternalEnumerator<ValueTuple<int, Vector4>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0FA10 Offset: 0x2B0FB11 VA: 0x2B0FA10
+	|-Array.InternalEnumerator<ValueTuple<Int32Enum, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0FC90 Offset: 0x2B0FD91 VA: 0x2B0FC90
+	|-Array.InternalEnumerator<ValueTuple<object, ValueTuple<object, int>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B0FF10 Offset: 0x2B10011 VA: 0x2B0FF10
+	|-Array.InternalEnumerator<ValueTuple<object, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B10180 Offset: 0x2B10281 VA: 0x2B10180
+	|-Array.InternalEnumerator<ValueTuple<object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B103F0 Offset: 0x2B104F1 VA: 0x2B103F0
+	|-Array.InternalEnumerator<ValueTuple<object, float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2B10660 Offset: 0x2B10761 VA: 0x2B10660
+	|-Array.InternalEnumerator<ValueTuple<Vector3, float>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE0030 Offset: 0x2AE0131 VA: 0x2AE0030
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE02C0 Offset: 0x2AE03C1 VA: 0x2AE02C0
+	|-Array.InternalEnumerator<ValueTuple<object, Int32Enum, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE0540 Offset: 0x2AE0641 VA: 0x2AE0540
+	|-Array.InternalEnumerator<ValueTuple<object, object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE07E0 Offset: 0x2AE08E1 VA: 0x2AE07E0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE0A80 Offset: 0x2AE0B81 VA: 0x2AE0A80
+	|-Array.InternalEnumerator<ValueTuple<object, int, int, int>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE0D10 Offset: 0x2AE0E11 VA: 0x2AE0D10
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE0FC0 Offset: 0x2AE10C1 VA: 0x2AE0FC0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE1280 Offset: 0x2AE1381 VA: 0x2AE1280
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE1540 Offset: 0x2AE1641 VA: 0x2AE1540
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE1800 Offset: 0x2AE1901 VA: 0x2AE1800
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE1AD0 Offset: 0x2AE1BD1 VA: 0x2AE1AD0
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE1DA0 Offset: 0x2AE1EA1 VA: 0x2AE1DA0
+	|-Array.InternalEnumerator<ValueTuple<object, object, object, object, object, object, object>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE2070 Offset: 0x2AE2171 VA: 0x2AE2070
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE2330 Offset: 0x2AE2431 VA: 0x2AE2330
+	|-Array.InternalEnumerator<ValueTuple<int, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<bool, object>, ValueTuple<ValueTuple<bool, object>, ValueTuple<bool, object>>>>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE25B0 Offset: 0x2AE26B1 VA: 0x2AE25B0
+	|-Array.InternalEnumerator<AnimatorClipInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE2830 Offset: 0x2AE2931 VA: 0x2AE2830
+	|-Array.InternalEnumerator<AsyncOperationHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE2AA0 Offset: 0x2AE2BA1 VA: 0x2AE2AA0
+	|-Array.InternalEnumerator<AsyncUnit>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE2D00 Offset: 0x2AE2E01 VA: 0x2AE2D00
+	|-Array.InternalEnumerator<BatchVisibility>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE2F90 Offset: 0x2AE3091 VA: 0x2AE2F90
+	|-Array.InternalEnumerator<BoneWeight>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE3210 Offset: 0x2AE3311 VA: 0x2AE3210
+	|-Array.InternalEnumerator<BoneWeight1>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE3480 Offset: 0x2AE3581 VA: 0x2AE3480
+	|-Array.InternalEnumerator<bool>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE3700 Offset: 0x2AE3801 VA: 0x2AE3700
+	|-Array.InternalEnumerator<Bounds>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE3980 Offset: 0x2AE3A81 VA: 0x2AE3980
+	|-Array.InternalEnumerator<byte>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE3BF0 Offset: 0x2AE3CF1 VA: 0x2AE3BF0
+	|-Array.InternalEnumerator<ByteEnum>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE3E60 Offset: 0x2AE3F61 VA: 0x2AE3E60
+	|-Array.InternalEnumerator<CameraInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE40D0 Offset: 0x2AE41D1 VA: 0x2AE40D0
+	|-Array.InternalEnumerator<CancellationToken>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE4350 Offset: 0x2AE4451 VA: 0x2AE4350
+	|-Array.InternalEnumerator<CancellationTokenRegistration>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE45D0 Offset: 0x2AE46D1 VA: 0x2AE45D0
+	|-Array.InternalEnumerator<char>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE4850 Offset: 0x2AE4951 VA: 0x2AE4850
+	|-Array.InternalEnumerator<ClusteringData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE4AE0 Offset: 0x2AE4BE1 VA: 0x2AE4AE0
+	|-Array.InternalEnumerator<ClusteringProcessorState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE4D60 Offset: 0x2AE4E61 VA: 0x2AE4D60
+	|-Array.InternalEnumerator<Color>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE4FD0 Offset: 0x2AE50D1 VA: 0x2AE4FD0
+	|-Array.InternalEnumerator<Color32>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE5230 Offset: 0x2AE5331 VA: 0x2AE5230
+	|-Array.InternalEnumerator<Color4u8>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE54D0 Offset: 0x2AE55D1 VA: 0x2AE54D0
+	|-Array.InternalEnumerator<ColorBlock>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE57B0 Offset: 0x2AE58B1 VA: 0x2AE57B0
+	|-Array.InternalEnumerator<CombineInstance>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE5A60 Offset: 0x2AE5B61 VA: 0x2AE5A60
+	|-Array.InternalEnumerator<ConstraintSource>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE5CF0 Offset: 0x2AE5DF1 VA: 0x2AE5CF0
+	|-Array.InternalEnumerator<ContactPoint>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE5FA0 Offset: 0x2AE60A1 VA: 0x2AE5FA0
+	|-Array.InternalEnumerator<ContactPoint2D>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE6240 Offset: 0x2AE6341 VA: 0x2AE6240
+	|-Array.InternalEnumerator<ContourVertex>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE64D0 Offset: 0x2AE65D1 VA: 0x2AE64D0
+	|-Array.InternalEnumerator<CustomAttributeNamedArgument>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE6750 Offset: 0x2AE6851 VA: 0x2AE6750
+	|-Array.InternalEnumerator<CustomAttributeTypedArgument>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE69D0 Offset: 0x2AE6AD1 VA: 0x2AE69D0
+	|-Array.InternalEnumerator<DataStoreRatingInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE6C50 Offset: 0x2AE6D51 VA: 0x2AE6C50
+	|-Array.InternalEnumerator<DataStoreResult>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE6EC0 Offset: 0x2AE6FC1 VA: 0x2AE6EC0
+	|-Array.InternalEnumerator<DateTime>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE7130 Offset: 0x2AE7231 VA: 0x2AE7130
+	|-Array.InternalEnumerator<DateTimeOffset>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE73B0 Offset: 0x2AE74B1 VA: 0x2AE73B0
+	|-Array.InternalEnumerator<DebugPadState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE7630 Offset: 0x2AE7731 VA: 0x2AE7630
+	|-Array.InternalEnumerator<Decimal>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE78E0 Offset: 0x2AE79E1 VA: 0x2AE78E0
+	|-Array.InternalEnumerator<DeferredTiler>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE7B90 Offset: 0x2AE7C91 VA: 0x2AE7B90
+	|-Array.InternalEnumerator<DeviceHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE7E20 Offset: 0x2AE7F21 VA: 0x2AE7E20
+	|-Array.InternalEnumerator<DiagnosticEvent>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE80B0 Offset: 0x2AE81B1 VA: 0x2AE80B0
+	|-Array.InternalEnumerator<DictionaryEntry>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE8320 Offset: 0x2AE8421 VA: 0x2AE8320
+	|-Array.InternalEnumerator<DictionaryInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE85A0 Offset: 0x2AE86A1 VA: 0x2AE85A0
+	|-Array.InternalEnumerator<DirectoryEntry>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE8820 Offset: 0x2AE8921 VA: 0x2AE8820
+	|-Array.InternalEnumerator<double>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE8A90 Offset: 0x2AE8B91 VA: 0x2AE8A90
+	|-Array.InternalEnumerator<Ephemeron>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE8D00 Offset: 0x2AE8E01 VA: 0x2AE8D00
+	|-Array.InternalEnumerator<FXZ>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE8F90 Offset: 0x2AE9091 VA: 0x2AE8F90
+	|-Array.InternalEnumerator<Finger>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE9220 Offset: 0x2AE9321 VA: 0x2AE9220
+	|-Array.InternalEnumerator<Float2>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE94B0 Offset: 0x2AE95B1 VA: 0x2AE94B0
+	|-Array.InternalEnumerator<Friend>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE9720 Offset: 0x2AE9821 VA: 0x2AE9720
+	|-Array.InternalEnumerator<GCHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE9990 Offset: 0x2AE9A91 VA: 0x2AE9990
+	|-Array.InternalEnumerator<GesturePoint>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE9C30 Offset: 0x2AE9D31 VA: 0x2AE9C30
+	|-Array.InternalEnumerator<GestureState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AE9EF0 Offset: 0x2AE9FF1 VA: 0x2AE9EF0
+	|-Array.InternalEnumerator<GlyphMarshallingStruct>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEA1A0 Offset: 0x2AEA2A1 VA: 0x2AEA1A0
+	|-Array.InternalEnumerator<GlyphPairAdjustmentRecord>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEA430 Offset: 0x2AEA531 VA: 0x2AEA430
+	|-Array.InternalEnumerator<GlyphRect>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEA6A0 Offset: 0x2AEA7A1 VA: 0x2AEA6A0
+	|-Array.InternalEnumerator<Guid>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEA920 Offset: 0x2AEAA21 VA: 0x2AEA920
+	|-Array.InternalEnumerator<Hand>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEABA0 Offset: 0x2AEACA1 VA: 0x2AEABA0
+	|-Array.InternalEnumerator<HandAnalysisImageState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEAE20 Offset: 0x2AEAF21 VA: 0x2AEAE20
+	|-Array.InternalEnumerator<HandAnalysisSilhouetteState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEB0A0 Offset: 0x2AEB1A1 VA: 0x2AEB0A0
+	|-Array.InternalEnumerator<HeaderVariantInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEB320 Offset: 0x2AEB421 VA: 0x2AEB320
+	|-Array.InternalEnumerator<HighlightState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEB5C0 Offset: 0x2AEB6C1 VA: 0x2AEB5C0
+	|-Array.InternalEnumerator<HumanBone>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEB850 Offset: 0x2AEB951 VA: 0x2AEB850
+	|-Array.InternalEnumerator<short>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEBAC0 Offset: 0x2AEBBC1 VA: 0x2AEBAC0
+	|-Array.InternalEnumerator<int>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEBD30 Offset: 0x2AEBE31 VA: 0x2AEBD30
+	|-Array.InternalEnumerator<Int32Enum>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEBFA0 Offset: 0x2AEC0A1 VA: 0x2AEBFA0
+	|-Array.InternalEnumerator<long>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEC210 Offset: 0x2AEC311 VA: 0x2AEC210
+	|-Array.InternalEnumerator<Int64Enum>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEC480 Offset: 0x2AEC581 VA: 0x2AEC480
+	|-Array.InternalEnumerator<IntPtr>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEC6F0 Offset: 0x2AEC7F1 VA: 0x2AEC6F0
+	|-Array.InternalEnumerator<InternalCodePageDataItem>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEC960 Offset: 0x2AECA61 VA: 0x2AEC960
+	|-Array.InternalEnumerator<InternalEncodingDataItem>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AECBD0 Offset: 0x2AECCD1 VA: 0x2AECBD0
+	|-Array.InternalEnumerator<InterpretedFrameInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AECE50 Offset: 0x2AECF51 VA: 0x2AECE50
+	|-Array.InternalEnumerator<IntervalTreeNode>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AED0D0 Offset: 0x2AED1D1 VA: 0x2AED0D0
+	|-Array.InternalEnumerator<JobHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AED360 Offset: 0x2AED461 VA: 0x2AED360
+	|-Array.InternalEnumerator<Keyframe>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AED5F0 Offset: 0x2AED6F1 VA: 0x2AED5F0
+	|-Array.InternalEnumerator<LOD>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AED850 Offset: 0x2AED951 VA: 0x2AED850
+	|-Array.InternalEnumerator<LayerMask>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEDAC0 Offset: 0x2AEDBC1 VA: 0x2AEDAC0
+	|-Array.InternalEnumerator<LengthLimitProperties>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEDD60 Offset: 0x2AEDE61 VA: 0x2AEDD60
+	|-Array.InternalEnumerator<Light2DBlendStyle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEE030 Offset: 0x2AEE131 VA: 0x2AEE030
+	|-Array.InternalEnumerator<LightDataGI>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEE2D0 Offset: 0x2AEE3D1 VA: 0x2AEE2D0
+	|-Array.InternalEnumerator<LocalDefinition>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEE540 Offset: 0x2AEE641 VA: 0x2AEE540
+	|-Array.InternalEnumerator<MapPos>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEE7A0 Offset: 0x2AEE8A1 VA: 0x2AEE7A0
+	|-Array.InternalEnumerator<MapRange>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEEA40 Offset: 0x2AEEB41 VA: 0x2AEEA40
+	|-Array.InternalEnumerator<MaterialReference>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEECF0 Offset: 0x2AEEDF1 VA: 0x2AEECF0
+	|-Array.InternalEnumerator<Matrix4x4>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEEF90 Offset: 0x2AEF091 VA: 0x2AEEF90
+	|-Array.InternalEnumerator<MomentProcessorState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEF210 Offset: 0x2AEF311 VA: 0x2AEF210
+	|-Array.InternalEnumerator<MomentStatistic>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEF4B0 Offset: 0x2AEF5B1 VA: 0x2AEF4B0
+	|-Array.InternalEnumerator<Navigation>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEF740 Offset: 0x2AEF841 VA: 0x2AEF740
+	|-Array.InternalEnumerator<NetworkServiceAccountId>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEF9D0 Offset: 0x2AEFAD1 VA: 0x2AEF9D0
+	|-Array.InternalEnumerator<NpadFullKeyState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEFC80 Offset: 0x2AEFD81 VA: 0x2AEFC80
+	|-Array.InternalEnumerator<NpadHandheldState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AEFF30 Offset: 0x2AF0031 VA: 0x2AEFF30
+	|-Array.InternalEnumerator<NpadJoyDualState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF01E0 Offset: 0x2AF02E1 VA: 0x2AF01E0
+	|-Array.InternalEnumerator<NpadJoyLeftState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF0490 Offset: 0x2AF0591 VA: 0x2AF0490
+	|-Array.InternalEnumerator<NpadJoyRightState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF0740 Offset: 0x2AF0841 VA: 0x2AF0740
+	|-Array.InternalEnumerator<NpadStateArrayItem>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF09D0 Offset: 0x2AF0AD1 VA: 0x2AF09D0
+	|-Array.InternalEnumerator<NsUid>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF0C40 Offset: 0x2AF0D41 VA: 0x2AF0C40
+	|-Array.InternalEnumerator<object>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF0E80 Offset: 0x2AF0F81 VA: 0x2AF0E80
+	|-Array.InternalEnumerator<ObjectInitializationData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF1110 Offset: 0x2AF1211 VA: 0x2AF1110
+	|-Array.InternalEnumerator<ParameterModifier>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF1380 Offset: 0x2AF1481 VA: 0x2AF1380
+	|-Array.InternalEnumerator<Plane>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF1600 Offset: 0x2AF1701 VA: 0x2AF1600
+	|-Array.InternalEnumerator<Playable>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF1880 Offset: 0x2AF1981 VA: 0x2AF1880
+	|-Array.InternalEnumerator<PlayableBinding>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF1B20 Offset: 0x2AF1C21 VA: 0x2AF1B20
+	|-Array.InternalEnumerator<PlayerLoopSystem>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF1DD0 Offset: 0x2AF1ED1 VA: 0x2AF1DD0
+	|-Array.InternalEnumerator<PlayerLoopSystemInternal>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF2080 Offset: 0x2AF2181 VA: 0x2AF2080
+	|-Array.InternalEnumerator<PreTile>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF2330 Offset: 0x2AF2431 VA: 0x2AF2330
+	|-Array.InternalEnumerator<Profile>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF25B0 Offset: 0x2AF26B1 VA: 0x2AF25B0
+	|-Array.InternalEnumerator<Protrusion>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF2820 Offset: 0x2AF2921 VA: 0x2AF2820
+	|-Array.InternalEnumerator<Quaternion>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF2AA0 Offset: 0x2AF2BA1 VA: 0x2AF2AA0
+	|-Array.InternalEnumerator<RandomSeed>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF2D10 Offset: 0x2AF2E11 VA: 0x2AF2D10
+	|-Array.InternalEnumerator<RangePositionInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF2F80 Offset: 0x2AF3081 VA: 0x2AF2F80
+	|-Array.InternalEnumerator<Ranking2ChartInfoInput>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF3210 Offset: 0x2AF3311 VA: 0x2AF3210
+	|-Array.InternalEnumerator<RaycastHit>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF34C0 Offset: 0x2AF35C1 VA: 0x2AF34C0
+	|-Array.InternalEnumerator<RaycastHit2D>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF3780 Offset: 0x2AF3881 VA: 0x2AF3780
+	|-Array.InternalEnumerator<RaycastResult>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF3A20 Offset: 0x2AF3B21 VA: 0x2AF3A20
+	|-Array.InternalEnumerator<Rect>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF3CA0 Offset: 0x2AF3DA1 VA: 0x2AF3CA0
+	|-Array.InternalEnumerator<RenderBuffer>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF3F50 Offset: 0x2AF4051 VA: 0x2AF3F50
+	|-Array.InternalEnumerator<RenderStateBlock>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF4220 Offset: 0x2AF4321 VA: 0x2AF4220
+	|-Array.InternalEnumerator<RenderTargetHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF44D0 Offset: 0x2AF45D1 VA: 0x2AF44D0
+	|-Array.InternalEnumerator<RenderTargetIdentifier>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF4760 Offset: 0x2AF4861 VA: 0x2AF4760
+	|-Array.InternalEnumerator<RendererListHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF49D0 Offset: 0x2AF4AD1 VA: 0x2AF49D0
+	|-Array.InternalEnumerator<ResourceHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF4C40 Offset: 0x2AF4D41 VA: 0x2AF4C40
+	|-Array.InternalEnumerator<ResourceLocator>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF4EC0 Offset: 0x2AF4FC1 VA: 0x2AF4EC0
+	|-Array.InternalEnumerator<RichTextTagAttribute>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF5130 Offset: 0x2AF5231 VA: 0x2AF5130
+	|-Array.InternalEnumerator<RuntimeLabel>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF53B0 Offset: 0x2AF54B1 VA: 0x2AF53B0
+	|-Array.InternalEnumerator<sbyte>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF5630 Offset: 0x2AF5731 VA: 0x2AF5630
+	|-Array.InternalEnumerator<SerializedType>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF58A0 Offset: 0x2AF59A1 VA: 0x2AF58A0
+	|-Array.InternalEnumerator<ShaderKeyword>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF5B00 Offset: 0x2AF5C01 VA: 0x2AF5B00
+	|-Array.InternalEnumerator<ShaderTagId>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF5D80 Offset: 0x2AF5E81 VA: 0x2AF5D80
+	|-Array.InternalEnumerator<ShadowSliceData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF6010 Offset: 0x2AF6111 VA: 0x2AF6010
+	|-Array.InternalEnumerator<Shape>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF6290 Offset: 0x2AF6391 VA: 0x2AF6290
+	|-Array.InternalEnumerator<float>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF64F0 Offset: 0x2AF65F1 VA: 0x2AF64F0
+	|-Array.InternalEnumerator<SixAxisSensorHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF6790 Offset: 0x2AF6891 VA: 0x2AF6790
+	|-Array.InternalEnumerator<SixAxisSensorState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF6A50 Offset: 0x2AF6B51 VA: 0x2AF6A50
+	|-Array.InternalEnumerator<SkeletonBone>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF6CD0 Offset: 0x2AF6DD1 VA: 0x2AF6CD0
+	|-Array.InternalEnumerator<SortingLayer>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF6F80 Offset: 0x2AF7081 VA: 0x2AF6F80
+	|-Array.InternalEnumerator<SphericalHarmonicsL2>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF7220 Offset: 0x2AF7321 VA: 0x2AF7220
+	|-Array.InternalEnumerator<SpinLock>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF74C0 Offset: 0x2AF75C1 VA: 0x2AF74C0
+	|-Array.InternalEnumerator<SpringBoneComponents>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF7770 Offset: 0x2AF7871 VA: 0x2AF7770
+	|-Array.InternalEnumerator<SpringBoneProperties>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF7A30 Offset: 0x2AF7B31 VA: 0x2AF7A30
+	|-Array.InternalEnumerator<SpringColliderComponents>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF7CE0 Offset: 0x2AF7DE1 VA: 0x2AF7CE0
+	|-Array.InternalEnumerator<SpringColliderProperties>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2AF7F70 Offset: 0x2AF8071 VA: 0x2AF7F70
+	|-Array.InternalEnumerator<SpringForceComponent>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29825D0 Offset: 0x29826D1 VA: 0x29825D0
+	|-Array.InternalEnumerator<SpringJobElement>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2982860 Offset: 0x2982961 VA: 0x2982860
+	|-Array.InternalEnumerator<SpriteState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2982B00 Offset: 0x2982C01 VA: 0x2982B00
+	|-Array.InternalEnumerator<SubMeshDescriptor>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2982DA0 Offset: 0x2982EA1 VA: 0x2982DA0
+	|-Array.InternalEnumerator<TMP_CharacterInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2983020 Offset: 0x2983121 VA: 0x2983020
+	|-Array.InternalEnumerator<TMP_FontWeightPair>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29832D0 Offset: 0x29833D1 VA: 0x29832D0
+	|-Array.InternalEnumerator<TMP_LineInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29835A0 Offset: 0x29836A1 VA: 0x29835A0
+	|-Array.InternalEnumerator<TMP_LinkInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2983860 Offset: 0x2983961 VA: 0x2983860
+	|-Array.InternalEnumerator<TMP_MeshInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2983B10 Offset: 0x2983C11 VA: 0x2983B10
+	|-Array.InternalEnumerator<TMP_PageInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2983DA0 Offset: 0x2983EA1 VA: 0x2983DA0
+	|-Array.InternalEnumerator<TMP_WordInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2984020 Offset: 0x2984121 VA: 0x2984020
+	|-Array.InternalEnumerator<TablePair>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2984290 Offset: 0x2984391 VA: 0x2984290
+	|-Array.InternalEnumerator<TextureHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2984500 Offset: 0x2984601 VA: 0x2984500
+	|-Array.InternalEnumerator<TimeSpan>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29847A0 Offset: 0x29848A1 VA: 0x29847A0
+	|-Array.InternalEnumerator<Touch>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2984A60 Offset: 0x2984B61 VA: 0x2984A60
+	|-Array.InternalEnumerator<TouchScreenState1>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2984D00 Offset: 0x2984E01 VA: 0x2984D00
+	|-Array.InternalEnumerator<TouchScreenState10>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2984F90 Offset: 0x2985091 VA: 0x2984F90
+	|-Array.InternalEnumerator<TouchScreenState11>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2985220 Offset: 0x2985321 VA: 0x2985220
+	|-Array.InternalEnumerator<TouchScreenState12>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29854B0 Offset: 0x29855B1 VA: 0x29854B0
+	|-Array.InternalEnumerator<TouchScreenState13>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2985740 Offset: 0x2985841 VA: 0x2985740
+	|-Array.InternalEnumerator<TouchScreenState14>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29859D0 Offset: 0x2985AD1 VA: 0x29859D0
+	|-Array.InternalEnumerator<TouchScreenState15>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2985C60 Offset: 0x2985D61 VA: 0x2985C60
+	|-Array.InternalEnumerator<TouchScreenState16>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2985F10 Offset: 0x2986011 VA: 0x2985F10
+	|-Array.InternalEnumerator<TouchScreenState2>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29861C0 Offset: 0x29862C1 VA: 0x29861C0
+	|-Array.InternalEnumerator<TouchScreenState3>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2986450 Offset: 0x2986551 VA: 0x2986450
+	|-Array.InternalEnumerator<TouchScreenState4>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29866E0 Offset: 0x29867E1 VA: 0x29866E0
+	|-Array.InternalEnumerator<TouchScreenState5>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2986970 Offset: 0x2986A71 VA: 0x2986970
+	|-Array.InternalEnumerator<TouchScreenState6>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2986C00 Offset: 0x2986D01 VA: 0x2986C00
+	|-Array.InternalEnumerator<TouchScreenState7>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2986E90 Offset: 0x2986F91 VA: 0x2986E90
+	|-Array.InternalEnumerator<TouchScreenState8>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2987120 Offset: 0x2987221 VA: 0x2987120
+	|-Array.InternalEnumerator<TouchScreenState9>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29873C0 Offset: 0x29874C1 VA: 0x29873C0
+	|-Array.InternalEnumerator<TouchState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2987660 Offset: 0x2987761 VA: 0x2987660
+	|-Array.InternalEnumerator<TrailHand>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29878F0 Offset: 0x29879F1 VA: 0x29878F0
+	|-Array.InternalEnumerator<TrailVertex>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2987B70 Offset: 0x2987C71 VA: 0x2987B70
+	|-Array.InternalEnumerator<UICharInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2987DF0 Offset: 0x2987EF1 VA: 0x2987DF0
+	|-Array.InternalEnumerator<UILineInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29880A0 Offset: 0x29881A1 VA: 0x29880A0
+	|-Array.InternalEnumerator<UIVertex>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2988350 Offset: 0x2988451 VA: 0x2988350
+	|-Array.InternalEnumerator<ushort>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29885C0 Offset: 0x29886C1 VA: 0x29885C0
+	|-Array.InternalEnumerator<UInt16Enum>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2988830 Offset: 0x2988931 VA: 0x2988830
+	|-Array.InternalEnumerator<uint>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2988AA0 Offset: 0x2988BA1 VA: 0x2988AA0
+	|-Array.InternalEnumerator<UInt32Enum>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2988D10 Offset: 0x2988E11 VA: 0x2988D10
+	|-Array.InternalEnumerator<ulong>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2988F80 Offset: 0x2989081 VA: 0x2988F80
+	|-Array.InternalEnumerator<Uid>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29891F0 Offset: 0x29892F1 VA: 0x29891F0
+	|-Array.InternalEnumerator<UniTask>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2989450 Offset: 0x2989551 VA: 0x2989450
+	|-Array.InternalEnumerator<Unit>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29896C0 Offset: 0x29897C1 VA: 0x29896C0
+	|-Array.InternalEnumerator<UnitEnum>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2989930 Offset: 0x2989A31 VA: 0x2989930
+	|-Array.InternalEnumerator<UserWord>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2989BA0 Offset: 0x2989CA1 VA: 0x2989BA0
+	|-Array.InternalEnumerator<Vector2>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2989E10 Offset: 0x2989F11 VA: 0x2989E10
+	|-Array.InternalEnumerator<Vector2Int>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298A080 Offset: 0x298A181 VA: 0x298A080
+	|-Array.InternalEnumerator<Vector3>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298A300 Offset: 0x298A401 VA: 0x298A300
+	|-Array.InternalEnumerator<Vector4>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298A580 Offset: 0x298A681 VA: 0x298A580
+	|-Array.InternalEnumerator<VertexAttributeDescriptor>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298A7E0 Offset: 0x298A8E1 VA: 0x298A7E0
+	|-Array.InternalEnumerator<VibrationDeviceHandle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298AA50 Offset: 0x298AB51 VA: 0x298AA50
+	|-Array.InternalEnumerator<VibrationDeviceInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298ACC0 Offset: 0x298ADC1 VA: 0x298ACC0
+	|-Array.InternalEnumerator<VibrationValue>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298AF80 Offset: 0x298B081 VA: 0x298AF80
+	|-Array.InternalEnumerator<VisibleLight>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298B240 Offset: 0x298B341 VA: 0x298B240
+	|-Array.InternalEnumerator<WordWrapState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298B4C0 Offset: 0x298B5C1 VA: 0x298B4C0
+	|-Array.InternalEnumerator<X509ChainStatus>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298B740 Offset: 0x298B841 VA: 0x298B740
+	|-Array.InternalEnumerator<XPathNode>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298B9C0 Offset: 0x298BAC1 VA: 0x298B9C0
+	|-Array.InternalEnumerator<XPathNodeRef>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298BC40 Offset: 0x298BD41 VA: 0x298BC40
+	|-Array.InternalEnumerator<XRView>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298BEC0 Offset: 0x298BFC1 VA: 0x298BEC0
+	|-Array.InternalEnumerator<float3>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298C160 Offset: 0x298C261 VA: 0x298C160
+	|-Array.InternalEnumerator<float4x4>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298C3F0 Offset: 0x298C4F1 VA: 0x298C3F0
+	|-Array.InternalEnumerator<jvalue>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298C660 Offset: 0x298C761 VA: 0x298C660
+	|-Array.InternalEnumerator<uint4>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298C8C0 Offset: 0x298C9C1 VA: 0x298C8C0
+	|-Array.InternalEnumerator<AICrossfire.PositionTable>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298CB30 Offset: 0x298CC31 VA: 0x298CB30
+	|-Array.InternalEnumerator<AIEnum.SkillRangeEnemyData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298CDA0 Offset: 0x298CEA1 VA: 0x298CDA0
+	|-Array.InternalEnumerator<AIOrder.UnitPriority>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298D010 Offset: 0x298D111 VA: 0x298D010
+	|-Array.InternalEnumerator<AmiiboSequence.GainItemData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298D2A0 Offset: 0x298D3A1 VA: 0x298D2A0
+	|-Array.InternalEnumerator<AnimationOutputWeightProcessor.WeightInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298D530 Offset: 0x298D631 VA: 0x298D530
+	|-Array.InternalEnumerator<ArenaOrderSequence.GodInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298D7A0 Offset: 0x298D8A1 VA: 0x298D7A0
+	|-Array.InternalEnumerator<BattleInfo.SupportData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298DA10 Offset: 0x298DB11 VA: 0x298DA10
+	|-Array.InternalEnumerator<BeforeRenderHelper.OrderBlock>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298DC90 Offset: 0x298DD91 VA: 0x298DC90
+	|-Array.InternalEnumerator<Camera.RenderRequest>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298DF10 Offset: 0x298E011 VA: 0x298DF10
+	|-Array.InternalEnumerator<CameraState.CustomBlendable>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298E190 Offset: 0x298E291 VA: 0x298E190
+	|-Array.InternalEnumerator<CinemachineBlendListCamera.Instruction>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298E420 Offset: 0x298E521 VA: 0x298E420
+	|-Array.InternalEnumerator<CinemachineBlenderSettings.CustomBlend>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298E6A0 Offset: 0x298E7A1 VA: 0x298E6A0
+	|-Array.InternalEnumerator<CinemachineClearShot.Pair>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298E910 Offset: 0x298EA11 VA: 0x298E910
+	|-Array.InternalEnumerator<CinemachineFreeLook.Orbit>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298EBA0 Offset: 0x298ECA1 VA: 0x298EBA0
+	|-Array.InternalEnumerator<CinemachinePath.Waypoint>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298EE30 Offset: 0x298EF31 VA: 0x298EE30
+	|-Array.InternalEnumerator<CinemachineSmoothPath.Waypoint>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298F0B0 Offset: 0x298F1B1 VA: 0x298F0B0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.HashPair>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298F330 Offset: 0x298F431 VA: 0x298F330
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.Instruction>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298F5B0 Offset: 0x298F6B1 VA: 0x298F5B0
+	|-Array.InternalEnumerator<CinemachineStateDrivenCamera.ParentHash>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298F820 Offset: 0x298F921 VA: 0x298F820
+	|-Array.InternalEnumerator<CinemachineTargetGroup.Target>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298FAA0 Offset: 0x298FBA1 VA: 0x298FAA0
+	|-Array.InternalEnumerator<CodePointIndexer.TableRange>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298FD20 Offset: 0x298FE21 VA: 0x298FD20
+	|-Array.InternalEnumerator<ContentCatalogData.Bucket>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x298FF90 Offset: 0x2990091 VA: 0x298FF90
+	|-Array.InternalEnumerator<CookieTokenizer.RecognizedAttribute>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2990220 Offset: 0x2990321 VA: 0x2990220
+	|-Array.InternalEnumerator<DeferredLights.DrawCall>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29904B0 Offset: 0x29905B1 VA: 0x29904B0
+	|-Array.InternalEnumerator<DeferredShaderData.ComputeBufferInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2990730 Offset: 0x2990831 VA: 0x2990730
+	|-Array.InternalEnumerator<DeferredTiler.PrePunctualLight>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29909C0 Offset: 0x2990AC1 VA: 0x29909C0
+	|-Array.InternalEnumerator<DelayedActionManager.DelegateInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2990C60 Offset: 0x2990D61 VA: 0x2990C60
+	|-Array.InternalEnumerator<Detail.AsyncResultInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2990EF0 Offset: 0x2990FF1 VA: 0x2990EF0
+	|-Array.InternalEnumerator<Detail.CppArray>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2991180 Offset: 0x2991281 VA: 0x2991180
+	|-Array.InternalEnumerator<Detail.NotificationEventInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2991410 Offset: 0x2991511 VA: 0x2991410
+	|-Array.InternalEnumerator<DisposUnit.Item>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2991670 Offset: 0x2991771 VA: 0x2991670
+	|-Array.InternalEnumerator<DragonRidePresetParamData.CourseData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29918F0 Offset: 0x29919F1 VA: 0x29918F0
+	|-Array.InternalEnumerator<DragonRideTargetGroup.ChainParam>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2991B60 Offset: 0x2991C61 VA: 0x2991B60
+	|-Array.InternalEnumerator<DynamicMesh.State>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2991DF0 Offset: 0x2991EF1 VA: 0x2991DF0
+	|-Array.InternalEnumerator<FXZEx.HitPoint>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992080 Offset: 0x2992181 VA: 0x2992080
+	|-Array.InternalEnumerator<FishingRadicalParamData.RadicalParam>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992300 Offset: 0x2992401 VA: 0x2992300
+	|-Array.InternalEnumerator<GameVariable.Value>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992580 Offset: 0x2992681 VA: 0x2992580
+	|-Array.InternalEnumerator<GmapPathAdjuster.TargetModel>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992810 Offset: 0x2992911 VA: 0x2992810
+	|-Array.InternalEnumerator<GmapSpotAdjuster.TargetModel>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992AB0 Offset: 0x2992BB1 VA: 0x2992AB0
+	|-Array.InternalEnumerator<GrounderQuadruped.Foot>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992D50 Offset: 0x2992E51 VA: 0x2992D50
+	|-Array.InternalEnumerator<Hashtable.bucket>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2992FE0 Offset: 0x29930E1 VA: 0x2992FE0
+	|-Array.InternalEnumerator<HeadingTracker.Item>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2993280 Offset: 0x2993381 VA: 0x2993280
+	|-Array.InternalEnumerator<HubAccessoryRoomCamera.BackgroundSettings>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2993520 Offset: 0x2993621 VA: 0x2993520
+	|-Array.InternalEnumerator<HubFastTravel.Location>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29937C0 Offset: 0x29938C1 VA: 0x29937C0
+	|-Array.InternalEnumerator<HubLensFlare.Flare>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2993A50 Offset: 0x2993B51 VA: 0x2993A50
+	|-Array.InternalEnumerator<HubLookAtController.LookAtIKParam>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2993CD0 Offset: 0x2993DD1 VA: 0x2993CD0
+	|-Array.InternalEnumerator<HubMaterialArray.MaterialInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2993F60 Offset: 0x2994061 VA: 0x2993F60
+	|-Array.InternalEnumerator<IKSolverLimb.AxisDirection>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29941F0 Offset: 0x29942F1 VA: 0x29941F0
+	|-Array.InternalEnumerator<InventoryPoolItemMenuContent.KindBgNameClass>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2994480 Offset: 0x2994581 VA: 0x2994480
+	|-Array.InternalEnumerator<LightUtility.ParametricLightMeshVertex>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2994730 Offset: 0x2994831 VA: 0x2994730
+	|-Array.InternalEnumerator<LightUtility.SpriteLightMeshVertex>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29949C0 Offset: 0x2994AC1 VA: 0x29949C0
+	|-Array.InternalEnumerator<Map.Pos>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2994C30 Offset: 0x2994D31 VA: 0x2994C30
+	|-Array.InternalEnumerator<MapGodExp.KindDesc>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2994EA0 Offset: 0x2994FA1 VA: 0x2994EA0
+	|-Array.InternalEnumerator<MapHistory.Command>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2995110 Offset: 0x2995211 VA: 0x2995110
+	|-Array.InternalEnumerator<MapImage.BackupTerrain>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2995370 Offset: 0x2995471 VA: 0x2995370
+	|-Array.InternalEnumerator<MapImageRange.Pos>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29955E0 Offset: 0x29956E1 VA: 0x29955E0
+	|-Array.InternalEnumerator<MapKillBonus.KillBonus>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2995850 Offset: 0x2995951 VA: 0x2995850
+	|-Array.InternalEnumerator<MapKillBonus.KilledBonus>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2995AF0 Offset: 0x2995BF1 VA: 0x2995AF0
+	|-Array.InternalEnumerator<MapMind.Record>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2995DA0 Offset: 0x2995EA1 VA: 0x2995DA0
+	|-Array.InternalEnumerator<MapMind.Target>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2996030 Offset: 0x2996131 VA: 0x2996030
+	|-Array.InternalEnumerator<MapPanelDebug.Entity>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29962B0 Offset: 0x29963B1 VA: 0x29962B0
+	|-Array.InternalEnumerator<NexRanking.Data>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2996520 Offset: 0x2996621 VA: 0x2996520
+	|-Array.InternalEnumerator<NexVersus.RatingData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29967B0 Offset: 0x29968B1 VA: 0x29967B0
+	|-Array.InternalEnumerator<NoiseSettings.TransformNoiseParams>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2996A40 Offset: 0x2996B41 VA: 0x2996A40
+	|-Array.InternalEnumerator<PackedPlayModeBuildLogs.RuntimeBuildLog>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2996CB0 Offset: 0x2996DB1 VA: 0x2996CB0
+	|-Array.InternalEnumerator<ParameterizedStrings.FormatParam>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2996F30 Offset: 0x2997031 VA: 0x2996F30
+	|-Array.InternalEnumerator<ParticleSystem.Particle>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29971B0 Offset: 0x29972B1 VA: 0x29971B0
+	|-Array.InternalEnumerator<ProfileCard.Achievement>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2997430 Offset: 0x2997531 VA: 0x2997430
+	|-Array.InternalEnumerator<ProfileCard.SortieCount>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29976D0 Offset: 0x29977D1 VA: 0x29976D0
+	|-Array.InternalEnumerator<QualitySettingsStack.Settings>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2997960 Offset: 0x2997A61 VA: 0x2997960
+	|-Array.InternalEnumerator<RangeData.Offset>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2997BC0 Offset: 0x2997CC1 VA: 0x2997BC0
+	|-Array.InternalEnumerator<RegexCharClass.LowerCaseMapping>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2997E50 Offset: 0x2997F51 VA: 0x2997E50
+	|-Array.InternalEnumerator<Relay.ChooseAwardeeData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29980D0 Offset: 0x29981D1 VA: 0x29980D0
+	|-Array.InternalEnumerator<RelayAwardData.Info>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2998370 Offset: 0x2998471 VA: 0x2998370
+	|-Array.InternalEnumerator<RenderGraph.CompiledPassInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2998620 Offset: 0x2998721 VA: 0x2998620
+	|-Array.InternalEnumerator<RenderGraph.CompiledResourceInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29988B0 Offset: 0x29989B1 VA: 0x29988B0
+	|-Array.InternalEnumerator<RenderGraphDebugData.PassDebugData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2998B50 Offset: 0x2998C51 VA: 0x2998B50
+	|-Array.InternalEnumerator<RenderGraphDebugData.ResourceDebugData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2998DF0 Offset: 0x2998EF1 VA: 0x2998DF0
+	|-Array.InternalEnumerator<RenderGraphResourceRegistry.RendererListResource>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2999070 Offset: 0x2999171 VA: 0x2999070
+	|-Array.InternalEnumerator<RingCleaningUnitSelectMenu.GodParam>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29992E0 Offset: 0x29993E1 VA: 0x29992E0
+	|-Array.InternalEnumerator<SampleWave.Data>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2999560 Offset: 0x2999661 VA: 0x2999560
+	|-Array.InternalEnumerator<SampleWave.Temp>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x29997D0 Offset: 0x29998D1 VA: 0x29997D0
+	|-Array.InternalEnumerator<SendMouseEvents.HitInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2999A60 Offset: 0x2999B61 VA: 0x2999A60
+	|-Array.InternalEnumerator<SequenceNode.SequenceConstructPosContext>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2999D20 Offset: 0x2999E21 VA: 0x2999D20
+	|-Array.InternalEnumerator<ShaderInput.LightData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2999FF0 Offset: 0x299A0F1 VA: 0x2999FF0
+	|-Array.InternalEnumerator<ShaderInput.ShadowData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x299A2B0 Offset: 0x299A3B1 VA: 0x299A2B0
+	|-Array.InternalEnumerator<ShadowUtility.Edge>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D7F800 Offset: 0x2D7F901 VA: 0x2D7F800
+	|-Array.InternalEnumerator<SimpleAnimationPlayable.QueuedState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D7FA60 Offset: 0x2D7FB61 VA: 0x2D7FA60
+	|-Array.InternalEnumerator<SkillArray.Entity>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D7FCD0 Offset: 0x2D7FDD1 VA: 0x2D7FCD0
+	|-Array.InternalEnumerator<Socket.WSABUF>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D7FF30 Offset: 0x2D80031 VA: 0x2D7FF30
+	|-Array.InternalEnumerator<Stream.Info>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D801A0 Offset: 0x2D802A1 VA: 0x2D801A0
+	|-Array.InternalEnumerator<TMP_Text.UnicodeChar>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D80440 Offset: 0x2D80541 VA: 0x2D80440
+	|-Array.InternalEnumerator<TexturePacker_JsonArray.Frame>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D806E0 Offset: 0x2D807E1 VA: 0x2D806E0
+	|-Array.InternalEnumerator<TimeNotificationBehaviour.NotificationEntry>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D80970 Offset: 0x2D80A71 VA: 0x2D80970
+	|-Array.InternalEnumerator<UnitySynchronizationContext.WorkRequest>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D80C00 Offset: 0x2D80D01 VA: 0x2D80C00
+	|-Array.InternalEnumerator<XmlNamespaceManager.NamespaceDeclaration>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D80E80 Offset: 0x2D80F81 VA: 0x2D80E80
+	|-Array.InternalEnumerator<XmlSchemaObjectTable.XmlSchemaObjectEntry>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D81130 Offset: 0x2D81231 VA: 0x2D81130
+	|-Array.InternalEnumerator<XmlTextReaderImpl.ParsingState>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D813E0 Offset: 0x2D814E1 VA: 0x2D813E0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.Desc>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D81640 Offset: 0x2D81741 VA: 0x2D81640
+	|-Array.InternalEnumerator<AIThink.EnchantThink.ItemInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D818A0 Offset: 0x2D819A1 VA: 0x2D818A0
+	|-Array.InternalEnumerator<AIThink.EnchantThink.SurroundingInfo>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D81B10 Offset: 0x2D81C11 VA: 0x2D81B10
+	|-Array.InternalEnumerator<AssetBundleBuildMap.AssetBundleEntry.AssetPathString>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D81D90 Offset: 0x2D81E91 VA: 0x2D81D90
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreChangeMetaParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D82010 Offset: 0x2D82111 VA: 0x2D82010
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreDeleteParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D822A0 Offset: 0x2D823A1 VA: 0x2D822A0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreGetMetaParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D82540 Offset: 0x2D82641 VA: 0x2D82540
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreMetaInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D827D0 Offset: 0x2D828D1 VA: 0x2D827D0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePasswordInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D82A60 Offset: 0x2D82B61 VA: 0x2D82A60
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePersistenceInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D82CF0 Offset: 0x2D82DF1 VA: 0x2D82CF0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStorePreparePostParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D82F70 Offset: 0x2D83071 VA: 0x2D82F70
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRateObjectParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D831F0 Offset: 0x2D832F1 VA: 0x2D831F0
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingInitParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D83470 Offset: 0x2D83571 VA: 0x2D83470
+	|-Array.InternalEnumerator<Detail.DataStore.DataStoreRatingTargetInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D83700 Offset: 0x2D83801 VA: 0x2D83700
+	|-Array.InternalEnumerator<Detail.Ranking.RankingCachedResultInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D83990 Offset: 0x2D83A91 VA: 0x2D83990
+	|-Array.InternalEnumerator<Detail.Ranking.RankingOrderParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D83C20 Offset: 0x2D83D21 VA: 0x2D83C20
+	|-Array.InternalEnumerator<Detail.Ranking.RankingRankDataInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D83EE0 Offset: 0x2D83FE1 VA: 0x2D83EE0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ChartInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D841A0 Offset: 0x2D842A1 VA: 0x2D841A0
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2RankDataInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D84430 Offset: 0x2D84531 VA: 0x2D84430
+	|-Array.InternalEnumerator<Detail.Ranking2.Ranking2ScoreDataInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D846B0 Offset: 0x2D847B1 VA: 0x2D846B0
+	|-Array.InternalEnumerator<Detail.Screening.ScreeningContextInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D84960 Offset: 0x2D84A61 VA: 0x2D84960
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberContentInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D84C10 Offset: 0x2D84D11 VA: 0x2D84C10
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberGetContentParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D84EB0 Offset: 0x2D84FB1 VA: 0x2D84EB0
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D85150 Offset: 0x2D85251 VA: 0x2D85150
+	|-Array.InternalEnumerator<Detail.Subscriber.SubscriberUserStatusParamInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D853D0 Offset: 0x2D854D1 VA: 0x2D853D0
+	|-Array.InternalEnumerator<Detail.Utility.IntegerSettings>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D85640 Offset: 0x2D85741 VA: 0x2D85640
+	|-Array.InternalEnumerator<Detail.Utility.UniqueIdInfoInt>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D858B0 Offset: 0x2D859B1 VA: 0x2D858B0
+	|-Array.InternalEnumerator<FacetsChecker.FacetsCompiler.Map>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D85B30 Offset: 0x2D85C31 VA: 0x2D85B30
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Appearance>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D85DA0 Offset: 0x2D85EA1 VA: 0x2D85DA0
+	|-Array.InternalEnumerator<MapHistory.ReplayAppearanceMap.Leaving>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D86010 Offset: 0x2D86111 VA: 0x2D86010
+	|-Array.InternalEnumerator<MapHistory.ReplayUnitMap.Data>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D86270 Offset: 0x2D86371 VA: 0x2D86270
+	|-Array.InternalEnumerator<MapHistory.Rewind.LatestInspectorData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D864D0 Offset: 0x2D865D1 VA: 0x2D864D0
+	|-Array.InternalEnumerator<MapHistory.Rewind.WorkTerrainData>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D86760 Offset: 0x2D86861 VA: 0x2D86760
+	|-Array.InternalEnumerator<MapHistory.RewindUnitMap.Data>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D869E0 Offset: 0x2D86AE1 VA: 0x2D869E0
+	|-Array.InternalEnumerator<MapKillBonus.Work.Pos>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D86C50 Offset: 0x2D86D51 VA: 0x2D86C50
+	|-Array.InternalEnumerator<MapSkill.AroundCalculator.Result>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D86EC0 Offset: 0x2D86FC1 VA: 0x2D86EC0
+	|-Array.InternalEnumerator<Nex.ApiCallChecker.Guideline>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D87140 Offset: 0x2D87241 VA: 0x2D87140
+	|-Array.InternalEnumerator<Ngc.MaskTextSequenceBase.Data>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D873E0 Offset: 0x2D874E1 VA: 0x2D873E0
+	|-Array.InternalEnumerator<TargetPositionCache.CacheCurve.Item>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D87690 Offset: 0x2D87791 VA: 0x2D87690
+	|-Array.InternalEnumerator<TargetPositionCache.CacheEntry.RecordingItem>.System.Collections.IEnumerator.get_Current
+	|
+	|-RVA: 0x2D87920 Offset: 0x2D87A21 VA: 0x2D87920
+	|-Array.InternalEnumerator<TerrainUtility.TerrainMap.TileCoord>.System.Collections.IEnumerator.get_Current
+	*/
+}
+
+// Namespace: 
 internal class Array.EmptyInternalEnumerator<T> : IEnumerator<T>, IDisposable, IEnumerator // TypeDefIndex: 116
 {
 	// Fields
@@ -13492,6 +25038,47 @@ internal class Array.EmptyInternalEnumerator<T> : IEnumerator<T>, IDisposable, I
 	|-RVA: 0x1D25010 Offset: 0x1D25111 VA: 0x1D25010
 	|-Array.EmptyInternalEnumerator<TerrainUtility.TerrainMap.TileCoord>..cctor
 	*/
+}
+
+// Namespace: 
+private struct Array.SorterObjectArray // TypeDefIndex: 117
+{
+	// Fields
+	private object[] keys; // 0x0
+	private object[] items; // 0x8
+	private IComparer comparer; // 0x10
+
+	// Methods
+
+	// RVA: 0x35E0E30 Offset: 0x35E0F31 VA: 0x35E0E30
+	internal void .ctor(object[] keys, object[] items, IComparer comparer) { }
+
+	// RVA: 0x35E0EF0 Offset: 0x35E0FF1 VA: 0x35E0EF0
+	internal void SwapIfGreaterWithItems(int a, int b) { }
+
+	// RVA: 0x35E1160 Offset: 0x35E1261 VA: 0x35E1160
+	private void Swap(int i, int j) { }
+
+	// RVA: 0x35E1310 Offset: 0x35E1411 VA: 0x35E1310
+	internal void Sort(int left, int length) { }
+
+	// RVA: 0x35E1320 Offset: 0x35E1421 VA: 0x35E1320
+	private void IntrospectiveSort(int left, int length) { }
+
+	// RVA: 0x35E1470 Offset: 0x35E1571 VA: 0x35E1470
+	private void IntroSort(int lo, int hi, int depthLimit) { }
+
+	// RVA: 0x35E1970 Offset: 0x35E1A71 VA: 0x35E1970
+	private int PickPivotAndPartition(int lo, int hi) { }
+
+	// RVA: 0x35E18C0 Offset: 0x35E19C1 VA: 0x35E18C0
+	private void Heapsort(int lo, int hi) { }
+
+	// RVA: 0x35E1BA0 Offset: 0x35E1CA1 VA: 0x35E1BA0
+	private void DownHeap(int i, int n, int lo) { }
+
+	// RVA: 0x35E15E0 Offset: 0x35E16E1 VA: 0x35E15E0
+	private void InsertionSort(int lo, int hi) { }
 }
 
 // Namespace: 

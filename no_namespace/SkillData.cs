@@ -8,6 +8,34 @@ public enum SkillData.Phase // TypeDefIndex: 10068
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x276540 Offset: 0x276641 VA: 0x276540
+public enum SkillData.Attrs // TypeDefIndex: 10069
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.Attrs None = 0;
+	public const SkillData.Attrs Walk = 1;
+	public const SkillData.Attrs Horse = 2;
+	public const SkillData.Attrs Heavy = 4;
+	public const SkillData.Attrs Fly = 8;
+	public const SkillData.Attrs Dragon = 16;
+	public const SkillData.Attrs Evil = 32;
+	public const SkillData.Attrs Morph = 64;
+	public const SkillData.Attrs Mediuth = 128;
+	public const SkillData.Attrs Duma = 256;
+	public const SkillData.Attrs Loptous = 512;
+	public const SkillData.Attrs Veld = 1024;
+	public const SkillData.Attrs Idenn = 2048;
+	public const SkillData.Attrs Nergal = 4096;
+	public const SkillData.Attrs Fodeth = 8192;
+	public const SkillData.Attrs Ashnard = 16384;
+	public const SkillData.Attrs Astarte = 32768;
+	public const SkillData.Attrs Gimle = 65536;
+	public const SkillData.Attrs Hydra = 131072;
+	public const SkillData.Attrs Nemesis = 262144;
+}
+
+// Namespace: 
 public enum SkillData.Timings // TypeDefIndex: 10070
 {
 	// Fields
@@ -43,6 +71,16 @@ public enum SkillData.Timings // TypeDefIndex: 10070
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x276550 Offset: 0x276651 VA: 0x276550
+public enum SkillData.TimingMasks // TypeDefIndex: 10071
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.TimingMasks None = 0;
+	public const SkillData.TimingMasks Full = 1048575;
+}
+
+// Namespace: 
 [FlagsAttribute] // RVA: 0x276560 Offset: 0x276661 VA: 0x276560
 public enum SkillData.CycleMasks // TypeDefIndex: 10072
 {
@@ -53,6 +91,16 @@ public enum SkillData.CycleMasks // TypeDefIndex: 10072
 }
 
 // Namespace: 
+public enum SkillData.Stands // TypeDefIndex: 10073
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.Stands None = 0;
+	public const SkillData.Stands Offence = 1;
+	public const SkillData.Stands Defence = 2;
+}
+
+// Namespace: 
 public enum SkillData.Actions // TypeDefIndex: 10074
 {
 	// Fields
@@ -60,6 +108,21 @@ public enum SkillData.Actions // TypeDefIndex: 10074
 	public const SkillData.Actions None = 0;
 	public const SkillData.Actions Offence = 1;
 	public const SkillData.Actions Defence = 2;
+}
+
+// Namespace: 
+public enum SkillData.Targets // TypeDefIndex: 10075
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.Targets Target = 0;
+	public const SkillData.Targets Enemy = 1;
+	public const SkillData.Targets Friend = 2;
+	public const SkillData.Targets Destroy = 3;
+	public const SkillData.Targets Pierce = 4;
+	public const SkillData.Targets Range = 5;
+	public const SkillData.Targets Around = 6;
+	public const SkillData.Targets Overlap = 7;
 }
 
 // Namespace: 
@@ -79,6 +142,19 @@ public enum SkillData.Cycles // TypeDefIndex: 10076
 }
 
 // Namespace: 
+public enum SkillData.Operations // TypeDefIndex: 10077
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.Operations None = 0;
+	public const SkillData.Operations Equal = 1;
+	public const SkillData.Operations Add = 2;
+	public const SkillData.Operations Sub = 3;
+	public const SkillData.Operations Mul = 4;
+	public const SkillData.Operations Div = 5;
+}
+
+// Namespace: 
 public enum SkillData.Works // TypeDefIndex: 10078
 {
 	// Fields
@@ -87,6 +163,17 @@ public enum SkillData.Works // TypeDefIndex: 10078
 	public const SkillData.Works ItemHealScale = 1;
 	public const SkillData.Works JobGrowChange = 2;
 	public const SkillData.Works TotalGrowChange = 3;
+}
+
+// Namespace: 
+public enum SkillData.Zocs // TypeDefIndex: 10079
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.Zocs None = 0;
+	public const SkillData.Zocs CostMin = 1;
+	public const SkillData.Zocs CostMax = 2;
+	public const SkillData.Zocs NotMove = 3;
 }
 
 // Namespace: 
@@ -99,6 +186,36 @@ public enum SkillData.Layers // TypeDefIndex: 10080
 	public const SkillData.Layers B = 2;
 	public const SkillData.Layers C = 4;
 	public const SkillData.Layers D = 8;
+}
+
+// Namespace: 
+[FlagsAttribute] // RVA: 0x276580 Offset: 0x276681 VA: 0x276580
+public enum SkillData.States // TypeDefIndex: 10081
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.States None = 0;
+	public const SkillData.States Poison = 1;
+	public const SkillData.States DeadlyPoison = 2;
+	public const SkillData.States SeverePoison = 4;
+	public const SkillData.States Heal = 8;
+	public const SkillData.States Sleep = 16;
+	public const SkillData.States Silence = 32;
+	public const SkillData.States Charm = 64;
+	public const SkillData.States Confusion = 128;
+	public const SkillData.States Freeze = 256;
+	public const SkillData.States Weakness = 512;
+	public const SkillData.States Stun = 1024;
+	public const SkillData.States Interact = 2048;
+	public const SkillData.States Decoy = 4096;
+	public const SkillData.States NotEnhance = 8192;
+	public const SkillData.States Enhance = 65536;
+	public const SkillData.States Immovable = 131072;
+	public const SkillData.States NotMove = 262144;
+	public const SkillData.States NotWeaponWeight = 524288;
+	public const SkillData.States NotChainAttacked = 1048576;
+	public const SkillData.States IgnoreDebug = -2147483648;
+	public const SkillData.States PoisonMask = 7;
 }
 
 // Namespace: 
@@ -173,6 +290,17 @@ public enum SkillData.Flags // TypeDefIndex: 10082
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x2765A0 Offset: 0x2766A1 VA: 0x2765A0
+public enum SkillData.PrivateFlags // TypeDefIndex: 10083
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.PrivateFlags StyleSkill = 1;
+	public const SkillData.PrivateFlags CanOverride = 2;
+	public const SkillData.PrivateFlags HasEffect = 4;
+}
+
+// Namespace: 
 public enum SkillData.IconKinds // TypeDefIndex: 10084
 {
 	// Fields
@@ -180,6 +308,18 @@ public enum SkillData.IconKinds // TypeDefIndex: 10084
 	public const SkillData.IconKinds None = 0;
 	public const SkillData.IconKinds Efficacy = 1;
 	public const SkillData.IconKinds Category = 2;
+}
+
+// Namespace: 
+public enum SkillData.GiveTargets // TypeDefIndex: 10085
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.GiveTargets Target = 0;
+	public const SkillData.GiveTargets Self = 1;
+	public const SkillData.GiveTargets Chain = 2;
+	public const SkillData.GiveTargets Around = 3;
+	public const SkillData.GiveTargets Dance = 4;
 }
 
 // Namespace: 
@@ -203,6 +343,17 @@ public enum SkillData.Categorys // TypeDefIndex: 10086
 }
 
 // Namespace: 
+public enum SkillData.AroundCenters // TypeDefIndex: 10087
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.AroundCenters None = 0;
+	public const SkillData.AroundCenters Self = 1;
+	public const SkillData.AroundCenters Target = 2;
+	public const SkillData.AroundCenters Link = 3;
+}
+
+// Namespace: 
 public enum SkillData.AroundTargets // TypeDefIndex: 10088
 {
 	// Fields
@@ -211,6 +362,18 @@ public enum SkillData.AroundTargets // TypeDefIndex: 10088
 	public const SkillData.AroundTargets Friend = 1;
 	public const SkillData.AroundTargets Enemy = 2;
 	public const SkillData.AroundTargets Both = 3;
+}
+
+// Namespace: 
+[FlagsAttribute] // RVA: 0x2765B0 Offset: 0x2766B1 VA: 0x2765B0
+public enum SkillData.Frequencies // TypeDefIndex: 10089
+{
+	// Fields
+	public int value__; // 0x0
+	public const SkillData.Frequencies Every = 1;
+	public const SkillData.Frequencies First = 2;
+	public const SkillData.Frequencies Last = 4;
+	public const SkillData.Frequencies Mask = 7;
 }
 
 // Namespace: 

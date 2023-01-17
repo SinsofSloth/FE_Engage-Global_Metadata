@@ -17,6 +17,22 @@ private sealed class AIOrder.Func : MulticastDelegate // TypeDefIndex: 9264
 }
 
 // Namespace: 
+private struct AIOrder.UnitPriority // TypeDefIndex: 9265
+{
+	// Fields
+	public int number; // 0x0
+	public uint priority; // 0x4
+
+	// Methods
+
+	// RVA: 0x2F322C0 Offset: 0x2F323C1 VA: 0x2F322C0
+	public static bool op_LessThanOrEqual(AIOrder.UnitPriority a, AIOrder.UnitPriority b) { }
+
+	// RVA: 0x2F322E0 Offset: 0x2F323E1 VA: 0x2F322E0
+	public static bool op_GreaterThanOrEqual(AIOrder.UnitPriority a, AIOrder.UnitPriority b) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2753A0 Offset: 0x2754A1 VA: 0x2753A0
 private sealed class AIOrder.<>c__DisplayClass55_0 // TypeDefIndex: 9266
 {
@@ -30,6 +46,22 @@ private sealed class AIOrder.<>c__DisplayClass55_0 // TypeDefIndex: 9266
 
 	// RVA: 0x2F31C50 Offset: 0x2F31D51 VA: 0x2F31C50
 	internal void <GetDistanceFromEnemy>b__0(Unit unit) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2753B0 Offset: 0x2754B1 VA: 0x2753B0
+private sealed class AIOrder.<>c__DisplayClass64_0 // TypeDefIndex: 9267
+{
+	// Fields
+	public int num; // 0x10
+
+	// Methods
+
+	// RVA: 0x2F31D60 Offset: 0x2F31E61 VA: 0x2F31D60
+	public void .ctor() { }
+
+	// RVA: 0x2F31D70 Offset: 0x2F31E71 VA: 0x2F31D70
+	internal void <EnumerateAttack>b__1(int x, int z, int range) { }
 }
 
 // Namespace: 

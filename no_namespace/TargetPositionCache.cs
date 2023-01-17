@@ -9,6 +9,25 @@ public enum TargetPositionCache.Mode // TypeDefIndex: 5860
 }
 
 // Namespace: 
+public struct TargetPositionCache.CacheCurve.Item // TypeDefIndex: 5861
+{
+	// Fields
+	public Vector3 Pos; // 0x0
+	public Quaternion Rot; // 0xC
+
+	// Properties
+	public static TargetPositionCache.CacheCurve.Item Empty { get; }
+
+	// Methods
+
+	// RVA: 0x1C6C6F0 Offset: 0x1C6C7F1 VA: 0x1C6C6F0
+	public static TargetPositionCache.CacheCurve.Item Lerp(TargetPositionCache.CacheCurve.Item a, TargetPositionCache.CacheCurve.Item b, float t) { }
+
+	// RVA: 0x1C6C790 Offset: 0x1C6C891 VA: 0x1C6C790
+	public static TargetPositionCache.CacheCurve.Item get_Empty() { }
+}
+
+// Namespace: 
 private class TargetPositionCache.CacheCurve // TypeDefIndex: 5862
 {
 	// Fields
@@ -38,6 +57,15 @@ private class TargetPositionCache.CacheCurve // TypeDefIndex: 5862
 }
 
 // Namespace: 
+private struct TargetPositionCache.CacheEntry.RecordingItem // TypeDefIndex: 5863
+{
+	// Fields
+	public float Time; // 0x0
+	public bool IsCut; // 0x4
+	public TargetPositionCache.CacheCurve.Item Item; // 0x8
+}
+
+// Namespace: 
 private class TargetPositionCache.CacheEntry // TypeDefIndex: 5864
 {
 	// Fields
@@ -54,5 +82,31 @@ private class TargetPositionCache.CacheEntry // TypeDefIndex: 5864
 
 	// RVA: 0x1A86190 Offset: 0x1A86291 VA: 0x1A86190
 	public void .ctor() { }
+}
+
+// Namespace: 
+public struct TargetPositionCache.TimeRange // TypeDefIndex: 5865
+{
+	// Fields
+	public float Start; // 0x0
+	public float End; // 0x4
+
+	// Properties
+	public bool IsEmpty { get; }
+	public static TargetPositionCache.TimeRange Empty { get; }
+
+	// Methods
+
+	// RVA: 0x1C6C460 Offset: 0x1C6C561 VA: 0x1C6C460
+	public bool get_IsEmpty() { }
+
+	// RVA: 0x1C6C470 Offset: 0x1C6C571 VA: 0x1C6C470
+	public bool Contains(float time) { }
+
+	// RVA: 0x1C6C4A0 Offset: 0x1C6C5A1 VA: 0x1C6C4A0
+	public static TargetPositionCache.TimeRange get_Empty() { }
+
+	// RVA: 0x1C6C4C0 Offset: 0x1C6C5C1 VA: 0x1C6C4C0
+	public void Include(float time) { }
 }
 

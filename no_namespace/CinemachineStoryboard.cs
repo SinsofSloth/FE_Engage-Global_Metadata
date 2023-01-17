@@ -1,4 +1,14 @@
 // Namespace: 
+public enum CinemachineStoryboard.FillStrategy // TypeDefIndex: 5769
+{
+	// Fields
+	public int value__; // 0x0
+	public const CinemachineStoryboard.FillStrategy BestFit = 0;
+	public const CinemachineStoryboard.FillStrategy CropImageToFit = 1;
+	public const CinemachineStoryboard.FillStrategy StretchToFit = 2;
+}
+
+// Namespace: 
 private class CinemachineStoryboard.CanvasInfo // TypeDefIndex: 5770
 {
 	// Fields

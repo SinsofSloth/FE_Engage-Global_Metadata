@@ -1,4 +1,12 @@
 // Namespace: 
+public static class NexVersus.RatingSpotId // TypeDefIndex: 12765
+{
+	// Fields
+	public const sbyte Win = 1;
+	public const sbyte Lose = 2;
+}
+
+// Namespace: 
 public enum NexVersus.Results // TypeDefIndex: 12766
 {
 	// Fields
@@ -8,6 +16,14 @@ public enum NexVersus.Results // TypeDefIndex: 12766
 	public const NexVersus.Results Cancelled = 2;
 	public const NexVersus.Results FailedNotFound = 3;
 	public const NexVersus.Results FailedDifferentType = 4;
+}
+
+// Namespace: 
+public struct NexVersus.RatingData // TypeDefIndex: 12767
+{
+	// Fields
+	public long TotalValue; // 0x0
+	public uint Count; // 0x8
 }
 
 // Namespace: 
@@ -26,6 +42,15 @@ private class NexVersus.NexSequenceBase.ConfirmRetryDialog.YesMenuItem : BasicDi
 
 	// RVA: 0x2D7DB40 Offset: 0x2D7DC41 VA: 0x2D7DB40
 	private ProcInst GetSequence() { }
+}
+
+// Namespace: 
+protected static class NexVersus.NexSequenceBase.ConfirmRetryDialog // TypeDefIndex: 12769
+{
+	// Methods
+
+	// RVA: 0x21F1CF0 Offset: 0x21F1DF1 VA: 0x21F1CF0
+	public static void CreateBind(ProcInst super, int yesLabel) { }
 }
 
 // Namespace: 
@@ -68,6 +93,16 @@ private class NexVersus.NexSequenceBase : ProcInst // TypeDefIndex: 12770
 }
 
 // Namespace: 
+private enum NexVersus.UploadSequence.Label // TypeDefIndex: 12771
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.UploadSequence.Label Post = 0;
+	public const NexVersus.UploadSequence.Label Error = 1;
+	public const NexVersus.UploadSequence.Label End = 2;
+}
+
+// Namespace: 
 private class NexVersus.UploadSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12772
 {
 	// Fields
@@ -100,6 +135,17 @@ private class NexVersus.UploadSequence : NexVersus.NexSequenceBase // TypeDefInd
 
 	// RVA: 0x1F18CB0 Offset: 0x1F18DB1 VA: 0x1F18CB0
 	public static void CreateBind(ProcInst super, string playerName, VersusServerRankedMetaData metaData, VersusServerRankedData data, ushort dataType, byte[] pngBytes) { }
+}
+
+// Namespace: 
+private enum NexVersus.UploadReplaySequence.Label // TypeDefIndex: 12773
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.UploadReplaySequence.Label Error = 0;
+	public const NexVersus.UploadReplaySequence.Label End = 1;
+	public const NexVersus.UploadReplaySequence.Label Post = 2;
+	public const NexVersus.UploadReplaySequence.Label Invalid = 3;
 }
 
 // Namespace: 
@@ -147,6 +193,15 @@ private class NexVersus.UploadReplaySequence : NexVersus.NexSequenceBase // Type
 }
 
 // Namespace: 
+private enum NexVersus.UploadCasualSequence.Label // TypeDefIndex: 12775
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.UploadCasualSequence.Label Error = 0;
+	public const NexVersus.UploadCasualSequence.Label End = 1;
+}
+
+// Namespace: 
 private class NexVersus.UploadCasualSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12776
 {
 	// Fields
@@ -178,6 +233,15 @@ private class NexVersus.UploadCasualSequence : NexVersus.NexSequenceBase // Type
 }
 
 // Namespace: 
+private enum NexVersus.SearchSequence.Label // TypeDefIndex: 12777
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.SearchSequence.Label Error = 0;
+	public const NexVersus.SearchSequence.Label End = 1;
+}
+
+// Namespace: 
 private class NexVersus.SearchSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12778
 {
 	// Fields
@@ -203,6 +267,15 @@ private class NexVersus.SearchSequence : NexVersus.NexSequenceBase // TypeDefInd
 }
 
 // Namespace: 
+private enum NexVersus.SearchCasualSequence.Label // TypeDefIndex: 12779
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.SearchCasualSequence.Label Error = 0;
+	public const NexVersus.SearchCasualSequence.Label End = 1;
+}
+
+// Namespace: 
 private class NexVersus.SearchCasualSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12780
 {
 	// Fields
@@ -224,6 +297,16 @@ private class NexVersus.SearchCasualSequence : NexVersus.NexSequenceBase // Type
 
 	// RVA: 0x1F13D20 Offset: 0x1F13E21 VA: 0x1F13D20
 	public static void CreateBind(ProcInst super, List<VersusServerCasualMetaData> results) { }
+}
+
+// Namespace: 
+private enum NexVersus.DownloadSequence.Label<T> // TypeDefIndex: 12781
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.DownloadSequence.Label<T> Error = 0;
+	public const NexVersus.DownloadSequence.Label<T> ErrorApp = 1;
+	public const NexVersus.DownloadSequence.Label<T> End = 2;
 }
 
 // Namespace: 
@@ -279,6 +362,15 @@ private class NexVersus.DownloadSequence<T> : NexVersus.NexSequenceBase // TypeD
 }
 
 // Namespace: 
+private enum NexVersus.DownloadReplaySequence.Label // TypeDefIndex: 12783
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.DownloadReplaySequence.Label Error = 0;
+	public const NexVersus.DownloadReplaySequence.Label End = 1;
+}
+
+// Namespace: 
 private class NexVersus.DownloadReplaySequence : NexVersus.NexSequenceBase // TypeDefIndex: 12784
 {
 	// Fields
@@ -304,12 +396,82 @@ private class NexVersus.DownloadReplaySequence : NexVersus.NexSequenceBase // Ty
 }
 
 // Namespace: 
+private enum NexVersus.DownloadMetaSequence.Label<T> // TypeDefIndex: 12785
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.DownloadMetaSequence.Label<T> Error = 0;
+	public const NexVersus.DownloadMetaSequence.Label<T> ErrorApp = 1;
+	public const NexVersus.DownloadMetaSequence.Label<T> End = 2;
+}
+
+// Namespace: 
 public enum NexVersus.DownloadMetaSequence.DataType<T> // TypeDefIndex: 12786
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.DownloadMetaSequence.DataType<T> Casual = 0;
 	public const NexVersus.DownloadMetaSequence.DataType<T> Ranked = 1;
+}
+
+// Namespace: 
+private class NexVersus.DownloadMetaSequence<T> : NexVersus.NexSequenceBase // TypeDefIndex: 12787
+{
+	// Fields
+	private ulong m_DataId; // 0x0
+	private NexVersus.DownloadMetaSequence.DataType<T> m_DataType; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	private void .ctor(ulong dataId, NexVersus.DownloadMetaSequence.DataType<T> dataType) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2637390 Offset: 0x2637491 VA: 0x2637390
+	|-NexVersus.DownloadMetaSequence<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Postlogin() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x26373D0 Offset: 0x26374D1 VA: 0x26373D0
+	|-NexVersus.DownloadMetaSequence<object>.Postlogin
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x26373E0 Offset: 0x26374E1 VA: 0x26373E0
+	|-NexVersus.DownloadMetaSequence<object>.GetData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetMetaCallback(AsyncResult asyncResult, DataStoreMetaInfo info) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2637550 Offset: 0x2637651 VA: 0x2637550
+	|-NexVersus.DownloadMetaSequence<object>.GetMetaCallback
+	*/
+
+	// RVA: -1 Offset: -1
+	private bool IsValidDataType(ushort dataType) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2637810 Offset: 0x2637911 VA: 0x2637810
+	|-NexVersus.DownloadMetaSequence<object>.IsValidDataType
+	*/
+
+	// RVA: -1 Offset: -1
+	public static void CreateBind(ProcInst super, ulong dataId, NexVersus.DownloadMetaSequence.DataType<T> dataType) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2637850 Offset: 0x2637951 VA: 0x2637850
+	|-NexVersus.DownloadMetaSequence<object>.CreateBind
+	|-NexVersus.DownloadMetaSequence<VersusServerCasualMetaData>.CreateBind
+	|-NexVersus.DownloadMetaSequence<VersusServerRankedMetaData>.CreateBind
+	*/
 }
 
 // Namespace: 
@@ -322,12 +484,99 @@ private enum NexVersus.AddRatingSequence.Label // TypeDefIndex: 12788
 }
 
 // Namespace: 
+private class NexVersus.AddRatingSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12789
+{
+	// Fields
+	private ulong m_DataId; // 0x70
+	private Versus.MapResult m_MapResult; // 0x78
+
+	// Methods
+
+	// RVA: 0x1F0A920 Offset: 0x1F0AA21 VA: 0x1F0A920
+	private void .ctor(ulong dataId, Versus.MapResult mapResult) { }
+
+	// RVA: 0x1F0A970 Offset: 0x1F0AA71 VA: 0x1F0A970
+	private void Postlogin() { }
+
+	// RVA: 0x1F0AC30 Offset: 0x1F0AD31 VA: 0x1F0AC30
+	private sbyte GetSlotId(Versus.MapResult result) { }
+
+	// RVA: 0x1F0AC50 Offset: 0x1F0AD51 VA: 0x1F0AC50
+	private void UpdateRate() { }
+
+	// RVA: 0x1F0AE70 Offset: 0x1F0AF71 VA: 0x1F0AE70
+	private void PostUpdateRate(AsyncResult asyncResult, DataStoreRatingInfo info) { }
+
+	// RVA: 0x1F0B130 Offset: 0x1F0B231 VA: 0x1F0B130
+	public static void CreateBind(ProcInst super, ulong dataId, Versus.MapResult mapResult) { }
+}
+
+// Namespace: 
 private enum NexVersus.GetMetaDataFromPersistenceSlotSequence.Label<T> // TypeDefIndex: 12790
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.GetMetaDataFromPersistenceSlotSequence.Label<T> Error = 0;
 	public const NexVersus.GetMetaDataFromPersistenceSlotSequence.Label<T> End = 1;
+}
+
+// Namespace: 
+private class NexVersus.GetMetaDataFromPersistenceSlotSequence<T> : NexVersus.NexSequenceBase // TypeDefIndex: 12791
+{
+	// Fields
+	private ushort m_SlotId; // 0x0
+	private ulong m_PrincipalId; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	private ulong GetPrincipalId() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A0FE70 Offset: 0x3A0FF71 VA: 0x3A0FE70
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<object>.GetPrincipalId
+	*/
+
+	// RVA: -1 Offset: -1
+	private void .ctor(ushort slotId, ulong principalId) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A0FE80 Offset: 0x3A0FF81 VA: 0x3A0FE80
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Postlogin() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A0FEC0 Offset: 0x3A0FFC1 VA: 0x3A0FEC0
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<object>.Postlogin
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetPersistenceMetaData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A0FED0 Offset: 0x3A0FFD1 VA: 0x3A0FED0
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<object>.GetPersistenceMetaData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetMetaCallback(AsyncResult asyncResult, DataStoreMetaInfo info) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A10070 Offset: 0x3A10171 VA: 0x3A10070
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<object>.GetMetaCallback
+	*/
+
+	// RVA: -1 Offset: -1
+	public static void CreateBind(ProcInst super, ushort slotId, ulong principalId = 0) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A104B0 Offset: 0x3A105B1 VA: 0x3A104B0
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<object>.CreateBind
+	|-NexVersus.GetMetaDataFromPersistenceSlotSequence<VersusServerCasualMetaData>.CreateBind
+	*/
 }
 
 // Namespace: 
@@ -340,6 +589,60 @@ private enum NexVersus.GetMetaDataListFromPersistenceSlotSequence.Label<T> // Ty
 }
 
 // Namespace: 
+private class NexVersus.GetMetaDataListFromPersistenceSlotSequence<T> : NexVersus.NexSequenceBase // TypeDefIndex: 12793
+{
+	// Fields
+	private List<ulong> m_PrincipalIdList; // 0x0
+	private ushort m_SlotId; // 0x0
+	private List<T> m_ResultList; // 0x0
+	private List<List<NexVersus.RatingData>> m_ResultRatingList; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	private void .ctor(List<ulong> principalIdList, ushort slotId, List<T> resultDataList, List<List<NexVersus.RatingData>> resultRatingList) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A10B20 Offset: 0x3A10C21 VA: 0x3A10B20
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Postlogin() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A10BA0 Offset: 0x3A10CA1 VA: 0x3A10BA0
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<object>.Postlogin
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetPersistenceMetaData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A10BB0 Offset: 0x3A10CB1 VA: 0x3A10BB0
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<object>.GetPersistenceMetaData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetMetaCallback(AsyncResult asyncResult, List<DataStoreMetaInfo> infoList, List<DataStoreResult> resultList) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A10D80 Offset: 0x3A10E81 VA: 0x3A10D80
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<object>.GetMetaCallback
+	*/
+
+	// RVA: -1 Offset: -1
+	public static void CreateBind(ProcInst super, List<ulong> principalIdList, ushort slotId, List<T> resultDataList, List<List<NexVersus.RatingData>> resultRatingList) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3A11260 Offset: 0x3A11361 VA: 0x3A11260
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<object>.CreateBind
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<VersusServerCasualMetaData>.CreateBind
+	|-NexVersus.GetMetaDataListFromPersistenceSlotSequence<VersusServerRankedMetaData>.CreateBind
+	*/
+}
+
+// Namespace: 
 private enum NexVersus.GetReplayMetaDataFromPersistenceSlotSequence.Label // TypeDefIndex: 12794
 {
 	// Fields
@@ -349,12 +652,73 @@ private enum NexVersus.GetReplayMetaDataFromPersistenceSlotSequence.Label // Typ
 }
 
 // Namespace: 
+private class NexVersus.GetReplayMetaDataFromPersistenceSlotSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12795
+{
+	// Fields
+	public static readonly ushort AllSlot; // 0x0
+	private ulong m_PrincipalId; // 0x70
+	private ushort m_SlotId; // 0x78
+	private ulong m_PersistenceDataId; // 0x80
+	private NexVersus.ReplaySlotMetaResultData m_ResultData; // 0x88
+
+	// Methods
+
+	// RVA: 0x1F10F90 Offset: 0x1F11091 VA: 0x1F10F90
+	private bool IsAllSlot() { }
+
+	// RVA: 0x1F11010 Offset: 0x1F11111 VA: 0x1F11010
+	private void .ctor(ulong principalId, ushort slotId, NexVersus.ReplaySlotMetaResultData result) { }
+
+	// RVA: 0x1F11060 Offset: 0x1F11161 VA: 0x1F11060
+	private void Postlogin() { }
+
+	// RVA: 0x1F11070 Offset: 0x1F11171 VA: 0x1F11070
+	private void GetPersistenceMetaData() { }
+
+	// RVA: 0x1F11100 Offset: 0x1F11201 VA: 0x1F11100
+	private void GetAllSlot() { }
+
+	// RVA: 0x1F115B0 Offset: 0x1F116B1 VA: 0x1F115B0
+	private void GetMetaListCallback(AsyncResult asyncResult, List<DataStoreMetaInfo> info, List<DataStoreResult> resultList) { }
+
+	// RVA: 0x1F113C0 Offset: 0x1F114C1 VA: 0x1F113C0
+	private void GetSingleSlot() { }
+
+	// RVA: 0x1F11550 Offset: 0x1F11651 VA: 0x1F11550
+	private DataStoreGetMetaParam GetMetaParam(ushort slot) { }
+
+	// RVA: 0x1F11AD0 Offset: 0x1F11BD1 VA: 0x1F11AD0
+	private void GetMetaCallback(AsyncResult asyncResult, DataStoreMetaInfo info) { }
+
+	// RVA: 0x1F118D0 Offset: 0x1F119D1 VA: 0x1F118D0
+	private bool ErrorCheck(AsyncResult asyncResult) { }
+
+	// RVA: 0x1F11CB0 Offset: 0x1F11DB1 VA: 0x1F11CB0
+	public static void CreateBind(ProcInst super, ulong principalId, ushort slotId, bool isShowDialog, NexVersus.ReplaySlotMetaResultData resultData) { }
+
+	// RVA: 0x1F11D70 Offset: 0x1F11E71 VA: 0x1F11D70
+	private ProcDesc[] CreateDesc(bool isShowDialog) { }
+
+	// RVA: 0x1F125A0 Offset: 0x1F126A1 VA: 0x1F125A0
+	private static void .cctor() { }
+}
+
+// Namespace: 
 private enum NexVersus.ChangeMetaDataTypeSequence.TargetType // TypeDefIndex: 12796
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.ChangeMetaDataTypeSequence.TargetType PrincipalSlot = 0;
 	public const NexVersus.ChangeMetaDataTypeSequence.TargetType DataId = 1;
+}
+
+// Namespace: 
+private enum NexVersus.ChangeMetaDataTypeSequence.Label // TypeDefIndex: 12797
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.ChangeMetaDataTypeSequence.Label Error = 0;
+	public const NexVersus.ChangeMetaDataTypeSequence.Label End = 1;
 }
 
 // Namespace: 
@@ -395,12 +759,65 @@ private class NexVersus.ChangeMetaDataTypeSequence : NexVersus.NexSequenceBase /
 }
 
 // Namespace: 
+private enum NexVersus.ChangeReplayMetaSequence.Label // TypeDefIndex: 12799
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.ChangeReplayMetaSequence.Label Error = 0;
+	public const NexVersus.ChangeReplayMetaSequence.Label End = 1;
+}
+
+// Namespace: 
 public enum NexVersus.ChangeReplayMetaSequence.Mode // TypeDefIndex: 12800
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.ChangeReplayMetaSequence.Mode Principal = 0;
 	public const NexVersus.ChangeReplayMetaSequence.Mode DataID = 1;
+}
+
+// Namespace: 
+private class NexVersus.ChangeReplayMetaSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12801
+{
+	// Fields
+	private NexVersus.ChangeReplayMetaSequence.Mode m_Mode; // 0x70
+	private ulong m_TargetPrincipalId; // 0x78
+	private ushort m_TargetSlotId; // 0x80
+	private ulong m_DataId; // 0x88
+	private VersusServerReplayMetaData m_MetaData; // 0x90
+	private bool m_IsSetMetaParam; // 0x98
+
+	// Methods
+
+	// RVA: 0x1F0C140 Offset: 0x1F0C241 VA: 0x1F0C140
+	private void .ctor(ulong dataId, VersusServerReplayMetaData metaData, bool isSetMetaParam) { }
+
+	// RVA: 0x1F0C1A0 Offset: 0x1F0C2A1 VA: 0x1F0C1A0
+	private void .ctor(ulong principalId, ushort slotId, VersusServerReplayMetaData metaData, bool isSetMetaParam) { }
+
+	// RVA: 0x1F0C210 Offset: 0x1F0C311 VA: 0x1F0C210
+	private void Postlogin() { }
+
+	// RVA: 0x1F0C220 Offset: 0x1F0C321 VA: 0x1F0C220
+	private void SetMetaParam() { }
+
+	// RVA: 0x1F0C320 Offset: 0x1F0C421 VA: 0x1F0C320
+	private void ChangeMeta() { }
+
+	// RVA: 0x1F0C470 Offset: 0x1F0C571 VA: 0x1F0C470
+	private void SetMetaBinary(List<byte> paramMetaBytes, VersusServerReplayMetaData metaData) { }
+
+	// RVA: 0x1F0C550 Offset: 0x1F0C651 VA: 0x1F0C550
+	private void ChangeMetaCallback(AsyncResult asyncResult) { }
+
+	// RVA: 0x1F0C720 Offset: 0x1F0C821 VA: 0x1F0C720
+	public static void CreateBind(ProcInst super, ulong dataId, VersusServerReplayMetaData metaData, bool isSetMetaParam, bool isShowDialog) { }
+
+	// RVA: 0x1F0D110 Offset: 0x1F0D211 VA: 0x1F0D110
+	public static void CreateBind(ProcInst super, ulong principalId, ushort slotId, VersusServerReplayMetaData metaData, bool isSetMetaParam, bool isShowDialog) { }
+
+	// RVA: 0x1F0C7F0 Offset: 0x1F0C8F1 VA: 0x1F0C7F0
+	private ProcDesc[] CreateDesc(bool isShowDialog) { }
 }
 
 // Namespace: 
@@ -413,12 +830,89 @@ private enum NexVersus.ChangeReplaySequence.Label // TypeDefIndex: 12802
 }
 
 // Namespace: 
+private class NexVersus.ChangeReplaySequence : NexVersus.NexSequenceBase // TypeDefIndex: 12803
+{
+	// Fields
+	private VersusServerReplayMetaData m_MetaData; // 0x70
+	private VersusServerReplayData m_Data; // 0x78
+
+	// Methods
+
+	// RVA: 0x1F0D1E0 Offset: 0x1F0D2E1 VA: 0x1F0D1E0
+	private void .ctor(VersusServerReplayMetaData metaData, VersusServerReplayData data) { }
+
+	// RVA: 0x1F0D230 Offset: 0x1F0D331 VA: 0x1F0D230
+	private void Postlogin() { }
+
+	// RVA: 0x1F0D240 Offset: 0x1F0D341 VA: 0x1F0D240
+	private void ChangeReplay() { }
+
+	// RVA: 0x1F0D360 Offset: 0x1F0D461 VA: 0x1F0D360
+	private void ChangeCallback(AsyncResult asyncResult) { }
+
+	// RVA: 0x1F0D530 Offset: 0x1F0D631 VA: 0x1F0D530
+	public static void CreateBind(ProcInst super, VersusServerReplayMetaData metaData, VersusServerReplayData data) { }
+}
+
+// Namespace: 
 private enum NexVersus.ChangeVersusDataSequence.Label<T> // TypeDefIndex: 12804
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.ChangeVersusDataSequence.Label<T> Error = 0;
 	public const NexVersus.ChangeVersusDataSequence.Label<T> End = 1;
+}
+
+// Namespace: 
+private class NexVersus.ChangeVersusDataSequence<T> : NexVersus.NexSequenceBase // TypeDefIndex: 12805
+{
+	// Fields
+	private ulong m_DataId; // 0x0
+	private T m_Data; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	private void .ctor(ulong dataId, T data) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30D7480 Offset: 0x30D7581 VA: 0x30D7480
+	|-NexVersus.ChangeVersusDataSequence<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Postlogin() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30D74D0 Offset: 0x30D75D1 VA: 0x30D74D0
+	|-NexVersus.ChangeVersusDataSequence<object>.Postlogin
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ChangeData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30D74E0 Offset: 0x30D75E1 VA: 0x30D74E0
+	|-NexVersus.ChangeVersusDataSequence<object>.ChangeData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ChangeCallback(AsyncResult asyncResult) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30D7610 Offset: 0x30D7711 VA: 0x30D7610
+	|-NexVersus.ChangeVersusDataSequence<object>.ChangeCallback
+	*/
+
+	// RVA: -1 Offset: -1
+	public static void CreateBind(ProcInst super, ulong dataId, T data) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x30D7760 Offset: 0x30D7861 VA: 0x30D7760
+	|-NexVersus.ChangeVersusDataSequence<object>.CreateBind
+	|-NexVersus.ChangeVersusDataSequence<VersusServerCasualData>.CreateBind
+	|-NexVersus.ChangeVersusDataSequence<VersusServerRankedData>.CreateBind
+	*/
 }
 
 // Namespace: 
@@ -431,6 +925,35 @@ private enum NexVersus.ChangeVersusRankedMetaDataSequence.Label // TypeDefIndex:
 }
 
 // Namespace: 
+private class NexVersus.ChangeVersusRankedMetaDataSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12807
+{
+	// Fields
+	private ulong m_DataId; // 0x70
+	private VersusServerRankedMetaData m_MetaData; // 0x78
+	private string m_PlayerName; // 0x80
+
+	// Methods
+
+	// RVA: 0x1F0DAE0 Offset: 0x1F0DBE1 VA: 0x1F0DAE0
+	private void .ctor(ulong dataId, VersusServerRankedMetaData metaData, string playerName) { }
+
+	// RVA: 0x1F0DB40 Offset: 0x1F0DC41 VA: 0x1F0DB40
+	private void Postlogin() { }
+
+	// RVA: 0x1F0DB50 Offset: 0x1F0DC51 VA: 0x1F0DB50
+	private void SetMetaParam() { }
+
+	// RVA: 0x1F0DC20 Offset: 0x1F0DD21 VA: 0x1F0DC20
+	private void ChangeMeta() { }
+
+	// RVA: 0x1F0DE20 Offset: 0x1F0DF21 VA: 0x1F0DE20
+	private void ChangeMetaCallback(AsyncResult asyncResult) { }
+
+	// RVA: 0x1F0DFF0 Offset: 0x1F0E0F1 VA: 0x1F0DFF0
+	public static void CreateBind(ProcInst super, ulong dataId, VersusServerRankedMetaData metaData, string playerName) { }
+}
+
+// Namespace: 
 private enum NexVersus.ReportSequence.Label // TypeDefIndex: 12808
 {
 	// Fields
@@ -439,6 +962,38 @@ private enum NexVersus.ReportSequence.Label // TypeDefIndex: 12808
 	public const NexVersus.ReportSequence.Label Report = 1;
 	public const NexVersus.ReportSequence.Label Error = 2;
 	public const NexVersus.ReportSequence.Label End = 3;
+}
+
+// Namespace: 
+private class NexVersus.ReportSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12809
+{
+	// Fields
+	private ulong m_DataId; // 0x70
+	private ulong m_ScreenShotId; // 0x78
+	private Screening.ReportCategory m_Category; // 0x80
+	private string m_Reason; // 0x88
+	private string m_Language; // 0x90
+	private bool m_IsNotSendSucceed; // 0x98
+
+	// Methods
+
+	// RVA: 0x1F12CE0 Offset: 0x1F12DE1 VA: 0x1F12CE0
+	private void .ctor(ulong dataId, ulong screenshotId, Screening.ReportCategory category, string reason, string language, bool isNotSendSucceed) { }
+
+	// RVA: 0x1F12D70 Offset: 0x1F12E71 VA: 0x1F12D70
+	private void Postlogin() { }
+
+	// RVA: 0x1F12D80 Offset: 0x1F12E81 VA: 0x1F12D80
+	private void Report() { }
+
+	// RVA: 0x1F12F90 Offset: 0x1F13091 VA: 0x1F12F90
+	private void ReportCallback(AsyncResult asyncResult) { }
+
+	// RVA: 0x1F130F0 Offset: 0x1F131F1 VA: 0x1F130F0
+	private void ConfirmRetry() { }
+
+	// RVA: 0x1F13100 Offset: 0x1F13201 VA: 0x1F13100
+	public static void CreateBind(ProcInst super, ulong dataId, ulong screenshotId, Screening.ReportCategory category, string reason, string language, bool isNotSendSucceed) { }
 }
 
 // Namespace: 
@@ -478,6 +1033,24 @@ public class NexVersus.ReplaySlotMetaResultData // TypeDefIndex: 12810
 }
 
 // Namespace: 
+public sealed class NexVersus.EndCallback : MulticastDelegate // TypeDefIndex: 12811
+{
+	// Methods
+
+	// RVA: 0x1F100D0 Offset: 0x1F101D1 VA: 0x1F100D0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F0EF40 Offset: 0x1F0F041 VA: 0x1F0EF40 Slot: 13
+	public virtual void Invoke(NexVersus.Results result) { }
+
+	// RVA: 0x1F100F0 Offset: 0x1F101F1 VA: 0x1F100F0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(NexVersus.Results result, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F10180 Offset: 0x1F10281 VA: 0x1F10180 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class NexVersus.CasualMetaDataEndCallback : MulticastDelegate // TypeDefIndex: 12812
 {
 	// Methods
@@ -492,6 +1065,24 @@ public sealed class NexVersus.CasualMetaDataEndCallback : MulticastDelegate // T
 	public virtual IAsyncResult BeginInvoke(NexVersus.Results result, VersusServerCasualMetaData metaData, NexVersus.ResultInfo info, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F0B620 Offset: 0x1F0B721 VA: 0x1F0B620 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class NexVersus.RankedMetaDataEndCallback : MulticastDelegate // TypeDefIndex: 12813
+{
+	// Methods
+
+	// RVA: 0x1F12810 Offset: 0x1F12911 VA: 0x1F12810
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F0A690 Offset: 0x1F0A791 VA: 0x1F0A690 Slot: 13
+	public virtual void Invoke(NexVersus.Results result, VersusServerRankedMetaData metaData, NexVersus.ResultInfo info) { }
+
+	// RVA: 0x1F12830 Offset: 0x1F12931 VA: 0x1F12830 Slot: 14
+	public virtual IAsyncResult BeginInvoke(NexVersus.Results result, VersusServerRankedMetaData metaData, NexVersus.ResultInfo info, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F128E0 Offset: 0x1F129E1 VA: 0x1F128E0 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -526,6 +1117,16 @@ public class NexVersus.ResultInfo // TypeDefIndex: 12814
 }
 
 // Namespace: 
+public enum NexVersus.UploadType // TypeDefIndex: 12815
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.UploadType None = -1;
+	public const NexVersus.UploadType New = 0;
+	public const NexVersus.UploadType Overwrite = 1;
+}
+
+// Namespace: 
 public enum NexVersus.TargetSlotList.Results // TypeDefIndex: 12816
 {
 	// Fields
@@ -538,12 +1139,93 @@ public enum NexVersus.TargetSlotList.Results // TypeDefIndex: 12816
 }
 
 // Namespace: 
+public class NexVersus.TargetSlotList // TypeDefIndex: 12817
+{
+	// Fields
+	private Dictionary<ulong, NexVersus.TargetSlotList.Results> m_Dict; // 0x10
+
+	// Properties
+	public int Count { get; }
+
+	// Methods
+
+	// RVA: 0x1F14DA0 Offset: 0x1F14EA1 VA: 0x1F14DA0
+	public void .ctor() { }
+
+	// RVA: 0x1F14E30 Offset: 0x1F14F31 VA: 0x1F14E30
+	public void Add(ulong id) { }
+
+	// RVA: 0x1F14ED0 Offset: 0x1F14FD1 VA: 0x1F14ED0
+	public void Add(List<ulong> list) { }
+
+	// RVA: 0x1F15060 Offset: 0x1F15161 VA: 0x1F15060
+	public void Clear() { }
+
+	// RVA: 0x1F150C0 Offset: 0x1F151C1 VA: 0x1F150C0
+	public int get_Count() { }
+
+	// RVA: 0x1F15120 Offset: 0x1F15221 VA: 0x1F15120
+	public int GetCountValid() { }
+
+	// RVA: 0x1F0E950 Offset: 0x1F0EA51 VA: 0x1F0E950
+	public List<ulong> GetIDList() { }
+
+	// RVA: 0x1F0EDF0 Offset: 0x1F0EEF1 VA: 0x1F0EDF0
+	public void SetResult(ulong id, NexVersus.TargetSlotList.Results result) { }
+
+	// RVA: 0x1F15270 Offset: 0x1F15371 VA: 0x1F15270
+	public NexVersus.TargetSlotList.Results GetResult(ulong id) { }
+
+	// RVA: 0x1F15310 Offset: 0x1F15411 VA: 0x1F15310
+	public bool IsValid(ulong id) { }
+
+	// RVA: 0x1F153C0 Offset: 0x1F154C1 VA: 0x1F153C0
+	public string Dump() { }
+
+	// RVA: 0x1F15690 Offset: 0x1F15791 VA: 0x1F15690
+	public void ForEach(Action<ulong, NexVersus.TargetSlotList.Results> action) { }
+
+	// RVA: 0x1F15830 Offset: 0x1F15931 VA: 0x1F15830
+	public void ForEach(Action<int, ulong, NexVersus.TargetSlotList.Results> action) { }
+}
+
+// Namespace: 
 private enum NexVersus.GetRankedMetaDataFromPersistenceSlotSequence.Label // TypeDefIndex: 12818
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.GetRankedMetaDataFromPersistenceSlotSequence.Label Error = 0;
 	public const NexVersus.GetRankedMetaDataFromPersistenceSlotSequence.Label End = 1;
+}
+
+// Namespace: 
+private class NexVersus.GetRankedMetaDataFromPersistenceSlotSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12819
+{
+	// Methods
+
+	// RVA: 0x1F10190 Offset: 0x1F10291 VA: 0x1F10190
+	private ulong GetPrincipalId() { }
+
+	// RVA: 0x1F101A0 Offset: 0x1F102A1 VA: 0x1F101A0
+	private void .ctor() { }
+
+	// RVA: 0x1F101B0 Offset: 0x1F102B1 VA: 0x1F101B0
+	private void Postlogin() { }
+
+	// RVA: 0x1F101C0 Offset: 0x1F102C1 VA: 0x1F101C0
+	private void GetPersistenceMetaData() { }
+
+	// RVA: 0x1F103C0 Offset: 0x1F104C1 VA: 0x1F103C0
+	private void GetMetaCallback(AsyncResult asyncResult, List<DataStoreMetaInfo> infoList, List<DataStoreResult> resultList) { }
+
+	// RVA: 0x1F10540 Offset: 0x1F10641 VA: 0x1F10540
+	private bool SetEditData(DataStoreMetaInfo info, DataStoreResult result) { }
+
+	// RVA: 0x1F10900 Offset: 0x1F10A01 VA: 0x1F10900
+	private bool SetReportData(DataStoreMetaInfo info, DataStoreResult result) { }
+
+	// RVA: 0x1F10A10 Offset: 0x1F10B11 VA: 0x1F10A10
+	public static void CreateBind(ProcInst super) { }
 }
 
 // Namespace: 
@@ -557,12 +1239,57 @@ private enum NexVersus.UploadReportMetaSequence.Label // TypeDefIndex: 12820
 }
 
 // Namespace: 
+private class NexVersus.UploadReportMetaSequence : NexVersus.NexSequenceBase // TypeDefIndex: 12821
+{
+	// Fields
+	private VersusServerReportMetaData m_MetaData; // 0x70
+	private NexVersus.UploadType m_Type; // 0x78
+
+	// Methods
+
+	// RVA: 0x1F17620 Offset: 0x1F17721 VA: 0x1F17620
+	private void .ctor(VersusServerReportMetaData data, NexVersus.UploadType type) { }
+
+	// RVA: 0x1F17670 Offset: 0x1F17771 VA: 0x1F17670
+	private void Postlogin() { }
+
+	// RVA: 0x1F17680 Offset: 0x1F17781 VA: 0x1F17680
+	private void Upload() { }
+
+	// RVA: 0x1F17750 Offset: 0x1F17851 VA: 0x1F17750
+	private void UploadNew() { }
+
+	// RVA: 0x1F178C0 Offset: 0x1F179C1 VA: 0x1F178C0
+	private void UploadOverwrite() { }
+
+	// RVA: 0x1F17A00 Offset: 0x1F17B01 VA: 0x1F17A00
+	public static void CreateBind(ProcInst super, VersusServerReportMetaData data, NexVersus.UploadType type) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CA090 Offset: 0x2CA191 VA: 0x2CA090
+	// RVA: 0x1F18060 Offset: 0x1F18161 VA: 0x1F18060
+	private void <UploadNew>b__6_0(AsyncResult asyncResult, ulong dataId) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CA0A0 Offset: 0x2CA1A1 VA: 0x2CA0A0
+	// RVA: 0x1F181F0 Offset: 0x1F182F1 VA: 0x1F181F0
+	private void <UploadOverwrite>b__7_0(AsyncResult asyncResult) { }
+}
+
+// Namespace: 
 private enum NexVersus.CheckAccessibleSlotSequence.Label // TypeDefIndex: 12822
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.CheckAccessibleSlotSequence.Label Error = 0;
 	public const NexVersus.CheckAccessibleSlotSequence.Label End = 1;
+}
+
+// Namespace: 
+public enum NexVersus.CheckAccessibleSlotSequence.Mode // TypeDefIndex: 12823
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.CheckAccessibleSlotSequence.Mode Casual = 0;
+	public const NexVersus.CheckAccessibleSlotSequence.Mode Ranked = 1;
 }
 
 // Namespace: 
@@ -598,12 +1325,62 @@ private class NexVersus.CheckAccessibleSlotSequence : NexVersus.NexSequenceBase 
 }
 
 // Namespace: 
+public sealed class NexVersus.DownloadMetaDataSequence.EndCallback<T> : MulticastDelegate // TypeDefIndex: 12825
+{
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(object object, IntPtr method) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1D293D0 Offset: 0x1D294D1 VA: 0x1D293D0
+	|-NexVersus.DownloadMetaDataSequence.EndCallback<object>..ctor
+	|-NexVersus.DownloadMetaDataSequence.EndCallback<VersusServerCasualMetaData>..ctor
+	|-NexVersus.DownloadMetaDataSequence.EndCallback<VersusServerRankedMetaData>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 13
+	public virtual void Invoke(NexVersus.Results result, T metaData, NexVersus.ResultInfo info) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1D293F0 Offset: 0x1D294F1 VA: 0x1D293F0
+	|-NexVersus.DownloadMetaDataSequence.EndCallback<object>.Invoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 14
+	public virtual IAsyncResult BeginInvoke(NexVersus.Results result, T metaData, NexVersus.ResultInfo info, AsyncCallback callback, object object) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1D29680 Offset: 0x1D29781 VA: 0x1D29680
+	|-NexVersus.DownloadMetaDataSequence.EndCallback<object>.BeginInvoke
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x1D29730 Offset: 0x1D29831 VA: 0x1D29730
+	|-NexVersus.DownloadMetaDataSequence.EndCallback<object>.EndInvoke
+	*/
+}
+
+// Namespace: 
 public enum NexVersus.DownloadMetaDataSequence.Mode<T> // TypeDefIndex: 12826
 {
 	// Fields
 	public int value__; // 0x0
 	public const NexVersus.DownloadMetaDataSequence.Mode<T> Casual = 0;
 	public const NexVersus.DownloadMetaDataSequence.Mode<T> Ranked = 1;
+}
+
+// Namespace: 
+private enum NexVersus.DownloadMetaDataSequence.Label<T> // TypeDefIndex: 12827
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexVersus.DownloadMetaDataSequence.Label<T> Error = 0;
+	public const NexVersus.DownloadMetaDataSequence.Label<T> ErrorApp = 1;
+	public const NexVersus.DownloadMetaDataSequence.Label<T> End = 2;
 }
 
 // Namespace: 
@@ -683,6 +1460,22 @@ private class NexVersus.DownloadMetaDataSequence<T> : NexVersus.NexSequenceBase 
 	|-NexVersus.DownloadMetaDataSequence<VersusServerCasualMetaData>.CreateBind
 	|-NexVersus.DownloadMetaDataSequence<VersusServerRankedMetaData>.CreateBind
 	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278780 Offset: 0x278881 VA: 0x278780
+private sealed class NexVersus.<>c__DisplayClass101_0 // TypeDefIndex: 12829
+{
+	// Fields
+	public NexVersus.CasualMetaDataEndCallback endCallback; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F0A3C0 Offset: 0x1F0A4C1 VA: 0x1F0A3C0
+	public void .ctor() { }
+
+	// RVA: 0x1F0A3D0 Offset: 0x1F0A4D1 VA: 0x1F0A3D0
+	internal void <DownloadCasualMetaPrincipalID>g__callback|0(NexVersus.Results result, VersusServerCasualMetaData metaData, NexVersus.ResultInfo info) { }
 }
 
 // Namespace: 

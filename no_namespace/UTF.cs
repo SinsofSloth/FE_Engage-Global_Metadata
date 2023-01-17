@@ -1,5 +1,58 @@
 // Namespace: 
 [Serializable]
+internal class UTF32Encoding.UTF32Decoder : DecoderNLS // TypeDefIndex: 469
+{
+	// Fields
+	internal int iChar; // 0x30
+	internal int readByteCount; // 0x34
+
+	// Properties
+	internal override bool HasState { get; }
+
+	// Methods
+
+	// RVA: 0x1C0D240 Offset: 0x1C0D341 VA: 0x1C0D240
+	public void .ctor(UTF32Encoding encoding) { }
+
+	// RVA: 0x1C0D250 Offset: 0x1C0D351 VA: 0x1C0D250 Slot: 4
+	public override void Reset() { }
+
+	// RVA: 0x1C0D270 Offset: 0x1C0D371 VA: 0x1C0D270 Slot: 14
+	internal override bool get_HasState() { }
+}
+
+// Namespace: 
+[Serializable]
+private class UTF7Encoding.Decoder : DecoderNLS, ISerializable // TypeDefIndex: 471
+{
+	// Fields
+	internal int bits; // 0x30
+	internal int bitCount; // 0x34
+	internal bool firstByte; // 0x38
+
+	// Properties
+	internal override bool HasState { get; }
+
+	// Methods
+
+	// RVA: 0x1C0D280 Offset: 0x1C0D381 VA: 0x1C0D280
+	public void .ctor(UTF7Encoding encoding) { }
+
+	// RVA: 0x1C0D290 Offset: 0x1C0D391 VA: 0x1C0D290
+	internal void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x1C0D570 Offset: 0x1C0D671 VA: 0x1C0D570 Slot: 13
+	private void System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x1C0D6A0 Offset: 0x1C0D7A1 VA: 0x1C0D6A0 Slot: 4
+	public override void Reset() { }
+
+	// RVA: 0x1C0D6D0 Offset: 0x1C0D7D1 VA: 0x1C0D6D0 Slot: 14
+	internal override bool get_HasState() { }
+}
+
+// Namespace: 
+[Serializable]
 private class UTF7Encoding.Encoder : EncoderNLS, ISerializable // TypeDefIndex: 472
 {
 	// Fields
@@ -19,6 +72,31 @@ private class UTF7Encoding.Encoder : EncoderNLS, ISerializable // TypeDefIndex: 
 
 	// RVA: 0x1C0DC70 Offset: 0x1C0DD71 VA: 0x1C0DC70 Slot: 4
 	public override void Reset() { }
+}
+
+// Namespace: 
+[Serializable]
+internal sealed class UTF7Encoding.DecoderUTF7Fallback : DecoderFallback // TypeDefIndex: 473
+{
+	// Properties
+	public override int MaxCharCount { get; }
+
+	// Methods
+
+	// RVA: 0x1C0D6E0 Offset: 0x1C0D7E1 VA: 0x1C0D6E0
+	public void .ctor() { }
+
+	// RVA: 0x1C0D6F0 Offset: 0x1C0D7F1 VA: 0x1C0D6F0 Slot: 4
+	public override DecoderFallbackBuffer CreateFallbackBuffer() { }
+
+	// RVA: 0x1C0D760 Offset: 0x1C0D861 VA: 0x1C0D760 Slot: 5
+	public override int get_MaxCharCount() { }
+
+	// RVA: 0x1C0D770 Offset: 0x1C0D871 VA: 0x1C0D770 Slot: 0
+	public override bool Equals(object value) { }
+
+	// RVA: 0x1C0D7E0 Offset: 0x1C0D8E1 VA: 0x1C0D7E0 Slot: 2
+	public override int GetHashCode() { }
 }
 
 // Namespace: 
@@ -73,5 +151,33 @@ internal class UTF8Encoding.UTF8Encoder : EncoderNLS, ISerializable // TypeDefIn
 
 	// RVA: 0x1C0E6C0 Offset: 0x1C0E7C1 VA: 0x1C0E6C0 Slot: 4
 	public override void Reset() { }
+}
+
+// Namespace: 
+[Serializable]
+internal class UTF8Encoding.UTF8Decoder : DecoderNLS, ISerializable // TypeDefIndex: 477
+{
+	// Fields
+	internal int bits; // 0x30
+
+	// Properties
+	internal override bool HasState { get; }
+
+	// Methods
+
+	// RVA: 0x1C0DC90 Offset: 0x1C0DD91 VA: 0x1C0DC90
+	public void .ctor(UTF8Encoding encoding) { }
+
+	// RVA: 0x1C0DCA0 Offset: 0x1C0DDA1 VA: 0x1C0DCA0
+	internal void .ctor(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x1C0E010 Offset: 0x1C0E111 VA: 0x1C0E010 Slot: 13
+	private void System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x1C0E1C0 Offset: 0x1C0E2C1 VA: 0x1C0E1C0 Slot: 4
+	public override void Reset() { }
+
+	// RVA: 0x1C0E1E0 Offset: 0x1C0E2E1 VA: 0x1C0E1E0 Slot: 14
+	internal override bool get_HasState() { }
 }
 

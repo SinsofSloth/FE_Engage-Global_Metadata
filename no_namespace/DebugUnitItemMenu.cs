@@ -17,6 +17,60 @@ private class DebugUnitItemMenu.UnitDebugMenu : DebugMenu // TypeDefIndex: 10154
 }
 
 // Namespace: 
+private class DebugUnitItemMenu.EditItemMenuItem : MenuItem // TypeDefIndex: 10155
+{
+	// Fields
+	private const int MinIndex = 0;
+	private Unit m_Unit; // 0x20
+	private int m_UnitItemIndex; // 0x28
+	private UnitItem m_UnitItem; // 0x30
+
+	// Methods
+
+	// RVA: 0x1E187A0 Offset: 0x1E188A1 VA: 0x1E187A0
+	public void .ctor(Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1E18810 Offset: 0x1E18911 VA: 0x1E18810 Slot: 29
+	public override int GetColumnCount() { }
+
+	// RVA: 0x1E18820 Offset: 0x1E18921 VA: 0x1E18820 Slot: 31
+	public override float GetColumnWidth0() { }
+
+	// RVA: 0x1E18830 Offset: 0x1E18931 VA: 0x1E18830 Slot: 32
+	public override float GetColumnWidth1() { }
+
+	// RVA: 0x1E18840 Offset: 0x1E18941 VA: 0x1E18840 Slot: 27
+	public override Color GetFontColor() { }
+
+	// RVA: 0x1E18910 Offset: 0x1E18A11 VA: 0x1E18910 Slot: 42
+	public override string GetColumnName0() { }
+
+	// RVA: 0x1E189A0 Offset: 0x1E18AA1 VA: 0x1E189A0 Slot: 43
+	public override string GetColumnName1() { }
+
+	// RVA: 0x1E189E0 Offset: 0x1E18AE1 VA: 0x1E189E0 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x1E18AA0 Offset: 0x1E18BA1 VA: 0x1E18AA0 Slot: 12
+	public override MenuItem.Result ACall() { }
+
+	// RVA: 0x1E18CB0 Offset: 0x1E18DB1 VA: 0x1E18CB0 Slot: 14
+	public override MenuItem.Result XCall() { }
+
+	// RVA: 0x1E18FA0 Offset: 0x1E190A1 VA: 0x1E18FA0 Slot: 68
+	public override void OnTick() { }
+
+	// RVA: 0x1E1A580 Offset: 0x1E1A681 VA: 0x1E1A580 Slot: 7
+	public override string GetHelp() { }
+
+	// RVA: 0x1E1A360 Offset: 0x1E1A461 VA: 0x1E1A360
+	private int GetPrevIndex(int index, bool isTrigger) { }
+
+	// RVA: 0x1E1A470 Offset: 0x1E1A571 VA: 0x1E1A470
+	private int GetNextIndex(int index, bool isTrigger) { }
+}
+
+// Namespace: 
 private class DebugUnitItemMenu.ItemListMenu.ItemMenuItem : MenuItem // TypeDefIndex: 10156
 {
 	// Fields
@@ -53,6 +107,18 @@ private class DebugUnitItemMenu.ItemListMenu.ItemMenuItem : MenuItem // TypeDefI
 }
 
 // Namespace: 
+private class DebugUnitItemMenu.ItemListMenu // TypeDefIndex: 10157
+{
+	// Methods
+
+	// RVA: 0x1E18AE0 Offset: 0x1E18BE1 VA: 0x1E18AE0
+	public static void CreateBind(ProcInst super, Unit unit, UnitItem unitItem) { }
+
+	// RVA: 0x1E1A8C0 Offset: 0x1E1A9C1 VA: 0x1E1A8C0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class DebugUnitItemMenu.SubMenu.BaseMenuItem : MenuItem // TypeDefIndex: 10158
 {
 	// Fields
@@ -67,6 +133,18 @@ private class DebugUnitItemMenu.SubMenu.BaseMenuItem : MenuItem // TypeDefIndex:
 
 	// RVA: 0x1DC3F50 Offset: 0x1DC4051 VA: 0x1DC3F50 Slot: 25
 	public override float GetWidth() { }
+}
+
+// Namespace: 
+private class DebugUnitItemMenu.SubMenu.NameMenuItem : DebugUnitItemMenu.SubMenu.BaseMenuItem // TypeDefIndex: 10159
+{
+	// Methods
+
+	// RVA: 0x1DC4740 Offset: 0x1DC4841 VA: 0x1DC4740
+	public void .ctor(Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1DC47B0 Offset: 0x1DC48B1 VA: 0x1DC47B0 Slot: 5
+	public override string GetName() { }
 }
 
 // Namespace: 
@@ -97,6 +175,24 @@ private abstract class DebugUnitItemMenu.SubMenu.FlagMenuItem : DebugUnitItemMen
 }
 
 // Namespace: 
+private class DebugUnitItemMenu.SubMenu.DropMenuItem : DebugUnitItemMenu.SubMenu.FlagMenuItem // TypeDefIndex: 10161
+{
+	// Methods
+
+	// RVA: 0x1DC3F60 Offset: 0x1DC4061 VA: 0x1DC3F60
+	public void .ctor(Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1DC4040 Offset: 0x1DC4141 VA: 0x1DC4040 Slot: 72
+	protected override string GetLabel() { }
+
+	// RVA: 0x1DC4090 Offset: 0x1DC4191 VA: 0x1DC4090 Slot: 73
+	protected override void SetFlag(bool enable) { }
+
+	// RVA: 0x1DC40A0 Offset: 0x1DC41A1 VA: 0x1DC40A0 Slot: 74
+	protected override bool IsFlag() { }
+}
+
+// Namespace: 
 private class DebugUnitItemMenu.SubMenu.EnchantMenuItem : DebugUnitItemMenu.SubMenu.FlagMenuItem // TypeDefIndex: 10162
 {
 	// Methods
@@ -112,6 +208,24 @@ private class DebugUnitItemMenu.SubMenu.EnchantMenuItem : DebugUnitItemMenu.SubM
 
 	// RVA: 0x1DC43C0 Offset: 0x1DC44C1 VA: 0x1DC43C0 Slot: 74
 	protected override bool IsFlag() { }
+}
+
+// Namespace: 
+private class DebugUnitItemMenu.SubMenu.RefineMenuItem : DebugUnitItemMenu.SubMenu.BaseMenuItem // TypeDefIndex: 10163
+{
+	// Methods
+
+	// RVA: 0x1DC48D0 Offset: 0x1DC49D1 VA: 0x1DC48D0
+	public void .ctor(Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1DC4940 Offset: 0x1DC4A41 VA: 0x1DC4940 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x1DC4990 Offset: 0x1DC4A91 VA: 0x1DC4990 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x1DC49E0 Offset: 0x1DC4AE1 VA: 0x1DC49E0 Slot: 12
+	public override MenuItem.Result ACall() { }
 }
 
 // Namespace: 
@@ -133,6 +247,24 @@ private class DebugUnitItemMenu.SubMenu.EngraveMenuItem : DebugUnitItemMenu.SubM
 }
 
 // Namespace: 
+private class DebugUnitItemMenu.SubMenu.ItemBaseMenuItem : DebugUnitItemMenu.SubMenu.BaseMenuItem // TypeDefIndex: 10165
+{
+	// Methods
+
+	// RVA: 0x1DC4120 Offset: 0x1DC4221 VA: 0x1DC4120
+	public void .ctor(Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1DC4710 Offset: 0x1DC4811 VA: 0x1DC4710 Slot: 29
+	public override int GetColumnCount() { }
+
+	// RVA: 0x1DC4720 Offset: 0x1DC4821 VA: 0x1DC4720 Slot: 31
+	public override float GetColumnWidth0() { }
+
+	// RVA: 0x1DC4730 Offset: 0x1DC4831 VA: 0x1DC4730 Slot: 32
+	public override float GetColumnWidth1() { }
+}
+
+// Namespace: 
 private class DebugUnitItemMenu.SubMenu.PriceMenuItem : DebugUnitItemMenu.SubMenu.ItemBaseMenuItem // TypeDefIndex: 10166
 {
 	// Methods
@@ -144,6 +276,21 @@ private class DebugUnitItemMenu.SubMenu.PriceMenuItem : DebugUnitItemMenu.SubMen
 	public override string GetColumnName0() { }
 
 	// RVA: 0x1DC4890 Offset: 0x1DC4991 VA: 0x1DC4890 Slot: 43
+	public override string GetColumnName1() { }
+}
+
+// Namespace: 
+private class DebugUnitItemMenu.SubMenu.SellingMenuItem : DebugUnitItemMenu.SubMenu.ItemBaseMenuItem // TypeDefIndex: 10167
+{
+	// Methods
+
+	// RVA: 0x1DC4A30 Offset: 0x1DC4B31 VA: 0x1DC4A30
+	public void .ctor(Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1DC4AA0 Offset: 0x1DC4BA1 VA: 0x1DC4AA0 Slot: 42
+	public override string GetColumnName0() { }
+
+	// RVA: 0x1DC4AF0 Offset: 0x1DC4BF1 VA: 0x1DC4AF0 Slot: 43
 	public override string GetColumnName1() { }
 }
 
@@ -160,6 +307,18 @@ private class DebugUnitItemMenu.SubMenu.EnchantHashMenuItem : DebugUnitItemMenu.
 
 	// RVA: 0x1DC41E0 Offset: 0x1DC42E1 VA: 0x1DC41E0 Slot: 43
 	public override string GetColumnName1() { }
+}
+
+// Namespace: 
+private class DebugUnitItemMenu.SubMenu // TypeDefIndex: 10169
+{
+	// Methods
+
+	// RVA: 0x1E18CF0 Offset: 0x1E18DF1 VA: 0x1E18CF0
+	public static void CreateBind(ProcInst super, Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1E1AB70 Offset: 0x1E1AC71 VA: 0x1E1AB70
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -189,6 +348,34 @@ private class DebugUnitItemMenu.RefineMenu.BaseMenuItem : MenuItem // TypeDefInd
 }
 
 // Namespace: 
+private class DebugUnitItemMenu.RefineMenu.RefineMenuItem : DebugUnitItemMenu.RefineMenu.BaseMenuItem // TypeDefIndex: 10171
+{
+	// Fields
+	private int m_Level; // 0x38
+	private ItemRefineData m_Data; // 0x40
+
+	// Methods
+
+	// RVA: 0x1DC3830 Offset: 0x1DC3931 VA: 0x1DC3830
+	public void .ctor(Unit unit, int unitItemIndex, int refineLevel, ItemRefineData refineData) { }
+
+	// RVA: 0x1DC38C0 Offset: 0x1DC39C1 VA: 0x1DC38C0 Slot: 42
+	public override string GetColumnName0() { }
+
+	// RVA: 0x1DC39A0 Offset: 0x1DC3AA1 VA: 0x1DC39A0 Slot: 43
+	public override string GetColumnName1() { }
+
+	// RVA: 0x1DC3C90 Offset: 0x1DC3D91 VA: 0x1DC3C90 Slot: 44
+	public override string GetColumnName2() { }
+
+	// RVA: 0x1DC3EB0 Offset: 0x1DC3FB1 VA: 0x1DC3EB0 Slot: 12
+	public override MenuItem.Result ACall() { }
+
+	// RVA: 0x1DC3BD0 Offset: 0x1DC3CD1 VA: 0x1DC3BD0
+	private string GetParameterText(int value) { }
+}
+
+// Namespace: 
 private class DebugUnitItemMenu.RefineMenu.EvolveMenuItem : DebugUnitItemMenu.RefineMenu.BaseMenuItem // TypeDefIndex: 10172
 {
 	// Fields
@@ -214,6 +401,18 @@ private class DebugUnitItemMenu.RefineMenu.EvolveMenuItem : DebugUnitItemMenu.Re
 }
 
 // Namespace: 
+private class DebugUnitItemMenu.RefineMenu // TypeDefIndex: 10173
+{
+	// Methods
+
+	// RVA: 0x1E1A8D0 Offset: 0x1E1A9D1 VA: 0x1E1A8D0
+	public static void CreateBind(ProcInst super, Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1E1AB60 Offset: 0x1E1AC61 VA: 0x1E1AB60
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class DebugUnitItemMenu.EngraveMenu.BaseMenuItem : MenuItem // TypeDefIndex: 10174
 {
 	// Fields
@@ -225,6 +424,24 @@ private class DebugUnitItemMenu.EngraveMenu.BaseMenuItem : MenuItem // TypeDefIn
 
 	// RVA: 0x1DC2140 Offset: 0x1DC2241 VA: 0x1DC2140
 	public void .ctor(Unit unit, int unitItemIndex) { }
+}
+
+// Namespace: 
+private class DebugUnitItemMenu.EngraveMenu.EngraveMenuItem : DebugUnitItemMenu.EngraveMenu.BaseMenuItem // TypeDefIndex: 10175
+{
+	// Fields
+	private GodData m_GodData; // 0x38
+
+	// Methods
+
+	// RVA: 0x1DC22E0 Offset: 0x1DC23E1 VA: 0x1DC22E0
+	public void .ctor(Unit unit, int unitItemIndex, GodData godData) { }
+
+	// RVA: 0x1DC2360 Offset: 0x1DC2461 VA: 0x1DC2360 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x1DC2410 Offset: 0x1DC2511 VA: 0x1DC2410 Slot: 12
+	public override MenuItem.Result ACall() { }
 }
 
 // Namespace: 
@@ -243,5 +460,17 @@ private class DebugUnitItemMenu.EngraveMenu.ClearEngraveMenuItem : DebugUnitItem
 
 	// RVA: 0x1DC2280 Offset: 0x1DC2381 VA: 0x1DC2280 Slot: 12
 	public override MenuItem.Result ACall() { }
+}
+
+// Namespace: 
+private class DebugUnitItemMenu.EngraveMenu // TypeDefIndex: 10177
+{
+	// Methods
+
+	// RVA: 0x1E1A5F0 Offset: 0x1E1A6F1 VA: 0x1E1A5F0
+	public static void CreateBind(ProcInst super, Unit unit, int unitItemIndex) { }
+
+	// RVA: 0x1E1A8B0 Offset: 0x1E1A9B1 VA: 0x1E1A8B0
+	public void .ctor() { }
 }
 

@@ -1,4 +1,14 @@
 // Namespace: 
+public enum RefineGodWeaponTopMenu.Result2 // TypeDefIndex: 11077
+{
+	// Fields
+	public int value__; // 0x0
+	public const RefineGodWeaponTopMenu.Result2 Refine = 0;
+	public const RefineGodWeaponTopMenu.Result2 Reset = 1;
+	public const RefineGodWeaponTopMenu.Result2 End = 2;
+}
+
+// Namespace: 
 public sealed class RefineGodWeaponTopMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 11078
 {
 	// Methods
@@ -14,6 +24,21 @@ public sealed class RefineGodWeaponTopMenu.DecideEventHandler : MulticastDelegat
 
 	// RVA: 0x1F31420 Offset: 0x1F31521 VA: 0x1F31420 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+private class RefineGodWeaponTopMenu.RefineMenuItem : BasicMenuItem // TypeDefIndex: 11079
+{
+	// Fields
+	public RefineGodWeaponTopMenu.DecideEventHandler m_DecideEventHandler; // 0x68
+
+	// Methods
+
+	// RVA: 0x1F31430 Offset: 0x1F31531 VA: 0x1F31430
+	public void .ctor(RefineGodWeaponTopMenu.DecideEventHandler decideEventHandler) { }
+
+	// RVA: 0x1F314E0 Offset: 0x1F315E1 VA: 0x1F314E0 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 

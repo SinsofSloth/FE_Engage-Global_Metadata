@@ -38,6 +38,111 @@ private sealed class TouchScreenState1.TouchStateArray1.<GetEnumerator>d__15 : I
 }
 
 // Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A690 Offset: 0x27A791 VA: 0x27A690
+public struct TouchScreenState1.TouchStateArray1 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14671
+{
+	// Fields
+	private const int _Length = 1;
+	private TouchState _value0; // 0x0
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x2395770 Offset: 0x2395871 VA: 0x2395770
+	public int get_Length() { }
+
+	// RVA: 0x2395780 Offset: 0x2395881 VA: 0x2395780 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x23957F0 Offset: 0x23958F1 VA: 0x23957F0 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x2395850 Offset: 0x2395951 VA: 0x2395850 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x2395860 Offset: 0x2395961 VA: 0x2395860 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x2395870 Offset: 0x2395971 VA: 0x2395870 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x23958D0 Offset: 0x23959D1 VA: 0x23958D0 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x2395930 Offset: 0x2395A31 VA: 0x2395930 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x2395A30 Offset: 0x2395B31 VA: 0x2395A30 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1380 Offset: 0x2D1481 VA: 0x2D1380
+	// RVA: 0x2395AD0 Offset: 0x2395BD1 VA: 0x2395AD0 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x2395B50 Offset: 0x2395C51 VA: 0x2395B50 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x2395BD0 Offset: 0x2395CD1 VA: 0x2395BD0 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x2395C10 Offset: 0x2395D11 VA: 0x2395C10 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x2395C50 Offset: 0x2395D51 VA: 0x2395C50 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x2395C90 Offset: 0x2395D91 VA: 0x2395C90 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x2395CD0 Offset: 0x2395DD1 VA: 0x2395CD0 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27A720 Offset: 0x27A821 VA: 0x27A720
+private sealed class TouchScreenState2.TouchStateArray2.<GetEnumerator>d__16 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14673
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState2.TouchStateArray2 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D14B0 Offset: 0x2D15B1 VA: 0x2D14B0
+	// RVA: 0x2D67E30 Offset: 0x2D67F31 VA: 0x2D67E30
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D14C0 Offset: 0x2D15C1 VA: 0x2D14C0
+	// RVA: 0x2D67E60 Offset: 0x2D67F61 VA: 0x2D67E60 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D67E70 Offset: 0x2D67F71 VA: 0x2D67E70 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D14D0 Offset: 0x2D15D1 VA: 0x2D14D0
+	// RVA: 0x2D67ED0 Offset: 0x2D67FD1 VA: 0x2D67ED0 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D14E0 Offset: 0x2D15E1 VA: 0x2D14E0
+	// RVA: 0x2D67EF0 Offset: 0x2D67FF1 VA: 0x2D67EF0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D14F0 Offset: 0x2D15F1 VA: 0x2D14F0
+	// RVA: 0x2D67F30 Offset: 0x2D68031 VA: 0x2D67F30 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x27A6E0 Offset: 0x27A7E1 VA: 0x27A6E0
 public struct TouchScreenState2.TouchStateArray2 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14674
 {
@@ -140,6 +245,113 @@ private sealed class TouchScreenState3.TouchStateArray3.<GetEnumerator>d__17 : I
 
 	[DebuggerHiddenAttribute] // RVA: 0x2D15B0 Offset: 0x2D16B1 VA: 0x2D15B0
 	// RVA: 0x2D680D0 Offset: 0x2D681D1 VA: 0x2D680D0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A730 Offset: 0x27A831 VA: 0x27A730
+public struct TouchScreenState3.TouchStateArray3 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14677
+{
+	// Fields
+	private const int _Length = 3;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x23A0500 Offset: 0x23A0601 VA: 0x23A0500
+	public int get_Length() { }
+
+	// RVA: 0x23A0510 Offset: 0x23A0611 VA: 0x23A0510 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x23A05B0 Offset: 0x23A06B1 VA: 0x23A05B0 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x23A0630 Offset: 0x23A0731 VA: 0x23A0630 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x23A0640 Offset: 0x23A0741 VA: 0x23A0640 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x23A0650 Offset: 0x23A0751 VA: 0x23A0650 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x23A0780 Offset: 0x23A0881 VA: 0x23A0780 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x23A08D0 Offset: 0x23A09D1 VA: 0x23A08D0 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x23A0A80 Offset: 0x23A0B81 VA: 0x23A0A80 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1500 Offset: 0x2D1601 VA: 0x2D1500
+	// RVA: 0x23A0B80 Offset: 0x23A0C81 VA: 0x23A0B80 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x23A0C00 Offset: 0x23A0D01 VA: 0x23A0C00 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x23A0C80 Offset: 0x23A0D81 VA: 0x23A0C80 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x23A0CC0 Offset: 0x23A0DC1 VA: 0x23A0CC0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x23A0D00 Offset: 0x23A0E01 VA: 0x23A0D00 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x23A0D40 Offset: 0x23A0E41 VA: 0x23A0D40 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x23A0D80 Offset: 0x23A0E81 VA: 0x23A0D80 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27A7C0 Offset: 0x27A8C1 VA: 0x27A7C0
+private sealed class TouchScreenState4.TouchStateArray4.<GetEnumerator>d__18 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14679
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState4.TouchStateArray4 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1630 Offset: 0x2D1731 VA: 0x2D1630
+	// RVA: 0x2D68150 Offset: 0x2D68251 VA: 0x2D68150
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1640 Offset: 0x2D1741 VA: 0x2D1640
+	// RVA: 0x2D68180 Offset: 0x2D68281 VA: 0x2D68180 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D68190 Offset: 0x2D68291 VA: 0x2D68190 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1650 Offset: 0x2D1751 VA: 0x2D1650
+	// RVA: 0x2D68210 Offset: 0x2D68311 VA: 0x2D68210 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1660 Offset: 0x2D1761 VA: 0x2D1660
+	// RVA: 0x2D68230 Offset: 0x2D68331 VA: 0x2D68230 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1670 Offset: 0x2D1771 VA: 0x2D1670
+	// RVA: 0x2D68270 Offset: 0x2D68371 VA: 0x2D68270 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 
@@ -252,6 +464,115 @@ private sealed class TouchScreenState5.TouchStateArray5.<GetEnumerator>d__19 : I
 }
 
 // Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A7D0 Offset: 0x27A8D1 VA: 0x27A7D0
+public struct TouchScreenState5.TouchStateArray5 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14683
+{
+	// Fields
+	private const int _Length = 5;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+	private TouchState _value3; // 0x78
+	private TouchState _value4; // 0xA0
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x23A1920 Offset: 0x23A1A21 VA: 0x23A1920
+	public int get_Length() { }
+
+	// RVA: 0x23A1930 Offset: 0x23A1A31 VA: 0x23A1930 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x23A1A10 Offset: 0x23A1B11 VA: 0x23A1A10 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x23A1AB0 Offset: 0x23A1BB1 VA: 0x23A1AB0 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x23A1AC0 Offset: 0x23A1BC1 VA: 0x23A1AC0 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x23A1AD0 Offset: 0x23A1BD1 VA: 0x23A1AD0 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x23A1CB0 Offset: 0x23A1DB1 VA: 0x23A1CB0 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x23A1ED0 Offset: 0x23A1FD1 VA: 0x23A1ED0 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x23A2130 Offset: 0x23A2231 VA: 0x23A2130 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1680 Offset: 0x2D1781 VA: 0x2D1680
+	// RVA: 0x23A23B0 Offset: 0x23A24B1 VA: 0x23A23B0 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x23A2430 Offset: 0x23A2531 VA: 0x23A2430 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x23A24B0 Offset: 0x23A25B1 VA: 0x23A24B0 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x23A24F0 Offset: 0x23A25F1 VA: 0x23A24F0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x23A2530 Offset: 0x23A2631 VA: 0x23A2530 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x23A2570 Offset: 0x23A2671 VA: 0x23A2570 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x23A25B0 Offset: 0x23A26B1 VA: 0x23A25B0 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27A860 Offset: 0x27A961 VA: 0x27A860
+private sealed class TouchScreenState6.TouchStateArray6.<GetEnumerator>d__20 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14685
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState6.TouchStateArray6 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D17B0 Offset: 0x2D18B1 VA: 0x2D17B0
+	// RVA: 0x2D684A0 Offset: 0x2D685A1 VA: 0x2D684A0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D17C0 Offset: 0x2D18C1 VA: 0x2D17C0
+	// RVA: 0x2D684D0 Offset: 0x2D685D1 VA: 0x2D684D0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D684E0 Offset: 0x2D685E1 VA: 0x2D684E0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D17D0 Offset: 0x2D18D1 VA: 0x2D17D0
+	// RVA: 0x2D68580 Offset: 0x2D68681 VA: 0x2D68580 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D17E0 Offset: 0x2D18E1 VA: 0x2D17E0
+	// RVA: 0x2D685A0 Offset: 0x2D686A1 VA: 0x2D685A0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D17F0 Offset: 0x2D18F1 VA: 0x2D17F0
+	// RVA: 0x2D685E0 Offset: 0x2D686E1 VA: 0x2D685E0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x27A820 Offset: 0x27A921 VA: 0x27A820
 public struct TouchScreenState6.TouchStateArray6 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14686
 {
@@ -358,6 +679,117 @@ private sealed class TouchScreenState7.TouchStateArray7.<GetEnumerator>d__21 : I
 
 	[DebuggerHiddenAttribute] // RVA: 0x2D18B0 Offset: 0x2D19B1 VA: 0x2D18B0
 	// RVA: 0x2D687B0 Offset: 0x2D688B1 VA: 0x2D687B0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A870 Offset: 0x27A971 VA: 0x27A870
+public struct TouchScreenState7.TouchStateArray7 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14689
+{
+	// Fields
+	private const int _Length = 7;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+	private TouchState _value3; // 0x78
+	private TouchState _value4; // 0xA0
+	private TouchState _value5; // 0xC8
+	private TouchState _value6; // 0xF0
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x23A33C0 Offset: 0x23A34C1 VA: 0x23A33C0
+	public int get_Length() { }
+
+	// RVA: 0x23A33D0 Offset: 0x23A34D1 VA: 0x23A33D0 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x23A34D0 Offset: 0x23A35D1 VA: 0x23A34D0 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x23A3580 Offset: 0x23A3681 VA: 0x23A3580 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x23A3590 Offset: 0x23A3691 VA: 0x23A3590 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x23A35A0 Offset: 0x23A36A1 VA: 0x23A35A0 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x23A37D0 Offset: 0x23A38D1 VA: 0x23A37D0 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x23A3A70 Offset: 0x23A3B71 VA: 0x23A3A70 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x23A3D70 Offset: 0x23A3E71 VA: 0x23A3D70 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1800 Offset: 0x2D1901 VA: 0x2D1800
+	// RVA: 0x23A40B0 Offset: 0x23A41B1 VA: 0x23A40B0 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x23A4130 Offset: 0x23A4231 VA: 0x23A4130 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x23A41B0 Offset: 0x23A42B1 VA: 0x23A41B0 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x23A41F0 Offset: 0x23A42F1 VA: 0x23A41F0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x23A4230 Offset: 0x23A4331 VA: 0x23A4230 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x23A4270 Offset: 0x23A4371 VA: 0x23A4270 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x23A42B0 Offset: 0x23A43B1 VA: 0x23A42B0 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27A900 Offset: 0x27AA01 VA: 0x27A900
+private sealed class TouchScreenState8.TouchStateArray8.<GetEnumerator>d__22 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14691
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState8.TouchStateArray8 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1930 Offset: 0x2D1A31 VA: 0x2D1930
+	// RVA: 0x2D68830 Offset: 0x2D68931 VA: 0x2D68830
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1940 Offset: 0x2D1A41 VA: 0x2D1940
+	// RVA: 0x2D68860 Offset: 0x2D68961 VA: 0x2D68860 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D68870 Offset: 0x2D68971 VA: 0x2D68870 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1950 Offset: 0x2D1A51 VA: 0x2D1950
+	// RVA: 0x2D68920 Offset: 0x2D68A21 VA: 0x2D68920 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1960 Offset: 0x2D1A61 VA: 0x2D1960
+	// RVA: 0x2D68940 Offset: 0x2D68A41 VA: 0x2D68940 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1970 Offset: 0x2D1A71 VA: 0x2D1970
+	// RVA: 0x2D68980 Offset: 0x2D68A81 VA: 0x2D68980 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 
@@ -474,6 +906,119 @@ private sealed class TouchScreenState9.TouchStateArray9.<GetEnumerator>d__23 : I
 }
 
 // Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A910 Offset: 0x27AA11 VA: 0x27A910
+public struct TouchScreenState9.TouchStateArray9 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14695
+{
+	// Fields
+	private const int _Length = 9;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+	private TouchState _value3; // 0x78
+	private TouchState _value4; // 0xA0
+	private TouchState _value5; // 0xC8
+	private TouchState _value6; // 0xF0
+	private TouchState _value7; // 0x118
+	private TouchState _value8; // 0x140
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x23A53C0 Offset: 0x23A54C1 VA: 0x23A53C0
+	public int get_Length() { }
+
+	// RVA: 0x23A53D0 Offset: 0x23A54D1 VA: 0x23A53D0 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x23A5500 Offset: 0x23A5601 VA: 0x23A5500 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x23A55C0 Offset: 0x23A56C1 VA: 0x23A55C0 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x23A55D0 Offset: 0x23A56D1 VA: 0x23A55D0 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x23A55E0 Offset: 0x23A56E1 VA: 0x23A55E0 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x23A5980 Offset: 0x23A5A81 VA: 0x23A5980 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x23A5D40 Offset: 0x23A5E41 VA: 0x23A5D40 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x23A6180 Offset: 0x23A6281 VA: 0x23A6180 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1980 Offset: 0x2D1A81 VA: 0x2D1980
+	// RVA: 0x23A6580 Offset: 0x23A6681 VA: 0x23A6580 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x23A6600 Offset: 0x23A6701 VA: 0x23A6600 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x23A6680 Offset: 0x23A6781 VA: 0x23A6680 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x23A66C0 Offset: 0x23A67C1 VA: 0x23A66C0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x23A6700 Offset: 0x23A6801 VA: 0x23A6700 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x23A6740 Offset: 0x23A6841 VA: 0x23A6740 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x23A6780 Offset: 0x23A6881 VA: 0x23A6780 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27A9A0 Offset: 0x27AAA1 VA: 0x27A9A0
+private sealed class TouchScreenState10.TouchStateArray10.<GetEnumerator>d__24 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14697
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState10.TouchStateArray10 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1AB0 Offset: 0x2D1BB1 VA: 0x2D1AB0
+	// RVA: 0x21FD480 Offset: 0x21FD581 VA: 0x21FD480
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1AC0 Offset: 0x2D1BC1 VA: 0x2D1AC0
+	// RVA: 0x21FD4B0 Offset: 0x21FD5B1 VA: 0x21FD4B0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x21FD4C0 Offset: 0x21FD5C1 VA: 0x21FD4C0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1AD0 Offset: 0x2D1BD1 VA: 0x2D1AD0
+	// RVA: 0x21FD590 Offset: 0x21FD691 VA: 0x21FD590 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1AE0 Offset: 0x2D1BE1 VA: 0x2D1AE0
+	// RVA: 0x21FD5B0 Offset: 0x21FD6B1 VA: 0x21FD5B0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1AF0 Offset: 0x2D1BF1 VA: 0x2D1AF0
+	// RVA: 0x21FD5F0 Offset: 0x21FD6F1 VA: 0x21FD5F0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x27A960 Offset: 0x27AA61 VA: 0x27A960
 public struct TouchScreenState10.TouchStateArray10 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14698
 {
@@ -584,6 +1129,121 @@ private sealed class TouchScreenState11.TouchStateArray11.<GetEnumerator>d__25 :
 
 	[DebuggerHiddenAttribute] // RVA: 0x2D1BB0 Offset: 0x2D1CB1 VA: 0x2D1BB0
 	// RVA: 0x21FD7F0 Offset: 0x21FD8F1 VA: 0x21FD7F0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A9B0 Offset: 0x27AAB1 VA: 0x27A9B0
+public struct TouchScreenState11.TouchStateArray11 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14701
+{
+	// Fields
+	private const int _Length = 11;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+	private TouchState _value3; // 0x78
+	private TouchState _value4; // 0xA0
+	private TouchState _value5; // 0xC8
+	private TouchState _value6; // 0xF0
+	private TouchState _value7; // 0x118
+	private TouchState _value8; // 0x140
+	private TouchState _value9; // 0x168
+	private TouchState _value10; // 0x190
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x23972A0 Offset: 0x23973A1 VA: 0x23972A0
+	public int get_Length() { }
+
+	// RVA: 0x23972B0 Offset: 0x23973B1 VA: 0x23972B0 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x2397400 Offset: 0x2397501 VA: 0x2397400 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x23974D0 Offset: 0x23975D1 VA: 0x23974D0 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x23974E0 Offset: 0x23975E1 VA: 0x23974E0 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x23974F0 Offset: 0x23975F1 VA: 0x23974F0 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x2397950 Offset: 0x2397A51 VA: 0x2397950 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x2397DE0 Offset: 0x2397EE1 VA: 0x2397DE0 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x23982E0 Offset: 0x23983E1 VA: 0x23982E0 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1B00 Offset: 0x2D1C01 VA: 0x2D1B00
+	// RVA: 0x2398790 Offset: 0x2398891 VA: 0x2398790 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x2398810 Offset: 0x2398911 VA: 0x2398810 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x2398890 Offset: 0x2398991 VA: 0x2398890 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x23988D0 Offset: 0x23989D1 VA: 0x23988D0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x2398910 Offset: 0x2398A11 VA: 0x2398910 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x2398950 Offset: 0x2398A51 VA: 0x2398950 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x2398990 Offset: 0x2398A91 VA: 0x2398990 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27AA40 Offset: 0x27AB41 VA: 0x27AA40
+private sealed class TouchScreenState12.TouchStateArray12.<GetEnumerator>d__26 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14703
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState12.TouchStateArray12 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1C30 Offset: 0x2D1D31 VA: 0x2D1C30
+	// RVA: 0x21FD870 Offset: 0x21FD971 VA: 0x21FD870
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1C40 Offset: 0x2D1D41 VA: 0x2D1C40
+	// RVA: 0x21FD8A0 Offset: 0x21FD9A1 VA: 0x21FD8A0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x21FD8B0 Offset: 0x21FD9B1 VA: 0x21FD8B0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1C50 Offset: 0x2D1D51 VA: 0x2D1C50
+	// RVA: 0x21FD990 Offset: 0x21FDA91 VA: 0x21FD990 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1C60 Offset: 0x2D1D61 VA: 0x2D1C60
+	// RVA: 0x21FD9B0 Offset: 0x21FDAB1 VA: 0x21FD9B0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1C70 Offset: 0x2D1D71 VA: 0x2D1C70
+	// RVA: 0x21FD9F0 Offset: 0x21FDAF1 VA: 0x21FD9F0 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 
@@ -704,6 +1364,123 @@ private sealed class TouchScreenState13.TouchStateArray13.<GetEnumerator>d__27 :
 }
 
 // Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27AA50 Offset: 0x27AB51 VA: 0x27AA50
+public struct TouchScreenState13.TouchStateArray13 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14707
+{
+	// Fields
+	private const int _Length = 13;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+	private TouchState _value3; // 0x78
+	private TouchState _value4; // 0xA0
+	private TouchState _value5; // 0xC8
+	private TouchState _value6; // 0xF0
+	private TouchState _value7; // 0x118
+	private TouchState _value8; // 0x140
+	private TouchState _value9; // 0x168
+	private TouchState _value10; // 0x190
+	private TouchState _value11; // 0x1B8
+	private TouchState _value12; // 0x1E0
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x239A190 Offset: 0x239A291 VA: 0x239A190
+	public int get_Length() { }
+
+	// RVA: 0x239A1A0 Offset: 0x239A2A1 VA: 0x239A1A0 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x239A320 Offset: 0x239A421 VA: 0x239A320 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x239A400 Offset: 0x239A501 VA: 0x239A400 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x239A410 Offset: 0x239A511 VA: 0x239A410 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x239A420 Offset: 0x239A521 VA: 0x239A420 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x239A8A0 Offset: 0x239A9A1 VA: 0x239A8A0 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x239AD50 Offset: 0x239AE51 VA: 0x239AD50 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x239B130 Offset: 0x239B231 VA: 0x239B130 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1C80 Offset: 0x2D1D81 VA: 0x2D1C80
+	// RVA: 0x239B6A0 Offset: 0x239B7A1 VA: 0x239B6A0 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x239B720 Offset: 0x239B821 VA: 0x239B720 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x239B7A0 Offset: 0x239B8A1 VA: 0x239B7A0 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x239B7E0 Offset: 0x239B8E1 VA: 0x239B7E0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x239B820 Offset: 0x239B921 VA: 0x239B820 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x239B860 Offset: 0x239B961 VA: 0x239B860 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x239B8A0 Offset: 0x239B9A1 VA: 0x239B8A0 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27AAE0 Offset: 0x27ABE1 VA: 0x27AAE0
+private sealed class TouchScreenState14.TouchStateArray14.<GetEnumerator>d__28 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14709
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState14.TouchStateArray14 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1DB0 Offset: 0x2D1EB1 VA: 0x2D1DB0
+	// RVA: 0x21FDC80 Offset: 0x21FDD81 VA: 0x21FDC80
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1DC0 Offset: 0x2D1EC1 VA: 0x2D1DC0
+	// RVA: 0x21FDCB0 Offset: 0x21FDDB1 VA: 0x21FDCB0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x21FDCC0 Offset: 0x21FDDC1 VA: 0x21FDCC0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1DD0 Offset: 0x2D1ED1 VA: 0x2D1DD0
+	// RVA: 0x21FDDC0 Offset: 0x21FDEC1 VA: 0x21FDDC0 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1DE0 Offset: 0x2D1EE1 VA: 0x2D1DE0
+	// RVA: 0x21FDDE0 Offset: 0x21FDEE1 VA: 0x21FDDE0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1DF0 Offset: 0x2D1EF1 VA: 0x2D1DF0
+	// RVA: 0x21FDE20 Offset: 0x21FDF21 VA: 0x21FDE20 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x27AAA0 Offset: 0x27ABA1 VA: 0x27AAA0
 public struct TouchScreenState14.TouchStateArray14 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14710
 {
@@ -818,6 +1595,125 @@ private sealed class TouchScreenState15.TouchStateArray15.<GetEnumerator>d__29 :
 
 	[DebuggerHiddenAttribute] // RVA: 0x2D1EB0 Offset: 0x2D1FB1 VA: 0x2D1EB0
 	// RVA: 0x21FE050 Offset: 0x21FE151 VA: 0x21FE050 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27AAF0 Offset: 0x27ABF1 VA: 0x27AAF0
+public struct TouchScreenState15.TouchStateArray15 : IList<TouchState>, ICollection<TouchState>, IEnumerable<TouchState>, IEnumerable // TypeDefIndex: 14713
+{
+	// Fields
+	private const int _Length = 15;
+	private TouchState _value0; // 0x0
+	private TouchState _value1; // 0x28
+	private TouchState _value2; // 0x50
+	private TouchState _value3; // 0x78
+	private TouchState _value4; // 0xA0
+	private TouchState _value5; // 0xC8
+	private TouchState _value6; // 0xF0
+	private TouchState _value7; // 0x118
+	private TouchState _value8; // 0x140
+	private TouchState _value9; // 0x168
+	private TouchState _value10; // 0x190
+	private TouchState _value11; // 0x1B8
+	private TouchState _value12; // 0x1E0
+	private TouchState _value13; // 0x208
+	private TouchState _value14; // 0x230
+
+	// Properties
+	public int Length { get; }
+	public TouchState Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x239D1B0 Offset: 0x239D2B1 VA: 0x239D1B0
+	public int get_Length() { }
+
+	// RVA: 0x239D1C0 Offset: 0x239D2C1 VA: 0x239D1C0 Slot: 4
+	public TouchState get_Item(int index) { }
+
+	// RVA: 0x239D370 Offset: 0x239D471 VA: 0x239D370 Slot: 5
+	public void set_Item(int index, TouchState value) { }
+
+	// RVA: 0x239D460 Offset: 0x239D561 VA: 0x239D460 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x239D470 Offset: 0x239D571 VA: 0x239D470 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x239D480 Offset: 0x239D581 VA: 0x239D480 Slot: 13
+	public bool Contains(TouchState item) { }
+
+	// RVA: 0x239D9B0 Offset: 0x239DAB1 VA: 0x239D9B0 Slot: 6
+	public int IndexOf(TouchState item) { }
+
+	// RVA: 0x239DF10 Offset: 0x239E011 VA: 0x239DF10 Slot: 14
+	public void CopyTo(TouchState[] array, int arrayIndex) { }
+
+	// RVA: 0x239E370 Offset: 0x239E471 VA: 0x239E370 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D1E00 Offset: 0x2D1F01 VA: 0x2D1E00
+	// RVA: 0x239E9A0 Offset: 0x239EAA1 VA: 0x239E9A0 Slot: 16
+	public IEnumerator<TouchState> GetEnumerator() { }
+
+	// RVA: 0x239EA20 Offset: 0x239EB21 VA: 0x239EA20 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x239EAA0 Offset: 0x239EBA1 VA: 0x239EAA0 Slot: 11
+	public void Add(TouchState item) { }
+
+	// RVA: 0x239EAE0 Offset: 0x239EBE1 VA: 0x239EAE0 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x239EB20 Offset: 0x239EC21 VA: 0x239EB20 Slot: 7
+	public void Insert(int index, TouchState item) { }
+
+	// RVA: 0x239EB60 Offset: 0x239EC61 VA: 0x239EB60 Slot: 15
+	public bool Remove(TouchState item) { }
+
+	// RVA: 0x239EBA0 Offset: 0x239ECA1 VA: 0x239EBA0 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x27AB80 Offset: 0x27AC81 VA: 0x27AB80
+private sealed class TouchScreenState16.TouchStateArray16.<GetEnumerator>d__30 : IEnumerator<TouchState>, IEnumerator, IDisposable // TypeDefIndex: 14715
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private TouchState <>2__current; // 0x18
+	public TouchScreenState16.TouchStateArray16 <>4__this; // 0x40
+
+	// Properties
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1F30 Offset: 0x2D2031 VA: 0x2D1F30
+	// RVA: 0x2D67C00 Offset: 0x2D67D01 VA: 0x2D67C00
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1F40 Offset: 0x2D2041 VA: 0x2D1F40
+	// RVA: 0x2D67C30 Offset: 0x2D67D31 VA: 0x2D67C30 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D67C40 Offset: 0x2D67D41 VA: 0x2D67C40 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1F50 Offset: 0x2D2051 VA: 0x2D1F50
+	// RVA: 0x2D67D50 Offset: 0x2D67E51 VA: 0x2D67D50 Slot: 4
+	private TouchState System.Collections.Generic.IEnumerator<nn.hid.TouchState>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1F60 Offset: 0x2D2061 VA: 0x2D1F60
+	// RVA: 0x2D67D70 Offset: 0x2D67E71 VA: 0x2D67D70 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2D1F70 Offset: 0x2D2071 VA: 0x2D1F70
+	// RVA: 0x2D67DB0 Offset: 0x2D67EB1 VA: 0x2D67DB0 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 

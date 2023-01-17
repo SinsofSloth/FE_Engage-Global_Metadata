@@ -1,10 +1,37 @@
 // Namespace: 
+public class SaveDataMenu.ConfirmDialog.YesItem : BasicDialogItemYes // TypeDefIndex: 12633
+{
+	// Fields
+	protected GameSaveDataHeaderReader.Handle m_DestSaveDataHeaderHandle; // 0x70
+
+	// Methods
+
+	// RVA: 0x21F81D0 Offset: 0x21F82D1 VA: 0x21F81D0
+	public void .ctor(GameSaveDataHeaderReader.Handle destSaveDataHeaderHandle, string text) { }
+}
+
+// Namespace: 
 public class SaveDataMenu.ConfirmDialog.NoItem : BasicDialogItemNo // TypeDefIndex: 12634
 {
 	// Methods
 
 	// RVA: 0x21F8110 Offset: 0x21F8211 VA: 0x21F8110
 	public void .ctor(string text) { }
+}
+
+// Namespace: 
+protected class SaveDataMenu.ConfirmDialog : YesNoDialog // TypeDefIndex: 12635
+{
+	// Fields
+	protected GameSaveDataHeaderReader.Handle m_SaveDataHeaderHandle; // 0xD8
+
+	// Methods
+
+	// RVA: 0x2032580 Offset: 0x2032681 VA: 0x2032580
+	public void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent dialogContent, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x20326D0 Offset: 0x20327D1 VA: 0x20326D0
+	public static void CreateBind(ProcInst super, string message, BasicDialogItemYes yesItem, GameSaveDataHeaderReader.Handle saveDataHedaerHandle) { }
 }
 
 // Namespace: 
@@ -20,6 +47,15 @@ private class SaveDataMenu.CancelConfirmDialog.YesDialogItem : SaveDataMenu.Conf
 }
 
 // Namespace: 
+protected class SaveDataMenu.CancelConfirmDialog.NoDialogItem : SaveDataMenu.ConfirmDialog.NoItem // TypeDefIndex: 12637
+{
+	// Methods
+
+	// RVA: 0x21F8080 Offset: 0x21F8181 VA: 0x21F8080
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class SaveDataMenu.CancelConfirmDialog : SaveDataMenu.ConfirmDialog // TypeDefIndex: 12638
 {
 	// Methods
@@ -32,12 +68,36 @@ private class SaveDataMenu.CancelConfirmDialog : SaveDataMenu.ConfirmDialog // T
 }
 
 // Namespace: 
+private class SaveDataMenu.LoadConfirmDialog.YesDialogItem : SaveDataMenu.ConfirmDialog.YesItem // TypeDefIndex: 12639
+{
+	// Methods
+
+	// RVA: 0x21F8850 Offset: 0x21F8951 VA: 0x21F8850
+	public void .ctor(GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x21F8900 Offset: 0x21F8A01 VA: 0x21F8900 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class SaveDataMenu.LoadConfirmDialog.NoDialogItem : SaveDataMenu.ConfirmDialog.NoItem // TypeDefIndex: 12640
 {
 	// Methods
 
 	// RVA: 0x21F87C0 Offset: 0x21F88C1 VA: 0x21F87C0
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class SaveDataMenu.LoadConfirmDialog : SaveDataMenu.ConfirmDialog // TypeDefIndex: 12641
+{
+	// Methods
+
+	// RVA: 0x2032B70 Offset: 0x2032C71 VA: 0x2032B70
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent dialogContent, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x2032BB0 Offset: 0x2032CB1 VA: 0x2032BB0
+	public static void CreateBind(ProcInst super, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
 }
 
 // Namespace: 
@@ -53,6 +113,15 @@ public class SaveDataMenu.SaveConfirmDialog.YesDialogItem : SaveDataMenu.Confirm
 }
 
 // Namespace: 
+public class SaveDataMenu.SaveConfirmDialog.NoDialogItem : SaveDataMenu.ConfirmDialog.NoItem // TypeDefIndex: 12643
+{
+	// Methods
+
+	// RVA: 0x21F89A0 Offset: 0x21F8AA1 VA: 0x21F89A0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class SaveDataMenu.SaveConfirmDialog : SaveDataMenu.ConfirmDialog // TypeDefIndex: 12644
 {
 	// Methods
@@ -65,12 +134,36 @@ private class SaveDataMenu.SaveConfirmDialog : SaveDataMenu.ConfirmDialog // Typ
 }
 
 // Namespace: 
+public class SaveDataMenu.SuspendConfirmDialog.YesDialogItem : SaveDataMenu.ConfirmDialog.YesItem // TypeDefIndex: 12645
+{
+	// Methods
+
+	// RVA: 0x21F8CE0 Offset: 0x21F8DE1 VA: 0x21F8CE0
+	public void .ctor(GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x21F8D90 Offset: 0x21F8E91 VA: 0x21F8D90 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 public class SaveDataMenu.SuspendConfirmDialog.NoDialogItem : SaveDataMenu.ConfirmDialog.NoItem // TypeDefIndex: 12646
 {
 	// Methods
 
 	// RVA: 0x21F8C50 Offset: 0x21F8D51 VA: 0x21F8C50
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class SaveDataMenu.SuspendConfirmDialog : SaveDataMenu.ConfirmDialog // TypeDefIndex: 12647
+{
+	// Methods
+
+	// RVA: 0x2035010 Offset: 0x2035111 VA: 0x2035010
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent dialogContent, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x20334B0 Offset: 0x20335B1 VA: 0x20334B0
+	public static void CreateBind(ProcInst super, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
 }
 
 // Namespace: 
@@ -89,6 +182,15 @@ private class SaveDataMenu.CopyConfirmDialog.YesDialogItem : SaveDataMenu.Confir
 }
 
 // Namespace: 
+private class SaveDataMenu.CopyConfirmDialog.NoDialogItem : SaveDataMenu.ConfirmDialog.NoItem // TypeDefIndex: 12649
+{
+	// Methods
+
+	// RVA: 0x21F8220 Offset: 0x21F8321 VA: 0x21F8220
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class SaveDataMenu.CopyConfirmDialog : SaveDataMenu.ConfirmDialog // TypeDefIndex: 12650
 {
 	// Fields
@@ -104,12 +206,36 @@ private class SaveDataMenu.CopyConfirmDialog : SaveDataMenu.ConfirmDialog // Typ
 }
 
 // Namespace: 
+private class SaveDataMenu.DeleteConfirmDialog.YesDialogItem : SaveDataMenu.ConfirmDialog.YesItem // TypeDefIndex: 12651
+{
+	// Methods
+
+	// RVA: 0x21F8600 Offset: 0x21F8701 VA: 0x21F8600
+	public void .ctor(GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x21F86B0 Offset: 0x21F87B1 VA: 0x21F86B0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class SaveDataMenu.DeleteConfirmDialog.NoDialogItem : SaveDataMenu.ConfirmDialog.NoItem // TypeDefIndex: 12652
 {
 	// Methods
 
 	// RVA: 0x21F8570 Offset: 0x21F8671 VA: 0x21F8570
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class SaveDataMenu.DeleteConfirmDialog : SaveDataMenu.ConfirmDialog // TypeDefIndex: 12653
+{
+	// Methods
+
+	// RVA: 0x2032A20 Offset: 0x2032B21 VA: 0x2032A20
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent dialogContent, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
+
+	// RVA: 0x2032A60 Offset: 0x2032B61 VA: 0x2032A60
+	public static void CreateBind(ProcInst super, GameSaveDataHeaderReader.Handle saveDataHeaderHandle) { }
 }
 
 // Namespace: 
@@ -144,6 +270,27 @@ public class SaveDataMenu.MenuItem : BasicMenuItem // TypeDefIndex: 12654
 
 	// RVA: 0x20335C0 Offset: 0x20336C1 VA: 0x20335C0 Slot: 19
 	public override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
+public class SaveDataMenu.MenuContent : BasicMenuContent // TypeDefIndex: 12655
+{
+	// Methods
+
+	// RVA: 0x2032CB0 Offset: 0x2032DB1 VA: 0x2032CB0 Slot: 4
+	public override int GetMenuItemContentMax() { }
+
+	// RVA: 0x2032CC0 Offset: 0x2032DC1 VA: 0x2032CC0 Slot: 21
+	public override float CalcW() { }
+
+	// RVA: 0x2032CD0 Offset: 0x2032DD1 VA: 0x2032CD0 Slot: 22
+	public override float CalcH() { }
+
+	// RVA: 0x2032CE0 Offset: 0x2032DE1 VA: 0x2032CE0 Slot: 10
+	protected override float CalcCursorMovedPosY(int menuItemIndex) { }
+
+	// RVA: 0x2032DD0 Offset: 0x2032ED1 VA: 0x2032DD0
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -206,6 +353,19 @@ public class SaveDataMenu.MenuItemContent : BasicMenuItemContent // TypeDefIndex
 
 	// RVA: 0x2034F70 Offset: 0x2035071 VA: 0x2034F70
 	public void .ctor() { }
+}
+
+// Namespace: 
+public enum SaveDataMenu.Mode // TypeDefIndex: 12657
+{
+	// Fields
+	public int value__; // 0x0
+	public const SaveDataMenu.Mode Load = 0;
+	public const SaveDataMenu.Mode Save = 1;
+	public const SaveDataMenu.Mode SaveComplete = 2;
+	public const SaveDataMenu.Mode Suspend = 3;
+	public const SaveDataMenu.Mode Copy = 4;
+	public const SaveDataMenu.Mode Delete = 5;
 }
 
 // Namespace: 

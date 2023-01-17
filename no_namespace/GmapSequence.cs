@@ -1,10 +1,59 @@
 // Namespace: 
+public enum GmapSequence.Label // TypeDefIndex: 10313
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSequence.Label Init = 0;
+	public const GmapSequence.Label EnterFromOtherGmap = 1;
+	public const GmapSequence.Label Event = 2;
+	public const GmapSequence.Label CheckSpot = 3;
+	public const GmapSequence.Label AppearSpot = 4;
+	public const GmapSequence.Label CheckDispos = 5;
+	public const GmapSequence.Label CheckDisposDebug = 6;
+	public const GmapSequence.Label Tick = 7;
+	public const GmapSequence.Label TickWithoutCamaraWait = 8;
+	public const GmapSequence.Label Move = 9;
+	public const GmapSequence.Label MoveToOtherGmap = 10;
+	public const GmapSequence.Label SaveDataLoad = 11;
+	public const GmapSequence.Label End = 12;
+	public const GmapSequence.Label Tail = 13;
+}
+
+// Namespace: 
 private enum GmapSequence.EnterChapterSequence.Label // TypeDefIndex: 10314
 {
 	// Fields
 	public int value__; // 0x0
 	public const GmapSequence.EnterChapterSequence.Label Talk = 0;
 	public const GmapSequence.EnterChapterSequence.Label Dialog = 1;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276980 Offset: 0x276A81 VA: 0x276980
+private sealed class GmapSequence.EnterChapterSequence.<>c__DisplayClass6_0 // TypeDefIndex: 10315
+{
+	// Fields
+	public Action decideEventHandler; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DCC8E0 Offset: 0x1DCC9E1 VA: 0x1DCC8E0
+	public void .ctor() { }
+
+	// RVA: 0x1DCC8F0 Offset: 0x1DCC9F1 VA: 0x1DCC8F0
+	internal void <.ctor>b__0() { }
+
+	// RVA: 0x1DCC980 Offset: 0x1DCCA81 VA: 0x1DCC980
+	internal void <.ctor>b__1() { }
+
+	// RVA: 0x1DCCA10 Offset: 0x1DCCB11 VA: 0x1DCCA10
+	internal void <.ctor>b__2() { }
+
+	// RVA: 0x1DCCAA0 Offset: 0x1DCCBA1 VA: 0x1DCCAA0
+	internal void <.ctor>b__3() { }
+
+	// RVA: 0x1DCCB30 Offset: 0x1DCCC31 VA: 0x1DCCB30
+	internal void <.ctor>b__4() { }
 }
 
 // Namespace: 
@@ -39,6 +88,21 @@ public class GmapSequence.EnterChapterSequence : ProcInst // TypeDefIndex: 10316
 }
 
 // Namespace: 
+private enum GmapSequence.GmapDisposeSequence.Label // TypeDefIndex: 10317
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSequence.GmapDisposeSequence.Label CheckDispos = 0;
+	public const GmapSequence.GmapDisposeSequence.Label UpdateDispos = 1;
+	public const GmapSequence.GmapDisposeSequence.Label AppearDispos = 2;
+	public const GmapSequence.GmapDisposeSequence.Label AppearDisposEnd = 3;
+	public const GmapSequence.GmapDisposeSequence.Label AppearDisposSkip = 4;
+	public const GmapSequence.GmapDisposeSequence.Label AppearDisposSkipBegin = 5;
+	public const GmapSequence.GmapDisposeSequence.Label AppearDisposSkipEnd = 6;
+	public const GmapSequence.GmapDisposeSequence.Label End = 7;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x276990 Offset: 0x276A91 VA: 0x276990
 private sealed class GmapSequence.GmapDisposeSequence.<>c__DisplayClass4_0 // TypeDefIndex: 10318
 {
@@ -55,6 +119,47 @@ private sealed class GmapSequence.GmapDisposeSequence.<>c__DisplayClass4_0 // Ty
 
 	// RVA: 0x1DCCCB0 Offset: 0x1DCCDB1 VA: 0x1DCCCB0
 	internal void <CheckAppearDisposSpot>b__1(GmapSpot spot) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2769A0 Offset: 0x276AA1 VA: 0x2769A0
+private sealed class GmapSequence.GmapDisposeSequence.<DisposMoveCamera>d__5 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10319
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public GmapSequence.GmapDisposeSequence <>4__this; // 0x20
+	private GmapCamera <camera>5__2; // 0x28
+	private float <start>5__3; // 0x30
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDB90 Offset: 0x2BDC91 VA: 0x2BDB90
+	// RVA: 0x1DCCCD0 Offset: 0x1DCCDD1 VA: 0x1DCCCD0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDBA0 Offset: 0x2BDCA1 VA: 0x2BDBA0
+	// RVA: 0x1DCCD00 Offset: 0x1DCCE01 VA: 0x1DCCD00 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1DCCD10 Offset: 0x1DCCE11 VA: 0x1DCCD10 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDBB0 Offset: 0x2BDCB1 VA: 0x2BDBB0
+	// RVA: 0x1DCD0B0 Offset: 0x1DCD1B1 VA: 0x1DCD0B0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDBC0 Offset: 0x2BDCC1 VA: 0x2BDBC0
+	// RVA: 0x1DCD0C0 Offset: 0x1DCD1C1 VA: 0x1DCD0C0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDBD0 Offset: 0x2BDCD1 VA: 0x2BDBD0
+	// RVA: 0x1DCD100 Offset: 0x1DCD201 VA: 0x1DCD100 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 
@@ -98,6 +203,22 @@ private sealed class GmapSequence.GmapDisposeSequence.<WaitAppearDispos>d__7 : I
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2769C0 Offset: 0x276AC1 VA: 0x2769C0
+private sealed class GmapSequence.GmapDisposeSequence.<>c__DisplayClass12_0 // TypeDefIndex: 10321
+{
+	// Fields
+	public List<GmapSpot> spotList; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DCCBC0 Offset: 0x1DCCCC1 VA: 0x1DCCBC0
+	public void .ctor() { }
+
+	// RVA: 0x1DCCBD0 Offset: 0x1DCCCD1 VA: 0x1DCCBD0
+	internal void <DisposUpdateOfOtherMode>b__0(GmapSpot spot) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2769D0 Offset: 0x276AD1 VA: 0x2769D0
 private sealed class GmapSequence.GmapDisposeSequence.<>c__DisplayClass15_0 // TypeDefIndex: 10322
 {
@@ -117,6 +238,62 @@ private sealed class GmapSequence.GmapDisposeSequence.<>c__DisplayClass15_0 // T
 }
 
 // Namespace: 
+private class GmapSequence.GmapDisposeSequence : ProcInst // TypeDefIndex: 10323
+{
+	// Fields
+	private GmapSpot m_DisposSpot; // 0x70
+
+	// Methods
+
+	// RVA: 0x22F1020 Offset: 0x22F1121 VA: 0x22F1020
+	private void CheckDispos() { }
+
+	// RVA: 0x22F1150 Offset: 0x22F1251 VA: 0x22F1150
+	private void DetermineDisposSpot() { }
+
+	// RVA: 0x22F11D0 Offset: 0x22F12D1 VA: 0x22F11D0
+	private void CheckAppearDisposSpot() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2BDAB0 Offset: 0x2BDBB1 VA: 0x2BDAB0
+	// RVA: 0x22F1440 Offset: 0x22F1541 VA: 0x22F1440
+	private IEnumerator DisposMoveCamera() { }
+
+	// RVA: 0x22F14C0 Offset: 0x22F15C1 VA: 0x22F14C0
+	private void StartDisposEffect() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2BDB20 Offset: 0x2BDC21 VA: 0x2BDB20
+	// RVA: 0x22F1530 Offset: 0x22F1631 VA: 0x22F1530
+	private IEnumerator WaitAppearDispos() { }
+
+	// RVA: 0x22F15B0 Offset: 0x22F16B1 VA: 0x22F15B0
+	private void SetReturnCameraPosition() { }
+
+	// RVA: 0x22F1660 Offset: 0x22F1761 VA: 0x22F1660
+	private void StartAppearSkip() { }
+
+	// RVA: 0x22F16E0 Offset: 0x22F17E1 VA: 0x22F16E0
+	private void EndAppearSkip() { }
+
+	// RVA: 0x22F1760 Offset: 0x22F1861 VA: 0x22F1760
+	private void WaitCameraMove() { }
+
+	// RVA: 0x22F1810 Offset: 0x22F1911 VA: 0x22F1810
+	private void DisposUpdateOfOtherMode() { }
+
+	// RVA: 0x22F1BC0 Offset: 0x22F1CC1 VA: 0x22F1BC0
+	private void SetUpEncountInfo() { }
+
+	// RVA: 0x22F1C40 Offset: 0x22F1D41 VA: 0x22F1C40
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x22F1CD0 Offset: 0x22F1DD1 VA: 0x22F1CD0
+	private static ProcDesc[] GetDescs(GmapSequence.GmapDisposeSequence p) { }
+
+	// RVA: 0x22F1CC0 Offset: 0x22F1DC1 VA: 0x22F1CC0
+	public void .ctor() { }
+}
+
+// Namespace: 
 public enum GmapSequence.GmapFreeCameraSequence.Dir // TypeDefIndex: 10324
 {
 	// Fields
@@ -126,6 +303,18 @@ public enum GmapSequence.GmapFreeCameraSequence.Dir // TypeDefIndex: 10324
 	public const GmapSequence.GmapFreeCameraSequence.Dir Left = 2;
 	public const GmapSequence.GmapFreeCameraSequence.Dir Right = 3;
 	public const GmapSequence.GmapFreeCameraSequence.Dir Num = 4;
+}
+
+// Namespace: 
+[FlagsAttribute] // RVA: 0x2769E0 Offset: 0x276AE1 VA: 0x2769E0
+public enum GmapSequence.GmapFreeCameraSequence.DirFlag // TypeDefIndex: 10325
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSequence.GmapFreeCameraSequence.DirFlag Up = 1;
+	public const GmapSequence.GmapFreeCameraSequence.DirFlag Left = 2;
+	public const GmapSequence.GmapFreeCameraSequence.DirFlag Right = 4;
+	public const GmapSequence.GmapFreeCameraSequence.DirFlag Down = 8;
 }
 
 // Namespace: 
@@ -159,6 +348,14 @@ public sealed class GmapSequence.GmapFreeCameraSequence.DirFlagField : BitFieldT
 }
 
 // Namespace: 
+private enum GmapSequence.GmapFreeCameraSequence.Label // TypeDefIndex: 10327
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSequence.GmapFreeCameraSequence.Label End = 0;
+}
+
+// Namespace: 
 private class GmapSequence.GmapFreeCameraSequence.SelfDestroy : MonoBehaviour // TypeDefIndex: 10328
 {
 	// Fields
@@ -177,11 +374,125 @@ private class GmapSequence.GmapFreeCameraSequence.SelfDestroy : MonoBehaviour //
 }
 
 // Namespace: 
+public class GmapSequence.GmapFreeCameraSequence : ProcInst // TypeDefIndex: 10329
+{
+	// Fields
+	private const string FreeCameraRootPath = "UI/Gmap/Prefabs/GmapFreeCameraRoot";
+	private GameObject m_Root; // 0x70
+	private const float MoveSpeedAngle = 0.17;
+	private float m_AngleX; // 0x78
+	private float m_AngleZ; // 0x7C
+	private Vector3 m_StartPosition; // 0x80
+	private Vector3 m_CachePosition; // 0x8C
+	private GmapSequence.GmapFreeCameraSequence.DirFlagField m_DisableFlag; // 0x98
+	private float[] m_AngleLimit; // 0xA0
+	private GmapCamera m_Camera; // 0xA8
+
+	// Methods
+
+	// RVA: 0x22F2C40 Offset: 0x22F2D41 VA: 0x22F2C40
+	public static void LoadResorces() { }
+
+	// RVA: 0x22F2CE0 Offset: 0x22F2DE1 VA: 0x22F2CE0
+	public static bool IsLoading() { }
+
+	// RVA: 0x22F2D60 Offset: 0x22F2E61 VA: 0x22F2D60
+	public static void UnloadResources() { }
+
+	// RVA: 0x22F2DE0 Offset: 0x22F2EE1 VA: 0x22F2DE0
+	private void Init() { }
+
+	// RVA: 0x22F2FB0 Offset: 0x22F30B1 VA: 0x22F2FB0
+	private bool WaitScroll() { }
+
+	// RVA: 0x22F3030 Offset: 0x22F3131 VA: 0x22F3030
+	private void Start() { }
+
+	// RVA: 0x22F3250 Offset: 0x22F3351 VA: 0x22F3250
+	private void Tick() { }
+
+	// RVA: 0x22F38A0 Offset: 0x22F39A1 VA: 0x22F38A0
+	private Vector3 TryLRMove(float moveLStickX) { }
+
+	// RVA: 0x22F3A00 Offset: 0x22F3B01 VA: 0x22F3A00
+	private Vector3 TryUDMove(float moveLStickY) { }
+
+	// RVA: 0x22F3CD0 Offset: 0x22F3DD1 VA: 0x22F3CD0
+	private static Vector3 CalcLeftRightPos(Vector3 pos, float angle) { }
+
+	// RVA: 0x22F4060 Offset: 0x22F4161 VA: 0x22F4060
+	private static Vector3 CalcUDPos(Vector3 pos, float angle) { }
+
+	// RVA: 0x22F31A0 Offset: 0x22F32A1 VA: 0x22F31A0
+	private void InitAngleLimit(GmapSequence.GmapFreeCameraSequence.DirFlagField flags) { }
+
+	// RVA: 0x22F3BB0 Offset: 0x22F3CB1 VA: 0x22F3BB0
+	private float ClampAngle(float angle, GmapSequence.GmapFreeCameraSequence.Dir dir) { }
+
+	// RVA: 0x22F40F0 Offset: 0x22F41F1 VA: 0x22F40F0
+	private bool TryGetAngleLimit(GmapSequence.GmapFreeCameraSequence.Dir dir, out float value) { }
+
+	// RVA: 0x22F3ED0 Offset: 0x22F3FD1 VA: 0x22F3ED0
+	private void SetAngleLimit(GmapSequence.GmapFreeCameraSequence.DirFlagField flag, float angle, GmapSequence.GmapFreeCameraSequence.Dir dir) { }
+
+	// RVA: 0x22F3D40 Offset: 0x22F3E41 VA: 0x22F3D40
+	private GmapSequence.GmapFreeCameraSequence.DirFlagField GetRecalcIgnoreFlag() { }
+
+	// RVA: 0x22F4140 Offset: 0x22F4241 VA: 0x22F4140
+	private void End() { }
+
+	// RVA: 0x22F4300 Offset: 0x22F4401 VA: 0x22F4300
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x22F47A0 Offset: 0x22F48A1 VA: 0x22F47A0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private enum GmapSequence.GmapTeleportSequence.Label // TypeDefIndex: 10330
 {
 	// Fields
 	public int value__; // 0x0
 	public const GmapSequence.GmapTeleportSequence.Label End = 0;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2769F0 Offset: 0x276AF1 VA: 0x2769F0
+private sealed class GmapSequence.GmapTeleportSequence.<StartTeleport>d__6 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10331
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public GmapSequence.GmapTeleportSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDCC0 Offset: 0x2BDDC1 VA: 0x2BDCC0
+	// RVA: 0x1DCD810 Offset: 0x1DCD911 VA: 0x1DCD810
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDCD0 Offset: 0x2BDDD1 VA: 0x2BDCD0
+	// RVA: 0x1DCD840 Offset: 0x1DCD941 VA: 0x1DCD840 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1DCD850 Offset: 0x1DCD951 VA: 0x1DCD850 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDCE0 Offset: 0x2BDDE1 VA: 0x2BDCE0
+	// RVA: 0x1DCD910 Offset: 0x1DCDA11 VA: 0x1DCD910 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDCF0 Offset: 0x2BDDF1 VA: 0x2BDCF0
+	// RVA: 0x1DCD920 Offset: 0x1DCDA21 VA: 0x1DCD920 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDD00 Offset: 0x2BDE01 VA: 0x2BDD00
+	// RVA: 0x1DCD960 Offset: 0x1DCDA61 VA: 0x1DCD960 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 
@@ -234,6 +545,14 @@ public class GmapSequence.GmapTeleportSequence : ProcInst // TypeDefIndex: 10332
 }
 
 // Namespace: 
+private enum GmapSequence.GmapWholeMapSequence.Label // TypeDefIndex: 10333
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapSequence.GmapWholeMapSequence.Label End = 0;
+}
+
+// Namespace: 
 private class GmapSequence.GmapWholeMapSequence : ProcInst // TypeDefIndex: 10334
 {
 	// Fields
@@ -260,6 +579,49 @@ private class GmapSequence.GmapWholeMapSequence : ProcInst // TypeDefIndex: 1033
 
 	// RVA: 0x1F9E340 Offset: 0x1F9E441 VA: 0x1F9E340
 	public static void CreateBind(ProcInst super) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276A00 Offset: 0x276B01 VA: 0x276A00
+private sealed class GmapSequence.<AppearPathTick>d__69 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 10335
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public GmapSequence <>4__this; // 0x20
+	private GmapLineRenderer <renderer>5__2; // 0x28
+	private Vector3 <up>5__3; // 0x30
+	private GameObject <spotEffect>5__4; // 0x40
+	private GameObject <symbolEffect>5__5; // 0x48
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDD10 Offset: 0x2BDE11 VA: 0x2BDD10
+	// RVA: 0x22EFA90 Offset: 0x22EFB91 VA: 0x22EFA90
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDD20 Offset: 0x2BDE21 VA: 0x2BDD20
+	// RVA: 0x22EFAC0 Offset: 0x22EFBC1 VA: 0x22EFAC0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x22EFAD0 Offset: 0x22EFBD1 VA: 0x22EFAD0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDD30 Offset: 0x2BDE31 VA: 0x2BDD30
+	// RVA: 0x22EFE90 Offset: 0x22EFF91 VA: 0x22EFE90 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDD40 Offset: 0x2BDE41 VA: 0x2BDD40
+	// RVA: 0x22EFEA0 Offset: 0x22EFFA1 VA: 0x22EFEA0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2BDD50 Offset: 0x2BDE51 VA: 0x2BDD50
+	// RVA: 0x22EFEE0 Offset: 0x22EFFE1 VA: 0x22EFEE0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 

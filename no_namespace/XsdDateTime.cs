@@ -15,6 +15,17 @@ private enum XsdDateTime.DateTimeTypeCode // TypeDefIndex: 2074
 }
 
 // Namespace: 
+private enum XsdDateTime.XsdDateTimeKind // TypeDefIndex: 2075
+{
+	// Fields
+	public int value__; // 0x0
+	public const XsdDateTime.XsdDateTimeKind Unspecified = 0;
+	public const XsdDateTime.XsdDateTimeKind Zulu = 1;
+	public const XsdDateTime.XsdDateTimeKind LocalWestOfZulu = 2;
+	public const XsdDateTime.XsdDateTimeKind LocalEastOfZulu = 3;
+}
+
+// Namespace: 
 private struct XsdDateTime.Parser // TypeDefIndex: 2076
 {
 	// Fields

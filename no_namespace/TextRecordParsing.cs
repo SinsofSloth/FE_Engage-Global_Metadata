@@ -39,6 +39,31 @@ public class TextRecordParsing.Record // TypeDefIndex: 6422
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B430 Offset: 0x5B531 VA: 0x5B430
+[Serializable]
+private sealed class TextRecordParsing.<>c // TypeDefIndex: 6423
+{
+	// Fields
+	public static readonly TextRecordParsing.<>c <>9; // 0x0
+	public static Func<string, string> <>9__9_0; // 0x8
+	public static Func<TextRecordParsing.Record, bool> <>9__12_1; // 0x10
+
+	// Methods
+
+	// RVA: 0x3A7F030 Offset: 0x3A7F131 VA: 0x3A7F030
+	private static void .cctor() { }
+
+	// RVA: 0x3A7F0A0 Offset: 0x3A7F1A1 VA: 0x3A7F0A0
+	public void .ctor() { }
+
+	// RVA: 0x3A7F0B0 Offset: 0x3A7F1B1 VA: 0x3A7F0B0
+	internal string <ParseRecordsFromReader>b__9_0(string item) { }
+
+	// RVA: 0x3A7F0C0 Offset: 0x3A7F1C1 VA: 0x3A7F0C0
+	internal bool <GetSectionRecords>b__12_1(TextRecordParsing.Record item) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x5B440 Offset: 0x5B541 VA: 0x5B440
 private sealed class TextRecordParsing.<>c__DisplayClass12_0 // TypeDefIndex: 6424
 {
@@ -52,5 +77,21 @@ private sealed class TextRecordParsing.<>c__DisplayClass12_0 // TypeDefIndex: 64
 
 	// RVA: 0x3A7F180 Offset: 0x3A7F281 VA: 0x3A7F180
 	internal bool <GetSectionRecords>b__0(TextRecordParsing.Record item) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x5B450 Offset: 0x5B551 VA: 0x5B450
+private sealed class TextRecordParsing.<>c__DisplayClass13_0 // TypeDefIndex: 6425
+{
+	// Fields
+	public string trimmedLine; // 0x10
+
+	// Methods
+
+	// RVA: 0x3A78020 Offset: 0x3A78121 VA: 0x3A78020
+	public void .ctor() { }
+
+	// RVA: 0x3A7F220 Offset: 0x3A7F321 VA: 0x3A7F220
+	internal bool <LineIsCommentedOut>b__0(string prefix) { }
 }
 

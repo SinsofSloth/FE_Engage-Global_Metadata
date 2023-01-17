@@ -1,4 +1,37 @@
 // Namespace: 
+private class AsyncSubject.Subscription<T> : IDisposable // TypeDefIndex: 6631
+{
+	// Fields
+	private readonly object gate; // 0x0
+	private AsyncSubject<T> parent; // 0x0
+	private IObserver<T> unsubscribeTarget; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(AsyncSubject<T> parent, IObserver<T> unsubscribeTarget) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34AFD00 Offset: 0x34AFE01 VA: 0x34AFD00
+	|-AsyncSubject.Subscription<object>..ctor
+	|
+	|-RVA: 0x34B1020 Offset: 0x34B1121 VA: 0x34B1020
+	|-AsyncSubject.Subscription<Unit>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34AFDB0 Offset: 0x34AFEB1 VA: 0x34AFDB0
+	|-AsyncSubject.Subscription<object>.Dispose
+	|
+	|-RVA: 0x34B10D0 Offset: 0x34B11D1 VA: 0x34B10D0
+	|-AsyncSubject.Subscription<Unit>.Dispose
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x12EF0 Offset: 0x12FF1 VA: 0x12EF0
 [Serializable]
 private sealed class AsyncSubject.AwaitObserver.<>c<T> // TypeDefIndex: 6632
@@ -40,6 +73,71 @@ private sealed class AsyncSubject.AwaitObserver.<>c<T> // TypeDefIndex: 6632
 	|
 	|-RVA: 0x2B34A60 Offset: 0x2B34B61 VA: 0x2B34A60
 	|-AsyncSubject.AwaitObserver.<>c<Unit>.<InvokeOnOriginalContext>b__6_0
+	*/
+}
+
+// Namespace: 
+private class AsyncSubject.AwaitObserver<T> : IObserver<T> // TypeDefIndex: 6633
+{
+	// Fields
+	private readonly SynchronizationContext _context; // 0x0
+	private readonly Action _callback; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(Action callback, bool originalContext) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F5EBE0 Offset: 0x2F5ECE1 VA: 0x2F5EBE0
+	|-AsyncSubject.AwaitObserver<object>..ctor
+	|
+	|-RVA: 0x2F5EEA0 Offset: 0x2F5EFA1 VA: 0x2F5EEA0
+	|-AsyncSubject.AwaitObserver<Unit>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F5EC40 Offset: 0x2F5ED41 VA: 0x2F5EC40
+	|-AsyncSubject.AwaitObserver<object>.OnCompleted
+	|
+	|-RVA: 0x2F5EF00 Offset: 0x2F5F001 VA: 0x2F5EF00
+	|-AsyncSubject.AwaitObserver<Unit>.OnCompleted
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F5EC60 Offset: 0x2F5ED61 VA: 0x2F5EC60
+	|-AsyncSubject.AwaitObserver<object>.OnError
+	|
+	|-RVA: 0x2F5EF20 Offset: 0x2F5F021 VA: 0x2F5EF20
+	|-AsyncSubject.AwaitObserver<Unit>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void OnNext(T value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F5EC80 Offset: 0x2F5ED81 VA: 0x2F5EC80
+	|-AsyncSubject.AwaitObserver<object>.OnNext
+	|
+	|-RVA: 0x2F5EF40 Offset: 0x2F5F041 VA: 0x2F5EF40
+	|-AsyncSubject.AwaitObserver<Unit>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1
+	private void InvokeOnOriginalContext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2F5EC90 Offset: 0x2F5ED91 VA: 0x2F5EC90
+	|-AsyncSubject.AwaitObserver<object>.InvokeOnOriginalContext
+	|
+	|-RVA: 0x2F5EF50 Offset: 0x2F5F051 VA: 0x2F5EF50
+	|-AsyncSubject.AwaitObserver<Unit>.InvokeOnOriginalContext
 	*/
 }
 

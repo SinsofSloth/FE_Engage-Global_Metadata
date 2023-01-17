@@ -38,6 +38,20 @@ public struct CoreUnsafeUtils.FixedBufferStringQueue // TypeDefIndex: 4516
 }
 
 // Namespace: 
+public interface CoreUnsafeUtils.IKeyGetter<TValue, TKey> // TypeDefIndex: 4517
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract TKey Get(ref TValue v);
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-CoreUnsafeUtils.IKeyGetter<object, object>.Get
+	*/
+}
+
+// Namespace: 
 internal struct CoreUnsafeUtils.DefaultKeyGetter<T> : CoreUnsafeUtils.IKeyGetter<T, T> // TypeDefIndex: 4518
 {
 	// Methods
@@ -49,5 +63,14 @@ internal struct CoreUnsafeUtils.DefaultKeyGetter<T> : CoreUnsafeUtils.IKeyGetter
 	|-RVA: 0x2510E60 Offset: 0x2510F61 VA: 0x2510E60
 	|-CoreUnsafeUtils.DefaultKeyGetter<object>.Get
 	*/
+}
+
+// Namespace: 
+internal struct CoreUnsafeUtils.UintKeyGetter : CoreUnsafeUtils.IKeyGetter<uint, uint> // TypeDefIndex: 4519
+{
+	// Methods
+
+	// RVA: 0x354EFE0 Offset: 0x354F0E1 VA: 0x354EFE0 Slot: 4
+	public uint Get(ref uint v) { }
 }
 

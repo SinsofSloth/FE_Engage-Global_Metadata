@@ -1,5 +1,18 @@
 // Namespace: 
 [Serializable]
+public enum IKSolverLimb.BendModifier // TypeDefIndex: 14385
+{
+	// Fields
+	public int value__; // 0x0
+	public const IKSolverLimb.BendModifier Animation = 0;
+	public const IKSolverLimb.BendModifier Target = 1;
+	public const IKSolverLimb.BendModifier Parent = 2;
+	public const IKSolverLimb.BendModifier Arm = 3;
+	public const IKSolverLimb.BendModifier Goal = 4;
+}
+
+// Namespace: 
+[Serializable]
 public struct IKSolverLimb.AxisDirection // TypeDefIndex: 14386
 {
 	// Fields

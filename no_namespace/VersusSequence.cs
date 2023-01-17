@@ -17,6 +17,38 @@ private class VersusSequence.VersusCasualMenu.SelectMapMenuItem : BasicMenuItem 
 }
 
 // Namespace: 
+public class VersusSequence.VersusCasualMenu : BasicMenu // TypeDefIndex: 13647
+{
+	// Fields
+	private const int c_MapMax = 6;
+	private static VersusMapMenuContent m_MenuContent; // 0x0
+	private static int m_InitialSelected; // 0x8
+
+	// Methods
+
+	// RVA: 0x1EE5170 Offset: 0x1EE5271 VA: 0x1EE5170
+	public static void InitializedSelected() { }
+
+	// RVA: 0x1EE51E0 Offset: 0x1EE52E1 VA: 0x1EE51E0
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x1EE5400 Offset: 0x1EE5501 VA: 0x1EE5400
+	protected void .ctor(List<BasicMenuItem> menuItemList, VersusMapMenuContent menuContent) { }
+
+	// RVA: 0x1EE5500 Offset: 0x1EE5601 VA: 0x1EE5500 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1EE5550 Offset: 0x1EE5651 VA: 0x1EE5550 Slot: 63
+	protected override string GetTutorial() { }
+
+	// RVA: 0x1EE55A0 Offset: 0x1EE56A1 VA: 0x1EE55A0 Slot: 51
+	protected override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1EE55C0 Offset: 0x1EE56C1 VA: 0x1EE55C0
+	private static void .cctor() { }
+}
+
+// Namespace: 
 private class VersusSequence.DebugPersistentMenu : DebugMenu // TypeDefIndex: 13648
 {
 	// Fields
@@ -102,6 +134,27 @@ private class VersusSequence.DebugPersistentMenu : DebugMenu // TypeDefIndex: 13
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279100 Offset: 0x279201 VA: 0x279100
+private sealed class VersusSequence.VersusYesNoDialog.YesItem.<>c__DisplayClass3_0 // TypeDefIndex: 13649
+{
+	// Fields
+	public Action decideCallback; // 0x10
+	public VersusSequence.VersusYesNoDialog.YesItem <>4__this; // 0x18
+	public Action cancelCallback; // 0x20
+
+	// Methods
+
+	// RVA: 0x2D72A50 Offset: 0x2D72B51 VA: 0x2D72A50
+	public void .ctor() { }
+
+	// RVA: 0x2D7F090 Offset: 0x2D7F191 VA: 0x2D7F090
+	internal BasicMenu.Result <.ctor>b__0() { }
+
+	// RVA: 0x2D7F0D0 Offset: 0x2D7F1D1 VA: 0x2D7F0D0
+	internal BasicMenu.Result <.ctor>b__1() { }
+}
+
+// Namespace: 
 private class VersusSequence.VersusYesNoDialog.YesItem : BasicDialogItemYes // TypeDefIndex: 13650
 {
 	// Fields
@@ -138,6 +191,22 @@ private class VersusSequence.VersusYesNoDialog.YesItem : BasicDialogItemYes // T
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279110 Offset: 0x279211 VA: 0x279110
+private sealed class VersusSequence.VersusYesNoDialog.NoItem.<>c__DisplayClass2_0 // TypeDefIndex: 13651
+{
+	// Fields
+	public Action callback; // 0x10
+
+	// Methods
+
+	// RVA: 0x2D72750 Offset: 0x2D72851 VA: 0x2D72750
+	public void .ctor() { }
+
+	// RVA: 0x2D7F060 Offset: 0x2D7F161 VA: 0x2D7F060
+	internal BasicMenu.Result <.ctor>b__0() { }
+}
+
+// Namespace: 
 private class VersusSequence.VersusYesNoDialog.NoItem : BasicDialogItemNo // TypeDefIndex: 13652
 {
 	// Fields
@@ -163,6 +232,24 @@ private class VersusSequence.VersusYesNoDialog.NoItem : BasicDialogItemNo // Typ
 }
 
 // Namespace: 
+private class VersusSequence.VersusYesNoDialog : YesNoDialog // TypeDefIndex: 13653
+{
+	// Methods
+
+	// RVA: 0x1DB8370 Offset: 0x1DB8471 VA: 0x1DB8370
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent menuContent) { }
+
+	// RVA: 0x1DB8380 Offset: 0x1DB8481 VA: 0x1DB8380
+	public static VersusSequence.VersusYesNoDialog CreateBind(ProcInst super, string message, string yesName = "", string noName = "", Action decideCallback, Action cancelCallback) { }
+
+	// RVA: 0x1DB85E0 Offset: 0x1DB86E1 VA: 0x1DB85E0
+	public static VersusSequence.VersusYesNoDialog CreateBind(ProcInst super, string message, string yesName = "", string noName = "", Func<BasicMenu.Result> decideCallback, Func<BasicMenu.Result> cancelCallback) { }
+
+	// RVA: 0x1DB8460 Offset: 0x1DB8561 VA: 0x1DB8460
+	private static VersusSequence.VersusYesNoDialog CreateBindImpl(ProcInst super, string message, string yesName, string noName, VersusSequence.VersusYesNoDialog.YesItem yesItem, VersusSequence.VersusYesNoDialog.NoItem noItem) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279120 Offset: 0x279221 VA: 0x279120
 [Serializable]
 private sealed class VersusSequence.VersusFriendMenu.FriendCasualMenuItem.<>c // TypeDefIndex: 13654
@@ -184,6 +271,33 @@ private sealed class VersusSequence.VersusFriendMenu.FriendCasualMenuItem.<>c //
 }
 
 // Namespace: 
+private class VersusSequence.VersusFriendMenu.FriendCasualMenuItem : BasicMenuItem // TypeDefIndex: 13655
+{
+	// Fields
+	private VersusServerCasualMetaData m_MetaData; // 0x68
+	private int m_FriendNumber; // 0x70
+	private string m_Name; // 0x78
+
+	// Methods
+
+	// RVA: 0x2D6BF90 Offset: 0x2D6C091 VA: 0x2D6BF90
+	public void .ctor(VersusServerCasualMetaData metaData, int num) { }
+
+	// RVA: 0x2D6C0A0 Offset: 0x2D6C1A1 VA: 0x2D6C0A0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D6C2F0 Offset: 0x2D6C3F1 VA: 0x2D6C2F0 Slot: 11
+	public override void OnBuildMenuItemContent() { }
+
+	// RVA: 0x2D6C0C0 Offset: 0x2D6C1C1 VA: 0x2D6C0C0
+	private BasicMenu.Result StartBattleDialog() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CC6B0 Offset: 0x2CC7B1 VA: 0x2CC6B0
+	// RVA: 0x2D6C300 Offset: 0x2D6C401 VA: 0x2D6C300
+	private BasicMenu.Result <StartBattleDialog>b__6_0() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279130 Offset: 0x279231 VA: 0x279130
 [Serializable]
 private sealed class VersusSequence.VersusFriendMenu.FriendRankedMenuItem.<>c // TypeDefIndex: 13656
@@ -202,6 +316,33 @@ private sealed class VersusSequence.VersusFriendMenu.FriendRankedMenuItem.<>c //
 
 	// RVA: 0x2D7E2C0 Offset: 0x2D7E3C1 VA: 0x2D7E2C0
 	internal BasicMenu.Result <StartBattleDialog>b__6_1() { }
+}
+
+// Namespace: 
+private class VersusSequence.VersusFriendMenu.FriendRankedMenuItem : BasicMenuItem // TypeDefIndex: 13657
+{
+	// Fields
+	private VersusServerRankedMetaData m_MetaData; // 0x68
+	private int m_FriendNumber; // 0x70
+	private string m_Name; // 0x78
+
+	// Methods
+
+	// RVA: 0x2D6C3D0 Offset: 0x2D6C4D1 VA: 0x2D6C3D0
+	public void .ctor(VersusServerRankedMetaData metaData, int num) { }
+
+	// RVA: 0x2D6C4E0 Offset: 0x2D6C5E1 VA: 0x2D6C4E0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D6C730 Offset: 0x2D6C831 VA: 0x2D6C730 Slot: 11
+	public override void OnBuildMenuItemContent() { }
+
+	// RVA: 0x2D6C500 Offset: 0x2D6C601 VA: 0x2D6C500
+	private BasicMenu.Result StartBattleDialog() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CC6C0 Offset: 0x2CC7C1 VA: 0x2CC6C0
+	// RVA: 0x2D6C740 Offset: 0x2D6C841 VA: 0x2D6C740
+	private BasicMenu.Result <StartBattleDialog>b__6_0() { }
 }
 
 // Namespace: 
@@ -236,6 +377,19 @@ public class VersusSequence.VersusFriendMenu : BasicMenu // TypeDefIndex: 13658
 }
 
 // Namespace: 
+public enum VersusSequence.VersusMatchingMenu.Result2 // TypeDefIndex: 13659
+{
+	// Fields
+	public int value__; // 0x0
+	public const VersusSequence.VersusMatchingMenu.Result2 Random = 0;
+	public const VersusSequence.VersusMatchingMenu.Result2 Friend = 1;
+	public const VersusSequence.VersusMatchingMenu.Result2 Code = 2;
+	public const VersusSequence.VersusMatchingMenu.Result2 Profile = 3;
+	public const VersusSequence.VersusMatchingMenu.Result2 End = 4;
+	public const VersusSequence.VersusMatchingMenu.Result2 Top = 0;
+}
+
+// Namespace: 
 private class VersusSequence.VersusMatchingMenu.RandomMenuItem : BasicMenuItem // TypeDefIndex: 13660
 {
 	// Methods
@@ -251,6 +405,21 @@ private class VersusSequence.VersusMatchingMenu.RandomMenuItem : BasicMenuItem /
 }
 
 // Namespace: 
+private class VersusSequence.VersusMatchingMenu.FriendMenuItem : BasicMenuItem // TypeDefIndex: 13661
+{
+	// Methods
+
+	// RVA: 0x2D6CB40 Offset: 0x2D6CC41 VA: 0x2D6CB40
+	public void .ctor() { }
+
+	// RVA: 0x2D6CBE0 Offset: 0x2D6CCE1 VA: 0x2D6CBE0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D6CCE0 Offset: 0x2D6CDE1 VA: 0x2D6CCE0 Slot: 12
+	public override void OnSelect() { }
+}
+
+// Namespace: 
 private class VersusSequence.VersusMatchingMenu.CodeMenuItem : BasicMenuItem // TypeDefIndex: 13662
 {
 	// Methods
@@ -262,6 +431,21 @@ private class VersusSequence.VersusMatchingMenu.CodeMenuItem : BasicMenuItem // 
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x2D6C980 Offset: 0x2D6CA81 VA: 0x2D6C980 Slot: 12
+	public override void OnSelect() { }
+}
+
+// Namespace: 
+private class VersusSequence.VersusMatchingMenu.ProfileMenuItem : BasicMenuItem // TypeDefIndex: 13663
+{
+	// Methods
+
+	// RVA: 0x2D6CEA0 Offset: 0x2D6CFA1 VA: 0x2D6CEA0
+	public void .ctor() { }
+
+	// RVA: 0x2D6CF40 Offset: 0x2D6D041 VA: 0x2D6CF40 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D6D010 Offset: 0x2D6D111 VA: 0x2D6D010 Slot: 12
 	public override void OnSelect() { }
 }
 
@@ -297,6 +481,27 @@ public class VersusSequence.VersusMatchingMenu : BasicMenu // TypeDefIndex: 1366
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279140 Offset: 0x279241 VA: 0x279140
+[Serializable]
+private sealed class VersusSequence.VersusProfileMenu.VersusProfileMenuItem.<>c // TypeDefIndex: 13665
+{
+	// Fields
+	public static readonly VersusSequence.VersusProfileMenu.VersusProfileMenuItem.<>c <>9; // 0x0
+	public static Func<BasicMenu.Result> <>9__9_1; // 0x8
+
+	// Methods
+
+	// RVA: 0x2D7E2D0 Offset: 0x2D7E3D1 VA: 0x2D7E2D0
+	private static void .cctor() { }
+
+	// RVA: 0x2D7E340 Offset: 0x2D7E441 VA: 0x2D7E340
+	public void .ctor() { }
+
+	// RVA: 0x2D7E350 Offset: 0x2D7E451 VA: 0x2D7E350
+	internal BasicMenu.Result <OpenDialog>b__9_1() { }
+}
+
+// Namespace: 
 private class VersusSequence.VersusProfileMenu.VersusProfileMenuItem : BasicMenuItem // TypeDefIndex: 13666
 {
 	// Fields
@@ -329,6 +534,34 @@ private class VersusSequence.VersusProfileMenu.VersusProfileMenuItem : BasicMenu
 }
 
 // Namespace: 
+public class VersusSequence.VersusProfileMenu : BasicMenu // TypeDefIndex: 13667
+{
+	// Fields
+	private const int c_FriendShowMax = 8;
+	private static int s_InitialSelected; // 0x0
+
+	// Methods
+
+	// RVA: 0x1EE6120 Offset: 0x1EE6221 VA: 0x1EE6120
+	public static void InitializedSelected() { }
+
+	// RVA: 0x1EE6190 Offset: 0x1EE6291 VA: 0x1EE6190
+	public static void CreateBind(ProcInst super, NexVersus.TargetSlotList targetList) { }
+
+	// RVA: 0x1EE6420 Offset: 0x1EE6521 VA: 0x1EE6420
+	protected void .ctor(List<BasicMenuItem> menuItemList, VersusProfileMenuContent menuContent) { }
+
+	// RVA: 0x1EE6520 Offset: 0x1EE6621 VA: 0x1EE6520 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1EE6570 Offset: 0x1EE6671 VA: 0x1EE6570 Slot: 51
+	protected override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1EE6590 Offset: 0x1EE6691 VA: 0x1EE6590
+	private static void .cctor() { }
+}
+
+// Namespace: 
 public enum VersusSequence.VersusRankedMenu.Result2 // TypeDefIndex: 13668
 {
 	// Fields
@@ -339,6 +572,24 @@ public enum VersusSequence.VersusRankedMenu.Result2 // TypeDefIndex: 13668
 	public const VersusSequence.VersusRankedMenu.Result2 MockBattle = 3;
 	public const VersusSequence.VersusRankedMenu.Result2 End = 4;
 	public const VersusSequence.VersusRankedMenu.Result2 Top = 0;
+}
+
+// Namespace: 
+private class VersusSequence.VersusRankedMenu.StartMenuItem : BasicMenuItem // TypeDefIndex: 13669
+{
+	// Methods
+
+	// RVA: 0x2D6E210 Offset: 0x2D6E311 VA: 0x2D6E210
+	public void .ctor() { }
+
+	// RVA: 0x2D6E2B0 Offset: 0x2D6E3B1 VA: 0x2D6E2B0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D6E3D0 Offset: 0x2D6E4D1 VA: 0x2D6E3D0 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x2D6E4E0 Offset: 0x2D6E5E1 VA: 0x2D6E4E0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
 }
 
 // Namespace: 
@@ -354,6 +605,24 @@ private class VersusSequence.VersusRankedMenu.MapEditMenuItem : BasicMenuItem //
 
 	// RVA: 0x2D6DAA0 Offset: 0x2D6DBA1 VA: 0x2D6DAA0 Slot: 12
 	public override void OnSelect() { }
+}
+
+// Namespace: 
+private class VersusSequence.VersusRankedMenu.ResultMenuItem : BasicMenuItem // TypeDefIndex: 13671
+{
+	// Methods
+
+	// RVA: 0x2D6DEE0 Offset: 0x2D6DFE1 VA: 0x2D6DEE0
+	public void .ctor() { }
+
+	// RVA: 0x2D6DF80 Offset: 0x2D6E081 VA: 0x2D6DF80 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D6E070 Offset: 0x2D6E171 VA: 0x2D6E070 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x2D6E180 Offset: 0x2D6E281 VA: 0x2D6E180 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
 }
 
 // Namespace: 
@@ -375,6 +644,37 @@ private class VersusSequence.VersusRankedMenu.MockBattleMenuItem : BasicMenuItem
 }
 
 // Namespace: 
+public class VersusSequence.VersusRankedMenu : BasicMenu // TypeDefIndex: 13673
+{
+	// Fields
+	private static VersusTopMenuContent m_MenuContent; // 0x0
+	private static int m_InitialSelected; // 0x8
+
+	// Methods
+
+	// RVA: 0x1EE65A0 Offset: 0x1EE66A1 VA: 0x1EE65A0
+	public static void InitializedSelected() { }
+
+	// RVA: 0x1EE6610 Offset: 0x1EE6711 VA: 0x1EE6610
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x1EE6810 Offset: 0x1EE6911 VA: 0x1EE6810
+	protected void .ctor(List<BasicMenuItem> menuItemList, VersusTopMenuContent menuContent) { }
+
+	// RVA: 0x1EE6910 Offset: 0x1EE6A11 VA: 0x1EE6910 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1EE6960 Offset: 0x1EE6A61 VA: 0x1EE6960 Slot: 63
+	protected override string GetTutorial() { }
+
+	// RVA: 0x1EE6A40 Offset: 0x1EE6B41 VA: 0x1EE6A40 Slot: 51
+	protected override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1EE6A60 Offset: 0x1EE6B61 VA: 0x1EE6A60
+	private static void .cctor() { }
+}
+
+// Namespace: 
 public enum VersusSequence.ResultDialog.SelectMenu // TypeDefIndex: 13674
 {
 	// Fields
@@ -383,6 +683,24 @@ public enum VersusSequence.ResultDialog.SelectMenu // TypeDefIndex: 13674
 	public const VersusSequence.ResultDialog.SelectMenu Result = 1;
 	public const VersusSequence.ResultDialog.SelectMenu Back = 2;
 	public const VersusSequence.ResultDialog.SelectMenu End = 3;
+}
+
+// Namespace: 
+public sealed class VersusSequence.ResultDialog.DecideEventHandler : MulticastDelegate // TypeDefIndex: 13675
+{
+	// Methods
+
+	// RVA: 0x2D6BB60 Offset: 0x2D6BC61 VA: 0x2D6BB60
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D6B900 Offset: 0x2D6BA01 VA: 0x2D6B900 Slot: 13
+	public virtual void Invoke(VersusSequence.ResultDialog.SelectMenu set) { }
+
+	// RVA: 0x2D6BB80 Offset: 0x2D6BC81 VA: 0x2D6BB80 Slot: 14
+	public virtual IAsyncResult BeginInvoke(VersusSequence.ResultDialog.SelectMenu set, AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D6BC10 Offset: 0x2D6BD11 VA: 0x2D6BC10 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -401,6 +719,42 @@ private class VersusSequence.ResultDialog.AssistItem : BasicDialogItem // TypeDe
 }
 
 // Namespace: 
+public class VersusSequence.ResultDialog : BasicDialog // TypeDefIndex: 13677
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x29C8E0 Offset: 0x29C9E1 VA: 0x29C8E0
+	private static VersusSequence.ResultDialog.DecideEventHandler <EventHandler>k__BackingField; // 0x0
+
+	// Properties
+	private static VersusSequence.ResultDialog.DecideEventHandler EventHandler { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CC6E0 Offset: 0x2CC7E1 VA: 0x2CC6E0
+	// RVA: 0x1EE4C70 Offset: 0x1EE4D71 VA: 0x1EE4C70
+	private static VersusSequence.ResultDialog.DecideEventHandler get_EventHandler() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CC6F0 Offset: 0x2CC7F1 VA: 0x2CC6F0
+	// RVA: 0x1EE4CE0 Offset: 0x1EE4DE1 VA: 0x1EE4CE0
+	private static void set_EventHandler(VersusSequence.ResultDialog.DecideEventHandler value) { }
+
+	// RVA: 0x1EE4D60 Offset: 0x1EE4E61 VA: 0x1EE4D60
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent menuContent) { }
+
+	// RVA: 0x1EE4DA0 Offset: 0x1EE4EA1 VA: 0x1EE4DA0
+	public static VersusSequence.ResultDialog CreateBind(ProcInst super, VersusSequence.ResultDialog.DecideEventHandler eventHandler) { }
+
+	// RVA: 0x1EE50F0 Offset: 0x1EE51F1 VA: 0x1EE50F0 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1EE5140 Offset: 0x1EE5241 VA: 0x1EE5140 Slot: 51
+	protected override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1EE5160 Offset: 0x1EE5261 VA: 0x1EE5160
+	private static void .cctor() { }
+}
+
+// Namespace: 
 public enum VersusSequence.VersusTopMenu.Result2 // TypeDefIndex: 13678
 {
 	// Fields
@@ -409,6 +763,21 @@ public enum VersusSequence.VersusTopMenu.Result2 // TypeDefIndex: 13678
 	public const VersusSequence.VersusTopMenu.Result2 Ranked = 1;
 	public const VersusSequence.VersusTopMenu.Result2 End = 2;
 	public const VersusSequence.VersusTopMenu.Result2 Top = 0;
+}
+
+// Namespace: 
+private class VersusSequence.VersusTopMenu.CasualMenuItem : BasicMenuItem // TypeDefIndex: 13679
+{
+	// Methods
+
+	// RVA: 0x2D72030 Offset: 0x2D72131 VA: 0x2D72030
+	public void .ctor() { }
+
+	// RVA: 0x2D720D0 Offset: 0x2D721D1 VA: 0x2D720D0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D721D0 Offset: 0x2D722D1 VA: 0x2D721D0 Slot: 12
+	public override void OnSelect() { }
 }
 
 // Namespace: 
@@ -427,6 +796,37 @@ private class VersusSequence.VersusTopMenu.RankedMenuItem : BasicMenuItem // Typ
 
 	// RVA: 0x2D72530 Offset: 0x2D72631 VA: 0x2D72530 Slot: 12
 	public override void OnSelect() { }
+}
+
+// Namespace: 
+public class VersusSequence.VersusTopMenu : BasicMenu // TypeDefIndex: 13681
+{
+	// Fields
+	private static VersusTopMenuContent m_MenuContent; // 0x0
+	private static int m_InitialSelected; // 0x8
+
+	// Methods
+
+	// RVA: 0x1DB7FA0 Offset: 0x1DB80A1 VA: 0x1DB7FA0
+	public static void InitializedSelected() { }
+
+	// RVA: 0x1DB8010 Offset: 0x1DB8111 VA: 0x1DB8010
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x1DB81A0 Offset: 0x1DB82A1 VA: 0x1DB81A0
+	protected void .ctor(List<BasicMenuItem> menuItemList, VersusTopMenuContent menuContent) { }
+
+	// RVA: 0x1DB82A0 Offset: 0x1DB83A1 VA: 0x1DB82A0 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1DB82F0 Offset: 0x1DB83F1 VA: 0x1DB82F0 Slot: 63
+	protected override string GetTutorial() { }
+
+	// RVA: 0x1DB8340 Offset: 0x1DB8441 VA: 0x1DB8340 Slot: 51
+	protected override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1DB8360 Offset: 0x1DB8461 VA: 0x1DB8360
+	private static void .cctor() { }
 }
 
 // Namespace: 
@@ -455,6 +855,16 @@ public class VersusSequence.ProfileUploadSequence : ProcInst // TypeDefIndex: 13
 }
 
 // Namespace: 
+private enum VersusSequence.ProfileDownloadSequence.Label // TypeDefIndex: 13683
+{
+	// Fields
+	public int value__; // 0x0
+	public const VersusSequence.ProfileDownloadSequence.Label Sanitize = 0;
+	public const VersusSequence.ProfileDownloadSequence.Label Save = 1;
+	public const VersusSequence.ProfileDownloadSequence.Label End = 2;
+}
+
+// Namespace: 
 private class VersusSequence.ProfileDownloadSequence.DownloadYesNoDialog.YesItem : BasicDialogItemYes // TypeDefIndex: 13684
 {
 	// Fields
@@ -467,6 +877,18 @@ private class VersusSequence.ProfileDownloadSequence.DownloadYesNoDialog.YesItem
 
 	// RVA: 0x2D7E170 Offset: 0x2D7E271 VA: 0x2D7E170 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class VersusSequence.ProfileDownloadSequence.DownloadYesNoDialog // TypeDefIndex: 13685
+{
+	// Methods
+
+	// RVA: 0x2D6B6E0 Offset: 0x2D6B7E1 VA: 0x2D6B6E0
+	public static void CreateBind(ProcInst super, string mess, Action decideCallback) { }
+
+	// RVA: 0x2D6B7C0 Offset: 0x2D6B8C1 VA: 0x2D6B7C0
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -483,6 +905,43 @@ private sealed class VersusSequence.ProfileDownloadSequence.<>c__DisplayClass7_0
 
 	// RVA: 0x2D6B6C0 Offset: 0x2D6B7C1 VA: 0x2D6B6C0
 	internal void <Sanitize>b__0(bool isOk) { }
+}
+
+// Namespace: 
+public class VersusSequence.ProfileDownloadSequence : ProcInst // TypeDefIndex: 13687
+{
+	// Fields
+	private VersusServerReplayMetaData m_ReplayMetaData; // 0x70
+
+	// Methods
+
+	// RVA: 0x1EE3B40 Offset: 0x1EE3C41 VA: 0x1EE3B40
+	private void .ctor(VersusServerReplayMetaData replayMetaData) { }
+
+	// RVA: 0x1EE3B80 Offset: 0x1EE3C81 VA: 0x1EE3B80
+	private bool TryGetOpponentInfo(out string name, out ulong principalID) { }
+
+	// RVA: 0x1EE3C60 Offset: 0x1EE3D61 VA: 0x1EE3C60
+	private void Download() { }
+
+	// RVA: 0x1EE3D60 Offset: 0x1EE3E61 VA: 0x1EE3D60
+	private void PostDownload() { }
+
+	// RVA: 0x1EE3E40 Offset: 0x1EE3F41 VA: 0x1EE3E40
+	private void Sanitize() { }
+
+	// RVA: 0x1EE3F60 Offset: 0x1EE4061 VA: 0x1EE3F60
+	private void OpenDialog() { }
+
+	// RVA: 0x1EE4070 Offset: 0x1EE4171 VA: 0x1EE4070
+	private void Save() { }
+
+	// RVA: 0x1EE4210 Offset: 0x1EE4311 VA: 0x1EE4210
+	public static void CreateBind(ProcInst super, VersusServerReplayMetaData replayMetaData) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CC710 Offset: 0x2CC811 VA: 0x2CC710
+	// RVA: 0x1EE4770 Offset: 0x1EE4871 VA: 0x1EE4770
+	private void <OpenDialog>b__8_0() { }
 }
 
 // Namespace: 
@@ -520,6 +979,24 @@ private enum VersusSequence.Label // TypeDefIndex: 13688
 	public const VersusSequence.Label FadeOutToRanked = 27;
 	public const VersusSequence.Label EndCasual = 28;
 	public const VersusSequence.Label End = 29;
+}
+
+// Namespace: 
+private interface VersusSequence.IVersusSequenceBase // TypeDefIndex: 13689
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract void JumpTo(VersusSequence.Label label);
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract ulong GetMyEditDataId();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract string GetNowRateName();
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract void SetProfileTarget(ProfileCard profile);
 }
 
 // Namespace: 
@@ -588,6 +1065,75 @@ private sealed class VersusSequence.VersusSequenceBase.<CopyEditDataFromServer>d
 	|
 	|-RVA: 0x2B4A680 Offset: 0x2B4A781 VA: 0x2B4A680
 	|-VersusSequence.VersusSequenceBase.<CopyEditDataFromServer>d__42<object>.System.Collections.IEnumerator.get_Current
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279170 Offset: 0x279271 VA: 0x279170
+private sealed class VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<T> : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13691
+{
+	// Fields
+	private int <>1__state; // 0x0
+	private object <>2__current; // 0x0
+	public VersusSequence.VersusSequenceBase<T> <>4__this; // 0x0
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCBB0 Offset: 0x2CCCB1 VA: 0x2CCBB0
+	// RVA: -1 Offset: -1
+	public void .ctor(int <>1__state) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B462B0 Offset: 0x2B463B1 VA: 0x2B462B0
+	|-VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCBC0 Offset: 0x2CCCC1 VA: 0x2CCBC0
+	// RVA: -1 Offset: -1 Slot: 5
+	private void System.IDisposable.Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B462E0 Offset: 0x2B463E1 VA: 0x2B462E0
+	|-VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<object>.System.IDisposable.Dispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	private bool MoveNext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B462F0 Offset: 0x2B463F1 VA: 0x2B462F0
+	|-VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<object>.MoveNext
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCBD0 Offset: 0x2CCCD1 VA: 0x2CCBD0
+	// RVA: -1 Offset: -1 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B46520 Offset: 0x2B46621 VA: 0x2B46520
+	|-VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<object>.System.Collections.Generic.IEnumerator<System.Object>.get_Current
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCBE0 Offset: 0x2CCCE1 VA: 0x2CCBE0
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B46530 Offset: 0x2B46631 VA: 0x2B46530
+	|-VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<object>.System.Collections.IEnumerator.Reset
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCBF0 Offset: 0x2CCCF1 VA: 0x2CCBF0
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B46570 Offset: 0x2B46671 VA: 0x2B46570
+	|-VersusSequence.VersusSequenceBase.<CheckOldEditData>d__44<object>.System.Collections.IEnumerator.get_Current
 	*/
 }
 
@@ -662,6 +1208,75 @@ private sealed class VersusSequence.VersusSequenceBase.<GetMyCasualData>d__49<T>
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279190 Offset: 0x279291 VA: 0x279190
+private sealed class VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<T> : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13693
+{
+	// Fields
+	private int <>1__state; // 0x0
+	private object <>2__current; // 0x0
+	public VersusSequence.VersusSequenceBase<T> <>4__this; // 0x0
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCC50 Offset: 0x2CCD51 VA: 0x2CCC50
+	// RVA: -1 Offset: -1
+	public void .ctor(int <>1__state) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B46580 Offset: 0x2B46681 VA: 0x2B46580
+	|-VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCC60 Offset: 0x2CCD61 VA: 0x2CCC60
+	// RVA: -1 Offset: -1 Slot: 5
+	private void System.IDisposable.Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B465B0 Offset: 0x2B466B1 VA: 0x2B465B0
+	|-VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<object>.System.IDisposable.Dispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	private bool MoveNext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B465C0 Offset: 0x2B466C1 VA: 0x2B465C0
+	|-VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<object>.MoveNext
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCC70 Offset: 0x2CCD71 VA: 0x2CCC70
+	// RVA: -1 Offset: -1 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B466B0 Offset: 0x2B467B1 VA: 0x2B466B0
+	|-VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<object>.System.Collections.Generic.IEnumerator<System.Object>.get_Current
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCC80 Offset: 0x2CCD81 VA: 0x2CCC80
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B466C0 Offset: 0x2B467C1 VA: 0x2B466C0
+	|-VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<object>.System.Collections.IEnumerator.Reset
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCC90 Offset: 0x2CCD91 VA: 0x2CCC90
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B46700 Offset: 0x2B46801 VA: 0x2B46700
+	|-VersusSequence.VersusSequenceBase.<CheckParentalControl>d__52<object>.System.Collections.IEnumerator.get_Current
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2791A0 Offset: 0x2792A1 VA: 0x2791A0
 private sealed class VersusSequence.VersusSequenceBase.<GetMyEditData>d__53<T> : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13694
 {
@@ -728,6 +1343,41 @@ private sealed class VersusSequence.VersusSequenceBase.<GetMyEditData>d__53<T> :
 	|
 	|-RVA: 0x3150E60 Offset: 0x3150F61 VA: 0x3150E60
 	|-VersusSequence.VersusSequenceBase.<GetMyEditData>d__53<object>.System.Collections.IEnumerator.get_Current
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2791B0 Offset: 0x2792B1 VA: 0x2791B0
+private sealed class VersusSequence.VersusSequenceBase.<>c__DisplayClass74_0<T> // TypeDefIndex: 13695
+{
+	// Fields
+	public VersusSequence.VersusSequenceBase<T> <>4__this; // 0x0
+	public string code; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3FF20 Offset: 0x2B40021 VA: 0x2B3FF20
+	|-VersusSequence.VersusSequenceBase.<>c__DisplayClass74_0<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	internal void <SearchDataCode>b__0() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3FF30 Offset: 0x2B40031 VA: 0x2B3FF30
+	|-VersusSequence.VersusSequenceBase.<>c__DisplayClass74_0<object>.<SearchDataCode>b__0
+	*/
+
+	// RVA: -1 Offset: -1
+	internal void <SearchDataCode>b__1() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B3FF40 Offset: 0x2B40041 VA: 0x2B3FF40
+	|-VersusSequence.VersusSequenceBase.<>c__DisplayClass74_0<object>.<SearchDataCode>b__1
 	*/
 }
 
@@ -813,6 +1463,75 @@ private sealed class VersusSequence.VersusSequenceBase.<>c<T> // TypeDefIndex: 1
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2791D0 Offset: 0x2792D1 VA: 0x2791D0
+private sealed class VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<T> : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13697
+{
+	// Fields
+	private int <>1__state; // 0x0
+	private object <>2__current; // 0x0
+	public VersusSequence.VersusSequenceBase<T> <>4__this; // 0x0
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCCF0 Offset: 0x2CCDF1 VA: 0x2CCCF0
+	// RVA: -1 Offset: -1
+	public void .ctor(int <>1__state) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B6B0 Offset: 0x2B4B7B1 VA: 0x2B4B6B0
+	|-VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCD00 Offset: 0x2CCE01 VA: 0x2CCD00
+	// RVA: -1 Offset: -1 Slot: 5
+	private void System.IDisposable.Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B6E0 Offset: 0x2B4B7E1 VA: 0x2B4B6E0
+	|-VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<object>.System.IDisposable.Dispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	private bool MoveNext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B6F0 Offset: 0x2B4B7F1 VA: 0x2B4B6F0
+	|-VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<object>.MoveNext
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCD10 Offset: 0x2CCE11 VA: 0x2CCD10
+	// RVA: -1 Offset: -1 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B8E0 Offset: 0x2B4B9E1 VA: 0x2B4B8E0
+	|-VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<object>.System.Collections.Generic.IEnumerator<System.Object>.get_Current
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCD20 Offset: 0x2CCE21 VA: 0x2CCD20
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B8F0 Offset: 0x2B4B9F1 VA: 0x2B4B8F0
+	|-VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<object>.System.Collections.IEnumerator.Reset
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCD30 Offset: 0x2CCE31 VA: 0x2CCD30
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B930 Offset: 0x2B4BA31 VA: 0x2B4B930
+	|-VersusSequence.VersusSequenceBase.<DownloadRanked>d__112<object>.System.Collections.IEnumerator.get_Current
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2791E0 Offset: 0x2792E1 VA: 0x2791E0
 private sealed class VersusSequence.VersusSequenceBase.<DownloadMyEditData>d__114<T> : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13698
 {
@@ -878,6 +1597,75 @@ private sealed class VersusSequence.VersusSequenceBase.<DownloadMyEditData>d__11
 	|
 	|-RVA: 0x2B4B400 Offset: 0x2B4B501 VA: 0x2B4B400
 	|-VersusSequence.VersusSequenceBase.<DownloadMyEditData>d__114<object>.System.Collections.IEnumerator.get_Current
+	*/
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2791F0 Offset: 0x2792F1 VA: 0x2791F0
+private sealed class VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<T> : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13699
+{
+	// Fields
+	private int <>1__state; // 0x0
+	private object <>2__current; // 0x0
+	public VersusSequence.VersusSequenceBase<T> <>4__this; // 0x0
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCD90 Offset: 0x2CCE91 VA: 0x2CCD90
+	// RVA: -1 Offset: -1
+	public void .ctor(int <>1__state) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B410 Offset: 0x2B4B511 VA: 0x2B4B410
+	|-VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<object>..ctor
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCDA0 Offset: 0x2CCEA1 VA: 0x2CCDA0
+	// RVA: -1 Offset: -1 Slot: 5
+	private void System.IDisposable.Dispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B440 Offset: 0x2B4B541 VA: 0x2B4B440
+	|-VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<object>.System.IDisposable.Dispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	private bool MoveNext() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B450 Offset: 0x2B4B551 VA: 0x2B4B450
+	|-VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<object>.MoveNext
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCDB0 Offset: 0x2CCEB1 VA: 0x2CCDB0
+	// RVA: -1 Offset: -1 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B650 Offset: 0x2B4B751 VA: 0x2B4B650
+	|-VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<object>.System.Collections.Generic.IEnumerator<System.Object>.get_Current
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCDC0 Offset: 0x2CCEC1 VA: 0x2CCDC0
+	// RVA: -1 Offset: -1 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B660 Offset: 0x2B4B761 VA: 0x2B4B660
+	|-VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<object>.System.Collections.IEnumerator.Reset
+	*/
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCDD0 Offset: 0x2CCED1 VA: 0x2CCDD0
+	// RVA: -1 Offset: -1 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B4B6A0 Offset: 0x2B4B7A1 VA: 0x2B4B6A0
+	|-VersusSequence.VersusSequenceBase.<DownloadMyEditForEditMode>d__116<object>.System.Collections.IEnumerator.get_Current
 	*/
 }
 
@@ -957,6 +1745,1273 @@ private sealed class VersusSequence.VersusSequenceBase.<CalculateRate>d__127<T> 
 }
 
 // Namespace: 
+private abstract class VersusSequence.VersusSequenceBase<T> : SingletonProcInst<T>, VersusSequence.IVersusSequenceBase // TypeDefIndex: 13701
+{
+	// Fields
+	protected bool m_IsStartedCasual; // 0x0
+	protected List<VersusServerCasualMetaData> m_SearchCasualResults; // 0x0
+	protected List<VersusServerCasualMetaData> m_SearchFriendCasualResults; // 0x0
+	protected NexVersus.TargetSlotList m_ProfileCasualResults; // 0x0
+	protected bool m_IsStartedRanked; // 0x0
+	protected List<VersusServerRankedMetaData> m_SearchRankedResults; // 0x0
+	protected List<VersusServerRankedMetaData> m_SearchFriendRankedResults; // 0x0
+	protected NexVersus.TargetSlotList m_ProfileRankedResults; // 0x0
+	protected ulong m_MyEditDataId; // 0x0
+	protected bool m_IsReported; // 0x0
+	protected bool m_IsShowReportedWindow; // 0x0
+	protected static ushort s_RateDataType; // 0x0
+	protected static string m_MyCasualDataCode; // 0x0
+	protected VersusServerReplayMetaData m_SelectedReplayMetaData; // 0x0
+	private Versus.MapResult m_ReplayResult; // 0x0
+	private MenuBg m_Bg; // 0x0
+	private VersusMyInfoContent m_MyInfo; // 0x0
+	private bool m_IsInitialized; // 0x0
+	protected string m_TargetDataCode; // 0x0
+	protected ProfileCard m_ProfileTarget; // 0x0
+	public const int MaxGettableFriendCount = 100;
+
+	// Properties
+	protected static string RateDataTypeName { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	protected static string get_RateDataTypeName() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC85A0 Offset: 0x2FC86A1 VA: 0x2FC85A0
+	|-VersusSequence.VersusSequenceBase<object>.get_RateDataTypeName
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	protected override void OnCreate() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8730 Offset: 0x2FC8831 VA: 0x2FC8730
+	|-VersusSequence.VersusSequenceBase<object>.OnCreate
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.OnCreate
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.OnCreate
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	protected override void OnDispose() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC87C0 Offset: 0x2FC88C1 VA: 0x2FC87C0
+	|-VersusSequence.VersusSequenceBase<object>.OnDispose
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.OnDispose
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.OnDispose
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 22
+	public void JumpTo(VersusSequence.Label label) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC87D0 Offset: 0x2FC88D1 VA: 0x2FC87D0
+	|-VersusSequence.VersusSequenceBase<object>.JumpTo
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.JumpTo
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.JumpTo
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 23
+	public ulong GetMyEditDataId() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8850 Offset: 0x2FC8951 VA: 0x2FC8850
+	|-VersusSequence.VersusSequenceBase<object>.GetMyEditDataId
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.GetMyEditDataId
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.GetMyEditDataId
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 25
+	public void SetProfileTarget(ProfileCard profile) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8860 Offset: 0x2FC8961 VA: 0x2FC8860
+	|-VersusSequence.VersusSequenceBase<object>.SetProfileTarget
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.SetProfileTarget
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.SetProfileTarget
+	*/
+
+	// RVA: -1 Offset: -1
+	private bool GetReported() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8870 Offset: 0x2FC8971 VA: 0x2FC8870
+	|-VersusSequence.VersusSequenceBase<object>.GetReported
+	*/
+
+	// RVA: -1 Offset: -1
+	private void LoadResources() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8880 Offset: 0x2FC8981 VA: 0x2FC8880
+	|-VersusSequence.VersusSequenceBase<object>.LoadResources
+	*/
+
+	// RVA: -1 Offset: -1
+	private bool IsLoadingResources() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC88C0 Offset: 0x2FC89C1 VA: 0x2FC88C0
+	|-VersusSequence.VersusSequenceBase<object>.IsLoadingResources
+	*/
+
+	// RVA: -1 Offset: -1
+	private void MenuInitialized() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8920 Offset: 0x2FC8A21 VA: 0x2FC8920
+	|-VersusSequence.VersusSequenceBase<object>.MenuInitialized
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Init() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8A30 Offset: 0x2FC8B31 VA: 0x2FC8A30
+	|-VersusSequence.VersusSequenceBase<object>.Init
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 26
+	protected abstract void InitImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.InitImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Final() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8A40 Offset: 0x2FC8B41 VA: 0x2FC8A40
+	|-VersusSequence.VersusSequenceBase<object>.Final
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 27
+	protected abstract void FinalImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.FinalImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 28
+	protected abstract bool IsFailedJumpToTopImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.IsFailedJumpToTopImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 29
+	protected abstract bool IsReportedEditMapImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.IsReportedEditMapImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 30
+	protected abstract void UploadReportDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.UploadReportDataImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void StartSequence() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8AD0 Offset: 0x2FC8BD1 VA: 0x2FC8AD0
+	|-VersusSequence.VersusSequenceBase<object>.StartSequence
+	*/
+
+	// RVA: -1 Offset: -1
+	private void EndSequence() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8BD0 Offset: 0x2FC8CD1 VA: 0x2FC8BD0
+	|-VersusSequence.VersusSequenceBase<object>.EndSequence
+	*/
+
+	// RVA: -1 Offset: -1
+	private void OpenTopMenu() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8D90 Offset: 0x2FC8E91 VA: 0x2FC8D90
+	|-VersusSequence.VersusSequenceBase<object>.OpenTopMenu
+	*/
+
+	// RVA: -1 Offset: -1
+	private void OpenCasualMenu() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC8F20 Offset: 0x2FC9021 VA: 0x2FC8F20
+	|-VersusSequence.VersusSequenceBase<object>.OpenCasualMenu
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC720 Offset: 0x2CC821 VA: 0x2CC720
+	// RVA: -1 Offset: -1
+	private IEnumerator CopyEditDataFromServer() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9200 Offset: 0x2FC9301 VA: 0x2FC9200
+	|-VersusSequence.VersusSequenceBase<object>.CopyEditDataFromServer
+	*/
+
+	// RVA: -1 Offset: -1
+	private void OpenRankedMenu() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9280 Offset: 0x2FC9381 VA: 0x2FC9280
+	|-VersusSequence.VersusSequenceBase<object>.OpenRankedMenu
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC790 Offset: 0x2CC891 VA: 0x2CC790
+	// RVA: -1 Offset: -1
+	private IEnumerator CheckOldEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9510 Offset: 0x2FC9611 VA: 0x2FC9510
+	|-VersusSequence.VersusSequenceBase<object>.CheckOldEditData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void OpenMatchingMenu() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9590 Offset: 0x2FC9691 VA: 0x2FC9590
+	|-VersusSequence.VersusSequenceBase<object>.OpenMatchingMenu
+	*/
+
+	// RVA: -1 Offset: -1
+	private void BranchMatching() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9720 Offset: 0x2FC9821 VA: 0x2FC9720
+	|-VersusSequence.VersusSequenceBase<object>.BranchMatching
+	*/
+
+	// RVA: -1 Offset: -1
+	private void CloseTitleBarAndBg() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9890 Offset: 0x2FC9991 VA: 0x2FC9890
+	|-VersusSequence.VersusSequenceBase<object>.CloseTitleBarAndBg
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ResetCheckData(Versus.CheckDataType checkDataType) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC99B0 Offset: 0x2FC9AB1 VA: 0x2FC99B0
+	|-VersusSequence.VersusSequenceBase<object>.ResetCheckData
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC800 Offset: 0x2CC901 VA: 0x2CC800
+	// RVA: -1 Offset: -1
+	private IEnumerator GetMyCasualData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9A60 Offset: 0x2FC9B61 VA: 0x2FC9A60
+	|-VersusSequence.VersusSequenceBase<object>.GetMyCasualData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 31
+	protected abstract void GetMyCasualMetaDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.GetMyCasualMetaDataImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 32
+	protected abstract void PostGetMyCasualMetaDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.PostGetMyCasualMetaDataImpl
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC870 Offset: 0x2CC971 VA: 0x2CC870
+	// RVA: -1 Offset: -1
+	private IEnumerator CheckParentalControl() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9AE0 Offset: 0x2FC9BE1 VA: 0x2FC9AE0
+	|-VersusSequence.VersusSequenceBase<object>.CheckParentalControl
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC8E0 Offset: 0x2CC9E1 VA: 0x2CC8E0
+	// RVA: -1 Offset: -1
+	private IEnumerator GetMyEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9B60 Offset: 0x2FC9C61 VA: 0x2FC9B60
+	|-VersusSequence.VersusSequenceBase<object>.GetMyEditData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 33
+	protected abstract void GetEditMetaDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.GetEditMetaDataImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 34
+	protected abstract void PostGetEditMetaDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.PostGetEditMetaDataImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 35
+	protected abstract void UpdateRateImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.UpdateRateImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 36
+	protected abstract void SetRankedInfoImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.SetRankedInfoImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SearchSameRate() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9BE0 Offset: 0x2FC9CE1 VA: 0x2FC9BE0
+	|-VersusSequence.VersusSequenceBase<object>.SearchSameRate
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 37
+	protected abstract void SearchSameRateImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.SearchSameRateImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SearchRankedFriend() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9CB0 Offset: 0x2FC9DB1 VA: 0x2FC9CB0
+	|-VersusSequence.VersusSequenceBase<object>.SearchRankedFriend
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 38
+	protected abstract void SearchRankedFriendImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.SearchRankedFriendImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostSearchRankedFriend() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9E20 Offset: 0x2FC9F21 VA: 0x2FC9E20
+	|-VersusSequence.VersusSequenceBase<object>.PostSearchRankedFriend
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostSearchSameRate() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FC9EA0 Offset: 0x2FC9FA1 VA: 0x2FC9EA0
+	|-VersusSequence.VersusSequenceBase<object>.PostSearchSameRate
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 39
+	protected abstract void ExcludeMySearchRankedData();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.ExcludeMySearchRankedData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SearchCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCA210 Offset: 0x2FCA311 VA: 0x2FCA210
+	|-VersusSequence.VersusSequenceBase<object>.SearchCasual
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 40
+	protected abstract void SearchCasualImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.SearchCasualImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SearchCasualFriend() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCA2E0 Offset: 0x2FCA3E1 VA: 0x2FCA2E0
+	|-VersusSequence.VersusSequenceBase<object>.SearchCasualFriend
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 41
+	protected abstract void SearchCasualFriendImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.SearchCasualFriendImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostSearchCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCA450 Offset: 0x2FCA551 VA: 0x2FCA450
+	|-VersusSequence.VersusSequenceBase<object>.PostSearchCasual
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 42
+	protected abstract void ExcludeMySearchCasualData(List<VersusServerCasualMetaData> dataList);
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.ExcludeMySearchCasualData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostSearchCasualFriend() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCA750 Offset: 0x2FCA851 VA: 0x2FCA750
+	|-VersusSequence.VersusSequenceBase<object>.PostSearchCasualFriend
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SelectFriendCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCA8C0 Offset: 0x2FCA9C1 VA: 0x2FCA8C0
+	|-VersusSequence.VersusSequenceBase<object>.SelectFriendCasual
+	*/
+
+	// RVA: -1 Offset: -1
+	private void InputDataCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCAAC0 Offset: 0x2FCABC1 VA: 0x2FCAAC0
+	|-VersusSequence.VersusSequenceBase<object>.InputDataCode
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SearchDataCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCAC30 Offset: 0x2FCAD31 VA: 0x2FCAC30
+	|-VersusSequence.VersusSequenceBase<object>.SearchDataCode
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadMetaCasualFromDataCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCB0F0 Offset: 0x2FCB1F1 VA: 0x2FCB0F0
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaCasualFromDataCode
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 43
+	protected abstract void DownloadMetaCasualFromDataCodeImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaCasualFromDataCodeImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadMetaRankedFromDataCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCB100 Offset: 0x2FCB201 VA: 0x2FCB100
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaRankedFromDataCode
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 44
+	protected abstract void DownloadMetaRankedFromDataCodeImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaRankedFromDataCodeImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SelectFriendRanked() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCB150 Offset: 0x2FCB251 VA: 0x2FCB150
+	|-VersusSequence.VersusSequenceBase<object>.SelectFriendRanked
+	*/
+
+	// RVA: -1 Offset: -1
+	private void StartBattleDialogCasualDataCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCB390 Offset: 0x2FCB491 VA: 0x2FCB390
+	|-VersusSequence.VersusSequenceBase<object>.StartBattleDialogCasualDataCode
+	*/
+
+	// RVA: -1 Offset: -1
+	private void StartBattleDialogRankedDataCode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCB670 Offset: 0x2FCB771 VA: 0x2FCB670
+	|-VersusSequence.VersusSequenceBase<object>.StartBattleDialogRankedDataCode
+	*/
+
+	// RVA: -1 Offset: -1
+	private void CheckProfileCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCB950 Offset: 0x2FCBA51 VA: 0x2FCB950
+	|-VersusSequence.VersusSequenceBase<object>.CheckProfileCasual
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 45
+	protected abstract void CheckAccessibleProfileImpl(Versus.Mode mode, NexVersus.TargetSlotList targetSlotList);
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.CheckAccessibleProfileImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SelectProfileCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCBC20 Offset: 0x2FCBD21 VA: 0x2FCBC20
+	|-VersusSequence.VersusSequenceBase<object>.SelectProfileCasual
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadMetaCasualProfile() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCBD10 Offset: 0x2FCBE11 VA: 0x2FCBD10
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaCasualProfile
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 46
+	protected abstract void DownloadMetaProfileImpl(Versus.Mode mode, ProfileCard profile);
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaProfileImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void CheckProfileRanked() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCBD30 Offset: 0x2FCBE31 VA: 0x2FCBD30
+	|-VersusSequence.VersusSequenceBase<object>.CheckProfileRanked
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SelectProfileRanked() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC000 Offset: 0x2FCC101 VA: 0x2FCC000
+	|-VersusSequence.VersusSequenceBase<object>.SelectProfileRanked
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadMetaRankedProfile() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC0F0 Offset: 0x2FCC1F1 VA: 0x2FCC0F0
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMetaRankedProfile
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Prepare() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC110 Offset: 0x2FCC211 VA: 0x2FCC110
+	|-VersusSequence.VersusSequenceBase<object>.Prepare
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ClearReliance() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC420 Offset: 0x2FCC521 VA: 0x2FCC420
+	|-VersusSequence.VersusSequenceBase<object>.ClearReliance
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ClearEnhance() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC430 Offset: 0x2FCC531 VA: 0x2FCC430
+	|-VersusSequence.VersusSequenceBase<object>.ClearEnhance
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DeleteGodLueur() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC440 Offset: 0x2FCC541 VA: 0x2FCC440
+	|-VersusSequence.VersusSequenceBase<object>.DeleteGodLueur
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PrepareCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC4B0 Offset: 0x2FCC5B1 VA: 0x2FCC4B0
+	|-VersusSequence.VersusSequenceBase<object>.PrepareCasual
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PrepareRanked() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC680 Offset: 0x2FCC781 VA: 0x2FCC680
+	|-VersusSequence.VersusSequenceBase<object>.PrepareRanked
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PrepareMapEdit() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCC850 Offset: 0x2FCC951 VA: 0x2FCC850
+	|-VersusSequence.VersusSequenceBase<object>.PrepareMapEdit
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SelectReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCCA70 Offset: 0x2FCCB71 VA: 0x2FCCA70
+	|-VersusSequence.VersusSequenceBase<object>.SelectReplay
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 47
+	protected abstract void SelectReplayImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.SelectReplayImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void OpenReplayDialog() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCCB40 Offset: 0x2FCCC41 VA: 0x2FCCB40
+	|-VersusSequence.VersusSequenceBase<object>.OpenReplayDialog
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCCE70 Offset: 0x2FCCF71 VA: 0x2FCCE70
+	|-VersusSequence.VersusSequenceBase<object>.DownloadReplay
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 48
+	protected abstract void DownloadReplayImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadReplayImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostDownloadReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCCE90 Offset: 0x2FCCF91 VA: 0x2FCCE90
+	|-VersusSequence.VersusSequenceBase<object>.PostDownloadReplay
+	*/
+
+	// RVA: -1 Offset: -1
+	private void CheckMockBattleData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCCF70 Offset: 0x2FCD071 VA: 0x2FCCF70
+	|-VersusSequence.VersusSequenceBase<object>.CheckMockBattleData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PrepareReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD040 Offset: 0x2FCD141 VA: 0x2FCD040
+	|-VersusSequence.VersusSequenceBase<object>.PrepareReplay
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DisableReplayData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD120 Offset: 0x2FCD221 VA: 0x2FCD120
+	|-VersusSequence.VersusSequenceBase<object>.DisableReplayData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 49
+	protected abstract void ChangeReplayMetaImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.ChangeReplayMetaImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ReceiveReward() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD170 Offset: 0x2FCD271 VA: 0x2FCD170
+	|-VersusSequence.VersusSequenceBase<object>.ReceiveReward
+	*/
+
+	// RVA: -1 Offset: -1
+	private void GetReward(string rewardIid, int count, string resultMess) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD360 Offset: 0x2FCD461 VA: 0x2FCD360
+	|-VersusSequence.VersusSequenceBase<object>.GetReward
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD8D0 Offset: 0x2FCD9D1 VA: 0x2FCD8D0
+	|-VersusSequence.VersusSequenceBase<object>.DownloadCasual
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 50
+	protected abstract void DownloadCasualImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadCasualImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostDownloadCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD8E0 Offset: 0x2FCD9E1 VA: 0x2FCD8E0
+	|-VersusSequence.VersusSequenceBase<object>.PostDownloadCasual
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC950 Offset: 0x2CCA51 VA: 0x2CC950
+	// RVA: -1 Offset: -1
+	private IEnumerator DownloadRanked() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD8F0 Offset: 0x2FCD9F1 VA: 0x2FCD8F0
+	|-VersusSequence.VersusSequenceBase<object>.DownloadRanked
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 51
+	protected abstract void DownloadImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadImpl
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CC9C0 Offset: 0x2CCAC1 VA: 0x2CC9C0
+	// RVA: -1 Offset: -1
+	private IEnumerator DownloadMyEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD970 Offset: 0x2FCDA71 VA: 0x2FCD970
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMyEditData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 52
+	protected abstract void DownloadMyEditImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMyEditImpl
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CCA30 Offset: 0x2CCB31 VA: 0x2CCA30
+	// RVA: -1 Offset: -1
+	private IEnumerator DownloadMyEditForEditMode() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCD9F0 Offset: 0x2FCDAF1 VA: 0x2FCD9F0
+	|-VersusSequence.VersusSequenceBase<object>.DownloadMyEditForEditMode
+	*/
+
+	// RVA: -1 Offset: -1
+	private void UploadReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDA70 Offset: 0x2FCDB71 VA: 0x2FCDA70
+	|-VersusSequence.VersusSequenceBase<object>.UploadReplay
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 53
+	protected abstract void UploadReplayImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.UploadReplayImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostUploadReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDA80 Offset: 0x2FCDB81 VA: 0x2FCDA80
+	|-VersusSequence.VersusSequenceBase<object>.PostUploadReplay
+	*/
+
+	// RVA: -1 Offset: -1
+	private void SerializeCasualDataInit() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDA90 Offset: 0x2FCDB91 VA: 0x2FCDA90
+	|-VersusSequence.VersusSequenceBase<object>.SerializeCasualDataInit
+	*/
+
+	// RVA: -1 Offset: -1
+	private void BranchEndCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDB10 Offset: 0x2FCDC11 VA: 0x2FCDB10
+	|-VersusSequence.VersusSequenceBase<object>.BranchEndCasual
+	*/
+
+	// RVA: -1 Offset: -1
+	private void BranchEndRanked() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDC20 Offset: 0x2FCDD21 VA: 0x2FCDC20
+	|-VersusSequence.VersusSequenceBase<object>.BranchEndRanked
+	*/
+
+	// RVA: -1 Offset: -1
+	private void UploadCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDDF0 Offset: 0x2FCDEF1 VA: 0x2FCDDF0
+	|-VersusSequence.VersusSequenceBase<object>.UploadCasual
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostUploadCasual() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDED0 Offset: 0x2FCDFD1 VA: 0x2FCDED0
+	|-VersusSequence.VersusSequenceBase<object>.PostUploadCasual
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 54
+	protected abstract void UploadCasualImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.UploadCasualImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 55
+	protected abstract void ChangeCasualImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.ChangeCasualImpl
+	*/
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CCAA0 Offset: 0x2CCBA1 VA: 0x2CCAA0
+	// RVA: -1 Offset: -1
+	private IEnumerator CalculateRate() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDEE0 Offset: 0x2FCDFE1 VA: 0x2FCDEE0
+	|-VersusSequence.VersusSequenceBase<object>.CalculateRate
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 56
+	protected abstract VersusServerRankedMetaData GetDownloadedEditMetaDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.GetDownloadedEditMetaDataImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void CheckRateDataType(int oldRate, int newRate, ulong dataId) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDF60 Offset: 0x2FCE061 VA: 0x2FCDF60
+	|-VersusSequence.VersusSequenceBase<object>.CheckRateDataType
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 57
+	protected abstract void ChangeRankedMetaDataImpl(VersusServerRankedMetaData metaData);
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.ChangeRankedMetaDataImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 58
+	protected abstract void ChangeDataTypeImpl(ulong dataId, ushort dataType);
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.ChangeDataTypeImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ShowCasualResult() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCDFE0 Offset: 0x2FCE0E1 VA: 0x2FCDFE0
+	|-VersusSequence.VersusSequenceBase<object>.ShowCasualResult
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ShowRankedResult() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE220 Offset: 0x2FCE321 VA: 0x2FCE220
+	|-VersusSequence.VersusSequenceBase<object>.ShowRankedResult
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadProfile() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE460 Offset: 0x2FCE561 VA: 0x2FCE460
+	|-VersusSequence.VersusSequenceBase<object>.DownloadProfile
+	*/
+
+	// RVA: -1 Offset: -1
+	private void DownloadProfileForReplay() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE470 Offset: 0x2FCE571 VA: 0x2FCE470
+	|-VersusSequence.VersusSequenceBase<object>.DownloadProfileForReplay
+	*/
+
+	// RVA: -1 Offset: -1
+	private void UploadProfile() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE480 Offset: 0x2FCE581 VA: 0x2FCE480
+	|-VersusSequence.VersusSequenceBase<object>.UploadProfile
+	*/
+
+	// RVA: -1 Offset: -1
+	private void UpdateProfile() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE490 Offset: 0x2FCE591 VA: 0x2FCE490
+	|-VersusSequence.VersusSequenceBase<object>.UpdateProfile
+	*/
+
+	// RVA: -1 Offset: -1
+	private void ResetCachePostDownload() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE510 Offset: 0x2FCE611 VA: 0x2FCE510
+	|-VersusSequence.VersusSequenceBase<object>.ResetCachePostDownload
+	*/
+
+	// RVA: -1 Offset: -1
+	private static void StopBgm_Hub() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE5A0 Offset: 0x2FCE6A1 VA: 0x2FCE5A0
+	|-VersusSequence.VersusSequenceBase<object>.StopBgm_Hub
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Save() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE630 Offset: 0x2FCE731 VA: 0x2FCE630
+	|-VersusSequence.VersusSequenceBase<object>.Save
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Restore() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE6B0 Offset: 0x2FCE7B1 VA: 0x2FCE6B0
+	|-VersusSequence.VersusSequenceBase<object>.Restore
+	*/
+
+	// RVA: -1 Offset: -1
+	private void OpenInvalidDataDialog() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE730 Offset: 0x2FCE831 VA: 0x2FCE730
+	|-VersusSequence.VersusSequenceBase<object>.OpenInvalidDataDialog
+	*/
+
+	// RVA: -1 Offset: -1
+	private void AddCounters() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE7C0 Offset: 0x2FCE8C1 VA: 0x2FCE7C0
+	|-VersusSequence.VersusSequenceBase<object>.AddCounters
+	*/
+
+	// RVA: -1 Offset: -1
+	private void AddCounterDefense() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE880 Offset: 0x2FCE981 VA: 0x2FCE880
+	|-VersusSequence.VersusSequenceBase<object>.AddCounterDefense
+	*/
+
+	// RVA: -1 Offset: -1
+	private void AddPlayReportStartCount() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE890 Offset: 0x2FCE991 VA: 0x2FCE890
+	|-VersusSequence.VersusSequenceBase<object>.AddPlayReportStartCount
+	*/
+
+	// RVA: -1 Offset: -1
+	protected List<ulong> GetFriendList(bool isFilter = True, bool isSort = True, int maxCount = 100) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCE8A0 Offset: 0x2FCE9A1 VA: 0x2FCE8A0
+	|-VersusSequence.VersusSequenceBase<object>.GetFriendList
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.GetFriendList
+	*/
+
+	// RVA: -1 Offset: -1
+	protected Dictionary<ulong, Friend> GetFriendObjectDict() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCED00 Offset: 0x2FCEE01 VA: 0x2FCED00
+	|-VersusSequence.VersusSequenceBase<object>.GetFriendObjectDict
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 59
+	protected abstract void CheckParentalControlImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.CheckParentalControlImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 60
+	protected abstract bool IsParentalControlAvailableImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.IsParentalControlAvailableImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 61
+	protected abstract void EndParentalControlImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.EndParentalControlImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	protected static void CreateBind(ProcInst super) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FCEEA0 Offset: 0x2FCEFA1 VA: 0x2FCEEA0
+	|-VersusSequence.VersusSequenceBase<object>.CreateBind
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.CreateBind
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.CreateBind
+	*/
+
+	// RVA: -1 Offset: -1
+	protected static string GetDataTypeName(ushort dataType) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4100 Offset: 0x2FD4201 VA: 0x2FD4100
+	|-VersusSequence.VersusSequenceBase<object>.GetDataTypeName
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 24
+	private string App.VersusSequence.IVersusSequenceBase.GetNowRateName() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4250 Offset: 0x2FD4351 VA: 0x2FD4250
+	|-VersusSequence.VersusSequenceBase<object>.App.VersusSequence.IVersusSequenceBase.GetNowRateName
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.App.VersusSequence.IVersusSequenceBase.GetNowRateName
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.App.VersusSequence.IVersusSequenceBase.GetNowRateName
+	*/
+
+	// RVA: -1 Offset: -1
+	private void InitEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4310 Offset: 0x2FD4411 VA: 0x2FD4310
+	|-VersusSequence.VersusSequenceBase<object>.InitEditData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 62
+	protected abstract void InitEditDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.InitEditDataImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PrepareEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4320 Offset: 0x2FD4421 VA: 0x2FD4320
+	|-VersusSequence.VersusSequenceBase<object>.PrepareEditData
+	*/
+
+	// RVA: -1 Offset: -1
+	private void UploadEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD44A0 Offset: 0x2FD45A1 VA: 0x2FD44A0
+	|-VersusSequence.VersusSequenceBase<object>.UploadEditData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 63
+	protected abstract void UploadEditDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.UploadEditDataImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	private void PostUploadEditData() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD44B0 Offset: 0x2FD45B1 VA: 0x2FD44B0
+	|-VersusSequence.VersusSequenceBase<object>.PostUploadEditData
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 64
+	protected abstract void PostUploadEditDataImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.PostUploadEditDataImpl
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 65
+	protected abstract bool GetLastUploadedResultImpl();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-VersusSequence.VersusSequenceBase<object>.GetLastUploadedResultImpl
+	*/
+
+	// RVA: -1 Offset: -1
+	protected static void CreateBindUploadEditData(ProcInst super) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD44C0 Offset: 0x2FD45C1 VA: 0x2FD44C0
+	|-VersusSequence.VersusSequenceBase<object>.CreateBindUploadEditData
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.CreateBindUploadEditData
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.CreateBindUploadEditData
+	*/
+
+	// RVA: -1 Offset: -1
+	protected static void CreateBindUploadCasualData(ProcInst super) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4810 Offset: 0x2FD4911 VA: 0x2FD4810
+	|-VersusSequence.VersusSequenceBase<object>.CreateBindUploadCasualData
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>.CreateBindUploadCasualData
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>.CreateBindUploadCasualData
+	*/
+
+	// RVA: -1 Offset: -1
+	protected void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4A70 Offset: 0x2FD4B71 VA: 0x2FD4A70
+	|-VersusSequence.VersusSequenceBase<object>..ctor
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceLocal>..ctor
+	|-VersusSequence.VersusSequenceBase<VersusSequence.VersusSequenceNet>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	private static void .cctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4CC0 Offset: 0x2FD4DC1 VA: 0x2FD4CC0
+	|-VersusSequence.VersusSequenceBase<object>..cctor
+	*/
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCB10 Offset: 0x2CCC11 VA: 0x2CCB10
+	// RVA: -1 Offset: -1
+	private void <StartBattleDialogCasualDataCode>b__80_0() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4D40 Offset: 0x2FD4E41 VA: 0x2FD4D40
+	|-VersusSequence.VersusSequenceBase<object>.<StartBattleDialogCasualDataCode>b__80_0
+	*/
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCB20 Offset: 0x2CCC21 VA: 0x2CCB20
+	// RVA: -1 Offset: -1
+	private void <StartBattleDialogCasualDataCode>b__80_1() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4DB0 Offset: 0x2FD4EB1 VA: 0x2FD4DB0
+	|-VersusSequence.VersusSequenceBase<object>.<StartBattleDialogCasualDataCode>b__80_1
+	*/
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCB30 Offset: 0x2CCC31 VA: 0x2CCB30
+	// RVA: -1 Offset: -1
+	private void <StartBattleDialogRankedDataCode>b__81_0() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4E20 Offset: 0x2FD4F21 VA: 0x2FD4E20
+	|-VersusSequence.VersusSequenceBase<object>.<StartBattleDialogRankedDataCode>b__81_0
+	*/
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCB40 Offset: 0x2CCC41 VA: 0x2CCB40
+	// RVA: -1 Offset: -1
+	private void <StartBattleDialogRankedDataCode>b__81_1() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4E90 Offset: 0x2FD4F91 VA: 0x2FD4E90
+	|-VersusSequence.VersusSequenceBase<object>.<StartBattleDialogRankedDataCode>b__81_1
+	*/
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCB50 Offset: 0x2CCC51 VA: 0x2CCB50
+	// RVA: -1 Offset: -1
+	internal static void <CreateBindUploadCasualData>g__PrepareCasualData|164_0() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FD4F00 Offset: 0x2FD5001 VA: 0x2FD4F00
+	|-VersusSequence.VersusSequenceBase<object>.<CreateBindUploadCasualData>g__PrepareCasualData|164_0
+	*/
+}
+
+// Namespace: 
 private static class VersusSequence.VersusSequenceLocal.LocalRate // TypeDefIndex: 13702
 {
 	// Methods
@@ -975,6 +3030,19 @@ private static class VersusSequence.VersusSequenceLocal.LocalRate // TypeDefInde
 }
 
 // Namespace: 
+private class VersusSequence.VersusSequenceLocal.MetaDataPack // TypeDefIndex: 13703
+{
+	// Fields
+	public string path; // 0x10
+	public VersusServerReplayMetaData data; // 0x18
+
+	// Methods
+
+	// RVA: 0x2D6E620 Offset: 0x2D6E721 VA: 0x2D6E620
+	public void .ctor(VersusServerReplayMetaData data, string path) { }
+}
+
+// Namespace: 
 public sealed class VersusSequence.VersusSequenceLocal.SelectReplayMetaMenuItem.ACallback : MulticastDelegate // TypeDefIndex: 13704
 {
 	// Methods
@@ -990,6 +3058,35 @@ public sealed class VersusSequence.VersusSequenceLocal.SelectReplayMetaMenuItem.
 
 	// RVA: 0x2D7E430 Offset: 0x2D7E531 VA: 0x2D7E430 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+private class VersusSequence.VersusSequenceLocal.SelectReplayMetaMenuItem : MenuItem // TypeDefIndex: 13705
+{
+	// Fields
+	private VersusServerReplayMetaData m_MetaData; // 0x20
+	private string m_MetaPath; // 0x28
+	private ushort m_SlotId; // 0x30
+	private VersusSequence.VersusSequenceLocal.SelectReplayMetaMenuItem.ACallback m_ACallback; // 0x38
+	private bool m_IsUpload; // 0x40
+	private bool m_IsPlay; // 0x41
+
+	// Methods
+
+	// RVA: 0x2D6E670 Offset: 0x2D6E771 VA: 0x2D6E670
+	public void .ctor(string path, VersusServerReplayMetaData metaData, ushort slotId, bool isUpload, bool isPlay, VersusSequence.VersusSequenceLocal.SelectReplayMetaMenuItem.ACallback callback) { }
+
+	// RVA: 0x2D6E740 Offset: 0x2D6E841 VA: 0x2D6E740 Slot: 5
+	public override string GetName() { }
+
+	// RVA: 0x2D6EAE0 Offset: 0x2D6EBE1 VA: 0x2D6EAE0 Slot: 22
+	public override bool IsEnable() { }
+
+	// RVA: 0x2D6EB00 Offset: 0x2D6EC01 VA: 0x2D6EB00 Slot: 12
+	public override MenuItem.Result ACall() { }
+
+	// RVA: 0x2D6EF00 Offset: 0x2D6F001 VA: 0x2D6EF00 Slot: 13
+	public override MenuItem.Result BCall() { }
 }
 
 // Namespace: 
@@ -1231,6 +3328,15 @@ private class VersusSequence.VersusSequenceLocal : VersusSequence.VersusSequence
 }
 
 // Namespace: 
+private enum VersusSequence.VersusSequenceNet.UploadEditMapSequence.Label // TypeDefIndex: 13707
+{
+	// Fields
+	public int value__; // 0x0
+	public const VersusSequence.VersusSequenceNet.UploadEditMapSequence.Label Error = 0;
+	public const VersusSequence.VersusSequenceNet.UploadEditMapSequence.Label End = 1;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279210 Offset: 0x279311 VA: 0x279210
 private sealed class VersusSequence.VersusSequenceNet.UploadEditMapSequence.<UploadEditMap>d__7 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13708
 {
@@ -1268,6 +3374,45 @@ private sealed class VersusSequence.VersusSequenceNet.UploadEditMapSequence.<Upl
 
 	[DebuggerHiddenAttribute] // RVA: 0x2CCF80 Offset: 0x2CD081 VA: 0x2CCF80
 	// RVA: 0x2D7EC10 Offset: 0x2D7ED11 VA: 0x2D7EC10 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279220 Offset: 0x279321 VA: 0x279220
+private sealed class VersusSequence.VersusSequenceNet.UploadEditMapSequence.<UploadReplayDatas>d__9 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13709
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public VersusSequence.VersusSequenceNet.UploadEditMapSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCF90 Offset: 0x2CD091 VA: 0x2CCF90
+	// RVA: 0x2D70A80 Offset: 0x2D70B81 VA: 0x2D70A80
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCFA0 Offset: 0x2CD0A1 VA: 0x2CCFA0
+	// RVA: 0x2D7EC20 Offset: 0x2D7ED21 VA: 0x2D7EC20 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D7EC30 Offset: 0x2D7ED31 VA: 0x2D7EC30 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCFB0 Offset: 0x2CD0B1 VA: 0x2CCFB0
+	// RVA: 0x2D7EDB0 Offset: 0x2D7EEB1 VA: 0x2D7EDB0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCFC0 Offset: 0x2CD0C1 VA: 0x2CCFC0
+	// RVA: 0x2D7EDC0 Offset: 0x2D7EEC1 VA: 0x2D7EDC0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CCFD0 Offset: 0x2CD0D1 VA: 0x2CCFD0
+	// RVA: 0x2D7EE00 Offset: 0x2D7EF01 VA: 0x2D7EE00 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 
@@ -1323,6 +3468,15 @@ private class VersusSequence.VersusSequenceNet.UploadEditMapSequence : ProcInst 
 }
 
 // Namespace: 
+private enum VersusSequence.VersusSequenceNet.UploadReplaySequence.Label // TypeDefIndex: 13711
+{
+	// Fields
+	public int value__; // 0x0
+	public const VersusSequence.VersusSequenceNet.UploadReplaySequence.Label Error = 0;
+	public const VersusSequence.VersusSequenceNet.UploadReplaySequence.Label End = 1;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279230 Offset: 0x279331 VA: 0x279230
 private sealed class VersusSequence.VersusSequenceNet.UploadReplaySequence.<GetReplayMetaDatas>d__11 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13712
 {
@@ -1364,6 +3518,60 @@ private sealed class VersusSequence.VersusSequenceNet.UploadReplaySequence.<GetR
 }
 
 // Namespace: 
+private class VersusSequence.VersusSequenceNet.UploadReplaySequence : ProcInst // TypeDefIndex: 13713
+{
+	// Fields
+	private VersusServerReplayMetaData m_MetaData; // 0x70
+	private VersusServerReplayData m_Data; // 0x78
+	private ulong m_OpponentPrincipalId; // 0x80
+	private VersusServerReplayMetaData m_OpponentMetaData; // 0x88
+	private VersusServerReplayMetaData m_TargetMetaData; // 0x90
+	[CompilerGeneratedAttribute] // RVA: 0x29C900 Offset: 0x29CA01 VA: 0x29C900
+	private static NexVersus.Results <Result>k__BackingField; // 0x0
+
+	// Properties
+	public static NexVersus.Results Result { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCFE0 Offset: 0x2CD0E1 VA: 0x2CCFE0
+	// RVA: 0x2D71360 Offset: 0x2D71461 VA: 0x2D71360
+	public static NexVersus.Results get_Result() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CCFF0 Offset: 0x2CD0F1 VA: 0x2CCFF0
+	// RVA: 0x2D713B0 Offset: 0x2D714B1 VA: 0x2D713B0
+	private static void set_Result(NexVersus.Results value) { }
+
+	// RVA: 0x2D71410 Offset: 0x2D71511 VA: 0x2D71410
+	private void .ctor(ulong opponentPrincipalId, VersusServerReplayMetaData metaData, VersusServerReplayData data) { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2CD000 Offset: 0x2CD101 VA: 0x2CD000
+	// RVA: 0x2D71480 Offset: 0x2D71581 VA: 0x2D71480
+	private IEnumerator GetReplayMetaDatas() { }
+
+	// RVA: 0x2D71530 Offset: 0x2D71631 VA: 0x2D71530
+	private void ChangeMetaData() { }
+
+	// RVA: 0x2D715D0 Offset: 0x2D716D1 VA: 0x2D715D0
+	private void PostChangeMetaData() { }
+
+	// RVA: 0x2D716C0 Offset: 0x2D717C1 VA: 0x2D716C0
+	private void ChangeReplayData() { }
+
+	// RVA: 0x2D71750 Offset: 0x2D71851 VA: 0x2D71750
+	private void PostChangeReplayData() { }
+
+	// RVA: 0x2D71840 Offset: 0x2D71941 VA: 0x2D71840
+	private void PrintError() { }
+
+	// RVA: 0x2D71850 Offset: 0x2D71951 VA: 0x2D71850
+	private void SetResult() { }
+
+	// RVA: 0x2D718B0 Offset: 0x2D719B1 VA: 0x2D718B0
+	public static void CreateBind(ProcInst super, ulong opponentPrincipalId, VersusServerReplayMetaData metaData, VersusServerReplayData data) { }
+}
+
+// Namespace: 
 public sealed class VersusSequence.VersusSequenceNet.SelectReplaySequence.Callback : MulticastDelegate // TypeDefIndex: 13714
 {
 	// Methods
@@ -1379,6 +3587,15 @@ public sealed class VersusSequence.VersusSequenceNet.SelectReplaySequence.Callba
 
 	// RVA: 0x2D7E6F0 Offset: 0x2D7E7F1 VA: 0x2D7E6F0 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+private enum VersusSequence.VersusSequenceNet.SelectReplaySequence.Label // TypeDefIndex: 13715
+{
+	// Fields
+	public int value__; // 0x0
+	public const VersusSequence.VersusSequenceNet.SelectReplaySequence.Label Error = 0;
+	public const VersusSequence.VersusSequenceNet.SelectReplaySequence.Label End = 1;
 }
 
 // Namespace: 
@@ -1407,6 +3624,45 @@ private class VersusSequence.VersusSequenceNet.SelectReplaySequence.SelectReplay
 
 	// RVA: 0x2D7E7C0 Offset: 0x2D7E8C1 VA: 0x2D7E7C0 Slot: 13
 	public override MenuItem.Result BCall() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279240 Offset: 0x279341 VA: 0x279240
+private sealed class VersusSequence.VersusSequenceNet.SelectReplaySequence.<GetReplaySlots>d__5 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 13717
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public VersusSequence.VersusSequenceNet.SelectReplaySequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CD130 Offset: 0x2CD231 VA: 0x2CD130
+	// RVA: 0x2D6FA00 Offset: 0x2D6FB01 VA: 0x2D6FA00
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CD140 Offset: 0x2CD241 VA: 0x2CD140
+	// RVA: 0x2D7E440 Offset: 0x2D7E541 VA: 0x2D7E440 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x2D7E450 Offset: 0x2D7E551 VA: 0x2D7E450 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CD150 Offset: 0x2CD251 VA: 0x2CD150
+	// RVA: 0x2D7E5D0 Offset: 0x2D7E6D1 VA: 0x2D7E5D0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CD160 Offset: 0x2CD261 VA: 0x2CD160
+	// RVA: 0x2D7E5E0 Offset: 0x2D7E6E1 VA: 0x2D7E5E0 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2CD170 Offset: 0x2CD271 VA: 0x2CD170
+	// RVA: 0x2D7E620 Offset: 0x2D7E721 VA: 0x2D7E620 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 
@@ -1439,6 +3695,15 @@ private class VersusSequence.VersusSequenceNet.SelectReplaySequence : ProcInst /
 
 	// RVA: 0x2D70400 Offset: 0x2D70501 VA: 0x2D70400
 	public static void CreateSelectBind(ProcInst super, VersusSequence.VersusSequenceNet.SelectReplaySequence.Callback callback) { }
+}
+
+// Namespace: 
+public enum VersusSequence.VersusSequenceNet.DownloadMetaFromDataCodeSequence.DataType // TypeDefIndex: 13719
+{
+	// Fields
+	public int value__; // 0x0
+	public const VersusSequence.VersusSequenceNet.DownloadMetaFromDataCodeSequence.DataType Casual = 0;
+	public const VersusSequence.VersusSequenceNet.DownloadMetaFromDataCodeSequence.DataType Ranked = 1;
 }
 
 // Namespace: 
@@ -1477,6 +3742,31 @@ private class VersusSequence.VersusSequenceNet.DownloadMetaFromDataCodeSequence 
 
 	// RVA: 0x2D6F8E0 Offset: 0x2D6F9E1 VA: 0x2D6F8E0
 	private static void .cctor() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279250 Offset: 0x279351 VA: 0x279250
+[Serializable]
+private sealed class VersusSequence.VersusSequenceNet.<>c // TypeDefIndex: 13721
+{
+	// Fields
+	public static readonly VersusSequence.VersusSequenceNet.<>c <>9; // 0x0
+	public static NexVersus.CasualMetaDataEndCallback <>9__30_0; // 0x8
+	public static NexVersus.RankedMetaDataEndCallback <>9__30_1; // 0x10
+
+	// Methods
+
+	// RVA: 0x2D6EF30 Offset: 0x2D6F031 VA: 0x2D6EF30
+	private static void .cctor() { }
+
+	// RVA: 0x2D6EFA0 Offset: 0x2D6F0A1 VA: 0x2D6EFA0
+	public void .ctor() { }
+
+	// RVA: 0x2D6EFB0 Offset: 0x2D6F0B1 VA: 0x2D6EFB0
+	internal void <DownloadMetaProfileImpl>b__30_0(NexVersus.Results result, VersusServerCasualMetaData metaData, NexVersus.ResultInfo info) { }
+
+	// RVA: 0x2D6F040 Offset: 0x2D6F141 VA: 0x2D6F040
+	internal void <DownloadMetaProfileImpl>b__30_1(NexVersus.Results result, VersusServerRankedMetaData metaData, NexVersus.ResultInfo info) { }
 }
 
 // Namespace: 

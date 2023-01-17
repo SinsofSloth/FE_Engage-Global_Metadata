@@ -1,4 +1,22 @@
 // Namespace: 
+public sealed class DishSelectMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 14231
+{
+	// Methods
+
+	// RVA: 0x1EFEC10 Offset: 0x1EFED11 VA: 0x1EFEC10
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1EFEC30 Offset: 0x1EFED31 VA: 0x1EFEC30 Slot: 13
+	public virtual void Invoke(FoodData food) { }
+
+	// RVA: 0x1EFEF90 Offset: 0x1EFF091 VA: 0x1EFEF90 Slot: 14
+	public virtual IAsyncResult BeginInvoke(FoodData food, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1EFEFC0 Offset: 0x1EFF0C1 VA: 0x1EFEFC0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class DishSelectMenu.CancelEventHandler : MulticastDelegate // TypeDefIndex: 14232
 {
 	// Methods
@@ -13,6 +31,24 @@ public sealed class DishSelectMenu.CancelEventHandler : MulticastDelegate // Typ
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x1EFEC00 Offset: 0x1EFED01 VA: 0x1EFEC00 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class DishSelectMenu.SelectEventHandler : MulticastDelegate // TypeDefIndex: 14233
+{
+	// Methods
+
+	// RVA: 0x1EFE910 Offset: 0x1EFEA11 VA: 0x1EFE910
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1EFF850 Offset: 0x1EFF951 VA: 0x1EFF850 Slot: 13
+	public virtual void Invoke(FoodData food) { }
+
+	// RVA: 0x1EFFD20 Offset: 0x1EFFE21 VA: 0x1EFFD20 Slot: 14
+	public virtual IAsyncResult BeginInvoke(FoodData food, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1EFFD50 Offset: 0x1EFFE51 VA: 0x1EFFD50 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -43,6 +79,27 @@ public class DishSelectMenu.DishSelectMenuItem : BasicMenuItem // TypeDefIndex: 
 }
 
 // Namespace: 
+public class DishSelectMenu.DishSelectMenuManager : SingletonClass<DishSelectMenu.DishSelectMenuManager> // TypeDefIndex: 14235
+{
+	// Fields
+	private BasicMenuSelect m_Select; // 0x20
+
+	// Methods
+
+	// RVA: 0x1EFFC00 Offset: 0x1EFFD01 VA: 0x1EFFC00 Slot: 5
+	protected override void OnCreate() { }
+
+	// RVA: 0x1EFFC80 Offset: 0x1EFFD81 VA: 0x1EFFC80
+	public void Save(DishSelectMenu menu) { }
+
+	// RVA: 0x1EFFBB0 Offset: 0x1EFFCB1 VA: 0x1EFFBB0
+	public void Restore(DishSelectMenu menu) { }
+
+	// RVA: 0x1EFFCA0 Offset: 0x1EFFDA1 VA: 0x1EFFCA0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class DishSelectMenu.DishMenuCompare : IComparer<BasicMenuItem> // TypeDefIndex: 14236
 {
 	// Fields
@@ -67,6 +124,22 @@ private class DishSelectMenu.DishMenuCompare : IComparer<BasicMenuItem> // TypeD
 
 	// RVA: 0x1EFF4C0 Offset: 0x1EFF5C1 VA: 0x1EFF4C0
 	private int CompareIndex(DishSelectMenu.DishSelectMenuItem x, DishSelectMenu.DishSelectMenuItem y) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x279840 Offset: 0x279941 VA: 0x279840
+private sealed class DishSelectMenu.<>c__DisplayClass13_0 // TypeDefIndex: 14237
+{
+	// Fields
+	public List<DishSelectMenu.DishSelectMenuItem> dishMenuItemList; // 0x10
+
+	// Methods
+
+	// RVA: 0x1EFE740 Offset: 0x1EFE841 VA: 0x1EFE740
+	public void .ctor() { }
+
+	// RVA: 0x1EFE750 Offset: 0x1EFE851 VA: 0x1EFE750
+	internal void <CreateMenuItemList>b__0(FoodData food) { }
 }
 
 // Namespace: 

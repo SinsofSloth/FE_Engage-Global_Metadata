@@ -1,4 +1,34 @@
 // Namespace: TMPro
+public struct TMP_MaterialReference // TypeDefIndex: 7333
+{
+	// Fields
+	public Material material; // 0x0
+	public int referenceCount; // 0x8
+}
+
+// Namespace: TMPro
+[Serializable]
+public abstract class TMP_Asset : ScriptableObject // TypeDefIndex: 7335
+{
+	// Fields
+	private int m_InstanceID; // 0x18
+	public int hashCode; // 0x1C
+	public Material material; // 0x20
+	public int materialHashCode; // 0x28
+
+	// Properties
+	public int instanceID { get; }
+
+	// Methods
+
+	// RVA: 0x1932BF0 Offset: 0x1932CF1 VA: 0x1932BF0
+	public int get_instanceID() { }
+
+	// RVA: 0x1932C30 Offset: 0x1932D31 VA: 0x1932C30
+	protected void .ctor() { }
+}
+
+// Namespace: TMPro
 [Serializable]
 public class TMP_Character : TMP_TextElement // TypeDefIndex: 7336
 {
@@ -15,6 +45,29 @@ public class TMP_Character : TMP_TextElement // TypeDefIndex: 7336
 
 	// RVA: 0x1932D80 Offset: 0x1932E81 VA: 0x1932D80
 	internal void .ctor(uint unicode, uint glyphIndex) { }
+}
+
+// Namespace: TMPro
+public struct TMP_Vertex // TypeDefIndex: 7337
+{
+	// Fields
+	public Vector3 position; // 0x0
+	public Vector2 uv; // 0xC
+	public Vector2 uv2; // 0x14
+	public Vector2 uv4; // 0x1C
+	public Color32 color; // 0x24
+	private static readonly TMP_Vertex k_Zero; // 0x0
+
+	// Properties
+	public static TMP_Vertex zero { get; }
+
+	// Methods
+
+	// RVA: 0x1987390 Offset: 0x1987491 VA: 0x1987390
+	public static TMP_Vertex get_zero() { }
+
+	// RVA: 0x1987420 Offset: 0x1987521 VA: 0x1987420
+	private static void .cctor() { }
 }
 
 // Namespace: TMPro
@@ -240,6 +293,228 @@ public static class TMP_DefaultControls // TypeDefIndex: 7354
 	public static GameObject CreateDropdown(TMP_DefaultControls.Resources resources) { }
 
 	// RVA: 0x1935480 Offset: 0x1935581 VA: 0x1935480
+	private static void .cctor() { }
+}
+
+// Namespace: TMPro
+[RequireComponent] // RVA: 0x4CC30 Offset: 0x4CD31 VA: 0x4CC30
+[AddComponentMenu] // RVA: 0x4CC30 Offset: 0x4CD31 VA: 0x4CC30
+public class TMP_Dropdown : Selectable, IPointerClickHandler, IEventSystemHandler, ISubmitHandler, ICancelHandler // TypeDefIndex: 7361
+{
+	// Fields
+	[SerializeField] // RVA: 0x4D350 Offset: 0x4D451 VA: 0x4D350
+	private RectTransform m_Template; // 0xF8
+	[SerializeField] // RVA: 0x4D360 Offset: 0x4D461 VA: 0x4D360
+	private TMP_Text m_CaptionText; // 0x100
+	[SerializeField] // RVA: 0x4D370 Offset: 0x4D471 VA: 0x4D370
+	private Image m_CaptionImage; // 0x108
+	[SerializeField] // RVA: 0x4D380 Offset: 0x4D481 VA: 0x4D380
+	private Graphic m_Placeholder; // 0x110
+	[SpaceAttribute] // RVA: 0x4D390 Offset: 0x4D491 VA: 0x4D390
+	[SerializeField] // RVA: 0x4D390 Offset: 0x4D491 VA: 0x4D390
+	private TMP_Text m_ItemText; // 0x118
+	[SerializeField] // RVA: 0x4D3D0 Offset: 0x4D4D1 VA: 0x4D3D0
+	private Image m_ItemImage; // 0x120
+	[SerializeField] // RVA: 0x4D3E0 Offset: 0x4D4E1 VA: 0x4D3E0
+	[SpaceAttribute] // RVA: 0x4D3E0 Offset: 0x4D4E1 VA: 0x4D3E0
+	private int m_Value; // 0x128
+	[SerializeField] // RVA: 0x4D420 Offset: 0x4D521 VA: 0x4D420
+	[SpaceAttribute] // RVA: 0x4D420 Offset: 0x4D521 VA: 0x4D420
+	private TMP_Dropdown.OptionDataList m_Options; // 0x130
+	[SerializeField] // RVA: 0x4D460 Offset: 0x4D561 VA: 0x4D460
+	[SpaceAttribute] // RVA: 0x4D460 Offset: 0x4D561 VA: 0x4D460
+	private TMP_Dropdown.DropdownEvent m_OnValueChanged; // 0x138
+	[SerializeField] // RVA: 0x4D4A0 Offset: 0x4D5A1 VA: 0x4D4A0
+	private float m_AlphaFadeSpeed; // 0x140
+	private GameObject m_Dropdown; // 0x148
+	private GameObject m_Blocker; // 0x150
+	private List<TMP_Dropdown.DropdownItem> m_Items; // 0x158
+	private TweenRunner<FloatTween> m_AlphaTweenRunner; // 0x160
+	private bool validTemplate; // 0x168
+	private Coroutine m_Coroutine; // 0x170
+	private static TMP_Dropdown.OptionData s_NoOptionData; // 0x0
+
+	// Properties
+	public RectTransform template { get; set; }
+	public TMP_Text captionText { get; set; }
+	public Image captionImage { get; set; }
+	public Graphic placeholder { get; set; }
+	public TMP_Text itemText { get; set; }
+	public Image itemImage { get; set; }
+	public List<TMP_Dropdown.OptionData> options { get; set; }
+	public TMP_Dropdown.DropdownEvent onValueChanged { get; set; }
+	public float alphaFadeSpeed { get; set; }
+	public int value { get; set; }
+	public bool IsExpanded { get; }
+
+	// Methods
+
+	// RVA: 0x1935590 Offset: 0x1935691 VA: 0x1935590
+	public RectTransform get_template() { }
+
+	// RVA: 0x1935150 Offset: 0x1935251 VA: 0x1935150
+	public void set_template(RectTransform value) { }
+
+	// RVA: 0x19355A0 Offset: 0x19356A1 VA: 0x19355A0
+	public TMP_Text get_captionText() { }
+
+	// RVA: 0x1935180 Offset: 0x1935281 VA: 0x1935180
+	public void set_captionText(TMP_Text value) { }
+
+	// RVA: 0x19355B0 Offset: 0x19356B1 VA: 0x19355B0
+	public Image get_captionImage() { }
+
+	// RVA: 0x19355C0 Offset: 0x19356C1 VA: 0x19355C0
+	public void set_captionImage(Image value) { }
+
+	// RVA: 0x19355F0 Offset: 0x19356F1 VA: 0x19355F0
+	public Graphic get_placeholder() { }
+
+	// RVA: 0x1935600 Offset: 0x1935701 VA: 0x1935600
+	public void set_placeholder(Graphic value) { }
+
+	// RVA: 0x1935630 Offset: 0x1935731 VA: 0x1935630
+	public TMP_Text get_itemText() { }
+
+	// RVA: 0x19351B0 Offset: 0x19352B1 VA: 0x19351B0
+	public void set_itemText(TMP_Text value) { }
+
+	// RVA: 0x1935640 Offset: 0x1935741 VA: 0x1935640
+	public Image get_itemImage() { }
+
+	// RVA: 0x1935650 Offset: 0x1935751 VA: 0x1935650
+	public void set_itemImage(Image value) { }
+
+	// RVA: 0x19351E0 Offset: 0x19352E1 VA: 0x19351E0
+	public List<TMP_Dropdown.OptionData> get_options() { }
+
+	// RVA: 0x1935680 Offset: 0x1935781 VA: 0x1935680
+	public void set_options(List<TMP_Dropdown.OptionData> value) { }
+
+	// RVA: 0x19356B0 Offset: 0x19357B1 VA: 0x19356B0
+	public TMP_Dropdown.DropdownEvent get_onValueChanged() { }
+
+	// RVA: 0x19356C0 Offset: 0x19357C1 VA: 0x19356C0
+	public void set_onValueChanged(TMP_Dropdown.DropdownEvent value) { }
+
+	// RVA: 0x19356D0 Offset: 0x19357D1 VA: 0x19356D0
+	public float get_alphaFadeSpeed() { }
+
+	// RVA: 0x19356E0 Offset: 0x19357E1 VA: 0x19356E0
+	public void set_alphaFadeSpeed(float value) { }
+
+	// RVA: 0x19356F0 Offset: 0x19357F1 VA: 0x19356F0
+	public int get_value() { }
+
+	// RVA: 0x1935700 Offset: 0x1935801 VA: 0x1935700
+	public void set_value(int value) { }
+
+	// RVA: 0x1935850 Offset: 0x1935951 VA: 0x1935850
+	public void SetValueWithoutNotify(int input) { }
+
+	// RVA: 0x1935710 Offset: 0x1935811 VA: 0x1935710
+	private void SetValue(int value, bool sendCallback = True) { }
+
+	// RVA: 0x1935860 Offset: 0x1935961 VA: 0x1935860
+	public bool get_IsExpanded() { }
+
+	// RVA: 0x19358E0 Offset: 0x19359E1 VA: 0x19358E0
+	protected void .ctor() { }
+
+	// RVA: 0x1935A30 Offset: 0x1935B31 VA: 0x1935A30 Slot: 4
+	protected override void Awake() { }
+
+	// RVA: 0x1935B60 Offset: 0x1935C61 VA: 0x1935B60 Slot: 6
+	protected override void Start() { }
+
+	// RVA: 0x1935C10 Offset: 0x1935D11 VA: 0x1935C10 Slot: 7
+	protected override void OnDisable() { }
+
+	// RVA: 0x19351F0 Offset: 0x19352F1 VA: 0x19351F0
+	public void RefreshShownValue() { }
+
+	// RVA: 0x1935EA0 Offset: 0x1935FA1 VA: 0x1935EA0
+	public void AddOptions(List<TMP_Dropdown.OptionData> options) { }
+
+	// RVA: 0x1935F10 Offset: 0x1936011 VA: 0x1935F10
+	public void AddOptions(List<string> options) { }
+
+	// RVA: 0x1936020 Offset: 0x1936121 VA: 0x1936020
+	public void AddOptions(List<Sprite> options) { }
+
+	// RVA: 0x1936130 Offset: 0x1936231 VA: 0x1936130
+	public void ClearOptions() { }
+
+	// RVA: 0x19361E0 Offset: 0x19362E1 VA: 0x19361E0
+	private void SetupTemplate() { }
+
+	// RVA: -1 Offset: -1
+	private static T GetOrAddComponent<T>(GameObject go) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2023B40 Offset: 0x2023C41 VA: 0x2023B40
+	|-TMP_Dropdown.GetOrAddComponent<Canvas>
+	|-TMP_Dropdown.GetOrAddComponent<CanvasGroup>
+	|-TMP_Dropdown.GetOrAddComponent<GraphicRaycaster>
+	|-TMP_Dropdown.GetOrAddComponent<object>
+	*/
+
+	// RVA: 0x1936910 Offset: 0x1936A11 VA: 0x1936910 Slot: 42
+	public virtual void OnPointerClick(PointerEventData eventData) { }
+
+	// RVA: 0x19376D0 Offset: 0x19377D1 VA: 0x19376D0 Slot: 43
+	public virtual void OnSubmit(BaseEventData eventData) { }
+
+	// RVA: 0x19376E0 Offset: 0x19377E1 VA: 0x19376E0 Slot: 44
+	public virtual void OnCancel(BaseEventData eventData) { }
+
+	// RVA: 0x1936920 Offset: 0x1936A21 VA: 0x1936920
+	public void Show() { }
+
+	// RVA: 0x1937D40 Offset: 0x1937E41 VA: 0x1937D40 Slot: 45
+	protected virtual GameObject CreateBlocker(Canvas rootCanvas) { }
+
+	// RVA: 0x1938190 Offset: 0x1938291 VA: 0x1938190 Slot: 46
+	protected virtual void DestroyBlocker(GameObject blocker) { }
+
+	// RVA: 0x1938200 Offset: 0x1938301 VA: 0x1938200 Slot: 47
+	protected virtual GameObject CreateDropdownList(GameObject template) { }
+
+	// RVA: 0x1938280 Offset: 0x1938381 VA: 0x1938280 Slot: 48
+	protected virtual void DestroyDropdownList(GameObject dropdownList) { }
+
+	// RVA: 0x19382F0 Offset: 0x19383F1 VA: 0x19382F0 Slot: 49
+	protected virtual TMP_Dropdown.DropdownItem CreateItem(TMP_Dropdown.DropdownItem itemTemplate) { }
+
+	// RVA: 0x1938370 Offset: 0x1938471 VA: 0x1938370 Slot: 50
+	protected virtual void DestroyItem(TMP_Dropdown.DropdownItem item) { }
+
+	// RVA: 0x19378F0 Offset: 0x19379F1 VA: 0x19378F0
+	private TMP_Dropdown.DropdownItem AddItem(TMP_Dropdown.OptionData data, bool selected, TMP_Dropdown.DropdownItem itemTemplate, List<TMP_Dropdown.DropdownItem> items) { }
+
+	// RVA: 0x1938380 Offset: 0x1938481 VA: 0x1938380
+	private void AlphaFadeList(float duration, float alpha) { }
+
+	// RVA: 0x1937BA0 Offset: 0x1937CA1 VA: 0x1937BA0
+	private void AlphaFadeList(float duration, float start, float end) { }
+
+	// RVA: 0x1938400 Offset: 0x1938501 VA: 0x1938400
+	private void SetAlpha(float alpha) { }
+
+	// RVA: 0x19376F0 Offset: 0x19377F1 VA: 0x19376F0
+	public void Hide() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x4E640 Offset: 0x4E741 VA: 0x4E640
+	// RVA: 0x19384D0 Offset: 0x19385D1 VA: 0x19384D0
+	private IEnumerator DelayedDestroyDropdownList(float delay) { }
+
+	// RVA: 0x1935CD0 Offset: 0x1935DD1 VA: 0x1935CD0
+	private void ImmediateDestroyDropdownList() { }
+
+	// RVA: 0x1938560 Offset: 0x1938661 VA: 0x1938560
+	private void OnSelectItem(Toggle toggle) { }
+
+	// RVA: 0x1938690 Offset: 0x1938791 VA: 0x1938690
 	private static void .cctor() { }
 }
 
@@ -683,6 +958,27 @@ public struct TMP_FontWeightPair // TypeDefIndex: 7368
 }
 
 // Namespace: TMPro
+public static class TMP_FontUtilities // TypeDefIndex: 7377
+{
+	// Fields
+	private static List<int> k_searchedFontAssets; // 0x0
+
+	// Methods
+
+	// RVA: 0x1AAC240 Offset: 0x1AAC341 VA: 0x1AAC240
+	public static TMP_FontAsset SearchForCharacter(TMP_FontAsset font, uint unicode, out TMP_Character character) { }
+
+	// RVA: 0x1AAC580 Offset: 0x1AAC681 VA: 0x1AAC580
+	public static TMP_FontAsset SearchForCharacter(List<TMP_FontAsset> fonts, uint unicode, out TMP_Character character) { }
+
+	// RVA: 0x1AAC330 Offset: 0x1AAC431 VA: 0x1AAC330
+	private static TMP_FontAsset SearchForCharacterInternal(TMP_FontAsset font, uint unicode, out TMP_Character character) { }
+
+	// RVA: 0x1AAC590 Offset: 0x1AAC691 VA: 0x1AAC590
+	private static TMP_FontAsset SearchForCharacterInternal(List<TMP_FontAsset> fonts, uint unicode, out TMP_Character character) { }
+}
+
+// Namespace: TMPro
 public class TMP_FontAssetUtilities // TypeDefIndex: 7378
 {
 	// Fields
@@ -808,6 +1104,41 @@ public struct TMP_GlyphValueRecord // TypeDefIndex: 7382
 
 // Namespace: TMPro
 [Serializable]
+public struct TMP_GlyphAdjustmentRecord // TypeDefIndex: 7383
+{
+	// Fields
+	[SerializeField] // RVA: 0x4D870 Offset: 0x4D971 VA: 0x4D870
+	internal uint m_GlyphIndex; // 0x0
+	[SerializeField] // RVA: 0x4D880 Offset: 0x4D981 VA: 0x4D880
+	internal TMP_GlyphValueRecord m_GlyphValueRecord; // 0x4
+
+	// Properties
+	public uint glyphIndex { get; set; }
+	public TMP_GlyphValueRecord glyphValueRecord { get; set; }
+
+	// Methods
+
+	// RVA: 0x1AAC760 Offset: 0x1AAC861 VA: 0x1AAC760
+	public uint get_glyphIndex() { }
+
+	// RVA: 0x1AAC770 Offset: 0x1AAC871 VA: 0x1AAC770
+	public void set_glyphIndex(uint value) { }
+
+	// RVA: 0x1AAC780 Offset: 0x1AAC881 VA: 0x1AAC780
+	public TMP_GlyphValueRecord get_glyphValueRecord() { }
+
+	// RVA: 0x1AAC790 Offset: 0x1AAC891 VA: 0x1AAC790
+	public void set_glyphValueRecord(TMP_GlyphValueRecord value) { }
+
+	// RVA: 0x1AAC7B0 Offset: 0x1AAC8B1 VA: 0x1AAC7B0
+	public void .ctor(uint glyphIndex, TMP_GlyphValueRecord glyphValueRecord) { }
+
+	// RVA: 0x1AAC7D0 Offset: 0x1AAC8D1 VA: 0x1AAC7D0
+	internal void .ctor(GlyphAdjustmentRecord adjustmentRecord) { }
+}
+
+// Namespace: TMPro
+[Serializable]
 public class TMP_GlyphPairAdjustmentRecord // TypeDefIndex: 7384
 {
 	// Fields
@@ -848,6 +1179,912 @@ public class TMP_GlyphPairAdjustmentRecord // TypeDefIndex: 7384
 
 	// RVA: 0x1AAC9F0 Offset: 0x1AACAF1 VA: 0x1AAC9F0
 	internal void .ctor(GlyphPairAdjustmentRecord glyphPairAdjustmentRecord) { }
+}
+
+// Namespace: TMPro
+[AddComponentMenu] // RVA: 0x4CD60 Offset: 0x4CE61 VA: 0x4CD60
+public class TMP_InputField : Selectable, IUpdateSelectedHandler, IEventSystemHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, ISubmitHandler, ICanvasElement, ILayoutElement, IScrollHandler // TypeDefIndex: 7399
+{
+	// Fields
+	protected TouchScreenKeyboard m_SoftKeyboard; // 0xF8
+	private static readonly char[] kSeparators; // 0x0
+	protected RectTransform m_RectTransform; // 0x100
+	[SerializeField] // RVA: 0x4D8C0 Offset: 0x4D9C1 VA: 0x4D8C0
+	protected RectTransform m_TextViewport; // 0x108
+	protected RectMask2D m_TextComponentRectMask; // 0x110
+	protected RectMask2D m_TextViewportRectMask; // 0x118
+	private Rect m_CachedViewportRect; // 0x120
+	[SerializeField] // RVA: 0x4D8D0 Offset: 0x4D9D1 VA: 0x4D8D0
+	protected TMP_Text m_TextComponent; // 0x130
+	protected RectTransform m_TextComponentRectTransform; // 0x138
+	[SerializeField] // RVA: 0x4D8E0 Offset: 0x4D9E1 VA: 0x4D8E0
+	protected Graphic m_Placeholder; // 0x140
+	[SerializeField] // RVA: 0x4D8F0 Offset: 0x4D9F1 VA: 0x4D8F0
+	protected Scrollbar m_VerticalScrollbar; // 0x148
+	[SerializeField] // RVA: 0x4D900 Offset: 0x4DA01 VA: 0x4D900
+	protected TMP_ScrollbarEventHandler m_VerticalScrollbarEventHandler; // 0x150
+	private bool m_IsDrivenByLayoutComponents; // 0x158
+	[SerializeField] // RVA: 0x4D910 Offset: 0x4DA11 VA: 0x4D910
+	private LayoutGroup m_LayoutGroup; // 0x160
+	private IScrollHandler m_IScrollHandlerParent; // 0x168
+	private float m_ScrollPosition; // 0x170
+	[SerializeField] // RVA: 0x4D920 Offset: 0x4DA21 VA: 0x4D920
+	protected float m_ScrollSensitivity; // 0x174
+	[SerializeField] // RVA: 0x4D930 Offset: 0x4DA31 VA: 0x4D930
+	private TMP_InputField.ContentType m_ContentType; // 0x178
+	[SerializeField] // RVA: 0x4D940 Offset: 0x4DA41 VA: 0x4D940
+	private TMP_InputField.InputType m_InputType; // 0x17C
+	[SerializeField] // RVA: 0x4D950 Offset: 0x4DA51 VA: 0x4D950
+	private char m_AsteriskChar; // 0x180
+	[SerializeField] // RVA: 0x4D960 Offset: 0x4DA61 VA: 0x4D960
+	private TouchScreenKeyboardType m_KeyboardType; // 0x184
+	[SerializeField] // RVA: 0x4D970 Offset: 0x4DA71 VA: 0x4D970
+	private TMP_InputField.LineType m_LineType; // 0x188
+	[SerializeField] // RVA: 0x4D980 Offset: 0x4DA81 VA: 0x4D980
+	private bool m_HideMobileInput; // 0x18C
+	[SerializeField] // RVA: 0x4D990 Offset: 0x4DA91 VA: 0x4D990
+	private bool m_HideSoftKeyboard; // 0x18D
+	[SerializeField] // RVA: 0x4D9A0 Offset: 0x4DAA1 VA: 0x4D9A0
+	private TMP_InputField.CharacterValidation m_CharacterValidation; // 0x190
+	[SerializeField] // RVA: 0x4D9B0 Offset: 0x4DAB1 VA: 0x4D9B0
+	private string m_RegexValue; // 0x198
+	[SerializeField] // RVA: 0x4D9C0 Offset: 0x4DAC1 VA: 0x4D9C0
+	private float m_GlobalPointSize; // 0x1A0
+	[SerializeField] // RVA: 0x4D9D0 Offset: 0x4DAD1 VA: 0x4D9D0
+	private int m_CharacterLimit; // 0x1A4
+	[SerializeField] // RVA: 0x4D9E0 Offset: 0x4DAE1 VA: 0x4D9E0
+	private TMP_InputField.SubmitEvent m_OnEndEdit; // 0x1A8
+	[SerializeField] // RVA: 0x4D9F0 Offset: 0x4DAF1 VA: 0x4D9F0
+	private TMP_InputField.SubmitEvent m_OnSubmit; // 0x1B0
+	[SerializeField] // RVA: 0x4DA00 Offset: 0x4DB01 VA: 0x4DA00
+	private TMP_InputField.SelectionEvent m_OnSelect; // 0x1B8
+	[SerializeField] // RVA: 0x4DA10 Offset: 0x4DB11 VA: 0x4DA10
+	private TMP_InputField.SelectionEvent m_OnDeselect; // 0x1C0
+	[SerializeField] // RVA: 0x4DA20 Offset: 0x4DB21 VA: 0x4DA20
+	private TMP_InputField.TextSelectionEvent m_OnTextSelection; // 0x1C8
+	[SerializeField] // RVA: 0x4DA30 Offset: 0x4DB31 VA: 0x4DA30
+	private TMP_InputField.TextSelectionEvent m_OnEndTextSelection; // 0x1D0
+	[SerializeField] // RVA: 0x4DA40 Offset: 0x4DB41 VA: 0x4DA40
+	private TMP_InputField.OnChangeEvent m_OnValueChanged; // 0x1D8
+	[SerializeField] // RVA: 0x4DA50 Offset: 0x4DB51 VA: 0x4DA50
+	private TMP_InputField.TouchScreenKeyboardEvent m_OnTouchScreenKeyboardStatusChanged; // 0x1E0
+	[SerializeField] // RVA: 0x4DA60 Offset: 0x4DB61 VA: 0x4DA60
+	private TMP_InputField.OnValidateInput m_OnValidateInput; // 0x1E8
+	[SerializeField] // RVA: 0x4DA70 Offset: 0x4DB71 VA: 0x4DA70
+	private Color m_CaretColor; // 0x1F0
+	[SerializeField] // RVA: 0x4DA80 Offset: 0x4DB81 VA: 0x4DA80
+	private bool m_CustomCaretColor; // 0x200
+	[SerializeField] // RVA: 0x4DA90 Offset: 0x4DB91 VA: 0x4DA90
+	private Color m_SelectionColor; // 0x204
+	[SerializeField] // RVA: 0x4DAA0 Offset: 0x4DBA1 VA: 0x4DAA0
+	[TextAreaAttribute] // RVA: 0x4DAA0 Offset: 0x4DBA1 VA: 0x4DAA0
+	protected string m_Text; // 0x218
+	[SerializeField] // RVA: 0x4DAE0 Offset: 0x4DBE1 VA: 0x4DAE0
+	[RangeAttribute] // RVA: 0x4DAE0 Offset: 0x4DBE1 VA: 0x4DAE0
+	private float m_CaretBlinkRate; // 0x220
+	[RangeAttribute] // RVA: 0x4DB20 Offset: 0x4DC21 VA: 0x4DB20
+	[SerializeField] // RVA: 0x4DB20 Offset: 0x4DC21 VA: 0x4DB20
+	private int m_CaretWidth; // 0x224
+	[SerializeField] // RVA: 0x4DB60 Offset: 0x4DC61 VA: 0x4DB60
+	private bool m_ReadOnly; // 0x228
+	[SerializeField] // RVA: 0x4DB70 Offset: 0x4DC71 VA: 0x4DB70
+	private bool m_RichText; // 0x229
+	protected int m_StringPosition; // 0x22C
+	protected int m_StringSelectPosition; // 0x230
+	protected int m_CaretPosition; // 0x234
+	protected int m_CaretSelectPosition; // 0x238
+	private RectTransform caretRectTrans; // 0x240
+	protected UIVertex[] m_CursorVerts; // 0x248
+	private CanvasRenderer m_CachedInputRenderer; // 0x250
+	private Vector2 m_LastPosition; // 0x258
+	protected Mesh m_Mesh; // 0x260
+	private bool m_AllowInput; // 0x268
+	private bool m_ShouldActivateNextUpdate; // 0x269
+	private bool m_UpdateDrag; // 0x26A
+	private bool m_DragPositionOutOfBounds; // 0x26B
+	private const float kHScrollSpeed = 0.05;
+	private const float kVScrollSpeed = 0.1;
+	protected bool m_CaretVisible; // 0x26C
+	private Coroutine m_BlinkCoroutine; // 0x270
+	private float m_BlinkStartTime; // 0x278
+	private Coroutine m_DragCoroutine; // 0x280
+	private string m_OriginalText; // 0x288
+	private bool m_WasCanceled; // 0x290
+	private bool m_HasDoneFocusTransition; // 0x291
+	private WaitForSecondsRealtime m_WaitForSecondsRealtime; // 0x298
+	private bool m_PreventCallback; // 0x2A0
+	private bool m_TouchKeyboardAllowsInPlaceEditing; // 0x2A1
+	private bool m_IsTextComponentUpdateRequired; // 0x2A2
+	private bool m_isLastKeyBackspace; // 0x2A3
+	private float m_PointerDownClickStartTime; // 0x2A4
+	private float m_KeyDownStartTime; // 0x2A8
+	private float m_DoubleClickDelay; // 0x2AC
+	private const string kEmailSpecialCharacters = "!#$%&\'*+-/=?^_`{|}~";
+	private bool m_IsCompositionActive; // 0x2B0
+	private bool m_ShouldUpdateIMEWindowPosition; // 0x2B1
+	private int m_PreviousIMEInsertionLine; // 0x2B4
+	[SerializeField] // RVA: 0x4DB80 Offset: 0x4DC81 VA: 0x4DB80
+	protected TMP_FontAsset m_GlobalFontAsset; // 0x2B8
+	[SerializeField] // RVA: 0x4DB90 Offset: 0x4DC91 VA: 0x4DB90
+	protected bool m_OnFocusSelectAll; // 0x2C0
+	protected bool m_isSelectAll; // 0x2C1
+	[SerializeField] // RVA: 0x4DBA0 Offset: 0x4DCA1 VA: 0x4DBA0
+	protected bool m_ResetOnDeActivation; // 0x2C2
+	private bool m_SelectionStillActive; // 0x2C3
+	private bool m_ReleaseSelection; // 0x2C4
+	private GameObject m_PreviouslySelectedObject; // 0x2C8
+	[SerializeField] // RVA: 0x4DBB0 Offset: 0x4DCB1 VA: 0x4DBB0
+	private bool m_RestoreOriginalTextOnEscape; // 0x2D0
+	[SerializeField] // RVA: 0x4DBC0 Offset: 0x4DCC1 VA: 0x4DBC0
+	protected bool m_isRichTextEditingAllowed; // 0x2D1
+	[SerializeField] // RVA: 0x4DBD0 Offset: 0x4DCD1 VA: 0x4DBD0
+	protected int m_LineLimit; // 0x2D4
+	[SerializeField] // RVA: 0x4DBE0 Offset: 0x4DCE1 VA: 0x4DBE0
+	protected TMP_InputValidator m_InputValidator; // 0x2D8
+	private bool m_isSelected; // 0x2E0
+	private bool m_IsStringPositionDirty; // 0x2E1
+	private bool m_IsCaretPositionDirty; // 0x2E2
+	private bool m_forceRectTransformAdjustment; // 0x2E3
+	private Event m_ProcessingEvent; // 0x2E8
+
+	// Properties
+	private BaseInput inputSystem { get; }
+	private string compositionString { get; }
+	private int compositionLength { get; }
+	protected Mesh mesh { get; }
+	public bool shouldHideMobileInput { get; set; }
+	public bool shouldHideSoftKeyboard { get; set; }
+	public string text { get; set; }
+	public bool isFocused { get; }
+	public float caretBlinkRate { get; set; }
+	public int caretWidth { get; set; }
+	public RectTransform textViewport { get; set; }
+	public TMP_Text textComponent { get; set; }
+	public Graphic placeholder { get; set; }
+	public Scrollbar verticalScrollbar { get; set; }
+	public float scrollSensitivity { get; set; }
+	public Color caretColor { get; set; }
+	public bool customCaretColor { get; set; }
+	public Color selectionColor { get; set; }
+	public TMP_InputField.SubmitEvent onEndEdit { get; set; }
+	public TMP_InputField.SubmitEvent onSubmit { get; set; }
+	public TMP_InputField.SelectionEvent onSelect { get; set; }
+	public TMP_InputField.SelectionEvent onDeselect { get; set; }
+	public TMP_InputField.TextSelectionEvent onTextSelection { get; set; }
+	public TMP_InputField.TextSelectionEvent onEndTextSelection { get; set; }
+	public TMP_InputField.OnChangeEvent onValueChanged { get; set; }
+	public TMP_InputField.TouchScreenKeyboardEvent onTouchScreenKeyboardStatusChanged { get; set; }
+	public TMP_InputField.OnValidateInput onValidateInput { get; set; }
+	public int characterLimit { get; set; }
+	public float pointSize { get; set; }
+	public TMP_FontAsset fontAsset { get; set; }
+	public bool onFocusSelectAll { get; set; }
+	public bool resetOnDeActivation { get; set; }
+	public bool restoreOriginalTextOnEscape { get; set; }
+	public bool isRichTextEditingAllowed { get; set; }
+	public TMP_InputField.ContentType contentType { get; set; }
+	public TMP_InputField.LineType lineType { get; set; }
+	public int lineLimit { get; set; }
+	public TMP_InputField.InputType inputType { get; set; }
+	public TouchScreenKeyboardType keyboardType { get; set; }
+	public TMP_InputField.CharacterValidation characterValidation { get; set; }
+	public TMP_InputValidator inputValidator { get; set; }
+	public bool readOnly { get; set; }
+	public bool richText { get; set; }
+	public bool multiLine { get; }
+	public char asteriskChar { get; set; }
+	public bool wasCanceled { get; }
+	protected int caretPositionInternal { get; set; }
+	protected int stringPositionInternal { get; set; }
+	protected int caretSelectPositionInternal { get; set; }
+	protected int stringSelectPositionInternal { get; set; }
+	private bool hasSelection { get; }
+	public int caretPosition { get; set; }
+	public int selectionAnchorPosition { get; set; }
+	public int selectionFocusPosition { get; set; }
+	public int stringPosition { get; set; }
+	public int selectionStringAnchorPosition { get; set; }
+	public int selectionStringFocusPosition { get; set; }
+	private static string clipboard { get; set; }
+	public virtual float minWidth { get; }
+	public virtual float preferredWidth { get; }
+	public virtual float flexibleWidth { get; }
+	public virtual float minHeight { get; }
+	public virtual float preferredHeight { get; }
+	public virtual float flexibleHeight { get; }
+	public virtual int layoutPriority { get; }
+
+	// Methods
+
+	// RVA: 0x1AACC50 Offset: 0x1AACD51 VA: 0x1AACC50
+	private BaseInput get_inputSystem() { }
+
+	// RVA: 0x1AACDB0 Offset: 0x1AACEB1 VA: 0x1AACDB0
+	private string get_compositionString() { }
+
+	// RVA: 0x1AACE50 Offset: 0x1AACF51 VA: 0x1AACE50
+	private int get_compositionLength() { }
+
+	// RVA: 0x1AACE80 Offset: 0x1AACF81 VA: 0x1AACE80
+	protected void .ctor() { }
+
+	// RVA: 0x1AAD2D0 Offset: 0x1AAD3D1 VA: 0x1AAD2D0
+	protected Mesh get_mesh() { }
+
+	// RVA: 0x1AAD390 Offset: 0x1AAD491 VA: 0x1AAD390
+	public bool get_shouldHideMobileInput() { }
+
+	// RVA: 0x1AAD3F0 Offset: 0x1AAD4F1 VA: 0x1AAD3F0
+	public void set_shouldHideMobileInput(bool value) { }
+
+	// RVA: 0x1AAD490 Offset: 0x1AAD591 VA: 0x1AAD490
+	public bool get_shouldHideSoftKeyboard() { }
+
+	// RVA: 0x1AAD540 Offset: 0x1AAD641 VA: 0x1AAD540
+	public void set_shouldHideSoftKeyboard(bool value) { }
+
+	// RVA: 0x1AAD680 Offset: 0x1AAD781 VA: 0x1AAD680
+	private bool isKeyboardUsingEvents() { }
+
+	// RVA: 0x1AAD6E0 Offset: 0x1AAD7E1 VA: 0x1AAD6E0
+	public string get_text() { }
+
+	// RVA: 0x1AAD6F0 Offset: 0x1AAD7F1 VA: 0x1AAD6F0
+	public void set_text(string value) { }
+
+	// RVA: 0x1AAD870 Offset: 0x1AAD971 VA: 0x1AAD870
+	public void SetTextWithoutNotify(string input) { }
+
+	// RVA: 0x1AAD700 Offset: 0x1AAD801 VA: 0x1AAD700
+	private void SetText(string value, bool sendCallback = True) { }
+
+	// RVA: 0x1AADEB0 Offset: 0x1AADFB1 VA: 0x1AADEB0
+	public bool get_isFocused() { }
+
+	// RVA: 0x1AADEC0 Offset: 0x1AADFC1 VA: 0x1AADEC0
+	public float get_caretBlinkRate() { }
+
+	// RVA: 0x1AADED0 Offset: 0x1AADFD1 VA: 0x1AADED0
+	public void set_caretBlinkRate(float value) { }
+
+	// RVA: 0x1AAE040 Offset: 0x1AAE141 VA: 0x1AAE040
+	public int get_caretWidth() { }
+
+	// RVA: 0x1AAE050 Offset: 0x1AAE151 VA: 0x1AAE050
+	public void set_caretWidth(int value) { }
+
+	// RVA: 0x1AAE180 Offset: 0x1AAE281 VA: 0x1AAE180
+	public RectTransform get_textViewport() { }
+
+	// RVA: 0x1AAE190 Offset: 0x1AAE291 VA: 0x1AAE190
+	public void set_textViewport(RectTransform value) { }
+
+	// RVA: 0x1AAE1F0 Offset: 0x1AAE2F1 VA: 0x1AAE1F0
+	public TMP_Text get_textComponent() { }
+
+	// RVA: 0x1AAE200 Offset: 0x1AAE301 VA: 0x1AAE200
+	public void set_textComponent(TMP_Text value) { }
+
+	// RVA: 0x1AAE280 Offset: 0x1AAE381 VA: 0x1AAE280
+	public Graphic get_placeholder() { }
+
+	// RVA: 0x1AAE290 Offset: 0x1AAE391 VA: 0x1AAE290
+	public void set_placeholder(Graphic value) { }
+
+	// RVA: 0x1AAE2F0 Offset: 0x1AAE3F1 VA: 0x1AAE2F0
+	public Scrollbar get_verticalScrollbar() { }
+
+	// RVA: 0x1AAE300 Offset: 0x1AAE401 VA: 0x1AAE300
+	public void set_verticalScrollbar(Scrollbar value) { }
+
+	// RVA: 0x1AAE4F0 Offset: 0x1AAE5F1 VA: 0x1AAE4F0
+	public float get_scrollSensitivity() { }
+
+	// RVA: 0x1AAE500 Offset: 0x1AAE601 VA: 0x1AAE500
+	public void set_scrollSensitivity(float value) { }
+
+	// RVA: 0x1AAE5D0 Offset: 0x1AAE6D1 VA: 0x1AAE5D0
+	public Color get_caretColor() { }
+
+	// RVA: 0x1AAE620 Offset: 0x1AAE721 VA: 0x1AAE620
+	public void set_caretColor(Color value) { }
+
+	// RVA: 0x1AAE6B0 Offset: 0x1AAE7B1 VA: 0x1AAE6B0
+	public bool get_customCaretColor() { }
+
+	// RVA: 0x1AAE6C0 Offset: 0x1AAE7C1 VA: 0x1AAE6C0
+	public void set_customCaretColor(bool value) { }
+
+	// RVA: 0x1AAE760 Offset: 0x1AAE861 VA: 0x1AAE760
+	public Color get_selectionColor() { }
+
+	// RVA: 0x1AAE780 Offset: 0x1AAE881 VA: 0x1AAE780
+	public void set_selectionColor(Color value) { }
+
+	// RVA: 0x1AAE810 Offset: 0x1AAE911 VA: 0x1AAE810
+	public TMP_InputField.SubmitEvent get_onEndEdit() { }
+
+	// RVA: 0x1AAE820 Offset: 0x1AAE921 VA: 0x1AAE820
+	public void set_onEndEdit(TMP_InputField.SubmitEvent value) { }
+
+	// RVA: 0x1AAE880 Offset: 0x1AAE981 VA: 0x1AAE880
+	public TMP_InputField.SubmitEvent get_onSubmit() { }
+
+	// RVA: 0x1AAE890 Offset: 0x1AAE991 VA: 0x1AAE890
+	public void set_onSubmit(TMP_InputField.SubmitEvent value) { }
+
+	// RVA: 0x1AAE8F0 Offset: 0x1AAE9F1 VA: 0x1AAE8F0
+	public TMP_InputField.SelectionEvent get_onSelect() { }
+
+	// RVA: 0x1AAE900 Offset: 0x1AAEA01 VA: 0x1AAE900
+	public void set_onSelect(TMP_InputField.SelectionEvent value) { }
+
+	// RVA: 0x1AAE960 Offset: 0x1AAEA61 VA: 0x1AAE960
+	public TMP_InputField.SelectionEvent get_onDeselect() { }
+
+	// RVA: 0x1AAE970 Offset: 0x1AAEA71 VA: 0x1AAE970
+	public void set_onDeselect(TMP_InputField.SelectionEvent value) { }
+
+	// RVA: 0x1AAE9D0 Offset: 0x1AAEAD1 VA: 0x1AAE9D0
+	public TMP_InputField.TextSelectionEvent get_onTextSelection() { }
+
+	// RVA: 0x1AAE9E0 Offset: 0x1AAEAE1 VA: 0x1AAE9E0
+	public void set_onTextSelection(TMP_InputField.TextSelectionEvent value) { }
+
+	// RVA: 0x1AAEA40 Offset: 0x1AAEB41 VA: 0x1AAEA40
+	public TMP_InputField.TextSelectionEvent get_onEndTextSelection() { }
+
+	// RVA: 0x1AAEA50 Offset: 0x1AAEB51 VA: 0x1AAEA50
+	public void set_onEndTextSelection(TMP_InputField.TextSelectionEvent value) { }
+
+	// RVA: 0x1AAEAB0 Offset: 0x1AAEBB1 VA: 0x1AAEAB0
+	public TMP_InputField.OnChangeEvent get_onValueChanged() { }
+
+	// RVA: 0x1AAEAC0 Offset: 0x1AAEBC1 VA: 0x1AAEAC0
+	public void set_onValueChanged(TMP_InputField.OnChangeEvent value) { }
+
+	// RVA: 0x1AAEB20 Offset: 0x1AAEC21 VA: 0x1AAEB20
+	public TMP_InputField.TouchScreenKeyboardEvent get_onTouchScreenKeyboardStatusChanged() { }
+
+	// RVA: 0x1AAEB30 Offset: 0x1AAEC31 VA: 0x1AAEB30
+	public void set_onTouchScreenKeyboardStatusChanged(TMP_InputField.TouchScreenKeyboardEvent value) { }
+
+	// RVA: 0x1AAEB90 Offset: 0x1AAEC91 VA: 0x1AAEB90
+	public TMP_InputField.OnValidateInput get_onValidateInput() { }
+
+	// RVA: 0x1AAEBA0 Offset: 0x1AAECA1 VA: 0x1AAEBA0
+	public void set_onValidateInput(TMP_InputField.OnValidateInput value) { }
+
+	// RVA: 0x1AAEC00 Offset: 0x1AAED01 VA: 0x1AAEC00
+	public int get_characterLimit() { }
+
+	// RVA: 0x1AAEC10 Offset: 0x1AAED11 VA: 0x1AAEC10
+	public void set_characterLimit(int value) { }
+
+	// RVA: 0x1AAECF0 Offset: 0x1AAEDF1 VA: 0x1AAECF0
+	public float get_pointSize() { }
+
+	// RVA: 0x1AAED00 Offset: 0x1AAEE01 VA: 0x1AAED00
+	public void set_pointSize(float value) { }
+
+	// RVA: 0x1AAEED0 Offset: 0x1AAEFD1 VA: 0x1AAEED0
+	public TMP_FontAsset get_fontAsset() { }
+
+	// RVA: 0x1AAEEE0 Offset: 0x1AAEFE1 VA: 0x1AAEEE0
+	public void set_fontAsset(TMP_FontAsset value) { }
+
+	// RVA: 0x1AAF070 Offset: 0x1AAF171 VA: 0x1AAF070
+	public bool get_onFocusSelectAll() { }
+
+	// RVA: 0x1AAF080 Offset: 0x1AAF181 VA: 0x1AAF080
+	public void set_onFocusSelectAll(bool value) { }
+
+	// RVA: 0x1AAF090 Offset: 0x1AAF191 VA: 0x1AAF090
+	public bool get_resetOnDeActivation() { }
+
+	// RVA: 0x1AAF0A0 Offset: 0x1AAF1A1 VA: 0x1AAF0A0
+	public void set_resetOnDeActivation(bool value) { }
+
+	// RVA: 0x1AAF0B0 Offset: 0x1AAF1B1 VA: 0x1AAF0B0
+	public bool get_restoreOriginalTextOnEscape() { }
+
+	// RVA: 0x1AAF0C0 Offset: 0x1AAF1C1 VA: 0x1AAF0C0
+	public void set_restoreOriginalTextOnEscape(bool value) { }
+
+	// RVA: 0x1AAF0D0 Offset: 0x1AAF1D1 VA: 0x1AAF0D0
+	public bool get_isRichTextEditingAllowed() { }
+
+	// RVA: 0x1AAF0E0 Offset: 0x1AAF1E1 VA: 0x1AAF0E0
+	public void set_isRichTextEditingAllowed(bool value) { }
+
+	// RVA: 0x1AAF0F0 Offset: 0x1AAF1F1 VA: 0x1AAF0F0
+	public TMP_InputField.ContentType get_contentType() { }
+
+	// RVA: 0x1AAF100 Offset: 0x1AAF201 VA: 0x1AAF100
+	public void set_contentType(TMP_InputField.ContentType value) { }
+
+	// RVA: 0x1AAF300 Offset: 0x1AAF401 VA: 0x1AAF300
+	public TMP_InputField.LineType get_lineType() { }
+
+	// RVA: 0x1AAF310 Offset: 0x1AAF411 VA: 0x1AAF310
+	public void set_lineType(TMP_InputField.LineType value) { }
+
+	// RVA: 0x1AAF480 Offset: 0x1AAF581 VA: 0x1AAF480
+	public int get_lineLimit() { }
+
+	// RVA: 0x1AAF490 Offset: 0x1AAF591 VA: 0x1AAF490
+	public void set_lineLimit(int value) { }
+
+	// RVA: 0x1AAF510 Offset: 0x1AAF611 VA: 0x1AAF510
+	public TMP_InputField.InputType get_inputType() { }
+
+	// RVA: 0x1AAF520 Offset: 0x1AAF621 VA: 0x1AAF520
+	public void set_inputType(TMP_InputField.InputType value) { }
+
+	// RVA: 0x1AAF5D0 Offset: 0x1AAF6D1 VA: 0x1AAF5D0
+	public TouchScreenKeyboardType get_keyboardType() { }
+
+	// RVA: 0x1AAF5E0 Offset: 0x1AAF6E1 VA: 0x1AAF5E0
+	public void set_keyboardType(TouchScreenKeyboardType value) { }
+
+	// RVA: 0x1AAF670 Offset: 0x1AAF771 VA: 0x1AAF670
+	public TMP_InputField.CharacterValidation get_characterValidation() { }
+
+	// RVA: 0x1AAF680 Offset: 0x1AAF781 VA: 0x1AAF680
+	public void set_characterValidation(TMP_InputField.CharacterValidation value) { }
+
+	// RVA: 0x1AAF710 Offset: 0x1AAF811 VA: 0x1AAF710
+	public TMP_InputValidator get_inputValidator() { }
+
+	// RVA: 0x1AAF720 Offset: 0x1AAF821 VA: 0x1AAF720
+	public void set_inputValidator(TMP_InputValidator value) { }
+
+	// RVA: 0x1AAF7D0 Offset: 0x1AAF8D1 VA: 0x1AAF7D0
+	public bool get_readOnly() { }
+
+	// RVA: 0x1AAF7E0 Offset: 0x1AAF8E1 VA: 0x1AAF7E0
+	public void set_readOnly(bool value) { }
+
+	// RVA: 0x1AAF7F0 Offset: 0x1AAF8F1 VA: 0x1AAF7F0
+	public bool get_richText() { }
+
+	// RVA: 0x1AAF800 Offset: 0x1AAF901 VA: 0x1AAF800
+	public void set_richText(bool value) { }
+
+	// RVA: 0x1AAF940 Offset: 0x1AAFA41 VA: 0x1AAF940
+	public bool get_multiLine() { }
+
+	// RVA: 0x1AAF960 Offset: 0x1AAFA61 VA: 0x1AAF960
+	public char get_asteriskChar() { }
+
+	// RVA: 0x1AAF970 Offset: 0x1AAFA71 VA: 0x1AAF970
+	public void set_asteriskChar(char value) { }
+
+	// RVA: 0x1AAF9F0 Offset: 0x1AAFAF1 VA: 0x1AAF9F0
+	public bool get_wasCanceled() { }
+
+	// RVA: 0x1AAFA00 Offset: 0x1AAFB01 VA: 0x1AAFA00
+	protected void ClampStringPos(ref int pos) { }
+
+	// RVA: 0x1AAFA30 Offset: 0x1AAFB31 VA: 0x1AAFA30
+	protected void ClampCaretPos(ref int pos) { }
+
+	// RVA: 0x1AAFA60 Offset: 0x1AAFB61 VA: 0x1AAFA60
+	protected int get_caretPositionInternal() { }
+
+	// RVA: 0x1AAFAB0 Offset: 0x1AAFBB1 VA: 0x1AAFAB0
+	protected void set_caretPositionInternal(int value) { }
+
+	// RVA: 0x1AAFAE0 Offset: 0x1AAFBE1 VA: 0x1AAFAE0
+	protected int get_stringPositionInternal() { }
+
+	// RVA: 0x1AAFB30 Offset: 0x1AAFC31 VA: 0x1AAFB30
+	protected void set_stringPositionInternal(int value) { }
+
+	// RVA: 0x1AAFB60 Offset: 0x1AAFC61 VA: 0x1AAFB60
+	protected int get_caretSelectPositionInternal() { }
+
+	// RVA: 0x1AAFBB0 Offset: 0x1AAFCB1 VA: 0x1AAFBB0
+	protected void set_caretSelectPositionInternal(int value) { }
+
+	// RVA: 0x1AAFBE0 Offset: 0x1AAFCE1 VA: 0x1AAFBE0
+	protected int get_stringSelectPositionInternal() { }
+
+	// RVA: 0x1AAFC30 Offset: 0x1AAFD31 VA: 0x1AAFC30
+	protected void set_stringSelectPositionInternal(int value) { }
+
+	// RVA: 0x1AAFC60 Offset: 0x1AAFD61 VA: 0x1AAFC60
+	private bool get_hasSelection() { }
+
+	// RVA: 0x1AAFCD0 Offset: 0x1AAFDD1 VA: 0x1AAFCD0
+	public int get_caretPosition() { }
+
+	// RVA: 0x1AAFD20 Offset: 0x1AAFE21 VA: 0x1AAFD20
+	public void set_caretPosition(int value) { }
+
+	// RVA: 0x1AAFEF0 Offset: 0x1AAFFF1 VA: 0x1AAFEF0
+	public int get_selectionAnchorPosition() { }
+
+	// RVA: 0x1AAFDF0 Offset: 0x1AAFEF1 VA: 0x1AAFDF0
+	public void set_selectionAnchorPosition(int value) { }
+
+	// RVA: 0x1AAFF40 Offset: 0x1AB0041 VA: 0x1AAFF40
+	public int get_selectionFocusPosition() { }
+
+	// RVA: 0x1AAFE70 Offset: 0x1AAFF71 VA: 0x1AAFE70
+	public void set_selectionFocusPosition(int value) { }
+
+	// RVA: 0x1AAFF90 Offset: 0x1AB0091 VA: 0x1AAFF90
+	public int get_stringPosition() { }
+
+	// RVA: 0x1AAFFE0 Offset: 0x1AB00E1 VA: 0x1AAFFE0
+	public void set_stringPosition(int value) { }
+
+	// RVA: 0x1AB0180 Offset: 0x1AB0281 VA: 0x1AB0180
+	public int get_selectionStringAnchorPosition() { }
+
+	// RVA: 0x1AB00A0 Offset: 0x1AB01A1 VA: 0x1AB00A0
+	public void set_selectionStringAnchorPosition(int value) { }
+
+	// RVA: 0x1AB01D0 Offset: 0x1AB02D1 VA: 0x1AB01D0
+	public int get_selectionStringFocusPosition() { }
+
+	// RVA: 0x1AB0110 Offset: 0x1AB0211 VA: 0x1AB0110
+	public void set_selectionStringFocusPosition(int value) { }
+
+	// RVA: 0x1AB0220 Offset: 0x1AB0321 VA: 0x1AB0220 Slot: 5
+	protected override void OnEnable() { }
+
+	// RVA: 0x1AB0E70 Offset: 0x1AB0F71 VA: 0x1AB0E70 Slot: 7
+	protected override void OnDisable() { }
+
+	// RVA: 0x1AB1440 Offset: 0x1AB1541 VA: 0x1AB1440
+	private void ON_TEXT_CHANGED(Object obj) { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x4E700 Offset: 0x4E801 VA: 0x4E700
+	// RVA: 0x1AB1800 Offset: 0x1AB1901 VA: 0x1AB1800
+	private IEnumerator CaretBlink() { }
+
+	// RVA: 0x1AB1880 Offset: 0x1AB1981 VA: 0x1AB1880
+	private void SetCaretVisible() { }
+
+	// RVA: 0x1AADF60 Offset: 0x1AAE061 VA: 0x1AADF60
+	private void SetCaretActive() { }
+
+	// RVA: 0x1AB18D0 Offset: 0x1AB19D1 VA: 0x1AB18D0
+	protected void OnFocus() { }
+
+	// RVA: 0x1AB1920 Offset: 0x1AB1A21 VA: 0x1AB1920
+	protected void SelectAll() { }
+
+	// RVA: 0x1AB1970 Offset: 0x1AB1A71 VA: 0x1AB1970
+	public void MoveTextEnd(bool shift) { }
+
+	// RVA: 0x1AB1C20 Offset: 0x1AB1D21 VA: 0x1AB1C20
+	public void MoveTextStart(bool shift) { }
+
+	// RVA: 0x1AB1DF0 Offset: 0x1AB1EF1 VA: 0x1AB1DF0
+	public void MoveToEndOfLine(bool shift, bool ctrl) { }
+
+	// RVA: 0x1AB1FF0 Offset: 0x1AB20F1 VA: 0x1AB1FF0
+	public void MoveToStartOfLine(bool shift, bool ctrl) { }
+
+	// RVA: 0x1AB2210 Offset: 0x1AB2311 VA: 0x1AB2210
+	private static string get_clipboard() { }
+
+	// RVA: 0x1AB2220 Offset: 0x1AB2321 VA: 0x1AB2220
+	private static void set_clipboard(string value) { }
+
+	// RVA: 0x1AB2230 Offset: 0x1AB2331 VA: 0x1AB2230
+	private bool InPlaceEditing() { }
+
+	// RVA: 0x1AB23F0 Offset: 0x1AB24F1 VA: 0x1AB23F0
+	private void UpdateStringPositionFromKeyboard() { }
+
+	// RVA: 0x1AB2680 Offset: 0x1AB2781 VA: 0x1AB2680 Slot: 60
+	protected virtual void LateUpdate() { }
+
+	// RVA: 0x1AB3E40 Offset: 0x1AB3F41 VA: 0x1AB3E40
+	private bool MayDrag(PointerEventData eventData) { }
+
+	// RVA: 0x1AB3FF0 Offset: 0x1AB40F1 VA: 0x1AB3FF0 Slot: 61
+	public virtual void OnBeginDrag(PointerEventData eventData) { }
+
+	// RVA: 0x1AB4020 Offset: 0x1AB4121 VA: 0x1AB4020 Slot: 62
+	public virtual void OnDrag(PointerEventData eventData) { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x4E770 Offset: 0x4E871 VA: 0x4E770
+	// RVA: 0x1AB43E0 Offset: 0x1AB44E1 VA: 0x1AB43E0
+	private IEnumerator MouseDragOutsideRect(PointerEventData eventData) { }
+
+	// RVA: 0x1AB4470 Offset: 0x1AB4571 VA: 0x1AB4470 Slot: 63
+	public virtual void OnEndDrag(PointerEventData eventData) { }
+
+	// RVA: 0x1AB44A0 Offset: 0x1AB45A1 VA: 0x1AB44A0 Slot: 32
+	public override void OnPointerDown(PointerEventData eventData) { }
+
+	// RVA: 0x1AB4C90 Offset: 0x1AB4D91 VA: 0x1AB4C90
+	protected TMP_InputField.EditState KeyPressed(Event evt) { }
+
+	// RVA: 0x1AB6B80 Offset: 0x1AB6C81 VA: 0x1AB6B80 Slot: 64
+	protected virtual bool IsValidChar(char c) { }
+
+	// RVA: 0x1AB6BA0 Offset: 0x1AB6CA1 VA: 0x1AB6BA0
+	public void ProcessEvent(Event e) { }
+
+	// RVA: 0x1AB6BB0 Offset: 0x1AB6CB1 VA: 0x1AB6BB0 Slot: 65
+	public virtual void OnUpdateSelected(BaseEventData eventData) { }
+
+	// RVA: 0x1AB6E20 Offset: 0x1AB6F21 VA: 0x1AB6E20 Slot: 66
+	public virtual void OnScroll(PointerEventData eventData) { }
+
+	// RVA: 0x1AB6FE0 Offset: 0x1AB70E1 VA: 0x1AB6FE0
+	private float GetScrollPositionRelativeToViewport() { }
+
+	// RVA: 0x1AB5B20 Offset: 0x1AB5C21 VA: 0x1AB5B20
+	private string GetSelectedString() { }
+
+	// RVA: 0x1AB72B0 Offset: 0x1AB73B1 VA: 0x1AB72B0
+	private int FindNextWordBegin() { }
+
+	// RVA: 0x1AB64C0 Offset: 0x1AB65C1 VA: 0x1AB64C0
+	private void MoveRight(bool shift, bool ctrl) { }
+
+	// RVA: 0x1AB73B0 Offset: 0x1AB74B1 VA: 0x1AB73B0
+	private int FindPrevWordBegin() { }
+
+	// RVA: 0x1AB5E90 Offset: 0x1AB5F91 VA: 0x1AB5E90
+	private void MoveLeft(bool shift, bool ctrl) { }
+
+	// RVA: 0x1AB74A0 Offset: 0x1AB75A1 VA: 0x1AB74A0
+	private int LineUpCharacterPosition(int originalPos, bool goToFirstChar) { }
+
+	// RVA: 0x1AB75F0 Offset: 0x1AB76F1 VA: 0x1AB75F0
+	private int LineDownCharacterPosition(int originalPos, bool goToLastChar) { }
+
+	// RVA: 0x1AB7740 Offset: 0x1AB7841 VA: 0x1AB7740
+	private int PageUpCharacterPosition(int originalPos, bool goToFirstChar) { }
+
+	// RVA: 0x1AB7930 Offset: 0x1AB7A31 VA: 0x1AB7930
+	private int PageDownCharacterPosition(int originalPos, bool goToLastChar) { }
+
+	// RVA: 0x1AB6B50 Offset: 0x1AB6C51 VA: 0x1AB6B50
+	private void MoveDown(bool shift) { }
+
+	// RVA: 0x1AB7B30 Offset: 0x1AB7C31 VA: 0x1AB7B30
+	private void MoveDown(bool shift, bool goToLastChar) { }
+
+	// RVA: 0x1AB6B40 Offset: 0x1AB6C41 VA: 0x1AB6B40
+	private void MoveUp(bool shift) { }
+
+	// RVA: 0x1AB7EB0 Offset: 0x1AB7FB1 VA: 0x1AB7EB0
+	private void MoveUp(bool shift, bool goToFirstChar) { }
+
+	// RVA: 0x1AB6B60 Offset: 0x1AB6C61 VA: 0x1AB6B60
+	private void MovePageUp(bool shift) { }
+
+	// RVA: 0x1AB8230 Offset: 0x1AB8331 VA: 0x1AB8230
+	private void MovePageUp(bool shift, bool goToFirstChar) { }
+
+	// RVA: 0x1AB6B70 Offset: 0x1AB6C71 VA: 0x1AB6B70
+	private void MovePageDown(bool shift) { }
+
+	// RVA: 0x1AB86D0 Offset: 0x1AB87D1 VA: 0x1AB86D0
+	private void MovePageDown(bool shift, bool goToLastChar) { }
+
+	// RVA: 0x1AB5C40 Offset: 0x1AB5D41 VA: 0x1AB5C40
+	private void Delete() { }
+
+	// RVA: 0x1AB57A0 Offset: 0x1AB58A1 VA: 0x1AB57A0
+	private void DeleteKey() { }
+
+	// RVA: 0x1AB5180 Offset: 0x1AB5281 VA: 0x1AB5180
+	private void Backspace() { }
+
+	// RVA: 0x1AB8B80 Offset: 0x1AB8C81 VA: 0x1AB8B80 Slot: 67
+	protected virtual void Append(string input) { }
+
+	// RVA: 0x1AB8C40 Offset: 0x1AB8D41 VA: 0x1AB8C40 Slot: 68
+	protected virtual void Append(char input) { }
+
+	// RVA: 0x1AB8F10 Offset: 0x1AB9011 VA: 0x1AB8F10
+	private void Insert(char c) { }
+
+	// RVA: 0x1AB5E40 Offset: 0x1AB5F41 VA: 0x1AB5E40
+	private void UpdateTouchKeyboardFromEditChanges() { }
+
+	// RVA: 0x1AB3DD0 Offset: 0x1AB3ED1 VA: 0x1AB3DD0
+	private void SendOnValueChangedAndUpdateLabel() { }
+
+	// RVA: 0x1AADE50 Offset: 0x1AADF51 VA: 0x1AADE50
+	private void SendOnValueChanged() { }
+
+	// RVA: 0x1AB9080 Offset: 0x1AB9181 VA: 0x1AB9080
+	protected void SendOnEndEdit() { }
+
+	// RVA: 0x1AB6DC0 Offset: 0x1AB6EC1 VA: 0x1AB6DC0
+	protected void SendOnSubmit() { }
+
+	// RVA: 0x1AB90E0 Offset: 0x1AB91E1 VA: 0x1AB90E0
+	protected void SendOnFocus() { }
+
+	// RVA: 0x1AB9140 Offset: 0x1AB9241 VA: 0x1AB9140
+	protected void SendOnFocusLost() { }
+
+	// RVA: 0x1AB91A0 Offset: 0x1AB92A1 VA: 0x1AB91A0
+	protected void SendOnTextSelection() { }
+
+	// RVA: 0x1AB9270 Offset: 0x1AB9371 VA: 0x1AB9270
+	protected void SendOnEndTextSelection() { }
+
+	// RVA: 0x1AB34F0 Offset: 0x1AB35F1 VA: 0x1AB34F0
+	protected void SendTouchScreenKeyboardStatusChanged() { }
+
+	// RVA: 0x1AAD880 Offset: 0x1AAD981 VA: 0x1AAD880
+	protected void UpdateLabel() { }
+
+	// RVA: 0x1AB1700 Offset: 0x1AB1801 VA: 0x1AB1700
+	private void UpdateScrollbar() { }
+
+	// RVA: 0x1AB9340 Offset: 0x1AB9441 VA: 0x1AB9340
+	private void OnScrollbarValueChange(float value) { }
+
+	// RVA: 0x1AB0E60 Offset: 0x1AB0F61 VA: 0x1AB0E60
+	private void UpdateMaskRegions() { }
+
+	// RVA: 0x1AB70E0 Offset: 0x1AB71E1 VA: 0x1AB70E0
+	private void AdjustTextPositionRelativeToViewport(float relativePosition) { }
+
+	// RVA: 0x1AB1690 Offset: 0x1AB1791 VA: 0x1AB1690
+	private int GetCaretPositionFromStringIndex(int stringIndex) { }
+
+	// RVA: 0x1AB9390 Offset: 0x1AB9491 VA: 0x1AB9390
+	private int GetMinCaretPositionFromStringIndex(int stringIndex) { }
+
+	// RVA: 0x1AB9410 Offset: 0x1AB9511 VA: 0x1AB9410
+	private int GetMaxCaretPositionFromStringIndex(int stringIndex) { }
+
+	// RVA: 0x1AB1BB0 Offset: 0x1AB1CB1 VA: 0x1AB1BB0
+	private int GetStringIndexFromCaretPosition(int caretPosition) { }
+
+	// RVA: 0x1AB9480 Offset: 0x1AB9581 VA: 0x1AB9480
+	public void ForceLabelUpdate() { }
+
+	// RVA: 0x1AAE110 Offset: 0x1AAE211 VA: 0x1AAE110
+	private void MarkGeometryAsDirty() { }
+
+	// RVA: 0x1AB9490 Offset: 0x1AB9591 VA: 0x1AB9490 Slot: 69
+	public virtual void Rebuild(CanvasUpdate update) { }
+
+	// RVA: 0x1AB9560 Offset: 0x1AB9661 VA: 0x1AB9560 Slot: 70
+	public virtual void LayoutComplete() { }
+
+	// RVA: 0x1AB9570 Offset: 0x1AB9671 VA: 0x1AB9570 Slot: 71
+	public virtual void GraphicUpdateComplete() { }
+
+	// RVA: 0x1AB94A0 Offset: 0x1AB95A1 VA: 0x1AB94A0
+	private void UpdateGeometry() { }
+
+	// RVA: 0x1AB09E0 Offset: 0x1AB0AE1 VA: 0x1AB09E0
+	private void AssignPositioningIfNeeded() { }
+
+	// RVA: 0x1AB9580 Offset: 0x1AB9681 VA: 0x1AB9580
+	private void OnFillVBO(Mesh vbo) { }
+
+	// RVA: 0x1AB9AE0 Offset: 0x1AB9BE1 VA: 0x1AB9AE0
+	private void GenerateCaret(VertexHelper vbo, Vector2 roundingOffset) { }
+
+	// RVA: 0x1ABA890 Offset: 0x1ABA991 VA: 0x1ABA890
+	private void CreateCursorVerts() { }
+
+	// RVA: 0x1ABA120 Offset: 0x1ABA221 VA: 0x1ABA120
+	private void GenerateHightlight(VertexHelper vbo, Vector2 roundingOffset) { }
+
+	// RVA: 0x1ABAA60 Offset: 0x1ABAB61 VA: 0x1ABAA60
+	private void AdjustRectTransformRelativeToViewport(Vector2 startPosition, float height, bool isCharVisible) { }
+
+	// RVA: 0x1AB3570 Offset: 0x1AB3671 VA: 0x1AB3570
+	protected char Validate(string text, int pos, char ch) { }
+
+	// RVA: 0x1ABAF40 Offset: 0x1ABB041 VA: 0x1ABAF40
+	public void ActivateInputField() { }
+
+	// RVA: 0x1AB2DF0 Offset: 0x1AB2EF1 VA: 0x1AB2DF0
+	private void ActivateInputFieldInternal() { }
+
+	// RVA: 0x1ABB060 Offset: 0x1ABB161 VA: 0x1ABB060 Slot: 36
+	public override void OnSelect(BaseEventData eventData) { }
+
+	// RVA: 0x1ABB0D0 Offset: 0x1ABB1D1 VA: 0x1ABB0D0 Slot: 72
+	public virtual void OnPointerClick(PointerEventData eventData) { }
+
+	// RVA: 0x1ABB0E0 Offset: 0x1ABB1E1 VA: 0x1ABB0E0
+	public void OnControlClick() { }
+
+	// RVA: 0x1AB3420 Offset: 0x1AB3521 VA: 0x1AB3420
+	public void ReleaseSelection() { }
+
+	// RVA: 0x1AB1210 Offset: 0x1AB1311 VA: 0x1AB1210
+	public void DeactivateInputField(bool clearSelection = False) { }
+
+	// RVA: 0x1ABB0F0 Offset: 0x1ABB1F1 VA: 0x1ABB0F0 Slot: 37
+	public override void OnDeselect(BaseEventData eventData) { }
+
+	// RVA: 0x1ABB170 Offset: 0x1ABB271 VA: 0x1ABB170 Slot: 73
+	public virtual void OnSubmit(BaseEventData eventData) { }
+
+	// RVA: 0x1AAF240 Offset: 0x1AAF341 VA: 0x1AAF240
+	private void EnforceContentType() { }
+
+	// RVA: 0x1AAD220 Offset: 0x1AAD321 VA: 0x1AAD220
+	private void SetTextComponentWrapMode() { }
+
+	// RVA: 0x1AAF8A0 Offset: 0x1AAF9A1 VA: 0x1AAF8A0
+	private void SetTextComponentRichTextMode() { }
+
+	// RVA: 0x1AAF410 Offset: 0x1AAF511 VA: 0x1AAF410
+	private void SetToCustomIfContentTypeIsNot(TMP_InputField.ContentType[] allowedContentTypes) { }
+
+	// RVA: 0x1AAF5B0 Offset: 0x1AAF6B1 VA: 0x1AAF5B0
+	private void SetToCustom() { }
+
+	// RVA: 0x1AAF7B0 Offset: 0x1AAF8B1 VA: 0x1AAF7B0
+	private void SetToCustom(TMP_InputField.CharacterValidation characterValidation) { }
+
+	// RVA: 0x1ABB220 Offset: 0x1ABB321 VA: 0x1ABB220 Slot: 26
+	protected override void DoStateTransition(Selectable.SelectionState state, bool instant) { }
+
+	// RVA: 0x1ABB260 Offset: 0x1ABB361 VA: 0x1ABB260 Slot: 74
+	public virtual void CalculateLayoutInputHorizontal() { }
+
+	// RVA: 0x1ABB270 Offset: 0x1ABB371 VA: 0x1ABB270 Slot: 75
+	public virtual void CalculateLayoutInputVertical() { }
+
+	// RVA: 0x1ABB280 Offset: 0x1ABB381 VA: 0x1ABB280 Slot: 76
+	public virtual float get_minWidth() { }
+
+	// RVA: 0x1ABB290 Offset: 0x1ABB391 VA: 0x1ABB290 Slot: 77
+	public virtual float get_preferredWidth() { }
+
+	// RVA: 0x1ABB3F0 Offset: 0x1ABB4F1 VA: 0x1ABB3F0 Slot: 78
+	public virtual float get_flexibleWidth() { }
+
+	// RVA: 0x1ABB400 Offset: 0x1ABB501 VA: 0x1ABB400 Slot: 79
+	public virtual float get_minHeight() { }
+
+	// RVA: 0x1ABB410 Offset: 0x1ABB511 VA: 0x1ABB410 Slot: 80
+	public virtual float get_preferredHeight() { }
+
+	// RVA: 0x1ABB570 Offset: 0x1ABB671 VA: 0x1ABB570 Slot: 81
+	public virtual float get_flexibleHeight() { }
+
+	// RVA: 0x1ABB580 Offset: 0x1ABB681 VA: 0x1ABB580 Slot: 82
+	public virtual int get_layoutPriority() { }
+
+	// RVA: 0x1AAEDD0 Offset: 0x1AAEED1 VA: 0x1AAEDD0
+	public void SetGlobalPointSize(float pointSize) { }
+
+	// RVA: 0x1AAEF70 Offset: 0x1AAF071 VA: 0x1AAEF70
+	public void SetGlobalFontAsset(TMP_FontAsset fontAsset) { }
+
+	// RVA: 0x1ABB590 Offset: 0x1ABB691 VA: 0x1ABB590
+	private static void .cctor() { }
+
+	// RVA: 0x1ABB630 Offset: 0x1ABB731 VA: 0x1ABB630 Slot: 46
+	private Transform UnityEngine.UI.ICanvasElement.get_transform() { }
+}
+
+// Namespace: TMPro
+[Serializable]
+public abstract class TMP_InputValidator : ScriptableObject // TypeDefIndex: 7401
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public abstract char Validate(ref string text, ref int pos, char ch);
+
+	// RVA: 0x1ABB640 Offset: 0x1ABB741 VA: 0x1ABB640
+	protected void .ctor() { }
 }
 
 // Namespace: TMPro
@@ -913,6 +2150,140 @@ internal static class TMP_ListPool<T> // TypeDefIndex: 7404
 	|-RVA: 0x34B3990 Offset: 0x34B3A91 VA: 0x34B3990
 	|-TMP_ListPool<object>..cctor
 	*/
+}
+
+// Namespace: TMPro
+public static class TMP_MaterialManager // TypeDefIndex: 7411
+{
+	// Fields
+	private static List<TMP_MaterialManager.MaskingMaterial> m_materialList; // 0x0
+	private static Dictionary<long, TMP_MaterialManager.FallbackMaterial> m_fallbackMaterials; // 0x8
+	private static Dictionary<int, long> m_fallbackMaterialLookup; // 0x10
+	private static List<TMP_MaterialManager.FallbackMaterial> m_fallbackCleanupList; // 0x18
+	private static bool isFallbackListDirty; // 0x20
+
+	// Methods
+
+	// RVA: 0x1ABB8F0 Offset: 0x1ABB9F1 VA: 0x1ABB8F0
+	private static void .cctor() { }
+
+	// RVA: 0x1ABBAE0 Offset: 0x1ABBBE1 VA: 0x1ABBAE0
+	private static void OnPreRender() { }
+
+	// RVA: 0x1ABBDD0 Offset: 0x1ABBED1 VA: 0x1ABBDD0
+	public static Material GetStencilMaterial(Material baseMaterial, int stencilID) { }
+
+	// RVA: 0x1ABC1B0 Offset: 0x1ABC2B1 VA: 0x1ABC1B0
+	public static void ReleaseStencilMaterial(Material stencilMaterial) { }
+
+	// RVA: 0x1ABC420 Offset: 0x1ABC521 VA: 0x1ABC420
+	public static Material GetBaseMaterial(Material stencilMaterial) { }
+
+	// RVA: 0x1ABC5C0 Offset: 0x1ABC6C1 VA: 0x1ABC5C0
+	public static Material SetStencil(Material material, int stencilID) { }
+
+	// RVA: 0x1ABC6A0 Offset: 0x1ABC7A1 VA: 0x1ABC6A0
+	public static void AddMaskingMaterial(Material baseMaterial, Material stencilMaterial, int stencilID) { }
+
+	// RVA: 0x1ABC940 Offset: 0x1ABCA41 VA: 0x1ABC940
+	public static void RemoveStencilMaterial(Material stencilMaterial) { }
+
+	// RVA: 0x1ABCAE0 Offset: 0x1ABCBE1 VA: 0x1ABCAE0
+	public static void ReleaseBaseMaterial(Material baseMaterial) { }
+
+	// RVA: 0x1ABD120 Offset: 0x1ABD221 VA: 0x1ABD120
+	public static void ClearMaterials() { }
+
+	// RVA: 0x1ABD330 Offset: 0x1ABD431 VA: 0x1ABD330
+	public static int GetStencilID(GameObject obj) { }
+
+	// RVA: 0x1ABD7F0 Offset: 0x1ABD8F1 VA: 0x1ABD7F0
+	public static Material GetMaterialForRendering(MaskableGraphic graphic, Material baseMaterial) { }
+
+	// RVA: 0x1ABD630 Offset: 0x1ABD731 VA: 0x1ABD630
+	private static Transform FindRootSortOverrideCanvas(Transform start) { }
+
+	// RVA: 0x1ABDA00 Offset: 0x1ABDB01 VA: 0x1ABDA00
+	internal static Material GetFallbackMaterial(TMP_FontAsset fontAsset, Material sourceMaterial, int atlasIndex) { }
+
+	// RVA: 0x1ABDF60 Offset: 0x1ABE061 VA: 0x1ABDF60
+	public static Material GetFallbackMaterial(Material sourceMaterial, Material targetMaterial) { }
+
+	// RVA: 0x1ABE3B0 Offset: 0x1ABE4B1 VA: 0x1ABE3B0
+	public static void AddFallbackMaterialReference(Material targetMaterial) { }
+
+	// RVA: 0x1ABE510 Offset: 0x1ABE611 VA: 0x1ABE510
+	public static void RemoveFallbackMaterialReference(Material targetMaterial) { }
+
+	// RVA: 0x1ABBB70 Offset: 0x1ABBC71 VA: 0x1ABBB70
+	public static void CleanupFallbackMaterials() { }
+
+	// RVA: 0x1ABE6B0 Offset: 0x1ABE7B1 VA: 0x1ABE6B0
+	public static void ReleaseFallbackMaterial(Material fallbackMaterial) { }
+
+	// RVA: 0x1ABDCE0 Offset: 0x1ABDDE1 VA: 0x1ABDCE0
+	public static void CopyMaterialPresetProperties(Material source, Material destination) { }
+}
+
+// Namespace: TMPro
+public struct TMP_MeshInfo // TypeDefIndex: 7413
+{
+	// Fields
+	private static readonly Color32 s_DefaultColor; // 0x0
+	private static readonly Vector3 s_DefaultNormal; // 0x4
+	private static readonly Vector4 s_DefaultTangent; // 0x10
+	private static readonly Bounds s_DefaultBounds; // 0x20
+	public Mesh mesh; // 0x0
+	public int vertexCount; // 0x8
+	public Vector3[] vertices; // 0x10
+	public Vector3[] normals; // 0x18
+	public Vector4[] tangents; // 0x20
+	public Vector2[] uvs0; // 0x28
+	public Vector2[] uvs2; // 0x30
+	public Color32[] colors32; // 0x38
+	public int[] triangles; // 0x40
+	public Material material; // 0x48
+
+	// Methods
+
+	// RVA: 0x18F1620 Offset: 0x18F1721 VA: 0x18F1620
+	public void .ctor(Mesh mesh, int size) { }
+
+	// RVA: 0x18F1B90 Offset: 0x18F1C91 VA: 0x18F1B90
+	public void .ctor(Mesh mesh, int size, bool isVolumetric) { }
+
+	// RVA: 0x18F2470 Offset: 0x18F2571 VA: 0x18F2470
+	public void ResizeMeshInfo(int size) { }
+
+	// RVA: 0x18F2900 Offset: 0x18F2A01 VA: 0x18F2900
+	public void ResizeMeshInfo(int size, bool isVolumetric) { }
+
+	// RVA: 0x18F3300 Offset: 0x18F3401 VA: 0x18F3300
+	public void Clear() { }
+
+	// RVA: 0x18F33C0 Offset: 0x18F34C1 VA: 0x18F33C0
+	public void Clear(bool uploadChanges) { }
+
+	// RVA: 0x18F3500 Offset: 0x18F3601 VA: 0x18F3500
+	public void ClearUnusedVertices() { }
+
+	// RVA: 0x18F3530 Offset: 0x18F3631 VA: 0x18F3530
+	public void ClearUnusedVertices(int startIndex) { }
+
+	// RVA: 0x18F3550 Offset: 0x18F3651 VA: 0x18F3550
+	public void ClearUnusedVertices(int startIndex, bool updateMesh) { }
+
+	// RVA: 0x18F3620 Offset: 0x18F3721 VA: 0x18F3620
+	public void SortGeometry(VertexSortingOrder order) { }
+
+	// RVA: 0x18F3C60 Offset: 0x18F3D61 VA: 0x18F3C60
+	public void SortGeometry(IList<int> sortingOrder) { }
+
+	// RVA: 0x18F36B0 Offset: 0x18F37B1 VA: 0x18F36B0
+	public void SwapVertexData(int src, int dst) { }
+
+	// RVA: 0x18F3E40 Offset: 0x18F3F41 VA: 0x18F3E40
+	private static void .cctor() { }
 }
 
 // Namespace: TMPro
@@ -992,6 +2363,36 @@ internal class TMP_ObjectPool<T> // TypeDefIndex: 7414
 }
 
 // Namespace: TMPro
+public class TMP_ResourceManager // TypeDefIndex: 7415
+{
+	// Fields
+	private static readonly TMP_ResourceManager s_instance; // 0x0
+	private static TMP_Settings s_TextSettings; // 0x8
+	private static readonly List<TMP_FontAsset> s_FontAssetReferences; // 0x10
+	private static readonly Dictionary<int, TMP_FontAsset> s_FontAssetReferenceLookup; // 0x18
+
+	// Methods
+
+	// RVA: 0x18F4390 Offset: 0x18F4491 VA: 0x18F4390
+	private static void .cctor() { }
+
+	// RVA: 0x18F44C0 Offset: 0x18F45C1 VA: 0x18F44C0
+	internal static TMP_Settings GetTextSettings() { }
+
+	// RVA: 0x18F4600 Offset: 0x18F4701 VA: 0x18F4600
+	public static void AddFontAsset(TMP_FontAsset fontAsset) { }
+
+	// RVA: 0x18F4720 Offset: 0x18F4821 VA: 0x18F4720
+	public static bool TryGetFontAsset(int hashcode, out TMP_FontAsset fontAsset) { }
+
+	// RVA: 0x18F47D0 Offset: 0x18F48D1 VA: 0x18F47D0
+	internal static void RebuildFontAssetCache(int instanceID) { }
+
+	// RVA: 0x18F44B0 Offset: 0x18F45B1 VA: 0x18F44B0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
 public class TMP_ScrollbarEventHandler : MonoBehaviour, IPointerClickHandler, IEventSystemHandler, ISelectHandler, IDeselectHandler // TypeDefIndex: 7420
 {
 	// Fields
@@ -1009,6 +2410,433 @@ public class TMP_ScrollbarEventHandler : MonoBehaviour, IPointerClickHandler, IE
 	public void OnDeselect(BaseEventData eventData) { }
 
 	// RVA: 0x18F4AA0 Offset: 0x18F4BA1 VA: 0x18F4AA0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[RequireComponent] // RVA: 0x4CE10 Offset: 0x4CF11 VA: 0x4CE10
+public class TMP_SelectionCaret : MaskableGraphic // TypeDefIndex: 7421
+{
+	// Methods
+
+	// RVA: 0x18F4AB0 Offset: 0x18F4BB1 VA: 0x18F4AB0 Slot: 59
+	public override void Cull(Rect clipRect, bool validRect) { }
+
+	// RVA: 0x18F4B90 Offset: 0x18F4C91 VA: 0x18F4B90 Slot: 41
+	protected override void UpdateGeometry() { }
+
+	// RVA: 0x18F4BA0 Offset: 0x18F4CA1 VA: 0x18F4BA0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[ExcludeFromPresetAttribute] // RVA: 0x4CE80 Offset: 0x4CF81 VA: 0x4CE80
+[Serializable]
+public class TMP_Settings : ScriptableObject // TypeDefIndex: 7423
+{
+	// Fields
+	private static TMP_Settings s_Instance; // 0x0
+	[SerializeField] // RVA: 0x4DC00 Offset: 0x4DD01 VA: 0x4DC00
+	private bool m_enableWordWrapping; // 0x18
+	[SerializeField] // RVA: 0x4DC10 Offset: 0x4DD11 VA: 0x4DC10
+	private bool m_enableKerning; // 0x19
+	[SerializeField] // RVA: 0x4DC20 Offset: 0x4DD21 VA: 0x4DC20
+	private bool m_enableExtraPadding; // 0x1A
+	[SerializeField] // RVA: 0x4DC30 Offset: 0x4DD31 VA: 0x4DC30
+	private bool m_enableTintAllSprites; // 0x1B
+	[SerializeField] // RVA: 0x4DC40 Offset: 0x4DD41 VA: 0x4DC40
+	private bool m_enableParseEscapeCharacters; // 0x1C
+	[SerializeField] // RVA: 0x4DC50 Offset: 0x4DD51 VA: 0x4DC50
+	private bool m_EnableRaycastTarget; // 0x1D
+	[SerializeField] // RVA: 0x4DC60 Offset: 0x4DD61 VA: 0x4DC60
+	private bool m_GetFontFeaturesAtRuntime; // 0x1E
+	[SerializeField] // RVA: 0x4DC70 Offset: 0x4DD71 VA: 0x4DC70
+	private int m_missingGlyphCharacter; // 0x20
+	[SerializeField] // RVA: 0x4DC80 Offset: 0x4DD81 VA: 0x4DC80
+	private bool m_warningsDisabled; // 0x24
+	[SerializeField] // RVA: 0x4DC90 Offset: 0x4DD91 VA: 0x4DC90
+	private TMP_FontAsset m_defaultFontAsset; // 0x28
+	[SerializeField] // RVA: 0x4DCA0 Offset: 0x4DDA1 VA: 0x4DCA0
+	private string m_defaultFontAssetPath; // 0x30
+	[SerializeField] // RVA: 0x4DCB0 Offset: 0x4DDB1 VA: 0x4DCB0
+	private float m_defaultFontSize; // 0x38
+	[SerializeField] // RVA: 0x4DCC0 Offset: 0x4DDC1 VA: 0x4DCC0
+	private float m_defaultAutoSizeMinRatio; // 0x3C
+	[SerializeField] // RVA: 0x4DCD0 Offset: 0x4DDD1 VA: 0x4DCD0
+	private float m_defaultAutoSizeMaxRatio; // 0x40
+	[SerializeField] // RVA: 0x4DCE0 Offset: 0x4DDE1 VA: 0x4DCE0
+	private Vector2 m_defaultTextMeshProTextContainerSize; // 0x44
+	[SerializeField] // RVA: 0x4DCF0 Offset: 0x4DDF1 VA: 0x4DCF0
+	private Vector2 m_defaultTextMeshProUITextContainerSize; // 0x4C
+	[SerializeField] // RVA: 0x4DD00 Offset: 0x4DE01 VA: 0x4DD00
+	private bool m_autoSizeTextContainer; // 0x54
+	[SerializeField] // RVA: 0x4DD10 Offset: 0x4DE11 VA: 0x4DD10
+	private bool m_IsTextObjectScaleStatic; // 0x55
+	[SerializeField] // RVA: 0x4DD20 Offset: 0x4DE21 VA: 0x4DD20
+	private List<TMP_FontAsset> m_fallbackFontAssets; // 0x58
+	[SerializeField] // RVA: 0x4DD30 Offset: 0x4DE31 VA: 0x4DD30
+	private bool m_matchMaterialPreset; // 0x60
+	[SerializeField] // RVA: 0x4DD40 Offset: 0x4DE41 VA: 0x4DD40
+	private TMP_SpriteAsset m_defaultSpriteAsset; // 0x68
+	[SerializeField] // RVA: 0x4DD50 Offset: 0x4DE51 VA: 0x4DD50
+	private string m_defaultSpriteAssetPath; // 0x70
+	[SerializeField] // RVA: 0x4DD60 Offset: 0x4DE61 VA: 0x4DD60
+	private bool m_enableEmojiSupport; // 0x78
+	[SerializeField] // RVA: 0x4DD70 Offset: 0x4DE71 VA: 0x4DD70
+	private uint m_MissingCharacterSpriteUnicode; // 0x7C
+	[SerializeField] // RVA: 0x4DD80 Offset: 0x4DE81 VA: 0x4DD80
+	private string m_defaultColorGradientPresetsPath; // 0x80
+	[SerializeField] // RVA: 0x4DD90 Offset: 0x4DE91 VA: 0x4DD90
+	private TMP_StyleSheet m_defaultStyleSheet; // 0x88
+	[SerializeField] // RVA: 0x4DDA0 Offset: 0x4DEA1 VA: 0x4DDA0
+	private string m_StyleSheetsResourcePath; // 0x90
+	[SerializeField] // RVA: 0x4DDB0 Offset: 0x4DEB1 VA: 0x4DDB0
+	private TextAsset m_leadingCharacters; // 0x98
+	[SerializeField] // RVA: 0x4DDC0 Offset: 0x4DEC1 VA: 0x4DDC0
+	private TextAsset m_followingCharacters; // 0xA0
+	[SerializeField] // RVA: 0x4DDD0 Offset: 0x4DED1 VA: 0x4DDD0
+	private TMP_Settings.LineBreakingTable m_linebreakingRules; // 0xA8
+	[SerializeField] // RVA: 0x4DDE0 Offset: 0x4DEE1 VA: 0x4DDE0
+	private bool m_UseModernHangulLineBreakingRules; // 0xB0
+
+	// Properties
+	public static string version { get; }
+	public static bool enableWordWrapping { get; }
+	public static bool enableKerning { get; }
+	public static bool enableExtraPadding { get; }
+	public static bool enableTintAllSprites { get; }
+	public static bool enableParseEscapeCharacters { get; }
+	public static bool enableRaycastTarget { get; }
+	public static bool getFontFeaturesAtRuntime { get; }
+	public static int missingGlyphCharacter { get; set; }
+	public static bool warningsDisabled { get; }
+	public static TMP_FontAsset defaultFontAsset { get; }
+	public static string defaultFontAssetPath { get; }
+	public static float defaultFontSize { get; }
+	public static float defaultTextAutoSizingMinRatio { get; }
+	public static float defaultTextAutoSizingMaxRatio { get; }
+	public static Vector2 defaultTextMeshProTextContainerSize { get; }
+	public static Vector2 defaultTextMeshProUITextContainerSize { get; }
+	public static bool autoSizeTextContainer { get; }
+	public static bool isTextObjectScaleStatic { get; set; }
+	public static List<TMP_FontAsset> fallbackFontAssets { get; }
+	public static bool matchMaterialPreset { get; }
+	public static TMP_SpriteAsset defaultSpriteAsset { get; }
+	public static string defaultSpriteAssetPath { get; }
+	public static bool enableEmojiSupport { get; set; }
+	public static uint missingCharacterSpriteUnicode { get; set; }
+	public static string defaultColorGradientPresetsPath { get; }
+	public static TMP_StyleSheet defaultStyleSheet { get; }
+	public static string styleSheetsResourcePath { get; }
+	public static TextAsset leadingCharacters { get; }
+	public static TextAsset followingCharacters { get; }
+	public static TMP_Settings.LineBreakingTable linebreakingRules { get; }
+	public static bool useModernHangulLineBreakingRules { get; set; }
+	public static TMP_Settings instance { get; }
+
+	// Methods
+
+	// RVA: 0x18F4BB0 Offset: 0x18F4CB1 VA: 0x18F4BB0
+	public static string get_version() { }
+
+	// RVA: 0x18F4C00 Offset: 0x18F4D01 VA: 0x18F4C00
+	public static bool get_enableWordWrapping() { }
+
+	// RVA: 0x18F4D10 Offset: 0x18F4E11 VA: 0x18F4D10
+	public static bool get_enableKerning() { }
+
+	// RVA: 0x18F4D30 Offset: 0x18F4E31 VA: 0x18F4D30
+	public static bool get_enableExtraPadding() { }
+
+	// RVA: 0x18F4D50 Offset: 0x18F4E51 VA: 0x18F4D50
+	public static bool get_enableTintAllSprites() { }
+
+	// RVA: 0x18F4D70 Offset: 0x18F4E71 VA: 0x18F4D70
+	public static bool get_enableParseEscapeCharacters() { }
+
+	// RVA: 0x18F4D90 Offset: 0x18F4E91 VA: 0x18F4D90
+	public static bool get_enableRaycastTarget() { }
+
+	// RVA: 0x18F4DB0 Offset: 0x18F4EB1 VA: 0x18F4DB0
+	public static bool get_getFontFeaturesAtRuntime() { }
+
+	// RVA: 0x18F4DD0 Offset: 0x18F4ED1 VA: 0x18F4DD0
+	public static int get_missingGlyphCharacter() { }
+
+	// RVA: 0x18F4DF0 Offset: 0x18F4EF1 VA: 0x18F4DF0
+	public static void set_missingGlyphCharacter(int value) { }
+
+	// RVA: 0x18F4E20 Offset: 0x18F4F21 VA: 0x18F4E20
+	public static bool get_warningsDisabled() { }
+
+	// RVA: 0x18F4E40 Offset: 0x18F4F41 VA: 0x18F4E40
+	public static TMP_FontAsset get_defaultFontAsset() { }
+
+	// RVA: 0x18F4E60 Offset: 0x18F4F61 VA: 0x18F4E60
+	public static string get_defaultFontAssetPath() { }
+
+	// RVA: 0x18F4E80 Offset: 0x18F4F81 VA: 0x18F4E80
+	public static float get_defaultFontSize() { }
+
+	// RVA: 0x18F4EA0 Offset: 0x18F4FA1 VA: 0x18F4EA0
+	public static float get_defaultTextAutoSizingMinRatio() { }
+
+	// RVA: 0x18F4EC0 Offset: 0x18F4FC1 VA: 0x18F4EC0
+	public static float get_defaultTextAutoSizingMaxRatio() { }
+
+	// RVA: 0x18F4EE0 Offset: 0x18F4FE1 VA: 0x18F4EE0
+	public static Vector2 get_defaultTextMeshProTextContainerSize() { }
+
+	// RVA: 0x18F4F00 Offset: 0x18F5001 VA: 0x18F4F00
+	public static Vector2 get_defaultTextMeshProUITextContainerSize() { }
+
+	// RVA: 0x18F4F20 Offset: 0x18F5021 VA: 0x18F4F20
+	public static bool get_autoSizeTextContainer() { }
+
+	// RVA: 0x18F4F40 Offset: 0x18F5041 VA: 0x18F4F40
+	public static bool get_isTextObjectScaleStatic() { }
+
+	// RVA: 0x18F4F60 Offset: 0x18F5061 VA: 0x18F4F60
+	public static void set_isTextObjectScaleStatic(bool value) { }
+
+	// RVA: 0x18F4F90 Offset: 0x18F5091 VA: 0x18F4F90
+	public static List<TMP_FontAsset> get_fallbackFontAssets() { }
+
+	// RVA: 0x18F4FB0 Offset: 0x18F50B1 VA: 0x18F4FB0
+	public static bool get_matchMaterialPreset() { }
+
+	// RVA: 0x18F4FD0 Offset: 0x18F50D1 VA: 0x18F4FD0
+	public static TMP_SpriteAsset get_defaultSpriteAsset() { }
+
+	// RVA: 0x18F4FF0 Offset: 0x18F50F1 VA: 0x18F4FF0
+	public static string get_defaultSpriteAssetPath() { }
+
+	// RVA: 0x18F5010 Offset: 0x18F5111 VA: 0x18F5010
+	public static bool get_enableEmojiSupport() { }
+
+	// RVA: 0x18F5030 Offset: 0x18F5131 VA: 0x18F5030
+	public static void set_enableEmojiSupport(bool value) { }
+
+	// RVA: 0x18F5060 Offset: 0x18F5161 VA: 0x18F5060
+	public static uint get_missingCharacterSpriteUnicode() { }
+
+	// RVA: 0x18F5080 Offset: 0x18F5181 VA: 0x18F5080
+	public static void set_missingCharacterSpriteUnicode(uint value) { }
+
+	// RVA: 0x18F50B0 Offset: 0x18F51B1 VA: 0x18F50B0
+	public static string get_defaultColorGradientPresetsPath() { }
+
+	// RVA: 0x18F50D0 Offset: 0x18F51D1 VA: 0x18F50D0
+	public static TMP_StyleSheet get_defaultStyleSheet() { }
+
+	// RVA: 0x18F50F0 Offset: 0x18F51F1 VA: 0x18F50F0
+	public static string get_styleSheetsResourcePath() { }
+
+	// RVA: 0x18F5110 Offset: 0x18F5211 VA: 0x18F5110
+	public static TextAsset get_leadingCharacters() { }
+
+	// RVA: 0x18F5130 Offset: 0x18F5231 VA: 0x18F5130
+	public static TextAsset get_followingCharacters() { }
+
+	// RVA: 0x18F5150 Offset: 0x18F5251 VA: 0x18F5150
+	public static TMP_Settings.LineBreakingTable get_linebreakingRules() { }
+
+	// RVA: 0x18F52D0 Offset: 0x18F53D1 VA: 0x18F52D0
+	public static bool get_useModernHangulLineBreakingRules() { }
+
+	// RVA: 0x18F52F0 Offset: 0x18F53F1 VA: 0x18F52F0
+	public static void set_useModernHangulLineBreakingRules(bool value) { }
+
+	// RVA: 0x18F4C20 Offset: 0x18F4D21 VA: 0x18F4C20
+	public static TMP_Settings get_instance() { }
+
+	// RVA: 0x18F5320 Offset: 0x18F5421 VA: 0x18F5320
+	public static TMP_Settings LoadDefaultSettings() { }
+
+	// RVA: 0x18F5440 Offset: 0x18F5541 VA: 0x18F5440
+	public static TMP_Settings GetSettings() { }
+
+	// RVA: 0x18F54D0 Offset: 0x18F55D1 VA: 0x18F54D0
+	public static TMP_FontAsset GetFontAsset() { }
+
+	// RVA: 0x18F5560 Offset: 0x18F5661 VA: 0x18F5560
+	public static TMP_SpriteAsset GetSpriteAsset() { }
+
+	// RVA: 0x18F55F0 Offset: 0x18F56F1 VA: 0x18F55F0
+	public static TMP_StyleSheet GetStyleSheet() { }
+
+	// RVA: 0x18F5190 Offset: 0x18F5291 VA: 0x18F5190
+	public static void LoadLinebreakingRules() { }
+
+	// RVA: 0x18F5680 Offset: 0x18F5781 VA: 0x18F5680
+	private static Dictionary<int, char> GetCharacters(TextAsset file) { }
+
+	// RVA: 0x18F57A0 Offset: 0x18F58A1 VA: 0x18F57A0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[Serializable]
+public class TMP_Sprite : TMP_TextElement_Legacy // TypeDefIndex: 7425
+{
+	// Fields
+	public string name; // 0x38
+	public int hashCode; // 0x40
+	public int unicode; // 0x44
+	public Vector2 pivot; // 0x48
+	public Sprite sprite; // 0x50
+
+	// Methods
+
+	// RVA: 0x18F57B0 Offset: 0x18F58B1 VA: 0x18F57B0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[DisallowMultipleComponent] // RVA: 0x4CE90 Offset: 0x4CF91 VA: 0x4CE90
+public class TMP_SpriteAnimator : MonoBehaviour // TypeDefIndex: 7427
+{
+	// Fields
+	private Dictionary<int, bool> m_animations; // 0x18
+	private TMP_Text m_TextComponent; // 0x20
+
+	// Methods
+
+	// RVA: 0x18F57C0 Offset: 0x18F58C1 VA: 0x18F57C0
+	private void Awake() { }
+
+	// RVA: 0x18F5830 Offset: 0x18F5931 VA: 0x18F5830
+	private void OnEnable() { }
+
+	// RVA: 0x18F5840 Offset: 0x18F5941 VA: 0x18F5840
+	private void OnDisable() { }
+
+	// RVA: 0x18F5850 Offset: 0x18F5951 VA: 0x18F5850
+	public void StopAllAnimations() { }
+
+	// RVA: 0x18F58B0 Offset: 0x18F59B1 VA: 0x18F58B0
+	public void DoSpriteAnimation(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate) { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x4E8A0 Offset: 0x4E9A1 VA: 0x4E8A0
+	// RVA: 0x18F59F0 Offset: 0x18F5AF1 VA: 0x18F59F0
+	private IEnumerator DoSpriteAnimationInternal(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate) { }
+
+	// RVA: 0x18F5AB0 Offset: 0x18F5BB1 VA: 0x18F5AB0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[ExcludeFromPresetAttribute] // RVA: 0x4CEB0 Offset: 0x4CFB1 VA: 0x4CEB0
+public class TMP_SpriteAsset : TMP_Asset // TypeDefIndex: 7429
+{
+	// Fields
+	internal Dictionary<int, int> m_NameLookup; // 0x30
+	internal Dictionary<uint, int> m_GlyphIndexLookup; // 0x38
+	[SerializeField] // RVA: 0x4DDF0 Offset: 0x4DEF1 VA: 0x4DDF0
+	private string m_Version; // 0x40
+	[SerializeField] // RVA: 0x4DE00 Offset: 0x4DF01 VA: 0x4DE00
+	internal FaceInfo m_FaceInfo; // 0x48
+	public Texture spriteSheet; // 0xA8
+	[SerializeField] // RVA: 0x4DE10 Offset: 0x4DF11 VA: 0x4DE10
+	private List<TMP_SpriteCharacter> m_SpriteCharacterTable; // 0xB0
+	internal Dictionary<uint, TMP_SpriteCharacter> m_SpriteCharacterLookup; // 0xB8
+	[SerializeField] // RVA: 0x4DE20 Offset: 0x4DF21 VA: 0x4DE20
+	private List<TMP_SpriteGlyph> m_SpriteGlyphTable; // 0xC0
+	internal Dictionary<uint, TMP_SpriteGlyph> m_SpriteGlyphLookup; // 0xC8
+	public List<TMP_Sprite> spriteInfoList; // 0xD0
+	[SerializeField] // RVA: 0x4DE30 Offset: 0x4DF31 VA: 0x4DE30
+	public List<TMP_SpriteAsset> fallbackSpriteAssets; // 0xD8
+	internal bool m_IsSpriteAssetLookupTablesDirty; // 0xE0
+	private static HashSet<int> k_searchedSpriteAssets; // 0x0
+
+	// Properties
+	public string version { get; set; }
+	public FaceInfo faceInfo { get; set; }
+	public List<TMP_SpriteCharacter> spriteCharacterTable { get; set; }
+	public Dictionary<uint, TMP_SpriteCharacter> spriteCharacterLookupTable { get; set; }
+	public List<TMP_SpriteGlyph> spriteGlyphTable { get; set; }
+
+	// Methods
+
+	// RVA: 0x18F5B40 Offset: 0x18F5C41 VA: 0x18F5B40
+	public string get_version() { }
+
+	// RVA: 0x18F5B50 Offset: 0x18F5C51 VA: 0x18F5B50
+	internal void set_version(string value) { }
+
+	// RVA: 0x18F5B60 Offset: 0x18F5C61 VA: 0x18F5B60
+	public FaceInfo get_faceInfo() { }
+
+	// RVA: 0x18F5BA0 Offset: 0x18F5CA1 VA: 0x18F5BA0
+	internal void set_faceInfo(FaceInfo value) { }
+
+	// RVA: 0x18F5BD0 Offset: 0x18F5CD1 VA: 0x18F5BD0
+	public List<TMP_SpriteCharacter> get_spriteCharacterTable() { }
+
+	// RVA: 0x18F6190 Offset: 0x18F6291 VA: 0x18F6190
+	internal void set_spriteCharacterTable(List<TMP_SpriteCharacter> value) { }
+
+	// RVA: 0x18F61A0 Offset: 0x18F62A1 VA: 0x18F61A0
+	public Dictionary<uint, TMP_SpriteCharacter> get_spriteCharacterLookupTable() { }
+
+	// RVA: 0x18F61E0 Offset: 0x18F62E1 VA: 0x18F61E0
+	internal void set_spriteCharacterLookupTable(Dictionary<uint, TMP_SpriteCharacter> value) { }
+
+	// RVA: 0x18F61F0 Offset: 0x18F62F1 VA: 0x18F61F0
+	public List<TMP_SpriteGlyph> get_spriteGlyphTable() { }
+
+	// RVA: 0x18F6200 Offset: 0x18F6301 VA: 0x18F6200
+	internal void set_spriteGlyphTable(List<TMP_SpriteGlyph> value) { }
+
+	// RVA: 0x18F6210 Offset: 0x18F6311 VA: 0x18F6210
+	private void Awake() { }
+
+	// RVA: 0x18F6840 Offset: 0x18F6941 VA: 0x18F6840
+	private Material GetDefaultSpriteMaterial() { }
+
+	// RVA: 0x18F5C10 Offset: 0x18F5D11 VA: 0x18F5C10
+	public void UpdateLookupTables() { }
+
+	// RVA: 0x18F6930 Offset: 0x18F6A31 VA: 0x18F6930
+	public int GetSpriteIndexFromHashcode(int hashCode) { }
+
+	// RVA: 0x18F69C0 Offset: 0x18F6AC1 VA: 0x18F69C0
+	public int GetSpriteIndexFromUnicode(uint unicode) { }
+
+	// RVA: 0x18F6A60 Offset: 0x18F6B61 VA: 0x18F6A60
+	public int GetSpriteIndexFromName(string name) { }
+
+	// RVA: 0x18F6B70 Offset: 0x18F6C71 VA: 0x18F6B70
+	public static TMP_SpriteAsset SearchForSpriteByUnicode(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex) { }
+
+	// RVA: 0x18F6DF0 Offset: 0x18F6EF1 VA: 0x18F6DF0
+	private static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(List<TMP_SpriteAsset> spriteAssets, uint unicode, bool includeFallbacks, out int spriteIndex) { }
+
+	// RVA: 0x18F6F90 Offset: 0x18F7091 VA: 0x18F6F90
+	private static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex) { }
+
+	// RVA: 0x18F70A0 Offset: 0x18F71A1 VA: 0x18F70A0
+	public static TMP_SpriteAsset SearchForSpriteByHashCode(TMP_SpriteAsset spriteAsset, int hashCode, bool includeFallbacks, out int spriteIndex) { }
+
+	// RVA: 0x18F7470 Offset: 0x18F7571 VA: 0x18F7470
+	private static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(List<TMP_SpriteAsset> spriteAssets, int hashCode, bool searchFallbacks, out int spriteIndex) { }
+
+	// RVA: 0x18F7610 Offset: 0x18F7711 VA: 0x18F7610
+	private static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(TMP_SpriteAsset spriteAsset, int hashCode, bool searchFallbacks, out int spriteIndex) { }
+
+	// RVA: 0x18F7710 Offset: 0x18F7811 VA: 0x18F7710
+	public void SortGlyphTable() { }
+
+	// RVA: 0x18F78B0 Offset: 0x18F79B1 VA: 0x18F78B0
+	internal void SortCharacterTable() { }
+
+	// RVA: 0x18F7A50 Offset: 0x18F7B51 VA: 0x18F7A50
+	internal void SortGlyphAndCharacterTables() { }
+
+	// RVA: 0x18F62B0 Offset: 0x18F63B1 VA: 0x18F62B0
+	private void UpgradeSpriteAsset() { }
+
+	// RVA: 0x18F7B70 Offset: 0x18F7C71 VA: 0x18F7B70
 	public void .ctor() { }
 }
 
@@ -1048,6 +2876,25 @@ public class TMP_SpriteCharacter : TMP_TextElement // TypeDefIndex: 7430
 
 	// RVA: 0x18F7D60 Offset: 0x18F7E61 VA: 0x18F7D60
 	internal void .ctor(uint unicode, uint glyphIndex) { }
+}
+
+// Namespace: TMPro
+[Serializable]
+public class TMP_SpriteGlyph : Glyph // TypeDefIndex: 7431
+{
+	// Fields
+	public Sprite sprite; // 0x40
+
+	// Methods
+
+	// RVA: 0x18F7A80 Offset: 0x18F7B81 VA: 0x18F7A80
+	public void .ctor() { }
+
+	// RVA: 0x18F7DD0 Offset: 0x18F7ED1 VA: 0x18F7DD0
+	public void .ctor(uint index, GlyphMetrics metrics, GlyphRect glyphRect, float scale, int atlasIndex) { }
+
+	// RVA: 0x18F7E90 Offset: 0x18F7F91 VA: 0x18F7E90
+	public void .ctor(uint index, GlyphMetrics metrics, GlyphRect glyphRect, float scale, int atlasIndex, Sprite sprite) { }
 }
 
 // Namespace: TMPro
@@ -1116,6 +2963,43 @@ public class TMP_Style // TypeDefIndex: 7432
 
 	// RVA: 0x18F81E0 Offset: 0x18F82E1 VA: 0x18F81E0
 	public void RefreshStyle() { }
+}
+
+// Namespace: TMPro
+[ExcludeFromPresetAttribute] // RVA: 0x4CED0 Offset: 0x4CFD1 VA: 0x4CED0
+[Serializable]
+public class TMP_StyleSheet : ScriptableObject // TypeDefIndex: 7433
+{
+	// Fields
+	[SerializeField] // RVA: 0x4DEE0 Offset: 0x4DFE1 VA: 0x4DEE0
+	private List<TMP_Style> m_StyleList; // 0x18
+	private Dictionary<int, TMP_Style> m_StyleLookupDictionary; // 0x20
+
+	// Properties
+	internal List<TMP_Style> styles { get; }
+
+	// Methods
+
+	// RVA: 0x18F8400 Offset: 0x18F8501 VA: 0x18F8400
+	internal List<TMP_Style> get_styles() { }
+
+	// RVA: 0x18F8410 Offset: 0x18F8511 VA: 0x18F8410
+	private void Reset() { }
+
+	// RVA: 0x18F8710 Offset: 0x18F8811 VA: 0x18F8710
+	public TMP_Style GetStyle(int hashCode) { }
+
+	// RVA: 0x18F87A0 Offset: 0x18F88A1 VA: 0x18F87A0
+	public TMP_Style GetStyle(string name) { }
+
+	// RVA: 0x18F8870 Offset: 0x18F8971 VA: 0x18F8870
+	public void RefreshStyles() { }
+
+	// RVA: 0x18F8420 Offset: 0x18F8521 VA: 0x18F8420
+	private void LoadStyleDictionaryInternal() { }
+
+	// RVA: 0x18F8880 Offset: 0x18F8981 VA: 0x18F8880
+	public void .ctor() { }
 }
 
 // Namespace: TMPro
@@ -1269,6 +3153,205 @@ public class TMP_SubMesh : MonoBehaviour // TypeDefIndex: 7434
 
 	// RVA: 0x18F9F60 Offset: 0x18FA061 VA: 0x18F9F60
 	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[RequireComponent] // RVA: 0x4CF60 Offset: 0x4D061 VA: 0x4CF60
+[ExecuteAlways] // RVA: 0x4CF60 Offset: 0x4D061 VA: 0x4CF60
+public class TMP_SubMeshUI : MaskableGraphic // TypeDefIndex: 7435
+{
+	// Fields
+	[SerializeField] // RVA: 0x4DF70 Offset: 0x4E071 VA: 0x4DF70
+	private TMP_FontAsset m_fontAsset; // 0xD0
+	[SerializeField] // RVA: 0x4DF80 Offset: 0x4E081 VA: 0x4DF80
+	private TMP_SpriteAsset m_spriteAsset; // 0xD8
+	[SerializeField] // RVA: 0x4DF90 Offset: 0x4E091 VA: 0x4DF90
+	private Material m_material; // 0xE0
+	[SerializeField] // RVA: 0x4DFA0 Offset: 0x4E0A1 VA: 0x4DFA0
+	private Material m_sharedMaterial; // 0xE8
+	private Material m_fallbackMaterial; // 0xF0
+	private Material m_fallbackSourceMaterial; // 0xF8
+	[SerializeField] // RVA: 0x4DFB0 Offset: 0x4E0B1 VA: 0x4DFB0
+	private bool m_isDefaultMaterial; // 0x100
+	[SerializeField] // RVA: 0x4DFC0 Offset: 0x4E0C1 VA: 0x4DFC0
+	private float m_padding; // 0x104
+	private Mesh m_mesh; // 0x108
+	[SerializeField] // RVA: 0x4DFD0 Offset: 0x4E0D1 VA: 0x4DFD0
+	private TextMeshProUGUI m_TextComponent; // 0x110
+	private bool m_isRegisteredForEvents; // 0x118
+	private bool m_materialDirty; // 0x119
+	[SerializeField] // RVA: 0x4DFE0 Offset: 0x4E0E1 VA: 0x4DFE0
+	private int m_materialReferenceIndex; // 0x11C
+	private Transform m_RootCanvasTransform; // 0x120
+
+	// Properties
+	public TMP_FontAsset fontAsset { get; set; }
+	public TMP_SpriteAsset spriteAsset { get; set; }
+	public override Texture mainTexture { get; }
+	public override Material material { get; set; }
+	public Material sharedMaterial { get; set; }
+	public Material fallbackMaterial { get; set; }
+	public Material fallbackSourceMaterial { get; set; }
+	public override Material materialForRendering { get; }
+	public bool isDefaultMaterial { get; set; }
+	public float padding { get; set; }
+	public Mesh mesh { get; set; }
+	public TMP_Text textComponent { get; }
+
+	// Methods
+
+	// RVA: 0x18F9F70 Offset: 0x18FA071 VA: 0x18F9F70
+	public TMP_FontAsset get_fontAsset() { }
+
+	// RVA: 0x18F9F80 Offset: 0x18FA081 VA: 0x18F9F80
+	public void set_fontAsset(TMP_FontAsset value) { }
+
+	// RVA: 0x18F9F90 Offset: 0x18FA091 VA: 0x18F9F90
+	public TMP_SpriteAsset get_spriteAsset() { }
+
+	// RVA: 0x18F9FA0 Offset: 0x18FA0A1 VA: 0x18F9FA0
+	public void set_spriteAsset(TMP_SpriteAsset value) { }
+
+	// RVA: 0x18F9FB0 Offset: 0x18FA0B1 VA: 0x18F9FB0 Slot: 35
+	public override Texture get_mainTexture() { }
+
+	// RVA: 0x18FA090 Offset: 0x18FA191 VA: 0x18FA090 Slot: 32
+	public override Material get_material() { }
+
+	// RVA: 0x18FA220 Offset: 0x18FA321 VA: 0x18FA220 Slot: 33
+	public override void set_material(Material value) { }
+
+	// RVA: 0x18FA430 Offset: 0x18FA531 VA: 0x18FA430
+	public Material get_sharedMaterial() { }
+
+	// RVA: 0x18FA440 Offset: 0x18FA541 VA: 0x18FA440
+	public void set_sharedMaterial(Material value) { }
+
+	// RVA: 0x18FA520 Offset: 0x18FA621 VA: 0x18FA520
+	public Material get_fallbackMaterial() { }
+
+	// RVA: 0x18FA530 Offset: 0x18FA631 VA: 0x18FA530
+	public void set_fallbackMaterial(Material value) { }
+
+	// RVA: 0x18FA6C0 Offset: 0x18FA7C1 VA: 0x18FA6C0
+	public Material get_fallbackSourceMaterial() { }
+
+	// RVA: 0x18FA6D0 Offset: 0x18FA7D1 VA: 0x18FA6D0
+	public void set_fallbackSourceMaterial(Material value) { }
+
+	// RVA: 0x18FA6E0 Offset: 0x18FA7E1 VA: 0x18FA6E0 Slot: 34
+	public override Material get_materialForRendering() { }
+
+	// RVA: 0x18FA760 Offset: 0x18FA861 VA: 0x18FA760
+	public bool get_isDefaultMaterial() { }
+
+	// RVA: 0x18FA770 Offset: 0x18FA871 VA: 0x18FA770
+	public void set_isDefaultMaterial(bool value) { }
+
+	// RVA: 0x18FA780 Offset: 0x18FA881 VA: 0x18FA780
+	public float get_padding() { }
+
+	// RVA: 0x18FA790 Offset: 0x18FA891 VA: 0x18FA790
+	public void set_padding(float value) { }
+
+	// RVA: 0x18FA7A0 Offset: 0x18FA8A1 VA: 0x18FA7A0
+	public Mesh get_mesh() { }
+
+	// RVA: 0x18FA870 Offset: 0x18FA971 VA: 0x18FA870
+	public void set_mesh(Mesh value) { }
+
+	// RVA: 0x18FA880 Offset: 0x18FA981 VA: 0x18FA880
+	public TMP_Text get_textComponent() { }
+
+	// RVA: 0x18FA940 Offset: 0x18FAA41 VA: 0x18FA940
+	public static TMP_SubMeshUI AddSubTextObject(TextMeshProUGUI textComponent, MaterialReference materialReference) { }
+
+	// RVA: 0x18FADF0 Offset: 0x18FAEF1 VA: 0x18FADF0 Slot: 5
+	protected override void OnEnable() { }
+
+	// RVA: 0x18FAE70 Offset: 0x18FAF71 VA: 0x18FAE70 Slot: 7
+	protected override void OnDisable() { }
+
+	// RVA: 0x18FAF50 Offset: 0x18FB051 VA: 0x18FAF50 Slot: 8
+	protected override void OnDestroy() { }
+
+	// RVA: 0x18FB160 Offset: 0x18FB261 VA: 0x18FB160 Slot: 12
+	protected override void OnTransformParentChanged() { }
+
+	// RVA: 0x18FB1D0 Offset: 0x18FB2D1 VA: 0x18FB1D0 Slot: 58
+	public override Material GetModifiedMaterial(Material baseMaterial) { }
+
+	// RVA: 0x18FA3A0 Offset: 0x18FA4A1 VA: 0x18FA3A0
+	public float GetPaddingForMaterial() { }
+
+	// RVA: 0x18FB300 Offset: 0x18FB401 VA: 0x18FB300
+	public float GetPaddingForMaterial(Material mat) { }
+
+	// RVA: 0x18FB390 Offset: 0x18FB491 VA: 0x18FB390
+	public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold) { }
+
+	// RVA: 0x18FB420 Offset: 0x18FB521 VA: 0x18FB420 Slot: 26
+	public override void SetAllDirty() { }
+
+	// RVA: 0x18FB430 Offset: 0x18FB531 VA: 0x18FB430 Slot: 28
+	public override void SetVerticesDirty() { }
+
+	// RVA: 0x18FB500 Offset: 0x18FB601 VA: 0x18FB500 Slot: 27
+	public override void SetLayoutDirty() { }
+
+	// RVA: 0x18FB510 Offset: 0x18FB611 VA: 0x18FB510 Slot: 29
+	public override void SetMaterialDirty() { }
+
+	// RVA: 0x18FB560 Offset: 0x18FB661 VA: 0x18FB560
+	public void SetPivotDirty() { }
+
+	// RVA: 0x18FB5C0 Offset: 0x18FB6C1 VA: 0x18FB5C0
+	private Transform GetRootCanvasTransform() { }
+
+	// RVA: 0x18FB670 Offset: 0x18FB771 VA: 0x18FB670 Slot: 59
+	public override void Cull(Rect clipRect, bool validRect) { }
+
+	// RVA: 0x18FB680 Offset: 0x18FB781 VA: 0x18FB680 Slot: 41
+	protected override void UpdateGeometry() { }
+
+	// RVA: 0x18FB690 Offset: 0x18FB791 VA: 0x18FB690 Slot: 37
+	public override void Rebuild(CanvasUpdate update) { }
+
+	// RVA: 0x18FB6E0 Offset: 0x18FB7E1 VA: 0x18FB6E0
+	public void RefreshMaterial() { }
+
+	// RVA: 0x18FB6F0 Offset: 0x18FB7F1 VA: 0x18FB6F0 Slot: 40
+	protected override void UpdateMaterial() { }
+
+	// RVA: 0x18FB880 Offset: 0x18FB981 VA: 0x18FB880 Slot: 63
+	public override void RecalculateClipping() { }
+
+	// RVA: 0x18FB890 Offset: 0x18FB991 VA: 0x18FB890
+	private Material GetMaterial() { }
+
+	// RVA: 0x18FA0A0 Offset: 0x18FA1A1 VA: 0x18FA0A0
+	private Material GetMaterial(Material mat) { }
+
+	// RVA: 0x18FB8A0 Offset: 0x18FB9A1 VA: 0x18FB8A0
+	private Material CreateMaterialInstance(Material source) { }
+
+	// RVA: 0x18FB960 Offset: 0x18FBA61 VA: 0x18FB960
+	private Material GetSharedMaterial() { }
+
+	// RVA: 0x18FA450 Offset: 0x18FA551 VA: 0x18FA450
+	private void SetSharedMaterial(Material mat) { }
+
+	// RVA: 0x18FB980 Offset: 0x18FBA81 VA: 0x18FB980
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+public enum TMP_TextElementType // TypeDefIndex: 7441
+{
+	// Fields
+	public int value__; // 0x0
+	public const TMP_TextElementType Character = 0;
+	public const TMP_TextElementType Sprite = 1;
 }
 
 // Namespace: TMPro
@@ -2654,6 +4737,27 @@ public class TMP_TextElement // TypeDefIndex: 7456
 
 // Namespace: TMPro
 [Serializable]
+public class TMP_TextElement_Legacy // TypeDefIndex: 7457
+{
+	// Fields
+	public int id; // 0x10
+	public float x; // 0x14
+	public float y; // 0x18
+	public float width; // 0x1C
+	public float height; // 0x20
+	public float xOffset; // 0x24
+	public float yOffset; // 0x28
+	public float xAdvance; // 0x2C
+	public float scale; // 0x30
+
+	// Methods
+
+	// RVA: 0x197F460 Offset: 0x197F561 VA: 0x197F460
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
+[Serializable]
 public class TMP_TextInfo // TypeDefIndex: 7458
 {
 	// Fields
@@ -2753,6 +4857,56 @@ public class TMP_TextInfo // TypeDefIndex: 7458
 }
 
 // Namespace: TMPro
+public class TMP_TextParsingUtilities // TypeDefIndex: 7459
+{
+	// Fields
+	private static readonly TMP_TextParsingUtilities s_Instance; // 0x0
+	private const string k_LookupStringL = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-";
+	private const string k_LookupStringU = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-";
+
+	// Properties
+	public static TMP_TextParsingUtilities instance { get; }
+
+	// Methods
+
+	// RVA: 0x1980560 Offset: 0x1980661 VA: 0x1980560
+	private static void .cctor() { }
+
+	// RVA: 0x19805E0 Offset: 0x19806E1 VA: 0x19805E0
+	public static TMP_TextParsingUtilities get_instance() { }
+
+	// RVA: 0x1980650 Offset: 0x1980751 VA: 0x1980650
+	public static int GetHashCode(string s) { }
+
+	// RVA: 0x19807F0 Offset: 0x19808F1 VA: 0x19807F0
+	public static int GetHashCodeCaseSensitive(string s) { }
+
+	// RVA: 0x1980860 Offset: 0x1980961 VA: 0x1980860
+	public static char ToLowerASCIIFast(char c) { }
+
+	// RVA: 0x1980770 Offset: 0x1980871 VA: 0x1980770
+	public static char ToUpperASCIIFast(char c) { }
+
+	// RVA: 0x19808E0 Offset: 0x19809E1 VA: 0x19808E0
+	public static uint ToUpperASCIIFast(uint c) { }
+
+	// RVA: 0x1980960 Offset: 0x1980A61 VA: 0x1980960
+	public static uint ToLowerASCIIFast(uint c) { }
+
+	// RVA: 0x19809E0 Offset: 0x1980AE1 VA: 0x19809E0
+	public static bool IsHighSurrogate(uint c) { }
+
+	// RVA: 0x1980A00 Offset: 0x1980B01 VA: 0x1980A00
+	public static bool IsLowSurrogate(uint c) { }
+
+	// RVA: 0x1980A20 Offset: 0x1980B21 VA: 0x1980A20
+	internal static uint ConvertToUTF32(uint highSurrogate, uint lowSurrogate) { }
+
+	// RVA: 0x19805D0 Offset: 0x19806D1 VA: 0x19805D0
+	public void .ctor() { }
+}
+
+// Namespace: TMPro
 public struct TMP_FontStyleStack // TypeDefIndex: 7460
 {
 	// Fields
@@ -2777,6 +4931,619 @@ public struct TMP_FontStyleStack // TypeDefIndex: 7460
 
 	// RVA: 0x1AAC0E0 Offset: 0x1AAC1E1 VA: 0x1AAC0E0
 	public byte Remove(FontStyles style) { }
+}
+
+// Namespace: TMPro
+[DebuggerDisplayAttribute] // RVA: 0x4D080 Offset: 0x4D181 VA: 0x4D080
+public struct TMP_TextProcessingStack<T> // TypeDefIndex: 7461
+{
+	// Fields
+	public T[] itemStack; // 0x0
+	public int index; // 0x0
+	private T m_DefaultItem; // 0x0
+	private int m_Capacity; // 0x0
+	private int m_RolloverSize; // 0x0
+	private int m_Count; // 0x0
+	private const int k_DefaultCapacity = 4;
+
+	// Properties
+	public int Count { get; }
+	public T current { get; }
+	public int rolloverSize { get; set; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(T[] stack) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B3F80 Offset: 0x34B4081 VA: 0x34B3F80
+	|-TMP_TextProcessingStack<Color32>..ctor
+	|
+	|-RVA: 0x34B4610 Offset: 0x34B4711 VA: 0x34B4610
+	|-TMP_TextProcessingStack<HighlightState>..ctor
+	|
+	|-RVA: 0x34B54E0 Offset: 0x34B55E1 VA: 0x34B54E0
+	|-TMP_TextProcessingStack<HorizontalAlignmentOptions>..ctor
+	|-TMP_TextProcessingStack<Int32Enum>..ctor
+	|
+	|-RVA: 0x34B4E50 Offset: 0x34B4F51 VA: 0x34B4E50
+	|-TMP_TextProcessingStack<int>..ctor
+	|
+	|-RVA: 0x34B5B70 Offset: 0x34B5C71 VA: 0x34B5B70
+	|-TMP_TextProcessingStack<MaterialReference>..ctor
+	|
+	|-RVA: 0x34B6580 Offset: 0x34B6681 VA: 0x34B6580
+	|-TMP_TextProcessingStack<object>..ctor
+	|-TMP_TextProcessingStack<TMP_ColorGradient>..ctor
+	|
+	|-RVA: 0x34B6C40 Offset: 0x34B6D41 VA: 0x34B6C40
+	|-TMP_TextProcessingStack<float>..ctor
+	|
+	|-RVA: 0x34B72C0 Offset: 0x34B73C1 VA: 0x34B72C0
+	|-TMP_TextProcessingStack<WordWrapState>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public void .ctor(int capacity) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B3FC0 Offset: 0x34B40C1 VA: 0x34B3FC0
+	|-TMP_TextProcessingStack<Color32>..ctor
+	|
+	|-RVA: 0x34B5520 Offset: 0x34B5621 VA: 0x34B5520
+	|-TMP_TextProcessingStack<FontWeight>..ctor
+	|-TMP_TextProcessingStack<Int32Enum>..ctor
+	|
+	|-RVA: 0x34B4650 Offset: 0x34B4751 VA: 0x34B4650
+	|-TMP_TextProcessingStack<HighlightState>..ctor
+	|
+	|-RVA: 0x34B4E90 Offset: 0x34B4F91 VA: 0x34B4E90
+	|-TMP_TextProcessingStack<int>..ctor
+	|
+	|-RVA: 0x34B5BC0 Offset: 0x34B5CC1 VA: 0x34B5BC0
+	|-TMP_TextProcessingStack<MaterialReference>..ctor
+	|
+	|-RVA: 0x34B65C0 Offset: 0x34B66C1 VA: 0x34B65C0
+	|-TMP_TextProcessingStack<object>..ctor
+	|
+	|-RVA: 0x34B6C80 Offset: 0x34B6D81 VA: 0x34B6C80
+	|-TMP_TextProcessingStack<float>..ctor
+	|
+	|-RVA: 0x34B7310 Offset: 0x34B7411 VA: 0x34B7310
+	|-TMP_TextProcessingStack<WordWrapState>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public void .ctor(int capacity, int rolloverSize) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4040 Offset: 0x34B4141 VA: 0x34B4040
+	|-TMP_TextProcessingStack<Color32>..ctor
+	|
+	|-RVA: 0x34B46D0 Offset: 0x34B47D1 VA: 0x34B46D0
+	|-TMP_TextProcessingStack<HighlightState>..ctor
+	|
+	|-RVA: 0x34B4F10 Offset: 0x34B5011 VA: 0x34B4F10
+	|-TMP_TextProcessingStack<int>..ctor
+	|
+	|-RVA: 0x34B55A0 Offset: 0x34B56A1 VA: 0x34B55A0
+	|-TMP_TextProcessingStack<Int32Enum>..ctor
+	|
+	|-RVA: 0x34B5C50 Offset: 0x34B5D51 VA: 0x34B5C50
+	|-TMP_TextProcessingStack<MaterialReference>..ctor
+	|
+	|-RVA: 0x34B6640 Offset: 0x34B6741 VA: 0x34B6640
+	|-TMP_TextProcessingStack<object>..ctor
+	|
+	|-RVA: 0x34B6D00 Offset: 0x34B6E01 VA: 0x34B6D00
+	|-TMP_TextProcessingStack<float>..ctor
+	|
+	|-RVA: 0x34B73A0 Offset: 0x34B74A1 VA: 0x34B73A0
+	|-TMP_TextProcessingStack<WordWrapState>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public int get_Count() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B40C0 Offset: 0x34B41C1 VA: 0x34B40C0
+	|-TMP_TextProcessingStack<Color32>.get_Count
+	|
+	|-RVA: 0x34B4760 Offset: 0x34B4861 VA: 0x34B4760
+	|-TMP_TextProcessingStack<HighlightState>.get_Count
+	|
+	|-RVA: 0x34B4F90 Offset: 0x34B5091 VA: 0x34B4F90
+	|-TMP_TextProcessingStack<int>.get_Count
+	|
+	|-RVA: 0x34B5620 Offset: 0x34B5721 VA: 0x34B5620
+	|-TMP_TextProcessingStack<Int32Enum>.get_Count
+	|
+	|-RVA: 0x34B5CE0 Offset: 0x34B5DE1 VA: 0x34B5CE0
+	|-TMP_TextProcessingStack<MaterialReference>.get_Count
+	|
+	|-RVA: 0x34B66D0 Offset: 0x34B67D1 VA: 0x34B66D0
+	|-TMP_TextProcessingStack<object>.get_Count
+	|
+	|-RVA: 0x34B6D80 Offset: 0x34B6E81 VA: 0x34B6D80
+	|-TMP_TextProcessingStack<float>.get_Count
+	|
+	|-RVA: 0x34B7440 Offset: 0x34B7541 VA: 0x34B7440
+	|-TMP_TextProcessingStack<WordWrapState>.get_Count
+	*/
+
+	// RVA: -1 Offset: -1
+	public T get_current() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B40D0 Offset: 0x34B41D1 VA: 0x34B40D0
+	|-TMP_TextProcessingStack<Color32>.get_current
+	|
+	|-RVA: 0x34B4770 Offset: 0x34B4871 VA: 0x34B4770
+	|-TMP_TextProcessingStack<HighlightState>.get_current
+	|
+	|-RVA: 0x34B4FA0 Offset: 0x34B50A1 VA: 0x34B4FA0
+	|-TMP_TextProcessingStack<int>.get_current
+	|
+	|-RVA: 0x34B5630 Offset: 0x34B5731 VA: 0x34B5630
+	|-TMP_TextProcessingStack<Int32Enum>.get_current
+	|
+	|-RVA: 0x34B5CF0 Offset: 0x34B5DF1 VA: 0x34B5CF0
+	|-TMP_TextProcessingStack<MaterialReference>.get_current
+	|
+	|-RVA: 0x34B66E0 Offset: 0x34B67E1 VA: 0x34B66E0
+	|-TMP_TextProcessingStack<object>.get_current
+	|
+	|-RVA: 0x34B6D90 Offset: 0x34B6E91 VA: 0x34B6D90
+	|-TMP_TextProcessingStack<float>.get_current
+	|
+	|-RVA: 0x34B7450 Offset: 0x34B7551 VA: 0x34B7450
+	|-TMP_TextProcessingStack<WordWrapState>.get_current
+	*/
+
+	// RVA: -1 Offset: -1
+	public int get_rolloverSize() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4120 Offset: 0x34B4221 VA: 0x34B4120
+	|-TMP_TextProcessingStack<Color32>.get_rolloverSize
+	|
+	|-RVA: 0x34B47D0 Offset: 0x34B48D1 VA: 0x34B47D0
+	|-TMP_TextProcessingStack<HighlightState>.get_rolloverSize
+	|
+	|-RVA: 0x34B4FF0 Offset: 0x34B50F1 VA: 0x34B4FF0
+	|-TMP_TextProcessingStack<int>.get_rolloverSize
+	|
+	|-RVA: 0x34B5680 Offset: 0x34B5781 VA: 0x34B5680
+	|-TMP_TextProcessingStack<Int32Enum>.get_rolloverSize
+	|
+	|-RVA: 0x34B5D60 Offset: 0x34B5E61 VA: 0x34B5D60
+	|-TMP_TextProcessingStack<MaterialReference>.get_rolloverSize
+	|
+	|-RVA: 0x34B6730 Offset: 0x34B6831 VA: 0x34B6730
+	|-TMP_TextProcessingStack<object>.get_rolloverSize
+	|
+	|-RVA: 0x34B6DE0 Offset: 0x34B6EE1 VA: 0x34B6DE0
+	|-TMP_TextProcessingStack<float>.get_rolloverSize
+	|
+	|-RVA: 0x34B74B0 Offset: 0x34B75B1 VA: 0x34B74B0
+	|-TMP_TextProcessingStack<WordWrapState>.get_rolloverSize
+	*/
+
+	// RVA: -1 Offset: -1
+	public void set_rolloverSize(int value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4130 Offset: 0x34B4231 VA: 0x34B4130
+	|-TMP_TextProcessingStack<Color32>.set_rolloverSize
+	|
+	|-RVA: 0x34B47E0 Offset: 0x34B48E1 VA: 0x34B47E0
+	|-TMP_TextProcessingStack<HighlightState>.set_rolloverSize
+	|
+	|-RVA: 0x34B5000 Offset: 0x34B5101 VA: 0x34B5000
+	|-TMP_TextProcessingStack<int>.set_rolloverSize
+	|
+	|-RVA: 0x34B5690 Offset: 0x34B5791 VA: 0x34B5690
+	|-TMP_TextProcessingStack<Int32Enum>.set_rolloverSize
+	|
+	|-RVA: 0x34B5D70 Offset: 0x34B5E71 VA: 0x34B5D70
+	|-TMP_TextProcessingStack<MaterialReference>.set_rolloverSize
+	|
+	|-RVA: 0x34B6740 Offset: 0x34B6841 VA: 0x34B6740
+	|-TMP_TextProcessingStack<object>.set_rolloverSize
+	|
+	|-RVA: 0x34B6DF0 Offset: 0x34B6EF1 VA: 0x34B6DF0
+	|-TMP_TextProcessingStack<float>.set_rolloverSize
+	|
+	|-RVA: 0x34B74C0 Offset: 0x34B75C1 VA: 0x34B74C0
+	|-TMP_TextProcessingStack<WordWrapState>.set_rolloverSize
+	*/
+
+	// RVA: -1 Offset: -1
+	internal static void SetDefault(TMP_TextProcessingStack<T>[] stack, T item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4140 Offset: 0x34B4241 VA: 0x34B4140
+	|-TMP_TextProcessingStack<Color32>.SetDefault
+	|
+	|-RVA: 0x34B47F0 Offset: 0x34B48F1 VA: 0x34B47F0
+	|-TMP_TextProcessingStack<HighlightState>.SetDefault
+	|
+	|-RVA: 0x34B5010 Offset: 0x34B5111 VA: 0x34B5010
+	|-TMP_TextProcessingStack<int>.SetDefault
+	|
+	|-RVA: 0x34B56A0 Offset: 0x34B57A1 VA: 0x34B56A0
+	|-TMP_TextProcessingStack<Int32Enum>.SetDefault
+	|
+	|-RVA: 0x34B5D80 Offset: 0x34B5E81 VA: 0x34B5D80
+	|-TMP_TextProcessingStack<MaterialReference>.SetDefault
+	|
+	|-RVA: 0x34B6750 Offset: 0x34B6851 VA: 0x34B6750
+	|-TMP_TextProcessingStack<object>.SetDefault
+	|
+	|-RVA: 0x34B6E00 Offset: 0x34B6F01 VA: 0x34B6E00
+	|-TMP_TextProcessingStack<float>.SetDefault
+	|
+	|-RVA: 0x34B74D0 Offset: 0x34B75D1 VA: 0x34B74D0
+	|-TMP_TextProcessingStack<WordWrapState>.SetDefault
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Clear() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B41F0 Offset: 0x34B42F1 VA: 0x34B41F0
+	|-TMP_TextProcessingStack<Color32>.Clear
+	|
+	|-RVA: 0x34B48D0 Offset: 0x34B49D1 VA: 0x34B48D0
+	|-TMP_TextProcessingStack<HighlightState>.Clear
+	|
+	|-RVA: 0x34B50C0 Offset: 0x34B51C1 VA: 0x34B50C0
+	|-TMP_TextProcessingStack<int>.Clear
+	|
+	|-RVA: 0x34B5750 Offset: 0x34B5851 VA: 0x34B5750
+	|-TMP_TextProcessingStack<Int32Enum>.Clear
+	|
+	|-RVA: 0x34B5E90 Offset: 0x34B5F91 VA: 0x34B5E90
+	|-TMP_TextProcessingStack<MaterialReference>.Clear
+	|
+	|-RVA: 0x34B6800 Offset: 0x34B6901 VA: 0x34B6800
+	|-TMP_TextProcessingStack<object>.Clear
+	|
+	|-RVA: 0x34B6EB0 Offset: 0x34B6FB1 VA: 0x34B6EB0
+	|-TMP_TextProcessingStack<float>.Clear
+	|
+	|-RVA: 0x34B75C0 Offset: 0x34B76C1 VA: 0x34B75C0
+	|-TMP_TextProcessingStack<WordWrapState>.Clear
+	*/
+
+	// RVA: -1 Offset: -1
+	public void SetDefault(T item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4200 Offset: 0x34B4301 VA: 0x34B4200
+	|-TMP_TextProcessingStack<Color32>.SetDefault
+	|
+	|-RVA: 0x34B5760 Offset: 0x34B5861 VA: 0x34B5760
+	|-TMP_TextProcessingStack<FontWeight>.SetDefault
+	|-TMP_TextProcessingStack<HorizontalAlignmentOptions>.SetDefault
+	|-TMP_TextProcessingStack<Int32Enum>.SetDefault
+	|
+	|-RVA: 0x34B48E0 Offset: 0x34B49E1 VA: 0x34B48E0
+	|-TMP_TextProcessingStack<HighlightState>.SetDefault
+	|
+	|-RVA: 0x34B50D0 Offset: 0x34B51D1 VA: 0x34B50D0
+	|-TMP_TextProcessingStack<int>.SetDefault
+	|
+	|-RVA: 0x34B5EA0 Offset: 0x34B5FA1 VA: 0x34B5EA0
+	|-TMP_TextProcessingStack<MaterialReference>.SetDefault
+	|
+	|-RVA: 0x34B6810 Offset: 0x34B6911 VA: 0x34B6810
+	|-TMP_TextProcessingStack<object>.SetDefault
+	|-TMP_TextProcessingStack<TMP_ColorGradient>.SetDefault
+	|
+	|-RVA: 0x34B6EC0 Offset: 0x34B6FC1 VA: 0x34B6EC0
+	|-TMP_TextProcessingStack<float>.SetDefault
+	|
+	|-RVA: 0x34B75D0 Offset: 0x34B76D1 VA: 0x34B75D0
+	|-TMP_TextProcessingStack<WordWrapState>.SetDefault
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Add(T item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B42B0 Offset: 0x34B43B1 VA: 0x34B42B0
+	|-TMP_TextProcessingStack<Color32>.Add
+	|
+	|-RVA: 0x34B5810 Offset: 0x34B5911 VA: 0x34B5810
+	|-TMP_TextProcessingStack<FontWeight>.Add
+	|-TMP_TextProcessingStack<HorizontalAlignmentOptions>.Add
+	|-TMP_TextProcessingStack<Int32Enum>.Add
+	|
+	|-RVA: 0x34B49C0 Offset: 0x34B4AC1 VA: 0x34B49C0
+	|-TMP_TextProcessingStack<HighlightState>.Add
+	|
+	|-RVA: 0x34B5180 Offset: 0x34B5281 VA: 0x34B5180
+	|-TMP_TextProcessingStack<int>.Add
+	|
+	|-RVA: 0x34B5FB0 Offset: 0x34B60B1 VA: 0x34B5FB0
+	|-TMP_TextProcessingStack<MaterialReference>.Add
+	|
+	|-RVA: 0x34B68C0 Offset: 0x34B69C1 VA: 0x34B68C0
+	|-TMP_TextProcessingStack<object>.Add
+	|-TMP_TextProcessingStack<TMP_ColorGradient>.Add
+	|
+	|-RVA: 0x34B6F70 Offset: 0x34B7071 VA: 0x34B6F70
+	|-TMP_TextProcessingStack<float>.Add
+	|
+	|-RVA: 0x34B76C0 Offset: 0x34B77C1 VA: 0x34B76C0
+	|-TMP_TextProcessingStack<WordWrapState>.Add
+	*/
+
+	// RVA: -1 Offset: -1
+	public T Remove() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4300 Offset: 0x34B4401 VA: 0x34B4300
+	|-TMP_TextProcessingStack<Color32>.Remove
+	|
+	|-RVA: 0x34B5860 Offset: 0x34B5961 VA: 0x34B5860
+	|-TMP_TextProcessingStack<FontWeight>.Remove
+	|-TMP_TextProcessingStack<HorizontalAlignmentOptions>.Remove
+	|-TMP_TextProcessingStack<Int32Enum>.Remove
+	|
+	|-RVA: 0x34B4A40 Offset: 0x34B4B41 VA: 0x34B4A40
+	|-TMP_TextProcessingStack<HighlightState>.Remove
+	|
+	|-RVA: 0x34B51D0 Offset: 0x34B52D1 VA: 0x34B51D0
+	|-TMP_TextProcessingStack<int>.Remove
+	|
+	|-RVA: 0x34B6060 Offset: 0x34B6161 VA: 0x34B6060
+	|-TMP_TextProcessingStack<MaterialReference>.Remove
+	|
+	|-RVA: 0x34B6920 Offset: 0x34B6A21 VA: 0x34B6920
+	|-TMP_TextProcessingStack<object>.Remove
+	|-TMP_TextProcessingStack<TMP_ColorGradient>.Remove
+	|
+	|-RVA: 0x34B6FC0 Offset: 0x34B70C1 VA: 0x34B6FC0
+	|-TMP_TextProcessingStack<float>.Remove
+	|
+	|-RVA: 0x34B7760 Offset: 0x34B7861 VA: 0x34B7760
+	|-TMP_TextProcessingStack<WordWrapState>.Remove
+	*/
+
+	// RVA: -1 Offset: -1
+	public void Push(T item) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4370 Offset: 0x34B4471 VA: 0x34B4370
+	|-TMP_TextProcessingStack<Color32>.Push
+	|
+	|-RVA: 0x34B4AC0 Offset: 0x34B4BC1 VA: 0x34B4AC0
+	|-TMP_TextProcessingStack<HighlightState>.Push
+	|
+	|-RVA: 0x34B5240 Offset: 0x34B5341 VA: 0x34B5240
+	|-TMP_TextProcessingStack<int>.Push
+	|
+	|-RVA: 0x34B58D0 Offset: 0x34B59D1 VA: 0x34B58D0
+	|-TMP_TextProcessingStack<Int32Enum>.Push
+	|
+	|-RVA: 0x34B60F0 Offset: 0x34B61F1 VA: 0x34B60F0
+	|-TMP_TextProcessingStack<MaterialReference>.Push
+	|
+	|-RVA: 0x34B6990 Offset: 0x34B6A91 VA: 0x34B6990
+	|-TMP_TextProcessingStack<object>.Push
+	|
+	|-RVA: 0x34B7030 Offset: 0x34B7131 VA: 0x34B7030
+	|-TMP_TextProcessingStack<float>.Push
+	|
+	|-RVA: 0x34B77E0 Offset: 0x34B78E1 VA: 0x34B77E0
+	|-TMP_TextProcessingStack<WordWrapState>.Push
+	*/
+
+	// RVA: -1 Offset: -1
+	public T Pop() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4480 Offset: 0x34B4581 VA: 0x34B4480
+	|-TMP_TextProcessingStack<Color32>.Pop
+	|
+	|-RVA: 0x34B4BF0 Offset: 0x34B4CF1 VA: 0x34B4BF0
+	|-TMP_TextProcessingStack<HighlightState>.Pop
+	|
+	|-RVA: 0x34B5350 Offset: 0x34B5451 VA: 0x34B5350
+	|-TMP_TextProcessingStack<int>.Pop
+	|
+	|-RVA: 0x34B59E0 Offset: 0x34B5AE1 VA: 0x34B59E0
+	|-TMP_TextProcessingStack<Int32Enum>.Pop
+	|
+	|-RVA: 0x34B6250 Offset: 0x34B6351 VA: 0x34B6250
+	|-TMP_TextProcessingStack<MaterialReference>.Pop
+	|
+	|-RVA: 0x34B6AA0 Offset: 0x34B6BA1 VA: 0x34B6AA0
+	|-TMP_TextProcessingStack<object>.Pop
+	|
+	|-RVA: 0x34B7140 Offset: 0x34B7241 VA: 0x34B7140
+	|-TMP_TextProcessingStack<float>.Pop
+	|
+	|-RVA: 0x34B7930 Offset: 0x34B7A31 VA: 0x34B7930
+	|-TMP_TextProcessingStack<WordWrapState>.Pop
+	*/
+
+	// RVA: -1 Offset: -1
+	public T Peek() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4520 Offset: 0x34B4621 VA: 0x34B4520
+	|-TMP_TextProcessingStack<Color32>.Peek
+	|
+	|-RVA: 0x34B5A80 Offset: 0x34B5B81 VA: 0x34B5A80
+	|-TMP_TextProcessingStack<FontWeight>.Peek
+	|-TMP_TextProcessingStack<Int32Enum>.Peek
+	|
+	|-RVA: 0x34B4D20 Offset: 0x34B4E21 VA: 0x34B4D20
+	|-TMP_TextProcessingStack<HighlightState>.Peek
+	|
+	|-RVA: 0x34B53F0 Offset: 0x34B54F1 VA: 0x34B53F0
+	|-TMP_TextProcessingStack<int>.Peek
+	|
+	|-RVA: 0x34B6410 Offset: 0x34B6511 VA: 0x34B6410
+	|-TMP_TextProcessingStack<MaterialReference>.Peek
+	|
+	|-RVA: 0x34B6B50 Offset: 0x34B6C51 VA: 0x34B6B50
+	|-TMP_TextProcessingStack<object>.Peek
+	|
+	|-RVA: 0x34B71D0 Offset: 0x34B72D1 VA: 0x34B71D0
+	|-TMP_TextProcessingStack<float>.Peek
+	|
+	|-RVA: 0x34B7AB0 Offset: 0x34B7BB1 VA: 0x34B7AB0
+	|-TMP_TextProcessingStack<WordWrapState>.Peek
+	*/
+
+	// RVA: -1 Offset: -1
+	public T CurrentItem() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B4570 Offset: 0x34B4671 VA: 0x34B4570
+	|-TMP_TextProcessingStack<Color32>.CurrentItem
+	|
+	|-RVA: 0x34B4D90 Offset: 0x34B4E91 VA: 0x34B4D90
+	|-TMP_TextProcessingStack<HighlightState>.CurrentItem
+	|
+	|-RVA: 0x34B5440 Offset: 0x34B5541 VA: 0x34B5440
+	|-TMP_TextProcessingStack<int>.CurrentItem
+	|
+	|-RVA: 0x34B5AD0 Offset: 0x34B5BD1 VA: 0x34B5AD0
+	|-TMP_TextProcessingStack<Int32Enum>.CurrentItem
+	|
+	|-RVA: 0x34B64A0 Offset: 0x34B65A1 VA: 0x34B64A0
+	|-TMP_TextProcessingStack<MaterialReference>.CurrentItem
+	|
+	|-RVA: 0x34B6BA0 Offset: 0x34B6CA1 VA: 0x34B6BA0
+	|-TMP_TextProcessingStack<object>.CurrentItem
+	|
+	|-RVA: 0x34B7220 Offset: 0x34B7321 VA: 0x34B7220
+	|-TMP_TextProcessingStack<float>.CurrentItem
+	|
+	|-RVA: 0x34B7B20 Offset: 0x34B7C21 VA: 0x34B7B20
+	|-TMP_TextProcessingStack<WordWrapState>.CurrentItem
+	*/
+
+	// RVA: -1 Offset: -1
+	public T PreviousItem() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x34B45C0 Offset: 0x34B46C1 VA: 0x34B45C0
+	|-TMP_TextProcessingStack<Color32>.PreviousItem
+	|
+	|-RVA: 0x34B4DF0 Offset: 0x34B4EF1 VA: 0x34B4DF0
+	|-TMP_TextProcessingStack<HighlightState>.PreviousItem
+	|
+	|-RVA: 0x34B5490 Offset: 0x34B5591 VA: 0x34B5490
+	|-TMP_TextProcessingStack<int>.PreviousItem
+	|
+	|-RVA: 0x34B5B20 Offset: 0x34B5C21 VA: 0x34B5B20
+	|-TMP_TextProcessingStack<Int32Enum>.PreviousItem
+	|
+	|-RVA: 0x34B6510 Offset: 0x34B6611 VA: 0x34B6510
+	|-TMP_TextProcessingStack<MaterialReference>.PreviousItem
+	|
+	|-RVA: 0x34B6BF0 Offset: 0x34B6CF1 VA: 0x34B6BF0
+	|-TMP_TextProcessingStack<object>.PreviousItem
+	|
+	|-RVA: 0x34B7270 Offset: 0x34B7371 VA: 0x34B7270
+	|-TMP_TextProcessingStack<float>.PreviousItem
+	|
+	|-RVA: 0x34B7B80 Offset: 0x34B7C81 VA: 0x34B7B80
+	|-TMP_TextProcessingStack<WordWrapState>.PreviousItem
+	*/
+}
+
+// Namespace: TMPro
+public static class TMP_TextUtilities // TypeDefIndex: 7465
+{
+	// Fields
+	private static Vector3[] m_rectWorldCorners; // 0x0
+	private const string k_lookupStringL = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-";
+	private const string k_lookupStringU = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-";
+
+	// Methods
+
+	// RVA: 0x1980A40 Offset: 0x1980B41 VA: 0x1980A40
+	public static int GetCursorIndexFromPosition(TMP_Text textComponent, Vector3 position, Camera camera) { }
+
+	// RVA: 0x19813F0 Offset: 0x19814F1 VA: 0x19813F0
+	public static int GetCursorIndexFromPosition(TMP_Text textComponent, Vector3 position, Camera camera, out CaretPosition cursor) { }
+
+	// RVA: 0x19815D0 Offset: 0x19816D1 VA: 0x19815D0
+	public static int FindNearestLine(TMP_Text text, Vector3 position, Camera camera) { }
+
+	// RVA: 0x1981770 Offset: 0x1981871 VA: 0x1981770
+	public static int FindNearestCharacterOnLine(TMP_Text text, Vector3 position, int line, Camera camera, bool visibleOnly) { }
+
+	// RVA: 0x1981F90 Offset: 0x1982091 VA: 0x1981F90
+	public static bool IsIntersectingRectTransform(RectTransform rectTransform, Vector3 position, Camera camera) { }
+
+	// RVA: 0x1982140 Offset: 0x1982241 VA: 0x1982140
+	public static int FindIntersectingCharacter(TMP_Text text, Vector3 position, Camera camera, bool visibleOnly) { }
+
+	// RVA: 0x1980BA0 Offset: 0x1980CA1 VA: 0x1980BA0
+	public static int FindNearestCharacter(TMP_Text text, Vector3 position, Camera camera, bool visibleOnly) { }
+
+	// RVA: 0x1982400 Offset: 0x1982501 VA: 0x1982400
+	public static int FindIntersectingWord(TMP_Text text, Vector3 position, Camera camera) { }
+
+	// RVA: 0x1982B20 Offset: 0x1982C21 VA: 0x1982B20
+	public static int FindNearestWord(TMP_Text text, Vector3 position, Camera camera) { }
+
+	// RVA: 0x19839D0 Offset: 0x1983AD1 VA: 0x19839D0
+	public static int FindIntersectingLine(TMP_Text text, Vector3 position, Camera camera) { }
+
+	// RVA: 0x1983B50 Offset: 0x1983C51 VA: 0x1983B50
+	public static int FindIntersectingLink(TMP_Text text, Vector3 position, Camera camera) { }
+
+	// RVA: 0x1984000 Offset: 0x1984101 VA: 0x1984000
+	public static int FindNearestLink(TMP_Text text, Vector3 position, Camera camera) { }
+
+	// RVA: 0x1981E00 Offset: 0x1981F01 VA: 0x1981E00
+	private static bool PointIntersectRectangle(Vector3 m, Vector3 a, Vector3 b, Vector3 c, Vector3 d) { }
+
+	// RVA: 0x1981230 Offset: 0x1981331 VA: 0x1981230
+	public static bool ScreenPointToWorldPointInRectangle(Transform transform, Vector2 screenPoint, Camera cam, out Vector3 worldPoint) { }
+
+	// RVA: 0x1984EC0 Offset: 0x1984FC1 VA: 0x1984EC0
+	private static bool IntersectLinePlane(TMP_TextUtilities.LineSegment line, Vector3 point, Vector3 normal, out Vector3 intersectingPoint) { }
+
+	// RVA: 0x1981EC0 Offset: 0x1981FC1 VA: 0x1981EC0
+	public static float DistanceToLine(Vector3 a, Vector3 b, Vector3 point) { }
+
+	// RVA: 0x1985010 Offset: 0x1985111 VA: 0x1985010
+	public static char ToLowerFast(char c) { }
+
+	// RVA: 0x1985090 Offset: 0x1985191 VA: 0x1985090
+	public static char ToUpperFast(char c) { }
+
+	// RVA: 0x1985110 Offset: 0x1985211 VA: 0x1985110
+	internal static uint ToUpperASCIIFast(uint c) { }
+
+	// RVA: 0x1985190 Offset: 0x1985291 VA: 0x1985190
+	public static int GetHashCode(string s) { }
+
+	// RVA: 0x19852B0 Offset: 0x19853B1 VA: 0x19852B0
+	public static int GetSimpleHashCode(string s) { }
+
+	// RVA: 0x1985320 Offset: 0x1985421 VA: 0x1985320
+	public static uint GetSimpleHashCodeLowercase(string s) { }
+
+	// RVA: 0x1985440 Offset: 0x1985541 VA: 0x1985440
+	public static int HexToInt(char hex) { }
+
+	// RVA: 0x1985470 Offset: 0x1985571 VA: 0x1985470
+	public static int StringHexToInt(string s) { }
+
+	// RVA: 0x1985580 Offset: 0x1985681 VA: 0x1985580
+	private static void .cctor() { }
 }
 
 // Namespace: TMPro
@@ -2859,6 +5626,55 @@ public class TMP_UpdateManager // TypeDefIndex: 7466
 }
 
 // Namespace: TMPro
+public class TMP_UpdateRegistry // TypeDefIndex: 7467
+{
+	// Fields
+	private static TMP_UpdateRegistry s_Instance; // 0x0
+	private readonly List<ICanvasElement> m_LayoutRebuildQueue; // 0x10
+	private HashSet<int> m_LayoutQueueLookup; // 0x18
+	private readonly List<ICanvasElement> m_GraphicRebuildQueue; // 0x20
+	private HashSet<int> m_GraphicQueueLookup; // 0x28
+
+	// Properties
+	public static TMP_UpdateRegistry instance { get; }
+
+	// Methods
+
+	// RVA: 0x1986660 Offset: 0x1986761 VA: 0x1986660
+	public static TMP_UpdateRegistry get_instance() { }
+
+	// RVA: 0x1986700 Offset: 0x1986801 VA: 0x1986700
+	protected void .ctor() { }
+
+	// RVA: 0x1986880 Offset: 0x1986981 VA: 0x1986880
+	public static void RegisterCanvasElementForLayoutRebuild(ICanvasElement element) { }
+
+	// RVA: 0x1986910 Offset: 0x1986A11 VA: 0x1986910
+	private bool InternalRegisterCanvasElementForLayoutRebuild(ICanvasElement element) { }
+
+	// RVA: 0x1986A30 Offset: 0x1986B31 VA: 0x1986A30
+	public static void RegisterCanvasElementForGraphicRebuild(ICanvasElement element) { }
+
+	// RVA: 0x1986AC0 Offset: 0x1986BC1 VA: 0x1986AC0
+	private bool InternalRegisterCanvasElementForGraphicRebuild(ICanvasElement element) { }
+
+	// RVA: 0x1986BE0 Offset: 0x1986CE1 VA: 0x1986BE0
+	private void PerformUpdateForCanvasRendererObjects() { }
+
+	// RVA: 0x1986F40 Offset: 0x1987041 VA: 0x1986F40
+	private void PerformUpdateForMeshRendererObjects() { }
+
+	// RVA: 0x1986FC0 Offset: 0x19870C1 VA: 0x1986FC0
+	public static void UnRegisterCanvasElementForRebuild(ICanvasElement element) { }
+
+	// RVA: 0x19870F0 Offset: 0x19871F1 VA: 0x19870F0
+	private void InternalUnRegisterCanvasElementForLayoutRebuild(ICanvasElement element) { }
+
+	// RVA: 0x1987240 Offset: 0x1987341 VA: 0x1987240
+	private void InternalUnRegisterCanvasElementForGraphicRebuild(ICanvasElement element) { }
+}
+
+// Namespace: TMPro
 public static class TMP_Math // TypeDefIndex: 7472
 {
 	// Fields
@@ -2884,6 +5700,31 @@ public static class TMP_Math // TypeDefIndex: 7472
 }
 
 // Namespace: TMPro
+public enum TMP_VertexDataUpdateFlags // TypeDefIndex: 7473
+{
+	// Fields
+	public int value__; // 0x0
+	public const TMP_VertexDataUpdateFlags None = 0;
+	public const TMP_VertexDataUpdateFlags Vertices = 1;
+	public const TMP_VertexDataUpdateFlags Uv0 = 2;
+	public const TMP_VertexDataUpdateFlags Uv2 = 4;
+	public const TMP_VertexDataUpdateFlags Uv4 = 8;
+	public const TMP_VertexDataUpdateFlags Colors32 = 16;
+	public const TMP_VertexDataUpdateFlags All = 255;
+}
+
+// Namespace: TMPro
+public struct TMP_PageInfo // TypeDefIndex: 7475
+{
+	// Fields
+	public int firstCharacterIndex; // 0x0
+	public int lastCharacterIndex; // 0x4
+	public float ascender; // 0x8
+	public float baseLine; // 0xC
+	public float descender; // 0x10
+}
+
+// Namespace: TMPro
 public struct TMP_LinkInfo // TypeDefIndex: 7476
 {
 	// Fields
@@ -2905,6 +5746,21 @@ public struct TMP_LinkInfo // TypeDefIndex: 7476
 
 	// RVA: 0x1ABB830 Offset: 0x1ABB931 VA: 0x1ABB830
 	public string GetLinkID() { }
+}
+
+// Namespace: TMPro
+public struct TMP_WordInfo // TypeDefIndex: 7477
+{
+	// Fields
+	public TMP_Text textComponent; // 0x0
+	public int firstCharacterIndex; // 0x8
+	public int lastCharacterIndex; // 0xC
+	public int characterCount; // 0x10
+
+	// Methods
+
+	// RVA: 0x1987430 Offset: 0x1987531 VA: 0x1987430
+	public string GetWord() { }
 }
 
 // Namespace: TMPro

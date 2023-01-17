@@ -1,4 +1,25 @@
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2740A0 Offset: 0x2741A1 VA: 0x2740A0
+private sealed class CharacterWeapon.<>c__DisplayClass9_0 // TypeDefIndex: 8653
+{
+	// Fields
+	public Transform bowTransform; // 0x10
+	public Transform mainHandTransform; // 0x18
+	public CharacterWeapon <>4__this; // 0x20
+
+	// Methods
+
+	// RVA: 0x1E04F40 Offset: 0x1E05041 VA: 0x1E04F40
+	public void .ctor() { }
+
+	// RVA: 0x1E04F50 Offset: 0x1E05051 VA: 0x1E04F50
+	internal void <MyStart>b__3(Unit _) { }
+
+	// RVA: 0x1E04F80 Offset: 0x1E05081 VA: 0x1E04F80
+	internal void <MyStart>b__5(Character chr) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2740B0 Offset: 0x2741B1 VA: 0x2740B0
 private sealed class CharacterWeapon.<>c__DisplayClass9_1 // TypeDefIndex: 8654
 {
@@ -13,6 +34,22 @@ private sealed class CharacterWeapon.<>c__DisplayClass9_1 // TypeDefIndex: 8654
 
 	// RVA: 0x1E050E0 Offset: 0x1E051E1 VA: 0x1E050E0
 	internal void <MyStart>b__6() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2740C0 Offset: 0x2741C1 VA: 0x2740C0
+private sealed class CharacterWeapon.<>c__DisplayClass9_2 // TypeDefIndex: 8655
+{
+	// Fields
+	public Character chr; // 0x10
+
+	// Methods
+
+	// RVA: 0x1E050D0 Offset: 0x1E051D1 VA: 0x1E050D0
+	public void .ctor() { }
+
+	// RVA: 0x1E05100 Offset: 0x1E05201 VA: 0x1E05100
+	internal void <MyStart>b__7() { }
 }
 
 // Namespace: 
@@ -46,5 +83,14 @@ private sealed class CharacterWeapon.<>c // TypeDefIndex: 8656
 
 	// RVA: 0x1E04E20 Offset: 0x1E04F21 VA: 0x1E04E20
 	internal void <MyStart>b__9_4(Character chr) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2740E0 Offset: 0x2741E1 VA: 0x2740E0
+private struct CharacterWeapon.<>c__DisplayClass11_0 // TypeDefIndex: 8657
+{
+	// Fields
+	public float duration; // 0x0
+	public string name; // 0x8
 }
 

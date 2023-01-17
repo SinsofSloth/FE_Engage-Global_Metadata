@@ -1,4 +1,119 @@
 // Namespace: UnityEngine
+[NativeHeaderAttribute] // RVA: 0x43D360 Offset: 0x43D461 VA: 0x43D360
+[NativeHeaderAttribute] // RVA: 0x43D360 Offset: 0x43D461 VA: 0x43D360
+[UsedByNativeCodeAttribute] // RVA: 0x43D360 Offset: 0x43D461 VA: 0x43D360
+public class Texture : Object // TypeDefIndex: 3515
+{
+	// Fields
+	public static readonly int GenerateAllMips; // 0x0
+
+	// Properties
+	public int mipmapCount { get; }
+	public virtual GraphicsFormat graphicsFormat { get; }
+	public virtual int width { get; set; }
+	public virtual int height { get; set; }
+	public virtual TextureDimension dimension { get; set; }
+	public virtual bool isReadable { get; }
+	public TextureWrapMode wrapMode { get; set; }
+	public FilterMode filterMode { set; }
+	public int anisoLevel { set; }
+	public float mipMapBias { set; }
+	public Vector2 texelSize { get; }
+	internal ColorSpace activeTextureColorSpace { get; }
+
+	// Methods
+
+	// RVA: 0x3840950 Offset: 0x3840A51 VA: 0x3840950
+	protected void .ctor() { }
+
+	[NativeNameAttribute] // RVA: 0x44C280 Offset: 0x44C381 VA: 0x44C280
+	// RVA: 0x38409C0 Offset: 0x3840AC1 VA: 0x38409C0
+	public int get_mipmapCount() { }
+
+	// RVA: 0x3840A10 Offset: 0x3840B11 VA: 0x3840A10 Slot: 4
+	public virtual GraphicsFormat get_graphicsFormat() { }
+
+	// RVA: 0x3840A20 Offset: 0x3840B21 VA: 0x3840A20
+	private int GetDataWidth() { }
+
+	// RVA: 0x3840A70 Offset: 0x3840B71 VA: 0x3840A70
+	private int GetDataHeight() { }
+
+	// RVA: 0x3840AC0 Offset: 0x3840BC1 VA: 0x3840AC0
+	private TextureDimension GetDimension() { }
+
+	// RVA: 0x3840B10 Offset: 0x3840C11 VA: 0x3840B10 Slot: 5
+	public virtual int get_width() { }
+
+	// RVA: 0x3840B60 Offset: 0x3840C61 VA: 0x3840B60 Slot: 6
+	public virtual void set_width(int value) { }
+
+	// RVA: 0x3840BA0 Offset: 0x3840CA1 VA: 0x3840BA0 Slot: 7
+	public virtual int get_height() { }
+
+	// RVA: 0x3840BF0 Offset: 0x3840CF1 VA: 0x3840BF0 Slot: 8
+	public virtual void set_height(int value) { }
+
+	// RVA: 0x3840C30 Offset: 0x3840D31 VA: 0x3840C30 Slot: 9
+	public virtual TextureDimension get_dimension() { }
+
+	// RVA: 0x3840C80 Offset: 0x3840D81 VA: 0x3840C80 Slot: 10
+	public virtual void set_dimension(TextureDimension value) { }
+
+	// RVA: 0x3840CC0 Offset: 0x3840DC1 VA: 0x3840CC0 Slot: 11
+	public virtual bool get_isReadable() { }
+
+	[NativeNameAttribute] // RVA: 0x44C2C0 Offset: 0x44C3C1 VA: 0x44C2C0
+	// RVA: 0x3840D10 Offset: 0x3840E11 VA: 0x3840D10
+	public TextureWrapMode get_wrapMode() { }
+
+	// RVA: 0x3840D60 Offset: 0x3840E61 VA: 0x3840D60
+	public void set_wrapMode(TextureWrapMode value) { }
+
+	// RVA: 0x3840DB0 Offset: 0x3840EB1 VA: 0x3840DB0
+	public void set_filterMode(FilterMode value) { }
+
+	// RVA: 0x3840E00 Offset: 0x3840F01 VA: 0x3840E00
+	public void set_anisoLevel(int value) { }
+
+	// RVA: 0x3840E50 Offset: 0x3840F51 VA: 0x3840E50
+	public void set_mipMapBias(float value) { }
+
+	[NativeNameAttribute] // RVA: 0x44C300 Offset: 0x44C401 VA: 0x44C300
+	// RVA: 0x3840EA0 Offset: 0x3840FA1 VA: 0x3840EA0
+	public Vector2 get_texelSize() { }
+
+	[NativeMethodAttribute] // RVA: 0x44C340 Offset: 0x44C441 VA: 0x44C340
+	// RVA: 0x3840F50 Offset: 0x3841051 VA: 0x3840F50
+	private int Internal_GetActiveTextureColorSpace() { }
+
+	[VisibleToOtherModulesAttribute] // RVA: 0x44C380 Offset: 0x44C481 VA: 0x44C380
+	// RVA: 0x3840FA0 Offset: 0x38410A1 VA: 0x3840FA0
+	internal ColorSpace get_activeTextureColorSpace() { }
+
+	// RVA: 0x3840FF0 Offset: 0x38410F1 VA: 0x3840FF0
+	internal int GetPixelDataSize(int mipLevel, int element = 0) { }
+
+	// RVA: 0x3841050 Offset: 0x3841151 VA: 0x3841050
+	internal int GetPixelDataOffset(int mipLevel, int element = 0) { }
+
+	// RVA: 0x38410B0 Offset: 0x38411B1 VA: 0x38410B0
+	internal bool ValidateFormat(TextureFormat format) { }
+
+	// RVA: 0x3841240 Offset: 0x3841341 VA: 0x3841240
+	internal bool ValidateFormat(GraphicsFormat format, FormatUsage usage) { }
+
+	// RVA: 0x38413F0 Offset: 0x38414F1 VA: 0x38413F0
+	internal UnityException CreateNonReadableException(Texture t) { }
+
+	// RVA: 0x3841570 Offset: 0x3841671 VA: 0x3841570
+	private static void .cctor() { }
+
+	// RVA: 0x3840F00 Offset: 0x3841001 VA: 0x3840F00
+	private void get_texelSize_Injected(out Vector2 ret) { }
+}
+
+// Namespace: UnityEngine
 [NativeHeaderAttribute] // RVA: 0x43D3D0 Offset: 0x43D4D1 VA: 0x43D3D0
 [UsedByNativeCodeAttribute] // RVA: 0x43D3D0 Offset: 0x43D4D1 VA: 0x43D3D0
 [NativeHeaderAttribute] // RVA: 0x43D3D0 Offset: 0x43D4D1 VA: 0x43D3D0
@@ -448,5 +563,52 @@ public sealed class Texture3D : Texture // TypeDefIndex: 3518
 
 	// RVA: 0x38450B0 Offset: 0x38451B1 VA: 0x38450B0
 	private void SetPixelImpl_Injected(int image, int x, int y, int z, ref Color color) { }
+}
+
+// Namespace: UnityEngine
+[NativeHeaderAttribute] // RVA: 0x43D4E0 Offset: 0x43D5E1 VA: 0x43D4E0
+public sealed class Texture2DArray : Texture // TypeDefIndex: 3519
+{
+	// Properties
+	public static int allSlices { get; }
+	public override bool isReadable { get; }
+
+	// Methods
+
+	[NativeNameAttribute] // RVA: 0x44D5E0 Offset: 0x44D6E1 VA: 0x44D5E0
+	// RVA: 0x3844870 Offset: 0x3844971 VA: 0x3844870
+	public static int get_allSlices() { }
+
+	// RVA: 0x38448B0 Offset: 0x38449B1 VA: 0x38448B0 Slot: 11
+	public override bool get_isReadable() { }
+
+	[FreeFunctionAttribute] // RVA: 0x44D620 Offset: 0x44D721 VA: 0x44D620
+	// RVA: 0x3844900 Offset: 0x3844A01 VA: 0x3844900
+	private static bool Internal_CreateImpl(Texture2DArray mono, int w, int h, int d, int mipCount, GraphicsFormat format, TextureCreationFlags flags) { }
+
+	// RVA: 0x3844990 Offset: 0x3844A91 VA: 0x3844990
+	private static void Internal_Create(Texture2DArray mono, int w, int h, int d, int mipCount, GraphicsFormat format, TextureCreationFlags flags) { }
+
+	// RVA: 0x3844A70 Offset: 0x3844B71 VA: 0x3844A70
+	public void .ctor(int width, int height, int depth, DefaultFormat format, TextureCreationFlags flags) { }
+
+	[RequiredByNativeCodeAttribute] // RVA: 0x44D660 Offset: 0x44D761 VA: 0x44D660
+	// RVA: 0x3844B50 Offset: 0x3844C51 VA: 0x3844B50
+	public void .ctor(int width, int height, int depth, GraphicsFormat format, TextureCreationFlags flags) { }
+
+	// RVA: 0x3844C00 Offset: 0x3844D01 VA: 0x3844C00
+	public void .ctor(int width, int height, int depth, GraphicsFormat format, TextureCreationFlags flags, int mipCount) { }
+
+	// RVA: 0x3844DE0 Offset: 0x3844EE1 VA: 0x3844DE0
+	public void .ctor(int width, int height, int depth, TextureFormat textureFormat, int mipCount, bool linear) { }
+
+	// RVA: 0x3844F90 Offset: 0x3845091 VA: 0x3844F90
+	public void .ctor(int width, int height, int depth, TextureFormat textureFormat, bool mipChain, bool linear) { }
+
+	// RVA: 0x3844FB0 Offset: 0x38450B1 VA: 0x3844FB0
+	public void .ctor(int width, int height, int depth, TextureFormat textureFormat, bool mipChain) { }
+
+	// RVA: 0x3844D80 Offset: 0x3844E81 VA: 0x3844D80
+	private static void ValidateIsNotCrunched(TextureCreationFlags flags) { }
 }
 

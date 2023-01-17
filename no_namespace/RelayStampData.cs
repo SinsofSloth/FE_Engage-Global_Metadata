@@ -15,6 +15,15 @@ public enum RelayStampData.Kinds // TypeDefIndex: 10038
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x276480 Offset: 0x276581 VA: 0x276480
+public enum RelayStampData.Flags // TypeDefIndex: 10039
+{
+	// Fields
+	public int value__; // 0x0
+	public const RelayStampData.Flags NoFilter = 1;
+}
+
+// Namespace: 
 public sealed class RelayStampData.FlagField : BitFieldTemplate32<RelayStampData.Flags> // TypeDefIndex: 10040
 {
 	// Methods
@@ -27,5 +36,21 @@ public sealed class RelayStampData.FlagField : BitFieldTemplate32<RelayStampData
 
 	// RVA: 0x1F450A0 Offset: 0x1F451A1 VA: 0x1F450A0 Slot: 5
 	protected override int ToInt(RelayStampData.Flags value) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276490 Offset: 0x276591 VA: 0x276490
+private sealed class RelayStampData.<>c__DisplayClass38_0 // TypeDefIndex: 10041
+{
+	// Fields
+	public byte serialNo; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F44FB0 Offset: 0x1F450B1 VA: 0x1F44FB0
+	public void .ctor() { }
+
+	// RVA: 0x1F44FC0 Offset: 0x1F450C1 VA: 0x1F44FC0
+	internal bool <TryGetFromSerialNo>b__0(RelayStampData data) { }
 }
 

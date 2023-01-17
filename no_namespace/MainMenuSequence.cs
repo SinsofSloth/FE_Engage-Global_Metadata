@@ -1,4 +1,32 @@
 // Namespace: 
+private class MainMenuSequence.AlphaFader // TypeDefIndex: 13023
+{
+	// Fields
+	private float m_alpha; // 0x10
+	private float m_alphaFrom; // 0x14
+	private float m_alphaTo; // 0x18
+	private float m_time; // 0x1C
+	private float m_duration; // 0x20
+
+	// Methods
+
+	// RVA: 0x2231FB0 Offset: 0x22320B1 VA: 0x2231FB0
+	public void .ctor() { }
+
+	// RVA: 0x2231FE0 Offset: 0x22320E1 VA: 0x2231FE0
+	public void Reset() { }
+
+	// RVA: 0x2231FF0 Offset: 0x22320F1 VA: 0x2231FF0
+	public float Get() { }
+
+	// RVA: 0x2232000 Offset: 0x2232101 VA: 0x2232000
+	public void Set(float rot, float msec) { }
+
+	// RVA: 0x2232040 Offset: 0x2232141 VA: 0x2232040
+	public float Tick() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.CharacterWork // TypeDefIndex: 13024
 {
 	// Fields
@@ -134,6 +162,58 @@ private class MainMenuSequence.CharacterWork // TypeDefIndex: 13024
 }
 
 // Namespace: 
+private class MainMenuSequence.CameraWork // TypeDefIndex: 13025
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x29B990 Offset: 0x29BA91 VA: 0x29B990
+	private Camera <Camera>k__BackingField; // 0x10
+	[CompilerGeneratedAttribute] // RVA: 0x29B9A0 Offset: 0x29BAA1 VA: 0x29B9A0
+	private Animator <Animator>k__BackingField; // 0x18
+	[CompilerGeneratedAttribute] // RVA: 0x29B9B0 Offset: 0x29BAB1 VA: 0x29B9B0
+	private GameObject <LookAtTarget>k__BackingField; // 0x20
+
+	// Properties
+	public Camera Camera { get; set; }
+	public Animator Animator { get; set; }
+	public GameObject LookAtTarget { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB1D0 Offset: 0x2CB2D1 VA: 0x2CB1D0
+	// RVA: 0x2232110 Offset: 0x2232211 VA: 0x2232110
+	public Camera get_Camera() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB1E0 Offset: 0x2CB2E1 VA: 0x2CB1E0
+	// RVA: 0x2232120 Offset: 0x2232221 VA: 0x2232120
+	public void set_Camera(Camera value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB1F0 Offset: 0x2CB2F1 VA: 0x2CB1F0
+	// RVA: 0x2232130 Offset: 0x2232231 VA: 0x2232130
+	public Animator get_Animator() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB200 Offset: 0x2CB301 VA: 0x2CB200
+	// RVA: 0x2232140 Offset: 0x2232241 VA: 0x2232140
+	public void set_Animator(Animator value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB210 Offset: 0x2CB311 VA: 0x2CB210
+	// RVA: 0x2232150 Offset: 0x2232251 VA: 0x2232150
+	public GameObject get_LookAtTarget() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2CB220 Offset: 0x2CB321 VA: 0x2CB220
+	// RVA: 0x2232160 Offset: 0x2232261 VA: 0x2232160
+	public void set_LookAtTarget(GameObject value) { }
+
+	// RVA: 0x2232170 Offset: 0x2232271 VA: 0x2232170
+	public void .ctor(Camera camera, Animator animator, GameObject lookAtTarget) { }
+
+	// RVA: 0x22321E0 Offset: 0x22322E1 VA: 0x22321E0
+	public bool IsPlayingAnim(string animName) { }
+
+	// RVA: 0x22322C0 Offset: 0x22323C1 VA: 0x22322C0
+	public void PlayAnim(string animName, int durationMsec = 0) { }
+}
+
+// Namespace: 
 private enum MainMenuSequence.Label // TypeDefIndex: 13026
 {
 	// Fields
@@ -173,6 +253,60 @@ private enum MainMenuSequence.Label // TypeDefIndex: 13026
 }
 
 // Namespace: 
+public abstract class MainMenuSequence.MenuSequenceBase : ProcInst // TypeDefIndex: 13027
+{
+	// Fields
+	protected GameObject m_LayoutPrefab; // 0x70
+
+	// Methods
+
+	// RVA: 0x2234590 Offset: 0x2234691 VA: 0x2234590 Slot: 18
+	protected virtual string GetLayoutPrefabPath() { }
+
+	// RVA: 0x22345E0 Offset: 0x22346E1 VA: 0x22345E0 Slot: 19
+	protected virtual bool IsTitleBarEnable() { }
+
+	// RVA: 0x22345F0 Offset: 0x22346F1 VA: 0x22345F0 Slot: 20
+	protected virtual string GetTitleBarName() { }
+
+	// RVA: 0x2234640 Offset: 0x2234741 VA: 0x2234640 Slot: 21
+	protected virtual string GetTitleBarHelp() { }
+
+	// RVA: 0x2234690 Offset: 0x2234791 VA: 0x2234690 Slot: 22
+	protected virtual string GetTitleBarKeyHelpId() { }
+
+	// RVA: 0x22346E0 Offset: 0x22347E1 VA: 0x22346E0
+	protected void LoadLayoutPrefabAsync() { }
+
+	// RVA: 0x2234780 Offset: 0x2234881 VA: 0x2234780
+	protected void UnloadLayoutPrefab() { }
+
+	// RVA: 0x2234810 Offset: 0x2234911 VA: 0x2234810
+	protected bool IsLoadingLayoutPrefab() { }
+
+	// RVA: 0x22348A0 Offset: 0x22349A1 VA: 0x22348A0
+	protected void CreateLayoutPrefab() { }
+
+	// RVA: 0x2234950 Offset: 0x2234A51 VA: 0x2234950
+	protected void DestroyLayoutPrefab() { }
+
+	// RVA: 0x2234A10 Offset: 0x2234B11 VA: 0x2234A10
+	protected void SetTitleBarValue() { }
+
+	// RVA: 0x2234B60 Offset: 0x2234C61 VA: 0x2234B60
+	protected void OpenTitleBar() { }
+
+	// RVA: 0x2234B70 Offset: 0x2234C71 VA: 0x2234B70 Slot: 23
+	protected virtual void CreateMenuBind(ProcInst super) { }
+
+	// RVA: 0x2234B80 Offset: 0x2234C81 VA: 0x2234B80 Slot: 24
+	protected virtual ProcDesc[] GetProcDesc() { }
+
+	// RVA: 0x22332B0 Offset: 0x22333B1 VA: 0x22332B0
+	protected void .ctor() { }
+}
+
+// Namespace: 
 public abstract class MainMenuSequence.TopMenuSequence.Menu.MenuItem : BasicMenuItem // TypeDefIndex: 13028
 {
 	// Methods
@@ -182,6 +316,24 @@ public abstract class MainMenuSequence.TopMenuSequence.Menu.MenuItem : BasicMenu
 
 	// RVA: 0x2D7A3C0 Offset: 0x2D7A4C1 VA: 0x2D7A3C0
 	protected void .ctor() { }
+}
+
+// Namespace: 
+private class MainMenuSequence.TopMenuSequence.Menu.StartMenuItem : MainMenuSequence.TopMenuSequence.Menu.MenuItem // TypeDefIndex: 13029
+{
+	// Methods
+
+	// RVA: 0x2D7C740 Offset: 0x2D7C841 VA: 0x2D7C740 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D7C7C0 Offset: 0x2D7C8C1 VA: 0x2D7C7C0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D7C7D0 Offset: 0x2D7C8D1 VA: 0x2D7C7D0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D7C870 Offset: 0x2D7C971 VA: 0x2D7C870
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -203,6 +355,24 @@ private class MainMenuSequence.TopMenuSequence.Menu.ContinueMenuItem : MainMenuS
 }
 
 // Namespace: 
+private class MainMenuSequence.TopMenuSequence.Menu.OptionMenuItem : MainMenuSequence.TopMenuSequence.Menu.MenuItem // TypeDefIndex: 13031
+{
+	// Methods
+
+	// RVA: 0x2D7C5F0 Offset: 0x2D7C6F1 VA: 0x2D7C5F0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D7C670 Offset: 0x2D7C771 VA: 0x2D7C670 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D7C680 Offset: 0x2D7C781 VA: 0x2D7C680 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D7C730 Offset: 0x2D7C831 VA: 0x2D7C730
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class MainMenuSequence.TopMenuSequence.Menu.MenuContent : BasicMenuContent // TypeDefIndex: 13032
 {
 	// Methods
@@ -211,6 +381,27 @@ public class MainMenuSequence.TopMenuSequence.Menu.MenuContent : BasicMenuConten
 	public override int GetMenuItemContentMax() { }
 
 	// RVA: 0x2D7C2A0 Offset: 0x2D7C3A1 VA: 0x2D7C2A0
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.TopMenuSequence.Menu.MenuItemContent : BasicMenuItemContent // TypeDefIndex: 13033
+{
+	// Fields
+	private TextMeshProUGUI m_NameText; // 0x48
+
+	// Methods
+
+	// RVA: 0x2D7C390 Offset: 0x2D7C491 VA: 0x2D7C390 Slot: 8
+	public override void Build(BasicMenuItem menuItem) { }
+
+	// RVA: 0x2D7C500 Offset: 0x2D7C601 VA: 0x2D7C500 Slot: 10
+	public override void BuildText() { }
+
+	// RVA: 0x2D7C490 Offset: 0x2D7C591 VA: 0x2D7C490
+	public void SetupByMenuItem(MainMenuSequence.TopMenuSequence.Menu.MenuItem menuItem) { }
+
+	// RVA: 0x2D7C5E0 Offset: 0x2D7C6E1 VA: 0x2D7C5E0
 	public void .ctor() { }
 }
 
@@ -233,6 +424,36 @@ public class MainMenuSequence.TopMenuSequence.Menu : BasicMenu // TypeDefIndex: 
 }
 
 // Namespace: 
+public class MainMenuSequence.TopMenuSequence : MainMenuSequence.MenuSequenceBase // TypeDefIndex: 13035
+{
+	// Methods
+
+	// RVA: 0x2237D00 Offset: 0x2237E01 VA: 0x2237D00 Slot: 18
+	protected override string GetLayoutPrefabPath() { }
+
+	// RVA: 0x2237D50 Offset: 0x2237E51 VA: 0x2237D50 Slot: 19
+	protected override bool IsTitleBarEnable() { }
+
+	// RVA: 0x2237D60 Offset: 0x2237E61 VA: 0x2237D60 Slot: 20
+	protected override string GetTitleBarName() { }
+
+	// RVA: 0x2237DE0 Offset: 0x2237EE1 VA: 0x2237DE0 Slot: 21
+	protected override string GetTitleBarHelp() { }
+
+	// RVA: 0x2237E60 Offset: 0x2237F61 VA: 0x2237E60 Slot: 22
+	protected override string GetTitleBarKeyHelpId() { }
+
+	// RVA: 0x2237EB0 Offset: 0x2237FB1 VA: 0x2237EB0 Slot: 23
+	protected override void CreateMenuBind(ProcInst super) { }
+
+	// RVA: 0x2237F50 Offset: 0x2238051 VA: 0x2237F50
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x2237FE0 Offset: 0x22380E1 VA: 0x2237FE0
+	public void .ctor() { }
+}
+
+// Namespace: 
 public abstract class MainMenuSequence.OptionMenuSequence.Menu.MenuItem : MainMenuSequence.TopMenuSequence.Menu.MenuItem // TypeDefIndex: 13036
 {
 	// Methods
@@ -242,6 +463,24 @@ public abstract class MainMenuSequence.OptionMenuSequence.Menu.MenuItem : MainMe
 
 	// RVA: 0x2D7A090 Offset: 0x2D7A191 VA: 0x2D7A090
 	protected void .ctor() { }
+}
+
+// Namespace: 
+private class MainMenuSequence.OptionMenuSequence.Menu.CopyMenuItem : MainMenuSequence.OptionMenuSequence.Menu.MenuItem // TypeDefIndex: 13037
+{
+	// Methods
+
+	// RVA: 0x2D79F40 Offset: 0x2D7A041 VA: 0x2D79F40 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D79FC0 Offset: 0x2D7A0C1 VA: 0x2D79FC0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D79FD0 Offset: 0x2D7A0D1 VA: 0x2D79FD0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D7A080 Offset: 0x2D7A181 VA: 0x2D7A080
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -259,6 +498,24 @@ private class MainMenuSequence.OptionMenuSequence.Menu.DeleteMenuItem : MainMenu
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x2D7A1E0 Offset: 0x2D7A2E1 VA: 0x2D7A1E0
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class MainMenuSequence.OptionMenuSequence.Menu.LanguageSettingMenuItem : MainMenuSequence.OptionMenuSequence.Menu.MenuItem // TypeDefIndex: 13039
+{
+	// Methods
+
+	// RVA: 0x2D7A1F0 Offset: 0x2D7A2F1 VA: 0x2D7A1F0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D7A270 Offset: 0x2D7A371 VA: 0x2D7A270 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D7A280 Offset: 0x2D7A381 VA: 0x2D7A280 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D7A330 Offset: 0x2D7A431 VA: 0x2D7A330
 	public void .ctor() { }
 }
 
@@ -281,6 +538,36 @@ public class MainMenuSequence.OptionMenuSequence.Menu : BasicMenu // TypeDefInde
 }
 
 // Namespace: 
+public class MainMenuSequence.OptionMenuSequence : MainMenuSequence.MenuSequenceBase // TypeDefIndex: 13041
+{
+	// Methods
+
+	// RVA: 0x22356B0 Offset: 0x22357B1 VA: 0x22356B0 Slot: 18
+	protected override string GetLayoutPrefabPath() { }
+
+	// RVA: 0x2235700 Offset: 0x2235801 VA: 0x2235700 Slot: 19
+	protected override bool IsTitleBarEnable() { }
+
+	// RVA: 0x2235710 Offset: 0x2235811 VA: 0x2235710 Slot: 20
+	protected override string GetTitleBarName() { }
+
+	// RVA: 0x2235790 Offset: 0x2235891 VA: 0x2235790 Slot: 21
+	protected override string GetTitleBarHelp() { }
+
+	// RVA: 0x2235810 Offset: 0x2235911 VA: 0x2235810 Slot: 22
+	protected override string GetTitleBarKeyHelpId() { }
+
+	// RVA: 0x2235860 Offset: 0x2235961 VA: 0x2235860 Slot: 23
+	protected override void CreateMenuBind(ProcInst super) { }
+
+	// RVA: 0x2235900 Offset: 0x2235A01 VA: 0x2235900
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x2235990 Offset: 0x2235A91 VA: 0x2235990
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.LanguageSettingMenuSequence.Menu.ConfirmDialog.YesDialogItem : BasicDialogItemYes // TypeDefIndex: 13042
 {
 	// Methods
@@ -293,6 +580,21 @@ private class MainMenuSequence.LanguageSettingMenuSequence.Menu.ConfirmDialog.Ye
 }
 
 // Namespace: 
+private class MainMenuSequence.LanguageSettingMenuSequence.Menu.ConfirmDialog.NoDialogItem : BasicDialogItemNo // TypeDefIndex: 13043
+{
+	// Methods
+
+	// RVA: 0x2D7F390 Offset: 0x2D7F491 VA: 0x2D7F390 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D7F410 Offset: 0x2D7F511 VA: 0x2D7F410 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D77A80 Offset: 0x2D77B81 VA: 0x2D77A80
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.LanguageSettingMenuSequence.Menu.ConfirmDialog : YesNoDialog // TypeDefIndex: 13044
 {
 	// Methods
@@ -302,6 +604,21 @@ private class MainMenuSequence.LanguageSettingMenuSequence.Menu.ConfirmDialog : 
 
 	// RVA: 0x2D77880 Offset: 0x2D77981 VA: 0x2D77880
 	public static void CreateBind(ProcInst super) { }
+}
+
+// Namespace: 
+public abstract class MainMenuSequence.LanguageSettingMenuSequence.Menu.MenuItem : BasicMenuItem // TypeDefIndex: 13045
+{
+	// Methods
+
+	// RVA: 0x2D77F70 Offset: 0x2D78071 VA: 0x2D77F70 Slot: 27
+	public virtual string GetParamName() { }
+
+	// RVA: 0x2D77FC0 Offset: 0x2D780C1 VA: 0x2D77FC0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D78080 Offset: 0x2D78181 VA: 0x2D78080
+	protected void .ctor() { }
 }
 
 // Namespace: 
@@ -323,6 +640,24 @@ private class MainMenuSequence.LanguageSettingMenuSequence.Menu.MessMenuItem : M
 }
 
 // Namespace: 
+private class MainMenuSequence.LanguageSettingMenuSequence.Menu.VoiceMenuItem : MainMenuSequence.LanguageSettingMenuSequence.Menu.MenuItem // TypeDefIndex: 13047
+{
+	// Methods
+
+	// RVA: 0x2D78F40 Offset: 0x2D79041 VA: 0x2D78F40 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D78FC0 Offset: 0x2D790C1 VA: 0x2D78FC0 Slot: 27
+	public override string GetParamName() { }
+
+	// RVA: 0x2D790D0 Offset: 0x2D791D1 VA: 0x2D790D0 Slot: 17
+	public override BasicMenu.Result KeyCall() { }
+
+	// RVA: 0x2D79940 Offset: 0x2D79A41 VA: 0x2D79940
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class MainMenuSequence.LanguageSettingMenuSequence.Menu.MenuContent : BasicMenuContent // TypeDefIndex: 13048
 {
 	// Methods
@@ -334,6 +669,34 @@ public class MainMenuSequence.LanguageSettingMenuSequence.Menu.MenuContent : Bas
 	public override void SetCursorColor(Color c) { }
 
 	// RVA: 0x2D77F00 Offset: 0x2D78001 VA: 0x2D77F00
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.LanguageSettingMenuSequence.Menu.MenuItemContent : BasicMenuItemContent // TypeDefIndex: 13049
+{
+	// Fields
+	private TextMeshProUGUI m_NameText; // 0x48
+	private TextMeshProUGUI m_ParamText; // 0x50
+
+	// Methods
+
+	// RVA: 0x2D78090 Offset: 0x2D78191 VA: 0x2D78090 Slot: 8
+	public override void Build(BasicMenuItem menuItem) { }
+
+	// RVA: 0x2D78270 Offset: 0x2D78371 VA: 0x2D78270 Slot: 10
+	public override void BuildText() { }
+
+	// RVA: 0x2D781C0 Offset: 0x2D782C1 VA: 0x2D781C0
+	public void SetupByMenuItem(MainMenuSequence.LanguageSettingMenuSequence.Menu.MenuItem menuItem) { }
+
+	// RVA: 0x2D783C0 Offset: 0x2D784C1 VA: 0x2D783C0 Slot: 11
+	public override void BuildTextColor() { }
+
+	// RVA: 0x2D78490 Offset: 0x2D78591 VA: 0x2D78490 Slot: 7
+	protected override void UpdateTextColor() { }
+
+	// RVA: 0x2D78520 Offset: 0x2D78621 VA: 0x2D78520
 	public void .ctor() { }
 }
 
@@ -367,6 +730,33 @@ public class MainMenuSequence.LanguageSettingMenuSequence.Menu : BasicMenu // Ty
 }
 
 // Namespace: 
+public class MainMenuSequence.LanguageSettingMenuSequence : MainMenuSequence.MenuSequenceBase // TypeDefIndex: 13051
+{
+	// Methods
+
+	// RVA: 0x2234280 Offset: 0x2234381 VA: 0x2234280 Slot: 18
+	protected override string GetLayoutPrefabPath() { }
+
+	// RVA: 0x22342D0 Offset: 0x22343D1 VA: 0x22342D0 Slot: 20
+	protected override string GetTitleBarName() { }
+
+	// RVA: 0x2234350 Offset: 0x2234451 VA: 0x2234350 Slot: 21
+	protected override string GetTitleBarHelp() { }
+
+	// RVA: 0x22343D0 Offset: 0x22344D1 VA: 0x22343D0 Slot: 22
+	protected override string GetTitleBarKeyHelpId() { }
+
+	// RVA: 0x2234420 Offset: 0x2234521 VA: 0x2234420 Slot: 23
+	protected override void CreateMenuBind(ProcInst super) { }
+
+	// RVA: 0x22344F0 Offset: 0x22345F1 VA: 0x22344F0
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x2234580 Offset: 0x2234681 VA: 0x2234580
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class MainMenuSequence.HistoryInfo.Window // TypeDefIndex: 13052
 {
 	// Fields
@@ -394,6 +784,20 @@ public class MainMenuSequence.HistoryInfo.Window // TypeDefIndex: 13052
 
 	// RVA: 0x1DD3190 Offset: 0x1DD3291 VA: 0x1DD3190
 	public void ClearHistoryText() { }
+}
+
+// Namespace: 
+public enum MainMenuSequence.HistoryInfo.InfoKind // TypeDefIndex: 13053
+{
+	// Fields
+	public int value__; // 0x0
+	public const MainMenuSequence.HistoryInfo.InfoKind PlayerName = 0;
+	public const MainMenuSequence.HistoryInfo.InfoKind Birthday = 1;
+	public const MainMenuSequence.HistoryInfo.InfoKind Difficulty = 2;
+	public const MainMenuSequence.HistoryInfo.InfoKind GrowMode = 3;
+	public const MainMenuSequence.HistoryInfo.InfoKind NetworkService = 4;
+	public const MainMenuSequence.HistoryInfo.InfoKind GameMode = 5;
+	public const MainMenuSequence.HistoryInfo.InfoKind Max = 6;
 }
 
 // Namespace: 
@@ -445,6 +849,27 @@ public class MainMenuSequence.HistoryInfo // TypeDefIndex: 13054
 }
 
 // Namespace: 
+public abstract class MainMenuSequence.DifficultySelectMenuSequence.Menu.MenuItem : BasicMenuItem // TypeDefIndex: 13055
+{
+	// Fields
+	private Difficulty m_Difficulty; // 0x64
+
+	// Methods
+
+	// RVA: 0x2D75D80 Offset: 0x2D75E81 VA: 0x2D75D80
+	public void .ctor(Difficulty difficulty) { }
+
+	// RVA: 0x2D76030 Offset: 0x2D76131 VA: 0x2D76030 Slot: 27
+	public virtual string GetHelp() { }
+
+	// RVA: 0x2D76080 Offset: 0x2D76181 VA: 0x2D76080 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D76190 Offset: 0x2D76291 VA: 0x2D76190 Slot: 19
+	public override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.DifficultySelectMenuSequence.Menu.NormalMenuItem : MainMenuSequence.DifficultySelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13056
 {
 	// Methods
@@ -456,6 +881,21 @@ private class MainMenuSequence.DifficultySelectMenuSequence.Menu.NormalMenuItem 
 	public override string GetName() { }
 
 	// RVA: 0x2D76690 Offset: 0x2D76791 VA: 0x2D76690 Slot: 27
+	public override string GetHelp() { }
+}
+
+// Namespace: 
+private class MainMenuSequence.DifficultySelectMenuSequence.Menu.HardMenuItem : MainMenuSequence.DifficultySelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13057
+{
+	// Methods
+
+	// RVA: 0x2D75D50 Offset: 0x2D75E51 VA: 0x2D75D50
+	public void .ctor() { }
+
+	// RVA: 0x2D75DB0 Offset: 0x2D75EB1 VA: 0x2D75DB0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D75E10 Offset: 0x2D75F11 VA: 0x2D75E10 Slot: 27
 	public override string GetHelp() { }
 }
 
@@ -472,6 +912,18 @@ private class MainMenuSequence.DifficultySelectMenuSequence.Menu.LunaticMenuItem
 
 	// RVA: 0x2D75F20 Offset: 0x2D76021 VA: 0x2D75F20 Slot: 27
 	public override string GetHelp() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.DifficultySelectMenuSequence.Menu.MenuContent : BasicMenuContent // TypeDefIndex: 13059
+{
+	// Methods
+
+	// RVA: 0x2D75FA0 Offset: 0x2D760A1 VA: 0x2D75FA0 Slot: 4
+	public override int GetMenuItemContentMax() { }
+
+	// RVA: 0x2D75FC0 Offset: 0x2D760C1 VA: 0x2D75FC0
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -497,6 +949,24 @@ public class MainMenuSequence.DifficultySelectMenuSequence.Menu.MenuItemContent 
 
 	// RVA: 0x2D765F0 Offset: 0x2D766F1 VA: 0x2D765F0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.DifficultySelectMenuSequence.Menu : BasicMenu // TypeDefIndex: 13061
+{
+	// Methods
+
+	// RVA: 0x1DD2370 Offset: 0x1DD2471 VA: 0x1DD2370 Slot: 32
+	public override int GetShowRowMax() { }
+
+	// RVA: 0x1DD2380 Offset: 0x1DD2481 VA: 0x1DD2380 Slot: 26
+	public override void OnClose() { }
+
+	// RVA: 0x1DD2390 Offset: 0x1DD2491 VA: 0x1DD2390
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicMenuContent menuContent) { }
+
+	// RVA: 0x1DD23A0 Offset: 0x1DD24A1 VA: 0x1DD23A0
+	public static void CreateMenuBind(ProcInst super, MainMenuSequence.DifficultySelectMenuSequence.Menu.MenuContent menuContent) { }
 }
 
 // Namespace: 
@@ -527,6 +997,27 @@ public class MainMenuSequence.DifficultySelectMenuSequence : MainMenuSequence.Me
 }
 
 // Namespace: 
+public abstract class MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuItem : BasicMenuItem // TypeDefIndex: 13063
+{
+	// Fields
+	private GameMode m_GameMode; // 0x64
+
+	// Methods
+
+	// RVA: 0x2D76740 Offset: 0x2D76841 VA: 0x2D76740
+	public void .ctor(GameMode gameMode) { }
+
+	// RVA: 0x2D769F0 Offset: 0x2D76AF1 VA: 0x2D769F0 Slot: 27
+	public virtual string GetHelp() { }
+
+	// RVA: 0x2D76A40 Offset: 0x2D76B41 VA: 0x2D76A40 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D76BB0 Offset: 0x2D76CB1 VA: 0x2D76BB0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.GameModeSelectMenuSequence.Menu.CasualMenuItem : MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13064
 {
 	// Methods
@@ -542,6 +1033,21 @@ private class MainMenuSequence.GameModeSelectMenuSequence.Menu.CasualMenuItem : 
 }
 
 // Namespace: 
+private class MainMenuSequence.GameModeSelectMenuSequence.Menu.ClassicMenuItem : MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13065
+{
+	// Methods
+
+	// RVA: 0x2D76850 Offset: 0x2D76951 VA: 0x2D76850
+	public void .ctor() { }
+
+	// RVA: 0x2D76880 Offset: 0x2D76981 VA: 0x2D76880 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D768E0 Offset: 0x2D769E1 VA: 0x2D768E0 Slot: 27
+	public override string GetHelp() { }
+}
+
+// Namespace: 
 public class MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuContent : BasicMenuContent // TypeDefIndex: 13066
 {
 	// Methods
@@ -550,6 +1056,31 @@ public class MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuContent : Basi
 	public override int GetMenuItemContentMax() { }
 
 	// RVA: 0x2D76980 Offset: 0x2D76A81 VA: 0x2D76980
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuItemContent : BasicMenuItemContent // TypeDefIndex: 13067
+{
+	// Fields
+	private TextMeshProUGUI m_NameText; // 0x48
+	private TextMeshProUGUI m_HelpText; // 0x50
+
+	// Methods
+
+	// RVA: 0x2D76C60 Offset: 0x2D76D61 VA: 0x2D76C60 Slot: 8
+	public override void Build(BasicMenuItem menuItem) { }
+
+	// RVA: 0x2D76E40 Offset: 0x2D76F41 VA: 0x2D76E40 Slot: 10
+	public override void BuildText() { }
+
+	// RVA: 0x2D76D90 Offset: 0x2D76E91 VA: 0x2D76D90
+	public void SetupByMenuItem(MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuItem menuItem) { }
+
+	// RVA: 0x2D76F80 Offset: 0x2D77081 VA: 0x2D76F80 Slot: 7
+	protected override void UpdateTextColor() { }
+
+	// RVA: 0x2D77010 Offset: 0x2D77111 VA: 0x2D77010
 	public void .ctor() { }
 }
 
@@ -569,6 +1100,33 @@ public class MainMenuSequence.GameModeSelectMenuSequence.Menu : BasicMenu // Typ
 
 	// RVA: 0x1DD29D0 Offset: 0x1DD2AD1 VA: 0x1DD29D0
 	public static void CreateMenuBind(ProcInst super, MainMenuSequence.GameModeSelectMenuSequence.Menu.MenuContent menuContent) { }
+}
+
+// Namespace: 
+public class MainMenuSequence.GameModeSelectMenuSequence : MainMenuSequence.MenuSequenceBase // TypeDefIndex: 13069
+{
+	// Methods
+
+	// RVA: 0x22334B0 Offset: 0x22335B1 VA: 0x22334B0 Slot: 18
+	protected override string GetLayoutPrefabPath() { }
+
+	// RVA: 0x2233500 Offset: 0x2233601 VA: 0x2233500 Slot: 20
+	protected override string GetTitleBarName() { }
+
+	// RVA: 0x2233580 Offset: 0x2233681 VA: 0x2233580 Slot: 21
+	protected override string GetTitleBarHelp() { }
+
+	// RVA: 0x22335D0 Offset: 0x22336D1 VA: 0x22335D0 Slot: 22
+	protected override string GetTitleBarKeyHelpId() { }
+
+	// RVA: 0x2233620 Offset: 0x2233721 VA: 0x2233620 Slot: 23
+	protected override void CreateMenuBind(ProcInst super) { }
+
+	// RVA: 0x22336C0 Offset: 0x22337C1 VA: 0x22336C0
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x2233750 Offset: 0x2233851 VA: 0x2233750
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -593,6 +1151,18 @@ public abstract class MainMenuSequence.GrowModeSelectMenuSequence.Menu.MenuItem 
 }
 
 // Namespace: 
+private class MainMenuSequence.GrowModeSelectMenuSequence.Menu.RandomMenuItem : MainMenuSequence.GrowModeSelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13071
+{
+	// Methods
+
+	// RVA: 0x2D777E0 Offset: 0x2D778E1 VA: 0x2D777E0
+	public void .ctor() { }
+
+	// RVA: 0x2D77810 Offset: 0x2D77911 VA: 0x2D77810 Slot: 4
+	public override string GetName() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.GrowModeSelectMenuSequence.Menu.FixedMenuItem : MainMenuSequence.GrowModeSelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13072
 {
 	// Methods
@@ -602,6 +1172,18 @@ private class MainMenuSequence.GrowModeSelectMenuSequence.Menu.FixedMenuItem : M
 
 	// RVA: 0x2D77080 Offset: 0x2D77181 VA: 0x2D77080 Slot: 4
 	public override string GetName() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.GrowModeSelectMenuSequence.Menu.MenuContent : BasicMenuContent // TypeDefIndex: 13073
+{
+	// Methods
+
+	// RVA: 0x2D770E0 Offset: 0x2D771E1 VA: 0x2D770E0 Slot: 4
+	public override int GetMenuItemContentMax() { }
+
+	// RVA: 0x2D77100 Offset: 0x2D77201 VA: 0x2D77100
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -627,6 +1209,24 @@ public class MainMenuSequence.GrowModeSelectMenuSequence.Menu.MenuItemContent : 
 
 	// RVA: 0x2D777D0 Offset: 0x2D778D1 VA: 0x2D777D0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.GrowModeSelectMenuSequence.Menu : BasicMenu // TypeDefIndex: 13075
+{
+	// Methods
+
+	// RVA: 0x1DD2C10 Offset: 0x1DD2D11 VA: 0x1DD2C10 Slot: 32
+	public override int GetShowRowMax() { }
+
+	// RVA: 0x1DD2C20 Offset: 0x1DD2D21 VA: 0x1DD2C20 Slot: 26
+	public override void OnClose() { }
+
+	// RVA: 0x1DD2C30 Offset: 0x1DD2D31 VA: 0x1DD2C30
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicMenuContent menuContent) { }
+
+	// RVA: 0x1DD2C40 Offset: 0x1DD2D41 VA: 0x1DD2C40
+	public static void CreateMenuBind(ProcInst super, MainMenuSequence.GrowModeSelectMenuSequence.Menu.MenuContent menuContent) { }
 }
 
 // Namespace: 
@@ -657,6 +1257,18 @@ public class MainMenuSequence.GrowModeSelectMenuSequence : MainMenuSequence.Menu
 }
 
 // Namespace: 
+public abstract class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuItem : BasicMenuItem // TypeDefIndex: 13077
+{
+	// Methods
+
+	// RVA: 0x2D799E0 Offset: 0x2D79AE1 VA: 0x2D799E0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D79A00 Offset: 0x2D79B01 VA: 0x2D79A00
+	protected void .ctor() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.YesMenuItem : MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13078
 {
 	// Methods
@@ -672,6 +1284,21 @@ private class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.YesMenuItem
 }
 
 // Namespace: 
+private class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.NoMenuItem : MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuItem // TypeDefIndex: 13079
+{
+	// Methods
+
+	// RVA: 0x2D79CC0 Offset: 0x2D79DC1 VA: 0x2D79CC0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D79D40 Offset: 0x2D79E41 VA: 0x2D79D40 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D79E20 Offset: 0x2D79F21 VA: 0x2D79E20
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuContent : BasicMenuContent // TypeDefIndex: 13080
 {
 	// Methods
@@ -680,6 +1307,30 @@ public class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuContent 
 	public override int GetMenuItemContentMax() { }
 
 	// RVA: 0x2D79970 Offset: 0x2D79A71 VA: 0x2D79970
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuItemContent : BasicMenuItemContent // TypeDefIndex: 13081
+{
+	// Fields
+	private TextMeshProUGUI m_NameText; // 0x48
+
+	// Methods
+
+	// RVA: 0x2D79A10 Offset: 0x2D79B11 VA: 0x2D79A10 Slot: 8
+	public override void Build(BasicMenuItem menuItem) { }
+
+	// RVA: 0x2D79B80 Offset: 0x2D79C81 VA: 0x2D79B80 Slot: 10
+	public override void BuildText() { }
+
+	// RVA: 0x2D79B10 Offset: 0x2D79C11 VA: 0x2D79B10
+	public void SetupByMenuItem(MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuItem menuItem) { }
+
+	// RVA: 0x2D79C60 Offset: 0x2D79D61 VA: 0x2D79C60 Slot: 7
+	protected override void UpdateTextColor() { }
+
+	// RVA: 0x2D79CB0 Offset: 0x2D79DB1 VA: 0x2D79CB0
 	public void .ctor() { }
 }
 
@@ -702,6 +1353,33 @@ public class MainMenuSequence.NetworkServiceSelectMenuSequence.Menu : BasicMenu 
 
 	// RVA: 0x1DD39B0 Offset: 0x1DD3AB1 VA: 0x1DD39B0
 	public static void CreateMenuBind(ProcInst super, MainMenuSequence.NetworkServiceSelectMenuSequence.Menu.MenuContent menuContent) { }
+}
+
+// Namespace: 
+public class MainMenuSequence.NetworkServiceSelectMenuSequence : MainMenuSequence.MenuSequenceBase // TypeDefIndex: 13083
+{
+	// Methods
+
+	// RVA: 0x2235400 Offset: 0x2235501 VA: 0x2235400 Slot: 18
+	protected override string GetLayoutPrefabPath() { }
+
+	// RVA: 0x2235450 Offset: 0x2235551 VA: 0x2235450 Slot: 20
+	protected override string GetTitleBarName() { }
+
+	// RVA: 0x22354D0 Offset: 0x22355D1 VA: 0x22354D0 Slot: 21
+	protected override string GetTitleBarHelp() { }
+
+	// RVA: 0x2235520 Offset: 0x2235621 VA: 0x2235520 Slot: 22
+	protected override string GetTitleBarKeyHelpId() { }
+
+	// RVA: 0x2235570 Offset: 0x2235671 VA: 0x2235570 Slot: 23
+	protected override void CreateMenuBind(ProcInst super) { }
+
+	// RVA: 0x2235610 Offset: 0x2235711 VA: 0x2235610
+	public static void CreateBind(ProcInst super) { }
+
+	// RVA: 0x22356A0 Offset: 0x22357A1 VA: 0x22356A0
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -754,6 +1432,27 @@ public class MainMenuSequence.PlayerGenderSelectMenuSequence : MainMenuSequence.
 }
 
 // Namespace: 
+private class MainMenuSequence.NameCheckDialogItemYes : BasicDialogItemYes // TypeDefIndex: 13085
+{
+	// Methods
+
+	// RVA: 0x22351E0 Offset: 0x22352E1 VA: 0x22351E0
+	public void .ctor() { }
+
+	// RVA: 0x22350D0 Offset: 0x22351D1 VA: 0x22350D0
+	public void .ctor(string text) { }
+
+	// RVA: 0x2235160 Offset: 0x2235261 VA: 0x2235160
+	protected void ToRename() { }
+
+	// RVA: 0x2235270 Offset: 0x2235371 VA: 0x2235270 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2235300 Offset: 0x2235401 VA: 0x2235300 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.NameCheckDialogItemNo : MainMenuSequence.NameCheckDialogItemYes // TypeDefIndex: 13086
 {
 	// Methods
@@ -763,6 +1462,21 @@ private class MainMenuSequence.NameCheckDialogItemNo : MainMenuSequence.NameChec
 
 	// RVA: 0x22350E0 Offset: 0x22351E1 VA: 0x22350E0 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+public abstract class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItem : BasicMenuItem // TypeDefIndex: 13087
+{
+	// Methods
+
+	// RVA: 0x2D7B260 Offset: 0x2D7B361 VA: 0x2D7B260 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D7B3A0 Offset: 0x2D7B4A1 VA: 0x2D7B3A0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D7AC90 Offset: 0x2D7AD91 VA: 0x2D7AC90
+	protected void .ctor() { }
 }
 
 // Namespace: 
@@ -778,6 +1492,18 @@ private class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MonthMenuIte
 
 	// RVA: 0x2D7B6E0 Offset: 0x2D7B7E1 VA: 0x2D7B6E0 Slot: 17
 	public override BasicMenu.Result KeyCall() { }
+}
+
+// Namespace: 
+private class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.DayMenuItem : MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItem // TypeDefIndex: 13089
+{
+	// Methods
+
+	// RVA: 0x2D7A3D0 Offset: 0x2D7A4D1 VA: 0x2D7A3D0 Slot: 17
+	public override BasicMenu.Result KeyCall() { }
+
+	// RVA: 0x2D7AC80 Offset: 0x2D7AD81 VA: 0x2D7AC80
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -806,6 +1532,31 @@ public class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuContent :
 }
 
 // Namespace: 
+public abstract class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItemContent : BasicMenuItemContent // TypeDefIndex: 13091
+{
+	// Fields
+	protected GameObject m_ValueFrameObject; // 0x48
+	protected TextMeshProUGUI m_ValueText; // 0x50
+
+	// Methods
+
+	// RVA: 0x2D7B4C0 Offset: 0x2D7B5C1 VA: 0x2D7B4C0
+	public GameObject GetValueFrameObject() { }
+
+	// RVA: 0x2D7B4D0 Offset: 0x2D7B5D1 VA: 0x2D7B4D0 Slot: 8
+	public override void Build(BasicMenuItem menuItem) { }
+
+	// RVA: 0x2D7B580 Offset: 0x2D7B681 VA: 0x2D7B580 Slot: 10
+	public override void BuildText() { }
+
+	// RVA: 0x2D7B690 Offset: 0x2D7B791 VA: 0x2D7B690 Slot: 16
+	public virtual void SetupByMenuItem(MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItem menuItem) { }
+
+	// RVA: 0x2D7ADC0 Offset: 0x2D7AEC1 VA: 0x2D7ADC0
+	protected void .ctor() { }
+}
+
+// Namespace: 
 public class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MonthMenuItemContent : MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItemContent // TypeDefIndex: 13092
 {
 	// Methods
@@ -814,6 +1565,18 @@ public class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MonthMenuItem
 	public override void SetupByMenuItem(MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItem menuItem) { }
 
 	// RVA: 0x2D7C140 Offset: 0x2D7C241 VA: 0x2D7C140
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.DayMenuItemContent : MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItemContent // TypeDefIndex: 13093
+{
+	// Methods
+
+	// RVA: 0x2D7ACA0 Offset: 0x2D7ADA1 VA: 0x2D7ACA0 Slot: 16
+	public override void SetupByMenuItem(MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu.MenuItem menuItem) { }
+
+	// RVA: 0x2D7ADB0 Offset: 0x2D7AEB1 VA: 0x2D7ADB0
 	public void .ctor() { }
 }
 
@@ -859,6 +1622,15 @@ public class MainMenuSequence.PlayerBirthdayInputMenuSequence.Menu : BasicMenu /
 }
 
 // Namespace: 
+private enum MainMenuSequence.PlayerBirthdayInputMenuSequence.LayoutType // TypeDefIndex: 13095
+{
+	// Fields
+	public int value__; // 0x0
+	public const MainMenuSequence.PlayerBirthdayInputMenuSequence.LayoutType JpChKorea = 0;
+	public const MainMenuSequence.PlayerBirthdayInputMenuSequence.LayoutType UsEuEtc = 1;
+}
+
+// Namespace: 
 public class MainMenuSequence.PlayerBirthdayInputMenuSequence : MainMenuSequence.MenuSequenceBase // TypeDefIndex: 13096
 {
 	// Methods
@@ -889,6 +1661,21 @@ public class MainMenuSequence.PlayerBirthdayInputMenuSequence : MainMenuSequence
 }
 
 // Namespace: 
+private class MainMenuSequence.FinalConfirmDialog.YesDialogItem : BasicDialogItemYes // TypeDefIndex: 13097
+{
+	// Methods
+
+	// RVA: 0x1DD27E0 Offset: 0x1DD28E1 VA: 0x1DD27E0
+	public void .ctor() { }
+
+	// RVA: 0x1DD2870 Offset: 0x1DD2971 VA: 0x1DD2870 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1DD28F0 Offset: 0x1DD29F1 VA: 0x1DD28F0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
 private class MainMenuSequence.FinalConfirmDialog.NoDialogItem : BasicDialogItemNo // TypeDefIndex: 13098
 {
 	// Methods
@@ -901,6 +1688,18 @@ private class MainMenuSequence.FinalConfirmDialog.NoDialogItem : BasicDialogItem
 
 	// RVA: 0x1DD2730 Offset: 0x1DD2831 VA: 0x1DD2730 Slot: 19
 	public override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
+private class MainMenuSequence.FinalConfirmDialog : YesNoDialog // TypeDefIndex: 13099
+{
+	// Methods
+
+	// RVA: 0x22332C0 Offset: 0x22333C1 VA: 0x22332C0
+	private void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent dialogContent) { }
+
+	// RVA: 0x22332D0 Offset: 0x22333D1 VA: 0x22332D0
+	public static void CreateBind(ProcInst super) { }
 }
 
 // Namespace: 
@@ -918,5 +1717,30 @@ private sealed class MainMenuSequence.<>c__DisplayClass67_0 // TypeDefIndex: 131
 
 	// RVA: 0x2231EC0 Offset: 0x2231FC1 VA: 0x2231EC0
 	internal void <CreateCharacter>b__0() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278A40 Offset: 0x278B41 VA: 0x278A40
+[Serializable]
+private sealed class MainMenuSequence.<>c // TypeDefIndex: 13101
+{
+	// Fields
+	public static readonly MainMenuSequence.<>c <>9; // 0x0
+	public static Action <>9__73_0; // 0x8
+	public static Action <>9__73_1; // 0x10
+
+	// Methods
+
+	// RVA: 0x2231CF0 Offset: 0x2231DF1 VA: 0x2231CF0
+	private static void .cctor() { }
+
+	// RVA: 0x2231D60 Offset: 0x2231E61 VA: 0x2231D60
+	public void .ctor() { }
+
+	// RVA: 0x2231D70 Offset: 0x2231E71 VA: 0x2231D70
+	internal void <InitCameraZoomInToPlayer>b__73_0() { }
+
+	// RVA: 0x2231E20 Offset: 0x2231F21 VA: 0x2231E20
+	internal void <InitCameraZoomInToPlayer>b__73_1() { }
 }
 

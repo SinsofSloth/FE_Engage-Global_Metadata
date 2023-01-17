@@ -1,4 +1,13 @@
 // Namespace: 
+private enum RelayReplayToTakeOverSequence.Label // TypeDefIndex: 12953
+{
+	// Fields
+	public int value__; // 0x0
+	public const RelayReplayToTakeOverSequence.Label SkipLoad = 0;
+	public const RelayReplayToTakeOverSequence.Label End = 1;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2788B0 Offset: 0x2789B1 VA: 0x2788B0
 [Serializable]
 private sealed class RelayReplayToTakeOverSequence.<>c // TypeDefIndex: 12954

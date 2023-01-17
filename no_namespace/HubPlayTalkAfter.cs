@@ -17,6 +17,31 @@ private class HubPlayTalkAfter.TalkGiftMenu : BasicMenuItem // TypeDefIndex: 107
 }
 
 // Namespace: 
+private class HubPlayTalkAfter.RelianceMenu : BasicMenuItem // TypeDefIndex: 10755
+{
+	// Fields
+	private HubAccess m_access; // 0x68
+	private bool m_relianceLevelUp; // 0x70
+
+	// Methods
+
+	// RVA: 0x1FB8660 Offset: 0x1FB8761 VA: 0x1FB8660
+	public void .ctor(HubAccess access, bool relianceLevelUp) { }
+
+	// RVA: 0x1FB86B0 Offset: 0x1FB87B1 VA: 0x1FB86B0 Slot: 10
+	public override void OnBuild() { }
+
+	// RVA: 0x1FB8750 Offset: 0x1FB8851 VA: 0x1FB8750 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1FB87D0 Offset: 0x1FB88D1 VA: 0x1FB87D0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1FB87F0 Offset: 0x1FB88F1 VA: 0x1FB87F0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class HubPlayTalkAfter.GodRelianceMenu : BasicMenuItem // TypeDefIndex: 10756
 {
 	// Fields
@@ -41,12 +66,45 @@ private class HubPlayTalkAfter.GodRelianceMenu : BasicMenuItem // TypeDefIndex: 
 }
 
 // Namespace: 
+private class HubPlayTalkAfter.RingMenu.YesItem : BasicDialogItemYes // TypeDefIndex: 10757
+{
+	// Methods
+
+	// RVA: 0x1DD01D0 Offset: 0x1DD02D1 VA: 0x1DD01D0
+	public void .ctor() { }
+
+	// RVA: 0x1DD0260 Offset: 0x1DD0361 VA: 0x1DD0260 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class HubPlayTalkAfter.RingMenu.NoItem : BasicDialogItemNo // TypeDefIndex: 10758
 {
 	// Methods
 
 	// RVA: 0x1DD0140 Offset: 0x1DD0241 VA: 0x1DD0140
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class HubPlayTalkAfter.RingMenu : BasicMenuItem // TypeDefIndex: 10759
+{
+	// Methods
+
+	// RVA: 0x35F2C20 Offset: 0x35F2D21 VA: 0x35F2C20
+	public void .ctor() { }
+
+	// RVA: 0x35F2C30 Offset: 0x35F2D31 VA: 0x35F2C30 Slot: 10
+	public override void OnBuild() { }
+
+	// RVA: 0x35F2CD0 Offset: 0x35F2DD1 VA: 0x35F2CD0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x35F2D50 Offset: 0x35F2E51 VA: 0x35F2D50 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x35F2D60 Offset: 0x35F2E61 VA: 0x35F2D60 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 
@@ -68,6 +126,45 @@ private class HubPlayTalkAfter.CookingMenu : BasicMenuItem // TypeDefIndex: 1076
 }
 
 // Namespace: 
+private class HubPlayTalkAfter.FishingMenu : BasicMenuItem // TypeDefIndex: 10761
+{
+	// Fields
+	private GameObject m_FishingTopMenu; // 0x68
+	private int m_PlayCount; // 0x70
+	private bool m_IsEnable; // 0x74
+	private Sprite m_gyotakuSprite; // 0x78
+
+	// Methods
+
+	// RVA: 0x1FB62C0 Offset: 0x1FB63C1 VA: 0x1FB62C0
+	public void .ctor() { }
+
+	// RVA: 0x1FB62D0 Offset: 0x1FB63D1 VA: 0x1FB62D0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1FB6350 Offset: 0x1FB6451 VA: 0x1FB6350 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1FB7830 Offset: 0x1FB7931 VA: 0x1FB7830 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1FB79D0 Offset: 0x1FB7AD1 VA: 0x1FB79D0 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x1FB7A10 Offset: 0x1FB7B11 VA: 0x1FB7A10 Slot: 13
+	public override void OnDeselect() { }
+
+	// RVA: 0x1FB7A50 Offset: 0x1FB7B51 VA: 0x1FB7A50 Slot: 15
+	public override void OnClose() { }
+
+	// RVA: 0x1FB7080 Offset: 0x1FB7181 VA: 0x1FB7080
+	private bool IsEnableFishing() { }
+
+	// RVA: 0x1FB7180 Offset: 0x1FB7281 VA: 0x1FB7180
+	private void SetTargetFish() { }
+}
+
+// Namespace: 
 private class HubPlayTalkAfter.FishingPictureBookMenu : BasicMenuItem // TypeDefIndex: 10762
 {
 	// Methods
@@ -82,6 +179,24 @@ private class HubPlayTalkAfter.FishingPictureBookMenu : BasicMenuItem // TypeDef
 	public override BasicMenuItem.Attribute BuildAttribute() { }
 
 	// RVA: 0x1FB7B80 Offset: 0x1FB7C81 VA: 0x1FB7B80 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class HubPlayTalkAfter.DragonRideMenu : BasicMenuItem // TypeDefIndex: 10763
+{
+	// Methods
+
+	// RVA: 0x1FB6090 Offset: 0x1FB6191 VA: 0x1FB6090
+	public void .ctor() { }
+
+	// RVA: 0x1FB60A0 Offset: 0x1FB61A1 VA: 0x1FB60A0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1FB6120 Offset: 0x1FB6221 VA: 0x1FB6120 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1FB6130 Offset: 0x1FB6231 VA: 0x1FB6130 Slot: 18
 	public override BasicMenu.Result ACall() { }
 }
 
@@ -104,6 +219,24 @@ private class HubPlayTalkAfter.MuscleMenu : BasicMenuItem // TypeDefIndex: 10764
 }
 
 // Namespace: 
+private class HubPlayTalkAfter.FleaMarketMenu : BasicMenuItem // TypeDefIndex: 10765
+{
+	// Methods
+
+	// RVA: 0x1FB7CE0 Offset: 0x1FB7DE1 VA: 0x1FB7CE0
+	public void .ctor() { }
+
+	// RVA: 0x1FB7CF0 Offset: 0x1FB7DF1 VA: 0x1FB7CF0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1FB7D70 Offset: 0x1FB7E71 VA: 0x1FB7D70 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1FB7D80 Offset: 0x1FB7E81 VA: 0x1FB7D80 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class HubPlayTalkAfter.FortuneTellingMenu : BasicMenuItem // TypeDefIndex: 10766
 {
 	// Methods
@@ -119,6 +252,35 @@ private class HubPlayTalkAfter.FortuneTellingMenu : BasicMenuItem // TypeDefInde
 
 	// RVA: 0x1FB7FB0 Offset: 0x1FB80B1 VA: 0x1FB7FB0 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class HubPlayTalkAfter.SelectListMenu : BasicMenu // TypeDefIndex: 10767
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x2950C0 Offset: 0x2951C1 VA: 0x2950C0
+	private static readonly BasicMenuSelect <CurrentMenuSelect>k__BackingField; // 0x0
+
+	// Properties
+	public static BasicMenuSelect CurrentMenuSelect { get; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C0FD0 Offset: 0x2C10D1 VA: 0x2C0FD0
+	// RVA: 0x35F2E90 Offset: 0x35F2F91 VA: 0x35F2E90
+	public static BasicMenuSelect get_CurrentMenuSelect() { }
+
+	// RVA: 0x35F2F00 Offset: 0x35F3001 VA: 0x35F2F00
+	protected void .ctor(List<BasicMenuItem> menuItemList, ProcInst super) { }
+
+	// RVA: 0x35F2F40 Offset: 0x35F3041 VA: 0x35F2F40 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x35F2F90 Offset: 0x35F3091 VA: 0x35F2F90
+	public static void CreateBind(ProcInst super, HubAccess access) { }
+
+	// RVA: 0x35F3660 Offset: 0x35F3761 VA: 0x35F3660
+	private static void .cctor() { }
 }
 
 // Namespace: 
@@ -139,6 +301,23 @@ public enum HubPlayTalkAfter.Label // TypeDefIndex: 10768
 	public const HubPlayTalkAfter.Label FleaMarket = 10;
 	public const HubPlayTalkAfter.Label FortuneTelling = 11;
 	public const HubPlayTalkAfter.Label End = 12;
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277250 Offset: 0x277351 VA: 0x277250
+private sealed class HubPlayTalkAfter.ReplacePerson.<>c__DisplayClass2_0 // TypeDefIndex: 10769
+{
+	// Fields
+	public GameObject locator; // 0x10
+	public HubPlayTalkAfter.ReplacePerson <>4__this; // 0x18
+
+	// Methods
+
+	// RVA: 0x1DCFF30 Offset: 0x1DD0031 VA: 0x1DCFF30
+	public void .ctor() { }
+
+	// RVA: 0x1DCFF40 Offset: 0x1DD0041 VA: 0x1DCFF40
+	internal void <SetupUnit>b__0(HubUnitController hubUnit) { }
 }
 
 // Namespace: 
@@ -190,5 +369,26 @@ private class HubPlayTalkAfter.ReplacePerson : ProcInst // TypeDefIndex: 10770
 
 	// RVA: 0x1FB9E90 Offset: 0x1FB9F91 VA: 0x1FB9E90
 	public void .ctor() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277260 Offset: 0x277361 VA: 0x277260
+[Serializable]
+private sealed class HubPlayTalkAfter.<>c // TypeDefIndex: 10771
+{
+	// Fields
+	public static readonly HubPlayTalkAfter.<>c <>9; // 0x0
+	public static ProcBoolMethod <>9__90_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x1FB5C30 Offset: 0x1FB5D31 VA: 0x1FB5C30
+	private static void .cctor() { }
+
+	// RVA: 0x1FB5CA0 Offset: 0x1FB5DA1 VA: 0x1FB5CA0
+	public void .ctor() { }
+
+	// RVA: 0x1FB5CB0 Offset: 0x1FB5DB1 VA: 0x1FB5CB0
+	internal bool <CreateBind>b__90_0() { }
 }
 

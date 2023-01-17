@@ -1,4 +1,15 @@
 // Namespace: 
+private struct XmlAtomicValue.Union // TypeDefIndex: 1957
+{
+	// Fields
+	public bool boolVal; // 0x0
+	public double dblVal; // 0x0
+	public long i64Val; // 0x0
+	public int i32Val; // 0x0
+	public DateTime dtVal; // 0x0
+}
+
+// Namespace: 
 private class XmlAtomicValue.NamespacePrefixForQName : IXmlNamespaceResolver // TypeDefIndex: 1958
 {
 	// Fields

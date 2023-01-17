@@ -1,4 +1,14 @@
 // Namespace: 
+public enum MapHeight.Layers // TypeDefIndex: 12025
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapHeight.Layers Under = 0;
+	public const MapHeight.Layers Over = 1;
+	public const MapHeight.Layers Num = 2;
+}
+
+// Namespace: 
 public class MapHeight.CellInfo // TypeDefIndex: 12026
 {
 	// Fields
@@ -40,6 +50,47 @@ public class MapHeight.CellInfo // TypeDefIndex: 12026
 }
 
 // Namespace: 
+public class MapHeight.CellMap // TypeDefIndex: 12027
+{
+	// Fields
+	private MapHeight.CellInfo[] m_Cells; // 0x10
+	private int m_LayerMaskA; // 0x18
+	private int m_LayerMaskB; // 0x1C
+
+	// Methods
+
+	// RVA: 0x1D43540 Offset: 0x1D43641 VA: 0x1D43540
+	public void .ctor(int layerMaskA, int layerMaskB) { }
+
+	// RVA: 0x1D43670 Offset: 0x1D43771 VA: 0x1D43670
+	public float GetX(int x, int index) { }
+
+	// RVA: 0x1D43720 Offset: 0x1D43821 VA: 0x1D43720
+	public float GetZ(int z, int index) { }
+
+	// RVA: 0x1D437D0 Offset: 0x1D438D1 VA: 0x1D437D0
+	public float GetHeight(int x, int z, int index) { }
+
+	// RVA: 0x1D43AC0 Offset: 0x1D43BC1 VA: 0x1D43AC0
+	public float GetMaxHeight(int x, int z) { }
+
+	// RVA: 0x1D440B0 Offset: 0x1D441B1 VA: 0x1D440B0
+	public float GetMinHeight(int x, int z) { }
+
+	// RVA: 0x1D446A0 Offset: 0x1D447A1 VA: 0x1D446A0
+	public MapHeight.CellInfo Get(int x, int z) { }
+
+	// RVA: 0x1D446E0 Offset: 0x1D447E1 VA: 0x1D446E0
+	public void Update(int x, int z) { }
+
+	// RVA: 0x1D44E90 Offset: 0x1D44F91 VA: 0x1D44E90
+	public bool IsLayerMask(int x, int z, int layerMask) { }
+
+	// RVA: 0x1D44F20 Offset: 0x1D45021 VA: 0x1D44F20
+	public void Clear() { }
+}
+
+// Namespace: 
 private enum MapHeight.Plane // TypeDefIndex: 12028
 {
 	// Fields
@@ -48,5 +99,18 @@ private enum MapHeight.Plane // TypeDefIndex: 12028
 	public const MapHeight.Plane Down = 1;
 	public const MapHeight.Plane Left = 2;
 	public const MapHeight.Plane Right = 3;
+}
+
+// Namespace: 
+private class MapHeight.EdgeIndex // TypeDefIndex: 12029
+{
+	// Fields
+	public int Index1; // 0x10
+	public int Index2; // 0x14
+
+	// Methods
+
+	// RVA: 0x1D44F80 Offset: 0x1D45081 VA: 0x1D44F80
+	public void .ctor() { }
 }
 

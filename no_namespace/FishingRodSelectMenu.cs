@@ -10,6 +10,24 @@ public enum FishingRodSelectMenu.Result2 // TypeDefIndex: 10610
 }
 
 // Namespace: 
+public sealed class FishingRodSelectMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 10611
+{
+	// Methods
+
+	// RVA: 0x22DCC00 Offset: 0x22DCD01 VA: 0x22DCC00
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x22DCC20 Offset: 0x22DCD21 VA: 0x22DCC20 Slot: 13
+	public virtual void Invoke(StickType result) { }
+
+	// RVA: 0x22DCE80 Offset: 0x22DCF81 VA: 0x22DCE80 Slot: 14
+	public virtual IAsyncResult BeginInvoke(StickType result, AsyncCallback callback, object object) { }
+
+	// RVA: 0x22DCF10 Offset: 0x22DD011 VA: 0x22DCF10 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class FishingRodSelectMenu.RodItem : BasicMenuItem // TypeDefIndex: 10612
 {
 	// Fields
@@ -51,6 +69,24 @@ private class FishingRodSelectMenu.RodItem : BasicMenuItem // TypeDefIndex: 1061
 }
 
 // Namespace: 
+private class FishingRodSelectMenu.RodAItem : FishingRodSelectMenu.RodItem // TypeDefIndex: 10613
+{
+	// Methods
+
+	// RVA: 0x22DCF20 Offset: 0x22DD021 VA: 0x22DCF20
+	public void .ctor(FishingRodSelectMenu.DecideEventHandler eventHandler, GameObject menuObj, Transform itemTrans, List<ForecastFishData> fishList) { }
+
+	// RVA: 0x22DD1E0 Offset: 0x22DD2E1 VA: 0x22DD1E0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x22DD1F0 Offset: 0x22DD2F1 VA: 0x22DD1F0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x22DD270 Offset: 0x22DD371 VA: 0x22DD270 Slot: 14
+	public override void OnCursorMoveEnd() { }
+}
+
+// Namespace: 
 private class FishingRodSelectMenu.RodBItem : FishingRodSelectMenu.RodItem // TypeDefIndex: 10614
 {
 	// Methods
@@ -65,6 +101,24 @@ private class FishingRodSelectMenu.RodBItem : FishingRodSelectMenu.RodItem // Ty
 	public override string GetName() { }
 
 	// RVA: 0x22DD5E0 Offset: 0x22DD6E1 VA: 0x22DD5E0 Slot: 14
+	public override void OnCursorMoveEnd() { }
+}
+
+// Namespace: 
+private class FishingRodSelectMenu.RodCItem : FishingRodSelectMenu.RodItem // TypeDefIndex: 10615
+{
+	// Methods
+
+	// RVA: 0x22DD720 Offset: 0x22DD821 VA: 0x22DD720
+	public void .ctor(FishingRodSelectMenu.DecideEventHandler eventHandler, GameObject menuObj, Transform itemTrans, List<ForecastFishData> fishList) { }
+
+	// RVA: 0x22DD8C0 Offset: 0x22DD9C1 VA: 0x22DD8C0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x22DD8D0 Offset: 0x22DD9D1 VA: 0x22DD8D0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x22DD950 Offset: 0x22DDA51 VA: 0x22DD950 Slot: 14
 	public override void OnCursorMoveEnd() { }
 }
 

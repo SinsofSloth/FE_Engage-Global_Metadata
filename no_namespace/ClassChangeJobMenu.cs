@@ -33,6 +33,21 @@ public class ClassChangeJobMenu.ClassChangeJobMenuItem : BasicMenuItem // TypeDe
 }
 
 // Namespace: 
+private class ClassChangeJobMenu.ConfirmDialog.ConfirmDialogItemYes : BasicDialogItemYes // TypeDefIndex: 13187
+{
+	// Fields
+	private Action ACallCallback; // 0x70
+
+	// Methods
+
+	// RVA: 0x1DC1300 Offset: 0x1DC1401 VA: 0x1DC1300
+	public void .ctor(string text, Action aCallCallback) { }
+
+	// RVA: 0x1DC1340 Offset: 0x1DC1441 VA: 0x1DC1340 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278AA0 Offset: 0x278BA1 VA: 0x278AA0
 private sealed class ClassChangeJobMenu.ConfirmDialog.<>c__DisplayClass1_0 // TypeDefIndex: 13188
 {
@@ -46,6 +61,21 @@ private sealed class ClassChangeJobMenu.ConfirmDialog.<>c__DisplayClass1_0 // Ty
 
 	// RVA: 0x1DC12F0 Offset: 0x1DC13F1 VA: 0x1DC12F0
 	internal void <CreateBind>b__0() { }
+}
+
+// Namespace: 
+private class ClassChangeJobMenu.ConfirmDialog : YesNoDialog // TypeDefIndex: 13189
+{
+	// Fields
+	private static ClassChange.ChangeJobData m_data; // 0x0
+
+	// Methods
+
+	// RVA: 0x1E06610 Offset: 0x1E06711 VA: 0x1E06610
+	public static void CreateBind(BasicMenu super, ClassChange.ChangeJobData data) { }
+
+	// RVA: 0x1E06AD0 Offset: 0x1E06BD1 VA: 0x1E06AD0
+	private void .ctor(List<BasicMenuItem> menuItemList) { }
 }
 
 // Namespace: 

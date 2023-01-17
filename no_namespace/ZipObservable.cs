@@ -1,4 +1,45 @@
 // Namespace: 
+private class ZipObservable.Zip.LeftZipObserver<TLeft, TRight, TResult> : IObserver<TLeft> // TypeDefIndex: 7151
+{
+	// Fields
+	private readonly ZipObservable.Zip<TLeft, TRight, TResult> parent; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(ZipObservable.Zip<TLeft, TRight, TResult> parent) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD51A0 Offset: 0x2AD52A1 VA: 0x2AD51A0
+	|-ZipObservable.Zip.LeftZipObserver<object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void OnNext(TLeft value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD51E0 Offset: 0x2AD52E1 VA: 0x2AD51E0
+	|-ZipObservable.Zip.LeftZipObserver<object, object, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void OnError(Exception ex) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD52F0 Offset: 0x2AD53F1 VA: 0x2AD52F0
+	|-ZipObservable.Zip.LeftZipObserver<object, object, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2AD53E0 Offset: 0x2AD54E1 VA: 0x2AD53E0
+	|-ZipObservable.Zip.LeftZipObserver<object, object, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
 private class ZipObservable.Zip.RightZipObserver<TLeft, TRight, TResult> : IObserver<TRight> // TypeDefIndex: 7152
 {
 	// Fields
@@ -36,6 +77,119 @@ private class ZipObservable.Zip.RightZipObserver<TLeft, TRight, TResult> : IObse
 	|
 	|-RVA: 0x2FFC690 Offset: 0x2FFC791 VA: 0x2FFC690
 	|-ZipObservable.Zip.RightZipObserver<object, object, object>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class ZipObservable.Zip<TLeft, TRight, TResult> : OperatorObserverBase<TResult, TResult> // TypeDefIndex: 7153
+{
+	// Fields
+	private readonly ZipObservable<TLeft, TRight, TResult> parent; // 0x0
+	private readonly object gate; // 0x0
+	private readonly Queue<TLeft> leftQ; // 0x0
+	private bool leftCompleted; // 0x0
+	private readonly Queue<TRight> rightQ; // 0x0
+	private bool rightCompleted; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(ZipObservable<TLeft, TRight, TResult> parent, IObserver<TResult> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DF110 Offset: 0x39DF211 VA: 0x39DF110
+	|-ZipObservable.Zip<object, object, object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DF270 Offset: 0x39DF371 VA: 0x39DF270
+	|-ZipObservable.Zip<object, object, object>.Run
+	*/
+
+	// RVA: -1 Offset: -1
+	private void Dequeue() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DF4D0 Offset: 0x39DF5D1 VA: 0x39DF4D0
+	|-ZipObservable.Zip<object, object, object>.Dequeue
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(TResult value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DF830 Offset: 0x39DF931 VA: 0x39DF830
+	|-ZipObservable.Zip<object, object, object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DF8E0 Offset: 0x39DF9E1 VA: 0x39DF8E0
+	|-ZipObservable.Zip<object, object, object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DFA20 Offset: 0x39DFB21 VA: 0x39DFA20
+	|-ZipObservable.Zip<object, object, object>.OnCompleted
+	*/
+
+	[CompilerGeneratedAttribute] // RVA: 0x183E0 Offset: 0x184E1 VA: 0x183E0
+	// RVA: -1 Offset: -1
+	private void <Run>b__7_0() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x39DFB50 Offset: 0x39DFC51 VA: 0x39DFB50
+	|-ZipObservable.Zip<object, object, object>.<Run>b__7_0
+	*/
+}
+
+// Namespace: 
+private class ZipObservable.Zip.ZipObserver<T> : IObserver<T> // TypeDefIndex: 7155
+{
+	// Fields
+	private readonly ZipObservable.Zip<T> parent; // 0x0
+	private readonly int index; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(ZipObservable.Zip<T> parent, int index) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3EF8DD0 Offset: 0x3EF8ED1 VA: 0x3EF8DD0
+	|-ZipObservable.Zip.ZipObserver<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 4
+	public void OnNext(T value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3EF8E20 Offset: 0x3EF8F21 VA: 0x3EF8E20
+	|-ZipObservable.Zip.ZipObserver<object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 5
+	public void OnError(Exception ex) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3EF8F60 Offset: 0x3EF9061 VA: 0x3EF8F60
+	|-ZipObservable.Zip.ZipObserver<object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 6
+	public void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x3EF9050 Offset: 0x3EF9151 VA: 0x3EF9050
+	|-ZipObservable.Zip.ZipObserver<object>.OnCompleted
 	*/
 }
 

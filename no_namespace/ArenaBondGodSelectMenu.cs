@@ -17,6 +17,24 @@ public sealed class ArenaBondGodSelectMenu.DecideEventHandler : MulticastDelegat
 }
 
 // Namespace: 
+public sealed class ArenaBondGodSelectMenu.SelectEventHandler : MulticastDelegate // TypeDefIndex: 10931
+{
+	// Methods
+
+	// RVA: 0x1F61CD0 Offset: 0x1F61DD1 VA: 0x1F61CD0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F61360 Offset: 0x1F61461 VA: 0x1F61360 Slot: 13
+	public virtual void Invoke(GodUnit god, RingCleaningSequence.GodType type) { }
+
+	// RVA: 0x1F61CF0 Offset: 0x1F61DF1 VA: 0x1F61CF0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(GodUnit god, RingCleaningSequence.GodType type, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F61D90 Offset: 0x1F61E91 VA: 0x1F61D90 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ArenaBondGodSelectMenu.ChangeUnitEventHandle : MulticastDelegate // TypeDefIndex: 10932
 {
 	// Methods
@@ -31,6 +49,24 @@ public sealed class ArenaBondGodSelectMenu.ChangeUnitEventHandle : MulticastDele
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F61B70 Offset: 0x1F61C71 VA: 0x1F61B70 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class ArenaBondGodSelectMenu.StartHelpEventHandler : MulticastDelegate // TypeDefIndex: 10933
+{
+	// Methods
+
+	// RVA: 0x1F61DA0 Offset: 0x1F61EA1 VA: 0x1F61DA0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F60D80 Offset: 0x1F60E81 VA: 0x1F60D80 Slot: 13
+	public virtual void Invoke(ProcInst super, GodData god, int bondLv) { }
+
+	// RVA: 0x1F61DC0 Offset: 0x1F61EC1 VA: 0x1F61DC0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProcInst super, GodData god, int bondLv, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F61E70 Offset: 0x1F61F71 VA: 0x1F61E70 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -127,11 +163,38 @@ public class ArenaBondGodSelectMenu.ArenaBondEmblemSelectMenuItem : BasicMenuIte
 }
 
 // Namespace: 
+private class ArenaBondGodSelectMenu.ConfirmDialog.ConfirmDialogItemYes : BasicDialogItemYes // TypeDefIndex: 10935
+{
+	// Fields
+	public Action m_DecideAction; // 0x70
+
+	// Methods
+
+	// RVA: 0x1DC0AC0 Offset: 0x1DC0BC1 VA: 0x1DC0AC0
+	public void .ctor(Action decideAction) { }
+
+	// RVA: 0x1DC0B70 Offset: 0x1DC0C71 VA: 0x1DC0B70 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class ArenaBondGodSelectMenu.ConfirmDialog.ConfirmDialogItemNo : BasicDialogItemNo // TypeDefIndex: 10936
 {
 	// Methods
 
 	// RVA: 0x1DC0A30 Offset: 0x1DC0B31 VA: 0x1DC0A30
 	public void .ctor() { }
+}
+
+// Namespace: 
+private class ArenaBondGodSelectMenu.ConfirmDialog : YesNoDialog // TypeDefIndex: 10937
+{
+	// Methods
+
+	// RVA: 0x1F60290 Offset: 0x1F60391 VA: 0x1F60290
+	public static void CreateBind(ProcInst super, Action decideAction) { }
+
+	// RVA: 0x1F61B80 Offset: 0x1F61C81 VA: 0x1F61B80
+	private void .ctor(List<BasicMenuItem> menuItemList) { }
 }
 

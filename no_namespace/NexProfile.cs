@@ -1,4 +1,16 @@
 // Namespace: 
+public enum NexProfile.Results // TypeDefIndex: 12737
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexProfile.Results Failed = 0;
+	public const NexProfile.Results FailedNotFound = 1;
+	public const NexProfile.Results FailedPermissionDenied = 2;
+	public const NexProfile.Results Cancelled = 3;
+	public const NexProfile.Results Succeeded = 4;
+}
+
+// Namespace: 
 private enum NexProfile.ServerSequence.Label // TypeDefIndex: 12738
 {
 	// Fields
@@ -11,6 +23,15 @@ private enum NexProfile.ServerSequence.Label // TypeDefIndex: 12738
 	public const NexProfile.ServerSequence.Label Succeeded = 5;
 	public const NexProfile.ServerSequence.Label Error = 6;
 	public const NexProfile.ServerSequence.Label End = 7;
+}
+
+// Namespace: 
+public enum NexProfile.ServerSequence.Mode // TypeDefIndex: 12739
+{
+	// Fields
+	public int value__; // 0x0
+	public const NexProfile.ServerSequence.Mode Upload = 0;
+	public const NexProfile.ServerSequence.Mode Download = 1;
 }
 
 // Namespace: 

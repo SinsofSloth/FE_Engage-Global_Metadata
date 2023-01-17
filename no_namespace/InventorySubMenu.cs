@@ -14,6 +14,24 @@ private abstract class InventorySubMenu.BaseMenuItem : BasicMenuItem // TypeDefI
 }
 
 // Namespace: 
+private class InventorySubMenu.StoreMenuItem : InventorySubMenu.BaseMenuItem // TypeDefIndex: 13207
+{
+	// Methods
+
+	// RVA: 0x2223730 Offset: 0x2223831 VA: 0x2223730 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x22237B0 Offset: 0x22238B1 VA: 0x22237B0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2223860 Offset: 0x2223961 VA: 0x2223860 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2223B20 Offset: 0x2223C21 VA: 0x2223B20
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class InventorySubMenu.ReceiveMenuItem : InventorySubMenu.BaseMenuItem // TypeDefIndex: 13208
 {
 	// Methods
@@ -28,6 +46,24 @@ private class InventorySubMenu.ReceiveMenuItem : InventorySubMenu.BaseMenuItem /
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x2223440 Offset: 0x2223541 VA: 0x2223440
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class InventorySubMenu.TradeMenuItem : InventorySubMenu.BaseMenuItem // TypeDefIndex: 13209
+{
+	// Methods
+
+	// RVA: 0x2224400 Offset: 0x2224501 VA: 0x2224400 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2224480 Offset: 0x2224581 VA: 0x2224480 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2224560 Offset: 0x2224661 VA: 0x2224560 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x22248E0 Offset: 0x22249E1 VA: 0x22248E0
 	public void .ctor() { }
 }
 
@@ -50,6 +86,24 @@ private class InventorySubMenu.EquipMenuItem : InventorySubMenu.BaseMenuItem // 
 }
 
 // Namespace: 
+private class InventorySubMenu.TakeOffMenuItem : InventorySubMenu.BaseMenuItem // TypeDefIndex: 13211
+{
+	// Methods
+
+	// RVA: 0x2223B30 Offset: 0x2223C31 VA: 0x2223B30 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2223BB0 Offset: 0x2223CB1 VA: 0x2223BB0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2223C70 Offset: 0x2223D71 VA: 0x2223C70 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2223D90 Offset: 0x2223E91 VA: 0x2223D90
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class InventorySubMenu.SortMenuItem : InventorySubMenu.BaseMenuItem // TypeDefIndex: 13212
 {
 	// Methods
@@ -68,6 +122,24 @@ private class InventorySubMenu.SortMenuItem : InventorySubMenu.BaseMenuItem // T
 }
 
 // Namespace: 
+public sealed class InventorySubMenu.UseMenuItem.ConfirmDialog.YesEventHandler : MulticastDelegate // TypeDefIndex: 13213
+{
+	// Methods
+
+	// RVA: 0x2D74E90 Offset: 0x2D74F91 VA: 0x2D74E90
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D74EB0 Offset: 0x2D74FB1 VA: 0x2D74EB0 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x2D750C0 Offset: 0x2D751C1 VA: 0x2D750C0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D750F0 Offset: 0x2D751F1 VA: 0x2D750F0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class InventorySubMenu.UseMenuItem.ConfirmDialog.YesMenuItem : BasicDialogItemYes // TypeDefIndex: 13214
 {
 	// Fields
@@ -80,6 +152,18 @@ private class InventorySubMenu.UseMenuItem.ConfirmDialog.YesMenuItem : BasicDial
 
 	// RVA: 0x2D751B0 Offset: 0x2D752B1 VA: 0x2D751B0 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class InventorySubMenu.UseMenuItem.ConfirmDialog : YesNoDialog // TypeDefIndex: 13215
+{
+	// Methods
+
+	// RVA: 0x1DD1370 Offset: 0x1DD1471 VA: 0x1DD1370
+	public static InventorySubMenu.UseMenuItem.ConfirmDialog CreateBind(ProcInst super, ItemData itemData, InventorySubMenu.UseMenuItem.ConfirmDialog.YesEventHandler yesEventHandler) { }
+
+	// RVA: 0x1DD15B0 Offset: 0x1DD16B1 VA: 0x1DD15B0
+	public void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent dialogContent) { }
 }
 
 // Namespace: 
@@ -107,6 +191,24 @@ private class InventorySubMenu.UseMenuItem : InventorySubMenu.BaseMenuItem // Ty
 }
 
 // Namespace: 
+public sealed class InventorySubMenu.ThrowAwayMenuItem.ConfirmDialog.DecideCallback : MulticastDelegate // TypeDefIndex: 13217
+{
+	// Methods
+
+	// RVA: 0x2D74E30 Offset: 0x2D74F31 VA: 0x2D74E30
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D74C20 Offset: 0x2D74D21 VA: 0x2D74C20 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x2D74E50 Offset: 0x2D74F51 VA: 0x2D74E50 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D74E80 Offset: 0x2D74F81 VA: 0x2D74E80 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class InventorySubMenu.ThrowAwayMenuItem.ConfirmDialog.ConfirmDialogItemYes : BasicDialogItemYes // TypeDefIndex: 13218
 {
 	// Fields
@@ -121,6 +223,18 @@ private class InventorySubMenu.ThrowAwayMenuItem.ConfirmDialog.ConfirmDialogItem
 
 	// RVA: 0x2D74C00 Offset: 0x2D74D01 VA: 0x2D74C00 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class InventorySubMenu.ThrowAwayMenuItem.ConfirmDialog : YesNoDialog // TypeDefIndex: 13219
+{
+	// Methods
+
+	// RVA: 0x1DD0CF0 Offset: 0x1DD0DF1 VA: 0x1DD0CF0
+	private void .ctor(List<BasicMenuItem> menuItemList) { }
+
+	// RVA: 0x1DD0D70 Offset: 0x1DD0E71 VA: 0x1DD0D70
+	public static void CreateBind(ProcInst super, Unit unit, int unitItemIndex, InventorySubMenu.ThrowAwayMenuItem.ConfirmDialog.DecideCallback decideCallback) { }
 }
 
 // Namespace: 

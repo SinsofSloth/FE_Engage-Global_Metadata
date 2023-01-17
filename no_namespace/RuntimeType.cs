@@ -1,4 +1,15 @@
 // Namespace: 
+internal enum RuntimeType.MemberListType // TypeDefIndex: 295
+{
+	// Fields
+	public int value__; // 0x0
+	public const RuntimeType.MemberListType All = 0;
+	public const RuntimeType.MemberListType CaseSensitive = 1;
+	public const RuntimeType.MemberListType CaseInsensitive = 2;
+	public const RuntimeType.MemberListType HandleToInfo = 3;
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x4708E0 Offset: 0x4709E1 VA: 0x4708E0
 private struct RuntimeType.ListBuilder<T> // TypeDefIndex: 296
 {

@@ -1,4 +1,14 @@
 // Namespace: 
+private enum ActionTransform.State // TypeDefIndex: 8441
+{
+	// Fields
+	public int value__; // 0x0
+	public const ActionTransform.State Begin = 0;
+	public const ActionTransform.State Transform = 1;
+	public const ActionTransform.State Finish = 2;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2733E0 Offset: 0x2734E1 VA: 0x2733E0
 private sealed class ActionTransform.<Transform>d__10 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 8442
 {

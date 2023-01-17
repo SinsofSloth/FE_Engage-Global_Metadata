@@ -38,6 +38,79 @@ private sealed class Hand.ProtrusionArray8.<GetEnumerator>d__22 : IEnumerator<Pr
 }
 
 // Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A3E0 Offset: 0x27A4E1 VA: 0x27A3E0
+public struct Hand.ProtrusionArray8 : IList<Protrusion>, ICollection<Protrusion>, IEnumerable<Protrusion>, IEnumerable // TypeDefIndex: 14579
+{
+	// Fields
+	private const int _Length = 8;
+	private Protrusion _value0; // 0x0
+	private Protrusion _value1; // 0x8
+	private Protrusion _value2; // 0x10
+	private Protrusion _value3; // 0x18
+	private Protrusion _value4; // 0x20
+	private Protrusion _value5; // 0x28
+	private Protrusion _value6; // 0x30
+	private Protrusion _value7; // 0x38
+
+	// Properties
+	public int Length { get; }
+	public Protrusion Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x1FA7900 Offset: 0x1FA7A01 VA: 0x1FA7900
+	public int get_Length() { }
+
+	// RVA: 0x1FA7910 Offset: 0x1FA7A11 VA: 0x1FA7910 Slot: 4
+	public Protrusion get_Item(int index) { }
+
+	// RVA: 0x1FA7A00 Offset: 0x1FA7B01 VA: 0x1FA7A00 Slot: 5
+	public void set_Item(int index, Protrusion value) { }
+
+	// RVA: 0x1FA7AE0 Offset: 0x1FA7BE1 VA: 0x1FA7AE0 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x1FA7AF0 Offset: 0x1FA7BF1 VA: 0x1FA7AF0 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x1FA7B00 Offset: 0x1FA7C01 VA: 0x1FA7B00 Slot: 13
+	public bool Contains(Protrusion item) { }
+
+	// RVA: 0x1FA7BD0 Offset: 0x1FA7CD1 VA: 0x1FA7BD0 Slot: 6
+	public int IndexOf(Protrusion item) { }
+
+	// RVA: 0x1FA7D10 Offset: 0x1FA7E11 VA: 0x1FA7D10 Slot: 14
+	public void CopyTo(Protrusion[] array, int arrayIndex) { }
+
+	// RVA: 0x1FA7EC0 Offset: 0x1FA7FC1 VA: 0x1FA7EC0 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D0E20 Offset: 0x2D0F21 VA: 0x2D0E20
+	// RVA: 0x1FA81D0 Offset: 0x1FA82D1 VA: 0x1FA81D0 Slot: 16
+	public IEnumerator<Protrusion> GetEnumerator() { }
+
+	// RVA: 0x1FA8250 Offset: 0x1FA8351 VA: 0x1FA8250 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x1FA82D0 Offset: 0x1FA83D1 VA: 0x1FA82D0 Slot: 11
+	public void Add(Protrusion item) { }
+
+	// RVA: 0x1FA8310 Offset: 0x1FA8411 VA: 0x1FA8310 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x1FA8350 Offset: 0x1FA8451 VA: 0x1FA8350 Slot: 7
+	public void Insert(int index, Protrusion item) { }
+
+	// RVA: 0x1FA8390 Offset: 0x1FA8491 VA: 0x1FA8390 Slot: 15
+	public bool Remove(Protrusion item) { }
+
+	// RVA: 0x1FA83D0 Offset: 0x1FA84D1 VA: 0x1FA83D0 Slot: 8
+	public void RemoveAt(int index) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x27A470 Offset: 0x27A571 VA: 0x27A470
 private sealed class Hand.Fingers.<GetEnumerator>d__19 : IEnumerator<Finger>, IEnumerator, IDisposable // TypeDefIndex: 14580
 {
@@ -74,5 +147,75 @@ private sealed class Hand.Fingers.<GetEnumerator>d__19 : IEnumerator<Finger>, IE
 	[DebuggerHiddenAttribute] // RVA: 0x2D0F90 Offset: 0x2D1091 VA: 0x2D0F90
 	// RVA: 0x1DCDB00 Offset: 0x1DCDC01 VA: 0x1DCDB00 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[DefaultMemberAttribute] // RVA: 0x27A430 Offset: 0x27A531 VA: 0x27A430
+public struct Hand.Fingers : IList<Finger>, ICollection<Finger>, IEnumerable<Finger>, IEnumerable // TypeDefIndex: 14581
+{
+	// Fields
+	private const int _Length = 5;
+	public Finger thumb; // 0x0
+	public Finger index; // 0x1C
+	public Finger middle; // 0x38
+	public Finger ring; // 0x54
+	public Finger little; // 0x70
+
+	// Properties
+	public int Length { get; }
+	public Finger Item { get; set; }
+	public int Count { get; }
+	public bool IsReadOnly { get; }
+
+	// Methods
+
+	// RVA: 0x1FA6BA0 Offset: 0x1FA6CA1 VA: 0x1FA6BA0
+	public int get_Length() { }
+
+	// RVA: 0x1FA6BB0 Offset: 0x1FA6CB1 VA: 0x1FA6BB0 Slot: 4
+	public Finger get_Item(int index) { }
+
+	// RVA: 0x1FA6C80 Offset: 0x1FA6D81 VA: 0x1FA6C80 Slot: 5
+	public void set_Item(int index, Finger value) { }
+
+	// RVA: 0x1FA6DA0 Offset: 0x1FA6EA1 VA: 0x1FA6DA0 Slot: 9
+	public int get_Count() { }
+
+	// RVA: 0x1FA6DB0 Offset: 0x1FA6EB1 VA: 0x1FA6DB0 Slot: 10
+	public bool get_IsReadOnly() { }
+
+	// RVA: 0x1FA6DC0 Offset: 0x1FA6EC1 VA: 0x1FA6DC0 Slot: 13
+	public bool Contains(Finger item) { }
+
+	// RVA: 0x1FA6FA0 Offset: 0x1FA70A1 VA: 0x1FA6FA0 Slot: 6
+	public int IndexOf(Finger item) { }
+
+	// RVA: 0x1FA71C0 Offset: 0x1FA72C1 VA: 0x1FA71C0 Slot: 14
+	public void CopyTo(Finger[] array, int arrayIndex) { }
+
+	// RVA: 0x1FA7430 Offset: 0x1FA7531 VA: 0x1FA7430 Slot: 3
+	public override string ToString() { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2D0EE0 Offset: 0x2D0FE1 VA: 0x2D0EE0
+	// RVA: 0x1FA76C0 Offset: 0x1FA77C1 VA: 0x1FA76C0 Slot: 16
+	public IEnumerator<Finger> GetEnumerator() { }
+
+	// RVA: 0x1FA7740 Offset: 0x1FA7841 VA: 0x1FA7740 Slot: 17
+	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+
+	// RVA: 0x1FA77C0 Offset: 0x1FA78C1 VA: 0x1FA77C0 Slot: 11
+	public void Add(Finger item) { }
+
+	// RVA: 0x1FA7800 Offset: 0x1FA7901 VA: 0x1FA7800 Slot: 12
+	public void Clear() { }
+
+	// RVA: 0x1FA7840 Offset: 0x1FA7941 VA: 0x1FA7840 Slot: 7
+	public void Insert(int index, Finger item) { }
+
+	// RVA: 0x1FA7880 Offset: 0x1FA7981 VA: 0x1FA7880 Slot: 15
+	public bool Remove(Finger item) { }
+
+	// RVA: 0x1FA78C0 Offset: 0x1FA79C1 VA: 0x1FA78C0 Slot: 8
+	public void RemoveAt(int index) { }
 }
 

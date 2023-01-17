@@ -10,6 +10,16 @@ public enum Matchmake.MatchmakeGeoIpResult // TypeDefIndex: 14956
 }
 
 // Namespace: 
+public enum Matchmake.MatchmakeSystemType // TypeDefIndex: 14957
+{
+	// Fields
+	public int value__; // 0x0
+	public const Matchmake.MatchmakeSystemType MATCHMAKE_SYSTEM_TYPE_INVALID = 0;
+	public const Matchmake.MatchmakeSystemType MATCHMAKE_SYSTEM_TYPE_ANYBODY = 1;
+	public const Matchmake.MatchmakeSystemType MATCHMAKE_SYSTEM_TYPE_PERSISTENT_GATHERING = 5;
+}
+
+// Namespace: 
 public enum Matchmake.MatchmakeSelectionMethod // TypeDefIndex: 14958
 {
 	// Fields
@@ -20,6 +30,21 @@ public enum Matchmake.MatchmakeSelectionMethod // TypeDefIndex: 14958
 	public const Matchmake.MatchmakeSelectionMethod MATCHMAKE_SELECTION_METHOD_PROGRESS_SCORE = 3;
 	public const Matchmake.MatchmakeSelectionMethod MATCHMAKE_SELECTION_METHOD_BROADEN_RANGE_WITH_PROGRESS_SCORE = 4;
 	public const Matchmake.MatchmakeSelectionMethod MATCHMAKE_SELECTION_METHOD_SCORE_BASED = 5;
+}
+
+// Namespace: 
+[FlagsAttribute] // RVA: 0x27AD10 Offset: 0x27AE11 VA: 0x27AD10
+public enum Matchmake.GatheringFlags // TypeDefIndex: 14959
+{
+	// Fields
+	public int value__; // 0x0
+	public const Matchmake.GatheringFlags Nothing = 0;
+	public const Matchmake.GatheringFlags MigrateOwner = 16;
+	public const Matchmake.GatheringFlags NoPersistentParticipation = 64;
+	public const Matchmake.GatheringFlags AllowNoParticipant = 128;
+	public const Matchmake.GatheringFlags ChangeOwnerByOtherHost = 512;
+	public const Matchmake.GatheringFlags NotifyParticipationEventsToAllParticipants = 1024;
+	public const Matchmake.GatheringFlags NotifyParticipationEventsToAllParticipantsReproducibly = 2048;
 }
 
 // Namespace: 
@@ -34,6 +59,16 @@ public enum Matchmake.MatchmakeSessionOption0 // TypeDefIndex: 14960
 }
 
 // Namespace: 
+public enum Matchmake.MatchmakeOption // TypeDefIndex: 14961
+{
+	// Fields
+	public int value__; // 0x0
+	public const Matchmake.MatchmakeOption MATCHMAKE_OPTION_NONE = 0;
+	public const Matchmake.MatchmakeOption MATCHMAKE_OPTION_RECORD_LAST_GID_FOR_PARTICIPATION_CHECK = 1;
+	public const Matchmake.MatchmakeOption MATCHMAKE_OPTION_RESERVED_1 = 2;
+}
+
+// Namespace: 
 public enum Matchmake.AutoMatchmakeOption // TypeDefIndex: 14962
 {
 	// Fields
@@ -41,6 +76,15 @@ public enum Matchmake.AutoMatchmakeOption // TypeDefIndex: 14962
 	public const Matchmake.AutoMatchmakeOption AUTO_MATCHMAKE_OPTION_NONE = 0;
 	public const Matchmake.AutoMatchmakeOption AUTO_MATCHMAKE_OPTION_RECORD_LAST_GID_FOR_PARTICIPATION_CHECK = 1;
 	public const Matchmake.AutoMatchmakeOption AUTO_MATCHMAKE_OPTION_UNIQUE_GATHERING_BY_CODEWORD = 2;
+}
+
+// Namespace: 
+public enum Matchmake.JoinMatchmakeSessionBehavior // TypeDefIndex: 14963
+{
+	// Fields
+	public int value__; // 0x0
+	public const Matchmake.JoinMatchmakeSessionBehavior JOIN_MATCHMAKE_SESSION_BEHAVIOR_JOIN_MYSELF = 0;
+	public const Matchmake.JoinMatchmakeSessionBehavior JOIN_MATCHMAKE_SESSION_BEHAVIOR_IM_ALREADY_JOINED = 1;
 }
 
 // Namespace: 
@@ -52,6 +96,16 @@ public enum Matchmake.FindMatchmakeSessionResultOption // TypeDefIndex: 14964
 	public const Matchmake.FindMatchmakeSessionResultOption FIND_MATCHMAKESESSION_RESULT_OPTION_NONE = 0;
 	public const Matchmake.FindMatchmakeSessionResultOption FIND_MATCHMAKESESSION_RESULT_OPTION_APPLICATION_BUFFER = 1;
 	public const Matchmake.FindMatchmakeSessionResultOption FIND_MATCHMAKESESSION_RESULT_OPTION_MATCHMAKE_PARAM = 2;
+}
+
+// Namespace: 
+public enum Matchmake.PersistentGatheringType // TypeDefIndex: 14965
+{
+	// Fields
+	public int value__; // 0x0
+	public const Matchmake.PersistentGatheringType Open = 0;
+	public const Matchmake.PersistentGatheringType PasswordLocked = 1;
+	public const Matchmake.PersistentGatheringType Official = 2;
 }
 
 // Namespace: 
@@ -76,5 +130,14 @@ public enum Matchmake.MatchmakeSessionModificationFlag // TypeDefIndex: 14966
 	public const Matchmake.MatchmakeSessionModificationFlag MATCHMAKE_SESSION_MODIFICATION_FLAG_MAX_PARTICIPANTS = 4096;
 	public const Matchmake.MatchmakeSessionModificationFlag MATCHMAKE_SESSION_MODIFICATION_FLAG_MATCHMAKE_SYSTEM_TYPE = 8192;
 	public const Matchmake.MatchmakeSessionModificationFlag MATCHMAKE_SESSION_MODIFICATION_FLAG_CODEWORD = 16384;
+}
+
+// Namespace: 
+public enum Matchmake.AnybodyParticipationPolicyArgument // TypeDefIndex: 14967
+{
+	// Fields
+	public int value__; // 0x0
+	public const Matchmake.AnybodyParticipationPolicyArgument WithoutClose = 0;
+	public const Matchmake.AnybodyParticipationPolicyArgument CloseOnOwnerMigration = 1;
 }
 

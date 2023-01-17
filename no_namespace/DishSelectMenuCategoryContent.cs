@@ -14,6 +14,20 @@ private enum DishSelectMenuCategoryContent.Category // TypeDefIndex: 14240
 }
 
 // Namespace: 
+[Serializable]
+private class DishSelectMenuCategoryContent.CategoryObject // TypeDefIndex: 14241
+{
+	// Fields
+	public GameObject m_Object; // 0x10
+	public DishSelectMenuCategoryContent.Category m_Category; // 0x18
+
+	// Methods
+
+	// RVA: 0x1EFFD90 Offset: 0x1EFFE91 VA: 0x1EFFD90
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x279870 Offset: 0x279971 VA: 0x279870
 private sealed class DishSelectMenuCategoryContent.<>c__DisplayClass11_0 // TypeDefIndex: 14242
 {

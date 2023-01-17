@@ -25,6 +25,18 @@ public enum GameUserData.Statuses // TypeDefIndex: 13608
 }
 
 // Namespace: 
+public class GameUserData.StatusField : BitFieldTemplate32<GameUserData.Statuses> // TypeDefIndex: 13609
+{
+	// Methods
+
+	// RVA: 0x22E9E50 Offset: 0x22E9F51 VA: 0x22E9E50 Slot: 5
+	protected override int ToInt(GameUserData.Statuses value) { }
+
+	// RVA: 0x22E9E60 Offset: 0x22E9F61 VA: 0x22E9E60
+	public void .ctor() { }
+}
+
+// Namespace: 
 public enum GameUserData.Sequences // TypeDefIndex: 13610
 {
 	// Fields
@@ -38,6 +50,19 @@ public enum GameUserData.Sequences // TypeDefIndex: 13610
 	public const GameUserData.Sequences Gmap = 6;
 	public const GameUserData.Sequences Chapter = 7;
 	public const GameUserData.Sequences Num = 8;
+}
+
+// Namespace: 
+public enum GameUserData.MapModes // TypeDefIndex: 13611
+{
+	// Fields
+	public int value__; // 0x0
+	public const GameUserData.MapModes Story = 0;
+	public const GameUserData.MapModes Encount = 1;
+	public const GameUserData.MapModes Challenge = 2;
+	public const GameUserData.MapModes Relay = 3;
+	public const GameUserData.MapModes Versus = 4;
+	public const GameUserData.MapModes Recollection = 5;
 }
 
 // Namespace: 

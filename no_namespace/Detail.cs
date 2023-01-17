@@ -37,6 +37,26 @@ public struct Detail.AsyncResultInt // TypeDefIndex: 14790
 }
 
 // Namespace: 
+public struct Detail.NotificationEventInt : Detail.IExchangeList<NotificationEvent> // TypeDefIndex: 14791
+{
+	// Fields
+	public ulong param1; // 0x0
+	public ulong param2; // 0x8
+	public uint type; // 0x10
+	public uint subType; // 0x14
+	public Detail.CppArray stringParam; // 0x18
+	public ulong pid; // 0x28
+
+	// Methods
+
+	// RVA: 0x1EF37D0 Offset: 0x1EF38D1 VA: 0x1EF37D0
+	public static NotificationEvent ExchangePtrToStruct(IntPtr src) { }
+
+	// RVA: 0x1EF3910 Offset: 0x1EF3A11 VA: 0x1EF3910 Slot: 4
+	public NotificationEvent ExchangeStruct() { }
+}
+
+// Namespace: 
 public static class Detail.Common // TypeDefIndex: 14792
 {
 	// Methods
@@ -88,6 +108,20 @@ public static class Detail.Common // TypeDefIndex: 14792
 
 	// RVA: 0x1E1C9E0 Offset: 0x1E1CAE1 VA: 0x1E1C9E0
 	public static void Callback(Detail.AsyncResultInt res, object callback) { }
+}
+
+// Namespace: 
+public interface Detail.IExchangeList<T> // TypeDefIndex: 14793
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract T ExchangeStruct();
+	/* GenericInstMethod :
+	|
+	|-RVA: -1 Offset: -1
+	|-Detail.IExchangeList<object>.ExchangeStruct
+	*/
 }
 
 // Namespace: 
@@ -377,6 +411,26 @@ public struct Detail.CppArray // TypeDefIndex: 14794
 }
 
 // Namespace: 
+private struct Detail.DataStore.DataStorePersistenceInfoInt : Detail.IExchangeList<DataStorePersistenceInfo> // TypeDefIndex: 14795
+{
+	// Fields
+	private ulong dataId; // 0x0
+	private ulong principalId; // 0x8
+	private ushort persistenceSlotId; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DC5A20 Offset: 0x1DC5B21 VA: 0x1DC5A20 Slot: 4
+	public DataStorePersistenceInfo ExchangeStruct() { }
+
+	// RVA: 0x1DC5AA0 Offset: 0x1DC5BA1 VA: 0x1DC5AA0
+	public static DataStorePersistenceInfo ExchangePtrToStruct(IntPtr src) { }
+
+	// RVA: 0x1DC5B90 Offset: 0x1DC5C91 VA: 0x1DC5B90
+	public void .ctor(DataStorePersistenceInfo param) { }
+}
+
+// Namespace: 
 private struct Detail.DataStore.DataStorePasswordInfoInt : Detail.IExchangeList<DataStorePasswordInfo> // TypeDefIndex: 14796
 {
 	// Fields
@@ -394,6 +448,22 @@ private struct Detail.DataStore.DataStorePasswordInfoInt : Detail.IExchangeList<
 
 	// RVA: 0x1DC59A0 Offset: 0x1DC5AA1 VA: 0x1DC59A0
 	public void .ctor(DataStorePasswordInfo param) { }
+}
+
+// Namespace: 
+private struct Detail.DataStore.DataStorePermissionInt : Detail.IExchangeList<DataStorePermission> // TypeDefIndex: 14797
+{
+	// Fields
+	private Detail.CppArray recipientIds; // 0x0
+	private uint permission; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DC5740 Offset: 0x1DC5841 VA: 0x1DC5740 Slot: 4
+	public DataStorePermission ExchangeStruct() { }
+
+	// RVA: 0x1DC4D00 Offset: 0x1DC4E01 VA: 0x1DC4D00
+	public void .ctor(List<IntPtr> useptr, DataStorePermission param) { }
 }
 
 // Namespace: 
@@ -428,6 +498,20 @@ private struct Detail.DataStore.DataStoreMetaInfoInt : Detail.IExchangeList<Data
 }
 
 // Namespace: 
+private struct Detail.DataStore.DataStoreSearchResultInt // TypeDefIndex: 14799
+{
+	// Fields
+	private Detail.CppArray result; // 0x0
+	private uint totalCount; // 0x10
+	private uint totalCountType; // 0x14
+
+	// Methods
+
+	// RVA: 0x1DC66C0 Offset: 0x1DC67C1 VA: 0x1DC66C0
+	public static DataStoreSearchResult ExchangePtrToStruct(IntPtr src) { }
+}
+
+// Namespace: 
 private struct Detail.DataStore.DataStoreRatingLogInt // TypeDefIndex: 14800
 {
 	// Fields
@@ -440,6 +524,19 @@ private struct Detail.DataStore.DataStoreRatingLogInt // TypeDefIndex: 14800
 
 	// RVA: 0x1DC6350 Offset: 0x1DC6451 VA: 0x1DC6350
 	public static DataStoreRatingLog ExchangePtrToStruct(IntPtr src) { }
+}
+
+// Namespace: 
+private struct Detail.DataStore.DataStorePersistenceInitParamInt // TypeDefIndex: 14801
+{
+	// Fields
+	private ushort persistenceSlotId; // 0x0
+	private byte deleteLastObject; // 0x2
+
+	// Methods
+
+	// RVA: 0x1DC5C10 Offset: 0x1DC5D11 VA: 0x1DC5C10
+	public void .ctor(DataStorePersistenceInitParam param) { }
 }
 
 // Namespace: 
@@ -463,6 +560,31 @@ private struct Detail.DataStore.DataStoreRatingInitParamInt // TypeDefIndex: 148
 }
 
 // Namespace: 
+private struct Detail.DataStore.DataStorePreparePostParamInt // TypeDefIndex: 14803
+{
+	// Fields
+	private Detail.DataStore.DataStorePermissionInt accessPermission; // 0x0
+	private Detail.DataStore.DataStorePermissionInt updatePermission; // 0x18
+	private Detail.DataStore.DataStorePersistenceInitParamInt persistenceInitParam; // 0x30
+	private Detail.CppArray name; // 0x38
+	private Detail.CppArray tags; // 0x48
+	private Detail.CppArray ratingInitParams; // 0x58
+	private Detail.CppArray meta; // 0x68
+	private uint size; // 0x78
+	private uint dataFlag; // 0x7C
+	private ushort dataType; // 0x80
+	private ushort period; // 0x82
+
+	// Methods
+
+	// RVA: 0x1DC5D70 Offset: 0x1DC5E71 VA: 0x1DC5D70
+	public void .ctor(List<IntPtr> useptr, DataStorePreparePostParam param, uint size) { }
+
+	// RVA: 0x1DC5DA0 Offset: 0x1DC5EA1 VA: 0x1DC5DA0
+	public void .ctor(List<IntPtr> useptr, DataStorePreparePostParam param) { }
+}
+
+// Namespace: 
 private struct Detail.DataStore.ResultRangeInt // TypeDefIndex: 14804
 {
 	// Fields
@@ -473,6 +595,34 @@ private struct Detail.DataStore.ResultRangeInt // TypeDefIndex: 14804
 
 	// RVA: 0x1DC6640 Offset: 0x1DC6741 VA: 0x1DC6640
 	public void .ctor(ResultRange param) { }
+}
+
+// Namespace: 
+private struct Detail.DataStore.DataStoreSearchParamInt // TypeDefIndex: 14805
+{
+	// Fields
+	private uint searchType; // 0x0
+	private uint ownerType; // 0x4
+	private Detail.CppArray ownerIds; // 0x8
+	private Detail.CppArray destinationIds; // 0x18
+	private NpDateTime createdAfter; // 0x28
+	private NpDateTime createdBefore; // 0x30
+	private NpDateTime updatedAfter; // 0x38
+	private NpDateTime updatedBefore; // 0x40
+	private uint sortOrderColumn; // 0x48
+	private uint sortOrder; // 0x4C
+	private Detail.DataStore.ResultRangeInt resultRange; // 0x50
+	private Detail.CppArray tags; // 0x58
+	private uint resultOption; // 0x68
+	private uint minimalRatingFrequency; // 0x6C
+	private int totalCountEnabled; // 0x70
+	private int useCache; // 0x74
+	private Detail.CppArray dataTypes; // 0x78
+
+	// Methods
+
+	// RVA: 0x1DC64C0 Offset: 0x1DC65C1 VA: 0x1DC64C0
+	public void .ctor(List<IntPtr> useptr, DataStoreSearchParam param) { }
 }
 
 // Namespace: 
@@ -489,6 +639,20 @@ private struct Detail.DataStore.DataStoreDeleteParamInt // TypeDefIndex: 14806
 }
 
 // Namespace: 
+private struct Detail.DataStore.DataStorePrepareUpdateParamInt // TypeDefIndex: 14807
+{
+	// Fields
+	private ulong dataId; // 0x0
+	private ulong updatePassword; // 0x8
+	private uint size; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DC6250 Offset: 0x1DC6351 VA: 0x1DC6250
+	public void .ctor(DataStorePrepareUpdateParam param) { }
+}
+
+// Namespace: 
 private struct Detail.DataStore.DataStorePersistenceTargetInt // TypeDefIndex: 14808
 {
 	// Fields
@@ -502,6 +666,21 @@ private struct Detail.DataStore.DataStorePersistenceTargetInt // TypeDefIndex: 1
 }
 
 // Namespace: 
+private struct Detail.DataStore.DataStorePrepareGetParamInt // TypeDefIndex: 14809
+{
+	// Fields
+	private ulong dataId; // 0x0
+	private ulong accessPassword; // 0x8
+	private Detail.DataStore.DataStorePersistenceTargetInt persistenceTarget; // 0x10
+	private int useDataId; // 0x20
+
+	// Methods
+
+	// RVA: 0x1DC5C90 Offset: 0x1DC5D91 VA: 0x1DC5C90
+	public void .ctor(DataStorePrepareGetParam param) { }
+}
+
+// Namespace: 
 private struct Detail.DataStore.DataStoreTouchObjectParamInt // TypeDefIndex: 14810
 {
 	// Fields
@@ -512,6 +691,22 @@ private struct Detail.DataStore.DataStoreTouchObjectParamInt // TypeDefIndex: 14
 
 	// RVA: 0x1DC67E0 Offset: 0x1DC68E1 VA: 0x1DC67E0
 	public void .ctor(DataStoreTouchObjectParam param) { }
+}
+
+// Namespace: 
+private struct Detail.DataStore.DataStoreGetMetaParamInt // TypeDefIndex: 14811
+{
+	// Fields
+	private ulong dataId; // 0x0
+	private ulong accessPassword; // 0x8
+	private Detail.DataStore.DataStorePersistenceTargetInt persistenceTarget; // 0x10
+	private uint resultOption; // 0x20
+	private int useDataId; // 0x24
+
+	// Methods
+
+	// RVA: 0x1DC5140 Offset: 0x1DC5241 VA: 0x1DC5140
+	public void .ctor(DataStoreGetMetaParam param) { }
 }
 
 // Namespace: 
@@ -535,6 +730,30 @@ private struct Detail.DataStore.DataStoreChangeMetaCompareParamInt // TypeDefInd
 }
 
 // Namespace: 
+private struct Detail.DataStore.DataStoreChangeMetaParamInt // TypeDefIndex: 14813
+{
+	// Fields
+	private Detail.DataStore.DataStorePermissionInt accessPermission; // 0x0
+	private Detail.DataStore.DataStorePermissionInt updatePermission; // 0x18
+	private Detail.CppArray name; // 0x30
+	private Detail.CppArray tags; // 0x40
+	private Detail.CppArray metaBinary; // 0x50
+	private Detail.DataStore.DataStoreChangeMetaCompareParamInt compareParam; // 0x60
+	private ulong dataId; // 0xD0
+	private ulong updatePassword; // 0xD8
+	private uint modifiesFlag; // 0xE0
+	private uint dataStatus; // 0xE4
+	private Detail.DataStore.DataStorePersistenceTargetInt persistenceTarget; // 0xE8
+	private ushort dataType; // 0xF8
+	private ushort period; // 0xFA
+
+	// Methods
+
+	// RVA: 0x1DC4DA0 Offset: 0x1DC4EA1 VA: 0x1DC4DA0
+	public void .ctor(List<IntPtr> useptr, DataStoreChangeMetaParam param) { }
+}
+
+// Namespace: 
 private struct Detail.DataStore.DataStoreRatingTargetInt // TypeDefIndex: 14814
 {
 	// Fields
@@ -545,6 +764,19 @@ private struct Detail.DataStore.DataStoreRatingTargetInt // TypeDefIndex: 14814
 
 	// RVA: 0x1DC6440 Offset: 0x1DC6541 VA: 0x1DC6440
 	public void .ctor(DataStoreRatingTarget param) { }
+}
+
+// Namespace: 
+private struct Detail.DataStore.DataStoreRateObjectParamInt // TypeDefIndex: 14815
+{
+	// Fields
+	private ulong accessPassword; // 0x0
+	private int ratingValue; // 0x8
+
+	// Methods
+
+	// RVA: 0x1DC62D0 Offset: 0x1DC63D1 VA: 0x1DC62D0
+	public void .ctor(DataStoreRateObjectParam param) { }
 }
 
 // Namespace: 
@@ -813,6 +1045,27 @@ public static class Detail.DataStore // TypeDefIndex: 14816
 }
 
 // Namespace: 
+public static class Detail.DataStoreDataCode // TypeDefIndex: 14817
+{
+	// Fields
+	private const int MAX_STRING = 15;
+
+	// Methods
+
+	// RVA: 0x1EF2DE0 Offset: 0x1EF2EE1 VA: 0x1EF2DE0
+	private static extern bool DataStoreDataCode_DataId2String(string key, ulong dataId, [In] [Out] StringBuilder sb) { }
+
+	// RVA: 0x1EF2E60 Offset: 0x1EF2F61 VA: 0x1EF2E60
+	public static bool DataId2String(string key, ulong dataId, out string str) { }
+
+	// RVA: 0x1EF2F50 Offset: 0x1EF3051 VA: 0x1EF2F50
+	private static extern bool DataStoreDataCode_String2DataId(string key, string str, ref ulong dataId) { }
+
+	// RVA: 0x1EF2FC0 Offset: 0x1EF30C1 VA: 0x1EF2FC0
+	public static bool String2DataId(string key, string str, ref ulong dataId) { }
+}
+
+// Namespace: 
 public static class Detail.NgsFacade // TypeDefIndex: 14818
 {
 	// Methods
@@ -846,6 +1099,30 @@ public static class Detail.NgsFacade // TypeDefIndex: 14818
 }
 
 // Namespace: 
+private struct Detail.Ranking.RankingRankDataInt : Detail.IExchangeList<RankingRankData> // TypeDefIndex: 14819
+{
+	// Fields
+	private ulong uniqueId; // 0x0
+	private uint category; // 0x8
+	private uint score; // 0xC
+	private ulong param; // 0x10
+	private NpDateTime updateTime; // 0x18
+	private Detail.CppArray commonData; // 0x20
+	private ulong principalId; // 0x30
+	private uint order; // 0x38
+	private byte group0; // 0x3C
+	private byte group1; // 0x3D
+
+	// Methods
+
+	// RVA: 0x1DC6E80 Offset: 0x1DC6F81 VA: 0x1DC6E80 Slot: 4
+	public RankingRankData ExchangeStruct() { }
+
+	// RVA: 0x1DC6FB0 Offset: 0x1DC70B1 VA: 0x1DC6FB0
+	public void .ctor(List<IntPtr> useptr, RankingRankData param) { }
+}
+
+// Namespace: 
 private struct Detail.Ranking.RankingResultInt : Detail.IExchangeList<RankingResult> // TypeDefIndex: 14820
 {
 	// Fields
@@ -863,6 +1140,27 @@ private struct Detail.Ranking.RankingResultInt : Detail.IExchangeList<RankingRes
 
 	// RVA: 0x1DC6BD0 Offset: 0x1DC6CD1 VA: 0x1DC6BD0
 	public void .ctor(List<IntPtr> useptr, RankingResult param) { }
+}
+
+// Namespace: 
+private struct Detail.Ranking.RankingCachedResultInt : Detail.IExchangeList<RankingCachedResult> // TypeDefIndex: 14821
+{
+	// Fields
+	public NpDateTime createdTime; // 0x0
+	public NpDateTime expiredTime; // 0x8
+	public Detail.Ranking.RankingResultInt rankingResult; // 0x10
+	public uint maxLength; // 0x30
+
+	// Methods
+
+	// RVA: 0x1DC6860 Offset: 0x1DC6961 VA: 0x1DC6860
+	public static RankingCachedResult ExchangePtrToStruct(IntPtr src) { }
+
+	// RVA: 0x1DC6930 Offset: 0x1DC6A31 VA: 0x1DC6930 Slot: 4
+	public RankingCachedResult ExchangeStruct() { }
+
+	// RVA: 0x1DC6B10 Offset: 0x1DC6C11 VA: 0x1DC6B10
+	public void .ctor(List<IntPtr> useptr, RankingCachedResult param) { }
 }
 
 // Namespace: 
@@ -884,6 +1182,23 @@ private struct Detail.Ranking.RankingScoreDataInt // TypeDefIndex: 14822
 }
 
 // Namespace: 
+private struct Detail.Ranking.RankingOrderParamInt // TypeDefIndex: 14823
+{
+	// Fields
+	private byte orderCalc; // 0x0
+	private byte groupIndex; // 0x1
+	private byte groupNum; // 0x2
+	private byte timeScope; // 0x3
+	private uint offset; // 0x4
+	private byte length; // 0x8
+
+	// Methods
+
+	// RVA: 0x1DC6DE0 Offset: 0x1DC6EE1 VA: 0x1DC6DE0
+	public void .ctor(RankingOrderParam param) { }
+}
+
+// Namespace: 
 private struct Detail.Ranking.RankingChangeAttributesParamInt // TypeDefIndex: 14824
 {
 	// Fields
@@ -896,6 +1211,120 @@ private struct Detail.Ranking.RankingChangeAttributesParamInt // TypeDefIndex: 1
 
 	// RVA: 0x1DC6D50 Offset: 0x1DC6E51 VA: 0x1DC6D50
 	public void .ctor(RankingChangeAttributesParam param) { }
+}
+
+// Namespace: 
+public static class Detail.Ranking // TypeDefIndex: 14825
+{
+	// Methods
+
+	// RVA: 0x1EF39C0 Offset: 0x1EF3AC1 VA: 0x1EF39C0
+	private static extern bool Ranking_UploadCommonDataAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray commonData, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF39E0 Offset: 0x1EF3AE1 VA: 0x1EF39E0
+	public static bool UploadCommonDataAsync(out uint asyncId, IntPtr pNgsFacade, List<byte> commonData, ulong nexUniqueId, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF3C10 Offset: 0x1EF3D11 VA: 0x1EF3C10
+	private static extern bool Ranking_DeleteCommonDataAsync(uint asyncId, IntPtr pNgsFacade, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF3C30 Offset: 0x1EF3D31 VA: 0x1EF3C30
+	public static bool DeleteCommonDataAsync(out uint asyncId, IntPtr pNgsFacade, ulong nexUniqueId, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF3D10 Offset: 0x1EF3E11 VA: 0x1EF3D10
+	private static extern bool Ranking_GetCommonDataAsync(uint asyncId, IntPtr pNgsFacade, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF3D30 Offset: 0x1EF3E31 VA: 0x1EF3D30
+	public static bool GetCommonDataAsync(out uint asyncId, IntPtr pNgsFacade, ulong nexUniqueId, int timeOut = 0, Ranking.GetCommonDataCB callback) { }
+
+	// RVA: 0x1EF3E10 Offset: 0x1EF3F11 VA: 0x1EF3E10
+	private static extern bool Ranking_UploadScoreAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.Ranking.RankingScoreDataInt scoreData, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF3E30 Offset: 0x1EF3F31 VA: 0x1EF3E30
+	public static bool UploadScoreAsync(out uint asyncId, IntPtr pNgsFacade, RankingScoreData scoreData, ulong nexUniqueId, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF3F30 Offset: 0x1EF4031 VA: 0x1EF3F30
+	private static extern bool Ranking_DeleteScoreAsync(uint asyncId, IntPtr pNgsFacade, int useCategory, uint category, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF3F50 Offset: 0x1EF4051 VA: 0x1EF3F50
+	public static bool DeleteScoreAsync(out uint asyncId, IntPtr pNgsFacade, bool useCategory, uint category, ulong nexUniqueId, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF4040 Offset: 0x1EF4141 VA: 0x1EF4040
+	private static extern bool Ranking_GetRankingAsync(uint asyncId, IntPtr pNgsFacade, uint rankingMode, uint category, ref Detail.Ranking.RankingOrderParamInt orderParam, ulong nexUniqueId, ulong principalId, int timeOut) { }
+
+	// RVA: 0x1EF4060 Offset: 0x1EF4161 VA: 0x1EF4060
+	public static bool GetRankingAsync(out uint asyncId, IntPtr pNgsFacade, Ranking.RankingMode rankingMode, uint category, RankingOrderParam orderParam, ulong nexUniqueId, ulong principalId, int timeOut = 0, Ranking.GetRankingCB callback) { }
+
+	// RVA: 0x1EF4180 Offset: 0x1EF4281 VA: 0x1EF4180
+	private static extern bool Ranking_GetRankingByPIDListAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray principalIdList, uint rankingMode, uint category, ref Detail.Ranking.RankingOrderParamInt orderParam, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF41A0 Offset: 0x1EF42A1 VA: 0x1EF41A0
+	public static bool GetRankingByPIDListAsync(out uint asyncId, IntPtr pNgsFacade, List<ulong> principalIdList, Ranking.RankingMode rankingMode, uint category, RankingOrderParam orderParam, ulong nexUniqueId, int timeOut = 0, Ranking.GetRankingCB callback) { }
+
+	// RVA: 0x1EF4400 Offset: 0x1EF4501 VA: 0x1EF4400
+	private static extern bool Ranking_GetRankingByUIDListAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray nexUniqueIdList, uint rankingMode, uint category, ref Detail.Ranking.RankingOrderParamInt orderParam, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF4420 Offset: 0x1EF4521 VA: 0x1EF4420
+	public static bool GetRankingByUIDListAsync(out uint asyncId, IntPtr pNgsFacade, List<ulong> nexUniqueIdList, Ranking.RankingMode rankingMode, uint category, RankingOrderParam orderParam, ulong nexUniqueId, int timeOut = 0, Ranking.GetRankingCB callback) { }
+
+	// RVA: 0x1EF4680 Offset: 0x1EF4781 VA: 0x1EF4680
+	private static extern bool Ranking_GetApproxOrderAsync(uint asyncId, IntPtr pNgsFacade, uint category, ref Detail.Ranking.RankingOrderParamInt orderParam, uint score, ulong nexUniqueId, ulong principalId, int timeOut) { }
+
+	// RVA: 0x1EF46A0 Offset: 0x1EF47A1 VA: 0x1EF46A0
+	public static bool GetApproxOrderAsync(out uint asyncId, IntPtr pNgsFacade, uint category, RankingOrderParam orderParam, uint score, ulong nexUniqueId, ulong principalId, int timeOut = 0, Ranking.GetApproxOrderCB callback) { }
+
+	// RVA: 0x1EF47C0 Offset: 0x1EF48C1 VA: 0x1EF47C0
+	private static extern bool Ranking_GetStatsAsync(uint asyncId, IntPtr pNgsFacade, uint category, ref Detail.Ranking.RankingOrderParamInt orderParam, uint flags, int timeOut) { }
+
+	// RVA: 0x1EF47E0 Offset: 0x1EF48E1 VA: 0x1EF47E0
+	public static bool GetStatsAsync(out uint asyncId, IntPtr pNgsFacade, uint category, RankingOrderParam orderParam, Ranking.StatsFlag flags, int timeOut = 0, Ranking.GetStatsCB callback) { }
+
+	// RVA: 0x1EF48F0 Offset: 0x1EF49F1 VA: 0x1EF48F0
+	private static extern bool Ranking_ChangeAttributesAsync(uint asyncId, IntPtr pNgsFacade, int useCategory, uint category, ref Detail.Ranking.RankingChangeAttributesParamInt changeParam, ulong nexUniqueId, int timeOut) { }
+
+	// RVA: 0x1EF4910 Offset: 0x1EF4A11 VA: 0x1EF4910
+	public static bool ChangeAttributesAsync(out uint asyncId, IntPtr pNgsFacade, bool useCategory, uint category, RankingChangeAttributesParam changeParam, ulong nexUniqueId, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF4A30 Offset: 0x1EF4B31 VA: 0x1EF4A30
+	private static extern bool Ranking_GetCachedTopXRankingAsync(uint asyncId, IntPtr pNgsFacade, uint category, ref Detail.Ranking.RankingOrderParamInt orderParam, int timeOut) { }
+
+	// RVA: 0x1EF4A50 Offset: 0x1EF4B51 VA: 0x1EF4A50
+	public static bool GetCachedTopXRankingAsync(out uint asyncId, IntPtr pNgsFacade, uint category, RankingOrderParam orderParam, int timeOut = 0, Ranking.GetCachedTopXRankingCB callback) { }
+
+	// RVA: 0x1EF4B50 Offset: 0x1EF4C51 VA: 0x1EF4B50
+	private static extern bool Ranking_GetCachedTopXRankingsAsync(uint asyncId, IntPtr pNgsFacade, int useOneRankingOrderParam, ref Detail.CppArray categories, ref Detail.CppArray orderParams, int timeOut) { }
+
+	// RVA: 0x1EF4B70 Offset: 0x1EF4C71 VA: 0x1EF4B70
+	public static bool GetCachedTopXRankingsAsync(out uint asyncId, IntPtr pNgsFacade, bool useOneRankingOrderParam, List<uint> categories, List<RankingOrderParam> orderParams, int timeOut = 0, Ranking.GetCachedTopXRankingsCB callback) { }
+
+	// RVA: 0x1EF4E10 Offset: 0x1EF4F11 VA: 0x1EF4E10
+	private static extern RankingCachedResult.LocalUpdateState Ranking_LocalUpdate(ref IntPtr pNewResult, ref Detail.Ranking.RankingCachedResultInt cachedResult, ref Detail.Ranking.RankingOrderParamInt orderParam, ref Detail.Ranking.RankingScoreDataInt scoreData, ulong pid, ulong nexUniqueId, ref NpDateTime utcCurrentTime, ref Detail.CppArray pCommonData) { }
+
+	// RVA: 0x1EF4E20 Offset: 0x1EF4F21 VA: 0x1EF4E20
+	public static RankingCachedResult.LocalUpdateState LocalUpdate(out RankingCachedResult newResult, RankingCachedResult result, RankingOrderParam orderParam, RankingScoreData scoreData, ulong pid, ulong nexUniqueId, NpDateTime utcCurrentTime, List<byte> pCommonData) { }
+
+	// RVA: 0x1EF5100 Offset: 0x1EF5201 VA: 0x1EF5100
+	private static extern void Ranking_DeleteCachedResult(IntPtr cachedResult) { }
+
+	// RVA: 0x1EF5110 Offset: 0x1EF5211 VA: 0x1EF5110
+	private static void Ranking_GetCommonDataResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF5260 Offset: 0x1EF5361 VA: 0x1EF5260
+	private static void Ranking_GetRankingResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF5360 Offset: 0x1EF5461 VA: 0x1EF5360
+	private static void Ranking_GetApproxOrderResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF5420 Offset: 0x1EF5521 VA: 0x1EF5420
+	private static void Ranking_GetStatsResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF5590 Offset: 0x1EF5691 VA: 0x1EF5590
+	private static void Ranking_GetCachedTopXRankingResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF5690 Offset: 0x1EF5791 VA: 0x1EF5690
+	private static void Ranking_GetCachedTopXRankingsResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF57E0 Offset: 0x1EF58E1 VA: 0x1EF57E0
+	public static void Callback(Detail.AsyncResultInt res, object callback) { }
 }
 
 // Namespace: 
@@ -918,6 +1347,23 @@ private struct Detail.Ranking2.Ranking2CommonDataInt // TypeDefIndex: 14826
 }
 
 // Namespace: 
+private struct Detail.Ranking2.Ranking2RankDataInt : Detail.IExchangeList<Ranking2RankData> // TypeDefIndex: 14827
+{
+	// Fields
+	private Detail.Ranking2.Ranking2CommonDataInt commonData; // 0x0
+	private ulong misc; // 0x20
+	private ulong nexUniqueId; // 0x28
+	private uint rank; // 0x30
+	private uint score; // 0x34
+	private ulong principalId; // 0x38
+
+	// Methods
+
+	// RVA: 0x1DC7A40 Offset: 0x1DC7B41 VA: 0x1DC7A40 Slot: 4
+	public Ranking2RankData ExchangeStruct() { }
+}
+
+// Namespace: 
 private struct Detail.Ranking2.Ranking2InfoInt // TypeDefIndex: 14828
 {
 	// Fields
@@ -930,6 +1376,26 @@ private struct Detail.Ranking2.Ranking2InfoInt // TypeDefIndex: 14828
 
 	// RVA: 0x1DC7910 Offset: 0x1DC7A11 VA: 0x1DC7910
 	public static Ranking2Info ExchangePtrToStruct(IntPtr src) { }
+}
+
+// Namespace: 
+private struct Detail.Ranking2.Ranking2CategorySettingInt // TypeDefIndex: 14829
+{
+	// Fields
+	private uint minScore; // 0x0
+	private uint maxScore; // 0x4
+	private ushort lowestRank; // 0x8
+	private byte maxSeasonsToGoBack; // 0xA
+	private byte resetMode; // 0xB
+	private byte resetHour; // 0xC
+	private byte resetDay; // 0xD
+	private ushort resetMonth; // 0xE
+	private byte scoreorder; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DC7260 Offset: 0x1DC7361 VA: 0x1DC7260
+	public static Ranking2CategorySetting ExchangePtrToStruct(IntPtr src) { }
 }
 
 // Namespace: 
@@ -965,6 +1431,20 @@ private struct Detail.Ranking2.Ranking2ChartInfoInt : Detail.IExchangeList<Ranki
 }
 
 // Namespace: 
+private struct Detail.Ranking2.Ranking2ScoreDataInt // TypeDefIndex: 14831
+{
+	// Fields
+	private uint category; // 0x0
+	private uint score; // 0x4
+	private ulong misc; // 0x8
+
+	// Methods
+
+	// RVA: 0x1DC7AF0 Offset: 0x1DC7BF1 VA: 0x1DC7AF0
+	public void .ctor(Ranking2ScoreData param) { }
+}
+
+// Namespace: 
 private struct Detail.Ranking2.Ranking2GetParamInt // TypeDefIndex: 14832
 {
 	// Fields
@@ -982,6 +1462,23 @@ private struct Detail.Ranking2.Ranking2GetParamInt // TypeDefIndex: 14832
 
 	// RVA: 0x1DC7860 Offset: 0x1DC7961 VA: 0x1DC7860
 	public void .ctor(List<IntPtr> useptr, Ranking2GetParam param) { }
+}
+
+// Namespace: 
+private struct Detail.Ranking2.Ranking2GetByListParamInt // TypeDefIndex: 14833
+{
+	// Fields
+	private uint category; // 0x0
+	private uint offset; // 0x4
+	private uint length; // 0x8
+	private uint optionFlags; // 0xC
+	private uint sortFlags; // 0x10
+	private byte numSeasonsToGoBack; // 0x14
+
+	// Methods
+
+	// RVA: 0x1DC77C0 Offset: 0x1DC78C1 VA: 0x1DC77C0
+	public void .ctor(List<IntPtr> useptr, Ranking2GetByListParam param) { }
 }
 
 // Namespace: 
@@ -1078,6 +1575,19 @@ public static class Detail.Ranking2 // TypeDefIndex: 14834
 }
 
 // Namespace: 
+private struct Detail.Screening.ScreeningContextInfoInt // TypeDefIndex: 14835
+{
+	// Fields
+	private Detail.CppArray key; // 0x0
+	private Detail.CppArray value; // 0x10
+
+	// Methods
+
+	// RVA: 0x1DC7B70 Offset: 0x1DC7C71 VA: 0x1DC7B70
+	public void .ctor(List<IntPtr> useptr, ScreeningContextInfo context) { }
+}
+
+// Namespace: 
 private struct Detail.Screening.ScreeningDataStoreContentParamInt // TypeDefIndex: 14836
 {
 	// Fields
@@ -1091,6 +1601,21 @@ private struct Detail.Screening.ScreeningDataStoreContentParamInt // TypeDefInde
 
 	// RVA: 0x1DC7C10 Offset: 0x1DC7D11 VA: 0x1DC7C10
 	public void .ctor(List<IntPtr> useptr, ScreeningDataStoreContentParam param) { }
+}
+
+// Namespace: 
+private struct Detail.Screening.ScreeningUgcViolationParamInt // TypeDefIndex: 14837
+{
+	// Fields
+	private uint category; // 0x0
+	private Detail.CppArray reason; // 0x8
+	private Detail.CppArray context; // 0x18
+	private ulong screenshotDataId; // 0x28
+
+	// Methods
+
+	// RVA: 0x1DC7CD0 Offset: 0x1DC7DD1 VA: 0x1DC7CD0
+	public void .ctor(List<IntPtr> useptr, ScreeningUgcViolationParam param) { }
 }
 
 // Namespace: 
@@ -1109,6 +1634,21 @@ public static class Detail.Screening // TypeDefIndex: 14838
 }
 
 // Namespace: 
+private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatJoinRoomResultInt // TypeDefIndex: 14839
+{
+	// Fields
+	private ulong roomId; // 0x0
+
+	// Methods
+
+	// RVA: 0x1DC7E90 Offset: 0x1DC7F91 VA: 0x1DC7E90
+	public void .ctor(SmartDeviceVoiceChatJoinRoomResult param) { }
+
+	// RVA: 0x1DC7F00 Offset: 0x1DC8001 VA: 0x1DC7F00
+	public static SmartDeviceVoiceChatJoinRoomResult ExchangePtrToStruct(IntPtr src) { }
+}
+
+// Namespace: 
 private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatShowAppPageResultInt // TypeDefIndex: 14840
 {
 	// Fields
@@ -1124,6 +1664,20 @@ private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatShowAppPageResult
 }
 
 // Namespace: 
+private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatJoinRoomParamInt // TypeDefIndex: 14841
+{
+	// Fields
+	private ulong sessionId; // 0x0
+	private uint gameMode; // 0x8
+	private uint channelId; // 0xC
+
+	// Methods
+
+	// RVA: 0x1DC7E10 Offset: 0x1DC7F11 VA: 0x1DC7E10
+	public void .ctor(SmartDeviceVoiceChatJoinRoomParam param) { }
+}
+
+// Namespace: 
 private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatLeaveRoomParamInt // TypeDefIndex: 14842
 {
 	// Fields
@@ -1136,6 +1690,19 @@ private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatLeaveRoomParamInt
 }
 
 // Namespace: 
+private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatChangeVoiceChatChannelParamInt // TypeDefIndex: 14843
+{
+	// Fields
+	private ulong roomId; // 0x0
+	private uint channelId; // 0x8
+
+	// Methods
+
+	// RVA: 0x1DC7D90 Offset: 0x1DC7E91 VA: 0x1DC7D90
+	public void .ctor(SmartDeviceVoiceChatChangeVoiceChatChannelParam param) { }
+}
+
+// Namespace: 
 private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatShowAppPageParamInt // TypeDefIndex: 14844
 {
 	// Fields
@@ -1145,6 +1712,60 @@ private struct Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatShowAppPageParamI
 
 	// RVA: 0x1DC8030 Offset: 0x1DC8131 VA: 0x1DC8030
 	public void .ctor(ref SmartDeviceVoiceChatShowAppPageParam param) { }
+}
+
+// Namespace: 
+public static class Detail.SmartDeviceVoiceChat // TypeDefIndex: 14845
+{
+	// Methods
+
+	// RVA: 0x1EF76A0 Offset: 0x1EF77A1 VA: 0x1EF76A0
+	private static extern bool SmartDeviceVoiceChat_ShowAppPageAsync(uint asyncId, ref Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatShowAppPageParamInt pParam) { }
+
+	// RVA: 0x1EF76C0 Offset: 0x1EF77C1 VA: 0x1EF76C0
+	public static bool ShowAppPageAsync(out uint asyncId, SmartDeviceVoiceChatShowAppPageParam param, SmartDeviceVoiceChat.ShowAppPageCB callback) { }
+
+	// RVA: 0x1EF77B0 Offset: 0x1EF78B1 VA: 0x1EF77B0
+	private static extern bool SmartDeviceVoiceChat_ChangeVoiceChatChannelAsync(uint asyncId, ref Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatChangeVoiceChatChannelParamInt pParam, int timeOut) { }
+
+	// RVA: 0x1EF77D0 Offset: 0x1EF78D1 VA: 0x1EF77D0
+	public static bool ChangeVoiceChatChannelAsync(out uint asyncId, SmartDeviceVoiceChatChangeVoiceChatChannelParam param, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF78C0 Offset: 0x1EF79C1 VA: 0x1EF78C0
+	private static extern bool SmartDeviceVoiceChat_GetAvailabilityAsync(uint asyncId, int timeOut) { }
+
+	// RVA: 0x1EF78E0 Offset: 0x1EF79E1 VA: 0x1EF78E0
+	public static bool GetAvailabilityAsync(out uint asyncId, int timeOut = 0, SmartDeviceVoiceChat.GetAvailabilityCB callback) { }
+
+	// RVA: 0x1EF79A0 Offset: 0x1EF7AA1 VA: 0x1EF79A0
+	private static extern bool SmartDeviceVoiceChat_JoinRoomAsync(uint asyncId, ref Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatJoinRoomParamInt pParam, int timeOut = 0) { }
+
+	// RVA: 0x1EF79C0 Offset: 0x1EF7AC1 VA: 0x1EF79C0
+	public static bool JoinRoomAsync(out uint asyncId, SmartDeviceVoiceChatJoinRoomParam param, int timeOut = 0, SmartDeviceVoiceChat.JoinRoomCB callback) { }
+
+	// RVA: 0x1EF7AB0 Offset: 0x1EF7BB1 VA: 0x1EF7AB0
+	private static extern bool SmartDeviceVoiceChat_LeaveRoomAsync(uint asyncId, ref Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatLeaveRoomParamInt pParam, int timeOut = 0) { }
+
+	// RVA: 0x1EF7AD0 Offset: 0x1EF7BD1 VA: 0x1EF7AD0
+	public static bool LeaveRoomAsync(out uint asyncId, SmartDeviceVoiceChatLeaveRoomParam param, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF7BC0 Offset: 0x1EF7CC1 VA: 0x1EF7BC0
+	private static extern bool SmartDeviceVoiceChat_LeaveRoom(ref Detail.SmartDeviceVoiceChat.SmartDeviceVoiceChatLeaveRoomParamInt pParam) { }
+
+	// RVA: 0x1EF7BE0 Offset: 0x1EF7CE1 VA: 0x1EF7BE0
+	public static bool LeaveRoom(SmartDeviceVoiceChatLeaveRoomParam param) { }
+
+	// RVA: 0x1EF7C20 Offset: 0x1EF7D21 VA: 0x1EF7C20
+	private static void SmartDeviceVoiceChat_GetAvailabilityResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF7CE0 Offset: 0x1EF7DE1 VA: 0x1EF7CE0
+	private static void SmartDeviceVoiceChat_JoinRoomResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF7DE0 Offset: 0x1EF7EE1 VA: 0x1EF7DE0
+	private static void SmartDeviceVoiceChat_ShowAppPageResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF7EE0 Offset: 0x1EF7FE1 VA: 0x1EF7EE0
+	public static void Callback(Detail.AsyncResultInt res, object callback) { }
 }
 
 // Namespace: 
@@ -1165,6 +1786,20 @@ private struct Detail.Subscriber.SubscriberContentInt : Detail.IExchangeList<Sub
 }
 
 // Namespace: 
+private struct Detail.Subscriber.SubscriberPostContentParamInt // TypeDefIndex: 14847
+{
+	// Fields
+	private Detail.CppArray topics; // 0x0
+	private Detail.CppArray contentBinary; // 0x10
+	private Detail.CppArray contentMessage; // 0x20
+
+	// Methods
+
+	// RVA: 0x1DC8420 Offset: 0x1DC8521 VA: 0x1DC8420
+	public void .ctor(List<IntPtr> useptr, SubscriberPostContentParam param) { }
+}
+
+// Namespace: 
 public struct Detail.Subscriber.SubscriberGetContentParamInt // TypeDefIndex: 14848
 {
 	// Fields
@@ -1180,6 +1815,23 @@ public struct Detail.Subscriber.SubscriberGetContentParamInt // TypeDefIndex: 14
 }
 
 // Namespace: 
+private struct Detail.Subscriber.SubscriberUserStatusInfoInt : Detail.IExchangeList<SubscriberUserStatusInfo> // TypeDefIndex: 14849
+{
+	// Fields
+	private Detail.CppArray keys; // 0x0
+	private Detail.CppArray values; // 0x10
+	private ulong pid; // 0x20
+
+	// Methods
+
+	// RVA: 0x1DC8500 Offset: 0x1DC8601 VA: 0x1DC8500
+	public static SubscriberUserStatusInfo ExchangePtrToStruct(IntPtr src) { }
+
+	// RVA: 0x1DC85C0 Offset: 0x1DC86C1 VA: 0x1DC85C0 Slot: 4
+	public SubscriberUserStatusInfo ExchangeStruct() { }
+}
+
+// Namespace: 
 private struct Detail.Subscriber.SubscriberUserStatusParamInt // TypeDefIndex: 14850
 {
 	// Fields
@@ -1190,6 +1842,105 @@ private struct Detail.Subscriber.SubscriberUserStatusParamInt // TypeDefIndex: 1
 
 	// RVA: 0x1DC8870 Offset: 0x1DC8971 VA: 0x1DC8870
 	public void .ctor(List<IntPtr> useptr, SubscriberUserStatusParam param) { }
+}
+
+// Namespace: 
+public static class Detail.Subscriber // TypeDefIndex: 14851
+{
+	// Methods
+
+	// RVA: 0x1EF8060 Offset: 0x1EF8161 VA: 0x1EF8060
+	private static List<List<SubscriberContent>> Exchange(IntPtr src) { }
+
+	// RVA: 0x1EF82A0 Offset: 0x1EF83A1 VA: 0x1EF82A0
+	private static extern bool Subscriber_PostContentAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.Subscriber.SubscriberPostContentParamInt pParam, int timeOut) { }
+
+	// RVA: 0x1EF82C0 Offset: 0x1EF83C1 VA: 0x1EF82C0
+	public static bool PostContentAsync(out uint asyncId, IntPtr pNgsFacade, SubscriberPostContentParam param, int timeOut = 0, Subscriber.PostContentCB callback) { }
+
+	// RVA: 0x1EF84E0 Offset: 0x1EF85E1 VA: 0x1EF84E0
+	private static extern bool Subscriber_GetContentAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.Subscriber.SubscriberGetContentParamInt pParam, int timeOut) { }
+
+	// RVA: 0x1EF8500 Offset: 0x1EF8601 VA: 0x1EF8500
+	public static bool GetContentAsync(out uint asyncId, IntPtr pNgsFacade, SubscriberGetContentParam param, int timeOut = 0, Subscriber.GetContentCB callback) { }
+
+	// RVA: 0x1EF8720 Offset: 0x1EF8821 VA: 0x1EF8720
+	private static extern bool Subscriber_GetContentsAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray pParam, int timeOut) { }
+
+	// RVA: 0x1EF8740 Offset: 0x1EF8841 VA: 0x1EF8740
+	public static bool GetContentAsync(out uint asyncId, IntPtr pNgsFacade, List<SubscriberGetContentParam> param, int timeOut = 0, Subscriber.GetContentsCB callback) { }
+
+	// RVA: 0x1EF89B0 Offset: 0x1EF8AB1 VA: 0x1EF89B0
+	private static extern bool Subscriber_DeleteContentAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray topics, ulong contentId, int timeOut) { }
+
+	// RVA: 0x1EF89D0 Offset: 0x1EF8AD1 VA: 0x1EF89D0
+	public static bool DeleteContentAsync(out uint asyncId, IntPtr pNgsFacade, List<uint> topics, ulong contentId, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF8C00 Offset: 0x1EF8D01 VA: 0x1EF8C00
+	private static extern bool Subscriber_GetFriendUserStatusesAsync(uint asyncId, IntPtr pNgsFacade, int timeOut) { }
+
+	// RVA: 0x1EF8C20 Offset: 0x1EF8D21 VA: 0x1EF8C20
+	public static bool GetFriendUserStatusesAsync(out uint asyncId, IntPtr pNgsFacade, int timeOut = 0, Subscriber.GetSubscriberUserStatusInfoCB callback) { }
+
+	// RVA: 0x1EF8CF0 Offset: 0x1EF8DF1 VA: 0x1EF8CF0
+	private static extern bool Subscriber_GetFriendUserStatusesWithKeyAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray keys, int timeOut) { }
+
+	// RVA: 0x1EF8D10 Offset: 0x1EF8E11 VA: 0x1EF8D10
+	public static bool GetFriendUserStatusesAsync(out uint asyncId, IntPtr pNgsFacade, List<byte> keys, int timeOut = 0, Subscriber.GetSubscriberUserStatusInfoCB callback) { }
+
+	// RVA: 0x1EF8F40 Offset: 0x1EF9041 VA: 0x1EF8F40
+	private static extern bool Subscriber_GetUserStatusesAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray users, ref Detail.CppArray keys, int timeOut) { }
+
+	// RVA: 0x1EF8F60 Offset: 0x1EF9061 VA: 0x1EF8F60
+	public static bool GetUserStatusesAsync(out uint asyncId, IntPtr pNgsFacade, List<ulong> users, List<byte> keys, int timeOut = 0, Subscriber.GetSubscriberUserStatusInfoCB callback) { }
+
+	// RVA: 0x1EF91C0 Offset: 0x1EF92C1 VA: 0x1EF91C0
+	private static extern bool Subscriber_UpdateUserStatusAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray param, int isNotify, int timeOut) { }
+
+	// RVA: 0x1EF91E0 Offset: 0x1EF92E1 VA: 0x1EF91E0
+	public static bool UpdateUserStatusAsync(out uint asyncId, IntPtr pNgsFacade, List<SubscriberUserStatusParam> param, bool isNotify, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EF9410 Offset: 0x1EF9511 VA: 0x1EF9410
+	private static extern bool Subscriber_GetFriendUserStatusesCacheMode(IntPtr pNgsFacade, ref int result) { }
+
+	// RVA: 0x1EF9430 Offset: 0x1EF9531 VA: 0x1EF9430
+	public static bool GetFriendUserStatusesCacheMode(IntPtr pNgsFacade, out bool result) { }
+
+	// RVA: 0x1EF9470 Offset: 0x1EF9571 VA: 0x1EF9470
+	private static extern bool Subscriber_GetFriendUserStatusesCacheLastResult(IntPtr pNgsFacade, ref Result result) { }
+
+	// RVA: 0x1EF9490 Offset: 0x1EF9591 VA: 0x1EF9490
+	public static bool GetFriendUserStatusesCacheLastResult(IntPtr pNgsFacade, out Result result) { }
+
+	// RVA: 0x1EF94B0 Offset: 0x1EF95B1 VA: 0x1EF94B0
+	private static extern bool Subscriber_GetFriendUserStatuses(IntPtr pNgsFacade, ref IntPtr infos, ref Result result) { }
+
+	// RVA: 0x1EF94D0 Offset: 0x1EF95D1 VA: 0x1EF94D0
+	public static bool GetFriendUserStatuses(IntPtr pNgsFacade, out List<SubscriberUserStatusInfo> infos, out Result result) { }
+
+	// RVA: 0x1EF9630 Offset: 0x1EF9731 VA: 0x1EF9630
+	private static extern bool Subscriber_GetFriendUserStatusesWithKey(IntPtr pNgsFacade, ref Detail.CppArray users, ref IntPtr infos, ref Result result) { }
+
+	// RVA: 0x1EF9650 Offset: 0x1EF9751 VA: 0x1EF9650
+	public static bool GetFriendUserStatuses(IntPtr pNgsFacade, List<ulong> users, out List<SubscriberUserStatusInfo> infos, out Result result) { }
+
+	// RVA: 0x1EF9620 Offset: 0x1EF9721 VA: 0x1EF9620
+	private static extern void Subscriber_DeleteSubscriberUserStatusInfo(IntPtr info) { }
+
+	// RVA: 0x1EF98F0 Offset: 0x1EF99F1 VA: 0x1EF98F0
+	private static void Subscriber_PostContentResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF99B0 Offset: 0x1EF9AB1 VA: 0x1EF99B0
+	private static void Subscriber_GetContentResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF9B00 Offset: 0x1EF9C01 VA: 0x1EF9B00
+	private static void Subscriber_GetContentsResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF9C10 Offset: 0x1EF9D11 VA: 0x1EF9C10
+	private static void Subscriber_UserStatusInfoResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EF9D60 Offset: 0x1EF9E61 VA: 0x1EF9D60
+	public static void Callback(Detail.AsyncResultInt res, object callback) { }
 }
 
 // Namespace: 
@@ -1214,10 +1965,95 @@ public class Detail.Util_UnmanagedManager // TypeDefIndex: 14852
 }
 
 // Namespace: 
+private struct Detail.Utility.UniqueIdInfoInt : Detail.IExchangeList<UniqueIdInfo> // TypeDefIndex: 14853
+{
+	// Fields
+	private ulong nexUniqueId; // 0x0
+	private ulong nexUniqueIdPassword; // 0x8
+
+	// Methods
+
+	// RVA: 0x1DC8910 Offset: 0x1DC8A11 VA: 0x1DC8910 Slot: 4
+	public UniqueIdInfo ExchangeStruct() { }
+
+	// RVA: 0x1DC8990 Offset: 0x1DC8A91 VA: 0x1DC8990
+	public static UniqueIdInfo ExchangePtrToStruct(IntPtr src) { }
+
+	// RVA: 0x1DC8A60 Offset: 0x1DC8B61 VA: 0x1DC8A60
+	public void .ctor(UniqueIdInfo param) { }
+}
+
+// Namespace: 
 private struct Detail.Utility.IntegerSettings // TypeDefIndex: 14854
 {
 	// Fields
 	public int value; // 0x0
 	public ushort key; // 0x4
+}
+
+// Namespace: 
+public static class Detail.Utility // TypeDefIndex: 14855
+{
+	// Methods
+
+	// RVA: 0x1EFA020 Offset: 0x1EFA121 VA: 0x1EFA020
+	private static extern bool Utility_AcquireNexUniqueIdAsync(uint asyncId, IntPtr pNgsFacade, int timeOut) { }
+
+	// RVA: 0x1EFA040 Offset: 0x1EFA141 VA: 0x1EFA040
+	public static bool AcquireNexUniqueIdAsync(out uint asyncId, IntPtr pNgsFacade, int timeOut = 0, Utility.AcquireNexUniqueIdCB callback) { }
+
+	// RVA: 0x1EFA110 Offset: 0x1EFA211 VA: 0x1EFA110
+	private static extern bool Utility_AcquireNexUniqueIdWithPasswordAsync(uint asyncId, IntPtr pNgsFacade, int timeOut) { }
+
+	// RVA: 0x1EFA130 Offset: 0x1EFA231 VA: 0x1EFA130
+	public static bool AcquireNexUniqueIdWithPasswordAsync(out uint asyncId, IntPtr pNgsFacade, int timeOut = 0, Utility.AcquireNexUniqueIdWithPasswordCB callback) { }
+
+	// RVA: 0x1EFA200 Offset: 0x1EFA301 VA: 0x1EFA200
+	private static extern bool Utility_AssociateNexUniqueIdWithMyPrincipalIdAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.Utility.UniqueIdInfoInt pParam, int timeOut) { }
+
+	// RVA: 0x1EFA220 Offset: 0x1EFA321 VA: 0x1EFA220
+	public static bool AssociateNexUniqueIdWithMyPrincipalIdAsync(out uint asyncId, IntPtr pNgsFacade, UniqueIdInfo param, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EFA320 Offset: 0x1EFA421 VA: 0x1EFA320
+	private static extern bool Utility_AssociateNexUniqueIdWithMyPrincipalIdListAsync(uint asyncId, IntPtr pNgsFacade, ref Detail.CppArray pParam, int timeOut) { }
+
+	// RVA: 0x1EFA340 Offset: 0x1EFA441 VA: 0x1EFA340
+	public static bool AssociateNexUniqueIdWithMyPrincipalIdAsync(out uint asyncId, IntPtr pNgsFacade, List<UniqueIdInfo> param, int timeOut = 0, AsyncResultCB callback) { }
+
+	// RVA: 0x1EFA5B0 Offset: 0x1EFA6B1 VA: 0x1EFA5B0
+	private static extern bool Utility_GetAssociatedNexUniqueIdWithMyPrincipalIdAsync(uint asyncId, IntPtr pNgsFacade, int timeOut) { }
+
+	// RVA: 0x1EFA5D0 Offset: 0x1EFA6D1 VA: 0x1EFA5D0
+	public static bool GetAssociatedNexUniqueIdWithMyPrincipalIdAsync(out uint asyncId, IntPtr pNgsFacade, int timeOut = 0, Utility.GetAssociatedNexUniqueIdWithMyPrincipalIdCB callback) { }
+
+	// RVA: 0x1EFA6A0 Offset: 0x1EFA7A1 VA: 0x1EFA6A0
+	private static extern bool Utility_GetAssociatedNexUniqueIdWithMyPrincipalIdListAsync(uint asyncId, IntPtr pNgsFacade, int timeOut) { }
+
+	// RVA: 0x1EFA6C0 Offset: 0x1EFA7C1 VA: 0x1EFA6C0
+	public static bool GetAssociatedNexUniqueIdWithMyPrincipalIdAsync(out uint asyncId, IntPtr pNgsFacade, int timeOut = 0, Utility.GetAssociatedNexUniqueIdWithMyPrincipalIdListCB callback) { }
+
+	// RVA: 0x1EFA790 Offset: 0x1EFA891 VA: 0x1EFA790
+	private static extern bool Utility_GetIntegerSettingsAsync(uint asyncId, IntPtr pNgsFacade, uint integerSettingIndex, int timeOut) { }
+
+	// RVA: 0x1EFA7B0 Offset: 0x1EFA8B1 VA: 0x1EFA7B0
+	public static bool GetIntegerSettingsAsync(out uint asyncId, IntPtr pNgsFacade, uint integerSettingIndex, int timeOut = 0, Utility.GetIntegerSettingsCB callback) { }
+
+	// RVA: 0x1EFA890 Offset: 0x1EFA991 VA: 0x1EFA890
+	private static void AcquireNexUniqueIdResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EFA950 Offset: 0x1EFAA51 VA: 0x1EFA950
+	private static void AcquireNexUniqueIdWithPasswordResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EFAA10 Offset: 0x1EFAB11 VA: 0x1EFAA10
+	private static void GetAssociatedNexUniqueIdWithMyPrincipalIdResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EFAAD0 Offset: 0x1EFABD1 VA: 0x1EFAAD0
+	private static void GetAssociatedNexUniqueIdWithMyPrincipalIdListResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EFAC20 Offset: 0x1EFAD21 VA: 0x1EFAC20
+	private static void GetIntegerSettingsResult(ref Detail.AsyncResultInt asyncResult, object callback) { }
+
+	// RVA: 0x1EFAEB0 Offset: 0x1EFAFB1 VA: 0x1EFAEB0
+	public static void Callback(Detail.AsyncResultInt res, object callback) { }
 }
 

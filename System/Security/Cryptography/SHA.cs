@@ -1,4 +1,17 @@
 // Namespace: System.Security.Cryptography
+[ComVisibleAttribute] // RVA: 0x4741A0 Offset: 0x4742A1 VA: 0x4741A0
+public abstract class SHA1 : HashAlgorithm // TypeDefIndex: 947
+{
+	// Methods
+
+	// RVA: 0x3608E30 Offset: 0x3608F31 VA: 0x3608E30
+	protected void .ctor() { }
+
+	// RVA: 0x3608E60 Offset: 0x3608F61 VA: 0x3608E60
+	public static SHA1 Create() { }
+}
+
+// Namespace: System.Security.Cryptography
 [ComVisibleAttribute] // RVA: 0x4741C0 Offset: 0x4742C1 VA: 0x4741C0
 public class SHA1Managed : SHA1 // TypeDefIndex: 948
 {
@@ -36,6 +49,19 @@ public class SHA1Managed : SHA1 // TypeDefIndex: 948
 
 	// RVA: 0x360B980 Offset: 0x360BA81 VA: 0x360B980
 	private static void SHAExpand(uint* x) { }
+}
+
+// Namespace: System.Security.Cryptography
+[ComVisibleAttribute] // RVA: 0x4741E0 Offset: 0x4742E1 VA: 0x4741E0
+public abstract class SHA256 : HashAlgorithm // TypeDefIndex: 949
+{
+	// Methods
+
+	// RVA: 0x360B9C0 Offset: 0x360BAC1 VA: 0x360B9C0
+	protected void .ctor() { }
+
+	// RVA: 0x360B9F0 Offset: 0x360BAF1 VA: 0x360B9F0
+	public static SHA256 Create() { }
 }
 
 // Namespace: System.Security.Cryptography
@@ -104,6 +130,19 @@ public class SHA256Managed : SHA256 // TypeDefIndex: 950
 }
 
 // Namespace: System.Security.Cryptography
+[ComVisibleAttribute] // RVA: 0x474220 Offset: 0x474321 VA: 0x474220
+public abstract class SHA384 : HashAlgorithm // TypeDefIndex: 951
+{
+	// Methods
+
+	// RVA: 0x360CE50 Offset: 0x360CF51 VA: 0x360CE50
+	protected void .ctor() { }
+
+	// RVA: 0x360CE80 Offset: 0x360CF81 VA: 0x360CE80
+	public static SHA384 Create() { }
+}
+
+// Namespace: System.Security.Cryptography
 [ComVisibleAttribute] // RVA: 0x474240 Offset: 0x474341 VA: 0x474240
 public class SHA384Managed : SHA384 // TypeDefIndex: 952
 {
@@ -166,6 +205,19 @@ public class SHA384Managed : SHA384 // TypeDefIndex: 952
 
 	// RVA: 0x360E280 Offset: 0x360E381 VA: 0x360E280
 	private static void .cctor() { }
+}
+
+// Namespace: System.Security.Cryptography
+[ComVisibleAttribute] // RVA: 0x474260 Offset: 0x474361 VA: 0x474260
+public abstract class SHA512 : HashAlgorithm // TypeDefIndex: 953
+{
+	// Methods
+
+	// RVA: 0x360E320 Offset: 0x360E421 VA: 0x360E320
+	protected void .ctor() { }
+
+	// RVA: 0x360E350 Offset: 0x360E451 VA: 0x360E350
+	public static SHA512 Create() { }
 }
 
 // Namespace: System.Security.Cryptography
@@ -271,5 +323,33 @@ internal class SHA1Internal // TypeDefIndex: 974
 
 	// RVA: 0x360A840 Offset: 0x360A941 VA: 0x360A840
 	internal void AddLength(ulong length, byte[] buffer, int position) { }
+}
+
+// Namespace: System.Security.Cryptography
+[ComVisibleAttribute] // RVA: 0x4743C0 Offset: 0x4744C1 VA: 0x4743C0
+public sealed class SHA1CryptoServiceProvider : SHA1 // TypeDefIndex: 975
+{
+	// Fields
+	private SHA1Internal sha; // 0x28
+
+	// Methods
+
+	// RVA: 0x3608F20 Offset: 0x3609021 VA: 0x3608F20
+	public void .ctor() { }
+
+	// RVA: 0x3609070 Offset: 0x3609171 VA: 0x3609070 Slot: 1
+	protected override void Finalize() { }
+
+	// RVA: 0x36090F0 Offset: 0x36091F1 VA: 0x36090F0 Slot: 15
+	protected override void Dispose(bool disposing) { }
+
+	// RVA: 0x3609100 Offset: 0x3609201 VA: 0x3609100 Slot: 17
+	protected override void HashCore(byte[] rgb, int ibStart, int cbSize) { }
+
+	// RVA: 0x3609220 Offset: 0x3609321 VA: 0x3609220 Slot: 18
+	protected override byte[] HashFinal() { }
+
+	// RVA: 0x3609540 Offset: 0x3609641 VA: 0x3609540 Slot: 16
+	public override void Initialize() { }
 }
 

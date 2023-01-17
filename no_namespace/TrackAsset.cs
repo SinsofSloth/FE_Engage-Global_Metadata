@@ -1,4 +1,21 @@
 // Namespace: 
+private struct TrackAsset.TransientBuildData // TypeDefIndex: 5647
+{
+	// Fields
+	public List<TrackAsset> trackList; // 0x0
+	public List<TimelineClip> clipList; // 0x8
+	public List<IMarker> markerList; // 0x10
+
+	// Methods
+
+	// RVA: 0x36B8CA0 Offset: 0x36B8DA1 VA: 0x36B8CA0
+	public static TrackAsset.TransientBuildData Create() { }
+
+	// RVA: 0x36B68E0 Offset: 0x36B69E1 VA: 0x36B68E0
+	public void Clear() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x56AD0 Offset: 0x56BD1 VA: 0x56AD0
 private sealed class TrackAsset.<get_outputs>d__65 : IEnumerable<PlayableBinding>, IEnumerable, IEnumerator<PlayableBinding>, IEnumerator, IDisposable // TypeDefIndex: 5648
 {
@@ -44,5 +61,26 @@ private sealed class TrackAsset.<get_outputs>d__65 : IEnumerable<PlayableBinding
 	[DebuggerHiddenAttribute] // RVA: 0x58190 Offset: 0x58291 VA: 0x58190
 	// RVA: 0x36BA590 Offset: 0x36BA691 VA: 0x36BA590 Slot: 5
 	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x56AE0 Offset: 0x56BE1 VA: 0x56AE0
+[Serializable]
+private sealed class TrackAsset.<>c // TypeDefIndex: 5649
+{
+	// Fields
+	public static readonly TrackAsset.<>c <>9; // 0x0
+	public static Comparison<TimelineClip> <>9__121_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x36BA0E0 Offset: 0x36BA1E1 VA: 0x36BA0E0
+	private static void .cctor() { }
+
+	// RVA: 0x36BA150 Offset: 0x36BA251 VA: 0x36BA150
+	public void .ctor() { }
+
+	// RVA: 0x36BA160 Offset: 0x36BA261 VA: 0x36BA160
+	internal int <SortClips>b__121_0(TimelineClip clip1, TimelineClip clip2) { }
 }
 

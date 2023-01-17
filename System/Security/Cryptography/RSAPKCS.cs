@@ -11,11 +11,29 @@ internal abstract class RSAPKCS1SignatureDescription : SignatureDescription // T
 }
 
 // Namespace: System.Security.Cryptography
+internal class RSAPKCS1SHA1SignatureDescription : RSAPKCS1SignatureDescription // TypeDefIndex: 957
+{
+	// Methods
+
+	// RVA: 0x3B6F110 Offset: 0x3B6F211 VA: 0x3B6F110
+	public void .ctor() { }
+}
+
+// Namespace: System.Security.Cryptography
 internal class RSAPKCS1SHA256SignatureDescription : RSAPKCS1SignatureDescription // TypeDefIndex: 958
 {
 	// Methods
 
 	// RVA: 0x3B6F270 Offset: 0x3B6F371 VA: 0x3B6F270
+	public void .ctor() { }
+}
+
+// Namespace: System.Security.Cryptography
+internal class RSAPKCS1SHA384SignatureDescription : RSAPKCS1SignatureDescription // TypeDefIndex: 959
+{
+	// Methods
+
+	// RVA: 0x3B6F2E0 Offset: 0x3B6F3E1 VA: 0x3B6F2E0
 	public void .ctor() { }
 }
 
@@ -35,6 +53,16 @@ public class RSAPKCS1SignatureDeformatter : AsymmetricSignatureDeformatter // Ty
 	// Methods
 
 	// RVA: 0x3B6F3C0 Offset: 0x3B6F4C1 VA: 0x3B6F3C0
+	public void .ctor() { }
+}
+
+// Namespace: System.Security.Cryptography
+[ComVisibleAttribute] // RVA: 0x4743A0 Offset: 0x4744A1 VA: 0x4743A0
+public class RSAPKCS1SignatureFormatter : AsymmetricSignatureFormatter // TypeDefIndex: 973
+{
+	// Methods
+
+	// RVA: 0x3B6F3D0 Offset: 0x3B6F4D1 VA: 0x3B6F3D0
 	public void .ctor() { }
 }
 

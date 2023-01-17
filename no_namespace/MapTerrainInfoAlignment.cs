@@ -1,4 +1,13 @@
 // Namespace: 
+public enum MapTerrainInfoAlignment.Type // TypeDefIndex: 12491
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapTerrainInfoAlignment.Type Left = 0;
+	public const MapTerrainInfoAlignment.Type Right = 1;
+}
+
+// Namespace: 
 private enum MapTerrainInfoAlignment.AlignMember.Type // TypeDefIndex: 12492
 {
 	// Fields
@@ -6,6 +15,37 @@ private enum MapTerrainInfoAlignment.AlignMember.Type // TypeDefIndex: 12492
 	public const MapTerrainInfoAlignment.AlignMember.Type Text = 0;
 	public const MapTerrainInfoAlignment.AlignMember.Type Value = 1;
 	public const MapTerrainInfoAlignment.AlignMember.Type Icon = 2;
+}
+
+// Namespace: 
+private class MapTerrainInfoAlignment.AlignMember // TypeDefIndex: 12493
+{
+	// Fields
+	private GameObject m_Root; // 0x10
+	private RectTransform m_RootRect; // 0x18
+	private TextMeshProUGUI m_RootText; // 0x20
+	private MapTerrainInfoAlignmentMember m_AlingMenber; // 0x28
+	private GameObject m_TitleObj; // 0x30
+	private RectTransform m_TitleRect; // 0x38
+	private TextMeshProUGUI m_TitleText; // 0x40
+	private GameObject m_ValueObj; // 0x48
+	private RectTransform m_ValueRect; // 0x50
+	private TextMeshProUGUI m_ValueText; // 0x58
+	private MapTerrainInfoAlignment.AlignMember.Type m_Type; // 0x60
+
+	// Methods
+
+	// RVA: 0x2144200 Offset: 0x2144301 VA: 0x2144200
+	public void .ctor(GameObject root) { }
+
+	// RVA: 0x2144580 Offset: 0x2144681 VA: 0x2144580
+	public bool IsActive() { }
+
+	// RVA: 0x2144620 Offset: 0x2144721 VA: 0x2144620
+	public void SetPosX(float posX) { }
+
+	// RVA: 0x21446E0 Offset: 0x21447E1 VA: 0x21446E0
+	public float Alignment(out float fixedWidth, float rate, float defaultWidth = 0) { }
 }
 
 // Namespace: 
@@ -65,5 +105,32 @@ private class MapTerrainInfoAlignment.AlignParent // TypeDefIndex: 12494
 
 	// RVA: 0x2144A60 Offset: 0x2144B61 VA: 0x2144A60
 	public Vector2 GetSize() { }
+}
+
+// Namespace: 
+private class MapTerrainInfoAlignment.InversionMember // TypeDefIndex: 12495
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x29A7B0 Offset: 0x29A8B1 VA: 0x29A7B0
+	private RectTransform <rectTransform>k__BackingField; // 0x10
+
+	// Properties
+	public RectTransform rectTransform { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C96A0 Offset: 0x2C97A1 VA: 0x2C96A0
+	// RVA: 0x2144A70 Offset: 0x2144B71 VA: 0x2144A70
+	public RectTransform get_rectTransform() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C96B0 Offset: 0x2C97B1 VA: 0x2C96B0
+	// RVA: 0x2144A80 Offset: 0x2144B81 VA: 0x2144A80
+	private void set_rectTransform(RectTransform value) { }
+
+	// RVA: 0x2144A90 Offset: 0x2144B91 VA: 0x2144A90
+	public void .ctor(GameObject root) { }
+
+	// RVA: 0x2144B60 Offset: 0x2144C61 VA: 0x2144B60
+	public void Inversion() { }
 }
 

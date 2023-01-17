@@ -1,4 +1,16 @@
 // Namespace: 
+[FlagsAttribute] // RVA: 0x276050 Offset: 0x276151 VA: 0x276050
+public enum FoodstuffData.Flags // TypeDefIndex: 9851
+{
+	// Fields
+	public int value__; // 0x0
+	public const FoodstuffData.Flags IsCategory = 1;
+	public const FoodstuffData.Flags AddToAnything = 2;
+	public const FoodstuffData.Flags NotAffect = 4;
+	public const FoodstuffData.Flags RaiseReliance = 8;
+}
+
+// Namespace: 
 public sealed class FoodstuffData.FlagField : BitFieldTemplate32<FoodstuffData.Flags> // TypeDefIndex: 9852
 {
 	// Methods
@@ -11,6 +23,23 @@ public sealed class FoodstuffData.FlagField : BitFieldTemplate32<FoodstuffData.F
 
 	// RVA: 0x22DEB90 Offset: 0x22DEC91 VA: 0x22DEB90 Slot: 5
 	protected override int ToInt(FoodstuffData.Flags value) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x276060 Offset: 0x276161 VA: 0x276060
+private sealed class FoodstuffData.<>c__DisplayClass29_0 // TypeDefIndex: 9853
+{
+	// Fields
+	public FoodstuffData <>4__this; // 0x10
+	public int count; // 0x18
+
+	// Methods
+
+	// RVA: 0x22DE9D0 Offset: 0x22DEAD1 VA: 0x22DE9D0
+	public void .ctor() { }
+
+	// RVA: 0x22DE9E0 Offset: 0x22DEAE1 VA: 0x22DE9E0
+	internal void <GetCountInventory>b__0(FoodstuffData foodstuff) { }
 }
 
 // Namespace: 

@@ -12,3 +12,12 @@ internal enum FrameData.Flags // TypeDefIndex: 3976
 	public const FrameData.Flags EffectivePlayStatePlaying = 32;
 }
 
+// Namespace: 
+public enum FrameData.EvaluationType // TypeDefIndex: 3977
+{
+	// Fields
+	public int value__; // 0x0
+	public const FrameData.EvaluationType Evaluate = 0;
+	public const FrameData.EvaluationType Playback = 1;
+}
+

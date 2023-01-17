@@ -17,6 +17,24 @@ public sealed class ReflectionMethodsCache.Raycast3DCallback : MulticastDelegate
 }
 
 // Namespace: 
+public sealed class ReflectionMethodsCache.RaycastAllCallback : MulticastDelegate // TypeDefIndex: 4361
+{
+	// Methods
+
+	// RVA: 0x1C00420 Offset: 0x1C00521 VA: 0x1C00420
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C00440 Offset: 0x1C00541 VA: 0x1C00440 Slot: 13
+	public virtual RaycastHit[] Invoke(Ray r, float f, int i) { }
+
+	// RVA: 0x1C00790 Offset: 0x1C00891 VA: 0x1C00790 Slot: 14
+	public virtual IAsyncResult BeginInvoke(Ray r, float f, int i, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C00880 Offset: 0x1C00981 VA: 0x1C00880 Slot: 15
+	public virtual RaycastHit[] EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ReflectionMethodsCache.GetRaycastNonAllocCallback : MulticastDelegate // TypeDefIndex: 4362
 {
 	// Methods
@@ -35,6 +53,24 @@ public sealed class ReflectionMethodsCache.GetRaycastNonAllocCallback : Multicas
 }
 
 // Namespace: 
+public sealed class ReflectionMethodsCache.Raycast2DCallback : MulticastDelegate // TypeDefIndex: 4363
+{
+	// Methods
+
+	// RVA: 0x1BFFAC0 Offset: 0x1BFFBC1 VA: 0x1BFFAC0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1BFFAE0 Offset: 0x1BFFBE1 VA: 0x1BFFAE0 Slot: 13
+	public virtual RaycastHit2D Invoke(Vector2 p1, Vector2 p2, float f, int i) { }
+
+	// RVA: 0x1BFFDE0 Offset: 0x1BFFEE1 VA: 0x1BFFDE0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(Vector2 p1, Vector2 p2, float f, int i, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1BFFEE0 Offset: 0x1BFFFE1 VA: 0x1BFFEE0 Slot: 15
+	public virtual RaycastHit2D EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ReflectionMethodsCache.GetRayIntersectionAllCallback : MulticastDelegate // TypeDefIndex: 4364
 {
 	// Methods
@@ -50,5 +86,23 @@ public sealed class ReflectionMethodsCache.GetRayIntersectionAllCallback : Multi
 
 	// RVA: 0x1BFF130 Offset: 0x1BFF231 VA: 0x1BFF130 Slot: 15
 	public virtual RaycastHit2D[] EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class ReflectionMethodsCache.GetRayIntersectionAllNonAllocCallback : MulticastDelegate // TypeDefIndex: 4365
+{
+	// Methods
+
+	// RVA: 0x1BFF140 Offset: 0x1BFF241 VA: 0x1BFF140
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1BFF160 Offset: 0x1BFF261 VA: 0x1BFF160 Slot: 13
+	public virtual int Invoke(Ray r, RaycastHit2D[] results, float f, int i) { }
+
+	// RVA: 0x1BFF4D0 Offset: 0x1BFF5D1 VA: 0x1BFF4D0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(Ray r, RaycastHit2D[] results, float f, int i, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1BFF5D0 Offset: 0x1BFF6D1 VA: 0x1BFF5D0 Slot: 15
+	public virtual int EndInvoke(IAsyncResult result) { }
 }
 

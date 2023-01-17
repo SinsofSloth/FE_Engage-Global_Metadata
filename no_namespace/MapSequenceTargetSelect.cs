@@ -1,4 +1,12 @@
 // Namespace: 
+public enum MapSequenceTargetSelect.Label // TypeDefIndex: 12451
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapSequenceTargetSelect.Label End = 0;
+}
+
+// Namespace: 
 private enum MapSequenceTargetSelect.InfoType // TypeDefIndex: 12452
 {
 	// Fields

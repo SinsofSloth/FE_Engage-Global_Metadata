@@ -14,11 +14,31 @@ public enum TutorialData.Types // TypeDefIndex: 10106
 }
 
 // Namespace: 
+public enum TutorialData.Notices // TypeDefIndex: 10107
+{
+	// Fields
+	public int value__; // 0x0
+	public const TutorialData.Notices Normal = 0;
+	public const TutorialData.Notices Silent = 1;
+	public const TutorialData.Notices Forced = 2;
+}
+
+// Namespace: 
 public enum TutorialData.SSTypes // TypeDefIndex: 10108
 {
 	// Fields
 	public int value__; // 0x0
 	public const TutorialData.SSTypes Common = 0;
 	public const TutorialData.SSTypes ByLanguage = 1;
+}
+
+// Namespace: 
+public enum TutorialData.Flags // TypeDefIndex: 10109
+{
+	// Fields
+	public int value__; // 0x0
+	public const TutorialData.Flags Lock = 0;
+	public const TutorialData.Flags Unlock = 1;
+	public const TutorialData.Flags Read = 2;
 }
 

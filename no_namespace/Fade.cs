@@ -11,6 +11,24 @@ public enum Fade.Layer // TypeDefIndex: 13830
 }
 
 // Namespace: 
+public class Fade.LayerScope : IDisposable // TypeDefIndex: 13831
+{
+	// Fields
+	private Fade.Layer m_Layer; // 0x10
+
+	// Methods
+
+	// RVA: 0x22D95B0 Offset: 0x22D96B1 VA: 0x22D95B0
+	public void .ctor(Fade.Layer layer) { }
+
+	// RVA: 0x22D9650 Offset: 0x22D9751 VA: 0x22D9650 Slot: 1
+	protected override void Finalize() { }
+
+	// RVA: 0x22D9710 Offset: 0x22D9811 VA: 0x22D9710 Slot: 4
+	public void Dispose() { }
+}
+
+// Namespace: 
 private class Fade.FadeLayer // TypeDefIndex: 13832
 {
 	// Fields
@@ -47,6 +65,36 @@ private class Fade.FadeLayer // TypeDefIndex: 13832
 }
 
 // Namespace: 
+private class Fade.ProcFade : ProcInst // TypeDefIndex: 13833
+{
+	// Fields
+	private Fade.FadeLayer[] m_FadeLayer; // 0x70
+
+	// Properties
+	private Fade.FadeLayer Current { get; }
+
+	// Methods
+
+	// RVA: 0x22D9B50 Offset: 0x22D9C51 VA: 0x22D9B50
+	private Fade.FadeLayer get_Current() { }
+
+	// RVA: 0x22D9BF0 Offset: 0x22D9CF1 VA: 0x22D9BF0
+	public static void Create(Color toColor, float duration) { }
+
+	// RVA: 0x22D9F60 Offset: 0x22DA061 VA: 0x22D9F60
+	private void .ctor() { }
+
+	// RVA: 0x22DA320 Offset: 0x22DA421 VA: 0x22DA320 Slot: 10
+	protected override void OnDispose() { }
+
+	// RVA: 0x22DA390 Offset: 0x22DA491 VA: 0x22DA390 Slot: 6
+	protected override void OnTick() { }
+
+	// RVA: 0x22DA5E0 Offset: 0x22DA6E1 VA: 0x22DA5E0
+	public bool IsActive(Fade.Layer layer) { }
+}
+
+// Namespace: 
 private class Fade.ProcFadeWait : ProcInst // TypeDefIndex: 13834
 {
 	// Fields
@@ -59,6 +107,21 @@ private class Fade.ProcFadeWait : ProcInst // TypeDefIndex: 13834
 
 	// RVA: 0x22DA650 Offset: 0x22DA751 VA: 0x22DA650 Slot: 6
 	protected override void OnTick() { }
+}
+
+// Namespace: 
+private class Fade.ProcDescFade : ProcDescUser // TypeDefIndex: 13835
+{
+	// Fields
+	private Fade.Layer m_Layer; // 0x14
+
+	// Methods
+
+	// RVA: 0x22D97A0 Offset: 0x22D98A1 VA: 0x22D97A0
+	protected void .ctor(Fade.Layer layer) { }
+
+	// RVA: 0x22D97D0 Offset: 0x22D98D1 VA: 0x22D97D0
+	protected Fade.Layer GetLayer() { }
 }
 
 // Namespace: 
@@ -75,6 +138,18 @@ private class Fade.ProcDescInOut : Fade.ProcDescFade // TypeDefIndex: 13836
 	public void .ctor(Fade.Layer layer, Color color, float duration, bool isIn) { }
 
 	// RVA: 0x22D98E0 Offset: 0x22D99E1 VA: 0x22D98E0 Slot: 4
+	public override ProcDesc.Result Execute(ProcInst inst) { }
+}
+
+// Namespace: 
+private class Fade.ProcDescWait : Fade.ProcDescFade // TypeDefIndex: 13837
+{
+	// Methods
+
+	// RVA: 0x22D9A20 Offset: 0x22D9B21 VA: 0x22D9A20
+	public void .ctor(Fade.Layer layer) { }
+
+	// RVA: 0x22D9A50 Offset: 0x22D9B51 VA: 0x22D9A50 Slot: 4
 	public override ProcDesc.Result Execute(ProcInst inst) { }
 }
 

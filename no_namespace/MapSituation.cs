@@ -12,6 +12,16 @@ public enum MapSituation.Player // TypeDefIndex: 12216
 }
 
 // Namespace: 
+public enum MapSituation.SubPhases // TypeDefIndex: 12217
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapSituation.SubPhases Normal = 0;
+	public const MapSituation.SubPhases CharmConfusion = 1;
+	public const MapSituation.SubPhases Num = 2;
+}
+
+// Namespace: 
 [FlagsAttribute] // RVA: 0x278030 Offset: 0x278131 VA: 0x278030
 public enum MapSituation.Status // TypeDefIndex: 12218
 {
@@ -25,6 +35,18 @@ public enum MapSituation.Status // TypeDefIndex: 12218
 	public const MapSituation.Status SequenceAi = 1073741824;
 	public const MapSituation.Status SequenceMind = -2147483648;
 	public const MapSituation.Status WinRuleMask = 3;
+}
+
+// Namespace: 
+public class MapSituation.StatusField : BitFieldTemplate32<MapSituation.Status> // TypeDefIndex: 12219
+{
+	// Methods
+
+	// RVA: 0x2139AE0 Offset: 0x2139BE1 VA: 0x2139AE0 Slot: 5
+	protected override int ToInt(MapSituation.Status value) { }
+
+	// RVA: 0x2139AF0 Offset: 0x2139BF1 VA: 0x2139AF0
+	public void .ctor() { }
 }
 
 // Namespace: 

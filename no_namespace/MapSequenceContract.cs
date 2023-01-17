@@ -1,4 +1,14 @@
 // Namespace: 
+private enum MapSequenceContract.Label // TypeDefIndex: 12405
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapSequenceContract.Label Simple = 0;
+	public const MapSequenceContract.Label Skip = 1;
+	public const MapSequenceContract.Label After = 2;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2785C0 Offset: 0x2786C1 VA: 0x2785C0
 private sealed class MapSequenceContract.<SimpleDance>d__4 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12406
 {

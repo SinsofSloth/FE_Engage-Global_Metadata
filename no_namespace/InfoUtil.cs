@@ -1,4 +1,14 @@
 // Namespace: 
+public enum InfoUtil.HpStockSpriteType // TypeDefIndex: 11821
+{
+	// Fields
+	public int value__; // 0x0
+	public const InfoUtil.HpStockSpriteType Enemy = 0;
+	public const InfoUtil.HpStockSpriteType Rampage = 1;
+	public const InfoUtil.HpStockSpriteType Player = 2;
+}
+
+// Namespace: 
 public class InfoUtil.StatusSkill // TypeDefIndex: 11822
 {
 	// Fields
@@ -42,6 +52,15 @@ public class InfoUtil.StatusSkill // TypeDefIndex: 11822
 
 	// RVA: 0x2220CD0 Offset: 0x2220DD1 VA: 0x2220CD0
 	public void .ctor() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277B30 Offset: 0x277C31 VA: 0x277B30
+private struct InfoUtil.<>c__DisplayClass49_0 // TypeDefIndex: 11823
+{
+	// Fields
+	public GodUnit god; // 0x0
+	public ItemData data; // 0x8
 }
 
 // Namespace: 

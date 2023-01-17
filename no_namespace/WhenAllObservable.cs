@@ -42,6 +42,59 @@ private class WhenAllObservable.WhenAll.WhenAllCollectionObserver<T> : IObserver
 }
 
 // Namespace: 
+private class WhenAllObservable.WhenAll<T> : OperatorObserverBase<T[], T[]> // TypeDefIndex: 7127
+{
+	// Fields
+	private readonly IObservable<T>[] sources; // 0x0
+	private readonly object gate; // 0x0
+	private int completedCount; // 0x0
+	private int length; // 0x0
+	private T[] values; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(IObservable<T>[] sources, IObserver<T[]> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FDC570 Offset: 0x2FDC671 VA: 0x2FDC570
+	|-WhenAllObservable.WhenAll<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FDC630 Offset: 0x2FDC731 VA: 0x2FDC630
+	|-WhenAllObservable.WhenAll<object>.Run
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(T[] value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FDC9C0 Offset: 0x2FDCAC1 VA: 0x2FDC9C0
+	|-WhenAllObservable.WhenAll<object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FDCA70 Offset: 0x2FDCB71 VA: 0x2FDCA70
+	|-WhenAllObservable.WhenAll<object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FDCBB0 Offset: 0x2FDCCB1 VA: 0x2FDCBB0
+	|-WhenAllObservable.WhenAll<object>.OnCompleted
+	*/
+}
+
+// Namespace: 
 private class WhenAllObservable.WhenAll_.WhenAllCollectionObserver<T> : IObserver<T> // TypeDefIndex: 7128
 {
 	// Fields
@@ -85,6 +138,81 @@ private class WhenAllObservable.WhenAll_.WhenAllCollectionObserver<T> : IObserve
 }
 
 // Namespace: 
+private class WhenAllObservable.WhenAll_<T> : OperatorObserverBase<T[], T[]> // TypeDefIndex: 7129
+{
+	// Fields
+	private readonly IList<IObservable<T>> sources; // 0x0
+	private readonly object gate; // 0x0
+	private int completedCount; // 0x0
+	private int length; // 0x0
+	private T[] values; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	public void .ctor(IList<IObservable<T>> sources, IObserver<T[]> observer, IDisposable cancel) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FE1E30 Offset: 0x2FE1F31 VA: 0x2FE1E30
+	|-WhenAllObservable.WhenAll_<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public IDisposable Run() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FE1EF0 Offset: 0x2FE1FF1 VA: 0x2FE1EF0
+	|-WhenAllObservable.WhenAll_<object>.Run
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 8
+	public override void OnNext(T[] value) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FE2350 Offset: 0x2FE2451 VA: 0x2FE2350
+	|-WhenAllObservable.WhenAll_<object>.OnNext
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 9
+	public override void OnError(Exception error) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FE2400 Offset: 0x2FE2501 VA: 0x2FE2400
+	|-WhenAllObservable.WhenAll_<object>.OnError
+	*/
+
+	// RVA: -1 Offset: -1 Slot: 10
+	public override void OnCompleted() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2FE2540 Offset: 0x2FE2641 VA: 0x2FE2540
+	|-WhenAllObservable.WhenAll_<object>.OnCompleted
+	*/
+}
+
+// Namespace: 
+private class WhenAllObservable.WhenAll.WhenAllCollectionObserver : IObserver<Unit> // TypeDefIndex: 7131
+{
+	// Fields
+	private readonly WhenAllObservable.WhenAll parent; // 0x10
+	private bool isCompleted; // 0x18
+
+	// Methods
+
+	// RVA: 0x1B0C130 Offset: 0x1B0C231 VA: 0x1B0C130
+	public void .ctor(WhenAllObservable.WhenAll parent) { }
+
+	// RVA: 0x1B0E800 Offset: 0x1B0E901 VA: 0x1B0E800 Slot: 4
+	public void OnNext(Unit value) { }
+
+	// RVA: 0x1B0E810 Offset: 0x1B0E911 VA: 0x1B0E810 Slot: 5
+	public void OnError(Exception error) { }
+
+	// RVA: 0x1B0E900 Offset: 0x1B0EA01 VA: 0x1B0E900 Slot: 6
+	public void OnCompleted() { }
+}
+
+// Namespace: 
 private class WhenAllObservable.WhenAll : OperatorObserverBase<Unit, Unit> // TypeDefIndex: 7132
 {
 	// Fields
@@ -109,6 +237,28 @@ private class WhenAllObservable.WhenAll : OperatorObserverBase<Unit, Unit> // Ty
 
 	// RVA: 0x1B0C350 Offset: 0x1B0C451 VA: 0x1B0C350 Slot: 10
 	public override void OnCompleted() { }
+}
+
+// Namespace: 
+private class WhenAllObservable.WhenAll_.WhenAllCollectionObserver : IObserver<Unit> // TypeDefIndex: 7133
+{
+	// Fields
+	private readonly WhenAllObservable.WhenAll_ parent; // 0x10
+	private bool isCompleted; // 0x18
+
+	// Methods
+
+	// RVA: 0x1B0C460 Offset: 0x1B0C561 VA: 0x1B0C460
+	public void .ctor(WhenAllObservable.WhenAll_ parent) { }
+
+	// RVA: 0x1B0EAD0 Offset: 0x1B0EBD1 VA: 0x1B0EAD0 Slot: 4
+	public void OnNext(Unit value) { }
+
+	// RVA: 0x1B0EAE0 Offset: 0x1B0EBE1 VA: 0x1B0EAE0 Slot: 5
+	public void OnError(Exception error) { }
+
+	// RVA: 0x1B0EBD0 Offset: 0x1B0ECD1 VA: 0x1B0EBD0 Slot: 6
+	public void OnCompleted() { }
 }
 
 // Namespace: 

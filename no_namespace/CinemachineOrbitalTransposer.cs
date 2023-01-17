@@ -11,6 +11,29 @@ public enum CinemachineOrbitalTransposer.Heading.HeadingDefinition // TypeDefInd
 }
 
 // Namespace: 
+[DocumentationSortingAttribute] // RVA: 0x1B5A0 Offset: 0x1B6A1 VA: 0x1B5A0
+[Serializable]
+public struct CinemachineOrbitalTransposer.Heading // TypeDefIndex: 5795
+{
+	// Fields
+	[FormerlySerializedAsAttribute] // RVA: 0x20420 Offset: 0x20521 VA: 0x20420
+	[TooltipAttribute] // RVA: 0x20420 Offset: 0x20521 VA: 0x20420
+	public CinemachineOrbitalTransposer.Heading.HeadingDefinition m_Definition; // 0x0
+	[TooltipAttribute] // RVA: 0x20480 Offset: 0x20581 VA: 0x20480
+	[RangeAttribute] // RVA: 0x20480 Offset: 0x20581 VA: 0x20480
+	public int m_VelocityFilterStrength; // 0x4
+	[RangeAttribute] // RVA: 0x204E0 Offset: 0x205E1 VA: 0x204E0
+	[FormerlySerializedAsAttribute] // RVA: 0x204E0 Offset: 0x205E1 VA: 0x204E0
+	[TooltipAttribute] // RVA: 0x204E0 Offset: 0x205E1 VA: 0x204E0
+	public float m_Bias; // 0x8
+
+	// Methods
+
+	// RVA: 0x1A8AF10 Offset: 0x1A8B011 VA: 0x1A8AF10
+	public void .ctor(CinemachineOrbitalTransposer.Heading.HeadingDefinition def, int filterStrength, float bias) { }
+}
+
+// Namespace: 
 internal sealed class CinemachineOrbitalTransposer.UpdateHeadingDelegate : MulticastDelegate // TypeDefIndex: 5796
 {
 	// Methods
@@ -26,5 +49,26 @@ internal sealed class CinemachineOrbitalTransposer.UpdateHeadingDelegate : Multi
 
 	// RVA: 0x1A8B3F0 Offset: 0x1A8B4F1 VA: 0x1A8B3F0 Slot: 15
 	public virtual float EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x1B5E0 Offset: 0x1B6E1 VA: 0x1B5E0
+[Serializable]
+private sealed class CinemachineOrbitalTransposer.<>c // TypeDefIndex: 5797
+{
+	// Fields
+	public static readonly CinemachineOrbitalTransposer.<>c <>9; // 0x0
+	public static CinemachineOrbitalTransposer.UpdateHeadingDelegate <>9__34_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x1A8ADB0 Offset: 0x1A8AEB1 VA: 0x1A8ADB0
+	private static void .cctor() { }
+
+	// RVA: 0x1A8AE20 Offset: 0x1A8AF21 VA: 0x1A8AE20
+	public void .ctor() { }
+
+	// RVA: 0x1A8AE30 Offset: 0x1A8AF31 VA: 0x1A8AE30
+	internal float <.ctor>b__34_0(CinemachineOrbitalTransposer orbital, float deltaTime, Vector3 up) { }
 }
 

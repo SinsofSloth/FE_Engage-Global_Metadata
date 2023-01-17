@@ -39,6 +39,44 @@ private sealed class ArenaCombatSequence.<Setup>d__30 : IEnumerator<object>, IEn
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273790 Offset: 0x273891 VA: 0x273790
+private sealed class ArenaCombatSequence.<WaitBegin>d__31 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 8509
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A8FC0 Offset: 0x2A90C1 VA: 0x2A8FC0
+	// RVA: 0x1F660B0 Offset: 0x1F661B1 VA: 0x1F660B0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A8FD0 Offset: 0x2A90D1 VA: 0x2A8FD0
+	// RVA: 0x1F660E0 Offset: 0x1F661E1 VA: 0x1F660E0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1F660F0 Offset: 0x1F661F1 VA: 0x1F660F0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A8FE0 Offset: 0x2A90E1 VA: 0x2A8FE0
+	// RVA: 0x1F66260 Offset: 0x1F66361 VA: 0x1F66260 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A8FF0 Offset: 0x2A90F1 VA: 0x2A8FF0
+	// RVA: 0x1F66270 Offset: 0x1F66371 VA: 0x1F66270 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9000 Offset: 0x2A9101 VA: 0x2A9000
+	// RVA: 0x1F662B0 Offset: 0x1F663B1 VA: 0x1F662B0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2737A0 Offset: 0x2738A1 VA: 0x2737A0
 private sealed class ArenaCombatSequence.<StartFight>d__32 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 8510
 {
@@ -74,6 +112,45 @@ private sealed class ArenaCombatSequence.<StartFight>d__32 : IEnumerator<object>
 
 	[DebuggerHiddenAttribute] // RVA: 0x2A9050 Offset: 0x2A9151 VA: 0x2A9050
 	// RVA: 0x1F660A0 Offset: 0x1F661A1 VA: 0x1F660A0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2737B0 Offset: 0x2738B1 VA: 0x2737B0
+private sealed class ArenaCombatSequence.<WaitFinish>d__33 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 8511
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	private float <time>5__2; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9060 Offset: 0x2A9161 VA: 0x2A9060
+	// RVA: 0x1F662C0 Offset: 0x1F663C1 VA: 0x1F662C0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9070 Offset: 0x2A9171 VA: 0x2A9070
+	// RVA: 0x1F662F0 Offset: 0x1F663F1 VA: 0x1F662F0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1F66300 Offset: 0x1F66401 VA: 0x1F66300 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9080 Offset: 0x2A9181 VA: 0x2A9080
+	// RVA: 0x1F66430 Offset: 0x1F66531 VA: 0x1F66430 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9090 Offset: 0x2A9191 VA: 0x2A9090
+	// RVA: 0x1F66440 Offset: 0x1F66541 VA: 0x1F66440 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A90A0 Offset: 0x2A91A1 VA: 0x2A90A0
+	// RVA: 0x1F66480 Offset: 0x1F66581 VA: 0x1F66480 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 
@@ -119,6 +196,31 @@ private sealed class ArenaCombatSequence.<Grow1>d__35 : IEnumerator<object>, IEn
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2737D0 Offset: 0x2738D1 VA: 0x2737D0
+[Serializable]
+private sealed class ArenaCombatSequence.<>c // TypeDefIndex: 8513
+{
+	// Fields
+	public static readonly ArenaCombatSequence.<>c <>9; // 0x0
+	public static Action <>9__36_0; // 0x8
+	public static Action <>9__36_1; // 0x10
+
+	// Methods
+
+	// RVA: 0x1F64B20 Offset: 0x1F64C21 VA: 0x1F64B20
+	private static void .cctor() { }
+
+	// RVA: 0x1F64B90 Offset: 0x1F64C91 VA: 0x1F64B90
+	public void .ctor() { }
+
+	// RVA: 0x1F64BA0 Offset: 0x1F64CA1 VA: 0x1F64BA0
+	internal void <Grow2>b__36_0() { }
+
+	// RVA: 0x1F64C20 Offset: 0x1F64D21 VA: 0x1F64C20
+	internal void <Grow2>b__36_1() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2737E0 Offset: 0x2738E1 VA: 0x2737E0
 private sealed class ArenaCombatSequence.<Grow2>d__36 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 8514
 {
@@ -155,6 +257,45 @@ private sealed class ArenaCombatSequence.<Grow2>d__36 : IEnumerator<object>, IEn
 
 	[DebuggerHiddenAttribute] // RVA: 0x2A9140 Offset: 0x2A9241 VA: 0x2A9140
 	// RVA: 0x1F65AE0 Offset: 0x1F65BE1 VA: 0x1F65AE0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2737F0 Offset: 0x2738F1 VA: 0x2737F0
+private sealed class ArenaCombatSequence.<Exit>d__38 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 8515
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public ArenaCombatSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9150 Offset: 0x2A9251 VA: 0x2A9150
+	// RVA: 0x1F64CA0 Offset: 0x1F64DA1 VA: 0x1F64CA0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9160 Offset: 0x2A9261 VA: 0x2A9160
+	// RVA: 0x1F64CD0 Offset: 0x1F64DD1 VA: 0x1F64CD0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x1F64CE0 Offset: 0x1F64DE1 VA: 0x1F64CE0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9170 Offset: 0x2A9271 VA: 0x2A9170
+	// RVA: 0x1F650F0 Offset: 0x1F651F1 VA: 0x1F650F0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9180 Offset: 0x2A9281 VA: 0x2A9180
+	// RVA: 0x1F65100 Offset: 0x1F65201 VA: 0x1F65100 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2A9190 Offset: 0x2A9291 VA: 0x2A9190
+	// RVA: 0x1F65140 Offset: 0x1F65241 VA: 0x1F65140 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 

@@ -1,4 +1,14 @@
 // Namespace: 
+private enum MyRoomRelianceSubSelect.MyRoomRelianceCallSequence.Label // TypeDefIndex: 11319
+{
+	// Fields
+	public int value__; // 0x0
+	public const MyRoomRelianceSubSelect.MyRoomRelianceCallSequence.Label Entry = 0;
+	public const MyRoomRelianceSubSelect.MyRoomRelianceCallSequence.Label Main = 1;
+	public const MyRoomRelianceSubSelect.MyRoomRelianceCallSequence.Label End = 2;
+}
+
+// Namespace: 
 public class MyRoomRelianceSubSelect.MyRoomRelianceCallSequence : StackProcInst<MyRoomRelianceSubSelect.MyRoomRelianceCallSequence> // TypeDefIndex: 11320
 {
 	// Fields
@@ -163,6 +173,95 @@ public class MyRoomRelianceSubSelect.MyRoomRelianceCallSequence : StackProcInst<
 }
 
 // Namespace: 
+public class MyRoomRelianceSubSelect.MyRoomRelianceSubSelectItem : BasicMenuItem // TypeDefIndex: 11321
+{
+	// Fields
+	private Unit m_UnitL; // 0x68
+	private Unit m_UnitR; // 0x70
+	private GodUnit m_GodUnit; // 0x78
+	[CompilerGeneratedAttribute] // RVA: 0x297AE0 Offset: 0x297BE1 VA: 0x297AE0
+	private bool <IsSelected>k__BackingField; // 0x80
+	[CompilerGeneratedAttribute] // RVA: 0x297AF0 Offset: 0x297BF1 VA: 0x297AF0
+	private bool <IsTalk>k__BackingField; // 0x81
+
+	// Properties
+	public bool IsSelected { get; set; }
+	public bool IsTalk { get; set; }
+	public MyRoomRelianceSelectRoot.CursorTop Cursor { get; }
+	public bool IsBlank { get; }
+	public bool IsAPlus { get; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C4F70 Offset: 0x2C5071 VA: 0x2C4F70
+	// RVA: 0x26E2B00 Offset: 0x26E2C01 VA: 0x26E2B00
+	public bool get_IsSelected() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C4F80 Offset: 0x2C5081 VA: 0x2C4F80
+	// RVA: 0x26E2B10 Offset: 0x26E2C11 VA: 0x26E2B10
+	public void set_IsSelected(bool value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C4F90 Offset: 0x2C5091 VA: 0x2C4F90
+	// RVA: 0x26E2B20 Offset: 0x26E2C21 VA: 0x26E2B20
+	public bool get_IsTalk() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2C4FA0 Offset: 0x2C50A1 VA: 0x2C4FA0
+	// RVA: 0x26E2B30 Offset: 0x26E2C31 VA: 0x26E2B30
+	private void set_IsTalk(bool value) { }
+
+	// RVA: 0x26E2B40 Offset: 0x26E2C41 VA: 0x26E2B40
+	public MyRoomRelianceSelectRoot.CursorTop get_Cursor() { }
+
+	// RVA: 0x26E2BC0 Offset: 0x26E2CC1 VA: 0x26E2BC0
+	public bool get_IsBlank() { }
+
+	// RVA: 0x26E2BF0 Offset: 0x26E2CF1 VA: 0x26E2BF0
+	public bool get_IsAPlus() { }
+
+	// RVA: 0x26DFD20 Offset: 0x26DFE21 VA: 0x26DFD20
+	public int GetSortOrder() { }
+
+	// RVA: 0x26E2CA0 Offset: 0x26E2DA1 VA: 0x26E2CA0
+	public Color GetCommandColor() { }
+
+	// RVA: 0x26E2C30 Offset: 0x26E2D31 VA: 0x26E2C30
+	public int GetOpenCount() { }
+
+	// RVA: 0x26E2D20 Offset: 0x26E2E21 VA: 0x26E2D20
+	public void .ctor(Unit unitL, Unit unitR) { }
+
+	// RVA: 0x26E2EC0 Offset: 0x26E2FC1 VA: 0x26E2EC0
+	public void .ctor(Unit unitL, GodUnit godUnit) { }
+
+	// RVA: 0x26E2D80 Offset: 0x26E2E81 VA: 0x26E2D80
+	public void UpdateTalk() { }
+
+	// RVA: 0x26E2F20 Offset: 0x26E3021 VA: 0x26E2F20 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x26E3110 Offset: 0x26E3211 VA: 0x26E3110 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x26E3230 Offset: 0x26E3331 VA: 0x26E3230
+	private int GetPlayerGodLevel(Unit unitL, Unit unitR) { }
+
+	// RVA: 0x26E32D0 Offset: 0x26E33D1 VA: 0x26E32D0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x26E3990 Offset: 0x26E3A91 VA: 0x26E3990 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x26E3AC0 Offset: 0x26E3BC1 VA: 0x26E3AC0
+	public Unit GetUnitL() { }
+
+	// RVA: 0x26E3AD0 Offset: 0x26E3BD1 VA: 0x26E3AD0
+	public Unit GetUnitR() { }
+
+	// RVA: 0x26E3AE0 Offset: 0x26E3BE1 VA: 0x26E3AE0
+	public GodUnit GetGodUnit() { }
+}
+
+// Namespace: 
 private class MyRoomRelianceSubSelect.AmiiboBenefitSequence : ProcInst // TypeDefIndex: 11322
 {
 	// Fields
@@ -188,5 +287,26 @@ private class MyRoomRelianceSubSelect.AmiiboBenefitSequence : ProcInst // TypeDe
 
 	// RVA: 0x26E04E0 Offset: 0x26E05E1 VA: 0x26E04E0
 	public static void CreateBind(ProcInst super, Unit unit, GodUnit godUnit) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2774E0 Offset: 0x2775E1 VA: 0x2774E0
+[Serializable]
+private sealed class MyRoomRelianceSubSelect.<>c // TypeDefIndex: 11323
+{
+	// Fields
+	public static readonly MyRoomRelianceSubSelect.<>c <>9; // 0x0
+	public static Comparison<BasicMenuItem> <>9__3_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x26DFAC0 Offset: 0x26DFBC1 VA: 0x26DFAC0
+	private static void .cctor() { }
+
+	// RVA: 0x26DFB30 Offset: 0x26DFC31 VA: 0x26DFB30
+	public void .ctor() { }
+
+	// RVA: 0x26DFB40 Offset: 0x26DFC41 VA: 0x26DFB40
+	internal int <CreateMenuList>b__3_0(BasicMenuItem a, BasicMenuItem b) { }
 }
 

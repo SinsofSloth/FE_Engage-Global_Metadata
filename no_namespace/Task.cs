@@ -124,6 +124,31 @@ private sealed class Task.<>c<TResult> // TypeDefIndex: 820
 }
 
 // Namespace: 
+internal class Task.ContingentProperties // TypeDefIndex: 831
+{
+	// Fields
+	internal ExecutionContext m_capturedContext; // 0x10
+	internal ManualResetEventSlim m_completionEvent; // 0x18
+	internal TaskExceptionHolder m_exceptionsHolder; // 0x20
+	internal CancellationToken m_cancellationToken; // 0x28
+	internal Shared<CancellationTokenRegistration> m_cancellationRegistration; // 0x30
+	internal int m_internalCancellationRequested; // 0x38
+	internal int m_completionCountdown; // 0x3C
+	internal List<Task> m_exceptionalChildren; // 0x40
+
+	// Methods
+
+	// RVA: 0x1C068C0 Offset: 0x1C069C1 VA: 0x1C068C0
+	internal void SetCompleted() { }
+
+	// RVA: 0x1C06900 Offset: 0x1C06A01 VA: 0x1C06900
+	internal void DeregisterCancellationCallback() { }
+
+	// RVA: 0x1C06480 Offset: 0x1C06581 VA: 0x1C06480
+	public void .ctor() { }
+}
+
+// Namespace: 
 private sealed class Task.SetOnInvokeMres : ManualResetEventSlim, ITaskCompletionAction // TypeDefIndex: 832
 {
 	// Methods
@@ -133,6 +158,23 @@ private sealed class Task.SetOnInvokeMres : ManualResetEventSlim, ITaskCompletio
 
 	// RVA: 0x1C06B90 Offset: 0x1C06C91 VA: 0x1C06B90 Slot: 6
 	public void Invoke(Task completingTask) { }
+}
+
+// Namespace: 
+private sealed class Task.DelayPromise : Task<VoidTaskResult> // TypeDefIndex: 833
+{
+	// Fields
+	internal readonly CancellationToken Token; // 0x58
+	internal CancellationTokenRegistration Registration; // 0x60
+	internal Timer Timer; // 0x78
+
+	// Methods
+
+	// RVA: 0x1C069C0 Offset: 0x1C06AC1 VA: 0x1C069C0
+	internal void .ctor(CancellationToken token) { }
+
+	// RVA: 0x1C06230 Offset: 0x1C06331 VA: 0x1C06230
+	internal void Complete() { }
 }
 
 // Namespace: 
@@ -153,5 +195,39 @@ private sealed class Task.<>c__DisplayClass178_0 // TypeDefIndex: 834
 
 	// RVA: 0x1C064E0 Offset: 0x1C065E1 VA: 0x1C064E0
 	internal void <ExecuteSelfReplicating>b__0(object <p0>) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x4738E0 Offset: 0x4739E1 VA: 0x4738E0
+[Serializable]
+private sealed class Task.<>c // TypeDefIndex: 835
+{
+	// Fields
+	public static readonly Task.<>c <>9; // 0x0
+	public static Action<object> <>9__276_0; // 0x8
+	public static TimerCallback <>9__276_1; // 0x10
+
+	// Methods
+
+	// RVA: 0x1C06140 Offset: 0x1C06241 VA: 0x1C06140
+	private static void .cctor() { }
+
+	// RVA: 0x1C061B0 Offset: 0x1C062B1 VA: 0x1C061B0
+	public void .ctor() { }
+
+	// RVA: 0x1C061C0 Offset: 0x1C062C1 VA: 0x1C061C0
+	internal void <Delay>b__276_0(object state) { }
+
+	// RVA: 0x1C063A0 Offset: 0x1C064A1 VA: 0x1C063A0
+	internal void <Delay>b__276_1(object state) { }
+
+	// RVA: 0x1C06410 Offset: 0x1C06511 VA: 0x1C06410
+	internal Task.ContingentProperties <.cctor>b__295_0() { }
+
+	// RVA: 0x1C064B0 Offset: 0x1C065B1 VA: 0x1C064B0
+	internal bool <.cctor>b__295_1(Task t) { }
+
+	// RVA: 0x1C064C0 Offset: 0x1C065C1 VA: 0x1C064C0
+	internal bool <.cctor>b__295_2(object tc) { }
 }
 

@@ -1,4 +1,14 @@
 // Namespace: 
+private enum UnitModel.LoadMode // TypeDefIndex: 8981
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnitModel.LoadMode None = 0;
+	public const UnitModel.LoadMode Loading = 1;
+	public const UnitModel.LoadMode Done = 2;
+}
+
+// Namespace: 
 [FlagsAttribute] // RVA: 0x274DC0 Offset: 0x274EC1 VA: 0x274DC0
 public enum UnitModel.ColorFlags // TypeDefIndex: 8982
 {
@@ -9,6 +19,20 @@ public enum UnitModel.ColorFlags // TypeDefIndex: 8982
 	public const UnitModel.ColorFlags Enemy = 4;
 	public const UnitModel.ColorFlags Ally = 8;
 	public const UnitModel.ColorFlags Dirty = 16;
+}
+
+// Namespace: 
+[FlagsAttribute] // RVA: 0x274DD0 Offset: 0x274ED1 VA: 0x274DD0
+public enum UnitModel.DirtyFlags // TypeDefIndex: 8983
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnitModel.DirtyFlags Speed = 1;
+	public const UnitModel.DirtyFlags Animation = 2;
+	public const UnitModel.DirtyFlags Renderer = 4;
+	public const UnitModel.DirtyFlags Shine = 8;
+	public const UnitModel.DirtyFlags Alpha = 16;
+	public const UnitModel.DirtyFlags Bright = 32;
 }
 
 // Namespace: 

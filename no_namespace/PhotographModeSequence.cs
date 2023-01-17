@@ -1,4 +1,15 @@
 // Namespace: 
+public enum PhotographModeSequence.Label // TypeDefIndex: 11487
+{
+	// Fields
+	public int value__; // 0x0
+	public const PhotographModeSequence.Label Entry = 0;
+	public const PhotographModeSequence.Label Tick = 1;
+	public const PhotographModeSequence.Label Photograph = 2;
+	public const PhotographModeSequence.Label Exit = 3;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x277920 Offset: 0x277A21 VA: 0x277920
 private sealed class PhotographModeSequence.<PhotographCoroutine>d__10 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 11488
 {

@@ -9,6 +9,23 @@ private enum MyRoomWakeupSequence.Label // TypeDefIndex: 11376
 }
 
 // Namespace: 
+public class MyRoomWakeupSequence.RelianceWakeup // TypeDefIndex: 11377
+{
+	// Fields
+	public string m_pid; // 0x10
+	public RelianceData.Level m_level; // 0x18
+	public GameSound.WakeupVoicePattern m_pattern; // 0x1C
+
+	// Methods
+
+	// RVA: 0x26E75B0 Offset: 0x26E76B1 VA: 0x26E75B0
+	public void .ctor(string pid, RelianceData.Level level, GameSound.WakeupVoicePattern pattern) { }
+
+	// RVA: 0x26E7600 Offset: 0x26E7701 VA: 0x26E7600 Slot: 3
+	public override string ToString() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x277500 Offset: 0x277601 VA: 0x277500
 private sealed class MyRoomWakeupSequence.<ChangeEnv>d__122 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 11378
 {
@@ -54,6 +71,22 @@ private sealed class MyRoomWakeupSequence.<ChangeEnv>d__122 : IEnumerator<object
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277510 Offset: 0x277611 VA: 0x277510
+private sealed class MyRoomWakeupSequence.<>c__DisplayClass127_0 // TypeDefIndex: 11379
+{
+	// Fields
+	public List<MyRoomWakeupSequence.RelianceWakeup> tempList; // 0x10
+
+	// Methods
+
+	// RVA: 0x26E5A60 Offset: 0x26E5B61 VA: 0x26E5A60
+	public void .ctor() { }
+
+	// RVA: 0x26E5A70 Offset: 0x26E5B71 VA: 0x26E5A70
+	internal void <SelectRelianceWakeup>b__0(MyRoomWakeupSequence.RelianceWakeup wakeup) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x277520 Offset: 0x277621 VA: 0x277520
 private sealed class MyRoomWakeupSequence.<>c__DisplayClass131_0 // TypeDefIndex: 11380
 {
@@ -83,6 +116,46 @@ private sealed class MyRoomWakeupSequence.<>c__DisplayClass131_0 // TypeDefIndex
 
 	// RVA: 0x26E6190 Offset: 0x26E6291 VA: 0x26E6190
 	internal void <LoadResources>b__5(string path) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277530 Offset: 0x277631 VA: 0x277530
+private sealed class MyRoomWakeupSequence.<WaitBeforeWakeupAction>d__136 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 11381
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public MyRoomWakeupSequence <>4__this; // 0x20
+	private float <time>5__2; // 0x28
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C55D0 Offset: 0x2C56D1 VA: 0x2C55D0
+	// RVA: 0x26E7370 Offset: 0x26E7471 VA: 0x26E7370
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C55E0 Offset: 0x2C56E1 VA: 0x2C55E0
+	// RVA: 0x26E73A0 Offset: 0x26E74A1 VA: 0x26E73A0 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x26E73B0 Offset: 0x26E74B1 VA: 0x26E73B0 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C55F0 Offset: 0x2C56F1 VA: 0x2C55F0
+	// RVA: 0x26E7550 Offset: 0x26E7651 VA: 0x26E7550 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C5600 Offset: 0x2C5701 VA: 0x2C5600
+	// RVA: 0x26E7560 Offset: 0x26E7661 VA: 0x26E7560 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C5610 Offset: 0x2C5711 VA: 0x2C5610
+	// RVA: 0x26E75A0 Offset: 0x26E76A1 VA: 0x26E75A0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
 }
 
 // Namespace: 
@@ -121,6 +194,45 @@ private sealed class MyRoomWakeupSequence.<MainWakeupEnter>d__138 : IEnumerator<
 
 	[DebuggerHiddenAttribute] // RVA: 0x2C5660 Offset: 0x2C5761 VA: 0x2C5660
 	// RVA: 0x26E7360 Offset: 0x26E7461 VA: 0x26E7360 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x277550 Offset: 0x277651 VA: 0x277550
+private sealed class MyRoomWakeupSequence.<MainWakeup>d__139 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 11383
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public MyRoomWakeupSequence <>4__this; // 0x20
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C5670 Offset: 0x2C5771 VA: 0x2C5670
+	// RVA: 0x26E6AF0 Offset: 0x26E6BF1 VA: 0x26E6AF0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C5680 Offset: 0x2C5781 VA: 0x2C5680
+	// RVA: 0x26E6B20 Offset: 0x26E6C21 VA: 0x26E6B20 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x26E6B30 Offset: 0x26E6C31 VA: 0x26E6B30 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C5690 Offset: 0x2C5791 VA: 0x2C5690
+	// RVA: 0x26E6D50 Offset: 0x26E6E51 VA: 0x26E6D50 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C56A0 Offset: 0x2C57A1 VA: 0x2C56A0
+	// RVA: 0x26E6D60 Offset: 0x26E6E61 VA: 0x26E6D60 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C56B0 Offset: 0x2C57B1 VA: 0x2C56B0
+	// RVA: 0x26E6DA0 Offset: 0x26E6EA1 VA: 0x26E6DA0 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
 }
 

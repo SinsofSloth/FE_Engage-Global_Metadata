@@ -1,4 +1,88 @@
 // Namespace: System.Reflection
+[ComVisibleAttribute] // RVA: 0x472320 Offset: 0x472421 VA: 0x472320
+[ComDefaultInterfaceAttribute] // RVA: 0x472320 Offset: 0x472421 VA: 0x472320
+[ClassInterfaceAttribute] // RVA: 0x472320 Offset: 0x472421 VA: 0x472320
+[Serializable]
+public abstract class ConstructorInfo : MethodBase, _ConstructorInfo // TypeDefIndex: 557
+{
+	// Fields
+	[ComVisibleAttribute] // RVA: 0x478470 Offset: 0x478571 VA: 0x478470
+	public static readonly string ConstructorName; // 0x0
+	[ComVisibleAttribute] // RVA: 0x478490 Offset: 0x478591 VA: 0x478490
+	public static readonly string TypeConstructorName; // 0x8
+
+	// Properties
+	[ComVisibleAttribute] // RVA: 0x47DDC0 Offset: 0x47DEC1 VA: 0x47DDC0
+	public override MemberTypes MemberType { get; }
+
+	// Methods
+
+	// RVA: 0x33B1DF0 Offset: 0x33B1EF1 VA: 0x33B1DF0
+	protected void .ctor() { }
+
+	// RVA: 0x33B1E00 Offset: 0x33B1F01 VA: 0x33B1E00 Slot: 6
+	public override MemberTypes get_MemberType() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x47BDC0 Offset: 0x47BEC1 VA: 0x47BDC0
+	[DebuggerStepThroughAttribute] // RVA: 0x47BDC0 Offset: 0x47BEC1 VA: 0x47BDC0
+	// RVA: 0x339CE40 Offset: 0x339CF41 VA: 0x339CE40
+	public object Invoke(object[] parameters) { }
+
+	// RVA: -1 Offset: -1 Slot: 44
+	public abstract object Invoke(BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture);
+
+	// RVA: 0x33B1E10 Offset: 0x33B1F11 VA: 0x33B1E10 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x33B1E20 Offset: 0x33B1F21 VA: 0x33B1E20 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x339CE00 Offset: 0x339CF01 VA: 0x339CE00
+	public static bool op_Equality(ConstructorInfo left, ConstructorInfo right) { }
+
+	// RVA: 0x33B1E30 Offset: 0x33B1F31 VA: 0x33B1E30
+	public static bool op_Inequality(ConstructorInfo left, ConstructorInfo right) { }
+
+	// RVA: 0x33B1E90 Offset: 0x33B1F91 VA: 0x33B1E90
+	private static void .cctor() { }
+}
+
+// Namespace: System.Reflection
+internal abstract class RuntimeConstructorInfo : ConstructorInfo, ISerializable // TypeDefIndex: 581
+{
+	// Properties
+	public override Module Module { get; }
+	internal BindingFlags BindingFlags { get; }
+	private RuntimeType ReflectedTypeInternal { get; }
+
+	// Methods
+
+	// RVA: 0x322B9D0 Offset: 0x322BAD1 VA: 0x322B9D0 Slot: 15
+	public override Module get_Module() { }
+
+	// RVA: 0x322BA60 Offset: 0x322BB61 VA: 0x322BA60
+	internal RuntimeModule GetRuntimeModule() { }
+
+	// RVA: 0x322BAF0 Offset: 0x322BBF1 VA: 0x322BAF0
+	internal BindingFlags get_BindingFlags() { }
+
+	// RVA: 0x322BB00 Offset: 0x322BC01 VA: 0x322BB00
+	private RuntimeType get_ReflectedTypeInternal() { }
+
+	// RVA: 0x322BB90 Offset: 0x322BC91 VA: 0x322BB90 Slot: 45
+	public void GetObjectData(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x322BCE0 Offset: 0x322BDE1 VA: 0x322BCE0
+	internal string SerializationToString() { }
+
+	// RVA: 0x322BD00 Offset: 0x322BE01 VA: 0x322BD00
+	internal void SerializationInvoke(object target, SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x322BE40 Offset: 0x322BF41 VA: 0x322BE40
+	protected void .ctor() { }
+}
+
+// Namespace: System.Reflection
 [Serializable]
 internal class MonoCMethod : RuntimeConstructorInfo // TypeDefIndex: 582
 {

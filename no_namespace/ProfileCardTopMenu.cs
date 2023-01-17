@@ -12,6 +12,24 @@ public enum ProfileCardTopMenu.Result2 // TypeDefIndex: 11652
 }
 
 // Namespace: 
+public sealed class ProfileCardTopMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 11653
+{
+	// Methods
+
+	// RVA: 0x1F28EB0 Offset: 0x1F28FB1 VA: 0x1F28EB0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F28C50 Offset: 0x1F28D51 VA: 0x1F28C50 Slot: 13
+	public virtual void Invoke(ProfileCardTopMenu.Result2 result) { }
+
+	// RVA: 0x1F28ED0 Offset: 0x1F28FD1 VA: 0x1F28ED0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProfileCardTopMenu.Result2 result, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F28F60 Offset: 0x1F29061 VA: 0x1F28F60 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class ProfileCardTopMenu.MyCardMenuItem : BasicMenuItem // TypeDefIndex: 11654
 {
 	// Fields
@@ -29,6 +47,31 @@ private class ProfileCardTopMenu.MyCardMenuItem : BasicMenuItem // TypeDefIndex:
 	public override void OnSelect() { }
 
 	// RVA: 0x1F29100 Offset: 0x1F29201 VA: 0x1F29100 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class ProfileCardTopMenu.AlbumMenuItem : BasicMenuItem // TypeDefIndex: 11655
+{
+	// Fields
+	private bool m_Enabled; // 0x64
+	private ProfileCardTopMenu.DecideEventHandler m_DecideEventHandler; // 0x68
+
+	// Methods
+
+	// RVA: 0x1F289B0 Offset: 0x1F28AB1 VA: 0x1F289B0
+	public void .ctor(ProfileCardTopMenu.DecideEventHandler decideEventHandler) { }
+
+	// RVA: 0x1F28A90 Offset: 0x1F28B91 VA: 0x1F28A90 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1F28B10 Offset: 0x1F28C11 VA: 0x1F28B10 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1F28B30 Offset: 0x1F28C31 VA: 0x1F28B30 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x1F28C00 Offset: 0x1F28D01 VA: 0x1F28C00 Slot: 18
 	public override BasicMenu.Result ACall() { }
 }
 
@@ -54,6 +97,27 @@ private class ProfileCardTopMenu.PhotoMenuItem : BasicMenuItem // TypeDefIndex: 
 	public override void OnSelect() { }
 
 	// RVA: 0x1F29360 Offset: 0x1F29461 VA: 0x1F29360 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class ProfileCardTopMenu.PublicSettingMenuItem : BasicMenuItem // TypeDefIndex: 11657
+{
+	// Fields
+	private ProfileCardTopMenu.DecideEventHandler m_DecideEventHandler; // 0x68
+
+	// Methods
+
+	// RVA: 0x1F293B0 Offset: 0x1F294B1 VA: 0x1F293B0
+	public void .ctor(ProfileCardTopMenu.DecideEventHandler decideEventHandler) { }
+
+	// RVA: 0x1F293F0 Offset: 0x1F294F1 VA: 0x1F293F0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1F29470 Offset: 0x1F29571 VA: 0x1F29470 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x1F29630 Offset: 0x1F29731 VA: 0x1F29630 Slot: 18
 	public override BasicMenu.Result ACall() { }
 }
 

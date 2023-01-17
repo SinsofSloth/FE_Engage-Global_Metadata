@@ -8,6 +8,24 @@ public enum RefreshUnitSetDecideMenu.Result2 // TypeDefIndex: 11720
 }
 
 // Namespace: 
+public sealed class RefreshUnitSetDecideMenu.KeyUpEventHandler : MulticastDelegate // TypeDefIndex: 11721
+{
+	// Methods
+
+	// RVA: 0x1F3B600 Offset: 0x1F3B701 VA: 0x1F3B600
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F3B620 Offset: 0x1F3B721 VA: 0x1F3B620 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x1F3B830 Offset: 0x1F3B931 VA: 0x1F3B830 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F3B860 Offset: 0x1F3B961 VA: 0x1F3B860 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class RefreshUnitSetDecideMenu.KeyDownEventHandler : MulticastDelegate // TypeDefIndex: 11722
 {
 	// Methods
@@ -22,6 +40,24 @@ public sealed class RefreshUnitSetDecideMenu.KeyDownEventHandler : MulticastDele
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F3B5F0 Offset: 0x1F3B6F1 VA: 0x1F3B5F0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class RefreshUnitSetDecideMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 11723
+{
+	// Methods
+
+	// RVA: 0x1F3B070 Offset: 0x1F3B171 VA: 0x1F3B070
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F3B090 Offset: 0x1F3B191 VA: 0x1F3B090 Slot: 13
+	public virtual void Invoke(RefreshUnitSetDecideMenu.Result2 result) { }
+
+	// RVA: 0x1F3B2F0 Offset: 0x1F3B3F1 VA: 0x1F3B2F0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(RefreshUnitSetDecideMenu.Result2 result, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F3B380 Offset: 0x1F3B481 VA: 0x1F3B380 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 

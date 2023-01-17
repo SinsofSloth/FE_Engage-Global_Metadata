@@ -13,6 +13,21 @@ private enum CapeTowerSequence.Label2 // TypeDefIndex: 10464
 }
 
 // Namespace: 
+private class CapeTowerSequence.ConfirmEnableOnlineDialog.YesMenuItem : BasicDialogItemYes // TypeDefIndex: 10465
+{
+	// Methods
+
+	// RVA: 0x1DC11C0 Offset: 0x1DC12C1 VA: 0x1DC11C0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1DC1240 Offset: 0x1DC1341 VA: 0x1DC1240 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x1DC12D0 Offset: 0x1DC13D1 VA: 0x1DC12D0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class CapeTowerSequence.ConfirmEnableOnlineDialog.NoMenuItem : BasicDialogItemNo // TypeDefIndex: 10466
 {
 	// Methods
@@ -28,5 +43,14 @@ private class CapeTowerSequence.ConfirmEnableOnlineDialog.NoMenuItem : BasicDial
 
 	// RVA: 0x1DC11B0 Offset: 0x1DC12B1 VA: 0x1DC11B0
 	public void .ctor() { }
+}
+
+// Namespace: 
+private static class CapeTowerSequence.ConfirmEnableOnlineDialog // TypeDefIndex: 10467
+{
+	// Methods
+
+	// RVA: 0x1DFC890 Offset: 0x1DFC991 VA: 0x1DFC890
+	public static void CreateBind(ProcInst super) { }
 }
 

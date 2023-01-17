@@ -17,6 +17,23 @@ private class Lazy.Boxed<T> // TypeDefIndex: 130
 }
 
 // Namespace: 
+private class Lazy.LazyInternalExceptionHolder<T> // TypeDefIndex: 131
+{
+	// Fields
+	internal ExceptionDispatchInfo m_edi; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	internal void .ctor(Exception ex) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x289F870 Offset: 0x289F971 VA: 0x289F870
+	|-Lazy.LazyInternalExceptionHolder<object>..ctor
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x46F940 Offset: 0x46FA41 VA: 0x46F940
 [Serializable]
 private sealed class Lazy.<>c<T> // TypeDefIndex: 132

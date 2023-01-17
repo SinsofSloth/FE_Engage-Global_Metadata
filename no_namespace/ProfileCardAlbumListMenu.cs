@@ -9,6 +9,24 @@ public enum ProfileCardAlbumListMenu.Result2 // TypeDefIndex: 11538
 }
 
 // Namespace: 
+public sealed class ProfileCardAlbumListMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 11539
+{
+	// Methods
+
+	// RVA: 0x1F218C0 Offset: 0x1F219C1 VA: 0x1F218C0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F21650 Offset: 0x1F21751 VA: 0x1F21650 Slot: 13
+	public virtual void Invoke(ProfileCardAlbumListMenu.Result2 result, int index) { }
+
+	// RVA: 0x1F218E0 Offset: 0x1F219E1 VA: 0x1F218E0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(ProfileCardAlbumListMenu.Result2 result, int index, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F219A0 Offset: 0x1F21AA1 VA: 0x1F219A0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class ProfileCardAlbumListMenu.DeleteEventHandler : MulticastDelegate // TypeDefIndex: 11540
 {
 	// Methods
@@ -23,6 +41,24 @@ public sealed class ProfileCardAlbumListMenu.DeleteEventHandler : MulticastDeleg
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F21A00 Offset: 0x1F21B01 VA: 0x1F21A00 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class ProfileCardAlbumListMenu.DisposeEventHandler : MulticastDelegate // TypeDefIndex: 11541
+{
+	// Methods
+
+	// RVA: 0x1F21A10 Offset: 0x1F21B11 VA: 0x1F21A10
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F21A30 Offset: 0x1F21B31 VA: 0x1F21A30 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x1F21C40 Offset: 0x1F21D41 VA: 0x1F21C40 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F21C70 Offset: 0x1F21D71 VA: 0x1F21C70 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 

@@ -14,6 +14,27 @@ internal class InstanceMethodCallExpression : MethodCallExpression, IArgumentPro
 }
 
 // Namespace: System.Linq.Expressions
+internal sealed class InstanceMethodCallExpression0 : InstanceMethodCallExpression, IArgumentProvider // TypeDefIndex: 2857
+{
+	// Properties
+	public override int ArgumentCount { get; }
+
+	// Methods
+
+	// RVA: 0x31B65C0 Offset: 0x31B66C1 VA: 0x31B65C0
+	public void .ctor(MethodInfo method, Expression instance) { }
+
+	// RVA: 0x31B6600 Offset: 0x31B6701 VA: 0x31B6600 Slot: 14
+	public override Expression GetArgument(int index) { }
+
+	// RVA: 0x31B6660 Offset: 0x31B6761 VA: 0x31B6660 Slot: 15
+	public override int get_ArgumentCount() { }
+
+	// RVA: 0x31B6670 Offset: 0x31B6771 VA: 0x31B6670 Slot: 13
+	internal override MethodCallExpression Rewrite(Expression instance, IReadOnlyList<Expression> args) { }
+}
+
+// Namespace: System.Linq.Expressions
 internal sealed class InstanceMethodCallExpression1 : InstanceMethodCallExpression, IArgumentProvider // TypeDefIndex: 2858
 {
 	// Fields
@@ -34,6 +55,31 @@ internal sealed class InstanceMethodCallExpression1 : InstanceMethodCallExpressi
 	public override int get_ArgumentCount() { }
 
 	// RVA: 0x31B6800 Offset: 0x31B6901 VA: 0x31B6800 Slot: 13
+	internal override MethodCallExpression Rewrite(Expression instance, IReadOnlyList<Expression> args) { }
+}
+
+// Namespace: System.Linq.Expressions
+internal sealed class InstanceMethodCallExpression2 : InstanceMethodCallExpression, IArgumentProvider // TypeDefIndex: 2859
+{
+	// Fields
+	private object _arg0; // 0x20
+	private readonly Expression _arg1; // 0x28
+
+	// Properties
+	public override int ArgumentCount { get; }
+
+	// Methods
+
+	// RVA: 0x31B6940 Offset: 0x31B6A41 VA: 0x31B6940
+	public void .ctor(MethodInfo method, Expression instance, Expression arg0, Expression arg1) { }
+
+	// RVA: 0x31B69B0 Offset: 0x31B6AB1 VA: 0x31B69B0 Slot: 14
+	public override Expression GetArgument(int index) { }
+
+	// RVA: 0x31B6A70 Offset: 0x31B6B71 VA: 0x31B6A70 Slot: 15
+	public override int get_ArgumentCount() { }
+
+	// RVA: 0x31B6A80 Offset: 0x31B6B81 VA: 0x31B6A80 Slot: 13
 	internal override MethodCallExpression Rewrite(Expression instance, IReadOnlyList<Expression> args) { }
 }
 

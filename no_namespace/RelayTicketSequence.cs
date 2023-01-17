@@ -1,4 +1,25 @@
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2788D0 Offset: 0x2789D1 VA: 0x2788D0
+[Serializable]
+private sealed class RelayTicketSequence.ProcUse.<>c // TypeDefIndex: 12965
+{
+	// Fields
+	public static readonly RelayTicketSequence.ProcUse.<>c <>9; // 0x0
+	public static GameSaveDataUtil.ProcessResultWithHeader <>9__1_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x21F4FA0 Offset: 0x21F50A1 VA: 0x21F4FA0
+	private static void .cctor() { }
+
+	// RVA: 0x21F5010 Offset: 0x21F5111 VA: 0x21F5010
+	public void .ctor() { }
+
+	// RVA: 0x21F5020 Offset: 0x21F5121 VA: 0x21F5020
+	internal void <SaveGlobal>b__1_0(bool isSuccess, GameSaveDataHeader header) { }
+}
+
+// Namespace: 
 private class RelayTicketSequence.ProcUse : ProcInst // TypeDefIndex: 12966
 {
 	// Methods
@@ -14,6 +35,14 @@ private class RelayTicketSequence.ProcUse : ProcInst // TypeDefIndex: 12966
 
 	// RVA: 0x1F45ED0 Offset: 0x1F45FD1 VA: 0x1F45ED0
 	public void .ctor() { }
+}
+
+// Namespace: 
+private enum RelayTicketSequence.ProcDaily.Label // TypeDefIndex: 12967
+{
+	// Fields
+	public int value__; // 0x0
+	public const RelayTicketSequence.ProcDaily.Label End = 0;
 }
 
 // Namespace: 

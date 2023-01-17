@@ -14,6 +14,22 @@ public enum GameSaveData.Types // TypeDefIndex: 13574
 }
 
 // Namespace: 
+public class GameSaveData.Tag.Writer // TypeDefIndex: 13575
+{
+	// Fields
+	private int m_FirstPos; // 0x10
+	private int m_Index; // 0x14
+
+	// Methods
+
+	// RVA: 0x1DC9500 Offset: 0x1DC9601 VA: 0x1DC9500
+	public void .ctor(Stream stream) { }
+
+	// RVA: 0x1DC97A0 Offset: 0x1DC98A1 VA: 0x1DC97A0
+	public void Write(Stream stream, int tag) { }
+}
+
+// Namespace: 
 public class GameSaveData.Tag.Reader // TypeDefIndex: 13576
 {
 	// Fields
@@ -32,6 +48,41 @@ public class GameSaveData.Tag.Reader // TypeDefIndex: 13576
 
 	// RVA: 0x1DC94B0 Offset: 0x1DC95B1 VA: 0x1DC94B0
 	public int get_Count() { }
+}
+
+// Namespace: 
+private static class GameSaveData.Tag // TypeDefIndex: 13577
+{
+	// Fields
+	public static readonly int Index; // 0x0
+	public static readonly int UserGlobal; // 0x4
+	public static readonly int RelayGlobal; // 0x8
+	public static readonly int VersusGlobal; // 0xC
+	public static readonly int User; // 0x10
+	public static readonly int God; // 0x14
+	public static readonly int GodBond; // 0x18
+	public static readonly int Unit; // 0x1C
+	public static readonly int Transporter; // 0x20
+	public static readonly int UnitReliance; // 0x24
+	public static readonly int Map; // 0x28
+	public static readonly int Hub; // 0x2C
+	public static readonly int Gmap; // 0x30
+	public static readonly int Ring; // 0x34
+	public static readonly int Time; // 0x38
+	public static readonly int Restart; // 0x3C
+	public static readonly int Profile; // 0x40
+	public static readonly int ProfileList; // 0x44
+	public static readonly int DebugParam; // 0x48
+	public static readonly int Crc32; // 0x4C
+	private const int MaxIndex = 32;
+
+	// Methods
+
+	// RVA: 0x22E6C30 Offset: 0x22E6D31 VA: 0x22E6C30
+	private static int ToInt(string s) { }
+
+	// RVA: 0x22E6CA0 Offset: 0x22E6DA1 VA: 0x22E6CA0
+	private static void .cctor() { }
 }
 
 // Namespace: 
@@ -101,6 +152,14 @@ private abstract class GameSaveData.ProcBase : ProcWaitMessageBase // TypeDefInd
 }
 
 // Namespace: 
+private enum GameSaveData.ProcRead.Label // TypeDefIndex: 13579
+{
+	// Fields
+	public int value__; // 0x0
+	public const GameSaveData.ProcRead.Label End = 0;
+}
+
+// Namespace: 
 private class GameSaveData.ProcRead : GameSaveData.ProcBase // TypeDefIndex: 13580
 {
 	// Fields
@@ -131,6 +190,14 @@ private class GameSaveData.ProcRead : GameSaveData.ProcBase // TypeDefIndex: 135
 
 	// RVA: 0x22E5D80 Offset: 0x22E5E81 VA: 0x22E5D80 Slot: 18
 	protected override bool IsShowing() { }
+}
+
+// Namespace: 
+private enum GameSaveData.ProcWrite.Label // TypeDefIndex: 13581
+{
+	// Fields
+	public int value__; // 0x0
+	public const GameSaveData.ProcWrite.Label End = 0;
 }
 
 // Namespace: 
@@ -165,6 +232,14 @@ private class GameSaveData.ProcWrite : GameSaveData.ProcBase // TypeDefIndex: 13
 
 	// RVA: 0x22E6C20 Offset: 0x22E6D21 VA: 0x22E6C20
 	private void Success() { }
+}
+
+// Namespace: 
+private enum GameSaveData.ProcDelete.Label // TypeDefIndex: 13583
+{
+	// Fields
+	public int value__; // 0x0
+	public const GameSaveData.ProcDelete.Label End = 0;
 }
 
 // Namespace: 
@@ -206,6 +281,14 @@ private class GameSaveData.ProcDelete : GameSaveData.ProcBase // TypeDefIndex: 1
 
 	// RVA: 0x22E52F0 Offset: 0x22E53F1 VA: 0x22E52F0
 	private void Success() { }
+}
+
+// Namespace: 
+private enum GameSaveData.ProcCopy.Label // TypeDefIndex: 13585
+{
+	// Fields
+	public int value__; // 0x0
+	public const GameSaveData.ProcCopy.Label End = 0;
 }
 
 // Namespace: 

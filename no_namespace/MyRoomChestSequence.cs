@@ -9,6 +9,18 @@ private enum MyRoomChestSequence.Label // TypeDefIndex: 11348
 }
 
 // Namespace: 
+private class MyRoomChestSequence.ChestConfirmDialog.PickUpRingDialogItemYes : BasicDialogItemYes // TypeDefIndex: 11349
+{
+	// Methods
+
+	// RVA: 0x21ECDC0 Offset: 0x21ECEC1 VA: 0x21ECDC0
+	public void .ctor() { }
+
+	// RVA: 0x21ECE50 Offset: 0x21ECF51 VA: 0x21ECE50 Slot: 18
+	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
 private class MyRoomChestSequence.ChestConfirmDialog.ReturnRingDialogItemYes : BasicDialogItemYes // TypeDefIndex: 11350
 {
 	// Methods
@@ -18,6 +30,15 @@ private class MyRoomChestSequence.ChestConfirmDialog.ReturnRingDialogItemYes : B
 
 	// RVA: 0x21ED060 Offset: 0x21ED161 VA: 0x21ED060 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class MyRoomChestSequence.ChestConfirmDialog.ConfirmDialogItemNo : BasicDialogItemNo // TypeDefIndex: 11351
+{
+	// Methods
+
+	// RVA: 0x21ECD30 Offset: 0x21ECE31 VA: 0x21ECD30
+	public void .ctor() { }
 }
 
 // Namespace: 

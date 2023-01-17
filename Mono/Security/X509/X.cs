@@ -1,4 +1,39 @@
 // Namespace: Mono.Security.X509
+internal sealed class X501 // TypeDefIndex: 53
+{
+	// Fields
+	private static byte[] countryName; // 0x0
+	private static byte[] organizationName; // 0x8
+	private static byte[] organizationalUnitName; // 0x10
+	private static byte[] commonName; // 0x18
+	private static byte[] localityName; // 0x20
+	private static byte[] stateOrProvinceName; // 0x28
+	private static byte[] streetAddress; // 0x30
+	private static byte[] domainComponent; // 0x38
+	private static byte[] userid; // 0x40
+	private static byte[] email; // 0x48
+	private static byte[] dnQualifier; // 0x50
+	private static byte[] title; // 0x58
+	private static byte[] surname; // 0x60
+	private static byte[] givenName; // 0x68
+	private static byte[] initial; // 0x70
+
+	// Methods
+
+	// RVA: 0x34D5760 Offset: 0x34D5861 VA: 0x34D5760
+	public static string ToString(ASN1 seq) { }
+
+	// RVA: 0x34D6090 Offset: 0x34D6191 VA: 0x34D6090
+	public static string ToString(ASN1 seq, bool reversed, string separator, bool quotes) { }
+
+	// RVA: 0x34D58A0 Offset: 0x34D59A1 VA: 0x34D58A0
+	private static void AppendEntry(StringBuilder sb, ASN1 entry, bool quotes) { }
+
+	// RVA: 0x34D6240 Offset: 0x34D6341 VA: 0x34D6240
+	private static void .cctor() { }
+}
+
+// Namespace: Mono.Security.X509
 internal class X509Certificate : ISerializable // TypeDefIndex: 54
 {
 	// Fields
@@ -120,6 +155,35 @@ internal class X509CertificateCollection : CollectionBase, IEnumerable // TypeDe
 }
 
 // Namespace: Mono.Security.X509
+internal class X509Extension // TypeDefIndex: 57
+{
+	// Fields
+	protected string extnOid; // 0x10
+	protected bool extnCritical; // 0x18
+	protected ASN1 extnValue; // 0x20
+
+	// Methods
+
+	// RVA: 0x34D9C00 Offset: 0x34D9D01 VA: 0x34D9C00
+	public void .ctor(ASN1 asn1) { }
+
+	// RVA: 0x34D9EA0 Offset: 0x34D9FA1 VA: 0x34D9EA0 Slot: 4
+	protected virtual void Decode() { }
+
+	// RVA: 0x34D9EB0 Offset: 0x34D9FB1 VA: 0x34D9EB0 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x34DA020 Offset: 0x34DA121 VA: 0x34DA020 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x34DA030 Offset: 0x34DA131 VA: 0x34DA030
+	private void WriteLine(StringBuilder sb, int n, int pos) { }
+
+	// RVA: 0x34DA280 Offset: 0x34DA381 VA: 0x34DA280 Slot: 3
+	public override string ToString() { }
+}
+
+// Namespace: Mono.Security.X509
 [DefaultMemberAttribute] // RVA: 0x46F710 Offset: 0x46F811 VA: 0x46F710
 internal sealed class X509ExtensionCollection : CollectionBase, IEnumerable // TypeDefIndex: 58
 {
@@ -136,6 +200,41 @@ internal sealed class X509ExtensionCollection : CollectionBase, IEnumerable // T
 
 	// RVA: 0x34DA380 Offset: 0x34DA481 VA: 0x34DA380 Slot: 18
 	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Namespace: Mono.Security.X509
+public sealed class X501 // TypeDefIndex: 1535
+{
+	// Fields
+	private static byte[] countryName; // 0x0
+	private static byte[] organizationName; // 0x8
+	private static byte[] organizationalUnitName; // 0x10
+	private static byte[] commonName; // 0x18
+	private static byte[] localityName; // 0x20
+	private static byte[] stateOrProvinceName; // 0x28
+	private static byte[] streetAddress; // 0x30
+	private static byte[] domainComponent; // 0x38
+	private static byte[] userid; // 0x40
+	private static byte[] email; // 0x48
+	private static byte[] dnQualifier; // 0x50
+	private static byte[] title; // 0x58
+	private static byte[] surname; // 0x60
+	private static byte[] givenName; // 0x68
+	private static byte[] initial; // 0x70
+
+	// Methods
+
+	// RVA: 0x1BD9CB0 Offset: 0x1BD9DB1 VA: 0x1BD9CB0
+	public static string ToString(ASN1 seq) { }
+
+	// RVA: 0x1BDAB90 Offset: 0x1BDAC91 VA: 0x1BDAB90
+	public static string ToString(ASN1 seq, bool reversed, string separator, bool quotes) { }
+
+	// RVA: 0x1BD9DF0 Offset: 0x1BD9EF1 VA: 0x1BD9DF0
+	private static void AppendEntry(StringBuilder sb, ASN1 entry, bool quotes) { }
+
+	// RVA: 0x1BDAD40 Offset: 0x1BDAE41 VA: 0x1BDAD40
+	private static void .cctor() { }
 }
 
 // Namespace: Mono.Security.X509
@@ -282,6 +381,35 @@ public class X509CertificateCollection : CollectionBase, IEnumerable // TypeDefI
 }
 
 // Namespace: Mono.Security.X509
+public class X509Extension // TypeDefIndex: 1539
+{
+	// Fields
+	protected string extnOid; // 0x10
+	protected bool extnCritical; // 0x18
+	protected ASN1 extnValue; // 0x20
+
+	// Methods
+
+	// RVA: 0x1BDC8F0 Offset: 0x1BDC9F1 VA: 0x1BDC8F0
+	public void .ctor(ASN1 asn1) { }
+
+	// RVA: 0x1BDCD00 Offset: 0x1BDCE01 VA: 0x1BDCD00 Slot: 4
+	protected virtual void Decode() { }
+
+	// RVA: 0x1BDCD10 Offset: 0x1BDCE11 VA: 0x1BDCD10 Slot: 0
+	public override bool Equals(object obj) { }
+
+	// RVA: 0x1BDCE60 Offset: 0x1BDCF61 VA: 0x1BDCE60 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x1BDCE70 Offset: 0x1BDCF71 VA: 0x1BDCE70
+	private void WriteLine(StringBuilder sb, int n, int pos) { }
+
+	// RVA: 0x1BDD150 Offset: 0x1BDD251 VA: 0x1BDD150 Slot: 3
+	public override string ToString() { }
+}
+
+// Namespace: Mono.Security.X509
 [DefaultMemberAttribute] // RVA: 0x858F0 Offset: 0x859F1 VA: 0x858F0
 public sealed class X509ExtensionCollection : CollectionBase, IEnumerable // TypeDefIndex: 1540
 {
@@ -299,4 +427,8 @@ public sealed class X509ExtensionCollection : CollectionBase, IEnumerable // Typ
 	// RVA: 0x1BDD240 Offset: 0x1BDD341 VA: 0x1BDD240 Slot: 18
 	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
 }
+
+// Namespace: Mono.Security.X509
+public class X509Store // TypeDefIndex: 1541
+{}
 

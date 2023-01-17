@@ -18,6 +18,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_errorstate_creat
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F6D0 Offset: 0x2F7D1 VA: 0x2F6D0
+public sealed class UnityTls.unitytls_interface_struct.unitytls_errorstate_raise_error_t : MulticastDelegate // TypeDefIndex: 2125
+{
+	// Methods
+
+	// RVA: 0x1C15C60 Offset: 0x1C15D61 VA: 0x1C15C60
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C15C80 Offset: 0x1C15D81 VA: 0x1C15C80 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_errorstate* errorState, UnityTls.unitytls_error_code errorCode) { }
+
+	// RVA: 0x1C15EC0 Offset: 0x1C15FC1 VA: 0x1C15EC0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_errorstate* errorState, UnityTls.unitytls_error_code errorCode, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C15F60 Offset: 0x1C16061 VA: 0x1C15F60 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F6F0 Offset: 0x2F7F1 VA: 0x2F6F0
 public sealed class UnityTls.unitytls_interface_struct.unitytls_key_get_ref_t : MulticastDelegate // TypeDefIndex: 2126
 {
@@ -34,6 +53,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_key_get_ref_t : 
 
 	// RVA: 0x1C164A0 Offset: 0x1C165A1 VA: 0x1C164A0 Slot: 15
 	public virtual UnityTls.unitytls_key_ref EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F710 Offset: 0x2F811 VA: 0x2F710
+public sealed class UnityTls.unitytls_interface_struct.unitytls_key_parse_der_t : MulticastDelegate // TypeDefIndex: 2127
+{
+	// Methods
+
+	// RVA: 0x1C164D0 Offset: 0x1C165D1 VA: 0x1C164D0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C164F0 Offset: 0x1C165F1 VA: 0x1C164F0 Slot: 13
+	public virtual UnityTls.unitytls_key* Invoke(byte* buffer, IntPtr bufferLen, byte* password, IntPtr passwordLen, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C16780 Offset: 0x1C16881 VA: 0x1C16780 Slot: 14
+	public virtual IAsyncResult BeginInvoke(byte* buffer, IntPtr bufferLen, byte* password, IntPtr passwordLen, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C16840 Offset: 0x1C16941 VA: 0x1C16840 Slot: 15
+	public virtual UnityTls.unitytls_key* EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -56,6 +94,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_key_parse_pem_t 
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F750 Offset: 0x2F851 VA: 0x2F750
+public sealed class UnityTls.unitytls_interface_struct.unitytls_key_free_t : MulticastDelegate // TypeDefIndex: 2129
+{
+	// Methods
+
+	// RVA: 0x1C15F70 Offset: 0x1C16071 VA: 0x1C15F70
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C15F90 Offset: 0x1C16091 VA: 0x1C15F90 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_key* key) { }
+
+	// RVA: 0x1C161C0 Offset: 0x1C162C1 VA: 0x1C161C0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_key* key, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C161F0 Offset: 0x1C162F1 VA: 0x1C161F0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F770 Offset: 0x2F871 VA: 0x2F770
 public sealed class UnityTls.unitytls_interface_struct.unitytls_x509_export_der_t : MulticastDelegate // TypeDefIndex: 2130
 {
@@ -72,6 +129,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_x509_export_der_
 
 	// RVA: 0x1C1A010 Offset: 0x1C1A111 VA: 0x1C1A010 Slot: 15
 	public virtual IntPtr EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F790 Offset: 0x2F891 VA: 0x2F790
+public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_get_ref_t : MulticastDelegate // TypeDefIndex: 2131
+{
+	// Methods
+
+	// RVA: 0x1C1ABF0 Offset: 0x1C1ACF1 VA: 0x1C1ABF0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C1AC10 Offset: 0x1C1AD11 VA: 0x1C1AC10 Slot: 13
+	public virtual UnityTls.unitytls_x509list_ref Invoke(UnityTls.unitytls_x509list* list, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C1AE60 Offset: 0x1C1AF61 VA: 0x1C1AE60 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_x509list* list, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C1AE90 Offset: 0x1C1AF91 VA: 0x1C1AE90 Slot: 15
+	public virtual UnityTls.unitytls_x509list_ref EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -94,6 +170,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_get_x50
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F7D0 Offset: 0x2F8D1 VA: 0x2F7D0
+public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_create_t : MulticastDelegate // TypeDefIndex: 2133
+{
+	// Methods
+
+	// RVA: 0x1C1A6D0 Offset: 0x1C1A7D1 VA: 0x1C1A6D0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C1A6F0 Offset: 0x1C1A7F1 VA: 0x1C1A6F0 Slot: 13
+	public virtual UnityTls.unitytls_x509list* Invoke(UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C1A920 Offset: 0x1C1AA21 VA: 0x1C1A920 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C1A950 Offset: 0x1C1AA51 VA: 0x1C1A950 Slot: 15
+	public virtual UnityTls.unitytls_x509list* EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F7F0 Offset: 0x2F8F1 VA: 0x2F7F0
 public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_append_t : MulticastDelegate // TypeDefIndex: 2134
 {
@@ -109,6 +204,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_append_
 	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_x509list* list, UnityTls.unitytls_x509_ref cert, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1C1A6C0 Offset: 0x1C1A7C1 VA: 0x1C1A6C0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F810 Offset: 0x2F911 VA: 0x2F810
+public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_append_der_t : MulticastDelegate // TypeDefIndex: 2135
+{
+	// Methods
+
+	// RVA: 0x1C1A040 Offset: 0x1C1A141 VA: 0x1C1A040
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C1A060 Offset: 0x1C1A161 VA: 0x1C1A060 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_x509list* list, byte* buffer, IntPtr bufferLen, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C1A2D0 Offset: 0x1C1A3D1 VA: 0x1C1A2D0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_x509list* list, byte* buffer, IntPtr bufferLen, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C1A380 Offset: 0x1C1A481 VA: 0x1C1A380 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -132,6 +246,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_x509list_free_t 
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F850 Offset: 0x2F951 VA: 0x2F850
+public sealed class UnityTls.unitytls_interface_struct.unitytls_x509verify_default_ca_t : MulticastDelegate // TypeDefIndex: 2137
+{
+	// Methods
+
+	// RVA: 0x1C1B260 Offset: 0x1C1B361 VA: 0x1C1B260
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C1B280 Offset: 0x1C1B381 VA: 0x1C1B280 Slot: 13
+	public virtual UnityTls.unitytls_x509verify_result Invoke(UnityTls.unitytls_x509list_ref chain, byte* cn, IntPtr cnLen, UnityTls.unitytls_x509verify_callback cb, void* userData, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C1B540 Offset: 0x1C1B641 VA: 0x1C1B540 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_x509list_ref chain, byte* cn, IntPtr cnLen, UnityTls.unitytls_x509verify_callback cb, void* userData, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C1B620 Offset: 0x1C1B721 VA: 0x1C1B620 Slot: 15
+	public virtual UnityTls.unitytls_x509verify_result EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F870 Offset: 0x2F971 VA: 0x2F870
 public sealed class UnityTls.unitytls_interface_struct.unitytls_x509verify_explicit_ca_t : MulticastDelegate // TypeDefIndex: 2138
 {
@@ -148,6 +281,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_x509verify_expli
 
 	// RVA: 0x1C1BA40 Offset: 0x1C1BB41 VA: 0x1C1BA40 Slot: 15
 	public virtual UnityTls.unitytls_x509verify_result EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F890 Offset: 0x2F991 VA: 0x2F890
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_create_server_t : MulticastDelegate // TypeDefIndex: 2139
+{
+	// Methods
+
+	// RVA: 0x1C173E0 Offset: 0x1C174E1 VA: 0x1C173E0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C17400 Offset: 0x1C17501 VA: 0x1C17400 Slot: 13
+	public virtual UnityTls.unitytls_tlsctx* Invoke(UnityTls.unitytls_tlsctx_protocolrange supportedProtocols, UnityTls.unitytls_tlsctx_callbacks callbacks, ulong certChain, ulong leafCertificateKey, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C177A0 Offset: 0x1C178A1 VA: 0x1C177A0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx_protocolrange supportedProtocols, UnityTls.unitytls_tlsctx_callbacks callbacks, ulong certChain, ulong leafCertificateKey, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C178B0 Offset: 0x1C179B1 VA: 0x1C178B0 Slot: 15
+	public virtual UnityTls.unitytls_tlsctx* EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -170,6 +322,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_create_cl
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F8D0 Offset: 0x2F9D1 VA: 0x2F8D0
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_server_require_client_authentication_t : MulticastDelegate // TypeDefIndex: 2141
+{
+	// Methods
+
+	// RVA: 0x1C189E0 Offset: 0x1C18AE1 VA: 0x1C189E0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C18A00 Offset: 0x1C18B01 VA: 0x1C18A00 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_x509list_ref clientAuthCAList, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C18C60 Offset: 0x1C18D61 VA: 0x1C18C60 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_x509list_ref clientAuthCAList, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C18D10 Offset: 0x1C18E11 VA: 0x1C18D10 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F8F0 Offset: 0x2F9F1 VA: 0x2F8F0
 public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_set_certificate_callback_t : MulticastDelegate // TypeDefIndex: 2142
 {
@@ -185,6 +356,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_set_certi
 	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_tlsctx_certificate_callback cb, void* userData, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1C18FF0 Offset: 0x1C190F1 VA: 0x1C18FF0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F910 Offset: 0x2FA11 VA: 0x2F910
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_set_trace_callback_t : MulticastDelegate // TypeDefIndex: 2143
+{
+	// Methods
+
+	// RVA: 0x1C19350 Offset: 0x1C19451 VA: 0x1C19350
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C19370 Offset: 0x1C19471 VA: 0x1C19370 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_tlsctx_trace_callback cb, void* userData, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C195E0 Offset: 0x1C196E1 VA: 0x1C195E0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_tlsctx_trace_callback cb, void* userData, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C19620 Offset: 0x1C19721 VA: 0x1C19620 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -208,6 +398,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_set_x509v
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F950 Offset: 0x2FA51 VA: 0x2F950
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_set_supported_ciphersuites_t : MulticastDelegate // TypeDefIndex: 2145
+{
+	// Methods
+
+	// RVA: 0x1C19000 Offset: 0x1C19101 VA: 0x1C19000
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C19020 Offset: 0x1C19121 VA: 0x1C19020 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_ciphersuite* supportedCiphersuites, IntPtr supportedCiphersuitesLen, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C19290 Offset: 0x1C19391 VA: 0x1C19290 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_ciphersuite* supportedCiphersuites, IntPtr supportedCiphersuitesLen, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C19340 Offset: 0x1C19441 VA: 0x1C19340 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F970 Offset: 0x2FA71 VA: 0x2F970
 public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_get_ciphersuite_t : MulticastDelegate // TypeDefIndex: 2146
 {
@@ -224,6 +433,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_get_ciphe
 
 	// RVA: 0x1C17DF0 Offset: 0x1C17EF1 VA: 0x1C17DF0 Slot: 15
 	public virtual UnityTls.unitytls_ciphersuite EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F990 Offset: 0x2FA91 VA: 0x2F990
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_get_protocol_t : MulticastDelegate // TypeDefIndex: 2147
+{
+	// Methods
+
+	// RVA: 0x1C17E20 Offset: 0x1C17F21 VA: 0x1C17E20
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C17E40 Offset: 0x1C17F41 VA: 0x1C17E40 Slot: 13
+	public virtual UnityTls.unitytls_protocol Invoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C18090 Offset: 0x1C18191 VA: 0x1C18090 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C180C0 Offset: 0x1C181C1 VA: 0x1C180C0 Slot: 15
+	public virtual UnityTls.unitytls_protocol EndInvoke(IAsyncResult result) { }
 }
 
 // Namespace: 
@@ -246,6 +474,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_process_h
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2F9D0 Offset: 0x2FAD1 VA: 0x2F9D0
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_read_t : MulticastDelegate // TypeDefIndex: 2149
+{
+	// Methods
+
+	// RVA: 0x1C18660 Offset: 0x1C18761 VA: 0x1C18660
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C18680 Offset: 0x1C18781 VA: 0x1C18680 Slot: 13
+	public virtual IntPtr Invoke(UnityTls.unitytls_tlsctx* ctx, byte* buffer, IntPtr bufferLen, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C18900 Offset: 0x1C18A01 VA: 0x1C18900 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, byte* buffer, IntPtr bufferLen, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C189B0 Offset: 0x1C18AB1 VA: 0x1C189B0 Slot: 15
+	public virtual IntPtr EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2F9F0 Offset: 0x2FAF1 VA: 0x2F9F0
 public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_write_t : MulticastDelegate // TypeDefIndex: 2150
 {
@@ -265,6 +512,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_write_t :
 }
 
 // Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2FA10 Offset: 0x2FB11 VA: 0x2FA10
+public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_notify_close_t : MulticastDelegate // TypeDefIndex: 2151
+{
+	// Methods
+
+	// RVA: 0x1C180F0 Offset: 0x1C181F1 VA: 0x1C180F0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C18110 Offset: 0x1C18211 VA: 0x1C18110 Slot: 13
+	public virtual void Invoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C18350 Offset: 0x1C18451 VA: 0x1C18350 Slot: 14
+	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C18380 Offset: 0x1C18481 VA: 0x1C18380 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 [UnmanagedFunctionPointerAttribute] // RVA: 0x2FA30 Offset: 0x2FB31 VA: 0x2FA30
 public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_free_t : MulticastDelegate // TypeDefIndex: 2152
 {
@@ -280,6 +546,25 @@ public sealed class UnityTls.unitytls_interface_struct.unitytls_tlsctx_free_t : 
 	public virtual IAsyncResult BeginInvoke(UnityTls.unitytls_tlsctx* ctx, AsyncCallback callback, object object) { }
 
 	// RVA: 0x1C17B40 Offset: 0x1C17C41 VA: 0x1C17B40 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+[UnmanagedFunctionPointerAttribute] // RVA: 0x2FA50 Offset: 0x2FB51 VA: 0x2FA50
+public sealed class UnityTls.unitytls_interface_struct.unitytls_random_generate_bytes_t : MulticastDelegate // TypeDefIndex: 2153
+{
+	// Methods
+
+	// RVA: 0x1C16BD0 Offset: 0x1C16CD1 VA: 0x1C16BD0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1C16BF0 Offset: 0x1C16CF1 VA: 0x1C16BF0 Slot: 13
+	public virtual void Invoke(byte* buffer, IntPtr bufferLen, UnityTls.unitytls_errorstate* errorState) { }
+
+	// RVA: 0x1C16E50 Offset: 0x1C16F51 VA: 0x1C16E50 Slot: 14
+	public virtual IAsyncResult BeginInvoke(byte* buffer, IntPtr bufferLen, UnityTls.unitytls_errorstate* errorState, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1C16F00 Offset: 0x1C17001 VA: 0x1C16F00 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 

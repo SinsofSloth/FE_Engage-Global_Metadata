@@ -1,4 +1,69 @@
 // Namespace: 
+[TypeForwardedFromAttribute] // RVA: 0x470BE0 Offset: 0x470CE1 VA: 0x470BE0
+[Serializable]
+public sealed class TimeZoneInfo.AdjustmentRule : IEquatable<TimeZoneInfo.AdjustmentRule>, ISerializable, IDeserializationCallback // TypeDefIndex: 317
+{
+	// Fields
+	private DateTime m_dateStart; // 0x10
+	private DateTime m_dateEnd; // 0x18
+	private TimeSpan m_daylightDelta; // 0x20
+	private TimeZoneInfo.TransitionTime m_daylightTransitionStart; // 0x28
+	private TimeZoneInfo.TransitionTime m_daylightTransitionEnd; // 0x40
+	private TimeSpan m_baseUtcOffsetDelta; // 0x58
+
+	// Properties
+	public DateTime DateStart { get; }
+	public DateTime DateEnd { get; }
+	public TimeSpan DaylightDelta { get; }
+	public TimeZoneInfo.TransitionTime DaylightTransitionStart { get; }
+	public TimeZoneInfo.TransitionTime DaylightTransitionEnd { get; }
+
+	// Methods
+
+	// RVA: 0x1C09AF0 Offset: 0x1C09BF1 VA: 0x1C09AF0
+	public DateTime get_DateStart() { }
+
+	// RVA: 0x1C09B00 Offset: 0x1C09C01 VA: 0x1C09B00
+	public DateTime get_DateEnd() { }
+
+	// RVA: 0x1C09B10 Offset: 0x1C09C11 VA: 0x1C09B10
+	public TimeSpan get_DaylightDelta() { }
+
+	// RVA: 0x1C09B20 Offset: 0x1C09C21 VA: 0x1C09B20
+	public TimeZoneInfo.TransitionTime get_DaylightTransitionStart() { }
+
+	// RVA: 0x1C09B40 Offset: 0x1C09C41 VA: 0x1C09B40
+	public TimeZoneInfo.TransitionTime get_DaylightTransitionEnd() { }
+
+	// RVA: 0x1C09B60 Offset: 0x1C09C61 VA: 0x1C09B60 Slot: 4
+	public bool Equals(TimeZoneInfo.AdjustmentRule other) { }
+
+	// RVA: 0x1C09F40 Offset: 0x1C0A041 VA: 0x1C09F40 Slot: 2
+	public override int GetHashCode() { }
+
+	// RVA: 0x1C09F50 Offset: 0x1C0A051 VA: 0x1C09F50
+	private void .ctor() { }
+
+	// RVA: 0x1C09F60 Offset: 0x1C0A061 VA: 0x1C09F60
+	public static TimeZoneInfo.AdjustmentRule CreateAdjustmentRule(DateTime dateStart, DateTime dateEnd, TimeSpan daylightDelta, TimeZoneInfo.TransitionTime daylightTransitionStart, TimeZoneInfo.TransitionTime daylightTransitionEnd) { }
+
+	// RVA: 0x1C0A4B0 Offset: 0x1C0A5B1 VA: 0x1C0A4B0
+	internal static TimeZoneInfo.AdjustmentRule CreateAdjustmentRule(DateTime dateStart, DateTime dateEnd, TimeSpan daylightDelta, TimeZoneInfo.TransitionTime daylightTransitionStart, TimeZoneInfo.TransitionTime daylightTransitionEnd, TimeSpan baseUtcOffsetDelta) { }
+
+	// RVA: 0x1C0A090 Offset: 0x1C0A191 VA: 0x1C0A090
+	private static void ValidateAdjustmentRule(DateTime dateStart, DateTime dateEnd, TimeSpan daylightDelta, TimeZoneInfo.TransitionTime daylightTransitionStart, TimeZoneInfo.TransitionTime daylightTransitionEnd) { }
+
+	// RVA: 0x1C0A510 Offset: 0x1C0A611 VA: 0x1C0A510 Slot: 6
+	private void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
+
+	// RVA: 0x1C0A630 Offset: 0x1C0A731 VA: 0x1C0A630 Slot: 5
+	private void System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo info, StreamingContext context) { }
+
+	// RVA: 0x1C0A850 Offset: 0x1C0A951 VA: 0x1C0A850
+	private void .ctor(SerializationInfo info, StreamingContext context) { }
+}
+
+// Namespace: 
 [TypeForwardedFromAttribute] // RVA: 0x470C20 Offset: 0x470D21 VA: 0x470C20
 [Serializable]
 public struct TimeZoneInfo.TransitionTime : IEquatable<TimeZoneInfo.TransitionTime>, ISerializable, IDeserializationCallback // TypeDefIndex: 318
@@ -74,6 +139,20 @@ public struct TimeZoneInfo.TransitionTime : IEquatable<TimeZoneInfo.TransitionTi
 }
 
 // Namespace: 
+internal struct TimeZoneInfo.SYSTEMTIME // TypeDefIndex: 319
+{
+	// Fields
+	internal ushort wYear; // 0x0
+	internal ushort wMonth; // 0x2
+	internal ushort wDayOfWeek; // 0x4
+	internal ushort wDay; // 0x6
+	internal ushort wHour; // 0x8
+	internal ushort wMinute; // 0xA
+	internal ushort wSecond; // 0xC
+	internal ushort wMilliseconds; // 0xE
+}
+
+// Namespace: 
 internal struct TimeZoneInfo.TIME_ZONE_INFORMATION // TypeDefIndex: 320
 {
 	// Fields
@@ -84,6 +163,15 @@ internal struct TimeZoneInfo.TIME_ZONE_INFORMATION // TypeDefIndex: 320
 	internal string DaylightName; // 0x28
 	internal TimeZoneInfo.SYSTEMTIME DaylightDate; // 0x30
 	internal int DaylightBias; // 0x40
+}
+
+// Namespace: 
+internal struct TimeZoneInfo.DYNAMIC_TIME_ZONE_INFORMATION // TypeDefIndex: 321
+{
+	// Fields
+	internal TimeZoneInfo.TIME_ZONE_INFORMATION TZI; // 0x0
+	internal string TimeZoneKeyName; // 0x48
+	internal byte DynamicDaylightTimeDisabled; // 0x50
 }
 
 // Namespace: 

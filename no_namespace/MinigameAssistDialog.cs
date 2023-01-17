@@ -17,6 +17,16 @@ public sealed class MinigameAssistDialog.DecideEventHandler : MulticastDelegate 
 }
 
 // Namespace: 
+public enum MinigameAssistDialog.MinigameType // TypeDefIndex: 11267
+{
+	// Fields
+	public int value__; // 0x0
+	public const MinigameAssistDialog.MinigameType DragonRide = 0;
+	public const MinigameAssistDialog.MinigameType Fishing = 1;
+	public const MinigameAssistDialog.MinigameType MuscleExercise = 2;
+}
+
+// Namespace: 
 public enum MinigameAssistDialog.AssistResult // TypeDefIndex: 11268
 {
 	// Fields
@@ -24,5 +34,17 @@ public enum MinigameAssistDialog.AssistResult // TypeDefIndex: 11268
 	public const MinigameAssistDialog.AssistResult Yes = 0;
 	public const MinigameAssistDialog.AssistResult No = 1;
 	public const MinigameAssistDialog.AssistResult Cancel = 2;
+}
+
+// Namespace: 
+private class MinigameAssistDialog.AssistItem : BasicMenuItem // TypeDefIndex: 11269
+{
+	// Methods
+
+	// RVA: 0x2153500 Offset: 0x2153601 VA: 0x2153500 Slot: 10
+	public override void OnBuild() { }
+
+	// RVA: 0x2153600 Offset: 0x2153701 VA: 0x2153600
+	public void .ctor(string name) { }
 }
 

@@ -1,5 +1,21 @@
 // Namespace: 
 [Serializable]
+public class Recoil.RecoilOffset.EffectorLink // TypeDefIndex: 14477
+{
+	// Fields
+	[TooltipAttribute] // RVA: 0x2A5DE0 Offset: 0x2A5EE1 VA: 0x2A5DE0
+	public FullBodyBipedEffector effector; // 0x10
+	[TooltipAttribute] // RVA: 0x2A5E20 Offset: 0x2A5F21 VA: 0x2A5E20
+	public float weight; // 0x14
+
+	// Methods
+
+	// RVA: 0x21F4030 Offset: 0x21F4131 VA: 0x21F4030
+	public void .ctor() { }
+}
+
+// Namespace: 
+[Serializable]
 public class Recoil.RecoilOffset // TypeDefIndex: 14478
 {
 	// Fields
@@ -25,5 +41,15 @@ public class Recoil.RecoilOffset // TypeDefIndex: 14478
 
 	// RVA: 0x1F2F090 Offset: 0x1F2F191 VA: 0x1F2F090
 	public void .ctor() { }
+}
+
+// Namespace: 
+[Serializable]
+public enum Recoil.Handedness // TypeDefIndex: 14479
+{
+	// Fields
+	public int value__; // 0x0
+	public const Recoil.Handedness Right = 0;
+	public const Recoil.Handedness Left = 1;
 }
 

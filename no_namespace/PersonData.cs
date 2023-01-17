@@ -16,6 +16,21 @@ public enum PersonData.Flags // TypeDefIndex: 9990
 }
 
 // Namespace: 
+public sealed class PersonData.FlagField : BitFieldTemplate32<PersonData.Flags> // TypeDefIndex: 9991
+{
+	// Methods
+
+	// RVA: 0x1F1C840 Offset: 0x1F1C941 VA: 0x1F1C840
+	public void .ctor(int f) { }
+
+	// RVA: 0x1F1C8A0 Offset: 0x1F1C9A1 VA: 0x1F1C8A0
+	public void .ctor(PersonData.Flags f) { }
+
+	// RVA: 0x1F1C900 Offset: 0x1F1CA01 VA: 0x1F1C900 Slot: 5
+	protected override int ToInt(PersonData.Flags value) { }
+}
+
+// Namespace: 
 public enum PersonData.Country // TypeDefIndex: 9992
 {
 	// Fields
@@ -30,6 +45,18 @@ public enum PersonData.Country // TypeDefIndex: 9992
 }
 
 // Namespace: 
+public enum PersonData.Timing // TypeDefIndex: 9993
+{
+	// Fields
+	public int value__; // 0x0
+	public const PersonData.Timing None = 0;
+	public const PersonData.Timing Begin = 1;
+	public const PersonData.Timing End = 2;
+	public const PersonData.Timing Chapter = 3;
+	public const PersonData.Timing Eternal = 4;
+}
+
+// Namespace: 
 public enum PersonData.Colors // TypeDefIndex: 9994
 {
 	// Fields
@@ -38,5 +65,16 @@ public enum PersonData.Colors // TypeDefIndex: 9994
 	public const PersonData.Colors Red = 1;
 	public const PersonData.Colors Green = 2;
 	public const PersonData.Colors Blue = 3;
+}
+
+// Namespace: 
+public enum PersonData.Ranks // TypeDefIndex: 9995
+{
+	// Fields
+	public int value__; // 0x0
+	public const PersonData.Ranks None = 0;
+	public const PersonData.Ranks Rank1 = 1;
+	public const PersonData.Ranks Rank2 = 2;
+	public const PersonData.Ranks Rank3 = 3;
 }
 

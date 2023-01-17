@@ -1,4 +1,18 @@
 // Namespace: 
+private enum Tokenizer.TokenSource // TypeDefIndex: 883
+{
+	// Fields
+	public int value__; // 0x0
+	public const Tokenizer.TokenSource UnicodeByteArray = 0;
+	public const Tokenizer.TokenSource UTF8ByteArray = 1;
+	public const Tokenizer.TokenSource ASCIIByteArray = 2;
+	public const Tokenizer.TokenSource CharArray = 3;
+	public const Tokenizer.TokenSource String = 4;
+	public const Tokenizer.TokenSource NestedStrings = 5;
+	public const Tokenizer.TokenSource Other = 6;
+}
+
+// Namespace: 
 [Serializable]
 internal sealed class Tokenizer.StringMaker // TypeDefIndex: 884
 {
@@ -26,6 +40,15 @@ internal sealed class Tokenizer.StringMaker // TypeDefIndex: 884
 
 	// RVA: 0x1C0CB90 Offset: 0x1C0CC91 VA: 0x1C0CB90
 	public string MakeString() { }
+}
+
+// Namespace: 
+internal interface Tokenizer.ITokenReader // TypeDefIndex: 885
+{
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract int Read();
 }
 
 // Namespace: 

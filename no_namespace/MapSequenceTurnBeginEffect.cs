@@ -39,6 +39,22 @@ private sealed class MapSequenceTurnBeginEffect.ProcTerrainDamage.<Execute>d__1 
 }
 
 // Namespace: 
+private class MapSequenceTurnBeginEffect.ProcTerrainDamage : TurnEffect // TypeDefIndex: 12459
+{
+	// Methods
+
+	// RVA: 0x2139780 Offset: 0x2139881 VA: 0x2139780
+	private static int GetDamage(Unit unit, TerrainData terrain) { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2C8F70 Offset: 0x2C9071 VA: 0x2C8F70
+	// RVA: 0x21398C0 Offset: 0x21399C1 VA: 0x21398C0 Slot: 18
+	protected override IEnumerator Execute() { }
+
+	// RVA: 0x2139940 Offset: 0x2139A41 VA: 0x2139940
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278660 Offset: 0x278761 VA: 0x278660
 private sealed class MapSequenceTurnBeginEffect.ProcSkillHeal.<Execute>d__0 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12460
 {
@@ -84,6 +100,19 @@ private sealed class MapSequenceTurnBeginEffect.ProcSkillHeal.<Execute>d__0 : IE
 }
 
 // Namespace: 
+private class MapSequenceTurnBeginEffect.ProcSkillHeal : TurnEffect // TypeDefIndex: 12461
+{
+	// Methods
+
+	[IteratorStateMachineAttribute] // RVA: 0x2C9030 Offset: 0x2C9131 VA: 0x2C9030
+	// RVA: 0x2139660 Offset: 0x2139761 VA: 0x2139660 Slot: 18
+	protected override IEnumerator Execute() { }
+
+	// RVA: 0x21396E0 Offset: 0x21397E1 VA: 0x21396E0
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278670 Offset: 0x278771 VA: 0x278670
 private sealed class MapSequenceTurnBeginEffect.ProcTerrainHeal.<Execute>d__1 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12462
 {
@@ -124,6 +153,22 @@ private sealed class MapSequenceTurnBeginEffect.ProcTerrainHeal.<Execute>d__1 : 
 }
 
 // Namespace: 
+private class MapSequenceTurnBeginEffect.ProcTerrainHeal : TurnEffect // TypeDefIndex: 12463
+{
+	// Methods
+
+	// RVA: 0x2139950 Offset: 0x2139A51 VA: 0x2139950
+	private static int GetHeal(Unit unit, TerrainData terrain) { }
+
+	[IteratorStateMachineAttribute] // RVA: 0x2C90F0 Offset: 0x2C91F1 VA: 0x2C90F0
+	// RVA: 0x21399E0 Offset: 0x2139AE1 VA: 0x21399E0 Slot: 18
+	protected override IEnumerator Execute() { }
+
+	// RVA: 0x2139A60 Offset: 0x2139B61 VA: 0x2139A60
+	public void .ctor() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278680 Offset: 0x278781 VA: 0x278680
 [Serializable]
 private sealed class MapSequenceTurnBeginEffect.ProcEngageSkill.<>c // TypeDefIndex: 12464
@@ -149,6 +194,46 @@ private sealed class MapSequenceTurnBeginEffect.ProcEngageSkill.<>c // TypeDefIn
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278690 Offset: 0x278791 VA: 0x278690
+private sealed class MapSequenceTurnBeginEffect.ProcEngageSkill.<Execute>d__0 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12465
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public MapSequenceTurnBeginEffect.ProcEngageSkill <>4__this; // 0x20
+	private Unit <unit>5__2; // 0x28
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9220 Offset: 0x2C9321 VA: 0x2C9220
+	// RVA: 0x21E71F0 Offset: 0x21E72F1 VA: 0x21E71F0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9230 Offset: 0x2C9331 VA: 0x2C9230
+	// RVA: 0x21E7220 Offset: 0x21E7321 VA: 0x21E7220 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x21E7230 Offset: 0x21E7331 VA: 0x21E7230 Slot: 6
+	private bool MoveNext() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9240 Offset: 0x2C9341 VA: 0x2C9240
+	// RVA: 0x21E7A60 Offset: 0x21E7B61 VA: 0x21E7A60 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9250 Offset: 0x2C9351 VA: 0x2C9250
+	// RVA: 0x21E7A70 Offset: 0x21E7B71 VA: 0x21E7A70 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9260 Offset: 0x2C9361 VA: 0x2C9260
+	// RVA: 0x21E7AB0 Offset: 0x21E7BB1 VA: 0x21E7AB0 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 private class MapSequenceTurnBeginEffect.ProcEngageSkill : TurnEffect // TypeDefIndex: 12466
 {
 	// Methods
@@ -162,6 +247,55 @@ private class MapSequenceTurnBeginEffect.ProcEngageSkill : TurnEffect // TypeDef
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2786A0 Offset: 0x2787A1 VA: 0x2786A0
+private sealed class MapSequenceTurnBeginEffect.ProcSkillTurn.<Execute>d__0 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12467
+{
+	// Fields
+	private int <>1__state; // 0x10
+	private object <>2__current; // 0x18
+	public MapSequenceTurnBeginEffect.ProcSkillTurn <>4__this; // 0x20
+	private Unit <unit>5__2; // 0x28
+	private List.Enumerator<SkillData> <>7__wrap2; // 0x30
+	private SkillData <skill>5__4; // 0x48
+	private MapSkill.SkillCalculator <calculator>5__5; // 0x50
+
+	// Properties
+	private object System.Collections.Generic.IEnumerator<System.Object>.Current { get; }
+	private object System.Collections.IEnumerator.Current { get; }
+
+	// Methods
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C92E0 Offset: 0x2C93E1 VA: 0x2C92E0
+	// RVA: 0x21E86D0 Offset: 0x21E87D1 VA: 0x21E86D0
+	public void .ctor(int <>1__state) { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C92F0 Offset: 0x2C93F1 VA: 0x2C92F0
+	// RVA: 0x21E8700 Offset: 0x21E8801 VA: 0x21E8700 Slot: 5
+	private void System.IDisposable.Dispose() { }
+
+	// RVA: 0x21E8850 Offset: 0x21E8951 VA: 0x21E8850 Slot: 6
+	private bool MoveNext() { }
+
+	// RVA: 0x21E87F0 Offset: 0x21E88F1 VA: 0x21E87F0
+	private void <>m__Finally1() { }
+
+	// RVA: 0x21E87D0 Offset: 0x21E88D1 VA: 0x21E87D0
+	private void <>m__Finally2() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9300 Offset: 0x2C9401 VA: 0x2C9300
+	// RVA: 0x21E8CF0 Offset: 0x21E8DF1 VA: 0x21E8CF0 Slot: 4
+	private object System.Collections.Generic.IEnumerator<System.Object>.get_Current() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9310 Offset: 0x2C9411 VA: 0x2C9310
+	// RVA: 0x21E8D00 Offset: 0x21E8E01 VA: 0x21E8D00 Slot: 8
+	private void System.Collections.IEnumerator.Reset() { }
+
+	[DebuggerHiddenAttribute] // RVA: 0x2C9320 Offset: 0x2C9421 VA: 0x2C9320
+	// RVA: 0x21E8D40 Offset: 0x21E8E41 VA: 0x21E8D40 Slot: 7
+	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
 private class MapSequenceTurnBeginEffect.ProcSkillTurn : TurnEffect // TypeDefIndex: 12468
 {
 	// Methods
@@ -172,6 +306,27 @@ private class MapSequenceTurnBeginEffect.ProcSkillTurn : TurnEffect // TypeDefIn
 
 	// RVA: 0x2139770 Offset: 0x2139871 VA: 0x2139770
 	public void .ctor() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2786B0 Offset: 0x2787B1 VA: 0x2786B0
+[Serializable]
+private sealed class MapSequenceTurnBeginEffect.ProcFullBulletAttack.<>c // TypeDefIndex: 12469
+{
+	// Fields
+	public static readonly MapSequenceTurnBeginEffect.ProcFullBulletAttack.<>c <>9; // 0x0
+	public static MapSkill.UnitFunc <>9__0_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x21E7AC0 Offset: 0x21E7BC1 VA: 0x21E7AC0
+	private static void .cctor() { }
+
+	// RVA: 0x21E7B30 Offset: 0x21E7C31 VA: 0x21E7B30
+	public void .ctor() { }
+
+	// RVA: 0x21E7B40 Offset: 0x21E7C41 VA: 0x21E7B40
+	internal void <Execute>b__0_0(int x, int z, Unit target) { }
 }
 
 // Namespace: 
@@ -211,5 +366,18 @@ private sealed class MapSequenceTurnBeginEffect.ProcFullBulletAttack.<Execute>d_
 	[DebuggerHiddenAttribute] // RVA: 0x2C93E0 Offset: 0x2C94E1 VA: 0x2C93E0
 	// RVA: 0x21E81A0 Offset: 0x21E82A1 VA: 0x21E81A0 Slot: 7
 	private object System.Collections.IEnumerator.get_Current() { }
+}
+
+// Namespace: 
+private class MapSequenceTurnBeginEffect.ProcFullBulletAttack : TurnEffect // TypeDefIndex: 12471
+{
+	// Methods
+
+	[IteratorStateMachineAttribute] // RVA: 0x2C9330 Offset: 0x2C9431 VA: 0x2C9330
+	// RVA: 0x21395D0 Offset: 0x21396D1 VA: 0x21395D0 Slot: 18
+	protected override IEnumerator Execute() { }
+
+	// RVA: 0x2139650 Offset: 0x2139751 VA: 0x2139650
+	public void .ctor() { }
 }
 

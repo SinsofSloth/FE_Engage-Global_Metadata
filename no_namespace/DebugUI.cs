@@ -45,11 +45,67 @@ public class DebugUI.Container : DebugUI.Widget, DebugUI.IContainer // TypeDefIn
 }
 
 // Namespace: 
+public class DebugUI.Foldout : DebugUI.Container, DebugUI.IValueField // TypeDefIndex: 4557
+{
+	// Fields
+	public bool opened; // 0x40
+	[CompilerGeneratedAttribute] // RVA: 0x3CAE0 Offset: 0x3CBE1 VA: 0x3CAE0
+	private string[] <columnLabels>k__BackingField; // 0x48
+
+	// Properties
+	public bool isReadOnly { get; }
+	public string[] columnLabels { get; set; }
+
+	// Methods
+
+	// RVA: 0x3550E30 Offset: 0x3550F31 VA: 0x3550E30
+	public bool get_isReadOnly() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D7B0 Offset: 0x3D8B1 VA: 0x3D7B0
+	// RVA: 0x3550E40 Offset: 0x3550F41 VA: 0x3550E40
+	public string[] get_columnLabels() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D7C0 Offset: 0x3D8C1 VA: 0x3D7C0
+	// RVA: 0x3550E50 Offset: 0x3550F51 VA: 0x3550E50
+	public void set_columnLabels(string[] value) { }
+
+	// RVA: 0x3550E60 Offset: 0x3550F61 VA: 0x3550E60
+	public void .ctor() { }
+
+	// RVA: 0x3550E70 Offset: 0x3550F71 VA: 0x3550E70
+	public void .ctor(string displayName, ObservableList<DebugUI.Widget> children, string[] columnLabels) { }
+
+	// RVA: 0x3550EA0 Offset: 0x3550FA1 VA: 0x3550EA0
+	public bool GetValue() { }
+
+	// RVA: 0x3550EB0 Offset: 0x3550FB1 VA: 0x3550EB0 Slot: 18
+	private object UnityEngine.Rendering.DebugUI.IValueField.GetValue() { }
+
+	// RVA: 0x3550F10 Offset: 0x3551011 VA: 0x3550F10 Slot: 19
+	public void SetValue(object value) { }
+
+	// RVA: 0x3550FA0 Offset: 0x35510A1 VA: 0x3550FA0 Slot: 20
+	public object ValidateValue(object value) { }
+
+	// RVA: 0x3550FB0 Offset: 0x35510B1 VA: 0x3550FB0
+	public void SetValue(bool value) { }
+}
+
+// Namespace: 
 public class DebugUI.HBox : DebugUI.Container // TypeDefIndex: 4558
 {
 	// Methods
 
 	// RVA: 0x3550FC0 Offset: 0x35510C1 VA: 0x3550FC0
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class DebugUI.VBox : DebugUI.Container // TypeDefIndex: 4559
+{
+	// Methods
+
+	// RVA: 0x35520C0 Offset: 0x35521C1 VA: 0x35520C0
 	public void .ctor() { }
 }
 
@@ -60,6 +116,37 @@ public class DebugUI.Table.Row : DebugUI.Foldout // TypeDefIndex: 4560
 
 	// RVA: 0x3553FC0 Offset: 0x35540C1 VA: 0x3553FC0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class DebugUI.Table : DebugUI.Container // TypeDefIndex: 4561
+{
+	// Fields
+	public bool isReadOnly; // 0x40
+	private bool[] m_Header; // 0x48
+
+	// Properties
+	public bool[] VisibleColumns { get; }
+
+	// Methods
+
+	// RVA: 0x3551B70 Offset: 0x3551C71 VA: 0x3551B70
+	public void .ctor() { }
+
+	// RVA: 0x3551BD0 Offset: 0x3551CD1 VA: 0x3551BD0
+	public void SetColumnVisibility(int index, bool visible) { }
+
+	// RVA: 0x3551E70 Offset: 0x3551F71 VA: 0x3551E70
+	public bool GetColumnVisibility(int index) { }
+
+	// RVA: 0x3551C20 Offset: 0x3551D21 VA: 0x3551C20
+	public bool[] get_VisibleColumns() { }
+
+	// RVA: 0x3551ED0 Offset: 0x3551FD1 VA: 0x3551ED0 Slot: 16
+	protected override void OnItemAdded(ObservableList<DebugUI.Widget> sender, ListChangedEventArgs<DebugUI.Widget> e) { }
+
+	// RVA: 0x3551F40 Offset: 0x3552041 VA: 0x3551F40 Slot: 17
+	protected override void OnItemRemoved(ObservableList<DebugUI.Widget> sender, ListChangedEventArgs<DebugUI.Widget> e) { }
 }
 
 // Namespace: 
@@ -442,6 +529,15 @@ public abstract class DebugUI.Field<T> : DebugUI.Widget, DebugUI.IValueField // 
 }
 
 // Namespace: 
+public class DebugUI.BoolField : DebugUI.Field<bool> // TypeDefIndex: 4563
+{
+	// Methods
+
+	// RVA: 0x354F5D0 Offset: 0x354F6D1 VA: 0x354F5D0
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class DebugUI.HistoryBoolField : DebugUI.BoolField // TypeDefIndex: 4564
 {
 	// Fields
@@ -473,6 +569,24 @@ public class DebugUI.HistoryBoolField : DebugUI.BoolField // TypeDefIndex: 4564
 }
 
 // Namespace: 
+public class DebugUI.IntField : DebugUI.Field<int> // TypeDefIndex: 4565
+{
+	// Fields
+	public Func<int> min; // 0x50
+	public Func<int> max; // 0x58
+	public int incStep; // 0x60
+	public int intStepMult; // 0x64
+
+	// Methods
+
+	// RVA: 0x3551260 Offset: 0x3551361 VA: 0x3551260 Slot: 15
+	public override int ValidateValue(int value) { }
+
+	// RVA: 0x3551310 Offset: 0x3551411 VA: 0x3551310
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class DebugUI.UIntField : DebugUI.Field<uint> // TypeDefIndex: 4566
 {
 	// Fields
@@ -487,6 +601,25 @@ public class DebugUI.UIntField : DebugUI.Field<uint> // TypeDefIndex: 4566
 	public override uint ValidateValue(uint value) { }
 
 	// RVA: 0x3552060 Offset: 0x3552161 VA: 0x3552060
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class DebugUI.FloatField : DebugUI.Field<float> // TypeDefIndex: 4567
+{
+	// Fields
+	public Func<float> min; // 0x50
+	public Func<float> max; // 0x58
+	public float incStep; // 0x60
+	public float incStepMult; // 0x64
+	public int decimals; // 0x68
+
+	// Methods
+
+	// RVA: 0x3550D10 Offset: 0x3550E11 VA: 0x3550D10 Slot: 15
+	public override float ValidateValue(float value) { }
+
+	// RVA: 0x3550DC0 Offset: 0x3550EC1 VA: 0x3550DC0
 	public void .ctor() { }
 }
 
@@ -513,6 +646,62 @@ private sealed class DebugUI.EnumField.<>c // TypeDefIndex: 4568
 
 	// RVA: 0x3553E60 Offset: 0x3553F61 VA: 0x3553E60
 	internal string <InitQuickSeparators>b__17_0(GUIContent x) { }
+}
+
+// Namespace: 
+public class DebugUI.EnumField : DebugUI.Field<int> // TypeDefIndex: 4569
+{
+	// Fields
+	public GUIContent[] enumNames; // 0x50
+	public int[] enumValues; // 0x58
+	internal int[] quickSeparators; // 0x60
+	internal int[] indexes; // 0x68
+	[CompilerGeneratedAttribute] // RVA: 0x3CB20 Offset: 0x3CC21 VA: 0x3CB20
+	private Func<int> <getIndex>k__BackingField; // 0x70
+	[CompilerGeneratedAttribute] // RVA: 0x3CB30 Offset: 0x3CC31 VA: 0x3CB30
+	private Action<int> <setIndex>k__BackingField; // 0x78
+
+	// Properties
+	public Func<int> getIndex { get; set; }
+	public Action<int> setIndex { get; set; }
+	public int currentIndex { get; set; }
+	public Type autoEnum { set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D830 Offset: 0x3D931 VA: 0x3D830
+	// RVA: 0x35505A0 Offset: 0x35506A1 VA: 0x35505A0
+	public Func<int> get_getIndex() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D840 Offset: 0x3D941 VA: 0x3D840
+	// RVA: 0x35505B0 Offset: 0x35506B1 VA: 0x35505B0
+	public void set_getIndex(Func<int> value) { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D850 Offset: 0x3D951 VA: 0x3D850
+	// RVA: 0x35505C0 Offset: 0x35506C1 VA: 0x35505C0
+	public Action<int> get_setIndex() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D860 Offset: 0x3D961 VA: 0x3D860
+	// RVA: 0x35505D0 Offset: 0x35506D1 VA: 0x35505D0
+	public void set_setIndex(Action<int> value) { }
+
+	// RVA: 0x35505E0 Offset: 0x35506E1 VA: 0x35505E0
+	public int get_currentIndex() { }
+
+	// RVA: 0x3550640 Offset: 0x3550741 VA: 0x3550640
+	public void set_currentIndex(int value) { }
+
+	// RVA: 0x35506A0 Offset: 0x35507A1 VA: 0x35506A0
+	public void set_autoEnum(Type value) { }
+
+	// RVA: 0x3550A60 Offset: 0x3550B61 VA: 0x3550A60
+	internal void InitQuickSeparators() { }
+
+	// RVA: 0x3550960 Offset: 0x3550A61 VA: 0x3550960
+	internal void InitIndexes() { }
+
+	// RVA: 0x3550CB0 Offset: 0x3550DB1 VA: 0x3550CB0
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -544,6 +733,27 @@ public class DebugUI.HistoryEnumField : DebugUI.EnumField // TypeDefIndex: 4570
 
 	// RVA: 0x3551200 Offset: 0x3551301 VA: 0x3551200
 	public void .ctor() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x3B5F0 Offset: 0x3B6F1 VA: 0x3B5F0
+[Serializable]
+private sealed class DebugUI.BitField.<>c // TypeDefIndex: 4571
+{
+	// Fields
+	public static readonly DebugUI.BitField.<>c <>9; // 0x0
+	public static Func<string, GUIContent> <>9__10_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x3553C80 Offset: 0x3553D81 VA: 0x3553C80
+	private static void .cctor() { }
+
+	// RVA: 0x3553CF0 Offset: 0x3553DF1 VA: 0x3553CF0
+	public void .ctor() { }
+
+	// RVA: 0x3553D00 Offset: 0x3553E01 VA: 0x3553D00
+	internal GUIContent <set_enumType>b__10_0(string x) { }
 }
 
 // Namespace: 
@@ -590,6 +800,26 @@ public class DebugUI.BitField : DebugUI.Field<Enum> // TypeDefIndex: 4572
 }
 
 // Namespace: 
+public class DebugUI.ColorField : DebugUI.Field<Color> // TypeDefIndex: 4573
+{
+	// Fields
+	public bool hdr; // 0x50
+	public bool showAlpha; // 0x51
+	public bool showPicker; // 0x52
+	public float incStep; // 0x54
+	public float incStepMult; // 0x58
+	public int decimals; // 0x5C
+
+	// Methods
+
+	// RVA: 0x354F670 Offset: 0x354F771 VA: 0x354F670 Slot: 15
+	public override Color ValidateValue(Color value) { }
+
+	// RVA: 0x354F700 Offset: 0x354F801 VA: 0x354F700
+	public void .ctor() { }
+}
+
+// Namespace: 
 public class DebugUI.Vector2Field : DebugUI.Field<Vector2> // TypeDefIndex: 4574
 {
 	// Fields
@@ -600,6 +830,20 @@ public class DebugUI.Vector2Field : DebugUI.Field<Vector2> // TypeDefIndex: 4574
 	// Methods
 
 	// RVA: 0x3552210 Offset: 0x3552311 VA: 0x3552210
+	public void .ctor() { }
+}
+
+// Namespace: 
+public class DebugUI.Vector3Field : DebugUI.Field<Vector3> // TypeDefIndex: 4575
+{
+	// Fields
+	public float incStep; // 0x50
+	public float incStepMult; // 0x54
+	public int decimals; // 0x58
+
+	// Methods
+
+	// RVA: 0x3552280 Offset: 0x3552381 VA: 0x3552280
 	public void .ctor() { }
 }
 
@@ -615,6 +859,27 @@ public class DebugUI.Vector4Field : DebugUI.Field<Vector4> // TypeDefIndex: 4576
 
 	// RVA: 0x35522F0 Offset: 0x35523F1 VA: 0x35522F0
 	public void .ctor() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x3B600 Offset: 0x3B701 VA: 0x3B600
+[Serializable]
+private sealed class DebugUI.Panel.<>c // TypeDefIndex: 4577
+{
+	// Fields
+	public static readonly DebugUI.Panel.<>c <>9; // 0x0
+	public static Action<DebugUI.Panel> <>9__29_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x3553F30 Offset: 0x3554031 VA: 0x3553F30
+	private static void .cctor() { }
+
+	// RVA: 0x3553FA0 Offset: 0x35540A1 VA: 0x3553FA0
+	public void .ctor() { }
+
+	// RVA: 0x3553FB0 Offset: 0x35540B1 VA: 0x3553FB0
+	internal void <.ctor>b__29_0(DebugUI.Panel <p0>) { }
 }
 
 // Namespace: 
@@ -720,6 +985,18 @@ public class DebugUI.Panel : DebugUI.IContainer, IComparable<DebugUI.Panel> // T
 }
 
 // Namespace: 
+[FlagsAttribute] // RVA: 0x3B610 Offset: 0x3B711 VA: 0x3B610
+public enum DebugUI.Flags // TypeDefIndex: 4579
+{
+	// Fields
+	public int value__; // 0x0
+	public const DebugUI.Flags None = 0;
+	public const DebugUI.Flags EditorOnly = 2;
+	public const DebugUI.Flags RuntimeOnly = 4;
+	public const DebugUI.Flags EditorForceUpdate = 8;
+}
+
+// Namespace: 
 public abstract class DebugUI.Widget // TypeDefIndex: 4580
 {
 	// Fields
@@ -800,6 +1077,29 @@ public abstract class DebugUI.Widget // TypeDefIndex: 4580
 }
 
 // Namespace: 
+public interface DebugUI.IContainer // TypeDefIndex: 4581
+{
+	// Properties
+	public abstract ObservableList<DebugUI.Widget> children { get; }
+	public abstract string displayName { get; set; }
+	public abstract string queryPath { get; }
+
+	// Methods
+
+	// RVA: -1 Offset: -1 Slot: 0
+	public abstract ObservableList<DebugUI.Widget> get_children();
+
+	// RVA: -1 Offset: -1 Slot: 1
+	public abstract string get_displayName();
+
+	// RVA: -1 Offset: -1 Slot: 2
+	public abstract void set_displayName(string value);
+
+	// RVA: -1 Offset: -1 Slot: 3
+	public abstract string get_queryPath();
+}
+
+// Namespace: 
 public interface DebugUI.IValueField // TypeDefIndex: 4582
 {
 	// Methods
@@ -812,6 +1112,30 @@ public interface DebugUI.IValueField // TypeDefIndex: 4582
 
 	// RVA: -1 Offset: -1 Slot: 2
 	public abstract object ValidateValue(object value);
+}
+
+// Namespace: 
+public class DebugUI.Button : DebugUI.Widget // TypeDefIndex: 4583
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x3CBF0 Offset: 0x3CCF1 VA: 0x3CBF0
+	private Action <action>k__BackingField; // 0x38
+
+	// Properties
+	public Action action { get; set; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D9D0 Offset: 0x3DAD1 VA: 0x3D9D0
+	// RVA: 0x354F630 Offset: 0x354F731 VA: 0x354F630
+	public Action get_action() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x3D9E0 Offset: 0x3DAE1 VA: 0x3D9E0
+	// RVA: 0x354F640 Offset: 0x354F741 VA: 0x354F640
+	public void set_action(Action value) { }
+
+	// RVA: 0x354F650 Offset: 0x354F751 VA: 0x354F650
+	public void .ctor() { }
 }
 
 // Namespace: 

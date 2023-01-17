@@ -1,4 +1,12 @@
 // Namespace: 
+private enum MapSequenceNet.ProcDownload.Label // TypeDefIndex: 12435
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapSequenceNet.ProcDownload.Label End = 0;
+}
+
+// Namespace: 
 private class MapSequenceNet.ProcDownload : ProcInst // TypeDefIndex: 12436
 {
 	// Methods
@@ -14,6 +22,15 @@ private class MapSequenceNet.ProcDownload : ProcInst // TypeDefIndex: 12436
 
 	// RVA: 0x2138690 Offset: 0x2138791 VA: 0x2138690
 	public void .ctor() { }
+}
+
+// Namespace: 
+private enum MapSequenceNet.ProcUpload.Label // TypeDefIndex: 12437
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapSequenceNet.ProcUpload.Label Ranking = 0;
+	public const MapSequenceNet.ProcUpload.Label End = 1;
 }
 
 // Namespace: 
@@ -37,6 +54,21 @@ private class MapSequenceNet.ProcUpload : ProcInst // TypeDefIndex: 12438
 	public static void CreateBind(ProcInst super) { }
 
 	// RVA: 0x2138E70 Offset: 0x2138F71 VA: 0x2138E70
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class MapSequenceNet.ProcShowError.ProcDelayedHideError : ProcInst // TypeDefIndex: 12439
+{
+	// Methods
+
+	// RVA: 0x21E6DF0 Offset: 0x21E6EF1 VA: 0x21E6DF0
+	private void Hide() { }
+
+	// RVA: 0x21E6E00 Offset: 0x21E6F01 VA: 0x21E6E00
+	public static void Create() { }
+
+	// RVA: 0x21E7000 Offset: 0x21E7101 VA: 0x21E7000
 	public void .ctor() { }
 }
 

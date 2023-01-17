@@ -1,4 +1,16 @@
 // Namespace: 
+internal enum UnityWebRequest.UnityWebRequestMethod // TypeDefIndex: 4441
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnityWebRequest.UnityWebRequestMethod Get = 0;
+	public const UnityWebRequest.UnityWebRequestMethod Post = 1;
+	public const UnityWebRequest.UnityWebRequestMethod Put = 2;
+	public const UnityWebRequest.UnityWebRequestMethod Head = 3;
+	public const UnityWebRequest.UnityWebRequestMethod Custom = 4;
+}
+
+// Namespace: 
 internal enum UnityWebRequest.UnityWebRequestError // TypeDefIndex: 4442
 {
 	// Fields
@@ -32,5 +44,17 @@ internal enum UnityWebRequest.UnityWebRequestError // TypeDefIndex: 4442
 	public const UnityWebRequest.UnityWebRequestError LoginFailed = 26;
 	public const UnityWebRequest.UnityWebRequestError SSLShutdownFailed = 27;
 	public const UnityWebRequest.UnityWebRequestError NoInternetConnection = 28;
+}
+
+// Namespace: 
+public enum UnityWebRequest.Result // TypeDefIndex: 4443
+{
+	// Fields
+	public int value__; // 0x0
+	public const UnityWebRequest.Result InProgress = 0;
+	public const UnityWebRequest.Result Success = 1;
+	public const UnityWebRequest.Result ConnectionError = 2;
+	public const UnityWebRequest.Result ProtocolError = 3;
+	public const UnityWebRequest.Result DataProcessingError = 4;
 }
 

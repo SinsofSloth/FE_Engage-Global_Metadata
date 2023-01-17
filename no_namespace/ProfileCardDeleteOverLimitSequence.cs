@@ -1,4 +1,13 @@
 // Namespace: 
+private enum ProfileCardDeleteOverLimitSequence.Label // TypeDefIndex: 11577
+{
+	// Fields
+	public int value__; // 0x0
+	public const ProfileCardDeleteOverLimitSequence.Label ListMenu = 0;
+	public const ProfileCardDeleteOverLimitSequence.Label End = 1;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x277990 Offset: 0x277A91 VA: 0x277990
 private sealed class ProfileCardDeleteOverLimitSequence.<>c__DisplayClass12_0 // TypeDefIndex: 11578
 {

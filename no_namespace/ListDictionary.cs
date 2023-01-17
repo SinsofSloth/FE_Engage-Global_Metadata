@@ -38,6 +38,34 @@ private class ListDictionary.NodeEnumerator : IDictionaryEnumerator, IEnumerator
 }
 
 // Namespace: 
+private class ListDictionary.NodeKeyValueCollection.NodeKeyValueEnumerator : IEnumerator // TypeDefIndex: 2393
+{
+	// Fields
+	private ListDictionary list; // 0x10
+	private ListDictionary.DictionaryNode current; // 0x18
+	private int version; // 0x20
+	private bool isKeys; // 0x24
+	private bool start; // 0x25
+
+	// Properties
+	public object Current { get; }
+
+	// Methods
+
+	// RVA: 0x1C15290 Offset: 0x1C15391 VA: 0x1C15290
+	public void .ctor(ListDictionary list, bool isKeys) { }
+
+	// RVA: 0x1C15300 Offset: 0x1C15401 VA: 0x1C15300 Slot: 5
+	public object get_Current() { }
+
+	// RVA: 0x1C15390 Offset: 0x1C15491 VA: 0x1C15390 Slot: 4
+	public bool MoveNext() { }
+
+	// RVA: 0x1C15460 Offset: 0x1C15561 VA: 0x1C15460 Slot: 6
+	public void Reset() { }
+}
+
+// Namespace: 
 private class ListDictionary.NodeKeyValueCollection : ICollection, IEnumerable // TypeDefIndex: 2394
 {
 	// Fields
@@ -68,5 +96,20 @@ private class ListDictionary.NodeKeyValueCollection : ICollection, IEnumerable /
 
 	// RVA: 0x191B6C0 Offset: 0x191B7C1 VA: 0x191B6C0 Slot: 8
 	private IEnumerator System.Collections.IEnumerable.GetEnumerator() { }
+}
+
+// Namespace: 
+[Serializable]
+private class ListDictionary.DictionaryNode // TypeDefIndex: 2395
+{
+	// Fields
+	public object key; // 0x10
+	public object value; // 0x18
+	public ListDictionary.DictionaryNode next; // 0x20
+
+	// Methods
+
+	// RVA: 0x191B120 Offset: 0x191B221 VA: 0x191B120
+	public void .ctor() { }
 }
 

@@ -1,4 +1,17 @@
 // Namespace: 
+public enum MapTarget.ActionMask // TypeDefIndex: 12239
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapTarget.ActionMask None = 0;
+	public const MapTarget.ActionMask AttackOnly = 1;
+	public const MapTarget.ActionMask MagicOnly = 2;
+	public const MapTarget.ActionMask RodOnly = 3;
+	public const MapTarget.ActionMask CursorOnly = 4;
+	public const MapTarget.ActionMask DirectOnly = 5;
+}
+
+// Namespace: 
 public class MapTarget.Data // TypeDefIndex: 12240
 {
 	// Fields
@@ -92,6 +105,27 @@ public class MapTarget.Data // TypeDefIndex: 12240
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2780C0 Offset: 0x2781C1 VA: 0x2780C0
+[Serializable]
+private sealed class MapTarget.DataSet.<>c // TypeDefIndex: 12241
+{
+	// Fields
+	public static readonly MapTarget.DataSet.<>c <>9; // 0x0
+	public static Comparison<MapTarget.Data> <>9__22_0; // 0x8
+
+	// Methods
+
+	// RVA: 0x21EC780 Offset: 0x21EC881 VA: 0x21EC780
+	private static void .cctor() { }
+
+	// RVA: 0x21EC7F0 Offset: 0x21EC8F1 VA: 0x21EC7F0
+	public void .ctor() { }
+
+	// RVA: 0x21EC800 Offset: 0x21EC901 VA: 0x21EC800
+	internal int <Sort>b__22_0(MapTarget.Data a, MapTarget.Data b) { }
+}
+
+// Namespace: 
 [DefaultMemberAttribute] // RVA: 0x278080 Offset: 0x278181 VA: 0x278080
 public class MapTarget.DataSet // TypeDefIndex: 12242
 {
@@ -164,6 +198,16 @@ public class MapTarget.DataSet // TypeDefIndex: 12242
 }
 
 // Namespace: 
+public enum MapTarget.RangeType // TypeDefIndex: 12243
+{
+	// Fields
+	public int value__; // 0x0
+	public const MapTarget.RangeType None = 0;
+	public const MapTarget.RangeType UnitItems = 1;
+	public const MapTarget.RangeType SpecifiedItem = 2;
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2780D0 Offset: 0x2781D1 VA: 0x2780D0
 private sealed class MapTarget.<>c__DisplayClass82_0 // TypeDefIndex: 12244
 {
@@ -180,6 +224,24 @@ private sealed class MapTarget.<>c__DisplayClass82_0 // TypeDefIndex: 12244
 
 	// RVA: 0x213F380 Offset: 0x213F481 VA: 0x213F380
 	internal void <EnumerateAttack>b__1(int x, int z, TerrainData terrain) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2780E0 Offset: 0x2781E1 VA: 0x2780E0
+private sealed class MapTarget.<>c__DisplayClass95_0 // TypeDefIndex: 12245
+{
+	// Fields
+	public MapTarget <>4__this; // 0x10
+	public uint itemMask; // 0x18
+	public int itemIdnex; // 0x1C
+
+	// Methods
+
+	// RVA: 0x213F390 Offset: 0x213F491 VA: 0x213F390
+	public void .ctor() { }
+
+	// RVA: 0x213F3A0 Offset: 0x213F4A1 VA: 0x213F3A0
+	internal void <EnumerateEnchant>b__0(Unit target, int x, int z) { }
 }
 
 // Namespace: 

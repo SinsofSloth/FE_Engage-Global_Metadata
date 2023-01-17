@@ -9,6 +9,15 @@ public enum EffectData.Modes // TypeDefIndex: 9878
 }
 
 // Namespace: 
+public enum EffectData.Types // TypeDefIndex: 9879
+{
+	// Fields
+	public int value__; // 0x0
+	public const EffectData.Types Once = 0;
+	public const EffectData.Types Endless = 1;
+}
+
+// Namespace: 
 public enum EffectData.Residents // TypeDefIndex: 9880
 {
 	// Fields

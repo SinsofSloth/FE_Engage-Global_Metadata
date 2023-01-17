@@ -52,6 +52,22 @@ private sealed class FSMBuilderStandard.<>c // TypeDefIndex: 8484
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2735E0 Offset: 0x2736E1 VA: 0x2735E0
+private sealed class FSMBuilderStandard.<>c__DisplayClass1_0 // TypeDefIndex: 8485
+{
+	// Fields
+	public Character emblem; // 0x10
+
+	// Methods
+
+	// RVA: 0x22D7840 Offset: 0x22D7941 VA: 0x22D7840
+	public void .ctor() { }
+
+	// RVA: 0x22D8AE0 Offset: 0x22D8BE1 VA: 0x22D8AE0
+	internal void <BuildEnd_BothAlive>b__1() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2735F0 Offset: 0x2736F1 VA: 0x2735F0
 private sealed class FSMBuilderStandard.<>c__DisplayClass2_0 // TypeDefIndex: 8486
 {
@@ -68,11 +84,47 @@ private sealed class FSMBuilderStandard.<>c__DisplayClass2_0 // TypeDefIndex: 84
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273600 Offset: 0x273701 VA: 0x273600
+private sealed class FSMBuilderStandard.<>c__DisplayClass4_0 // TypeDefIndex: 8487
+{
+	// Fields
+	public Character g; // 0x10
+
+	// Methods
+
+	// RVA: 0x22D7DC0 Offset: 0x22D7EC1 VA: 0x22D7DC0
+	public void .ctor() { }
+
+	// RVA: 0x22D8C00 Offset: 0x22D8D01 VA: 0x22D8C00
+	internal void <BuildEnd_EnemyKilled>b__1() { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x273610 Offset: 0x273711 VA: 0x273610
 private struct FSMBuilderStandard.<>c__DisplayClass8_0 // TypeDefIndex: 8488
 {
 	// Fields
 	public float startRate; // 0x0
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273620 Offset: 0x273721 VA: 0x273620
+private sealed class FSMBuilderStandard.<>c__DisplayClass8_1 // TypeDefIndex: 8489
+{
+	// Fields
+	public float time; // 0x10
+	public float start; // 0x14
+
+	// Methods
+
+	// RVA: 0x22D8C50 Offset: 0x22D8D51 VA: 0x22D8C50
+	public void .ctor() { }
+
+	// RVA: 0x22D8C60 Offset: 0x22D8D61 VA: 0x22D8C60
+	internal bool <Start_Training>b__2(Character _) { }
+
+	// RVA: 0x22D8D20 Offset: 0x22D8E21 VA: 0x22D8D20
+	internal void <Start_Training>b__3() { }
 }
 
 // Namespace: 
@@ -94,6 +146,36 @@ private sealed class FSMBuilderStandard.<>c__DisplayClass17_0 // TypeDefIndex: 8
 
 	// RVA: 0x22D80B0 Offset: 0x22D81B1 VA: 0x22D80B0
 	internal void <BuildChainAttackPhase>b__5() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273640 Offset: 0x273741 VA: 0x273640
+private sealed class FSMBuilderStandard.<>c__DisplayClass17_1 // TypeDefIndex: 8491
+{
+	// Fields
+	public Character chain; // 0x10
+	public FSMBuilderStandard.<>c__DisplayClass17_0 CS$<>8__locals1; // 0x18
+	public Action <>9__4; // 0x20
+
+	// Methods
+
+	// RVA: 0x22D81A0 Offset: 0x22D82A1 VA: 0x22D81A0
+	public void .ctor() { }
+
+	// RVA: 0x22D81B0 Offset: 0x22D82B1 VA: 0x22D81B0
+	internal void <BuildChainAttackPhase>b__0() { }
+
+	// RVA: 0x22D82D0 Offset: 0x22D83D1 VA: 0x22D82D0
+	internal bool <BuildChainAttackPhase>b__1(Character _) { }
+
+	// RVA: 0x22D8330 Offset: 0x22D8431 VA: 0x22D8330
+	internal bool <BuildChainAttackPhase>b__2(Character _) { }
+
+	// RVA: 0x22D8360 Offset: 0x22D8461 VA: 0x22D8360
+	internal void <BuildChainAttackPhase>b__3() { }
+
+	// RVA: 0x22D84E0 Offset: 0x22D85E1 VA: 0x22D84E0
+	internal void <BuildChainAttackPhase>b__4() { }
 }
 
 // Namespace: 
@@ -122,5 +204,22 @@ private sealed class FSMBuilderStandard.<>c__DisplayClass18_0 // TypeDefIndex: 8
 
 	// RVA: 0x22D8970 Offset: 0x22D8A71 VA: 0x22D8970
 	internal void <BuildChainFSM>b__5(Unit _) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x273660 Offset: 0x273761 VA: 0x273660
+private sealed class FSMBuilderStandard.<>c__DisplayClass18_1 // TypeDefIndex: 8493
+{
+	// Fields
+	public Character oldChara; // 0x10
+	public FSMBuilderStandard.<>c__DisplayClass18_0 CS$<>8__locals1; // 0x18
+
+	// Methods
+
+	// RVA: 0x22D8850 Offset: 0x22D8951 VA: 0x22D8850
+	public void .ctor() { }
+
+	// RVA: 0x22D89E0 Offset: 0x22D8AE1 VA: 0x22D89E0
+	internal void <BuildChainFSM>b__4(Unit _) { }
 }
 

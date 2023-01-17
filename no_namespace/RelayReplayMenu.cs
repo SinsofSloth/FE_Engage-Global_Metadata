@@ -1,4 +1,22 @@
 // Namespace: 
+public sealed class RelayReplayMenu.SelectEventHandler : MulticastDelegate // TypeDefIndex: 12893
+{
+	// Methods
+
+	// RVA: 0x1F41E30 Offset: 0x1F41F31 VA: 0x1F41E30
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F41830 Offset: 0x1F41931 VA: 0x1F41830 Slot: 13
+	public virtual void Invoke(RelayServerMetaData metaData) { }
+
+	// RVA: 0x1F41E50 Offset: 0x1F41F51 VA: 0x1F41E50 Slot: 14
+	public virtual IAsyncResult BeginInvoke(RelayServerMetaData metaData, AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F41E80 Offset: 0x1F41F81 VA: 0x1F41E80 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 public sealed class RelayReplayMenu.DecideEventHandler : MulticastDelegate // TypeDefIndex: 12894
 {
 	// Methods
@@ -13,6 +31,24 @@ public sealed class RelayReplayMenu.DecideEventHandler : MulticastDelegate // Ty
 	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
 
 	// RVA: 0x1F40ED0 Offset: 0x1F40FD1 VA: 0x1F40ED0 Slot: 15
+	public virtual void EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
+public sealed class RelayReplayMenu.RequestCloseEventHandler : MulticastDelegate // TypeDefIndex: 12895
+{
+	// Methods
+
+	// RVA: 0x1F41BC0 Offset: 0x1F41CC1 VA: 0x1F41BC0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x1F41BE0 Offset: 0x1F41CE1 VA: 0x1F41BE0 Slot: 13
+	public virtual void Invoke() { }
+
+	// RVA: 0x1F41DF0 Offset: 0x1F41EF1 VA: 0x1F41DF0 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x1F41E20 Offset: 0x1F41F21 VA: 0x1F41E20 Slot: 15
 	public virtual void EndInvoke(IAsyncResult result) { }
 }
 
@@ -53,6 +89,24 @@ public class RelayReplayMenu.ReplayMenuItem : BasicMenuItem // TypeDefIndex: 128
 }
 
 // Namespace: 
+public sealed class RelayReplayMenu.RelayConfirmReplayDialog.DialogItem.DialogDecideEventHandler : MulticastDelegate // TypeDefIndex: 12897
+{
+	// Methods
+
+	// RVA: 0x2D7DBD0 Offset: 0x2D7DCD1 VA: 0x2D7DBD0
+	public void .ctor(object object, IntPtr method) { }
+
+	// RVA: 0x2D7DBF0 Offset: 0x2D7DCF1 VA: 0x2D7DBF0 Slot: 13
+	public virtual BasicMenu.Result Invoke() { }
+
+	// RVA: 0x2D7DE00 Offset: 0x2D7DF01 VA: 0x2D7DE00 Slot: 14
+	public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object) { }
+
+	// RVA: 0x2D7DE30 Offset: 0x2D7DF31 VA: 0x2D7DE30 Slot: 15
+	public virtual BasicMenu.Result EndInvoke(IAsyncResult result) { }
+}
+
+// Namespace: 
 private class RelayReplayMenu.RelayConfirmReplayDialog.DialogItem : BasicDialogItem // TypeDefIndex: 12898
 {
 	// Fields
@@ -65,6 +119,29 @@ private class RelayReplayMenu.RelayConfirmReplayDialog.DialogItem : BasicDialogI
 
 	// RVA: 0x21F4F70 Offset: 0x21F5071 VA: 0x21F4F70 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2787F0 Offset: 0x2788F1 VA: 0x2787F0
+private sealed class RelayReplayMenu.RelayConfirmReplayDialog.<>c__DisplayClass1_0 // TypeDefIndex: 12899
+{
+	// Fields
+	public RelayServerMetaData metaData; // 0x10
+	public RelayReplayMenu.DecideEventHandler decide; // 0x18
+
+	// Methods
+
+	// RVA: 0x21F4D10 Offset: 0x21F4E11 VA: 0x21F4D10
+	public void .ctor() { }
+
+	// RVA: 0x21F4D20 Offset: 0x21F4E21 VA: 0x21F4D20
+	internal BasicMenu.Result <CreateBind>b__0() { }
+
+	// RVA: 0x21F4DD0 Offset: 0x21F4ED1 VA: 0x21F4DD0
+	internal BasicMenu.Result <CreateBind>b__1() { }
+
+	// RVA: 0x21F4E80 Offset: 0x21F4F81 VA: 0x21F4E80
+	internal BasicMenu.Result <CreateBind>b__2() { }
 }
 
 // Namespace: 
@@ -86,5 +163,17 @@ private sealed class RelayReplayMenu.RelayConfirmReplayDialog.<>c // TypeDefInde
 
 	// RVA: 0x21F4D00 Offset: 0x21F4E01 VA: 0x21F4D00
 	internal BasicMenu.Result <CreateBind>b__1_3() { }
+}
+
+// Namespace: 
+private class RelayReplayMenu.RelayConfirmReplayDialog : BasicDialog // TypeDefIndex: 12901
+{
+	// Methods
+
+	// RVA: 0x1F40EE0 Offset: 0x1F40FE1 VA: 0x1F40EE0
+	public void .ctor(List<BasicMenuItem> menuItemList, BasicDialogContent menuContent) { }
+
+	// RVA: 0x1F40EF0 Offset: 0x1F40FF1 VA: 0x1F40EF0
+	public static void CreateBind(ProcInst super, RelayServerMetaData metaData, RelayReplayMenu.DecideEventHandler decide) { }
 }
 

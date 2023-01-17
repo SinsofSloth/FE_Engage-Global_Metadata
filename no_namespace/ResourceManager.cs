@@ -8,6 +8,18 @@ internal class ResourceManager.CultureNameResourceSetPair // TypeDefIndex: 490
 }
 
 // Namespace: 
+internal class ResourceManager.ResourceManagerMediator // TypeDefIndex: 491
+{
+	// Fields
+	private ResourceManager _rm; // 0x10
+
+	// Methods
+
+	// RVA: 0x1C010B0 Offset: 0x1C011B1 VA: 0x1C010B0
+	internal void .ctor(ResourceManager rm) { }
+}
+
+// Namespace: 
 public enum ResourceManager.DiagnosticEventType // TypeDefIndex: 5540
 {
 	// Fields
@@ -18,6 +30,67 @@ public enum ResourceManager.DiagnosticEventType // TypeDefIndex: 5540
 	public const ResourceManager.DiagnosticEventType AsyncOperationComplete = 3;
 	public const ResourceManager.DiagnosticEventType AsyncOperationReferenceCount = 4;
 	public const ResourceManager.DiagnosticEventType AsyncOperationDestroy = 5;
+}
+
+// Namespace: 
+public struct ResourceManager.DiagnosticEventContext // TypeDefIndex: 5541
+{
+	// Fields
+	[CompilerGeneratedAttribute] // RVA: 0x72580 Offset: 0x72681 VA: 0x72580
+	private readonly AsyncOperationHandle <OperationHandle>k__BackingField; // 0x0
+	[CompilerGeneratedAttribute] // RVA: 0x72590 Offset: 0x72691 VA: 0x72590
+	private readonly ResourceManager.DiagnosticEventType <Type>k__BackingField; // 0x18
+	[CompilerGeneratedAttribute] // RVA: 0x725A0 Offset: 0x726A1 VA: 0x725A0
+	private readonly int <EventValue>k__BackingField; // 0x1C
+	[CompilerGeneratedAttribute] // RVA: 0x725B0 Offset: 0x726B1 VA: 0x725B0
+	private readonly IResourceLocation <Location>k__BackingField; // 0x20
+	[CompilerGeneratedAttribute] // RVA: 0x725C0 Offset: 0x726C1 VA: 0x725C0
+	private readonly object <Context>k__BackingField; // 0x28
+	[CompilerGeneratedAttribute] // RVA: 0x725D0 Offset: 0x726D1 VA: 0x725D0
+	private readonly string <Error>k__BackingField; // 0x30
+
+	// Properties
+	public AsyncOperationHandle OperationHandle { get; }
+	public ResourceManager.DiagnosticEventType Type { get; }
+	public int EventValue { get; }
+	public IResourceLocation Location { get; }
+	public object Context { get; }
+	public string Error { get; }
+
+	// Methods
+
+	[CompilerGeneratedAttribute] // RVA: 0x72C30 Offset: 0x72D31 VA: 0x72C30
+	[IsReadOnlyAttribute] // RVA: 0x72C30 Offset: 0x72D31 VA: 0x72C30
+	// RVA: 0x3639810 Offset: 0x3639911 VA: 0x3639810
+	public AsyncOperationHandle get_OperationHandle() { }
+
+	[IsReadOnlyAttribute] // RVA: 0x72C70 Offset: 0x72D71 VA: 0x72C70
+	[CompilerGeneratedAttribute] // RVA: 0x72C70 Offset: 0x72D71 VA: 0x72C70
+	// RVA: 0x3639830 Offset: 0x3639931 VA: 0x3639830
+	public ResourceManager.DiagnosticEventType get_Type() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x72CB0 Offset: 0x72DB1 VA: 0x72CB0
+	[IsReadOnlyAttribute] // RVA: 0x72CB0 Offset: 0x72DB1 VA: 0x72CB0
+	// RVA: 0x3639840 Offset: 0x3639941 VA: 0x3639840
+	public int get_EventValue() { }
+
+	[IsReadOnlyAttribute] // RVA: 0x72CF0 Offset: 0x72DF1 VA: 0x72CF0
+	[CompilerGeneratedAttribute] // RVA: 0x72CF0 Offset: 0x72DF1 VA: 0x72CF0
+	// RVA: 0x3639850 Offset: 0x3639951 VA: 0x3639850
+	public IResourceLocation get_Location() { }
+
+	[IsReadOnlyAttribute] // RVA: 0x72D30 Offset: 0x72E31 VA: 0x72D30
+	[CompilerGeneratedAttribute] // RVA: 0x72D30 Offset: 0x72E31 VA: 0x72D30
+	// RVA: 0x3639860 Offset: 0x3639961 VA: 0x3639860
+	public object get_Context() { }
+
+	[IsReadOnlyAttribute] // RVA: 0x72D70 Offset: 0x72E71 VA: 0x72D70
+	[CompilerGeneratedAttribute] // RVA: 0x72D70 Offset: 0x72E71 VA: 0x72D70
+	// RVA: 0x3639870 Offset: 0x3639971 VA: 0x3639870
+	public string get_Error() { }
+
+	// RVA: 0x3639880 Offset: 0x3639981 VA: 0x3639880
+	public void .ctor(AsyncOperationHandle op, ResourceManager.DiagnosticEventType type, int eventValue = 0, string error, object context) { }
 }
 
 // Namespace: 
@@ -134,6 +207,53 @@ private class ResourceManager.CompletedOperation<TObject> : AsyncOperationBase<T
 	|-RVA: 0x2500F20 Offset: 0x2501021 VA: 0x2500F20
 	|-ResourceManager.CompletedOperation<SceneInstance>.Execute
 	*/
+}
+
+// Namespace: 
+internal class ResourceManager.InstanceOperation : AsyncOperationBase<GameObject> // TypeDefIndex: 5543
+{
+	// Fields
+	private AsyncOperationHandle<GameObject> m_dependency; // 0x88
+	private InstantiationParameters m_instantiationParams; // 0xA0
+	private IInstanceProvider m_instanceProvider; // 0xD0
+	private GameObject m_instance; // 0xD8
+	private Scene m_scene; // 0xE0
+
+	// Properties
+	protected override string DebugName { get; }
+	protected override float Progress { get; }
+
+	// Methods
+
+	// RVA: 0x36350C0 Offset: 0x36351C1 VA: 0x36350C0
+	public void Init(ResourceManager rm, IInstanceProvider instanceProvider, InstantiationParameters instantiationParams, AsyncOperationHandle<GameObject> dependency) { }
+
+	// RVA: 0x36399D0 Offset: 0x3639AD1 VA: 0x36399D0 Slot: 35
+	internal override DownloadStatus GetDownloadStatus(HashSet<object> visited) { }
+
+	// RVA: 0x3639AC0 Offset: 0x3639BC1 VA: 0x3639AC0 Slot: 32
+	protected override void GetDependencies(List<AsyncOperationHandle> deps) { }
+
+	// RVA: 0x3639B80 Offset: 0x3639C81 VA: 0x3639B80 Slot: 31
+	protected override string get_DebugName() { }
+
+	// RVA: 0x3639CA0 Offset: 0x3639DA1 VA: 0x3639CA0
+	public Scene InstanceScene() { }
+
+	// RVA: 0x3639CB0 Offset: 0x3639DB1 VA: 0x3639CB0 Slot: 29
+	protected override void Destroy() { }
+
+	// RVA: 0x3639D70 Offset: 0x3639E71 VA: 0x3639D70 Slot: 30
+	protected override float get_Progress() { }
+
+	// RVA: 0x3639DD0 Offset: 0x3639ED1 VA: 0x3639DD0 Slot: 33
+	protected override bool InvokeWaitForCompletion() { }
+
+	// RVA: 0x3639F20 Offset: 0x363A021 VA: 0x3639F20 Slot: 28
+	protected override void Execute() { }
+
+	// RVA: 0x363A170 Offset: 0x363A271 VA: 0x363A170
+	public void .ctor() { }
 }
 
 // Namespace: 

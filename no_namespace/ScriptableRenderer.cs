@@ -1,4 +1,20 @@
 // Namespace: 
+public static class ScriptableRenderer.Profiling.RenderBlock // TypeDefIndex: 5269
+{
+	// Fields
+	private const string k_Name = "RenderPassBlock";
+	public static readonly ProfilingSampler beforeRendering; // 0x0
+	public static readonly ProfilingSampler mainRenderingOpaque; // 0x8
+	public static readonly ProfilingSampler mainRenderingTransparent; // 0x10
+	public static readonly ProfilingSampler afterRendering; // 0x18
+
+	// Methods
+
+	// RVA: 0x2FA7360 Offset: 0x2FA7461 VA: 0x2FA7360
+	private static void .cctor() { }
+}
+
+// Namespace: 
 public static class ScriptableRenderer.Profiling.RenderPass // TypeDefIndex: 5270
 {
 	// Fields
@@ -8,6 +24,26 @@ public static class ScriptableRenderer.Profiling.RenderPass // TypeDefIndex: 527
 	// Methods
 
 	// RVA: 0x2FA74D0 Offset: 0x2FA75D1 VA: 0x2FA74D0
+	private static void .cctor() { }
+}
+
+// Namespace: 
+private static class ScriptableRenderer.Profiling // TypeDefIndex: 5271
+{
+	// Fields
+	private const string k_Name = "ScriptableRenderer";
+	public static readonly ProfilingSampler setPerCameraShaderVariables; // 0x0
+	public static readonly ProfilingSampler sortRenderPasses; // 0x8
+	public static readonly ProfilingSampler setupLights; // 0x10
+	public static readonly ProfilingSampler setupCamera; // 0x18
+	public static readonly ProfilingSampler addRenderPasses; // 0x20
+	public static readonly ProfilingSampler clearRenderingState; // 0x28
+	public static readonly ProfilingSampler internalStartRendering; // 0x30
+	public static readonly ProfilingSampler internalFinishRendering; // 0x38
+
+	// Methods
+
+	// RVA: 0x2FA6280 Offset: 0x2FA6381 VA: 0x2FA6280
 	private static void .cctor() { }
 }
 
@@ -47,6 +83,21 @@ public class ScriptableRenderer.RenderingFeatures // TypeDefIndex: 5272
 }
 
 // Namespace: 
+private static class ScriptableRenderer.RenderPassBlock // TypeDefIndex: 5273
+{
+	// Fields
+	public static readonly int BeforeRendering; // 0x0
+	public static readonly int MainRenderingOpaque; // 0x4
+	public static readonly int MainRenderingTransparent; // 0x8
+	public static readonly int AfterRendering; // 0xC
+
+	// Methods
+
+	// RVA: 0x2FA68B0 Offset: 0x2FA69B1 VA: 0x2FA68B0
+	private static void .cctor() { }
+}
+
+// Namespace: 
 public struct ScriptableRenderer.RenderBlocks.BlockRange : IDisposable // TypeDefIndex: 5274
 {
 	// Fields
@@ -72,5 +123,31 @@ public struct ScriptableRenderer.RenderBlocks.BlockRange : IDisposable // TypeDe
 
 	// RVA: 0x2FA75B0 Offset: 0x2FA76B1 VA: 0x2FA75B0 Slot: 4
 	public void Dispose() { }
+}
+
+// Namespace: 
+internal struct ScriptableRenderer.RenderBlocks : IDisposable // TypeDefIndex: 5275
+{
+	// Fields
+	private NativeArray<RenderPassEvent> m_BlockEventLimits; // 0x0
+	private NativeArray<int> m_BlockRanges; // 0x10
+	private NativeArray<int> m_BlockRangeLengths; // 0x20
+
+	// Methods
+
+	// RVA: 0x2FA64F0 Offset: 0x2FA65F1 VA: 0x2FA64F0
+	public void .ctor(List<ScriptableRenderPass> activeRenderPassQueue) { }
+
+	// RVA: 0x2FA67F0 Offset: 0x2FA68F1 VA: 0x2FA67F0 Slot: 4
+	public void Dispose() { }
+
+	// RVA: 0x2FA66D0 Offset: 0x2FA67D1 VA: 0x2FA66D0
+	private void FillBlockRanges(List<ScriptableRenderPass> activeRenderPassQueue) { }
+
+	// RVA: 0x2FA6850 Offset: 0x2FA6951 VA: 0x2FA6850
+	public int GetLength(int index) { }
+
+	// RVA: 0x2FA6860 Offset: 0x2FA6961 VA: 0x2FA6860
+	public ScriptableRenderer.RenderBlocks.BlockRange GetRange(int index) { }
 }
 

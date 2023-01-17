@@ -36,6 +36,42 @@ public enum MapSequence.Label // TypeDefIndex: 12362
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x278480 Offset: 0x278581 VA: 0x278480
+[Serializable]
+private sealed class MapSequence.<>c__27<T> // TypeDefIndex: 12363
+{
+	// Fields
+	public static readonly MapSequence.<>c__27<T> <>9; // 0x0
+	public static Action<T> <>9__27_0; // 0x0
+
+	// Methods
+
+	// RVA: -1 Offset: -1
+	private static void .cctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B35CC0 Offset: 0x2B35DC1 VA: 0x2B35CC0
+	|-MapSequence.<>c__27<object>..cctor
+	*/
+
+	// RVA: -1 Offset: -1
+	public void .ctor() { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B35DA0 Offset: 0x2B35EA1 VA: 0x2B35DA0
+	|-MapSequence.<>c__27<object>..ctor
+	*/
+
+	// RVA: -1 Offset: -1
+	internal void <AddPreloadCombatAssets>b__27_0(T asset) { }
+	/* GenericInstMethod :
+	|
+	|-RVA: 0x2B35DB0 Offset: 0x2B35EB1 VA: 0x2B35DB0
+	|-MapSequence.<>c__27<object>.<AddPreloadCombatAssets>b__27_0
+	*/
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x278490 Offset: 0x278591 VA: 0x278490
 private sealed class MapSequence.<TurnBeginMultiChange>d__53 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 12364
 {
@@ -75,6 +111,23 @@ private sealed class MapSequence.<TurnBeginMultiChange>d__53 : IEnumerator<objec
 }
 
 // Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2784A0 Offset: 0x2785A1 VA: 0x2784A0
+private sealed class MapSequence.<>c__DisplayClass74_0 // TypeDefIndex: 12365
+{
+	// Fields
+	public Dictionary<Unit, int> expDict; // 0x10
+	public int exp; // 0x18
+
+	// Methods
+
+	// RVA: 0x2414040 Offset: 0x2414141 VA: 0x2414040
+	public void .ctor() { }
+
+	// RVA: 0x2414050 Offset: 0x2414151 VA: 0x2414050
+	internal void <GetEncountReward>b__0(Unit unit) { }
+}
+
+// Namespace: 
 [CompilerGeneratedAttribute] // RVA: 0x2784B0 Offset: 0x2785B1 VA: 0x2784B0
 [Serializable]
 private sealed class MapSequence.<>c // TypeDefIndex: 12366
@@ -93,5 +146,21 @@ private sealed class MapSequence.<>c // TypeDefIndex: 12366
 
 	// RVA: 0x2413F00 Offset: 0x2414001 VA: 0x2413F00
 	internal void <RelayLoad>b__96_0(Unit unit) { }
+}
+
+// Namespace: 
+[CompilerGeneratedAttribute] // RVA: 0x2784C0 Offset: 0x2785C1 VA: 0x2784C0
+private sealed class MapSequence.<>c__DisplayClass100_0 // TypeDefIndex: 12367
+{
+	// Fields
+	public RelayStampData data; // 0x10
+
+	// Methods
+
+	// RVA: 0x2413F10 Offset: 0x2414011 VA: 0x2413F10
+	public void .ctor() { }
+
+	// RVA: 0x2413F20 Offset: 0x2414021 VA: 0x2413F20
+	internal void <RelayMessageShow>b__0(GameObject go) { }
 }
 

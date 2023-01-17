@@ -15,6 +15,42 @@ public enum GmapMenuSequence.Label // TypeDefIndex: 10274
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.GmapMenuMenuItem : MapBasicMenuItem // TypeDefIndex: 10275
+{
+	// Properties
+	protected override string FlagID { get; }
+
+	// Methods
+
+	// RVA: 0x1DCA750 Offset: 0x1DCA851 VA: 0x1DCA750 Slot: 29
+	protected override BasicMenuItem.Attribute GetMapAttribute() { }
+
+	// RVA: 0x1DCA790 Offset: 0x1DCA891 VA: 0x1DCA790 Slot: 27
+	protected override string get_FlagID() { }
+
+	// RVA: 0x1DCA090 Offset: 0x1DCA191 VA: 0x1DCA090 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1DCA3F0 Offset: 0x1DCA4F1 VA: 0x1DCA3F0
+	public void SetHelpVisible(bool active) { }
+
+	// RVA: 0x1DCA140 Offset: 0x1DCA241 VA: 0x1DCA140
+	protected void SaveMenuSelect() { }
+
+	// RVA: 0x1DCA7D0 Offset: 0x1DCA8D1 VA: 0x1DCA7D0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x1DCA820 Offset: 0x1DCA921 VA: 0x1DCA820 Slot: 12
+	public override void OnSelect() { }
+
+	// RVA: 0x1DCA930 Offset: 0x1DCAA31 VA: 0x1DCA930 Slot: 13
+	public override void OnDeselect() { }
+
+	// RVA: 0x1DC9AD0 Offset: 0x1DC9BD1 VA: 0x1DC9AD0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.EnterChapterItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10276
 {
 	// Fields
@@ -54,6 +90,27 @@ private class GmapMenuSequence.GmapMenu.EnterChapterItem : GmapMenuSequence.Gmap
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.InventoryItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10277
+{
+	// Methods
+
+	// RVA: 0x1DCB120 Offset: 0x1DCB221 VA: 0x1DCB120 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1DCB1A0 Offset: 0x1DCB2A1 VA: 0x1DCB1A0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x1DCB220 Offset: 0x1DCB321 VA: 0x1DCB220 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1DCB230 Offset: 0x1DCB331 VA: 0x1DCB230 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1DCB430 Offset: 0x1DCB531 VA: 0x1DCB430
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.GodItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10278
 {
 	// Methods
@@ -71,6 +128,30 @@ private class GmapMenuSequence.GmapMenu.GodItem : GmapMenuSequence.GmapMenu.Gmap
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x1DCB110 Offset: 0x1DCB211 VA: 0x1DCB110
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class GmapMenuSequence.GmapMenu.SubFriendMenu.RelianceItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10279
+{
+	// Methods
+
+	// RVA: 0x2D739B0 Offset: 0x2D73AB1 VA: 0x2D739B0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D73A30 Offset: 0x2D73B31 VA: 0x2D73A30 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x2D73AB0 Offset: 0x2D73BB1 VA: 0x2D73AB0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D73AC0 Offset: 0x2D73BC1 VA: 0x2D73AC0 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D73CE0 Offset: 0x2D73DE1 VA: 0x2D73CE0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D73CF0 Offset: 0x2D73DF1 VA: 0x2D73CF0
 	public void .ctor() { }
 }
 
@@ -99,6 +180,30 @@ private class GmapMenuSequence.GmapMenu.SubFriendMenu.KizunaItem : GmapMenuSeque
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.SubFriendMenu.NotebookItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10281
+{
+	// Methods
+
+	// RVA: 0x2D73750 Offset: 0x2D73851 VA: 0x2D73750 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D737D0 Offset: 0x2D738D1 VA: 0x2D737D0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x2D73850 Offset: 0x2D73951 VA: 0x2D73850 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D73860 Offset: 0x2D73961 VA: 0x2D73860 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D73990 Offset: 0x2D73A91 VA: 0x2D73990 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D739A0 Offset: 0x2D73AA1 VA: 0x2D739A0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.SubFriendMenu.RingbookItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10282
 {
 	// Methods
@@ -120,6 +225,21 @@ private class GmapMenuSequence.GmapMenu.SubFriendMenu.RingbookItem : GmapMenuSeq
 
 	// RVA: 0x2D73F70 Offset: 0x2D74071 VA: 0x2D73F70
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class GmapMenuSequence.GmapMenu.SubFriendMenu : BasicMenu // TypeDefIndex: 10283
+{
+	// Methods
+
+	// RVA: 0x1DCC370 Offset: 0x1DCC471 VA: 0x1DCC370
+	protected void .ctor(List<BasicMenuItem> menuItemList, SortieSubMenuContent menuContent) { }
+
+	// RVA: 0x1DCC380 Offset: 0x1DCC481 VA: 0x1DCC380 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1DCA4F0 Offset: 0x1DCA5F1 VA: 0x1DCA4F0
+	public static void CreateBind(BasicMenu super, BasicMenuItem parentMenuItem) { }
 }
 
 // Namespace: 
@@ -150,6 +270,27 @@ private class GmapMenuSequence.GmapMenu.FriendItem : GmapMenuSequence.GmapMenu.G
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.SaveItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10285
+{
+	// Methods
+
+	// RVA: 0x1DCBD30 Offset: 0x1DCBE31 VA: 0x1DCBD30 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1DCBDB0 Offset: 0x1DCBEB1 VA: 0x1DCBDB0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x1DCBE30 Offset: 0x1DCBF31 VA: 0x1DCBE30 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1DCBE40 Offset: 0x1DCBF41 VA: 0x1DCBE40 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1DCBFA0 Offset: 0x1DCC0A1 VA: 0x1DCBFA0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.SubSystemMenu.TutorialItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10286
 {
 	// Methods
@@ -170,6 +311,30 @@ private class GmapMenuSequence.GmapMenu.SubSystemMenu.TutorialItem : GmapMenuSeq
 	public override BasicMenu.Result BCall() { }
 
 	// RVA: 0x2D74A30 Offset: 0x2D74B31 VA: 0x2D74A30
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class GmapMenuSequence.GmapMenu.SubSystemMenu.ConfigItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10287
+{
+	// Methods
+
+	// RVA: 0x2D74400 Offset: 0x2D74501 VA: 0x2D74400 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D74480 Offset: 0x2D74581 VA: 0x2D74480 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x2D74500 Offset: 0x2D74601 VA: 0x2D74500 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D74510 Offset: 0x2D74611 VA: 0x2D74510 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D74640 Offset: 0x2D74741 VA: 0x2D74640 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D74650 Offset: 0x2D74751 VA: 0x2D74650
 	public void .ctor() { }
 }
 
@@ -195,6 +360,21 @@ private class GmapMenuSequence.GmapMenu.SubSystemMenu.ResetItem : GmapMenuSequen
 
 	// RVA: 0x2D747D0 Offset: 0x2D748D1 VA: 0x2D747D0
 	public void .ctor() { }
+}
+
+// Namespace: 
+public class GmapMenuSequence.GmapMenu.SubSystemMenu : BasicMenu // TypeDefIndex: 10289
+{
+	// Methods
+
+	// RVA: 0x1DCC430 Offset: 0x1DCC531 VA: 0x1DCC430
+	protected void .ctor(List<BasicMenuItem> menuItemList, SortieSubMenuContent menuContent) { }
+
+	// RVA: 0x1DCC440 Offset: 0x1DCC541 VA: 0x1DCC440 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1DCC490 Offset: 0x1DCC591 VA: 0x1DCC490
+	public static void CreateBind(BasicMenu super, BasicMenuItem parentMenuItem) { }
 }
 
 // Namespace: 
@@ -225,6 +405,30 @@ private class GmapMenuSequence.GmapMenu.SystemItem : GmapMenuSequence.GmapMenu.G
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.SubShopMenu.WeaponShopMenuItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10291
+{
+	// Methods
+
+	// RVA: 0x2D741C0 Offset: 0x2D742C1 VA: 0x2D741C0 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D74240 Offset: 0x2D74341 VA: 0x2D74240 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x2D742C0 Offset: 0x2D743C1 VA: 0x2D742C0 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x2D74370 Offset: 0x2D74471 VA: 0x2D74370 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x2D743E0 Offset: 0x2D744E1 VA: 0x2D743E0 Slot: 19
+	public override BasicMenu.Result BCall() { }
+
+	// RVA: 0x2D743F0 Offset: 0x2D744F1 VA: 0x2D743F0
+	public void .ctor() { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.SubShopMenu.ItemShopMenuItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10292
 {
 	// Methods
@@ -249,6 +453,21 @@ private class GmapMenuSequence.GmapMenu.SubShopMenu.ItemShopMenuItem : GmapMenuS
 }
 
 // Namespace: 
+public class GmapMenuSequence.GmapMenu.SubShopMenu : BasicMenu // TypeDefIndex: 10293
+{
+	// Methods
+
+	// RVA: 0x1DCC3D0 Offset: 0x1DCC4D1 VA: 0x1DCC3D0
+	protected void .ctor(List<BasicMenuItem> menuItemList, SortieSubMenuContent menuContent) { }
+
+	// RVA: 0x1DCC3E0 Offset: 0x1DCC4E1 VA: 0x1DCC3E0 Slot: 30
+	public override string GetName() { }
+
+	// RVA: 0x1DCC180 Offset: 0x1DCC281 VA: 0x1DCC180
+	public static void CreateBind(BasicMenu super, BasicMenuItem parentMenuItem) { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.ShopItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10294
 {
 	// Methods
@@ -270,6 +489,24 @@ private class GmapMenuSequence.GmapMenu.ShopItem : GmapMenuSequence.GmapMenu.Gma
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.RankingItem.JumpToRankingSequence : ProcInst // TypeDefIndex: 10295
+{
+	// Fields
+	private Action m_JumpFunc; // 0x70
+
+	// Methods
+
+	// RVA: 0x2D73180 Offset: 0x2D73281 VA: 0x2D73180
+	private void .ctor(Action jumpFunc) { }
+
+	// RVA: 0x2D731C0 Offset: 0x2D732C1 VA: 0x2D731C0
+	private void JumpToRanking() { }
+
+	// RVA: 0x2D731E0 Offset: 0x2D732E1 VA: 0x2D731E0
+	public static void CreateBind(ProcInst super, Action jumpFunc) { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.RankingItem.ConfirmSequence.YesMenuItem : BasicDialogItemYes // TypeDefIndex: 10296
 {
 	// Fields
@@ -285,6 +522,18 @@ private class GmapMenuSequence.GmapMenu.RankingItem.ConfirmSequence.YesMenuItem 
 
 	// RVA: 0x2D7F210 Offset: 0x2D7F311 VA: 0x2D7F210 Slot: 18
 	public override BasicMenu.Result ACall() { }
+}
+
+// Namespace: 
+private class GmapMenuSequence.GmapMenu.RankingItem.ConfirmSequence.NoMenuItem : BasicDialogItemNo // TypeDefIndex: 10297
+{
+	// Methods
+
+	// RVA: 0x2D7F110 Offset: 0x2D7F211 VA: 0x2D7F110 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x2D72F50 Offset: 0x2D73051 VA: 0x2D72F50
+	public void .ctor() { }
 }
 
 // Namespace: 
@@ -306,6 +555,35 @@ private class GmapMenuSequence.GmapMenu.RankingItem.ConfirmSequence : ProcInst /
 }
 
 // Namespace: 
+private class GmapMenuSequence.GmapMenu.RankingItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10299
+{
+	// Methods
+
+	// RVA: 0x1DCB760 Offset: 0x1DCB861 VA: 0x1DCB760 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1DCB7E0 Offset: 0x1DCB8E1 VA: 0x1DCB7E0 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x1DCB860 Offset: 0x1DCB961 VA: 0x1DCB860 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1DCB910 Offset: 0x1DCBA11 VA: 0x1DCB910 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1DCBA70 Offset: 0x1DCBB71 VA: 0x1DCBA70
+	public void .ctor() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD900 Offset: 0x2BDA01 VA: 0x2BD900
+	// RVA: 0x1DCBA80 Offset: 0x1DCBB81 VA: 0x1DCBA80
+	private void <ACall>b__3_0() { }
+
+	[CompilerGeneratedAttribute] // RVA: 0x2BD910 Offset: 0x2BDA11 VA: 0x2BD910
+	// RVA: 0x1DCBBD0 Offset: 0x1DCBCD1 VA: 0x1DCBBD0
+	private void <ACall>b__3_1(bool isEnable) { }
+}
+
+// Namespace: 
 private class GmapMenuSequence.GmapMenu.MaterialListItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10300
 {
 	// Methods
@@ -323,6 +601,27 @@ private class GmapMenuSequence.GmapMenu.MaterialListItem : GmapMenuSequence.Gmap
 	public override BasicMenu.Result ACall() { }
 
 	// RVA: 0x1DCB750 Offset: 0x1DCB851 VA: 0x1DCB750
+	public void .ctor() { }
+}
+
+// Namespace: 
+private class GmapMenuSequence.GmapMenu.GoToSolanelItem : GmapMenuSequence.GmapMenu.GmapMenuMenuItem // TypeDefIndex: 10301
+{
+	// Methods
+
+	// RVA: 0x1DCAA40 Offset: 0x1DCAB41 VA: 0x1DCAA40 Slot: 4
+	public override string GetName() { }
+
+	// RVA: 0x1DCAB60 Offset: 0x1DCAC61 VA: 0x1DCAB60 Slot: 28
+	public override string GetHelpText() { }
+
+	// RVA: 0x1DCAC80 Offset: 0x1DCAD81 VA: 0x1DCAC80 Slot: 8
+	public override BasicMenuItem.Attribute BuildAttribute() { }
+
+	// RVA: 0x1DCAC90 Offset: 0x1DCAD91 VA: 0x1DCAC90 Slot: 18
+	public override BasicMenu.Result ACall() { }
+
+	// RVA: 0x1DCADF0 Offset: 0x1DCAEF1 VA: 0x1DCADF0
 	public void .ctor() { }
 }
 
@@ -354,6 +653,16 @@ private class GmapMenuSequence.GmapMenu : BasicMenu // TypeDefIndex: 10302
 
 	// RVA: 0x22EED30 Offset: 0x22EEE31 VA: 0x22EED30 Slot: 51
 	protected override BasicMenu.Result BCall() { }
+}
+
+// Namespace: 
+private enum GmapMenuSequence.GoToMapSequence.Label // TypeDefIndex: 10303
+{
+	// Fields
+	public int value__; // 0x0
+	public const GmapMenuSequence.GoToMapSequence.Label MoveToSolanel = 0;
+	public const GmapMenuSequence.GoToMapSequence.Label MoveToGmap = 1;
+	public const GmapMenuSequence.GoToMapSequence.Label End = 2;
 }
 
 // Namespace: 

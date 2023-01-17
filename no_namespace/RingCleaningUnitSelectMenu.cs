@@ -17,6 +17,14 @@ public sealed class RingCleaningUnitSelectMenu.DecideEventHandler : MulticastDel
 }
 
 // Namespace: 
+private struct RingCleaningUnitSelectMenu.GodParam // TypeDefIndex: 11743
+{
+	// Fields
+	public GodUnit God; // 0x0
+	public RingCleaningSequence.GodType Type; // 0x8
+}
+
+// Namespace: 
 private class RingCleaningUnitSelectMenu.RingCleaningUnitSelectMenuItem.ConfirmDialog : YesNoDialog // TypeDefIndex: 11744
 {
 	// Methods
@@ -26,6 +34,21 @@ private class RingCleaningUnitSelectMenu.RingCleaningUnitSelectMenuItem.ConfirmD
 
 	// RVA: 0x21F57B0 Offset: 0x21F58B1 VA: 0x21F57B0
 	public static void CreateBind(ProcInst super, Unit unit, Action action) { }
+}
+
+// Namespace: 
+private class RingCleaningUnitSelectMenu.RingCleaningUnitSelectMenuItem.ConfirmDialogItemYes : BasicDialogItemYes // TypeDefIndex: 11745
+{
+	// Fields
+	private Action m_Action; // 0x70
+
+	// Methods
+
+	// RVA: 0x21F5AB0 Offset: 0x21F5BB1 VA: 0x21F5AB0
+	public void .ctor(Action action, string text) { }
+
+	// RVA: 0x21F5AF0 Offset: 0x21F5BF1 VA: 0x21F5AF0 Slot: 18
+	public override BasicMenu.Result ACall() { }
 }
 
 // Namespace: 
